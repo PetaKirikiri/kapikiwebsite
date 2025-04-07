@@ -1,0 +1,113 @@
+.clients-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.email-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.template-editor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.template-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 300px;
+}
+
+.template-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.clients-loading,
+.clients-error {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1em;
+}
+
+.clients-error {
+  color: #dc3545;
+}
+
+.send-email-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.send-email-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.send-email-button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+
+.status-message {
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.status-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.clients-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+} 
