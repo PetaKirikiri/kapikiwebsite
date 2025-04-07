@@ -32,7 +32,30 @@ module.exports = {
         }),
       ];
 
+      // Properly configure node options
+      webpackConfig.node = {
+        ...webpackConfig.node,
+        __dirname: true,
+        __filename: true,
+        global: true,
+      };
+
+      // Add DefinePlugin to expose environment variables
+      webpackConfig.plugins.push(
+        new webpack.DefinePlugin({
+          "process.env": JSON.stringify(process.env),
+        })
+      );
+
       return webpackConfig;
+    },
+  },
+  devServer: {
+    client: {
+      overlay: {
+        warnings: false,
+        errors: true,
+      },
     },
   },
 };

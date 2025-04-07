@@ -7,6 +7,7 @@ import LoginPage from './pages/LoginPage';
 import ClientsPage from './pages/ClientsPage';
 import FormPage from './pages/FormPage';
 import OAuthCallback from './pages/OAuthCallback';
+import './styles/App.css';
 
 // Get the base path from the current URL
 const getBasePath = () => {

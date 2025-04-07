@@ -4,7 +4,7 @@ import { sendEmail, hasValidCredentials, startOAuthFlow } from "../services/emai
 import { useAuth } from "../contexts/AuthContext";
 import Navigation from "../components/Navigation";
 import Airtable from "airtable";
-import '../styles/spinner.css';
+import '../styles/dashboard.css';
 
 // Debug the environment variables
 console.log('Raw env values:', {
@@ -25,14 +25,14 @@ const EMAIL_VIEW_ID = 'viwtidKFNeXp0cfkQ';
 
 export default function ClientsPage() {
   const [clients, setClients] = useState([]);
-  const [selectedClients, setSelectedClients] = useState([]);
+  const [selectedClients, setSelectedClients] = useState(new Set());
   const [isLoading, setIsLoading] = useState(true);
   const [isSending, setIsSending] = useState(false);
   const [emailTemplate, setEmailTemplate] = useState(null);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { } = useAuth();
 
   useEffect(() => {
     const checkCredentials = async () => {
@@ -66,9 +66,11 @@ export default function ClientsPage() {
         
         if (templateRecords && templateRecords.length > 0) {
           const template = templateRecords[0];
+          // Get the first field value from the template
+          const templateValue = Object.values(template.fields)[0] || "";
           setEmailTemplate({
-            subject: template.fields.Subject || "",
-            body: template.fields.Body || "",
+            subject: templateValue,
+            body: templateValue,
           });
         }
 
@@ -98,139 +100,129 @@ export default function ClientsPage() {
     fetchData();
   }, []);
 
-  const handleSendEmail = async () => {
-    if (!emailTemplate || selectedClients.length === 0) return;
+  const handleClientSelect = (clientId) => {
+    setSelectedClients(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(clientId)) {
+        newSet.delete(clientId);
+      } else {
+        newSet.add(clientId);
+      }
+      return newSet;
+    });
+  };
 
-    setIsSending(true);
-    setError("");
-    setSuccess("");
+  const handleSendEmail = async () => {
+    if (selectedClients.size === 0) {
+      setError("Please select at least one client");
+      return;
+    }
 
     try {
-      // Get all selected client emails
-      const selectedEmails = selectedClients.map(clientId => {
-        const client = clients.find(c => c.id === clientId);
-        return client ? client.email : null;
-      }).filter(Boolean); // Remove any null values
+      // Check if we have valid OAuth credentials
+      const hasCredentials = await hasValidCredentials();
+      
+      if (!hasCredentials) {
+        // Start OAuth flow if we don't have credentials
+        await startOAuthFlow();
+        return; // The page will redirect to Google OAuth
+      }
 
-      // Send to all selected emails at once
-      await sendEmail(
-        selectedEmails,
-        emailTemplate.subject,
-        emailTemplate.body
-      );
+      const selectedEmails = clients
+        .filter((client) => selectedClients.has(client.id))
+        .map((client) => client.email);
 
-      setSuccess("Emails sent successfully!");
-      setSelectedClients([]);
+      if (selectedEmails.length === 0) {
+        setError("No email addresses found for selected clients");
+        return;
+      }
+
+      // Log the email template data
+      console.log('Email template data:', {
+        subject: emailTemplate?.subject,
+        body: emailTemplate?.body,
+        templateExists: !!emailTemplate
+      });
+
+      if (!emailTemplate?.subject || !emailTemplate?.body) {
+        setError("Email template is missing subject or body");
+        return;
+      }
+
+      setIsSending(true);
+      setError(null);
+
+      await sendEmail(selectedEmails, emailTemplate.subject, emailTemplate.body);
+      setSuccess("Email sent successfully!");
+      setSelectedClients(new Set());
     } catch (error) {
       console.error("Error sending email:", error);
-      setError(error.message || "Failed to send email");
+      setError("Failed to send email: " + error.message);
     } finally {
       setIsSending(false);
     }
   };
 
-  const toggleClient = (clientId) => {
-    setSelectedClients(prev => 
-      prev.includes(clientId) 
-        ? prev.filter(id => id !== clientId)
-        : [...prev, clientId]
-    );
-  };
-
-  if (isLoading) {
-    return (
-      <div style={{ 
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '100vh'
-      }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{
-            width: '48px',
-            height: '48px',
-            border: '2px solid #f3f3f3',
-            borderTop: '2px solid #3498db',
-            borderRadius: '50%',
-            animation: 'spin 1s linear infinite',
-            margin: '0 auto'
-          }}></div>
-          <p style={{ marginTop: '1rem', color: '#666' }}>Checking Gmail credentials...</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div style={{ padding: '20px' }}>
+    <div className="dashboard-container">
       <Navigation />
-      <h1>Clients</h1>
-      
-      {error && <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
-      {success && <div style={{ color: 'green', marginBottom: '10px' }}>{success}</div>}
+      <div className="container">
+        <h2>Clients</h2>
+        {isLoading ? (
+          <div>Loading...</div>
+        ) : (
+          <>
+            <div className="clients-list">
+              <table className="modern-table">
+                <thead>
+                  <tr>
+                    <th>Select</th>
+                    <th>Organization</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {clients.map((client) => (
+                    <tr key={client.id}>
+                      <td>
+                        <input
+                          type="checkbox"
+                          checked={selectedClients.has(client.id)}
+                          onChange={() => handleClientSelect(client.id)}
+                        />
+                      </td>
+                      <td>{client.organizationName}</td>
+                      <td>{client.contactName}</td>
+                      <td>{client.email}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-      <div style={{ 
-        backgroundColor: 'white',
-        borderRadius: '8px',
-        boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-        overflow: 'hidden'
-      }}>
-        <table style={{ 
-          width: '100%',
-          borderCollapse: 'collapse',
-          backgroundColor: 'white'
-        }}>
-          <thead>
-            <tr style={{ borderBottom: '2px solid #e5e7eb' }}>
-              <th style={{ padding: '12px', textAlign: 'left' }}>Organization</th>
-              <th style={{ padding: '12px', textAlign: 'left' }}>Contact</th>
-              <th style={{ padding: '12px', textAlign: 'left' }}>Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            {clients.map((client) => (
-              <tr 
-                key={client.id} 
-                style={{ 
-                  borderBottom: '1px solid #e5e7eb',
-                  backgroundColor: selectedClients.includes(client.id) ? '#f3f4f6' : 'white'
-                }}
-              >
-                <td style={{ padding: '12px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <input
-                      type="checkbox"
-                      checked={selectedClients.includes(client.id)}
-                      onChange={() => toggleClient(client.id)}
-                      style={{ cursor: 'pointer' }}
-                    />
-                    {client.organizationName}
-                  </div>
-                </td>
-                <td style={{ padding: '12px' }}>{client.contactName}</td>
-                <td style={{ padding: '12px' }}>{client.email}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            {emailTemplate && (
+              <div className="email-section">
+                <h3>Email Template</h3>
+                <div className="email-preview">
+                  <p><strong>Subject:</strong> {emailTemplate.subject}</p>
+                  <p><strong>Body:</strong></p>
+                  <div className="email-body">{emailTemplate.body}</div>
+                </div>
+                <button
+                  className="btn btn-primary"
+                  onClick={handleSendEmail}
+                  disabled={isSending || selectedClients.size === 0}
+                >
+                  {isSending ? "Sending..." : "Send Email"}
+                </button>
+              </div>
+            )}
 
-      <div style={{ marginTop: '20px', textAlign: 'right' }}>
-        <button
-          onClick={handleSendEmail}
-          disabled={isSending || selectedClients.length === 0}
-          style={{ 
-            padding: '8px 16px',
-            backgroundColor: '#3b82f6',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            opacity: (isSending || selectedClients.length === 0) ? 0.5 : 1
-          }}
-        >
-          Send Email Template
-        </button>
+            {error && <div className="error-message">{error}</div>}
+            {success && <div className="success-message">{success}</div>}
+          </>
+        )}
       </div>
     </div>
   );
