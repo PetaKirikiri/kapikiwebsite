@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { sendEmail, hasValidCredentials, startOAuthFlow } from "../services/emailService";
+import { sendEmail } from "../services/emailService";
 import { useAuth } from "../contexts/AuthContext";
 import Navigation from "../components/Navigation";
 import Airtable from "airtable";
@@ -37,14 +37,6 @@ export default function ClientsPage() {
   useEffect(() => {
     const checkCredentials = async () => {
       try {
-        const isValid = await hasValidCredentials();
-        console.log("Gmail credentials status:", isValid ? "Valid" : "Not valid");
-        
-        if (!isValid) {
-          await startOAuthFlow();
-          return;
-        }
-        
         setIsLoading(false);
       } catch (error) {
         console.error("Error checking credentials:", error);
@@ -119,14 +111,8 @@ export default function ClientsPage() {
     }
 
     try {
-      // Check if we have valid OAuth credentials
-      const hasCredentials = await hasValidCredentials();
-      
-      if (!hasCredentials) {
-        // Start OAuth flow if we don't have credentials
-        await startOAuthFlow();
-        return; // The page will redirect to Google OAuth
-      }
+      setIsSending(true);
+      setError(null);
 
       const selectedEmails = clients
         .filter((client) => selectedClients.has(client.id))
@@ -148,9 +134,6 @@ export default function ClientsPage() {
         setError("Email template is missing subject or body");
         return;
       }
-
-      setIsSending(true);
-      setError(null);
 
       await sendEmail(selectedEmails, emailTemplate.subject, emailTemplate.body);
       setSuccess("Email sent successfully!");
