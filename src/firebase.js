@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import { getFunctions, connectFunctionsEmulator } from "firebase/functions";
+import { getFunctions } from "firebase/functions";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -22,11 +22,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const functions = getFunctions(app, "us-central1");
-
-// Connect to emulators in development
-if (process.env.NODE_ENV === "development") {
-  connectFunctionsEmulator(functions, "localhost", 5001);
-}
 
 // Export initialized services
 export { auth, db, functions };

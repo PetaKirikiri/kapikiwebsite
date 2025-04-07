@@ -1,0 +1,12 @@
+{"users": [
+{
+  "localId": "aaUawrkoZUZIz7ATCcrVmTVt68m1",
+  "email": "peta@kapiki.co.nz",
+  "emailVerified": false,
+  "passwordHash": "Ix9kEhKJbJ+suWCoXnc1zuEyxOcW3LmO7YHx8Lfj4iQR3uVeoO4GJVHEuzOWwmYwthZYvbf0UCNYSE7/NPllvg==",
+  "salt": "x5D5xa3QgF5GoQ==",
+  "lastSignedInAt": "1744044894835",
+  "createdAt": "1743908308434",
+  "disabled": false,
+  "providerUserInfo": []
+}]}

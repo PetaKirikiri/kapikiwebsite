@@ -22,9 +22,9 @@ const { google } = require("googleapis");
 
 // Get service account from Firebase secret
 const getServiceAccount = () => {
-  const serviceAccountBase64 = process.env.SERVICE_ACCOUNT;
+  const serviceAccountBase64 = process.env.SECRETS;
   if (!serviceAccountBase64) {
-    throw new Error("SERVICE_ACCOUNT secret is not set");
+    throw new Error("SECRETS secret is not set");
   }
   return JSON.parse(Buffer.from(serviceAccountBase64, "base64").toString());
 };
@@ -52,12 +52,15 @@ const getGmailClient = () => {
 
 exports.sendEmail = onCall(
   {
-    cors: true,
+    cors: {
+      origin: ["http://localhost:3000", "https://petakirikiri.github.io"],
+      methods: ["POST"],
+    },
     maxInstances: 10,
     region: "us-central1",
     memory: "256MiB",
     minInstances: 0,
-    secrets: ["SERVICE_ACCOUNT"],
+    secrets: ["SECRETS"],
   },
   async (request) => {
     // Log the incoming request
