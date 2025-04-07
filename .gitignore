@@ -30,3 +30,6 @@ yarn-error.log*
 functions/service-account.json
 .firebase/
 firebase-debug.log
+
+# Sensitive files
+public/emailToken.json
