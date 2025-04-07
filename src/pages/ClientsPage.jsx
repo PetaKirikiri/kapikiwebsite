@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { sendEmail } from "../services/emailService";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthProvider";
 import Navigation from "../components/Navigation";
 import Airtable from "airtable";
 import '../styles/dashboard.css';
@@ -113,6 +113,7 @@ export default function ClientsPage() {
     try {
       setIsSending(true);
       setError(null);
+      setSuccess(null);
 
       const selectedEmails = clients
         .filter((client) => selectedClients.has(client.id))
@@ -123,21 +124,19 @@ export default function ClientsPage() {
         return;
       }
 
-      // Log the email template data
-      console.log('Email template data:', {
-        subject: emailTemplate?.subject,
-        body: emailTemplate?.body,
-        templateExists: !!emailTemplate
-      });
-
       if (!emailTemplate?.subject || !emailTemplate?.body) {
         setError("Email template is missing subject or body");
         return;
       }
 
-      await sendEmail(selectedEmails, emailTemplate.subject, emailTemplate.body);
-      setSuccess("Email sent successfully!");
-      setSelectedClients(new Set());
+      const result = await sendEmail(selectedEmails, emailTemplate.subject, emailTemplate.body);
+      
+      if (result.success) {
+        setSuccess("Email sent successfully!");
+        setSelectedClients(new Set());
+      } else {
+        setError(result.error?.message || "Failed to send email");
+      }
     } catch (error) {
       console.error("Error sending email:", error);
       setError("Failed to send email: " + error.message);
