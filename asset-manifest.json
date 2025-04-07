@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/kapikiwebsite/static/css/main.46dfa143.css",
-    "main.js": "/kapikiwebsite/static/js/main.f2f21065.js",
+    "main.js": "/kapikiwebsite/static/js/main.deb0c9d7.js",
     "index.html": "/kapikiwebsite/index.html",
     "main.46dfa143.css.map": "/kapikiwebsite/static/css/main.46dfa143.css.map",
-    "main.f2f21065.js.map": "/kapikiwebsite/static/js/main.f2f21065.js.map"
+    "main.deb0c9d7.js.map": "/kapikiwebsite/static/js/main.deb0c9d7.js.map"
   },
   "entrypoints": [
     "static/css/main.46dfa143.css",
-    "static/js/main.f2f21065.js"
+    "static/js/main.deb0c9d7.js"
   ]
 }
