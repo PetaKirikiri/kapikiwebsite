@@ -1,11 +1,6 @@
 import { httpsCallable } from "firebase/functions";
 import { functions } from "../firebase";
 
-// Function to check if we have valid credentials (always returns true since we're using Firebase auth)
-export const hasValidCredentials = () => {
-  return true;
-};
-
 // Function to send email using Firebase Function
 export const sendEmail = async (to, subject, body) => {
   console.log("Starting email send process...");
