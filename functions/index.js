@@ -142,7 +142,7 @@ exports.sendEmail = onCall(
         response,
         messageId: response.data.id,
       });
-      return { success: true };
+      return { data: { success: true } };
     } catch (error) {
       logger.error("Error sending email:", {
         error: {
@@ -160,11 +160,13 @@ exports.sendEmail = onCall(
       });
       // Return a more detailed error response
       return {
-        success: false,
-        error: {
-          message: error.message,
-          code: error.code,
-          details: error.details,
+        data: {
+          success: false,
+          error: {
+            message: error.message,
+            code: error.code,
+            details: error.details,
+          },
         },
       };
     }

@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../contexts/AuthProvider';
 import '../styles/hero.css';
+import Navigation from '../components/Navigation';
 
 const HomePage = () => {
   const navigate = useNavigate();
