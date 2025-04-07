@@ -11,7 +11,6 @@ const { onCall } = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 const functions = require("firebase-functions");
 const { google } = require("googleapis");
-const serviceAccount = require("./service-account.json");
 
 // Create and deploy your first functions
 // https://firebase.google.com/docs/functions/get-started
@@ -21,29 +20,44 @@ const serviceAccount = require("./service-account.json");
 //   response.send("Hello from Firebase!");
 // });
 
+// Get service account from Firebase secret
+const getServiceAccount = () => {
+  const serviceAccountBase64 = process.env.SERVICE_ACCOUNT;
+  if (!serviceAccountBase64) {
+    throw new Error("SERVICE_ACCOUNT secret is not set");
+  }
+  return JSON.parse(Buffer.from(serviceAccountBase64, "base64").toString());
+};
+
 // Initialize the JWT client
-const jwtClient = new google.auth.JWT(
-  serviceAccount.client_email,
-  null,
-  serviceAccount.private_key,
-  [
-    "https://www.googleapis.com/auth/gmail.send",
-    "https://www.googleapis.com/auth/gmail.compose",
-    "https://www.googleapis.com/auth/gmail.modify",
-  ],
-  "kiaora@kapiki.co.nz"
-);
+const getJwtClient = () => {
+  const serviceAccount = getServiceAccount();
+  return new google.auth.JWT(
+    serviceAccount.client_email,
+    null,
+    serviceAccount.private_key,
+    [
+      "https://www.googleapis.com/auth/gmail.send",
+      "https://www.googleapis.com/auth/gmail.compose",
+      "https://www.googleapis.com/auth/gmail.modify",
+    ],
+    "kiaora@kapiki.co.nz"
+  );
+};
 
 // Create Gmail API client
-const gmail = google.gmail({ version: "v1", auth: jwtClient });
+const getGmailClient = () => {
+  return google.gmail({ version: "v1", auth: getJwtClient() });
+};
 
 exports.sendEmail = onCall(
   {
-    cors: true, // Allow all origins in development
+    cors: true,
     maxInstances: 10,
     region: "us-central1",
     memory: "256MiB",
     minInstances: 0,
+    secrets: ["SERVICE_ACCOUNT"],
   },
   async (request) => {
     // Log the incoming request
@@ -113,6 +127,7 @@ exports.sendEmail = onCall(
 
       logger.info("Sending email via Gmail API");
       // Send email
+      const gmail = getGmailClient();
       const response = await gmail.users.messages.send({
         userId: "me",
         requestBody: {
