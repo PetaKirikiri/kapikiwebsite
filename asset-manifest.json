@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/kapikiwebsite/static/css/main.bce922e2.css",
-    "main.js": "/kapikiwebsite/static/js/main.8859361e.js",
-    "static/js/453.78c1c374.chunk.js": "/kapikiwebsite/static/js/453.78c1c374.chunk.js",
+    "main.css": "/kapikiwebsite/static/css/main.46dfa143.css",
+    "main.js": "/kapikiwebsite/static/js/main.f2f21065.js",
     "index.html": "/kapikiwebsite/index.html",
-    "main.bce922e2.css.map": "/kapikiwebsite/static/css/main.bce922e2.css.map",
-    "main.8859361e.js.map": "/kapikiwebsite/static/js/main.8859361e.js.map",
-    "453.78c1c374.chunk.js.map": "/kapikiwebsite/static/js/453.78c1c374.chunk.js.map"
+    "main.46dfa143.css.map": "/kapikiwebsite/static/css/main.46dfa143.css.map",
+    "main.f2f21065.js.map": "/kapikiwebsite/static/js/main.f2f21065.js.map"
   },
   "entrypoints": [
-    "static/css/main.bce922e2.css",
-    "static/js/main.8859361e.js"
+    "static/css/main.46dfa143.css",
+    "static/js/main.f2f21065.js"
   ]
 }
