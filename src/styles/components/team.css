@@ -1,0 +1,21 @@
+.team-member {
+  text-align: center;
+}
+
+.member-avatar {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background-color: var(--background-light);
+  margin: 0 auto 1.5rem;
+}
+
+.member-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.member-position {
+  color: var(--text-light);
+} 

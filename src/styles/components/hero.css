@@ -1,0 +1,16 @@
+.hero {
+  background: linear-gradient(to bottom, var(--background-light), var(--white));
+  padding: 6rem 0;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+} 
