@@ -8,6 +8,12 @@ Requires Node 22 or newer. Run `npm ci`, then `npm run dev`. The website opens o
 
 ## Production
 
+### Vercel
+
+Import the repository with its root directory unchanged. `vercel.json` builds the Vite frontend and routes the four course endpoints to `api/course.js`. In Vercel's project environment settings, set `CONNECTORS_API_URL` to the public HTTPS URL of the running Connectors service, then redeploy. A localhost URL cannot work in Vercel. Without the setting the API returns an explicit 503 configuration error, not a static-page 404.
+
+### Other Node hosts
+
 Run `npm ci` and `npm run build`, then set the server environment variable `CONNECTORS_API_URL` to a reachable Connectors service and run `npm start`. `PORT` defaults to 5180. Use a Node-capable host: GitHub Pages alone cannot provide the live API connection.
 
 The API URL is server-side configuration, not a browser URL. The service must provide `/__website_preview_data`, `/__website_sentence`, `/__connector_shapes`, and `/__connector_patterns`. Only curriculum reads, sentence analysis, empty shape reads, and pattern reads are forwarded. Editing requests are rejected. Keep the upstream editing interfaces private; protect/rate-limit the public analysis endpoint at the hosting layer.

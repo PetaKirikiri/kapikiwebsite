@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": { "api/course.js": { "maxDuration": 60 } },
+  "rewrites": [
+    { "source": "/__website_preview_data", "destination": "/api/course?route=__website_preview_data" },
+    { "source": "/__website_sentence", "destination": "/api/course?route=__website_sentence" },
+    { "source": "/__connector_shapes", "destination": "/api/course?route=__connector_shapes" },
+    { "source": "/__connector_patterns", "destination": "/api/course?route=__connector_patterns" }
+  ]
+}

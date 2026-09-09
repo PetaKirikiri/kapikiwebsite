@@ -18,11 +18,13 @@ export function liveApi(upstream) {
         if (req.method !== 'GET') throw new Error('GET required')
       } else {
         if (req.method !== 'POST') throw new Error('POST required')
-        let raw = ''
-        for await (const chunk of req) {
+        // Vercel parses request bodies before invoking Node handlers.
+        let raw = req.body == null ? '' : typeof req.body === 'string' ? req.body : JSON.stringify(req.body)
+        if (req.body == null) for await (const chunk of req) {
           raw += chunk.toString()
           if (raw.length > 8192) throw new Error('Request too large')
         }
+        if (raw.length > 8192) throw new Error('Request too large')
         const input = JSON.parse(raw)
         if (pathname === '/__connector_shapes') {
           if (Object.keys(input).length !== 1 || !Array.isArray(input.shapes) || input.shapes.length) throw new Error('Website is read-only')
