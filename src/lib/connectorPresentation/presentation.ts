@@ -91,6 +91,9 @@ function materialColor(tokens: BusManifestSheet['tokens'], index: number, famili
       && tokens[0]?.surfaceText.toLocaleLowerCase('mi-NZ') === 'he')
   )
   if (isHeAhaQuestionLead) return WORD_CLASS_VISUAL_PALETTE.tam
+  if (token.surfaceText.toLocaleLowerCase('mi-NZ') === 'ake') {
+    return WORD_CLASS_VISUAL_PALETTE.nominalPredicate
+  }
   const family = token.acceptedPosCode == null ? null : families.get(token.acceptedPosCode)
   if (family === 'verb') return WORD_CLASS_VISUAL_PALETTE.verb
   if (family === 'adjective') return WORD_CLASS_VISUAL_PALETTE.adjective
