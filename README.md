@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Ka Piki website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The learner-facing Connectors website, with the existing connector presentation engine and approved shape contracts. No editor, Design Space, or database credentials are included.
 
-## Available Scripts
+## Run locally
 
-In the project directory, you can run:
+Requires Node 22 or newer. Run `npm ci`, then `npm run dev`. The website opens on port 5180 and reads the running Connectors service on port 5176 by default. Set `CONNECTORS_API_URL` in `.env` to use another service.
 
-### `npm start`
+## Production
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Run `npm ci` and `npm run build`, then set the server environment variable `CONNECTORS_API_URL` to a reachable Connectors service and run `npm start`. `PORT` defaults to 5180. Use a Node-capable host: GitHub Pages alone cannot provide the live API connection.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The API URL is server-side configuration, not a browser URL. The service must provide `/__website_preview_data`, `/__website_sentence`, `/__connector_shapes`, and `/__connector_patterns`. Only curriculum reads, sentence analysis, empty shape reads, and pattern reads are forwarded. Editing requests are rejected. Keep the upstream editing interfaces private; protect/rate-limit the public analysis endpoint at the hosting layer.
 
-### `npm test`
+Course sentences, tags, shapes, and pattern settings stay live in Connectors. Translation alignments and draft learning notes are versioned in `src/lib/connectorPresentation/englishTranslations.json` and `structureNotes.json`; source-text changes require matching translation updates. The earlier red/green-bird batch has not been applied by this export.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Scope
 
-### `npm run build`
+`website-preview` is the only app entry point. Shared rendering dependencies retain their original source paths to preserve geometry and behaviour. Review controls in the shared renderer are disabled on the website; no review or design workspace is mounted and no mutation API is exposed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The replacement preserves previous repository contents in Git history. No database reset, curriculum rewrite, or deployment is performed by this repository export.

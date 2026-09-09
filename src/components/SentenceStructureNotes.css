@@ -1,0 +1,37 @@
+.structure-note-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 24px 12px 0;
+}
+.structure-note-number {
+  color: #627480;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.structure-note-heading h3 {
+  margin: 0;
+  color: #243941;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -.02em;
+}
+.structure-note-detail {
+  margin: 0 12px 24px;
+  padding: 14px 0 24px;
+  border-bottom: 1px solid #dfe6e9;
+  max-width: 76ch;
+  color: #526570;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.structure-note-detail > span {
+  font-weight: 600;
+  color: #344b56;
+}
+.structure-note-detail p { margin: 4px 0 0; }
+.maori-site .structure-note-heading { padding-left: 0; padding-right: 0; }
+.maori-site .structure-note-detail { margin-left: 0; margin-right: 0; }
+.site-sentences .site-translation:has(+ .structure-note-detail) { border-bottom: 0; padding-bottom: 8px; margin-bottom: 0; }
+.site-sentences article > .structure-note-heading + p { border-bottom: 0; }
