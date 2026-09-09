@@ -94,6 +94,11 @@ function materialColor(tokens: BusManifestSheet['tokens'], index: number, famili
   if (token.surfaceText.toLocaleLowerCase('mi-NZ') === 'ake') {
     return WORD_CLASS_VISUAL_PALETTE.nominalPredicate
   }
+  if (token.acceptedPosCode === 'stative_verb') return WORD_CLASS_VISUAL_PALETTE.adjective
+  if (token.acceptedPosCode === 'agent_marker'
+    && tokens.some((item) => item.acceptedPosCode === 'stative_verb')) {
+    return WORD_CLASS_VISUAL_PALETTE.adjective
+  }
   const family = token.acceptedPosCode == null ? null : families.get(token.acceptedPosCode)
   if (family === 'verb') return WORD_CLASS_VISUAL_PALETTE.verb
   if (family === 'adjective') return WORD_CLASS_VISUAL_PALETTE.adjective

@@ -79,11 +79,12 @@ const LEVEL_STORIES: Record<CurriculumLevel, StoryPreview> = {
 function demoManifest(
   sentence: WebsitePreviewSentence,
   state: BusManifestSheet,
+  displayOrderIndex = sentence.sortOrder,
 ): SavedBusManifest {
   return {
     savedAt: 'website-preview',
     stateFingerprint: `website-preview-${sentence.structureId}`,
-    sourceOrderIndex: sentence.sortOrder,
+    sourceOrderIndex: displayOrderIndex,
     paragraphText: sentence.textMi,
     sourceAddress: { structureId: sentence.structureId },
     state,
@@ -147,6 +148,13 @@ export default function WebsiteView({
   }
 
   const levelSentences = data?.sentences.filter((sentence) => sentence.curriculumLevel === selectedLevel) ?? []
+  const courseOrderByStructureId = useMemo(() => {
+    const ordered = data?.sentences
+      .filter((sentence) => sentence.curriculumLevel != null)
+      .slice()
+      .sort((left, right) => (left.curriculumLevel! - right.curriculumLevel!) || (left.sortOrder - right.sortOrder)) ?? []
+    return new Map(ordered.map((sentence, index) => [sentence.structureId, index]))
+  }, [data])
   const story = LEVEL_STORIES[selectedLevel]
   const storyText = storySupport === 0
     ? story.extraHelp
@@ -214,7 +222,9 @@ export default function WebsiteView({
                 key={selectedLevel}
                 loading={false}
                 paragraphs={levelSentences.map((sentence) => renderUnassessedPassage(sentence.textMi))}
-                savedBusManifests={levelSentences.map((sentence) => demoManifest(sentence, states.get(sentence.structureId) ?? blankSheet(sentence.textMi)))}
+                savedBusManifests={levelSentences.map((sentence) => demoManifest(sentence,
+                  states.get(sentence.structureId) ?? blankSheet(sentence.textMi),
+                  courseOrderByStructureId.get(sentence.structureId) ?? sentence.sortOrder))}
                 posCatalog={data.catalog}
                 passageAddresses={levelSentences.map((sentence) => ({ structureId: sentence.structureId }))}
                 onBusManifestWrite={handleLocalWrite}
