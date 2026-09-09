@@ -235,15 +235,18 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
       ? planConnectorFace(library, CONNECTOR_BLUEPRINTS.find(item => item.id === 'fat-wave')!, 'send',
         WORD_CLASS_VISUAL_PALETTE.nominalPredicate, WORD_CLASS_VISUAL_PALETTE.nominalNoun)
       : null
-    // A receiving doer arrow still belongs to the marker, not the noun it
-    // points into. Swap the boundary inputs for that orientation so its saved
-    // silhouette is painted with the marker colour and the noun remains the
-    // surrounding material; this also avoids a contrasting sliver at the join.
-    const markerJoin = marker && ends.rightConnectorEnd
-      ? markerRole === 'accept'
-        ? planConnectorFace(library, marker, markerRole, right, left)
-        : planConnectorFace(library, marker, markerRole ?? 'send', left, right)
-      : null
+    // Participant-arrow material always belongs to the marker. The saved
+    // orientation controls direction only; it must not make a receiving or
+    // sending arrow borrow the following noun's colour.
+    const rawMarkerJoin = marker && ends.rightConnectorEnd
+      ? planConnectorFace(library, marker, markerRole ?? 'send', left, right) : null
+    const markerJoin = rawMarkerJoin?.status === 'ready' ? {
+      ...rawMarkerJoin,
+      background: right,
+      drawing: { ...rawMarkerJoin.drawing, drawing: {
+        fill: left, stroke: 'none' as const,
+      } },
+    } : rawMarkerJoin
     return { ...ends, standalone: marker != null || endsNegativeSection, flatEnding, separateAfter: endsNegativeSection, blueprint: marker ?? blueprint,
       face: flatEnding ? null : marker ? markerJoin : face, conflict: marker ? null : conflict,
       materialColor: materials[index], paintMaterial: marker == null,
