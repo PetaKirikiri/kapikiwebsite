@@ -84,6 +84,9 @@ function interpolate(start: string, end: string, progress: number): string {
 function materialColor(tokens: BusManifestSheet['tokens'], index: number, families: ReadonlyMap<string, string>): string | undefined {
   const token = tokens[index]
   if (!token) return undefined
+  const isAbilityDoerMarker = token.acceptedPosCode === 'agent_marker'
+    && tokens.some((item) => item.acceptedPosCode === 'tam'
+      && item.surfaceText.toLocaleLowerCase('mi-NZ') === 'taea')
   const isHeAhaQuestionLead = (
     (index === 0 && token.surfaceText.toLocaleLowerCase('mi-NZ') === 'he'
       && tokens[1]?.surfaceText.toLocaleLowerCase('mi-NZ') === 'aha')
@@ -91,6 +94,7 @@ function materialColor(tokens: BusManifestSheet['tokens'], index: number, famili
       && tokens[0]?.surfaceText.toLocaleLowerCase('mi-NZ') === 'he')
   )
   if (isHeAhaQuestionLead) return WORD_CLASS_VISUAL_PALETTE.tam
+  if (isAbilityDoerMarker) return WORD_CLASS_VISUAL_PALETTE.verb
   if (token.surfaceText.toLocaleLowerCase('mi-NZ') === 'ake') {
     return WORD_CLASS_VISUAL_PALETTE.nominalPredicate
   }
