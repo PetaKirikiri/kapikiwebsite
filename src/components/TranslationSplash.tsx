@@ -1,15 +1,22 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import './TranslationSplash.css'
 
 export default function TranslationSplash({ children, ready }: { children: ReactNode; ready: boolean }) {
   const [step, setStep] = useState(0)
+  const section = useRef<HTMLElement>(null)
+  const [visible, setVisible] = useState(false)
   const [playing, setPlaying] = useState(() => !window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   useEffect(() => {
-    if (!playing || !ready || step === 3) return
-    const timer = window.setTimeout(() => setStep(value => value + 1), step === 0 ? 2400 : 1800)
+    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), { threshold: .3 })
+    if (section.current) observer.observe(section.current)
+    return () => observer.disconnect()
+  }, [])
+  useEffect(() => {
+    if (!playing || !visible || !ready) return
+    const timer = window.setTimeout(() => setStep(value => (value + 1) % 4), [2200, 1600, 1800, 3400][step])
     return () => window.clearTimeout(timer)
-  }, [step, playing, ready])
-  return <section id="website-top" className="translation-splash" aria-label="From English to Māori">
+  }, [step, playing, ready, visible])
+  return <section ref={section} id="website-top" className="translation-splash" aria-label="From English to Māori">
     <img className="splash-birds" src="/ka-piki-birds-v1.png" alt="A red bird and a green bird facing each other" />
     <div className="splash-stage" data-step={step}>
       <p className="splash-language">{step < 2 ? 'English' : step === 2 ? 'A different order' : 'Te reo Māori'}</p>
@@ -23,7 +30,8 @@ export default function TranslationSplash({ children, ready }: { children: React
       </div>
       <div className="splash-controls">
         {[0, 1, 2, 3].map(index => <button key={index} aria-label={['English sentence', 'Show colour groups', 'Show Māori word order', 'Show Māori sentence'][index]} aria-pressed={step === index} disabled={index === 3 && !ready} onClick={() => { setStep(index); setPlaying(false) }} className="splash-dot" />)}
-        <button className="splash-play" onClick={() => { if (step === 3) setStep(0); setPlaying(step === 3 || !playing) }}>{step === 3 ? 'Replay ↺' : playing ? 'Pause' : 'Play'}</button>
+        <button className="splash-play" onClick={() => setPlaying(!playing)}>{playing ? 'Pause' : 'Play'}</button>
+        <button className="splash-play" aria-label="Replay translation from English" onClick={() => { setStep(0); setPlaying(true) }}>Replay ↺</button>
       </div>
     </div>
     <a className="splash-explore" href="#level-finder">Explore the patterns <span aria-hidden="true">↓</span></a>

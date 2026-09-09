@@ -3,21 +3,27 @@
 .splash-stage { position: relative; margin: auto; width: 68%; min-height: 260px; padding-top: 24px; }
 .splash-language { font-size: 11px; text-transform: uppercase; letter-spacing: .18em; color: #637980; margin: 0 0 34px; }
 .splash-reel { position: relative; min-height: 115px; }
-.splash-english { display: grid; grid-template-columns: 1.1fr .75fr 1.25fr; align-items: center; gap: 12px; font-size: clamp(17px, 2.3vw, 34px); letter-spacing: -.035em; transition: opacity .4s, transform .5s; }
+.splash-english { display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; gap: 12px; font-size: clamp(16px, 2vw, 30px); letter-spacing: -.035em; transition: opacity .4s, transform .5s; }
 .splash-english > span { padding-bottom: 12px; border-bottom: 4px solid transparent; transition: transform .8s cubic-bezier(.22,.8,.22,1), border-color .6s; white-space: nowrap; }
 .splash-stage[data-step="1"] .splash-subject, .splash-stage[data-step="2"] .splash-subject { border-color: #71b391; }
 .splash-stage[data-step="1"] .splash-object, .splash-stage[data-step="2"] .splash-object { border-color: #b3d9bf; }
 .splash-stage[data-step="1"] .splash-verb, .splash-stage[data-step="2"] .splash-verb { border-color: #79bfd3; }
 .splash-stage[data-step="1"] .splash-tense, .splash-stage[data-step="2"] .splash-tense { border-bottom: 4px solid #398aa6; padding-bottom: 12px; }
-.splash-stage[data-step="2"] .splash-subject { transform: translateX(74%); }
-.splash-stage[data-step="2"] .splash-verb { transform: translateX(-153%); }
+.splash-stage[data-step="2"] .splash-subject { transform: translateX(calc(100% + 12px)); }
+.splash-stage[data-step="2"] .splash-verb { transform: translateX(calc(-100% - 12px)); }
+.splash-stage[data-step="2"] .splash-subject { animation: splash-over .85s ease-in-out; }
+.splash-stage[data-step="2"] .splash-verb { animation: splash-under .85s ease-in-out; }
+@keyframes splash-over { 45% { translate: 0 -28px; } }
+@keyframes splash-under { 45% { translate: 0 28px; } }
 .splash-stage[data-step="3"] .splash-english { opacity: 0; transform: translateY(25px); visibility: hidden; }
 .splash-maori { position: absolute; inset: -20px -10% auto; opacity: 0; visibility: hidden; transform: translateY(-24px); transition: opacity .6s, transform .6s; text-align: left; }
 .splash-stage[data-step="3"] .splash-maori { opacity: 1; visibility: visible; transform: translateY(0); }
+.splash-stage[data-step="3"] .splash-maori { animation: splash-drop .7s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes splash-drop { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: translateY(0); } }
 .splash-controls { display: flex; justify-content: center; align-items: center; gap: 9px; margin: 22px 0; }
 .splash-dot { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: #dce5e1; cursor: pointer; }
 .splash-dot[aria-pressed="true"] { background: #184c3c; }
 .splash-play { background: none; border: none; color: #61716c; font-size: 12px; margin-left: 12px; cursor: pointer; min-width: 65px; }
 .splash-explore { display: inline-flex; gap: 24px; font-size: 13px; color: #456359; margin-top: 12px; }
 @media(max-width: 650px) { .translation-splash { padding-top: 140px; } .splash-birds { top: 0; height: 150px; } .splash-stage { width: 100%; } .splash-maori { inset-inline: 0; overflow-x: auto; } .splash-english { gap: 6px; } }
-@media(prefers-reduced-motion: reduce) { .translation-splash * { transition: none !important; } }
+@media(prefers-reduced-motion: reduce) { .translation-splash * { transition: none !important; animation: none !important; } }
