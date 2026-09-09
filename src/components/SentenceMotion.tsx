@@ -29,6 +29,13 @@ export default function SentenceMotion({ children, sentence }: { children: React
       const next = new Map<string, { x: number; y: number; width: number; node: HTMLElement; paint: string }>()
       const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches
       const first = previous.current.size === 0
+      const anchors = tokens.map((token, index) => ({ token, index,
+        word: token.querySelector('[data-word-text]')?.textContent?.trim().toLowerCase(),
+      })).filter(({ word }) => word === 'manu' || word === 'whai' || word === 'whaia')
+      const centers = anchors.map(({ token }) => {
+        const box = token.getBoundingClientRect()
+        return box.left + box.width / 2
+      })
       tokens.forEach((token, index) => {
         const box = token.getBoundingClientRect()
         const paint = Array.from(token.querySelectorAll('[data-testid^="word-material"], [data-checkpoint-connector-design-id]'))
@@ -37,18 +44,34 @@ export default function SentenceMotion({ children, sentence }: { children: React
         const before = previous.current.get(keys[index])
         next.set(keys[index], point)
         if (reduced) return
-        if (before) animations.push(token.animate([
-          { transform: `translate(${before.x - point.x}px, ${before.y - point.y}px)` },
+        const anchorIndex = anchors.findIndex(anchor => anchor.index === index)
+        const anchor = anchorIndex >= 0
+        const startX = before?.x ?? (anchor ? origin.width * (anchorIndex + 1) / (anchors.length + 1) - box.width / 2 : point.x)
+        if (before || anchor) animations.push(token.animate([
+          { transform: `translate(${startX - point.x}px, ${(before?.y ?? point.y) - point.y}px)` },
           { transform: 'translate(0, 0)' },
         ], {
           duration: 1200,
           easing: 'cubic-bezier(.22, 1, .36, 1)',
         }))
-        // Reveal the existing artwork; never deform or regenerate its curves.
-        if (!before || before.paint !== paint) animations.push(token.animate([
-          { clipPath: 'inset(-32px 100% -12px -32px)', opacity: .2 },
+        // Each anchor stays readable while its approved artwork opens from its
+        // centre. Surrounding pieces follow by distance, not sentence order.
+        const distance = centers.length ? Math.min(...centers.map(center => Math.abs(center - (box.left + box.width / 2)))) : 0
+        const delay = 1200 + Math.min(distance * 1.5, 420)
+        if (anchor) {
+          Array.from(token.children).forEach(child => {
+            if (!(child instanceof HTMLElement) || child.hasAttribute('data-word-text')) return
+            const childBox = child.getBoundingClientRect()
+            const growthCenter = box.left + box.width / 2 - childBox.left
+            animations.push(child.animate([
+              { clipPath: `inset(-32px ${childBox.width - growthCenter}px -12px ${growthCenter}px)` },
+              { clipPath: 'inset(-32px -32px -12px -32px)' },
+            ], { duration: 900, delay: 1200, fill: 'backwards', easing: 'cubic-bezier(.25,.65,.25,1)' }))
+          })
+        } else if (first || !before || before.paint !== paint) animations.push(token.animate([
+          { clipPath: 'inset(-32px 50% -12px 50%)', opacity: 0 },
           { clipPath: 'inset(-32px -32px -12px -32px)', opacity: 1 },
-        ], { duration: 1050, delay: first ? index * 65 : 120, fill: 'backwards', easing: 'cubic-bezier(.25,.65,.25,1)' }))
+        ], { duration: 850, delay, fill: 'backwards', easing: 'cubic-bezier(.25,.65,.25,1)' }))
       })
       if (!reduced) previous.current.forEach((old, key) => {
         if (next.has(key)) return
