@@ -27,3 +27,20 @@
 .splash-explore { display: inline-flex; gap: 24px; font-size: 13px; color: #456359; margin-top: 12px; }
 @media(max-width: 650px) { .translation-splash { padding-top: 140px; } .splash-birds { top: 0; height: 150px; } .splash-stage { width: 100%; } .splash-maori { inset-inline: 0; overflow-x: auto; } .splash-english { gap: 6px; } }
 @media(prefers-reduced-motion: reduce) { .translation-splash * { transition: none !important; animation: none !important; } }
+
+/* Keep illustration and teaching surface in separate vertical space. */
+.translation-splash { padding: 175px 0 30px; }
+.splash-birds { top: 0; left: 15%; width: 70%; height: 180px; object-fit: contain; }
+.splash-stage { width: 100%; max-width: 920px; min-height: 240px; padding-top: 10px; }
+.splash-language { margin-bottom: 24px; }
+.splash-reel { min-height: 145px; }
+.splash-stage[data-step="3"] .splash-english { display: none; }
+.splash-comparison { min-height: 145px; }
+.splash-meaning { margin: 0 0 22px; font-size: clamp(18px, 2.5vw, 30px); letter-spacing: -.025em; color: #344c46; }
+.splash-meaning strong { display: inline-block; font-weight: 550; color: #398aa6; border-bottom: 2px solid #79bfd3; animation: splash-drop .45s ease-out; }
+.splash-maori { position: relative; inset: auto; width: 100%; display: flex; justify-content: center; overflow-x: auto; }
+.splash-maori > * { max-width: 100%; }
+.splash-choice { border: 0; border-bottom: 2px solid transparent; background: transparent; padding: 8px 10px; font-size: 12px; color: #637980; cursor: pointer; }
+.splash-choice[aria-pressed="true"] { color: #184c3c; border-color: #184c3c; }
+.splash-controls { flex-wrap: wrap; gap: 4px; }
+@media(max-width:650px) { .translation-splash { padding-top: 125px; } .splash-birds { height: 125px; left: 5%; width: 90%; } .splash-english { gap: 12px; font-size: 14px; } .splash-controls { margin-top: 12px; } }

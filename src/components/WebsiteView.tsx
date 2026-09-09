@@ -4,7 +4,7 @@ import { renderUnassessedPassage } from '../lib/busManifestTeam/reviewDeskDispla
 import type { ReviewDeskPosCatalog, SavedBusManifest } from '../lib/busManifestTeam/reviewDeskGateway'
 import type { BusManifestUserWrite } from './BusManifestReviewView'
 import FamilyConnectorSentenceView from './FamilyConnectorSentenceView'
-import TranslationSplash from './TranslationSplash'
+import TranslationSplash, { SPLASH_EXAMPLES } from './TranslationSplash'
 import { unresolvedSentence as blankSheet, tagText } from '../lib/connectorPresentation/engine'
 import './WebsiteView.css'
 import { translatedSegments } from '../lib/connectorPresentation/translation'
@@ -199,8 +199,8 @@ export default function WebsiteView({
         <nav aria-label="Website navigation"><a href="#join" className="site-nav-join">Join the class</a></nav>
       </header>
 
-      <TranslationSplash ready={Boolean(data?.sentences.some(sentence => sentence.textMi.replace(/[.!?]/g, '').trim().toLowerCase() === 'i whai te manu whero i te manu kākāriki' && sentence.state))}>
-        {data?.sentences.filter(sentence => sentence.textMi.replace(/[.!?]/g, '').trim().toLowerCase() === 'i whai te manu whero i te manu kākāriki' && sentence.state).slice(0, 1).map(sentence => <FamilyConnectorSentenceView
+      <TranslationSplash ready={SPLASH_EXAMPLES.every(example => data?.sentences.some(sentence => sentence.textMi === example.text && sentence.state))}
+        renderSentence={text => data?.sentences.filter(sentence => sentence.textMi === text && sentence.state).slice(0, 1).map(sentence => <FamilyConnectorSentenceView
           key={sentence.structureId}
           loading={false}
           paragraphs={[renderUnassessedPassage(sentence.textMi)]}
@@ -212,7 +212,7 @@ export default function WebsiteView({
           showPassageLabel={false}
           readOnly
         />)}
-      </TranslationSplash>
+      />
       <section className="site-intro">
         <div>
           <h1>Find your level.</h1>
