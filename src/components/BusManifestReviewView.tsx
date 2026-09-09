@@ -7,6 +7,7 @@ import {
   useState,
   type FormEvent,
   type ReactNode,
+  type CSSProperties,
 } from 'react'
 import type {
   BusManifestDisplayToken as EngineRenderToken,
@@ -1357,7 +1358,7 @@ export default function BusManifestReviewView({
                         })
                       }}
                     /> : null}
-                    <span data-word-text className={label == null ? 'text-slate-800' : 'text-slate-900'}>
+                    <span data-word-text style={{ '--word-ink': topology?.materialColor } as CSSProperties} className={label == null ? 'text-slate-800' : 'text-slate-900'}>
                       {token.text}
                     </span>
                   </span>

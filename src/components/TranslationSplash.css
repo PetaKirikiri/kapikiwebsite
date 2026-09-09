@@ -28,3 +28,10 @@
 .splash-explore { display: inline-flex; gap: 24px; font-size: 13px; color: #456359; }
 @media(max-width:650px) { .splash-birds { width: 90%; height: 130px; } .splash-english { font-size: 12px; gap: 12px; } }
 @media(prefers-reduced-motion:reduce) { .translation-splash * { animation: none !important; transition: none !important; } }
+.splash-det { color: #164733; }
+.splash-noun { color: #467d60; }
+.splash-adj { color: #64896d; }
+.splash-maori [data-word-text] { color: color-mix(in srgb, var(--word-ink, #344c46) 75%, #164733); }
+.splash-maori { animation: none; min-height: 85px; }
+.splash-meaning strong { min-width: 175px; animation: splash-dissolve .65s ease; }
+@keyframes splash-dissolve { from { opacity: .15; } to { opacity: 1; } }
