@@ -29,7 +29,7 @@ export default function TranslationSplash({ renderSentence, ready }: { renderSen
   return <section ref={section} id="website-top" className="translation-splash" aria-label="From English to Māori">
     <img className="splash-birds" src="/ka-piki-birds-v1.png" alt="A red bird and a green bird facing each other" />
     <div className="splash-stage" data-step={step}>
-      <p className="splash-language">{step < 2 ? 'Start with what you know' : step === 2 ? 'Follow the pattern' : 'Same words. Different meaning.'}</p>
+      <p className="splash-language">Same words. Different meaning.</p>
       <div className="splash-reel">
         <div className="splash-english" aria-hidden={step === 4}>
           <span className="splash-subject"><span className="splash-original" aria-hidden={step >= 3}>The red bird</span><span className="splash-translated" aria-hidden={step < 3}>te manu whero</span></span>
