@@ -3,7 +3,7 @@ import { Readable } from 'node:stream'
 const routes = new Set(['/__website_preview_data', '/__website_sentence', '/__connector_shapes', '/__connector_patterns'])
 
 /** Fixed read-only proxy. Never forwards editing requests or arbitrary URLs. */
-export function liveApi(upstream) {
+export function liveApi(upstream, serviceKey = '') {
   const base = new URL(upstream)
   if (!['http:', 'https:'].includes(base.protocol)) throw new Error('Invalid CONNECTORS_API_URL')
   return async (req, res, next) => {
@@ -39,7 +39,10 @@ export function liveApi(upstream) {
       }
       const response = await fetch(new URL(pathname, base), {
         method: req.method,
-        headers: { 'content-type': 'application/json' },
+        headers: {
+          'content-type': 'application/json',
+          ...(serviceKey ? { 'x-course-service-key': serviceKey } : {}),
+        },
         body,
         signal: AbortSignal.timeout(60000),
         redirect: 'error',

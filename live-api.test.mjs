@@ -38,11 +38,12 @@ test('forwards course reads and rejects all writes and unknown routes', async ()
 
 test('Vercel adapter forwards parsed POST bodies and reports missing configuration', async () => {
   const previous = process.env.CONNECTORS_API_URL
+  const previousKey = process.env.COURSE_SERVICE_KEY
   const upstream = createServer(async (req, res) => {
     let raw = ''
     for await (const chunk of req) raw += chunk
     res.writeHead(200, { 'content-type': 'application/json' })
-    res.end(JSON.stringify({ path: req.url, body: JSON.parse(raw) }))
+    res.end(JSON.stringify({ path: req.url, body: JSON.parse(raw), key: req.headers['x-course-service-key'] }))
   })
   await new Promise(resolve => upstream.listen(0, '127.0.0.1', resolve))
   const website = createServer(async (req, res) => {
@@ -57,13 +58,16 @@ test('Vercel adapter forwards parsed POST bodies and reports missing configurati
     delete process.env.CONNECTORS_API_URL
     assert.equal((await fetch(base + '/api/course?route=__website_preview_data')).status, 503)
     process.env.CONNECTORS_API_URL = `http://127.0.0.1:${upstream.address().port}`
+    process.env.COURSE_SERVICE_KEY = 'test-service-key'
     const response = await fetch(base + '/api/course?route=__connector_patterns', { method: 'POST', body: JSON.stringify({ operation: 'read' }) })
     assert.equal(response.status, 200)
-    assert.deepEqual(await response.json(), { path: '/__connector_patterns', body: { operation: 'read' } })
+    assert.deepEqual(await response.json(), { path: '/__connector_patterns', body: { operation: 'read' }, key: 'test-service-key' })
     assert.equal((await fetch(base + '/api/course?route=__bus_manifest')).status, 404)
   } finally {
     if (previous == null) delete process.env.CONNECTORS_API_URL
     else process.env.CONNECTORS_API_URL = previous
+    if (previousKey == null) delete process.env.COURSE_SERVICE_KEY
+    else process.env.COURSE_SERVICE_KEY = previousKey
     await Promise.all([new Promise(resolve => website.close(resolve)), new Promise(resolve => upstream.close(resolve))])
   }
 })

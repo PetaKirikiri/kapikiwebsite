@@ -10,15 +10,16 @@ export default async function handler(req, res) {
     return
   }
   const upstream = process.env.CONNECTORS_API_URL
-  if (!upstream) {
-    console.error('[course-api] CONNECTORS_API_URL is missing')
+  const serviceKey = process.env.COURSE_SERVICE_KEY
+  if (!upstream || !serviceKey) {
+    console.error('[course-api] Private course service configuration is missing')
     res.writeHead(503, { 'content-type': 'application/json', 'cache-control': 'no-store' })
     res.end(JSON.stringify({ error: 'The live course service is not configured yet.' }))
     return
   }
   try {
     req.url = `/${route}`
-    await liveApi(upstream)(req, res, () => { res.writeHead(404); res.end() })
+    await liveApi(upstream, serviceKey)(req, res, () => { res.writeHead(404); res.end() })
   } catch {
     console.error('[course-api] Invalid live course configuration')
     res.writeHead(503, { 'content-type': 'application/json', 'cache-control': 'no-store' })
