@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import './TranslationSplash.css'
+import SentenceMotion from './SentenceMotion'
 
 export const SPLASH_EXAMPLES = [
   { text: 'I whai te manu whero i te manu kākāriki', action: 'chased', label: 'Past' },
   { text: 'Kei te whai te manu whero i te manu kākāriki', action: 'is chasing', label: 'Now' },
   { text: 'Me whai te manu whero i te manu kākāriki', action: 'should chase', label: 'Should' },
   { text: 'Kāore te manu whero i whai i te manu kākāriki', action: 'didn’t chase', label: 'Didn’t' },
+  { text: 'I whaia te manu kākāriki e te manu whero', action: 'was chased by', label: 'Passive', reverse: true },
+  { text: 'Ka taea e te manu whero te manu kākāriki te whai', action: 'can chase', label: 'Can' },
+  { text: 'He nui ake te manu i te kākano', action: 'is bigger than', label: 'Compare', comparison: true },
 ] as const
 
 export default function TranslationSplash({ renderSentence, ready }: { renderSentence: (text: string) => ReactNode; ready: boolean }) {
@@ -23,9 +27,12 @@ export default function TranslationSplash({ renderSentence, ready }: { renderSen
     if (!playing || !visible || !ready) return
     const timer = window.setTimeout(() => {
       setExample(value => (value + 1) % SPLASH_EXAMPLES.length)
-    }, [2000, 1200, 1400, 2000, 3600][step])
+    }, 4800)
     return () => window.clearTimeout(timer)
   }, [step, example, playing, ready, visible])
+  const current = SPLASH_EXAMPLES[example]
+  const reverse = 'reverse' in current
+  const comparison = 'comparison' in current
   return <section ref={section} id="website-top" className="translation-splash" aria-label="From English to Māori">
     <img className="splash-birds" src="/ka-piki-birds-v1.png" alt="A red bird and a green bird facing each other" />
     <div className="splash-stage" data-step={step}>
@@ -37,8 +44,8 @@ export default function TranslationSplash({ renderSentence, ready }: { renderSen
           <span className="splash-object"><span className="splash-original" aria-hidden={step >= 3}>the green bird</span><span className="splash-translated" aria-hidden={step < 3}>i te manu kākāriki</span></span>
         </div>
         {step === 4 && <div className="splash-comparison">
-          <p className="splash-meaning"><span className="splash-det">The</span> <span className="splash-adj">red</span> <span className="splash-noun">bird</span> <strong key={example}>{SPLASH_EXAMPLES[example].action}</strong> <span className="splash-det">the</span> <span className="splash-adj">green</span> <span className="splash-noun">bird</span></p>
-          <div className="splash-maori">{renderSentence(SPLASH_EXAMPLES[example].text)}</div>
+          <p className="splash-meaning"><span className="splash-det">The</span> {!comparison && <span className="splash-adj">{reverse ? 'green' : 'red'} </span>}<span className="splash-noun">bird</span> <strong key={example} style={comparison ? { color: '#a64e7c' } : undefined}>{current.action}</strong> <span className="splash-det">the</span> {!comparison && <span className="splash-adj">{reverse ? 'red' : 'green'} </span>}<span className="splash-noun">{comparison ? 'seed' : 'bird'}</span></p>
+          <SentenceMotion sentence={current.text}>{renderSentence(current.text)}</SentenceMotion>
         </div>}
       </div>
       <div className="splash-controls">
