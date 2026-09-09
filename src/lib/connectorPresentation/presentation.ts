@@ -235,8 +235,14 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
       ? planConnectorFace(library, CONNECTOR_BLUEPRINTS.find(item => item.id === 'fat-wave')!, 'send',
         WORD_CLASS_VISUAL_PALETTE.nominalPredicate, WORD_CLASS_VISUAL_PALETTE.nominalNoun)
       : null
+    // A receiving doer arrow still belongs to the marker, not the noun it
+    // points into. Swap the boundary inputs for that orientation so its saved
+    // silhouette is painted with the marker colour and the noun remains the
+    // surrounding material; this also avoids a contrasting sliver at the join.
     const markerJoin = marker && ends.rightConnectorEnd
-      ? planConnectorFace(library, marker, markerRole ?? 'send', left, right)
+      ? markerRole === 'accept'
+        ? planConnectorFace(library, marker, markerRole, right, left)
+        : planConnectorFace(library, marker, markerRole ?? 'send', left, right)
       : null
     return { ...ends, standalone: marker != null || endsNegativeSection, flatEnding, separateAfter: endsNegativeSection, blueprint: marker ?? blueprint,
       face: flatEnding ? null : marker ? markerJoin : face, conflict: marker ? null : conflict,
