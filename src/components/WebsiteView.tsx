@@ -10,6 +10,9 @@ import StudentPortal from './studentPortal/StudentPortal'
 import { translatedSegments } from '../lib/connectorPresentation/translation'
 import type { CSSProperties } from 'react'
 import KaPikiWordmark from './KaPikiWordmark'
+import NavigationRail from './NavigationRail'
+import { WORD_CLASS_VISUAL_PALETTE } from './railVisualPalette'
+import IsolatedAnchorView from './IsolatedAnchorView'
 
 export type WebsitePreviewSentence = {
   readonly structureId: number
@@ -59,6 +62,10 @@ export default function WebsiteView({
   const [fetchedData, setFetchedData] = useState<WebsitePreviewData | null>(null)
   const [fetchError, setFetchError] = useState<string | null>(null)
   const [localStates, setLocalStates] = useState<ReadonlyMap<number, BusManifestSheet>>(new Map())
+  const [navReplay, setNavReplay] = useState(0)
+  const [methodStep, setMethodStep] = useState(0)
+  const [completedNav, setCompletedNav] = useState('')
+  const [ourReveal, setOurReveal] = useState(100)
   const [selectedLevel, setSelectedLevel] = useState<CurriculumLevel>(1)
   const [accountOpen, setAccountOpen] = useState(() => ['#account', '#join'].includes(window.location.hash))
   const [activeSection, setActiveSection] = useState(() => window.location.hash || '#level-finder')
@@ -124,26 +131,97 @@ export default function WebsiteView({
     return new Map(ordered.map((sentence, index) => [sentence.structureId, index]))
   }, [data])
 
+  const methodologySentences = ['I whai te manu whero i te manu kākāriki', 'Me whai te manu whero i te manu kākāriki']
+    .flatMap(text => data?.sentences.filter(sentence => sentence.textMi.replace(/[.!]$/u, '') === text) ?? [])
+  const methodologyReady = !!methodologySentences[0]?.state
+  useEffect(() => {
+    if (!['#methodology', '#website-top'].includes(activeSection) || !methodologyReady) return
+    setMethodStep(0)
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { setMethodStep(3); return }
+    const timers = [1, 2, 3].map(step => window.setTimeout(() => {
+      setMethodStep(step)
+      requestAnimationFrame(() => document.getElementById(`method-step-${step}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }))
+    }, 7600 + (step - 1) * 4800))
+    return () => timers.forEach(clearTimeout)
+  }, [activeSection, methodologyReady])
+
   return (
     <section id="website-top" aria-label="Website" data-testid="website-workspace" className="maori-site">
       <header className="site-header">
         <a href="#website-top" className="site-wordmark" aria-label="Ka Piki"><KaPikiWordmark /></a>
         <nav aria-label="Website navigation" className="site-nav">
           {[
+            ['#methodology', 'Methodology'],
             ['#level-finder', 'Levels'],
+            ['#competency', 'Capabilities'],
           ].map(([href, label]) => {
-            const active = activeSection === href || ['#website-top', '#methodology', '#teacher'].includes(activeSection)
-            return <a key={href} href={href} aria-current={active ? 'location' : undefined} className={`site-nav-item${active ? ' site-nav-item-active' : ''}`}>{label}</a>
+            const active = activeSection === href || (href === '#methodology' && activeSection === '#website-top') || (href === '#level-finder' && activeSection === '#teacher')
+            const journey = `${activeSection}:${navReplay}`
+            const prefix = href === '#competency' ? 'Your' : href === '#methodology' || href === '#level-finder' ? 'Our' : undefined
+            const showPrefix = !!prefix && active && completedNav === journey
+            return <a key={href} href={href} onClick={() => { setCompletedNav(''); if (active) setNavReplay(value => value + 1) }} aria-label={prefix ? `${prefix} ${label}` : undefined} aria-current={active ? 'location' : undefined} className={`site-nav-item${active ? ' site-nav-item-active' : ''}`}>
+              {prefix ? <span className={`site-nav-prefix${showPrefix ? ' site-nav-prefix-visible' : ''}`} aria-hidden="true"><span style={{ clipPath: `inset(0 0 0 ${ourReveal}%)` }}>{prefix}&nbsp;</span></span> : null}
+              <span className="site-nav-anchor">{active ? <NavigationRail key={navReplay} noun={!!prefix} leftWord={prefix} onLeftReveal={setOurReveal} onComplete={() => setCompletedNav(journey)} /> : null}{label}</span>
+            </a>
           })}
         </nav>
       </header>
 
-      <section id="level-finder" className="site-learning">
+      {activeSection === '#methodology' || activeSection === '#website-top' ? <section id="methodology" className="site-methodology" aria-label="Methodology">
+        <div className="methodology-simple-examples">
+          <div id="method-step-0" className={`methodology-step${methodStep === 0 ? ' methodology-step-active' : ''}`}>
+          <p>Put the words in ORDER.</p>
+          {data && methodologySentences[0]?.state ? <div className="methodology-word-order methodology-order-growth" aria-label="bird eat food becomes eat bird food">
+            {([
+              ['noun', 'the', 'bird'], ['verb', 'past', 'eat'], ['noun', 'my', 'food'],
+            ] as const).map(([example, left, anchor]) => <div key={anchor} className={`methodology-order-${anchor}`}>
+              <IsolatedAnchorView state={methodologySentences[0]!.state!} catalog={data.catalog} presentation germinationOnly example={example}
+                displayWords={{ left, anchor }} prefixStage="hidden" growAnchor />
+            </div>)}
+          </div> : <p role="status">{error ?? 'Loading example…'}</p>}
+          </div>
+          {data && methodologySentences[0]?.state ? <>
+            {(['noun', 'verb'] as const).map((step, index) => <div key={step} id={`method-step-${index + 1}`} className={`methodology-step${methodStep === index + 1 ? ' methodology-step-active' : ''}`}>
+            <p><span style={{ color: WORD_CLASS_VISUAL_PALETTE[step] }}>{step === 'noun' ? 'Nouns' : 'Verbs'}</span> need <span style={{ color: step === 'noun' ? WORD_CLASS_VISUAL_PALETTE.determiner : WORD_CLASS_VISUAL_PALETTE.tam }}>{step === 'noun' ? 'WHICH' : 'WHEN'}</span> words.</p>
+            <div className="methodology-sentence-line" style={{ minHeight: 94 }}>
+              {methodStep >= index + 1 && <>
+              {([
+                ['verb', 'past', 'eat'],
+                ['noun', 'the', 'bird'],
+                ['noun', 'my', 'food'],
+              ] as const).map(([example, left, anchor]) => <IsolatedAnchorView key={anchor}
+                state={methodologySentences[0]!.state!} catalog={data.catalog} presentation germinationOnly example={example}
+                displayWords={{ left, anchor }}
+                prefixStage={step === 'noun' && example === 'verb' ? 'hidden' : step === 'verb' && example === 'noun' ? 'complete' : undefined}
+              />)}
+              </>}
+            </div>
+            </div>)}
+            <div id="method-step-3" className={`methodology-step${methodStep === 3 ? ' methodology-step-active' : ''}`}>
+            <p>Marker the VICTIM or the DOER.</p>
+            <div className="methodology-sentence-line">
+              {methodStep >= 3 && ([
+                ['verb', 'past', 'eat'],
+                ['noun', 'the', 'bird'],
+                ['who', 'my', 'food'],
+              ] as const).map(([example, left, anchor]) => <IsolatedAnchorView key={anchor}
+                state={methodologySentences[0]!.state!} catalog={data.catalog} presentation germinationOnly example={example}
+                displayWords={{ left, anchor }} prefixStage="complete"
+              />)}
+            </div>
+            </div>
+          </> : <p role="status">{error ?? 'Loading example…'}</p>}
+        </div>
+      </section> : activeSection === '#competency' ? <section id="competency" className="site-methodology" aria-labelledby="competency-title">
+        <h2 id="competency-title">Your Capabilities</h2>
+        <p>Get a snapshot of your team’s te reo Māori capabilities and see how they align across multiple government and academic standards.</p>
+      </section> : <section id="level-finder" className="site-learning">
         <header className="site-level-header">
           <h1>Find your level.</h1>
           <nav className="site-level-nav" aria-label="Choose your level">
             <div className="site-level-buttons">{([1, 2, 3, 4, 5, 6] as const).map(level => <button key={level} type="button" aria-label={`Level ${level}`} aria-pressed={selectedLevel === level} disabled={data == null} onClick={() => changeLevel(level)}>{level}</button>)}</div>
           </nav>
+          <button type="button" className="site-level-signup" onClick={() => setAccountOpen(true)}>Sign up · Level {selectedLevel}</button>
         </header>
         {error != null ? <p role="alert" className="rounded-xl bg-red-50 p-4 text-red-700">{error}</p> : null}
         {data == null && error == null ? (
@@ -187,7 +265,7 @@ export default function WebsiteView({
           </div>
 
         </> : null}
-      </section>
+      </section>}
 
       <StudentPortal level={selectedLevel} open={accountOpen} onClose={() => { setAccountOpen(false); if (['#account', '#join'].includes(window.location.hash)) { window.history.replaceState(null, '', window.location.pathname + window.location.search); setActiveSection('#level-finder') } }} />
     </section>
