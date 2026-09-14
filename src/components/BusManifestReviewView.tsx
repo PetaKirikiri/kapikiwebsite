@@ -24,6 +24,7 @@ import { compileConnectorLibrary } from '../lib/connectorPresentation/blueprints
 import { presentSentence } from '../lib/connectorPresentation/engine'
 import structureNotes from '../lib/connectorPresentation/structureNotes.json'
 import './SentenceStructureNotes.css'
+import CourseSentenceEntry from './CourseSentenceEntry'
 import type {
   BusManifestSourceAddress,
   GuestPatternCategoryMatch,
@@ -107,6 +108,7 @@ export type BusManifestReviewViewProps = {
   readonly showPassageSearch?: boolean
   readonly showPassageLabel?: boolean
   readonly showStructureNotes?: boolean
+  readonly collapsibleStructureNotes?: boolean
   readonly showPosTags?: boolean
   readonly enablePassageApproval?: boolean
   readonly passageGroups?: readonly {
@@ -683,6 +685,7 @@ export default function BusManifestReviewView({
   showPassageSearch = true,
   showPassageLabel = true,
   showStructureNotes = false,
+  collapsibleStructureNotes = false,
   showPosTags = false,
   enablePassageApproval = false,
   passageGroups,
@@ -1013,10 +1016,11 @@ export default function BusManifestReviewView({
           const structureNote = showStructureNotes && address != null
             ? (structureNotes as Record<string, readonly string[]>)[String(address.structureId)]
             : undefined
-          return (
-            <Fragment key={sourceKeyOrNull(address) ?? paragraphIndex}>
+          const compactEntry = structureNote != null && collapsibleStructureNotes
+          const content = (
+            <>
             {heading != null ? <h2 lang="en" className="border-b border-slate-300 pb-2 pt-6 text-xl font-bold text-slate-900">{heading}</h2> : null}
-            {structureNote ? <header className="structure-note-heading" lang="en">
+            {structureNote && !compactEntry ? <header className="structure-note-heading" lang="en">
               <span className="structure-note-number" aria-label={`Structure ${displayPassageNumber}`}>{String(displayPassageNumber).padStart(2, '0')}</span>
               <h3>{structureNote[0]}</h3>
             </header> : null}
@@ -1371,7 +1375,7 @@ export default function BusManifestReviewView({
               ) : null}
             </p>
             {renderPassageSupplement?.(paragraphIndex, connectorTopology.map(word => word.materialColor), sentencePlan.words.map(word => word.layout.joinsNext))}
-            {structureNote ? <aside className="structure-note-detail" lang="en" aria-label="Learning note">
+            {structureNote && !compactEntry ? <aside className="structure-note-detail" lang="en" aria-label="Learning note">
               <span>What’s tricky</span>
               <p>{structureNote[1]}</p>
             </aside> : null}
@@ -1384,8 +1388,11 @@ export default function BusManifestReviewView({
                 Could not apply this Floor edit: {unsavedControlError}
               </p>
             ) : null}
-            </Fragment>
+            </>
           )
+          const entryKey = sourceKeyOrNull(address) ?? paragraphIndex
+          return compactEntry ? <CourseSentenceEntry key={entryKey} number={displayPassageNumber} title={structureNote[0]} explanation={structureNote[1]}>{content}</CourseSentenceEntry>
+            : <Fragment key={entryKey}>{content}</Fragment>
         })}
       </article>
 
