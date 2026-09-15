@@ -7,6 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
     root: 'website-preview',
+    define: { 'import.meta.env.VITE_DB_ONLY': JSON.stringify('true') },
     plugins: [react(), tailwindcss(), {
       name: 'read-only-course-api',
       configureServer(server) {

@@ -1,0 +1,418 @@
+{
+  "I whai te manu whero i te manu kākāriki": {
+    "correct": "The red bird chased the green bird",
+    "alternative": "The red bird will chase the green bird"
+  },
+  "Ko Charlie te manu": {
+    "correct": "The bird is Charlie",
+    "alternative": "The birds are Charlie"
+  },
+  "He kākāpō te manu": {
+    "correct": "The bird is a kākāpō",
+    "alternative": "The birds are kākāpō"
+  },
+  "Nō Wellington te manu": {
+    "correct": "The bird is from Wellington",
+    "alternative": "The birds are from Wellington"
+  },
+  "Kei te ngahere te manu": {
+    "correct": "The bird is in the forest",
+    "alternative": "The birds are in the forest"
+  },
+  "Kei runga te manu i te kākano": {
+    "correct": "The bird is above the seed",
+    "alternative": "The bird is below the seed"
+  },
+  "E rua ngā manu": {
+    "correct": "There are two birds",
+    "alternative": "There is one bird"
+  },
+  "Tokorua ngā tāngata": {
+    "correct": "There are two people",
+    "alternative": "There is one person"
+  },
+  "Kotahi te manu": {
+    "correct": "There is one bird",
+    "alternative": "There are two birds"
+  },
+  "Kāorekau ngā manu": {
+    "correct": "There are no birds",
+    "alternative": "There is a bird"
+  },
+  "Ehara te manu i te kākapō": {
+    "correct": "The bird is not a kākāpō",
+    "alternative": "The bird is a kākāpō"
+  },
+  "Nā te manu te kākano": {
+    "correct": "The seed belongs to the bird",
+    "alternative": "The seeds belong to the bird"
+  },
+  "Nō te manu te whare": {
+    "correct": "The house belongs to the bird",
+    "alternative": "The houses belong to the bird"
+  },
+  "Mā te manu te kākano": {
+    "correct": "The seed is for the bird",
+    "alternative": "The seed is for the birds"
+  },
+  "Mō te manu te whare": {
+    "correct": "The house is for the bird",
+    "alternative": "The house is for the birds"
+  },
+  "Ehara Nā te manu te kākano": {
+    "correct": "The seed does not belong to the bird",
+    "alternative": "The seed belongs to the bird"
+  },
+  "Ehara Nō te manu te whare": {
+    "correct": "The house does not belong to the bird",
+    "alternative": "The house belongs to the bird"
+  },
+  "Ehara Mā te manu te kākano": {
+    "correct": "The seed is not for the bird",
+    "alternative": "The seed is for the bird"
+  },
+  "Ehara Mō te manu te whare": {
+    "correct": "The house is not for the bird",
+    "alternative": "The house is for the bird"
+  },
+  "He nui ake te manu i te kākano": {
+    "correct": "The bird is bigger than the seed",
+    "alternative": "The bird is smaller than the seed"
+  },
+  "I kai te manu i te kākano": {
+    "correct": "The bird ate the seed",
+    "alternative": "The bird will eat the seed"
+  },
+  "Kua kai te manu i te kākano": {
+    "correct": "The bird has eaten the seed",
+    "alternative": "The bird will eat the seed"
+  },
+  "Kei te kai te manu i te kākano": {
+    "correct": "The bird is eating the seed",
+    "alternative": "The birds are eating the seed"
+  },
+  "E kai ana te manu i te kākano": {
+    "correct": "The bird is eating the seed",
+    "alternative": "The birds are eating the seed"
+  },
+  "Ka kai te manu i te kākano": {
+    "correct": "The bird will eat the seed",
+    "alternative": "The bird ate the seed"
+  },
+  "Me kai te manu i te kākano": {
+    "correct": "The bird should eat the seed",
+    "alternative": "The bird should not eat the seed"
+  },
+  "Hei kai te manu i te kākano": {
+    "correct": "The bird is to eat the seed",
+    "alternative": "The bird is not to eat the seed"
+  },
+  "kai ai te manu i te kākano": {
+    "correct": "The bird always eats the seed",
+    "alternative": "The bird never eats the seed"
+  },
+  "Kāore te manu i kai i te kākano": {
+    "correct": "The bird did not eat the seed",
+    "alternative": "The bird will not eat the seed"
+  },
+  "Kāore te manu i te kai i te kākano": {
+    "correct": "The bird was not eating the seed",
+    "alternative": "The bird was eating the seed"
+  },
+  "Kāore te manu e kai i te kākano": {
+    "correct": "The bird will not eat the seed",
+    "alternative": "The bird did not eat the seed"
+  },
+  "Kāore anō te manu kia kai i te kākano": {
+    "correct": "The bird has not yet eaten the seed",
+    "alternative": "The bird has already eaten the seed"
+  },
+  "Nā te manu te kākano i kai": {
+    "correct": "It was the bird that ate the seed",
+    "alternative": "It was not the bird that ate the seed"
+  },
+  "Nā te manu i haere ki te kākano": {
+    "correct": "It was the bird that went to the seed",
+    "alternative": "It was not the bird that went to the seed"
+  },
+  "Mā te manu te kākano e kai": {
+    "correct": "It will be the bird that eats the seed",
+    "alternative": "It will not be the bird that eats the seed"
+  },
+  "Mā te manu e haere ki te kākano": {
+    "correct": "It will be the bird that goes to the seed",
+    "alternative": "It will not be the bird that goes to the seed"
+  },
+  "Ehara Nā te manu te kākano i kai": {
+    "correct": "It was not the bird that ate the seed",
+    "alternative": "It was the bird that ate the seed"
+  },
+  "Ehara Nā te manu i haere ki te kākano": {
+    "correct": "It was not the bird that went to the seed",
+    "alternative": "It was the bird that went to the seed"
+  },
+  "Ehara Mā te manu te kākano e kai": {
+    "correct": "It will not be the bird that eats the seed",
+    "alternative": "It will be the bird that eats the seed"
+  },
+  "Ehara Mā te manu e haere ki te kākano": {
+    "correct": "It will not be the bird that goes to the seed",
+    "alternative": "It will be the bird that goes to the seed"
+  },
+  "Ka taea e te waiata te waiata te kai": {
+    "correct": "The song is able to eat the song",
+    "alternative": "The song is unable to eat the song"
+  },
+  "Ka taea e te manu te rere ki te kākano": {
+    "correct": "The bird is able to fly to the seed",
+    "alternative": "The bird is unable to fly to the seed"
+  },
+  "Ka taea e te manu te kākano te kai": {
+    "correct": "The bird is able to eat the seed",
+    "alternative": "The bird is unable to eat the seed"
+  },
+  "Kāore e taea e te manu te haere ki ngā kākano?": {
+    "correct": "Can't the bird go to the seeds?",
+    "alternative": "Can the bird go to the seeds?"
+  },
+  "He aha te manu i kai ai i te kākano?": {
+    "correct": "Why did the bird eat the seed?",
+    "alternative": "When did the bird eat the seed?"
+  },
+  "He aha te manu i te kai ai i te kākano?": {
+    "correct": "Why is the bird eating the seed?",
+    "alternative": "When is the bird eating the seed?"
+  },
+  "He aha te manu e kai ai i te kākano?": {
+    "correct": "Why will the bird eat the seed?",
+    "alternative": "When will the bird eat the seed?"
+  },
+  "He aha te manu i kore ai i kai i te kākano?": {
+    "correct": "Why did the bird not eat the seed?",
+    "alternative": "When did the bird not eat the seed?"
+  },
+  "He aha te manu i kore ai i te kai i te kākano?": {
+    "correct": "Why isn't the bird eating the seed?",
+    "alternative": "Why is the bird eating the seed?"
+  },
+  "He aha te manu i kore ai e kai i te kākano?": {
+    "correct": "Why will the bird not eat the seed?",
+    "alternative": "When will the bird not eat the seed?"
+  },
+  "Nōnahea te manu i kai ai i te kākano?": {
+    "correct": "When did the bird eat the seed?",
+    "alternative": "Why did the bird eat the seed?"
+  },
+  "Āhea te manu e kai ai i te kākano?": {
+    "correct": "When will the bird eat the seed?",
+    "alternative": "Why will the bird eat the seed?"
+  },
+  "Mēnā Ka kai te manu i te kākano…": {
+    "correct": "If the bird eats the seed…",
+    "alternative": "If the bird does not eat the seed…"
+  },
+  "Mehemea Ka kai te manu i te kākano…": {
+    "correct": "If the bird eats the seed…",
+    "alternative": "If the bird does not eat the seed…"
+  },
+  "Mēnā Ka kai te manu i te kākano": {
+    "correct": "If the bird eats the seed",
+    "alternative": "If the bird does not eat the seed"
+  },
+  "Ki te kai te manu i te kākano": {
+    "correct": "If the bird eats the seed",
+    "alternative": "If the bird does not eat the seed"
+  },
+  "I kaingia te kākano e te manu": {
+    "correct": "The seed was eaten by the bird",
+    "alternative": "The seed will be eaten by the bird"
+  },
+  "Kua hora ngā kākano i te manu": {
+    "correct": "The seeds have been spread out by the bird",
+    "alternative": "The seeds have not been spread out by the bird"
+  },
+  "Kaingia te kākano": {
+    "correct": "Eat the seed",
+    "alternative": "Don't eat the seed"
+  },
+  "E rere ki te kākano": {
+    "correct": "Fly to the seed",
+    "alternative": "Don't fly to the seed"
+  },
+  "Kaua e kai i te kākano": {
+    "correct": "Don't eat the seed",
+    "alternative": "Eat the seed"
+  },
+  "Kāti te kai i te kākano": {
+    "correct": "Stop eating the seed",
+    "alternative": "Keep eating the seed"
+  },
+  "Kia tere tō mahi": {
+    "correct": "Be quick with your work",
+    "alternative": "Be slow with your work"
+  },
+  "Kua whai te manu whero i te manu kākāriki": {
+    "correct": "The red bird has chased the green bird",
+    "alternative": "The red bird will chase the green bird"
+  },
+  "Kei te whai te manu whero i te manu kākāriki": {
+    "correct": "The red bird is chasing the green bird",
+    "alternative": "The red birds are chasing the green bird"
+  },
+  "E whai ana te manu whero i te manu kākāriki": {
+    "correct": "The red bird is chasing the green bird",
+    "alternative": "The red birds are chasing the green bird"
+  },
+  "Ka whai te manu whero i te manu kākāriki": {
+    "correct": "The red bird will chase the green bird",
+    "alternative": "The red bird chased the green bird"
+  },
+  "Me whai te manu whero i te manu kākāriki": {
+    "correct": "The red bird should chase the green bird",
+    "alternative": "The red bird should not chase the green bird"
+  },
+  "Hei whai te manu whero i te manu kākāriki": {
+    "correct": "The red bird is to chase the green bird",
+    "alternative": "The red bird is not to chase the green bird"
+  },
+  "Whai ai te manu whero i te manu kākāriki": {
+    "correct": "The red bird always chases the green bird",
+    "alternative": "The red bird never chases the green bird"
+  },
+  "Kāore te manu whero i whai i te manu kākāriki": {
+    "correct": "The red bird did not chase the green bird",
+    "alternative": "The red bird will not chase the green bird"
+  },
+  "Kāore te manu whero i te whai i te manu kākāriki": {
+    "correct": "The red bird was not chasing the green bird",
+    "alternative": "The red bird was chasing the green bird"
+  },
+  "Kāore te manu whero e whai i te manu kākāriki": {
+    "correct": "The red bird will not chase the green bird",
+    "alternative": "The red bird did not chase the green bird"
+  },
+  "Kāore anō te manu whero kia whai i te manu kākāriki": {
+    "correct": "The red bird has not yet chased the green bird",
+    "alternative": "The red bird has already chased the green bird"
+  },
+  "Nā te manu whero te manu kākāriki i whai": {
+    "correct": "It was the red bird that chased the green bird",
+    "alternative": "It was not the red bird that chased the green bird"
+  },
+  "Nā te manu whero i rere ki te manu kākāriki": {
+    "correct": "It was the red bird that flew to the green bird",
+    "alternative": "It was not the red bird that flew to the green bird"
+  },
+  "Mā te manu whero te manu kākāriki e whai": {
+    "correct": "It will be the red bird that chases the green bird",
+    "alternative": "It will not be the red bird that chases the green bird"
+  },
+  "Mā te manu whero e rere ki te manu kākāriki": {
+    "correct": "It will be the red bird that flies to the green bird",
+    "alternative": "It will not be the red bird that flies to the green bird"
+  },
+  "Ehara Nā te manu whero te manu kākāriki i whai": {
+    "correct": "It was not the red bird that chased the green bird",
+    "alternative": "It was the red bird that chased the green bird"
+  },
+  "Ehara Nā te manu whero i rere ki te manu kākāriki": {
+    "correct": "It was not the red bird that flew to the green bird",
+    "alternative": "It was the red bird that flew to the green bird"
+  },
+  "Ehara Mā te manu whero te manu kākāriki e whai": {
+    "correct": "It will not be the red bird that chases the green bird",
+    "alternative": "It will be the red bird that chases the green bird"
+  },
+  "Ehara Mā te manu whero e rere ki te manu kākāriki": {
+    "correct": "It will not be the red bird that flies to the green bird",
+    "alternative": "It will be the red bird that flies to the green bird"
+  },
+  "Ka taea e te manu whero te manu kākāriki te whai": {
+    "correct": "The red bird is able to chase the green bird",
+    "alternative": "The red bird is unable to chase the green bird"
+  },
+  "Ka taea e te manu whero te rere ki te manu kākāriki": {
+    "correct": "The red bird is able to fly to the green bird",
+    "alternative": "The red bird is unable to fly to the green bird"
+  },
+  "Kāore e taea e te manu whero te manu kākāriki te whai": {
+    "correct": "The red bird cannot chase the green bird",
+    "alternative": "The red bird can chase the green bird"
+  },
+  "Kāore e taea e te manu whero te rere ki te manu kākāriki": {
+    "correct": "The red bird cannot fly to the green bird",
+    "alternative": "The red bird can fly to the green bird"
+  },
+  "Kāore e taea e te manu whero te rere ki ngā manu kākāriki?": {
+    "correct": "Can't the red bird fly to the green birds?",
+    "alternative": "Can the red bird fly to the green birds?"
+  },
+  "He aha te manu whero i whai ai i te manu kākāriki?": {
+    "correct": "Why did the red bird chase the green bird?",
+    "alternative": "When did the red bird chase the green bird?"
+  },
+  "He aha te manu whero i te whai ai i te manu kākāriki?": {
+    "correct": "Why is the red bird chasing the green bird?",
+    "alternative": "When is the red bird chasing the green bird?"
+  },
+  "He aha te manu whero e whai ai i te manu kākāriki?": {
+    "correct": "Why will the red bird chase the green bird?",
+    "alternative": "When will the red bird chase the green bird?"
+  },
+  "He aha te manu whero i kore ai i whai i te manu kākāriki?": {
+    "correct": "Why did the red bird not chase the green bird?",
+    "alternative": "When did the red bird not chase the green bird?"
+  },
+  "He aha te manu whero i kore ai i te whai i te manu kākāriki?": {
+    "correct": "Why isn't the red bird chasing the green bird?",
+    "alternative": "Why is the red bird chasing the green bird?"
+  },
+  "He aha te manu whero i kore ai e whai i te manu kākāriki?": {
+    "correct": "Why will the red bird not chase the green bird?",
+    "alternative": "When will the red bird not chase the green bird?"
+  },
+  "Nōnahea te manu whero i whai ai i te manu kākāriki?": {
+    "correct": "When did the red bird chase the green bird?",
+    "alternative": "Why did the red bird chase the green bird?"
+  },
+  "Āhea te manu whero e whai ai i te manu kākāriki?": {
+    "correct": "When will the red bird chase the green bird?",
+    "alternative": "Why will the red bird chase the green bird?"
+  },
+  "Mēnā Ka whai te manu whero i te manu kākāriki…": {
+    "correct": "If the red bird chases the green bird…",
+    "alternative": "If the red bird does not chase the green bird…"
+  },
+  "Mehemea Ka whai te manu whero i te manu kākāriki…": {
+    "correct": "If the red bird chases the green bird…",
+    "alternative": "If the red bird does not chase the green bird…"
+  },
+  "Ki te whai te manu whero i te manu kākāriki": {
+    "correct": "If the red bird chases the green bird",
+    "alternative": "If the red bird does not chase the green bird"
+  },
+  "I whaia te manu kākāriki e te manu whero": {
+    "correct": "The green bird was chased by the red bird",
+    "alternative": "The red bird was chased by the green bird"
+  },
+  "Whaia te manu kākāriki": {
+    "correct": "Chase the green bird",
+    "alternative": "Don't chase the green bird"
+  },
+  "E rere ki te manu kākāriki": {
+    "correct": "Fly to the green bird",
+    "alternative": "Don't fly to the green bird"
+  },
+  "Kaua e whai i te manu kākāriki": {
+    "correct": "Don't chase the green bird",
+    "alternative": "Chase the green bird"
+  },
+  "Kāti te whai i te manu kākāriki": {
+    "correct": "Stop chasing the green bird",
+    "alternative": "Keep chasing the green bird"
+  },
+  "Mēnā Ka whai te manu whero i te manu kākāriki": {
+    "correct": "If the red bird chases the green bird",
+    "alternative": "If the red bird does not chase the green bird"
+  }
+}

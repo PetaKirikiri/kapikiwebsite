@@ -6,19 +6,25 @@ import type { BusManifestUserWrite } from './BusManifestReviewView'
 import FamilyConnectorSentenceView from './FamilyConnectorSentenceView'
 import { unresolvedSentence as blankSheet } from '../lib/connectorPresentation/engine'
 import './WebsiteView.css'
+import CapabilitiesDashboard from './CapabilitiesDashboard'
 import StudentPortal from './studentPortal/StudentPortal'
 import { translatedSegments } from '../lib/connectorPresentation/translation'
 import type { CSSProperties } from 'react'
+import TrainingView from './TrainingView'
+import TrainingNavigation from './TrainingNavigation'
+import TrainingAdmin from './TrainingAdmin'
 import KaPikiWordmark from './KaPikiWordmark'
 import NavigationRail from './NavigationRail'
 import { WORD_CLASS_VISUAL_PALETTE } from './railVisualPalette'
 import IsolatedAnchorView from './IsolatedAnchorView'
+import ClassroomRoom from './ClassroomRoom'
 
 export type WebsitePreviewSentence = {
   readonly structureId: number
   readonly sortOrder: number
   readonly textMi: string
   readonly curriculumLevel: number | null
+  readonly training?: { correct: string; alternative: string; active: boolean; questionId?: string; skillKey?: string; variants?: { questionId: string; textMi: string; correct: string; alternative: string; skillKey: string }[] }
   readonly state: BusManifestSheet | null
 }
 
@@ -86,7 +92,12 @@ export default function WebsiteView({
         if (!response.ok) throw new Error(`The course examples could not load (${response.status}).`)
         return response.json() as Promise<WebsitePreviewData>
       })
-      .then(setFetchedData)
+      .then(async course => {
+        const response = await fetch('/__training_content', { signal: controller.signal })
+        if (!response.ok) throw new Error('App content could not load from the database.')
+        const { content } = await response.json() as { content: { structureId: number; textMi: string; correct: string; alternative: string; active: boolean }[] }
+        setFetchedData({ ...course, sentences: course.sentences.map(sentence => ({ ...sentence, training: content.find(row => row.structureId === sentence.structureId && row.textMi === sentence.textMi) })) })
+      })
       .catch((cause: unknown) => {
         if (!controller.signal.aborted) {
           setFetchError(cause instanceof Error ? cause.message : 'The course examples could not load.')
@@ -139,11 +150,19 @@ export default function WebsiteView({
     setMethodStep(0)
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) { setMethodStep(3); return }
     const timers = [1, 2, 3].map(step => window.setTimeout(() => {
-      setMethodStep(step)
-      requestAnimationFrame(() => document.getElementById(`method-step-${step}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }))
+      document.getElementById(`method-step-${step}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      timers.push(window.setTimeout(() => setMethodStep(step), 850))
     }, 7600 + (step - 1) * 4800))
     return () => timers.forEach(clearTimeout)
   }, [activeSection, methodologyReady])
+
+  if (activeSection === '#classroom') return <ClassroomRoom data={data} error={error} />
+  if (activeSection === '#training' || activeSection === '#training-admin') {
+    return <main className="training-app" aria-label="Ka Piki training app">
+      <TrainingNavigation />
+      {activeSection === '#training-admin' ? <TrainingAdmin data={data} error={error} /> : <TrainingView data={data} error={error} />}
+    </main>
+  }
 
   return (
     <section id="website-top" aria-label="Website" data-testid="website-workspace" className="maori-site">
@@ -154,6 +173,7 @@ export default function WebsiteView({
             ['#methodology', 'Methodology'],
             ['#level-finder', 'Levels'],
             ['#competency', 'Capabilities'],
+            ['#training', 'APP'],
           ].map(([href, label]) => {
             const active = activeSection === href || (href === '#methodology' && activeSection === '#website-top') || (href === '#level-finder' && activeSection === '#teacher')
             const journey = `${activeSection}:${navReplay}`
@@ -184,14 +204,14 @@ export default function WebsiteView({
             {(['noun', 'verb'] as const).map((step, index) => <div key={step} id={`method-step-${index + 1}`} className={`methodology-step${methodStep === index + 1 ? ' methodology-step-active' : ''}`}>
             <p><span style={{ color: WORD_CLASS_VISUAL_PALETTE[step] }}>{step === 'noun' ? 'Nouns' : 'Verbs'}</span> need <span style={{ color: step === 'noun' ? WORD_CLASS_VISUAL_PALETTE.determiner : WORD_CLASS_VISUAL_PALETTE.tam }}>{step === 'noun' ? 'WHICH' : 'WHEN'}</span> words.</p>
             <div className="methodology-sentence-line" style={{ minHeight: 94 }}>
-              {methodStep >= index + 1 && <>
+              {<>
               {([
                 ['verb', 'past', 'eat'],
                 ['noun', 'the', 'bird'],
                 ['noun', 'my', 'food'],
               ] as const).map(([example, left, anchor]) => <IsolatedAnchorView key={anchor}
                 state={methodologySentences[0]!.state!} catalog={data.catalog} presentation germinationOnly example={example}
-                displayWords={{ left, anchor }}
+                displayWords={{ left, anchor }} active={methodStep >= index + 1}
                 prefixStage={step === 'noun' && example === 'verb' ? 'hidden' : step === 'verb' && example === 'noun' ? 'complete' : undefined}
               />)}
               </>}
@@ -200,21 +220,20 @@ export default function WebsiteView({
             <div id="method-step-3" className={`methodology-step${methodStep === 3 ? ' methodology-step-active' : ''}`}>
             <p>Marker the VICTIM or the DOER.</p>
             <div className="methodology-sentence-line">
-              {methodStep >= 3 && ([
+              {([
                 ['verb', 'past', 'eat'],
                 ['noun', 'the', 'bird'],
                 ['who', 'my', 'food'],
               ] as const).map(([example, left, anchor]) => <IsolatedAnchorView key={anchor}
                 state={methodologySentences[0]!.state!} catalog={data.catalog} presentation germinationOnly example={example}
-                displayWords={{ left, anchor }} prefixStage="complete"
+                displayWords={{ left, anchor }} active={methodStep >= 3} prefixStage="complete"
               />)}
             </div>
             </div>
           </> : <p role="status">{error ?? 'Loading example…'}</p>}
         </div>
-      </section> : activeSection === '#competency' ? <section id="competency" className="site-methodology" aria-labelledby="competency-title">
-        <h2 id="competency-title">Your Capabilities</h2>
-        <p>Get a snapshot of your team’s te reo Māori capabilities and see how they align across multiple government and academic standards.</p>
+      </section> : activeSection === '#competency' ? <section id="competency" className="site-methodology" aria-label="Capabilities">
+        <CapabilitiesDashboard />
       </section> : <section id="level-finder" className="site-learning">
         <header className="site-level-header">
           <h1>Find your level.</h1>

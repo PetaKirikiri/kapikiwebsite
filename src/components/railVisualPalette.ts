@@ -10,7 +10,7 @@ const PARTICIPANT_MARKER_COLOR = '#79c8bd'
 export const WORD_CLASS_VISUAL_PALETTE = Object.freeze({
   tam: '#398aa6',
   verb: '#7ac0d6',
-  objectMarker: PARTICIPANT_MARKER_COLOR,
+  objectMarker: '#7ac0d6',
   negative: '#b69adf',
   agentMarker: PARTICIPANT_MARKER_COLOR,
   relationMarker: '#7196c7',

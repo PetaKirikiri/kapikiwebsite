@@ -1,0 +1,57 @@
+.cap-dashboard { max-width: 1200px; margin: 32px 0; padding: clamp(18px, 3vw, 36px); border: 1px solid #dce6e0; border-radius: 20px; background: #f8faf8; color: #203e35; }
+.cap-dashboard-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 28px; }
+.cap-dashboard h3 { font-size: clamp(24px, 3vw, 32px); letter-spacing: -.035em; margin: 8px 0 0; }
+.cap-demo { font-size: 11px; font-weight: 600; color: #678074; text-transform: uppercase; letter-spacing: .1em; }
+.cap-dashboard select, .cap-dashboard input, .cap-dashboard button { border: 1px solid #d4dfd8; border-radius: 9px; background: white; color: #29483c; padding: 11px 14px; font: inherit; font-size: 13px; }
+.cap-dashboard button { cursor: pointer; }
+.cap-dashboard button[aria-pressed=true] { background: #244b39; color: white; border-color: #244b39; }
+.cap-dashboard :is(input,select,button):focus-visible { outline: 3px solid #71b38e; outline-offset: 3px; }
+.cap-stats { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; margin-bottom: 26px; }
+.cap-stat { display: flex; flex-direction: column; gap: 8px; background: #fff; border: 1px solid #e1e9e3; border-radius: 12px; padding: 22px; }
+.cap-stat strong { font-size: 32px; line-height: 1; letter-spacing: -.04em; }
+.cap-stat span { font-size: 13px; color: #697c72; }
+.cap-students, .cap-distribution { background: white; border: 1px solid #e1e9e3; border-radius: 12px; overflow: hidden; }
+.cap-dashboard h4 { font-size: 18px; font-weight: 600; margin: 0; }
+.cap-table-toolbar { padding: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.cap-table-toolbar > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.cap-table-scroll { overflow-x: auto; }
+.cap-dashboard table { width: 100%; border-collapse: collapse; text-align: left; white-space: nowrap; font-size: 14px; }
+.cap-dashboard th { background: #f2f6f3; color: #6a7c72; font-size: 12px; font-weight: 500; padding: 13px 20px; }
+.cap-dashboard td { padding: 16px 20px; border-top: 1px solid #edf1ee; }
+.cap-student-name, .cap-accuracy { display: flex; align-items: center; gap: 12px; }
+.cap-avatar { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #e7f0e9; font-size: 11px; font-weight: 600; }
+.cap-accuracy meter { width: 64px; height: 10px; }
+.cap-accuracy meter::-webkit-meter-bar { background: #edf2ee; border: 0; }
+.cap-accuracy meter::-webkit-meter-optimum-value { background: #71a68b; }
+.cap-status { background: #eaf4ed; color: #3e7556; padding: 6px 10px; border-radius: 20px; font-size: 12px; }
+.cap-support { background: #fff0eb; color: #ad6048; }
+.cap-empty { text-align: center; color: #697c72; }
+.cap-distribution { padding: 24px; margin-top: 20px; }
+.cap-distribution h4 { margin-bottom: 20px; }
+.cap-level-row { display: grid; grid-template-columns: 65px 1fr 80px; gap: 18px; align-items: center; font-size: 13px; margin-top: 15px; }
+.cap-level-row progress { width: 100%; height: 9px; border: 0; border-radius: 8px; overflow: hidden; background: #edf2ee; accent-color: #71a68b; }
+.cap-level-row progress::-webkit-progress-bar { background: #edf2ee; }
+.cap-level-row progress::-webkit-progress-value { background: #71a68b; border-radius: 8px; }
+@media(max-width: 650px) { .cap-stats { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; } .cap-stat { padding: 16px; } .cap-dashboard-header { align-items: flex-start; } .cap-table-toolbar { padding: 16px; } .cap-table-toolbar input { width: 100%; } .cap-level-row { gap: 10px; } }
+.cap-dashboard { max-width: 1600px; }
+.cap-skill-overview { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; margin-bottom:24px; }
+.cap-stat strong small { font-size:18px; color:#8a9c90; font-weight:400; }
+.cap-legend { display:flex; flex-wrap:wrap; gap:16px; padding:0 20px 18px; }
+.cap-ability { display:inline-flex; align-items:center; gap:7px; font-size:12px; }
+.cap-ability::before { content:''; width:7px; height:7px; border-radius:50%; background:#aab5af; flex-shrink:0; }
+.cap-ability-independent { color:#36704d; }.cap-ability-independent::before { background:#56926b; }
+.cap-ability-with-support { color:#916f2d; }.cap-ability-with-support::before { background:#c69d51; }
+.cap-ability-learning { color:#527893; }.cap-ability-learning::before { background:#7ca0ba; }
+.cap-ability-not-assessed,.cap-muted { color:#85928a; }
+.cap-dashboard .cap-person-button { display:flex; gap:10px; align-items:center; border:0; padding:0; text-align:left; background:transparent; font-weight:600; }
+.cap-person-button small { display:block; font-size:11px; font-weight:400; color:#829087; margin-top:5px; }
+.cap-person-button:hover { text-decoration:underline; }
+.cap-person-detail { padding:24px; margin-top:20px; background:white; border:1px solid #dce6e0; border-radius:12px; }
+.cap-person-detail header { display:flex; justify-content:space-between; align-items:center; }
+.cap-person-detail header span { display:block; margin-top:5px; font-size:13px; color:#718276; }
+.cap-detail-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; font-size:14px; }
+.cap-detail-grid h5 { margin:24px 0 10px; font-size:13px; color:#6a7c72; font-weight:500; }
+.cap-detail-grid ul { padding-left:18px; margin:0; line-height:1.9; }
+.cap-identity { display:flex; flex-wrap:wrap; gap:16px; margin-top:24px; border-top:1px solid #edf1ee; padding-top:18px; font-size:13px; }
+.cap-identity span { color:#7d8b82; }
+@media(max-width:800px) { .cap-skill-overview { grid-template-columns:repeat(2,minmax(0,1fr)); }.cap-detail-grid { grid-template-columns:1fr; gap:0; } }

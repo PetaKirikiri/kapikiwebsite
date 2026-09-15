@@ -1,0 +1,7 @@
+/* Whole-sentence sizing belongs to this shared surface, never a host page. */
+.connector-sentence-teaching { zoom: 2.4; }
+.connector-sentence-fit { width: 100%; height: 100%; min-width: 0; min-height: 0; display: grid; place-items: center; overflow: hidden; }
+.connector-sentence-fit-content { width: max-content; max-width: 640px; }
+.connector-sentence-fit-content [data-testid^="passage-"] { padding: 0; border: 0; border-radius: 0; }
+@media (max-width: 1100px) { .connector-sentence-teaching { zoom: 1.8; } }
+@media (max-width: 760px) { .connector-sentence-teaching { zoom: 1.2; } }

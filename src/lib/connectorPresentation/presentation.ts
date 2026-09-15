@@ -126,8 +126,16 @@ function materialColor(tokens: BusManifestSheet['tokens'], index: number, famili
   if (family === 'particle' && token.acceptedPosCode === 'determiner') {
     return WORD_CLASS_VISUAL_PALETTE.determiner
   }
-  if (family === 'particle' && ['object_marker', 'target_marker'].includes(token.acceptedPosCode ?? '')) {
+  if (family === 'particle' && token.acceptedPosCode === 'object_marker') {
+    const followsNominalPredicate = tokens.slice(0, index).some((item) =>
+      ['nominal_predicate', 'location_marker'].includes(item.acceptedPosCode ?? ''))
+      && !tokens.slice(0, index).some((item) => item.acceptedPosCode != null
+        && families.get(item.acceptedPosCode) === 'verb')
+    if (followsNominalPredicate) return WORD_CLASS_VISUAL_PALETTE.nominalPredicate
     return WORD_CLASS_VISUAL_PALETTE.objectMarker
+  }
+  if (family === 'particle' && token.acceptedPosCode === 'target_marker') {
+    return WORD_CLASS_VISUAL_PALETTE.verb
   }
   if (family === 'particle' && token.acceptedPosCode === 'agent_marker') return WORD_CLASS_VISUAL_PALETTE.agentMarker
   if (family === 'particle' && [
@@ -162,6 +170,9 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
     const next = tokens[index + 1]
     const endsNegativeSection = token.acceptedPosCode === 'negative'
       && next?.acceptedPosCode !== 'negative'
+    const detachedNegative = endsNegativeSection
+      && token.surfaceText.normalize('NFC').toLocaleLowerCase('mi-NZ') === 'kāorekau'
+    const attachNegative = endsNegativeSection && !detachedNegative && next != null
     const followsNegativeSection = previous?.acceptedPosCode === 'negative'
       && token.acceptedPosCode !== 'negative'
     const continuesSection = sharesContinuousSection(token, next)
@@ -199,7 +210,7 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
       ? `Pattern conflict between ${token.surfaceText} and ${next.surfaceText}: the selected left and right connectors do not mate.` : null
     const planned = blueprint && ends.rightConnectorEnd ? planConnectorFace(library, blueprint,
       endsNegativeSection ? 'accept' : ends.rightConnectorEnd === 'cap' ? exposedRole : ends.rightConnectorEnd,
-      left, ends.rightConnectorEnd === 'cap' || endsNegativeSection ? CONNECTOR_PAGE_BACKGROUND : right) : null
+      left, attachNegative ? right : ends.rightConnectorEnd === 'cap' || endsNegativeSection ? CONNECTOR_PAGE_BACKGROUND : right) : null
     const face: ConnectorFacePlan | null = continuesSection ? null : planned && conflict
       ? { blueprintId: planned.blueprintId, role: planned.role, label: conflict, status: 'unavailable', reason: conflict } : planned
     const continuesPreviousSection = sharesContinuousSection(previous, token)
@@ -247,7 +258,7 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
         fill: left, stroke: 'none' as const,
       } },
     } : rawMarkerJoin
-    return { ...ends, standalone: marker != null || endsNegativeSection, flatEnding, separateAfter: endsNegativeSection, blueprint: marker ?? blueprint,
+    return { ...ends, standalone: marker != null || endsNegativeSection, flatEnding, attachNext: attachNegative, separateAfter: detachedNegative, blueprint: marker ?? blueprint,
       face: flatEnding ? null : marker ? markerJoin : face, conflict: marker ? null : conflict,
       materialColor: materials[index], paintMaterial: marker == null,
       internalMaterial: compoundNominal ? { fraction: 0.5, color: WORD_CLASS_VISUAL_PALETTE.nominalNoun, face: compoundFace! } : null,

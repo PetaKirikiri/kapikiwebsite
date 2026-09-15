@@ -27,7 +27,7 @@ export function planWordLayout(
   hasNextWord = true,
   rightEnd?: 'send' | 'accept' | 'cap' | null,
   rightRail?: 'green' | 'yellow' | 'off' | null,
-  presentation?: { standalone?: boolean; separateAfter?: boolean; flatEnding?: boolean; face?: unknown; incomingJoin?: unknown },
+  presentation?: { standalone?: boolean; attachNext?: boolean; separateAfter?: boolean; flatEnding?: boolean; face?: unknown; incomingJoin?: unknown },
 ) {
   // Faces are centred on shared word boundaries and may extend into both
   // neighbouring materials. Do not make a short word reserve a complete face:
@@ -43,7 +43,7 @@ export function planWordLayout(
     // introduce. A stale/off saved rail must not open a visual gap between the
     // fixed marker face and that following material.
     && (presentation?.standalone === true || rightRail !== 'off')
-    && (rightEnd === 'send' || rightEnd === 'accept')
+    && (presentation?.attachNext === true || rightEnd === 'send' || rightEnd === 'accept')
   // A standalone terminal already keeps its whole face inside its own word
   // slot, so it only needs the visible inter-section gap. Reserving another
   // half-face here makes negative sections look detached from what follows.

@@ -23,3 +23,9 @@ export function emailJoinRequest(form: FormData, ratings: SkillRatings, level: n
     data: { name, selected_level: level, department_code: code, goals, self_ratings: readSkillRatings(ratings) },
   } }
 }
+
+export function interestRequest(form: FormData, ratings: SkillRatings, level: number) {
+  const request = emailJoinRequest(form, ratings, level, '', '')
+  const { name, selected_level, goals, self_ratings } = request.options.data
+  return { name, email: request.email, selected_level, goals, self_ratings }
+}

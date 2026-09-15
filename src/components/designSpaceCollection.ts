@@ -96,6 +96,7 @@ export async function syncDesignSpaceCollection(shapes: readonly LockedDesign[] 
       throw new Error(`The saved drawing for ${shape.name} failed its integrity check.`)
     }
   }
+  if (import.meta.env.VITE_DB_ONLY === 'true') return saved
   const serialized = JSON.stringify(saved)
   // Approved snapshot IDs are immutable, so any verified complete response is
   // safe to keep even if a newer Design Space history request finished first.
@@ -145,10 +146,12 @@ function readCollectionKey(key: string): readonly LockedDesign[] {
 }
 
 export function readDesignSpaceCollection(): readonly LockedDesign[] {
+  if (import.meta.env.VITE_DB_ONLY === 'true') return []
   return readCollectionKey(DESIGN_COLLECTION_KEY)
 }
 
 export function readProductionDesignSpaceCollection(): readonly LockedDesign[] {
+  if (import.meta.env.VITE_DB_ONLY === 'true') return []
   const collection = readCollectionKey(PRODUCTION_DESIGN_COLLECTION_KEY)
   return isCompleteProductionCollection(collection) ? collection : []
 }

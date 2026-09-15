@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 1,
+  "sourceReferenceBoard": {
+    "fileName": "codex-clipboard-31bca26d-2c17-45e9-87cd-162d7088f510.png",
+    "width": 1089,
+    "height": 780,
+    "sha256": "f93a315a3501e0b8a0c932105a5f756f5fae21013a0c7502961dea5915c42300"
+  },
+  "generator": {
+    "script": "scripts/generate-tukutuku-assets.py",
+    "pillowVersion": "12.3.0",
+    "numpyVersion": "2.3.5",
+    "rotationDegreesClockwise": 90,
+    "traceHeight": 96,
+    "quantizedColors": 12,
+    "resizeFilter": "BOX",
+    "quantizeMethod": "MEDIANCUT",
+    "dither": "NONE",
+    "pathCompression": "horizontal-runs-merged-vertically-one-path-per-color",
+    "generatedPatternIds": [
+      "01-aoraki",
+      "02-poutama",
+      "03-poutama",
+      "04-double-poutama",
+      "05-pororangi-poutama",
+      "06-kaokao",
+      "07-kaokao-variation",
+      "08-nga-heke-iho",
+      "09-mumu",
+      "10-niho-taniwha",
+      "11-niho-taniwha-variation",
+      "12-patiki",
+      "13-patiki-variation",
+      "14-purapura-whetu",
+      "15-waharua",
+      "16-roimata",
+      "17-roimata",
+      "18-roimata-turuturu",
+      "19-roimata-variation"
+    ]
+  },
+  "panels": [
+    {
+      "order": 1,
+      "id": "01-aoraki",
+      "displayName": "Aoraki",
+      "sourcePrintedLabel": "Aoraki",
+      "sourceCrop": {
+        "file": "reference/01-aoraki.png",
+        "left": 89,
+        "top": 62,
+        "width": 131,
+        "height": 204,
+        "sha256": "021efb5f76e6a207051767a7730890ce0c36efc141485ef3d25556610d2d4f59"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/01-aoraki.svg",
+        "width": 149,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 4913,
+        "containsEmbeddedRaster": false,
+        "sha256": "21fed5411bbc5e130cb98ab6bd5da10a68dd255ab23c7833886934b52e10ef73"
+      }
+    },
+    {
+      "order": 2,
+      "id": "02-poutama",
+      "displayName": "Poutama",
+      "sourcePrintedLabel": "Poutama",
+      "sourceCrop": {
+        "file": "reference/02-poutama.png",
+        "left": 252,
+        "top": 62,
+        "width": 106,
+        "height": 204,
+        "sha256": "a46be534a6cb9ea117f8cc0cb05595c4ba42020e0b06d65c6596facce7624e41"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/02-poutama.svg",
+        "width": 185,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 4158,
+        "containsEmbeddedRaster": false,
+        "sha256": "07ed52004a72d5858b3a23486e38069a3d18c38c12f5a106c8fa04e2cbe4420c"
+      }
+    },
+    {
+      "order": 3,
+      "id": "03-poutama",
+      "displayName": "Poutama",
+      "sourcePrintedLabel": "Poutama",
+      "sourceCrop": {
+        "file": "reference/03-poutama.png",
+        "left": 393,
+        "top": 62,
+        "width": 109,
+        "height": 204,
+        "sha256": "3b65a5f5b3a5f88fde89cf5603f42305fc59aa1891d3a1a3e8a7e10353ad9157"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/03-poutama.svg",
+        "width": 180,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 3780,
+        "containsEmbeddedRaster": false,
+        "sha256": "45440c2815fad8291661e6b97b974a4562c53ffe05ce79ee5c9423412059c0ff"
+      }
+    },
+    {
+      "order": 4,
+      "id": "04-double-poutama",
+      "displayName": "Poutama",
+      "sourcePrintedLabel": "Double Poutama",
+      "sourceCrop": {
+        "file": "reference/04-double-poutama.png",
+        "left": 534,
+        "top": 62,
+        "width": 135,
+        "height": 204,
+        "sha256": "5c38cbd523694a87716592595b8e72fb163021a102498c169143a00d2b992940"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/04-double-poutama.svg",
+        "width": 145,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 3837,
+        "containsEmbeddedRaster": false,
+        "sha256": "2eaf520362798d6c16b14aaf047ff09bbb30a41ee02d48eed0abd61c7208905c"
+      }
+    },
+    {
+      "order": 5,
+      "id": "05-pororangi-poutama",
+      "displayName": "Pororangi Poutama",
+      "sourcePrintedLabel": "Pororangi Poutama",
+      "sourceCrop": {
+        "file": "reference/05-pororangi-poutama.png",
+        "left": 704,
+        "top": 62,
+        "width": 131,
+        "height": 204,
+        "sha256": "568ce3d927ae910245c2908cd3d6f748921af18a5d235ebf509a6995763e4939"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/05-pororangi-poutama.svg",
+        "width": 149,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 4452,
+        "containsEmbeddedRaster": false,
+        "sha256": "74c2a099742652f58f05f1489ed01c1f597778a4593fab153b1bd833e74889e0"
+      }
+    },
+    {
+      "order": 6,
+      "id": "06-kaokao",
+      "displayName": "Kaokao",
+      "sourcePrintedLabel": "Kaokao",
+      "sourceCrop": {
+        "file": "reference/06-kaokao.png",
+        "left": 870,
+        "top": 62,
+        "width": 134,
+        "height": 204,
+        "sha256": "1f64968af0f72e41e82e6ef0422f827edcd36cea290a027e592fab6f7d65af1a"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/06-kaokao.svg",
+        "width": 146,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 3737,
+        "containsEmbeddedRaster": false,
+        "sha256": "526e91e4d74fb60546e40e9e3007808cf05407403de10eee0378c1e45bc1bdc9"
+      }
+    },
+    {
+      "order": 7,
+      "id": "07-kaokao-variation",
+      "displayName": "Kaokao",
+      "sourcePrintedLabel": "Kaokao (variation)",
+      "sourceCrop": {
+        "file": "reference/07-kaokao-variation.png",
+        "left": 35,
+        "top": 289,
+        "width": 128,
+        "height": 204,
+        "sha256": "1cfd8d27afc9999524a935ac0c53f64d90640ef7b096052aed2cfd8b3a0e6c72"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/07-kaokao-variation.svg",
+        "width": 153,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 5383,
+        "containsEmbeddedRaster": false,
+        "sha256": "589b8d0e6bd4304589cf40020063bdabac9c72e2fcdeeb3f98bb811f5f2f83be"
+      }
+    },
+    {
+      "order": 8,
+      "id": "08-nga-heke-iho",
+      "displayName": "Ngā Heke Iho",
+      "sourcePrintedLabel": "Ngā Heke Iho",
+      "sourceCrop": {
+        "file": "reference/08-nga-heke-iho.png",
+        "left": 195,
+        "top": 289,
+        "width": 130,
+        "height": 204,
+        "sha256": "591c3944efb0e09b1e05bd8cf5cbe35d81dcb9375e9d995370351a90698708ee"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/08-nga-heke-iho.svg",
+        "width": 151,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 5802,
+        "containsEmbeddedRaster": false,
+        "sha256": "70091a015ec64b736e8653f85ad259028de7ae9edf246acb82b86efc4732caf9"
+      }
+    },
+    {
+      "order": 9,
+      "id": "09-mumu",
+      "displayName": "Mumu",
+      "sourcePrintedLabel": "Mumu",
+      "sourceCrop": {
+        "file": "reference/09-mumu.png",
+        "left": 355,
+        "top": 289,
+        "width": 130,
+        "height": 204,
+        "sha256": "1849f5a736f506dfc58372b33d33c15cd06f558cd1e0db610a85133f40dc2eac"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/09-mumu.svg",
+        "width": 151,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 4874,
+        "containsEmbeddedRaster": false,
+        "sha256": "d9128addd43b5d4f86ed39158d13ffdeec447dd13cac240ab5d454f23437bfa3"
+      }
+    },
+    {
+      "order": 10,
+      "id": "10-niho-taniwha",
+      "displayName": "Niho Taniwha",
+      "sourcePrintedLabel": "Niho Taniwha",
+      "sourceCrop": {
+        "file": "reference/10-niho-taniwha.png",
+        "left": 515,
+        "top": 289,
+        "width": 108,
+        "height": 204,
+        "sha256": "975878c1a3ccea49569987ff60580631d93848c442b310ff387bddee0c109907"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/10-niho-taniwha.svg",
+        "width": 181,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 4600,
+        "containsEmbeddedRaster": false,
+        "sha256": "ee92404427b1aaee8e3b62fe1487dba6aaa7f2c0f31c824bd7cf5e0b74db515a"
+      }
+    },
+    {
+      "order": 11,
+      "id": "11-niho-taniwha-variation",
+      "displayName": "Niho Taniwha",
+      "sourcePrintedLabel": "Niho Taniwha (variation)",
+      "sourceCrop": {
+        "file": "reference/11-niho-taniwha-variation.png",
+        "left": 655,
+        "top": 289,
+        "width": 108,
+        "height": 204,
+        "sha256": "601e6b7181d266e3e98b17be01f6621a57e6060ea05c957bc684cb21e539e615"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/11-niho-taniwha-variation.svg",
+        "width": 181,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 5392,
+        "containsEmbeddedRaster": false,
+        "sha256": "606c61ec55e0283b1acec6c0cb96eefbc3fdb4502966804e9851ff72b6b0da52"
+      }
+    },
+    {
+      "order": 12,
+      "id": "12-patiki",
+      "displayName": "Pātiki",
+      "sourcePrintedLabel": "Pātiki",
+      "sourceCrop": {
+        "file": "reference/12-patiki.png",
+        "left": 795,
+        "top": 289,
+        "width": 130,
+        "height": 204,
+        "sha256": "32f52355250a92e24bda19b4ac57296abc9bcf43c12cca240b377120e107b174"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/12-patiki.svg",
+        "width": 151,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 4923,
+        "containsEmbeddedRaster": false,
+        "sha256": "7efb208bfc392924c23aa84fd943c4b3a97abb9392ff130d96beb19ff06c7dd5"
+      }
+    },
+    {
+      "order": 13,
+      "id": "13-patiki-variation",
+      "displayName": "Pātiki",
+      "sourcePrintedLabel": "Pātiki (variation)",
+      "sourceCrop": {
+        "file": "reference/13-patiki-variation.png",
+        "left": 953,
+        "top": 289,
+        "width": 105,
+        "height": 204,
+        "sha256": "86bac341d7dd30d5fe12b89bec4e467f09c760a808f1f1d21a2a59445a497e08"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/13-patiki-variation.svg",
+        "width": 187,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 5703,
+        "containsEmbeddedRaster": false,
+        "sha256": "32e548cc23ba843f6faa23ba24525a1dcf52aaa0c6abc33c0f3752a03ec734f2"
+      }
+    },
+    {
+      "order": 14,
+      "id": "14-purapura-whetu",
+      "displayName": "Purapura Whetū",
+      "sourcePrintedLabel": "Purapura Whetū",
+      "sourceCrop": {
+        "file": "reference/14-purapura-whetu.png",
+        "left": 35,
+        "top": 518,
+        "width": 128,
+        "height": 203,
+        "sha256": "7d3d30e99ad16dfd22f62054603a64f16ca8ae4e801bbd958db7924de918948e"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/14-purapura-whetu.svg",
+        "width": 152,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 6309,
+        "containsEmbeddedRaster": false,
+        "sha256": "d053e392d531856d2b41228081cb4afb950539e4135792ad28416940c2c150f2"
+      }
+    },
+    {
+      "order": 15,
+      "id": "15-waharua",
+      "displayName": "Waharua",
+      "sourcePrintedLabel": "Waharua",
+      "sourceCrop": {
+        "file": "reference/15-waharua.png",
+        "left": 190,
+        "top": 518,
+        "width": 107,
+        "height": 203,
+        "sha256": "33db041047d5fbe6ea4a1a6db156d744e8ffa736caf3f47e7198e81b77eb0e1b"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/15-waharua.svg",
+        "width": 182,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 6997,
+        "containsEmbeddedRaster": false,
+        "sha256": "058ef180ef13fe26c61fddc2ec0f4d134b4fa3466c56c4b3ae6249e6add096bc"
+      }
+    },
+    {
+      "order": 16,
+      "id": "16-roimata",
+      "displayName": "Roimata",
+      "sourcePrintedLabel": "Roimata",
+      "sourceCrop": {
+        "file": "reference/16-roimata.png",
+        "left": 324,
+        "top": 518,
+        "width": 106,
+        "height": 203,
+        "sha256": "e9a49d010214683f65a7fe7c0aeccdb8435089f02baee045f3da79cbdd5b14d4"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/16-roimata.svg",
+        "width": 184,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 5947,
+        "containsEmbeddedRaster": false,
+        "sha256": "882e389bfff30431914c2c6879b971853a34d2bc79593b437eed6540f85af9ba"
+      }
+    },
+    {
+      "order": 17,
+      "id": "17-roimata",
+      "displayName": "Roimata",
+      "sourcePrintedLabel": "Roimata",
+      "sourceCrop": {
+        "file": "reference/17-roimata.png",
+        "left": 460,
+        "top": 518,
+        "width": 131,
+        "height": 203,
+        "sha256": "b24e1c82918312c23bb3063508065353acd8484f57d14e070aa9ed1b9d4dcf74"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/17-roimata.svg",
+        "width": 149,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 3983,
+        "containsEmbeddedRaster": false,
+        "sha256": "43409a95bb7b61e185fb5c6717f0ea24fc11fcde08b5874a555b5cea4ec9bd5a"
+      }
+    },
+    {
+      "order": 18,
+      "id": "18-roimata-turuturu",
+      "displayName": "Roimata Turuturu",
+      "sourcePrintedLabel": "Roimata Turuturu",
+      "sourceCrop": {
+        "file": "reference/18-roimata-turuturu.png",
+        "left": 622,
+        "top": 518,
+        "width": 106,
+        "height": 203,
+        "sha256": "27cdaf4f8ed073986ff5baf66f032aa4f057e775613c6159f39d992b85c25df7"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/18-roimata-turuturu.svg",
+        "width": 184,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 6142,
+        "containsEmbeddedRaster": false,
+        "sha256": "8aafe4482ebfc72cb9cd608a7920f82e33a134c08bb0a380d672c956d04fdf1b"
+      }
+    },
+    {
+      "order": 19,
+      "id": "19-roimata-variation",
+      "displayName": "Roimata",
+      "sourcePrintedLabel": "Roimata (variation)",
+      "sourceCrop": {
+        "file": "reference/19-roimata-variation.png",
+        "left": 760,
+        "top": 518,
+        "width": 132,
+        "height": 203,
+        "sha256": "5029ac965f57bc737bdba1f26ea07f1f4b2a38293b3e814672373a08dcf34c6d"
+      },
+      "vectorStatus": "ready",
+      "horizontalSvg": {
+        "file": "svg/19-roimata-variation.svg",
+        "width": 148,
+        "height": 96,
+        "rotationDegreesClockwise": 90,
+        "colors": 12,
+        "paths": 12,
+        "mergedRectangles": 5634,
+        "containsEmbeddedRaster": false,
+        "sha256": "58b369b4a451d2501c88ceb635ecc842398c5c472be5af2e793f2153d86f6063"
+      }
+    }
+  ]
+}

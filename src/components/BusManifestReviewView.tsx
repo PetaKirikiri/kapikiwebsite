@@ -1,3 +1,4 @@
+import { sentenceMeasurementFrame } from '../lib/connectorPresentation/browserMeasurements'
 import {
   Fragment,
   useEffect,
@@ -770,19 +771,20 @@ export default function BusManifestReviewView({
         if (paragraph == null) return
         const paragraphRect = paragraph.getBoundingClientRect()
         const paragraphStyle = window.getComputedStyle(paragraph)
-        const contentLeft = paragraphRect.left + (Number.parseFloat(paragraphStyle.paddingLeft) || 0)
-        const contentRight = paragraphRect.right - (Number.parseFloat(paragraphStyle.paddingRight) || 0)
+        const frame = sentenceMeasurementFrame(paragraphRect, paragraph.offsetWidth)
+        const contentLeft = Number.parseFloat(paragraphStyle.paddingLeft) || 0
+        const contentRight = frame.width - (Number.parseFloat(paragraphStyle.paddingRight) || 0)
         tokens.forEach((_, index) => {
           const element = tokenElements.current.get(`${paragraphIndex}:${index}`)
           const text = element?.querySelector('[data-word-text]')
-          if (element != null && text != null) nextWordEnds.set(`${paragraphIndex}:${index}`, text.getBoundingClientRect().width)
+          if (element != null && text != null) nextWordEnds.set(`${paragraphIndex}:${index}`, frame.local(text.getBoundingClientRect()).width)
         })
         for (let index = 0; index < tokens.length - 1; index++) {
           const left = tokenElements.current.get(`${paragraphIndex}:${index}`)
           const right = tokenElements.current.get(`${paragraphIndex}:${index + 1}`)
           if (left == null || right == null) continue
-          const leftRect = left.getBoundingClientRect()
-          const rightRect = right.getBoundingClientRect()
+          const leftRect = frame.local(left.getBoundingClientRect())
+          const rightRect = frame.local(right.getBoundingClientRect())
           next.set(`${paragraphIndex}:${index}`, planRailSpan(
             { left: leftRect.left, top: leftRect.top, textWidth: nextWordEnds.get(`${paragraphIndex}:${index}`) ?? 0 },
             { left: rightRect.left, top: rightRect.top, textWidth: nextWordEnds.get(`${paragraphIndex}:${index + 1}`) ?? 0 },

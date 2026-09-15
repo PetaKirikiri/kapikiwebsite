@@ -16,7 +16,8 @@
     "polygon-clipping": "^0.15.7",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "zod": "^3.24.0"
+    "zod": "^3.24.0",
+    "pg": "^8.16.3"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",

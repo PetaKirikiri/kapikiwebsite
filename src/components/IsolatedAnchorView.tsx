@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import TenseJourney from './TenseJourney'
 import { JOURNEY, smooth, unit } from './translationJourneyTiming'
 import { anchorJourneyLayout } from './anchorJourneyLayout'
@@ -15,12 +15,13 @@ import { planWordLayout } from '../lib/connectorPresentation/layout'
 import type { BusManifestSheet } from '../lib/busManifestContract'
 import type { ReviewDeskPosCatalog } from '../lib/busManifestTeam/reviewDeskGateway'
 
-export default function IsolatedAnchorView({ state, catalog, presentation = false, germinationOnly = false, example, displayWords, prefixStage, growAnchor = false }: { state: BusManifestSheet; catalog: ReviewDeskPosCatalog; presentation?: boolean; germinationOnly?: boolean; example?: 'noun' | 'verb' | 'who'; displayWords?: { left: string; anchor: string }; prefixStage?: 'hidden' | 'complete'; growAnchor?: boolean }) {
+export default function IsolatedAnchorView({ state, catalog, presentation = false, germinationOnly = false, example, displayWords, prefixStage, growAnchor = false, active = true }: { state: BusManifestSheet; catalog: ReviewDeskPosCatalog; presentation?: boolean; germinationOnly?: boolean; example?: 'noun' | 'verb' | 'who'; displayWords?: { left: string; anchor: string }; prefixStage?: 'hidden' | 'complete'; growAnchor?: boolean; active?: boolean }) {
   const root=useRef<HTMLDivElement>(null)
-  const [availableWidth,setAvailableWidth]=useState(900)
-  useEffect(()=>{
+  const [availableWidth,setAvailableWidth]=useState(0)
+  useLayoutEffect(()=>{
     const element=root.current
     if(!element)return
+    setAvailableWidth(element.getBoundingClientRect().width)
     const observer=new ResizeObserver(([entry])=>setAvailableWidth(entry.contentRect.width))
     observer.observe(element)
     return ()=>observer.disconnect()
@@ -117,7 +118,7 @@ export default function IsolatedAnchorView({ state, catalog, presentation = fals
   useEffect(() => { replayRef.current = replay })
   const ready = anchors.length === (example ? 1 : 3) && anchors.every(anchor => anchor.left.status === 'ready' && anchor.right.status === 'ready')
   useEffect(() => {
-    if (!germinationOnly || !ready || !root.current) return
+    if (!germinationOnly || !ready || !active || !root.current) return
     const observer = new IntersectionObserver(entries => {
       if (entries.some(entry => entry.isIntersecting)) {
         replayRef.current()
@@ -126,7 +127,7 @@ export default function IsolatedAnchorView({ state, catalog, presentation = fals
     }, { threshold: 0.5 })
     observer.observe(root.current)
     return () => observer.disconnect()
-  }, [germinationOnly, ready])
+  }, [germinationOnly, ready, active])
   const expansion=germinationOnly?1:journeyTime>=0?smooth((journeyTime-JOURNEY.dustStart)/1200):stage>1?1:0
   const {width:sentenceWidth,offsets:anchorOffsets}=anchorJourneyLayout(anchors.map(a=>({
     prefixWidth:a.prefix?.width??0,
