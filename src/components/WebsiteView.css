@@ -16,6 +16,40 @@
 .maori-site a { color: inherit; text-decoration: none; }
 .maori-site button, .maori-site a { -webkit-tap-highlight-color: transparent; }
 .maori-site button { cursor: pointer; }
+.site-corporate-welcome { display: grid; grid-template-columns: 1fr 1.05fr; column-gap: clamp(32px, 5vw, 72px); row-gap: 48px; padding: 56px var(--site-gutter) 32px; color: #213b35; background: #f5f3ed; }
+.site-corporate-offer { align-self: center; padding: 16px 0; }
+.site-corporate-offer .site-eyebrow { color: #5f665b; font-size: 11px; letter-spacing: .16em; }
+.site-corporate-offer h1 { margin: 24px 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(44px, 4.8vw, 66px); line-height: 1.08; letter-spacing: -.04em; font-weight: 400; }
+.site-corporate-lead { max-width: 390px; margin: 0; font-size: 18px; line-height: 1.65; color: #5a645e; }
+.site-corporate-image { margin: 0; min-width: 0; height: clamp(310px, 31vw, 430px); overflow: hidden; background: #70614a; }
+.site-corporate-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.site-corporate-benefits { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; border-top: 1px solid #c9c8be; padding-top: 28px; }
+.site-corporate-benefits section { padding: 0; }
+.site-corporate-benefits h2 { margin: 0 0 12px; font-size: 17px; font-weight: 600; letter-spacing: -.015em; }
+.site-corporate-benefits p { margin: 0; max-width: 340px; font-size: 14px; line-height: 1.7; color: #5a645e; }
+.site-corporate-closing { grid-column: 1 / -1; margin: 0; color: #5a645e; font-size: 13px; }
+.site-offer-stories { grid-column: 1 / -1; min-width: 0; }
+.site-offer-story { display: grid; grid-template-columns: .7fr 1.3fr; align-items: center; gap: clamp(28px, 5vw, 72px); padding: 56px 0; border-top: 1px solid #c9c8be; }
+.site-offer-story h2 { margin: 0 0 18px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400; line-height: 1.15; letter-spacing: -.025em; }
+.site-offer-story p { max-width: 360px; margin: 0; color: #5a645e; font-size: 16px; line-height: 1.75; }
+.site-offer-story figure { margin: 0; min-width: 0; }
+.site-offer-story a { display: block; }
+.site-offer-story a:focus-visible { outline: 3px solid #398ca5; outline-offset: 5px; }
+.site-offer-story img { display: block; width: 100%; height: auto; border: 1px solid #d7dad2; }
+.site-offer-story figcaption { margin-top: 12px; color: #667168; font-size: 11px; letter-spacing: .03em; }
+.site-offer-story-classroom { grid-template-columns: 1fr; gap: 28px; }
+.site-offer-story-classroom > div { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.site-offer-story-classroom p { max-width: 440px; }
+.site-offer-story-app figure { width: min(100%, 300px); justify-self: center; }
+@media (max-width: 760px) {
+  .site-offer-story, .site-offer-story-classroom > div { grid-template-columns: 1fr; gap: 24px; }
+  .site-offer-story { padding: 36px 0; }
+}
+@media (max-width: 760px) {
+  .site-corporate-welcome { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; }
+  .site-corporate-image { height: 270px; }
+  .site-corporate-benefits { grid-template-columns: 1fr; gap: 24px; }
+}
 .site-step-controls button:disabled { cursor: default; opacity: .28; }
 .maori-site :is(a,button):focus-visible { outline: 3px solid #398aa6; outline-offset: 5px; }
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 25px var(--site-gutter); background: var(--site-ink); color: #fff; }
@@ -313,4 +347,3 @@
 }
 .site-join p { margin: 10px 0 0; font-size: 14px; opacity: .85; }
 @media (max-width: 360px) { .site-header { gap: 8px; padding-inline: 12px; } .site-header .site-nav { gap: 8px; font-size: 11px; } .site-header .site-wordmark { font-size: 20px; } .site-brand-motif { width: 22px; } }
-

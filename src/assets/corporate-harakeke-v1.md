@@ -1,0 +1,7 @@
+# Corporate harakeke hero
+
+Generated with the built-in image-generation tool. Original conceptual image, not a photograph of an actual heritage object or an attributed artisan work. Encoded as JPEG for web delivery; original retained in generated_images.
+
+## Prompt
+
+Use case: photorealistic-natural. Asset type: editorial hero photograph for Ka Piki, a professional te reo Māori training service for New Zealand ministries, government agencies and corporate teams. Create a refined, photorealistic macro still-life of contemporary woven harakeke flax, celebrating Māori raranga material craft. Beautiful structural interlacing of broad flax strips in a simple regular diagonal weave, naturally aged honey-tan fibres with a few deep olive green strands, tactile subtle variations, no specific named traditional pattern or cultural attribution. One closely cropped woven surface fills the entire frame, gently curving, with subtle soft directional daylight casting fine dimensional shadows. Architectural and sophisticated, like a premium arts journal or a respected consultancy annual report, not a souvenir, not a children's learning product. Muted earthy tan, warm stone, deep green, natural highlights; no fluorescent colours. Landscape 3:2 composition, crisp fibre details in the centre, softly falling focus near the edges, restrained quiet realism. No people, text, logos, watermark, icons, cartoon, figurative carvings, flags or extra props. This is a new original conceptual image, not a photo of a claimed actual heritage object.

@@ -18,6 +18,11 @@ import NavigationRail from './NavigationRail'
 import { WORD_CLASS_VISUAL_PALETTE } from './railVisualPalette'
 import IsolatedAnchorView from './IsolatedAnchorView'
 import ClassroomRoom from './ClassroomRoom'
+import corporateHarakeke from '../assets/corporate-harakeke-v1.jpg'
+import offerCapabilities from '../assets/offer-capabilities.png'
+import offerClassroom from '../assets/offer-classroom.png'
+import offerApp from '../assets/offer-app.png'
+import offerGrammar from '../assets/offer-grammar.png'
 
 export type WebsitePreviewSentence = {
   readonly structureId: number
@@ -74,10 +79,10 @@ export default function WebsiteView({
   const [ourReveal, setOurReveal] = useState(100)
   const [selectedLevel, setSelectedLevel] = useState<CurriculumLevel>(1)
   const [accountOpen, setAccountOpen] = useState(() => ['#account', '#join'].includes(window.location.hash))
-  const [activeSection, setActiveSection] = useState(() => window.location.hash || '#level-finder')
+  const [activeSection, setActiveSection] = useState(() => window.location.hash || '#website-top')
   useEffect(() => {
     const openAccount = () => {
-      setActiveSection(window.location.hash || '#level-finder')
+      setActiveSection(window.location.hash || '#website-top')
       if (['#account', '#join'].includes(window.location.hash)) setAccountOpen(true)
     }
     window.addEventListener('hashchange', openAccount)
@@ -146,7 +151,7 @@ export default function WebsiteView({
     .flatMap(text => data?.sentences.filter(sentence => sentence.textMi.replace(/[.!]$/u, '') === text) ?? [])
   const methodologyReady = !!methodologySentences[0]?.state
   useEffect(() => {
-    if (!['#methodology', '#website-top'].includes(activeSection) || !methodologyReady) return
+    if (activeSection !== '#methodology' || !methodologyReady) return
     setMethodStep(0)
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) { setMethodStep(3); return }
     const timers = [1, 2, 3].map(step => window.setTimeout(() => {
@@ -175,7 +180,7 @@ export default function WebsiteView({
             ['#competency', 'Capabilities'],
             ['#training', 'APP'],
           ].map(([href, label]) => {
-            const active = activeSection === href || (href === '#methodology' && activeSection === '#website-top') || (href === '#level-finder' && activeSection === '#teacher')
+            const active = activeSection === href || (href === '#level-finder' && activeSection === '#teacher')
             const journey = `${activeSection}:${navReplay}`
             const prefix = href === '#competency' ? 'Your' : href === '#methodology' || href === '#level-finder' ? 'Our' : undefined
             const showPrefix = !!prefix && active && completedNav === journey
@@ -187,7 +192,35 @@ export default function WebsiteView({
         </nav>
       </header>
 
-      {activeSection === '#methodology' || activeSection === '#website-top' ? <section id="methodology" className="site-methodology" aria-label="Methodology">
+      {activeSection === '#website-top' ? <main className="site-corporate-welcome" aria-label="Corporate training">
+        <div className="site-corporate-offer">
+          <p className="site-eyebrow">Te reo Māori for your organisation</p>
+          <h1>Your team’s Māori capability.<br />Managed for you.</h1>
+          <p className="site-corporate-lead">Fun, interactive classes. Practice between sessions. A clear view of progress. We take care of the coordination.</p>
+        </div>
+        <figure className="site-corporate-image">
+          <img src={corporateHarakeke} width={1536} height={1024} fetchPriority="high" alt="An AI-generated study of interwoven harakeke fibres in natural flax and deep olive tones" />
+        </figure>
+        <div className="site-offer-stories">
+          <section className="site-offer-story">
+            <div><h2>Know your team.</h2><p>See what your people can do—and where they need support—in one clear snapshot.</p></div>
+            <figure><a href="#competency" aria-label="Explore team capabilities"><img src={offerCapabilities} loading="lazy" alt="Ka Piki team capability dashboard showing skills and individual progress with sample data" /></a><figcaption>Capabilities dashboard · sample data</figcaption></figure>
+          </section>
+          <section className="site-offer-story site-offer-story-classroom">
+            <div><h2>A class to take part in.</h2><p>Talk, play and solve things together. A shared interactive world, not just another video call.</p></div>
+            <figure><a href="#classroom" aria-label="Explore the interactive classroom"><img src={offerClassroom} loading="lazy" alt="Ka Piki classroom with a teacher, students, a shared Māori sentence whiteboard and Āe and Kāo activity areas" /></a><figcaption>Interactive classroom · local prototype</figcaption></figure>
+          </section>
+          <section className="site-offer-story site-offer-story-app">
+            <div><h2>Keep learning between classes.</h2><p>Short app practice keeps vocabulary and sentence patterns fresh, around your team’s working day.</p></div>
+            <figure><a href="#training" aria-label="Explore the practice app"><img src={offerApp} loading="lazy" alt="Actual Ka Piki practice screen with a visual Māori sentence and two English answer choices" /></a><figcaption>The Ka Piki practice app</figcaption></figure>
+          </section>
+          <section className="site-offer-story site-offer-story-grammar">
+            <div><h2>Deep learning. Simple patterns.</h2><p>Build your command of sentence structures over 50 weeks. Digital rākau make the patterns visible, keeping complex grammatical terminology out of the way.</p></div>
+            <figure><a href="#methodology" aria-label="Explore our digital rākau methodology"><img src={offerGrammar} loading="lazy" alt="Digital rākau show how a WHEN word grows onto a verb alongside noun phrases" /></a><figcaption>Our digital rākau system</figcaption></figure>
+          </section>
+        </div>
+        <p className="site-corporate-closing">You bring the team. We take care of the rest.</p>
+      </main> : activeSection === '#methodology' ? <section id="methodology" className="site-methodology" aria-label="Methodology">
         <div className="methodology-simple-examples">
           <div id="method-step-0" className={`methodology-step${methodStep === 0 ? ' methodology-step-active' : ''}`}>
           <p>Put the words in ORDER.</p>
