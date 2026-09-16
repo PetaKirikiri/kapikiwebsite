@@ -18,7 +18,7 @@ create table if not exists public.classroom_live_member (
  color text not null default '#398aa6',
  marks jsonb not null default '[]',
  eliminated jsonb not null default '[]',
- guess smallint check(guess between 0 and 5),
+ guess smallint check(guess between 0 and 11),
  correct boolean,
  last_seen timestamptz not null default now(),
  primary key(room_id, token_hash), unique(room_id, seat)
@@ -35,4 +35,6 @@ alter table public.classroom_live_room enable row level security;
 alter table public.classroom_live_member enable row level security;
 alter table public.classroom_live_message enable row level security;
 revoke all on public.classroom_live_room, public.classroom_live_member, public.classroom_live_message from anon, authenticated;
+alter table public.classroom_live_member drop constraint if exists classroom_live_member_guess_check;
+alter table public.classroom_live_member add constraint classroom_live_member_guess_check check(guess between 0 and 11);
 commit;

@@ -78,16 +78,16 @@ export async function classroomApi(req,res) {
    await client.query('update classroom_live_member set marks=$3::jsonb where room_id=$1 and token_hash=$2',[id,hash,JSON.stringify(marks)])
   } else if(action==='target') {
    if(member.seat!==0)throw bad('Only the teacher chooses the character.',403)
-   if(!Number.isInteger(body.index)||body.index<0||body.index>5)throw bad('Choose a character.')
+   if(!Number.isInteger(body.index)||body.index<0||body.index>11)throw bad('Choose a character.')
    if(room.state.target!==undefined&&room.state.target!==null)throw bad('Start a new round to change the character.',409)
    room.state={...room.state,target:body.index,revealed:false}
    await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
   } else if(action==='eliminate') {
-   if(!Array.isArray(body.indices)||body.indices.length>6||!body.indices.every(i=>Number.isInteger(i)&&i>=0&&i<6))throw bad('Invalid selection.')
+   if(!Array.isArray(body.indices)||body.indices.length>12||!body.indices.every(i=>Number.isInteger(i)&&i>=0&&i<12))throw bad('Invalid selection.')
    await client.query('update classroom_live_member set eliminated=$3::jsonb where room_id=$1 and token_hash=$2',[id,hash,JSON.stringify([...new Set(body.indices)])])
   } else if(action==='guess') {
    if(member.seat===0)throw bad('The teacher knows the answer.',403)
-   if(!Number.isInteger(body.index)||body.index<0||body.index>5)throw bad('Choose a character.')
+   if(!Number.isInteger(body.index)||body.index<0||body.index>11)throw bad('Choose a character.')
    if(room.state.target===undefined||room.state.target===null)throw bad('Wait for the teacher to choose a character.',409)
    if(room.state.revealed)throw bad('Wait for the next round.',409)
    if(member.guess!==null)throw bad('You have already guessed this round.',409)
