@@ -99,6 +99,34 @@ export async function classroomApi(req,res) {
     await client.query("update classroom_live_member set eliminated='[]'::jsonb,guess=null,correct=null where room_id=$1",[id])
    } else room.state={...room.state,revealed:true}
    await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
+  } else if(action==='surface') {
+   if(member.seat!==0)throw bad('Only the teacher can change the activity.',403)
+   if(!['room','whiteboard'].includes(body.surface))throw bad('Unknown activity.')
+   room.state={...room.state,surface:body.surface}
+   await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
+  } else if(action==='whiteboard') {
+   if(member.seat!==0)throw bad('Only the teacher can edit the whiteboard.',403)
+   const board=room.state.whiteboard??{revision:0,blocks:[]}
+   if(body.boardRevision!==board.revision)throw bad('The whiteboard changed. Try again.',409)
+   let blocks=[...board.blocks]
+   const validId=value=>typeof value==='string'&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(value)
+   const validPosition=(x,y)=>Number.isFinite(x)&&Number.isFinite(y)&&x>=0&&x<=780&&y>=0&&y<=500
+   if(body.op==='add') {
+    const block=body.block
+    if(!block||!validId(block.id)||!['predicate','subject'].includes(block.kind)||!validPosition(block.x,block.y))throw bad('Invalid block.')
+    if(blocks.length>=32)throw bad('The whiteboard is full.')
+    if(blocks.some(b=>b.id===block.id))throw bad('This block already exists.',409)
+    blocks.push({id:block.id,kind:block.kind,x:block.x,y:block.y})
+   } else if(body.op==='move'||body.op==='delete') {
+    if(!validId(body.blockId)||!blocks.some(b=>b.id===body.blockId))throw bad('Block not found.',404)
+    if(body.op==='move') {
+     if(!validPosition(body.x,body.y))throw bad('Invalid block position.')
+     blocks=blocks.map(b=>b.id===body.blockId?{...b,x:body.x,y:body.y}:b)
+    } else blocks=blocks.filter(b=>b.id!==body.blockId)
+   } else if(body.op==='clear')blocks=[]
+   else throw bad('Unknown whiteboard action.')
+   room.state={...room.state,whiteboard:{revision:board.revision+1,blocks}}
+   await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
   } else if(action==='control') {
    if(member.seat!==0)throw bad('Only the teacher can change the activity.',403)
    const state={...room.state}

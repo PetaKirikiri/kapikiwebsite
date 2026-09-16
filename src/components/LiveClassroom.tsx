@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import LoungeSprite from './LoungeSprite'
+import ClassWhiteboard, { type BoardState } from './ClassWhiteboard'
 import './ClassroomRoom.css'
 import './LiveClassroom.css'
 import './LiveHouse.css'
 
 type Member = { seat: number; name: string; x: number; y: number; movement: number; look: 'male' | 'female'; color: string; lastSeen: string; eliminated: number[]; guess: number | null; correct: boolean | null }
-type Room = { room: string; joined: boolean; seat: number; state: { round: number; chosen: boolean; revealed: boolean; target?: number | null }; members: Member[]; messages: { id: string; seat: number; text: string }[]; ended?: boolean }
+type Room = { room: string; joined: boolean; seat: number; state: { round: number; chosen: boolean; revealed: boolean; target?: number | null; surface?: 'room' | 'whiteboard'; whiteboard?: BoardState }; members: Member[]; messages: { id: string; seat: number; text: string }[]; ended?: boolean }
 type Motion = { x: number; y: number; tx: number; ty: number; walking: boolean; stride: number; facing: number; direction: 'front' | 'back' | 'side' }
 const cards = [
   { name: 'Charlie', look: 'male', color: '#398aa6' }, { name: 'Hana', look: 'female', color: '#ba657f' },
@@ -64,7 +65,7 @@ export default function LiveClassroom() {
     const run = serial.current.catch(() => {}).then(async () => {
       setPending(true)
       try {
-        const next = await request({ action, room: id, round: roomRef.current?.state?.round, ...values })
+        const next = await request({ action, room: id, round: roomRef.current?.state?.round, boardRevision: roomRef.current?.state?.whiteboard?.revision ?? 0, ...values })
         apply(next); setError('')
         if (action === 'create') { setId(next.room); window.location.hash = `#live-class?room=${next.room}` }
         return true
@@ -141,6 +142,9 @@ export default function LiveClassroom() {
       <button disabled={pending || !name.trim()}>{pending ? 'Connecting…' : id ? 'Join class' : 'Start class'}</button>
     </form> : <div className="live-layout">
       <div className="live-main">
+        <nav className="live-surfaces" aria-label="Class activity">{teacher ? <>{(['room', 'whiteboard'] as const).map(surface => <button key={surface} disabled={pending} aria-pressed={(room.state.surface ?? 'room') === surface} onClick={() => void act('surface', { surface })}>{surface === 'room' ? 'Room' : 'Whiteboard'}</button>)}</> : <span className="live-surface-name">{room.state.surface === 'whiteboard' ? 'Whiteboard' : 'Room'}</span>}</nav>
+        {room.state.surface === 'whiteboard' ? <ClassWhiteboard board={room.state.whiteboard ?? { revision: 0, blocks: [] }} teacher={teacher} pending={pending} onChange={change => act('whiteboard', change)} /> : <>
+
         <div className="classroom-floor live-floor" role="application" aria-label="Shared house. Click to walk, or use WASD or arrow keys." tabIndex={0}
           onPointerDown={event => { if((event.target as HTMLElement).closest('button'))return;const rect=event.currentTarget.getBoundingClientRect();move(cameraX+(event.clientX-rect.left)/rect.width*800,(event.clientY-rect.top)/rect.height*500);event.currentTarget.focus() }}
           onKeyDown={event => { if(event.target!==event.currentTarget)return; const delta: Record<string, [number, number]> = { ArrowLeft: [-35,0], ArrowRight:[35,0], ArrowUp:[0,-35], ArrowDown:[0,35], a:[-35,0], d:[35,0], w:[0,-35], s:[0,35] }; const d=delta[event.key.length===1?event.key.toLowerCase():event.key];const p=movement.current[room.seat];if(d&&p){event.preventDefault();move(p.tx+d[0],p.ty+d[1])} }}>
@@ -172,6 +176,7 @@ export default function LiveClassroom() {
             </article>
           })}</div>
         </section>
+        </>}
       </div>
       <aside className="live-sidebar">
         <section className="live-people" aria-label="People in class">{room.members.map(member=><div key={member.seat}><span className="classroom-avatar" style={{background:member.color}}>{member.name.slice(0,1)}</span><strong>{member.name}</strong><span>{teacher&&member.guess!=null?(member.correct?'✓':'↻'):Date.now()-Date.parse(member.lastSeen)>15000?'Offline':'●'}</span></div>)}</section>
