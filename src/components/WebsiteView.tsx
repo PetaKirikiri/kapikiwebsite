@@ -1,3 +1,4 @@
+import LiveClassroom from './LiveClassroom'
 import { useEffect, useMemo, useState } from 'react'
 import type { BusManifestSheet } from '../lib/busManifestContract'
 import { renderUnassessedPassage } from '../lib/busManifestTeam/reviewDeskDisplay'
@@ -161,6 +162,7 @@ export default function WebsiteView({
     return () => timers.forEach(clearTimeout)
   }, [activeSection, methodologyReady])
 
+  if (activeSection.split('?')[0] === '#live-class') return <LiveClassroom key={activeSection} />
   if (activeSection === '#classroom') return <ClassroomRoom data={data} error={error} />
   if (activeSection === '#training' || activeSection === '#training-admin') {
     return <main className="training-app" aria-label="Ka Piki training app">

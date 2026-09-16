@@ -1,0 +1,8 @@
+.live-house-world { position: absolute; inset: 0 auto 0 0; width: 300%; height: 100%; will-change: transform; }
+.live-house-room { position: absolute; top: 0; width: 33.333333%; height: 100%; }
+.live-house-world .room-player { width: 2.333333%; }
+.live-house-board-wrap { position: absolute; inset: 0 auto 0 0; width: 33.333333%; pointer-events: none; }
+.live-house-label { position: absolute; z-index: 600; left: 50%; top: 2%; transform: translateX(-50%); padding: 6px 14px; background: #243e35df; color: #fff5df; border-radius: 6px; pointer-events: none; font-size: 13px; }
+.live-class .live-house-door { position: absolute; top: 64%; height: 18%; width: 7%; padding: 0; z-index: 500; background: #38291bcc; color: #fff0cd; border: 3px solid #b18a55; border-radius: 4px; font-size: 22px; box-shadow: inset 0 0 15px #100a07; }
+.live-house-door-left { left: 1%; }
+.live-house-door-right { right: 1%; }

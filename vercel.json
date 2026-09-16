@@ -9,9 +9,16 @@
     },
     "api/training.js": {
       "maxDuration": 60
+    },
+    "api/classroom.js": {
+      "maxDuration": 30
     }
   },
   "rewrites": [
+    {
+      "source": "/__classroom",
+      "destination": "/api/classroom"
+    },
     {
       "source": "/__website_sentence",
       "destination": "/api/course?route=__website_sentence"

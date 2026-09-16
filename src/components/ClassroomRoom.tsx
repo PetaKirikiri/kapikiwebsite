@@ -139,7 +139,7 @@ export default function ClassroomRoom({ data, error }: { data?: WebsitePreviewDa
   return <main className="classroom-trial">
     <header className="classroom-topbar">
       <a className="classroom-brand" href="#website-top">Ka Piki</a>
-      <nav aria-label="Classroom navigation"><a href="#classroom" aria-current="page">Classroom</a><a href="#training-admin">Content</a></nav>
+      <nav aria-label="Classroom navigation"><a href="#classroom" aria-current="page">Classroom</a><a href="#training-admin">Content</a><a href="#live-class">Live class</a></nav>
       <div className="classroom-top-actions">
       <button className="classroom-look-button" aria-label="Change look" title="Change look" onClick={() => appearanceDialog.current?.showModal()}><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden="true"><path d="m8 4-5 3 2 5 3-1v9h8v-9l3 1 2-5-5-3c0 4-8 4-8 0Z" /></svg></button>
       <details className="classroom-profile">
