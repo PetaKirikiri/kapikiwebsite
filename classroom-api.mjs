@@ -123,6 +123,41 @@ export async function classroomApi(req,res) {
      if(!validPosition(body.x,body.y))throw bad('Invalid block position.')
      blocks=blocks.map(b=>b.id===body.blockId?{...b,x:body.x,y:body.y}:b)
     } else blocks=blocks.filter(b=>b.id!==body.blockId)
+   } else if(body.op==='word'||body.op==='grow') {
+    const block=blocks.find(b=>b.id===body.blockId)
+    if(!validId(body.blockId)||!block)throw bad('Block not found.',404)
+    if(body.op==='grow') {
+     if(!block.posCode)throw bad('Choose a matching word first.')
+     blocks=blocks.map(b=>b.id===block.id?{...b,growthId:randomBytes(12).toString('hex'),grownAt:Date.now()}:b)
+    } else {
+     if(typeof body.text!=='string'||body.text.length>60)throw bad('Use one word, up to 60 characters.')
+     const text=body.text.normalize('NFC').trim()
+     if(text&&!/^[\p{L}\p{M}’'‐-]+$/u.test(text))throw bad('Use one word in each shape.')
+     const word=text.toLocaleLowerCase('mi-NZ')
+     const learned=word?(await client.query('select conditions from public.learned_maori_word where word=$1',[word])).rows[0]:null
+     let possibilities=[],source=''
+     if(learned) {
+      const codes=[...new Set(learned.conditions.map(c=>c.local?.ours).filter(Boolean))]
+      possibilities=(await client.query('select code,group_code from public.pos_type where code=any($1::text[])',[codes])).rows
+      source='learned'
+     } else if(word) {
+      possibilities=(await client.query(`select distinct p.code,p.group_code from public.lexeme l
+       join public.dictionary_entry e on e.lexeme_id=l.lexeme_id and e.source_code='te_aka'
+       join public.dictionary_sense s on s.entry_id=e.entry_id
+       join public.dictionary_pos_mapping m on m.label_code=s.pos_label_code
+       join public.pos_type p on p.code=m.pos_code
+       where l.language_code='mi' and (lower(l.lemma)=$1 or exists(select 1 from public.lexeme_alias a where a.lexeme_id=l.lexeme_id and lower(a.alias)=$1))`,[word])).rows
+      source='dictionary'
+     }
+     const match=possibilities.find(p=>block.kind==='predicate'?['nominal_predicate','nominal_marker'].includes(p.code):p.group_code==='noun')
+     // A teacher may explicitly demonstrate an unlearned usage on this board.
+     // This never confirms a Floor or creates learned vocabulary.
+     const confirmed=body.confirm===true&&Boolean(word)
+     const posCode=match?.code??(confirmed?(block.kind==='predicate'?'nominal_predicate':'noun'):null)
+     blocks=blocks.map(b=>b.id===block.id?{...b,text,posCode,matchSource:match?source:confirmed?'teacher':null,
+      matchStatus:!word?'empty':posCode?'matched':possibilities.length?'mismatch':'unknown',
+      growthId:posCode?randomBytes(12).toString('hex'):null,grownAt:posCode?Date.now():null}:b)
+    }
    } else if(body.op==='clear')blocks=[]
    else throw bad('Unknown whiteboard action.')
    room.state={...room.state,whiteboard:{revision:board.revision+1,blocks}}

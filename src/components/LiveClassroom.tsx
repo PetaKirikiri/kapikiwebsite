@@ -37,6 +37,10 @@ export default function LiveClassroom() {
   const [error, setError] = useState('')
   const [pending, setPending] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [showChat, setShowChat] = useState(false)
+  const [fullscreen, setFullscreen] = useState(false)
+  const workspace = useRef<HTMLElement>(null)
+  useEffect(() => { const update = () => setFullscreen(Boolean(document.fullscreenElement)); document.addEventListener('fullscreenchange', update); return () => document.removeEventListener('fullscreenchange', update) }, [])
   const [ended, setEnded] = useState(false)
   const [motions, setMotions] = useState<Record<number, Motion>>({})
   const movement = useRef<Record<number, Motion>>({})
@@ -131,9 +135,11 @@ export default function LiveClassroom() {
     try { await navigator.clipboard.writeText(window.location.href); setCopied(true); setTimeout(() => setCopied(false), 2500) }
     catch { setError('Copy the class link from the address bar.') }
   }
-  return <main className="live-class">
-    <header className="classroom-topbar"><a className="classroom-brand" href="#website-top">Ka Piki</a><strong>Live class</strong>
-      <div className="classroom-top-actions">{joined && <><button onClick={() => void share()}>{copied ? 'Copied' : 'Copy class link'}</button><span>{me?.name}</span></>}</div>
+  const boardMode = joined && room.state.surface === 'whiteboard'
+  const toggleFullscreen = async () => { try { if (document.fullscreenElement) await document.exitFullscreen(); else await workspace.current?.requestFullscreen() } catch { setError('Use your browser’s full-screen control.') } }
+  return <main ref={workspace} className={`live-class${boardMode ? ' live-board-workspace' : ''}${showChat ? ' is-chat-open' : ''}`}>
+    <header className="classroom-topbar"><a className="classroom-brand" href="#website-top">Ka Piki</a><strong>{boardMode ? 'Whiteboard' : 'Live class'}</strong>{boardMode && teacher && <button className="board-back" disabled={pending} onClick={() => void act('surface', { surface: 'room' })}>← Room</button>}
+      <div className="classroom-top-actions">{joined && <>{boardMode && <><button aria-label="Toggle class chat" aria-pressed={showChat} onClick={() => setShowChat(!showChat)}>Chat</button><button aria-label={fullscreen ? 'Exit full screen' : 'Full screen'} title={fullscreen ? 'Exit full screen' : 'Full screen'} onClick={() => void toggleFullscreen()}>⛶</button></>}<button onClick={() => void share()}>{copied ? 'Copied' : 'Copy class link'}</button><span>{me?.name}</span></>}</div>
     </header>
     {error && <p className="live-error" role="alert">{error}</p>}
     {ended ? <section className="live-join"><h1>Class ended</h1><a href="#website-top">Back to Ka Piki</a></section> : !joined ? <form className="live-join" onSubmit={event => { event.preventDefault(); void act(id ? 'join' : 'create', { name }) }}>
