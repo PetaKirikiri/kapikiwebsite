@@ -248,6 +248,12 @@ function applyInputs(state,player,body,now) {
   duration+=step.dt
  }
  if(duration>4)throw new Error('Movement batch is too long')
+ const credit=Math.min(1.5,(player.inputCredit??.25)+Math.max(0,now-(player.inputAt??now))/1000)
+ if(duration>credit+.001)throw new Error('Movement exceeds elapsed time')
+ const idle=Math.max(0,(now-(player.inputAt??now))/1000-duration)
+ player.dashCooldown=Math.max(0,(player.dashCooldown??0)-idle)
+ if(idle>.22){player.dashLeft=0;player.dashReleased=true}
+ player.inputCredit=Math.max(0,credit-duration);player.inputAt=now
  const position=positionAt(player,now);Object.assign(player,position,{path:[],target:null})
  for(const step of body.steps) {
   if(step.pauseWork===true){stopWork(state,player,step.at===undefined?now:Math.min(now,Math.max(now-12000,step.at)));if(step.actionId)player.lastActionId=step.actionId}
@@ -261,7 +267,24 @@ function applyInputs(state,player,body,now) {
    else player.notice='Face a nearby counter'
    if(step.actionId){player.lastActionId=step.actionId;if(player.interaction?.id!==previous)player.interaction.actionId=step.actionId}
   }
-  else {const next=moveFreely(player,step,step.dt);if(next.walking)stopWork(state,player,now);Object.assign(player,next)}
+  else {
+   let remaining=step.dt
+   if(!remaining)player.walking=false
+   while(remaining>.000001){
+    const dt=Math.min(.02,remaining)
+    if(!step.dash)player.dashReleased=true
+    if(step.dash&&player.dashReleased!==false&&(player.dashCooldown??0)<=0){player.dashLeft=.22;player.dashCooldown=.65;player.dashReleased=false}
+    const boosted=step.dash&&(player.dashLeft??0)>.000001
+    const next=moveFreely(player,{...step,dash:boosted},dt)
+    if(next.walking)stopWork(state,player,now)
+    Object.assign(player,next)
+    player.dashLeft=Math.max(0,(player.dashLeft??0)-dt);player.dashCooldown=Math.max(0,(player.dashCooldown??0)-dt)
+    player.motionId=(player.motionId??0)+1
+    ;(player.motion??=[]).push({id:player.motionId,x:player.x,y:player.y,dt})
+    if(player.motion.length>200)player.motion.shift()
+    remaining-=dt
+   }
+  }
  }
  player.commandId=body.commandId
  state.revision++

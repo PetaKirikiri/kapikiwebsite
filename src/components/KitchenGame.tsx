@@ -4,9 +4,10 @@ import KitchenTouchControls from './KitchenTouchControls'
 import { CHEF_COLORS } from '../lib/kitchen/presentation'
 import Food from './KitchenFood'
 import { KitchenMovement } from '../lib/kitchen/movementSync'
+import { RemoteMovement } from '../lib/kitchen/remoteMovement'
 import { KitchenInteractions } from '../lib/kitchen/interactionSync'
 import { kitchenSound } from '../lib/kitchen/audio'
-import { KITCHEN_TIMING, returnedPlateCount, moveFreely, positionAt, nearbyStation, type KitchenPlayer, type Kitchen, type Station, type KitchenInteraction } from '../lib/kitchen/engine.mjs'
+import { KITCHEN_TIMING, returnedPlateCount, moveFreely, nearbyStation, type KitchenPlayer, type Kitchen, type Station, type KitchenInteraction } from '../lib/kitchen/engine.mjs'
 import './KitchenGame.css'
 import './KitchenTouchControls.css'
 
@@ -53,10 +54,12 @@ export default function KitchenGame({classRoom}:{classRoom?:string}){
  const [interactions]=useState(()=>new KitchenInteractions())
  const live=useRef<{session:Session|null;player:KitchenPlayer|null}>({session:null,player:null}),soundMuted=useRef(false)
  const [movement]=useState(()=>new KitchenMovement())
+ const [remotePlayback]=useState(()=>new RemoteMovement())
  const rollback=useCallback(()=>{interactions.reset();setPrediction(null);setLocalMotion(null);setReaches({})},[interactions])
  const apply=useCallback((next:Session)=>{
   offset.current=next.serverNow?next.serverNow-Date.now():0
   const previous=live.current.session,k=next.state.kitchen
+  if(k&&previous?.state.kitchen?.startedAt===k.startedAt&&previous.state.kitchen.revision>k.revision)return
   if(k){
    if(seen.current?.round!==k.startedAt){interactions.reset();setReaches({})}
    const rejection=interactions.reconcile(k,next.seat)
@@ -78,23 +81,23 @@ export default function KitchenGame({classRoom}:{classRoom?:string}){
   serial.current=work;return work
  },[id,apply])
  useEffect(()=>{if(!id)return;let cancelled=false,timer=0
-  const poll=async()=>{await serial.current.catch(()=>{});if(cancelled)return;const version=requestVersion.current
-   try{const next=await request(undefined,id);if(!cancelled&&version===requestVersion.current){apply(next);setError('')}}catch{if(!cancelled)setError('Connection interrupted. Reconnecting…')}
-   if(!cancelled)timer=window.setTimeout(poll,300)
+  const poll=async()=>{if(cancelled)return;const version=requestVersion.current
+   try{const next=await request(undefined,id);if(!cancelled&&(version===requestVersion.current||(next.state.kitchen&&next.state.kitchen.revision>=(live.current.session?.state.kitchen?.revision??-1)))){apply(next);setError('')}}catch{if(!cancelled)setError('Connection interrupted. Reconnecting…')}
+   if(!cancelled)timer=window.setTimeout(poll,50)
   };void poll();return()=>{cancelled=true;clearTimeout(timer)}
  },[id,apply])
  const joined=session?.joined,kitchen=session?.state.kitchen,seat=session?.seat??0
  useEffect(()=>{movement.configure(async command=>{const result=await action({action:'kitchen',op:'input',...command}),player=result?.state.kitchen?.players[result.seat];if(!player)throw Error('Action was not saved');return player},rollback)},[action,movement,rollback])
- useEffect(()=>{movement.reset();return()=>movement.reset()},[movement,kitchen?.startedAt])
+ useEffect(()=>{movement.reset();remotePlayback.reset();return()=>movement.reset()},[movement,remotePlayback,kitchen?.startedAt])
  useEffect(()=>{
   let frame=0,previous=performance.now()
   const tick=(time:number)=>{const dt=Math.min(.05,Math.max(0,(time-previous)/1000));previous=time;const serverTime=Date.now()+offset.current;setNow(serverTime);setClock(time)
    const player=kitchen?.players[seat]
    if(player){const direction={x:touch.current.x||Number(keys.current.has('d'))-Number(keys.current.has('a')),y:touch.current.y||Number(keys.current.has('s'))-Number(keys.current.has('w')),dash:time<dash.current.until};if((direction.x||direction.y)&&moveFreely(live.current.player??player,direction,dt).walking){const pauseId=interactions.pause(kitchen!,seat,live.current.player??player,serverTime);if(pauseId){setPrediction(interactions.view);movement.pauseWork(serverTime,pauseId)}}const p=movement.tick(player,direction,dt,serverTime);const predicted=interactions.saving?interactions.view?.players[seat]:null;const shown=predicted?{...p,held:predicted.held,notice:predicted.notice}:p;live.current.player=shown;setLocalMotion(shown)}
-   const others:Record<number,KitchenPlayer>={};for(const [key,p] of Object.entries(kitchen?.players??{})){const i=Number(key);if(i===seat)continue;const last=remoteMotion.current[i]??p,pos=positionAt(p,serverTime),alpha=1-Math.exp(-dt*15);others[i]={...p,x:last.x+(pos.x-last.x)*alpha,y:last.y+(pos.y-last.y)*alpha,path:[]}}
+   const others:Record<number,KitchenPlayer>={};for(const [key,p] of Object.entries(kitchen?.players??{})){const i=Number(key);if(i===seat)continue;others[i]=remotePlayback.tick(i,p,dt)}
    remoteMotion.current=others;setDisplayPlayers(others);frame=requestAnimationFrame(tick)
   };frame=requestAnimationFrame(tick);return()=>cancelAnimationFrame(frame)
- },[kitchen,seat,movement,interactions])
+ },[kitchen,seat,movement,interactions,remotePlayback])
  useEffect(()=>{
   if(!joined)return
   const clear=()=>{keys.current.clear();touch.current={x:0,y:0};dash.current={until:0,ready:0}}
