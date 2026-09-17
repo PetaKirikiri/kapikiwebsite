@@ -4,6 +4,23 @@ import { createKitchen, joinKitchen, commandKitchen, moveFreely, nearbyStation, 
 const player=()=>{const k=createKitchen(0);joinKitchen(k,0);return k.players[0]}
 const deferred=()=>{let resolve!:(p:KitchenPlayer)=>void;let reject!:()=>void;const promise=new Promise<KitchenPlayer>((yes,no)=>{resolve=yes;reject=no});return {promise,resolve,reject}}
 describe('free kitchen controls',()=>{
+ it('does not rewind local movement when a stale poll arrives after acknowledgement',async()=>{
+  const p=player(),network=deferred(),sync=new KitchenMovement(()=>network.promise,()=>{})
+  const local=sync.tick(p,{x:1,y:0},.02,1000)
+  network.resolve({...local});await Promise.resolve();await Promise.resolve()
+  const next=sync.tick(p,{x:1,y:0},.02,1020)
+  expect(next.x).toBeCloseTo(local.x+WALK_SPEED*.02)
+ })
+ it('keeps analogue movement local through a one-second delayed acknowledgement',async()=>{
+  const p=player(),network=deferred(),sync=new KitchenMovement(()=>network.promise,()=>{})
+  const first=sync.tick(p,{x:.5,y:0},.02,1000)
+  let last=first
+  for(let i=1;i<50;i++)last=sync.tick(p,{x:.5,y:0},.02,1000+i*20)
+  expect(last.x-p.x).toBeCloseTo(WALK_SPEED*.5)
+  network.resolve({...first});await Promise.resolve()
+  expect(sync.tick(p,{x:0,y:0},.02,2000).x).toBeCloseTo(last.x)
+  sync.reset()
+ })
  it('dashes faster with identical server movement and preserves counter collisions',()=>{
   const k=createKitchen(0);joinKitchen(k,0);const p={...k.players[0]}
   const input={x:1,y:0,dt:.05,dash:true}

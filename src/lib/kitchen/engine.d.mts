@@ -1,7 +1,8 @@
 export const KITCHEN_TIMING:Readonly<{chop:number;cook:number;wash:number;burn:number;warning:number;plateReturn:number}>
 export type Point = {x:number;y:number}
 export type KitchenInteraction = {id:number;station:string;item:string;kind:'pickup'|'place';at:number;actionId?:string}
-export type KitchenPlayer = Point & {motionId?:number;motion?:{id:number;x:number;y:number;dt:number}[];path:Point[];startedAt:number;target:string|null;held:string|null;notice:string;commandId?:string;facing?:Point;walking?:boolean;interaction?:KitchenInteraction;lastActionId?:string}
+export type MotionInstruction = Point & {id:number;dt:number;origin?:Point;input?:Point & {dash?:boolean};facing?:Point;held?:string|null}
+export type KitchenPlayer = Point & {motionId?:number;motion?:MotionInstruction[];path:Point[];startedAt:number;target:string|null;held:string|null;notice:string;commandId?:string;facing?:Point;walking?:boolean;interaction?:KitchenInteraction;lastActionId?:string}
 export type Station = {id:string;type:string;label:string;x:number;y:number;ingredient?:string}
 export type Kitchen = {revision:number;startedAt:number;served:number;players:Record<number,KitchenPlayer>;stations:Record<string,{ingredients:string[];item:string|null;readyAt:number;count?:number;returnAt?:number[];lastReturnAt?:number;worker?:number|null;remainingMs?:number;workStartedAt?:number}>;orders:{id:number;ingredients:string[]}[]}
 export const WIDTH:number, HEIGHT:number, STEP_MS:number

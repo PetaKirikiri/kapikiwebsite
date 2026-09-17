@@ -275,12 +275,13 @@ function applyInputs(state,player,body,now) {
     if(!step.dash)player.dashReleased=true
     if(step.dash&&player.dashReleased!==false&&(player.dashCooldown??0)<=0){player.dashLeft=.22;player.dashCooldown=.65;player.dashReleased=false}
     const boosted=step.dash&&(player.dashLeft??0)>.000001
+    const origin={x:player.x,y:player.y}
     const next=moveFreely(player,{...step,dash:boosted},dt)
     if(next.walking)stopWork(state,player,now)
     Object.assign(player,next)
     player.dashLeft=Math.max(0,(player.dashLeft??0)-dt);player.dashCooldown=Math.max(0,(player.dashCooldown??0)-dt)
     player.motionId=(player.motionId??0)+1
-    ;(player.motion??=[]).push({id:player.motionId,x:player.x,y:player.y,dt})
+    ;(player.motion??=[]).push({id:player.motionId,x:player.x,y:player.y,dt,origin,input:{x:step.x,y:step.y,dash:!!boosted},facing:player.facing,held:player.held})
     if(player.motion.length>200)player.motion.shift()
     remaining-=dt
    }

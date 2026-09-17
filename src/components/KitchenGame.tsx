@@ -92,12 +92,13 @@ export default function KitchenGame({classRoom}:{classRoom?:string}){
  useEffect(()=>{
   let frame=0,previous=performance.now()
   const tick=(time:number)=>{const dt=Math.min(.05,Math.max(0,(time-previous)/1000));previous=time;const serverTime=Date.now()+offset.current;setNow(serverTime);setClock(time)
+   const current=live.current.session,kitchen=current?.state.kitchen,seat=current?.seat??0
    const player=kitchen?.players[seat]
    if(player){const direction={x:touch.current.x||Number(keys.current.has('d'))-Number(keys.current.has('a')),y:touch.current.y||Number(keys.current.has('s'))-Number(keys.current.has('w')),dash:time<dash.current.until};if((direction.x||direction.y)&&moveFreely(live.current.player??player,direction,dt).walking){const pauseId=interactions.pause(kitchen!,seat,live.current.player??player,serverTime);if(pauseId){setPrediction(interactions.view);movement.pauseWork(serverTime,pauseId)}}const p=movement.tick(player,direction,dt,serverTime);const predicted=interactions.saving?interactions.view?.players[seat]:null;const shown=predicted?{...p,held:predicted.held,notice:predicted.notice}:p;live.current.player=shown;setLocalMotion(shown)}
    const others:Record<number,KitchenPlayer>={};for(const [key,p] of Object.entries(kitchen?.players??{})){const i=Number(key);if(i===seat)continue;others[i]=remotePlayback.tick(i,p,dt)}
    remoteMotion.current=others;setDisplayPlayers(others);frame=requestAnimationFrame(tick)
   };frame=requestAnimationFrame(tick);return()=>cancelAnimationFrame(frame)
- },[kitchen,seat,movement,interactions,remotePlayback])
+ },[movement,interactions,remotePlayback])
  useEffect(()=>{
   if(!joined)return
   const clear=()=>{keys.current.clear();touch.current={x:0,y:0};dash.current={until:0,ready:0}}

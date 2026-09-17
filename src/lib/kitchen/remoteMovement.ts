@@ -1,5 +1,5 @@
-import type { KitchenPlayer } from './engine.mjs'
-type Sample={id:number;x:number;y:number;dt:number}
+import {moveFreely, WALK_SPEED, type KitchenPlayer, type MotionInstruction} from './engine.mjs'
+type Sample=MotionInstruction
 /** Replay authoritative small collision-tested steps, never ease toward a distant position. */
 export class RemoteMovement {
  private players=new Map<number,{shown:KitchenPlayer;queue:Sample[];id:number;elapsed:number;from:{x:number;y:number}}>()
@@ -15,10 +15,15 @@ export class RemoteMovement {
   let time=Math.min(dt,.05)
   while(track.queue.length&&time>0){const target=track.queue[0],used=Math.min(time,target.dt-track.elapsed);track.elapsed+=used;time-=used
    const fraction=Math.min(1,track.elapsed/target.dt)
-   track.shown={...player,x:track.from.x+(target.x-track.from.x)*fraction,y:track.from.y+(target.y-track.from.y)*fraction,path:[],walking:true}
+   // Input duration is consumed by this device's playback clock. Neither the
+   // sender's wall clock nor its newest location can accelerate this queue.
+   const origin=target.origin??track.from
+   const input=target.input??{x:(target.x-origin.x)/(WALK_SPEED*target.dt),y:(target.y-origin.y)/(WALK_SPEED*target.dt)}
+   const moved=moveFreely({...track.shown,...origin},input,track.elapsed)
+   track.shown={...player,...moved,held:target.held===undefined?track.shown.held:target.held,facing:target.facing??moved.facing,path:[]}
    if(fraction>=1){track.queue.shift();track.elapsed=0;track.from={x:target.x,y:target.y}}
   }
-  if(!track.queue.length)track.shown={...player,x:track.shown.x,y:track.shown.y,path:[],walking:false}
+  if(!track.queue.length)track.shown={...player,x:track.shown.x,y:track.shown.y,facing:track.shown.facing,path:[],walking:false}
   return track.shown
  }
  reset(){this.players.clear()}

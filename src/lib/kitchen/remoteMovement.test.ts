@@ -2,6 +2,15 @@ import {describe,it,expect} from 'vitest'
 import {RemoteMovement} from './remoteMovement'
 import {createKitchen,joinKitchen,commandKitchen} from './engine.mjs'
 describe('authoritative movement replay',()=>{
+ it('uses queued direction, not the latest heading or future destination',()=>{
+  const k=createKitchen(0);joinKitchen(k,0);const replay=new RemoteMovement(),p={...k.players[0]}
+  replay.tick(0,p,.02)
+  commandKitchen(k,0,{op:'input',commandId:crypto.randomUUID(),steps:[{x:1,y:0,dt:.1},{x:0,y:1,dt:.1}]},1000)
+  const shown=replay.tick(0,k.players[0],.02)
+  expect(shown.facing).toEqual({x:1,y:0})
+  expect(shown.y).toBe(p.y)
+  expect(shown.x-p.x).toBeCloseTo(4.8*.02)
+ })
  it('plays a delayed batch at its original speed, not catch-up speed',()=>{
   const k=createKitchen(0);joinKitchen(k,0);const replay=new RemoteMovement(),p={...k.players[0]}
   replay.tick(0,p,.02)
