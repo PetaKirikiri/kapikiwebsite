@@ -1,11 +1,11 @@
 import pg from 'pg'
+import { wordsDatabaseConnection } from './words-database.mjs'
 import {createKitchen,joinKitchen,advanceKitchen,commandKitchen} from './src/lib/kitchen/engine.mjs'
 import { randomBytes, createHash } from 'node:crypto'
 let pool
 function database() {
  if (!pool) {
-  const ref = new URL(process.env.WORDS_SUPABASE_URL).hostname.split('.')[0]
-  pool = new pg.Pool({ host:'aws-1-ap-south-1.pooler.supabase.com',port:6543,user:`postgres.${ref}`,password:process.env.WORDS_DB_PASSWORD,database:'postgres',ssl:{rejectUnauthorized:false},connectionTimeoutMillis:10000,max:3 })
+  pool = new pg.Pool({ ...wordsDatabaseConnection(), max:3 })
   pool.on('error',()=>{})
  }
  return pool

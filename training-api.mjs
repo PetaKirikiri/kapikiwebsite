@@ -1,9 +1,10 @@
 import { nextTrainingQuestion, trainingCoverage, structureCoverage } from './trainingCoverage.mjs'
 import pg from 'pg'
+import { wordsDatabaseConnection } from './words-database.mjs'
 import { createHash, randomBytes } from 'node:crypto'
 let pool
 function database() {
- if (!pool) { const ref=new URL(process.env.WORDS_SUPABASE_URL).hostname.split('.')[0]; pool=new pg.Pool({host:'aws-1-ap-south-1.pooler.supabase.com',port:6543,user:`postgres.${ref}`,password:process.env.WORDS_DB_PASSWORD,database:'postgres',ssl:{rejectUnauthorized:false},connectionTimeoutMillis:10000,max:2}); pool.on('error',()=>{}) }
+ if (!pool) { pool=new pg.Pool({...wordsDatabaseConnection(),max:2}); pool.on('error',()=>{}) }
  return pool
 }
 export async function trainingApi(req,res) {

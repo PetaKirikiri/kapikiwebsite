@@ -5,14 +5,16 @@
   "outputDirectory": "dist",
   "functions": {
     "api/course.js": {
-      "maxDuration": 60
+      "maxDuration": 60,
+      "regions": ["syd1"]
     },
     "api/training.js": {
-      "maxDuration": 60
+      "maxDuration": 60,
+      "regions": ["syd1"]
     },
     "api/classroom.js": {
       "maxDuration": 30,
-      "regions": ["bom1"]
+      "regions": ["syd1"]
     }
   },
   "rewrites": [
