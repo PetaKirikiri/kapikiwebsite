@@ -11,7 +11,8 @@
       "maxDuration": 60
     },
     "api/classroom.js": {
-      "maxDuration": 30
+      "maxDuration": 30,
+      "regions": ["bom1"]
     }
   },
   "rewrites": [
