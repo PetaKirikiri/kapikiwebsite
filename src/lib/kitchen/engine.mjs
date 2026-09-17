@@ -209,7 +209,7 @@ export function moveFreely(player,input,dt) {
  if(!length)return next
  next.facing=direction
  // Small sweeps prevent tunnelling; separate axes allow sliding along counters.
- const speed=WALK_SPEED*(input.dash===true?2.4:1)
+ const speed=WALK_SPEED*Math.min(1,length)*(input.dash===true?2.4:1)
  const steps=Math.max(1,Math.ceil(dt*speed/(WALK_SPEED*.02))),distance=speed*dt/steps
  for(let i=0;i<steps;i++) {
   const x=next.x+direction.x*distance,y=next.y+direction.y*distance
@@ -243,7 +243,7 @@ function applyInputs(state,player,body,now) {
  let duration=0
  for(const step of body.steps) {
   if(step.activate===true||step.pauseWork===true){if(step.at!==undefined&&(!Number.isFinite(step.at)||step.at<0))throw new Error('Invalid action time');if(step.actionId!==undefined&&(typeof step.actionId!=='string'||!/^[a-f0-9-]{36}$/.test(step.actionId)))throw new Error('Invalid action');if(step.intent!==undefined&&(!step.intent||!STATIONS.some(s=>s.id===step.intent.station)||(step.intent.held!==null&&typeof step.intent.held!=='string')))throw new Error('Invalid interaction intent');continue}
-  if(!Number.isFinite(step.dt)||step.dt<0||step.dt>.25||![-1,0,1].includes(step.x)||![-1,0,1].includes(step.y))throw new Error('Invalid movement input')
+  if(!Number.isFinite(step.dt)||step.dt<0||step.dt>.25||!Number.isFinite(step.x)||Math.abs(step.x)>1||!Number.isFinite(step.y)||Math.abs(step.y)>1)throw new Error('Invalid movement input')
   if(step.dash!==undefined&&typeof step.dash!=='boolean')throw new Error('Invalid movement input')
   duration+=step.dt
  }

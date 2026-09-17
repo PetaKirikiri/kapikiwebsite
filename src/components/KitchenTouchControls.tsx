@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type PointerEvent } from 'react'
+import {thumbstick} from '../lib/kitchen/thumbstick'
 
 export default function KitchenTouchControls({onMove,onUse,onDash}:{onMove:(x:number,y:number)=>void;onUse:()=>void;onDash:()=>void}){
  const pointer=useRef<number|null>(null)
@@ -11,9 +12,10 @@ export default function KitchenTouchControls({onMove,onUse,onDash}:{onMove:(x:nu
  },[onMove,reset])
  const update=(event:PointerEvent<HTMLDivElement>)=>{
   const box=event.currentTarget.getBoundingClientRect(),x=event.clientX-box.left-box.width/2,y=event.clientY-box.top-box.height/2
-  const length=Math.hypot(x,y),scale=Math.min(1,38/(length||1))
-  setKnob({x:x*scale,y:y*scale})
-  onMove(Math.abs(x)>12?Math.sign(x):0,Math.abs(y)>12?Math.sign(y):0)
+  const knobRadius=event.currentTarget.firstElementChild!.getBoundingClientRect().width/2
+  const stick=thumbstick(x,y,Math.max(1,box.width/2-knobRadius-2))
+  setKnob({x:stick.knobX,y:stick.knobY})
+  onMove(stick.x,stick.y)
  }
  return <div className="kitchen-touch-controls">
   <div className="kitchen-thumbstick" aria-label="Movement thumbstick" onPointerDown={event=>{if(pointer.current!==null)return;event.preventDefault();pointer.current=event.pointerId;event.currentTarget.setPointerCapture(event.pointerId);update(event)}} onPointerMove={event=>{if(pointer.current===event.pointerId)update(event)}} onPointerUp={event=>{if(pointer.current===event.pointerId)reset()}} onPointerCancel={event=>{if(pointer.current===event.pointerId)reset()}} onLostPointerCapture={event=>{if(pointer.current===event.pointerId)reset()}}>
