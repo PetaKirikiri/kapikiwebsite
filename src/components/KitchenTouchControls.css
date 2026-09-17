@@ -1,0 +1,23 @@
+.kitchen-touch-controls{display:none}
+@media(any-pointer:coarse){
+ .kitchen-touch-controls{display:flex;position:absolute;inset:auto max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));justify-content:space-between;align-items:end;pointer-events:none;z-index:4}
+ .kitchen-thumbstick{width:116px;height:116px;border-radius:50%;background:#28465330;border:2px solid #fff7e380;box-shadow:inset 0 2px 12px #28465325;display:grid;place-items:center;pointer-events:auto;touch-action:none;user-select:none}
+ .kitchen-thumbstick span{width:58px;height:58px;border-radius:50%;background:#fff7e3dc;border:2px solid #fff9;box-shadow:0 4px 8px #28465340;pointer-events:none}
+ .kitchen-touch-actions{display:flex;align-items:end;gap:16px;pointer-events:auto}
+ .kitchen-app .kitchen-touch-actions button{width:66px;height:66px;border-radius:50%;border:2px solid #fff7e3c0;background:#284653e6;color:#fff7e3;box-shadow:0 4px 0 #17313e80;touch-action:none;user-select:none;display:grid;place-items:center;padding:17px}
+ .kitchen-touch-actions button:last-child{width:78px;height:78px;background:#c9654f}
+ .kitchen-touch-actions button:active{transform:translateY(3px);box-shadow:none}
+ .kitchen-touch-actions svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+ .kitchen-app.is-playing{min-height:0;grid-template-rows:112px minmax(0,1fr) 138px}
+ .kitchen-app .kitchen-controls{display:flex;justify-content:center;align-items:start;padding-top:5px;pointer-events:none}
+ .kitchen-app .kitchen-roster,.kitchen-app .kitchen-options,.kitchen-context kbd,.kitchen-context .key-cluster{display:none}
+ .kitchen-context{min-width:0;max-width:45%;font-size:11px}
+ .kitchen-context:not(.has-notice):not(:has(.held-food)){visibility:hidden}
+}
+@media(any-pointer:coarse) and (orientation:landscape){
+ .kitchen-app.is-playing{grid-template-rows:58px minmax(0,1fr) 34px;padding:0 max(8px,env(safe-area-inset-left))}
+ .kitchen-hud{flex-wrap:nowrap;padding-top:0;gap:6px}.kitchen-brand{min-width:0;flex:0}.kitchen-brand>div,.kitchen-invite,.kitchen-fullscreen{display:none}
+ .kitchen-orders{order:0;width:auto;flex:1}.kitchen-ticket{max-width:125px;height:40px}.kitchen-hud-actions{min-width:0;gap:5px}
+ .kitchen-touch-controls{bottom:max(10px,env(safe-area-inset-bottom))}.kitchen-thumbstick{width:100px;height:100px}.kitchen-touch-actions button{width:60px!important;height:60px!important}.kitchen-touch-actions button:last-child{width:70px!important;height:70px!important}
+ .kitchen-embedded{height:calc(100dvh - 70px)}
+}

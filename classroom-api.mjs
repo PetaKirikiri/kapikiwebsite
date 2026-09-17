@@ -1,4 +1,5 @@
 import pg from 'pg'
+import {createKitchen,joinKitchen,advanceKitchen,commandKitchen} from './src/lib/kitchen/engine.mjs'
 import { randomBytes, createHash } from 'node:crypto'
 let pool
 function database() {
@@ -63,7 +64,18 @@ export async function classroomApi(req,res) {
   }
   await client.query('update classroom_live_member set last_seen=now() where room_id=$1 and token_hash=$2',[id,hash])
   if(['target','eliminate','guess','reveal','new-round'].includes(action)&&body.round!==room.state.round)throw bad('The round has changed. Try again.',409)
-  if(action==='move') {
+  if(action==='kitchen') {
+   const now=Date.now()
+   if(body.op==='reset'&&member.seat!==0)throw bad('Only the host can reset the kitchen.',403)
+   if(!room.state.kitchen||body.op==='reset') {
+    const seats=Object.keys(room.state.kitchen?.players??{})
+    room.state.kitchen=createKitchen(now)
+    for(const seat of seats)joinKitchen(room.state.kitchen,Number(seat))
+   }
+   try {commandKitchen(room.state.kitchen,member.seat,body.op==='reset'?{op:'enter'}:body,now)}
+   catch(error){throw bad(error.message)}
+   await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
+  } else if(action==='move') {
    if(!Number.isFinite(body.x)||!Number.isFinite(body.y))throw bad('Invalid position.')
    await client.query('update classroom_live_member set x=$3,y=$4,movement=movement+1 where room_id=$1 and token_hash=$2',[id,hash,Math.max(45,Math.min(2355,body.x)),Math.max(245,Math.min(478,body.y))])
   } else if(action==='appearance') {
@@ -175,13 +187,18 @@ export async function classroomApi(req,res) {
    await client.query('update classroom_live_room set closed=true where id=$1',[id])
    await client.query('commit');return json(200,{ended:true})
   } else if(!['poll','join','create'].includes(action))throw bad('Unknown action.')
+  if(room.state.kitchen) {
+   const before=JSON.stringify(room.state.kitchen)
+   advanceKitchen(room.state.kitchen)
+   if(before!==JSON.stringify(room.state.kitchen))await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
+  }
   const members=(await client.query('select seat,name,x,y,movement,look,color,marks,eliminated,guess,correct,last_seen as "lastSeen" from classroom_live_member where room_id=$1 order by seat',[id])).rows
   const messages=(await client.query('select * from (select id,seat,text,created_at as "createdAt" from classroom_live_message where room_id=$1 order by created_at desc,id desc limit 100) m order by "createdAt",id',[id])).rows
   await client.query('commit')
   const visibleState={...room.state,chosen:room.state.target!==undefined&&room.state.target!==null}
   if(member.seat!==0&&!room.state.revealed)delete visibleState.target
   const visibleMembers=members.map(m=>member.seat===0||m.seat===member.seat||room.state.revealed?m:{...m,eliminated:[],guess:null,correct:null})
-  json(200,{room:id,joined:true,seat:member.seat,state:visibleState,members:visibleMembers,messages})
+  json(200,{room:id,joined:true,seat:member.seat,serverNow:Date.now(),state:visibleState,members:visibleMembers,messages})
  }catch(error){if(client)await client.query('rollback').catch(()=>{});if(!error.status)console.error('[classroom]',error.message);json(error.status??500,{error:error.status?error.message:'Classroom connection failed. Reconnecting…'})}
  finally{client?.release()}
 }

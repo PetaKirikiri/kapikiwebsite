@@ -1,4 +1,5 @@
 import GuessWhoGame from './GuessWhoGame'
+import KitchenGame from './KitchenGame'
 import LiveClassroom from './LiveClassroom'
 import { useEffect, useMemo, useState } from 'react'
 import type { BusManifestSheet } from '../lib/busManifestContract'
@@ -164,6 +165,7 @@ export default function WebsiteView({
   }, [activeSection, methodologyReady])
 
   if (activeSection.split('?')[0] === '#guess-who') return <GuessWhoGame key={activeSection} />
+  if (activeSection.split('?')[0] === '#kitchen') return <KitchenGame key={activeSection} />
   if (activeSection.split('?')[0] === '#live-class') return <LiveClassroom key={activeSection} />
   if (activeSection === '#classroom') return <ClassroomRoom data={data} error={error} />
   if (activeSection === '#training' || activeSection === '#training-admin') {
