@@ -91,8 +91,8 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
  const stations=new Map<string,{root:THREE.Group;outline:THREE.Group;items:THREE.Group;key:string;knife?:THREE.Group;pot?:THREE.Group;soup?:THREE.Mesh;burner?:THREE.Mesh;steam:THREE.Mesh[];meter:ReturnType<typeof progressMeter>}>()
  for(const s of STATIONS){const g=new THREE.Group();g.position.set(s.x,0,s.y);scene.add(g)
   const panel={source:'#669b69',chop:'#d6aa55',pot:'#c97660',counter:'#9388b1',plates:'#799aaa','plate-return':'#799aaa',sink:'#5f9fbb',trash:'#667078',serve:'#50978b'}[s.type]??'#9388b1'
-   box(g,panel,0,s.type==='sink'?.39:.45,0,.94,s.type==='sink'?.69:.83,.94,.075);box(g,'#465762',0,.1,0,.84,.1,.82,.02)
-   if(s.type!=='sink')box(g,s.type==='pot'?'#344653':'#f5efdc',0,.92,0,1,.17,1,.055)
+   box(g,panel,0,.45,0,.94,.83,.94,.075);box(g,'#465762',0,.1,0,.84,.1,.82,.02)
+   box(g,s.type==='pot'?'#344653':'#f5efdc',0,.92,0,1,.17,1,.055)
    if(s.type!=='pot'){box(g,panel,0,.43,.481,.77,.55,.025,.025);box(g,'#f5ecd5',0,.64,.52,.23,.035,.05,.015)}
   const outline=new THREE.Group();g.add(outline);for(const d of [-1,1]){box(outline,'#ffd265',d*.51,1.025,0,.055,.035,1.075,.017);box(outline,'#ffd265',0,1.025,d*.51,1.075,.035,.055,.017)}outline.visible=false
   let knife:THREE.Group|undefined,pot:THREE.Group|undefined,soup:THREE.Mesh|undefined,burner:THREE.Mesh|undefined;const steam:THREE.Mesh[]=[]
@@ -137,15 +137,12 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
    box(g,'#405c69',0,1.02,0,.82,.035,.8,.055)
   }
   if(s.type==='sink'){
-   // A recessed steel bowl: surrounding worktop, deep floor, sloped sides and drain.
-   for(const d of [-1,1]){box(g,'#e1e6df',d*.43,.94,0,.14,.13,1,.025,.3);box(g,'#e1e6df',0,.94,d*.42,.76,.13,.16,.025,.3)}
-   box(g,'#6c8791',0,.77,0,.64,.035,.59,.07,.4)
-   for(const d of [-1,1]){box(g,'#9dB2b6',d*.34,.855,0,.045,.17,.66,.012,.4);box(g,'#9db2b6',0,.855,d*.31,.69,.17,.045,.012,.4)}
-   cylinder(g,'#344e5a',0,.793,0,.073,.073,.012);ring(g,'#dbe3dd',0,.801,0,.075,.011,.5)
-   tube(g,'#d2dfd9',[new THREE.Vector3(0,1.01,-.4),new THREE.Vector3(0,1.5,-.4),new THREE.Vector3(0,1.51,-.05),new THREE.Vector3(0,1.32,-.05)],.045)
-   for(const d of [-1,1])box(g,'#718d96',d*.21,1.015,-.4,.12,.045,.07,.02,.4)
-   // Drainboard at the rear: completed plates sit outside the recessed bowl.
-   box(g,'#b5c8c9',0,1.015,-.32,.68,.035,.31,.025,.4)
+   // A flush wash worktop: plates use the same central landing as a counter.
+   box(g,'#b5c8c9',0,1.021,0,.82,.03,.8,.04,.4)
+   for(const x of [-.3,-.2,-.1,0,.1,.2,.3])box(g,'#91adaf',x,1.038,.05,.012,.005,.54,.002,.3)
+   // Keep the tap outside the plate footprint instead of crossing over the dishes.
+   tube(g,'#d2dfd9',[new THREE.Vector3(-.4,1.01,-.36),new THREE.Vector3(-.4,1.3,-.36),new THREE.Vector3(-.4,1.32,-.17),new THREE.Vector3(-.4,1.22,-.17)],.032)
+   box(g,'#718d96',-.27,1.04,-.38,.1,.045,.06,.02,.4)
   }
   if(s.type==='trash'){
    // Waste chute fitted into the same worktop and cabinet as the other stations.
@@ -230,17 +227,18 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
    const stackCount=totalStack===null?null:Math.max(0,totalStack-arriving)
    const washed=s.type==='sink'?washedPlateCount(state,frame.now):0
    const dirty=s.type==='sink'&&state.item?(state.dirtyCount??(washed?0:1)):0
-   const key=stackCount!==null?`stack:${stackCount}`:hidden?'':s.type==='sink'&&state.item?`sink:${dirty}:${washed}`:state.item??''
-   model.items.position.y=(s.type==='chop'?1.08:s.type==='sink'?.815:1.012)+(key.startsWith('raw:')?(key.includes('onion')?.205:.18):0)
+   const incomingDirty=s.type==='sink'?frame.reaches.filter(r=>r.station===s.id&&r.kind==='place').reduce((n,r)=>n+dirtyPlateCount(r.item),0):0
+   const visibleDirty=Math.max(0,dirty-incomingDirty)
+   const key=stackCount!==null?`stack:${stackCount}`:s.type==='sink'&&state.item?`sink:${visibleDirty}:${washed}`:hidden?'':state.item??''
+   model.items.position.y=(s.type==='chop'?1.08:1.012)+(key.startsWith('raw:')?(key.includes('onion')?.205:.18):0)
    if(key!==model.key){
     model.items.clear()
     if(stackCount!==null){
      for(let i=0;i<Math.min(stackCount,12);i++){const plate=food(s.type==='plate-return'?'dirty':'plate');plate.position.set(i%2?.025:-.025,.069+i*.14,i%3*.012);plate.rotation.y=i*1.7;plate.scale.setScalar(1.15);model.items.add(plate)}
     }
     else if(s.type==='sink'&&key){
-     // Keep dirty dishes below the rim, and clean dishes on the drainboard.
-     if(dirty){const plate=food('dirty');plate.scale.setScalar(.8);plate.position.z=.07;model.items.add(plate)}
-     for(let i=0;i<Math.min(washed,12);i++){const plate=food('plate');plate.scale.setScalar(.8);plate.position.set(0,.22+i*.11,-.3);model.items.add(plate)}
+     // Same size, height and stacking as the counter; washed plates are on top.
+     for(let i=0;i<Math.min(visibleDirty+washed,12);i++){const plate=food(i<visibleDirty?'dirty':'plate');plate.position.set(i%2?.025:-.025,.069+i*.14,i%3*.012);plate.rotation.y=i*1.7;plate.scale.setScalar(1.15);model.items.add(plate)}
     }
     else if(key)model.items.add(food(key))
     model.key=key
@@ -277,11 +275,13 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
    if(heldKey!==m.heldKey){m.held.clear();if(heldKey)m.held.add(food(heldKey));m.heldKey=heldKey}m.held.position.set(0,.75,.48)
    const handTarget=new THREE.Vector3(0,.75,.47)
    if(reach){const station=STATIONS.find(s=>s.id===reach.station)!,t=THREE.MathUtils.clamp((frame.clock-reach.began)/580,0,1),u=reach.kind==='pickup'?smooth((t-.22)/.65):smooth((t-.08)/.67)
-    const fromDrainer=station.type==='sink'&&reach.kind==='pickup'
+    const sinkState=frame.kitchen.stations[station.id]
     const stack=reach.item==='plate'?(station.type==='plates'?cleanPlateCount(frame.kitchen.stations[station.id]):station.type==='counter'?counterPlateCount(frame.kitchen.stations[station.id]):null):null
-    const stackHeight=stack===null?0:.069+Math.min(11,Math.max(0,stack-(reach.kind==='place'?1:0)))*.14
-    const surface=station.type==='chop'?1.08:station.type==='source'?1.39:station.type==='sink'?(fromDrainer?1.035:.815):station.type==='pot'&&carriedPot(reach.item)?1.12:1.012+stackHeight,foodHeight=reach.item.startsWith('raw:')&&station.type!=='source'?(reach.item.includes('onion')?.205:.18):0
-    const start=new THREE.Vector3(station.x,surface+foodHeight,station.y-(fromDrainer?.3:0)),end=new THREE.Vector3(Math.sin(m.angle)*.48+p.x,.75,Math.cos(m.angle)*.48+p.y),blend=reach.kind==='pickup'?u:1-u,pos=start.clone().lerp(end,blend);pos.y+=Math.sin(u*Math.PI)*.18
+    const sinkStack=station.type==='sink'?Math.max(0,(sinkState.dirtyCount??0)+washedPlateCount(sinkState,frame.now)-(reach.kind==='place'?dirtyPlateCount(reach.item):0)):null
+    const landingStack=sinkStack??stack
+    const stackHeight=landingStack===null?0:.069+Math.min(11,Math.max(0,landingStack-(sinkStack===null&&reach.kind==='place'?1:0)))*.14
+    const surface=station.type==='chop'?1.08:station.type==='source'?1.39:station.type==='pot'&&carriedPot(reach.item)?1.12:1.012+stackHeight,foodHeight=reach.item.startsWith('raw:')&&station.type!=='source'?(reach.item.includes('onion')?.205:.18):0
+    const start=new THREE.Vector3(station.x,surface+foodHeight,station.y),end=new THREE.Vector3(Math.sin(m.angle)*.48+p.x,.75,Math.cos(m.angle)*.48+p.y),blend=reach.kind==='pickup'?u:1-u,pos=start.clone().lerp(end,blend);pos.y+=Math.sin(u*Math.PI)*.18
     let transfer=transfers.get(seat);const k=reach.item+reach.id
     if(!transfer||transfer.key!==k){if(transfer)scene.remove(transfer.root);transfer={root:food(reach.item),key:k};transfers.set(seat,transfer);scene.add(transfer.root)}transfer.root.position.copy(pos);transfer.root.visible=true
     m.root.updateMatrixWorld(true)

@@ -31,7 +31,7 @@ describe('station timers',()=>{
   use(32000);expect(k.stations['pot-a'].potPresent).toBe(false);expect(carriedPot(p.held)?.burnt).toBe(true)
  })
  it('freezes paused progress instead of letting the wall clock complete it',()=>{
-  const paused={item:'chopped:tomato',ingredients:[],readyAt:0,remainingMs:1500,worker:null}
+  const paused={item:'chopped:tomato',ingredients:[],readyAt:0,remainingMs:KITCHEN_TIMING.chop/2,worker:null}
   expect(stationProgress('chop',paused,1000)).toEqual({phase:'paused',value:.5,label:'Ⅱ'})
   expect(stationProgress('chop',paused,90000)).toEqual(stationProgress('chop',paused,1000))
  })

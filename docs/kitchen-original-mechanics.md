@@ -17,10 +17,10 @@ Researched 18 September 2026. Target: **Overcooked! (2016)**, not Overcooked! 2 
 - Dirty plates can be carried together. Washing produces individual clean plates; collecting one pauses any remaining washing work.
 - Plate counts drive the models; the pre-existing five-plate supply is now finite. Five is this map's existing supply, **not a verified universal original-game value**.
 - Clean plates can be returned to the supply stack or stacked on ordinary benches, per the user's subsequent explicit requests. They are picked up individually. This is a deliberate convenience difference from the original-game guide, not a claim about the original's behaviour. Stack height, not a floating number, communicates quantity.
-- Washing dishes are recessed within the basin; completed dishes occupy its drainboard.
+- The wash station uses a flat worktop and central plate landing matching ordinary counters, with a corner tap clear of the dishes. Dirty and completed plates remain visible as a physical stack, with clean plates on top. This presentation was requested for visual clarity; washing rules are unchanged.
 
 ## Not established or changed
 
-No exact original-game burn delay, fire spread interval or extinguisher duration was verified. **No fire trigger, random fire rule, spread timing or extinguishing mechanic was added.** Existing chop/cook/wash/burn/return timings were left untouched; they must not be represented as verified original-game constants.
+No exact original-game burn delay, fire spread interval or extinguisher duration was verified. **No fire trigger, random fire rule, spread timing or extinguishing mechanic was added.** These timings must not be represented as verified original-game constants. Chopping was subsequently increased from 3 to 5 seconds per vegetable at the user's request for slower preparation; this is our tuning, not a verified Overcooked value. Cook/wash/burn/return timings remain unchanged.
 
 This is not a complete original-game clone: the current two-ingredient recipes and map layout remain unchanged. No cooling/spoilage rule was introduced for food taken off the hob.

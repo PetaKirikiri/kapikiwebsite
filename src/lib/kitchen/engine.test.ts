@@ -51,7 +51,7 @@ describe('shared kitchen',()=>{
   expect(k.stations['pot-a'].potPresent).toBe(false)
   expect(carriedPot(k.players[0].held)).toMatchObject({ingredients:['tomato','tomato'],burnt:true})
  })
- it.each([['chop-a','raw:tomato','chopped:tomato',3000],['sink','dirty','plate',5000]] as const)('pauses %s on movement and lets another chef resume the remaining work',(id,input,output,duration)=>{
+ it.each([['chop-a','raw:tomato','chopped:tomato',KITCHEN_TIMING.chop],['sink','dirty','plate',KITCHEN_TIMING.wash]] as const)('pauses %s on movement and lets another chef resume the remaining work',(id,input,output,duration)=>{
   const k=createKitchen(0);joinKitchen(k,0);joinKitchen(k,1)
   const definition=STATIONS.find(s=>s.id===id)!,p=k.players[0],y=definition.y===0?1:6
   Object.assign(p,{x:definition.x,y,facing:{x:0,y:definition.y-y},held:input})
@@ -64,6 +64,19 @@ describe('shared kitchen',()=>{
   use(1,20000);expect(k.players[1].held).toBeNull();expect(k.stations[id].readyAt).toBe(20000+duration-1000)
   use(1,20001);expect(k.players[1].held).toBeNull()
   use(1,20000+duration-1000);expect(k.players[1].held).toBe(output)
+ })
+ it.each(['chop-a','chop-b'])('requires five full seconds of chopping at %s before pickup',(id)=>{
+  const k=createKitchen(0);joinKitchen(k,0)
+  const definition=STATIONS.find(s=>s.id===id)!
+  Object.assign(k.players[0],{x:definition.x,y:1,facing:{x:0,y:-1},held:'raw:tomato'})
+  const use=(now:number)=>commandKitchen(k,0,{op:'input',commandId:crypto.randomUUID(),steps:[{activate:true}]},now)
+  use(1000)
+  expect(k.stations[id].readyAt).toBe(6000)
+  for(const now of [4000,5999]){
+   use(now);expect(k.players[0].held).toBeNull()
+   expect(k.stations[id].readyAt).toBe(6000)
+  }
+  use(6000);expect(k.players[0].held).toBe('chopped:tomato')
  })
  it('keeps cooking unattended while a chef moves away',()=>{
   const k=createKitchen(0);joinKitchen(k,0);const p=k.players[0]

@@ -3,7 +3,7 @@
 // Chop, wash and burn-window values are our multiplayer tuning, not verified OC2 constants.
 // Plate return measured in OC2 Switch Kevin 1: serve ~21:07.1, return ~21:17.1 (video uncertainty ~0.1s).
 // https://www.youtube.com/watch?v=jTrenjjZDtA&t=1267s — observed timing, not an extracted engine constant.
-export const KITCHEN_TIMING = Object.freeze({chop:3000,cook:12000,wash:5000,burn:12000,warning:4000,plateReturn:10000})
+export const KITCHEN_TIMING = Object.freeze({chop:5000,cook:12000,wash:5000,burn:12000,warning:4000,plateReturn:10000})
 export const WIDTH = 12, HEIGHT = 8, STEP_MS = 130
 export const STATIONS = [
  { id:'tomato', type:'source', label:'Tomatoes', x:1,y:0, ingredient:'tomato' },
