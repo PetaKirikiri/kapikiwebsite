@@ -8,6 +8,74 @@ const confirm=(k:Kitchen,id:string,x:number,y:number,at:number,received:number)=
  commandKitchen(k,0,{op:'input',commandId:crypto.randomUUID(),steps:[{activate:true,actionId:id,at}]},received)
 }
 describe('local-first kitchen interactions',()=>{
+ it('does not replay a confirmed pickup after another tab submits a newer action',()=>{
+  const server=setup(),q=new KitchenInteractions();q.reconcile(server,0)
+  const take=activate(q,server,1,1,1000)
+  confirm(server,take.id!,1,1,1000,1200)
+  confirm(server,crypto.randomUUID(),4,4,1300,1400)
+  expect(server.players[0].held).toBeNull()
+  expect(q.reconcile(server,0)).toBeNull()
+  expect(q.saving).toBe(false)
+  expect(q.view!.players[0].held).toBeNull()
+ })
+ it('never substitutes an onion when the requested pickup was a plate',()=>{
+  const server=setup(),q=new KitchenInteractions();server.stations['counter-4'].item='plate';q.reconcile(server,0)
+  const take=activate(q,server,4,4,1000)
+  server.stations['counter-4'].item='raw:onion'
+  Object.assign(server.players[0],{x:4,y:4,facing:{x:0,y:-1}})
+  commandKitchen(server,0,{op:'input',commandId:crypto.randomUUID(),steps:[{activate:true,actionId:take.id!,at:1000,intent:take.intent}]},1300)
+  expect(server.players[0].held).toBeNull()
+  expect(server.stations['counter-4'].item).toBe('raw:onion')
+  expect(q.reconcile(server,0)).toBeTruthy()
+ })
+ it('blocks dependent actions already sent after a failed pickup, even with empty hands again',()=>{
+  const server=setup(),q=new KitchenInteractions();server.stations['counter-4'].item='plate';server.stations['counter-6'].item='raw:onion';q.reconcile(server,0)
+  const take=activate(q,server,4,4,1000),put=activate(q,server,5,4,1100),next=activate(q,server,6,4,1200)
+  server.stations['counter-4'].item=null
+  for(const [action,x,at] of [[take,4,1000],[put,5,1100],[next,6,1200]] as const){
+   Object.assign(server.players[0],{x,y:4,facing:{x:0,y:-1}})
+   commandKitchen(server,0,{op:'input',commandId:crypto.randomUUID(),steps:[{activate:true,actionId:action.id!,at,intent:action.intent}]},1400)
+  }
+  expect(server.players[0].held).toBeNull()
+  expect(server.stations['counter-6'].item).toBe('raw:onion')
+  expect(q.reconcile(server,0)).toBeTruthy()
+ })
+ it.each([1,2,3])('keeps a %s-plate dirty pickup identical before and after server acknowledgement',count=>{
+  const server=setup(),q=new KitchenInteractions();server.stations['plate-return'].count=count;q.reconcile(server,0)
+  const pose={...server.players[0],x:10,y:3,facing:{x:1,y:0}},at=1000
+  const take=q.activate(server,0,pose,at),expected=count===1?'dirty':`dirty:${count}`
+  expect(q.view!.players[0].held).toBe(expected)
+  Object.assign(server.players[0],pose)
+  commandKitchen(server,0,{op:'input',commandId:crypto.randomUUID(),steps:[{activate:true,actionId:take.id!,at,intent:take.intent}]},at+300)
+  expect(q.reconcile(server,0)).toBeNull()
+  expect(q.view!.players[0].held).toBe(expected)
+  expect(server.players[0].interaction?.item).toBe(expected)
+  expect(server.players[0].actionResults?.at(-1)?.held).toBe(expected)
+ })
+ it('reports an earlier rejected pickup even when a later action ends with the expected empty hands',()=>{
+  const server=setup(),q=new KitchenInteractions();server.stations['counter-4'].item='plate';q.reconcile(server,0)
+  const take=activate(q,server,4,4,1000),put=activate(q,server,5,4,1100)
+  server.stations['counter-4'].item=null
+  Object.assign(server.players[0],{x:4,y:4,facing:{x:0,y:-1}})
+  commandKitchen(server,0,{op:'input',commandId:crypto.randomUUID(),steps:[{activate:true,actionId:take.id!,at:1000,intent:take.intent}]},1200)
+  Object.assign(server.players[0],{x:5,y:4})
+  commandKitchen(server,0,{op:'input',commandId:crypto.randomUUID(),steps:[{activate:true,actionId:put.id!,at:1100,intent:put.intent}]},1300)
+  expect(server.players[0].held).toBeNull()
+  expect(q.reconcile(server,0)).toBeTruthy()
+  expect(q.saving).toBe(false)
+  expect(q.view!.stations['counter-5'].item).toBeNull()
+ })
+ it('cancels dependent speculative pickups immediately after inventory disagreement',()=>{
+  const server=setup(),q=new KitchenInteractions();server.stations['counter-4'].item='plate';server.stations['counter-6'].item='raw:onion';q.reconcile(server,0)
+  const take=activate(q,server,4,4,1000);activate(q,server,5,4,1100);activate(q,server,6,4,1200)
+  server.stations['counter-4'].item=null
+  Object.assign(server.players[0],{x:4,y:4,facing:{x:0,y:-1}})
+  commandKitchen(server,0,{op:'input',commandId:crypto.randomUUID(),steps:[{activate:true,actionId:take.id!,at:1000,intent:take.intent}]},1300)
+  expect(q.reconcile(server,0)).toBeTruthy()
+  expect(q.saving).toBe(false)
+  expect(q.view!.players[0].held).toBeNull()
+  expect(q.view!.stations['counter-6'].item).toBe('raw:onion')
+ })
  it('picks up, chops, collects and places before the first database reply',()=>{
   const server=setup(),q=new KitchenInteractions();q.reconcile(server,0)
   const pickup=activate(q,server,1,1,1000)

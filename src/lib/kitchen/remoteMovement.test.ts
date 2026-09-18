@@ -2,6 +2,13 @@ import {describe,it,expect} from 'vitest'
 import {RemoteMovement} from './remoteMovement'
 import {createKitchen,joinKitchen,commandKitchen} from './engine.mjs'
 describe('authoritative movement replay',()=>{
+ it('does not resurrect old carried ingredients while playing queued movement',()=>{
+  const k=createKitchen(0);joinKitchen(k,0);const replay=new RemoteMovement()
+  k.players[0].held='raw:onion';replay.tick(0,k.players[0],.02)
+  commandKitchen(k,0,{op:'input',commandId:crypto.randomUUID(),steps:[{x:1,y:0,dt:.2}]},1000)
+  k.players[0].held='plate'
+  for(let i=0;i<10;i++)expect(replay.tick(0,k.players[0],.02).held).toBe('plate')
+ })
  it('uses queued direction, not the latest heading or future destination',()=>{
   const k=createKitchen(0);joinKitchen(k,0);const replay=new RemoteMovement(),p={...k.players[0]}
   replay.tick(0,p,.02)

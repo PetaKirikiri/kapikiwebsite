@@ -9,7 +9,7 @@ export class RemoteMovement {
   const fresh=(player.motion??[]).filter(s=>s.id>track!.id)
   if(fresh.length){
    // Missing history: hold rather than draw an unverified shortcut through furniture.
-   if(fresh[0].id!==track.id+1)return track.shown
+   if(fresh[0].id!==track.id+1){track.shown={...track.shown,held:player.held,notice:player.notice};return track.shown}
    track.queue.push(...fresh);track.id=fresh.at(-1)!.id
   }
   let time=Math.min(dt,.05)
@@ -20,7 +20,8 @@ export class RemoteMovement {
    const origin=target.origin??track.from
    const input=target.input??{x:(target.x-origin.x)/(WALK_SPEED*target.dt),y:(target.y-origin.y)/(WALK_SPEED*target.dt)}
    const moved=moveFreely({...track.shown,...origin},input,track.elapsed)
-   track.shown={...player,...moved,held:target.held===undefined?track.shown.held:target.held,facing:target.facing??moved.facing,path:[]}
+   // Movement history controls position, never the current inventory.
+   track.shown={...player,...moved,held:player.held,facing:target.facing??moved.facing,path:[]}
    if(fraction>=1){track.queue.shift();track.elapsed=0;track.from={x:target.x,y:target.y}}
   }
   if(!track.queue.length)track.shown={...player,x:track.shown.x,y:track.shown.y,facing:track.shown.facing,path:[],walking:false}

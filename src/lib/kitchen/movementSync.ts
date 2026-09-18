@@ -28,6 +28,7 @@ export class KitchenMovement {
  }
  activate(now:number,actionId?:string,intent?:InteractionIntent){this.append({activate:true,actionId,at:now,intent});void this.flush(now)}
  pauseWork(now:number,actionId:string){this.append({pauseWork:true,actionId,at:now});void this.flush(now)}
+ cancelInteractions(){this.pending=this.pending.filter(step=>!step.activate&&!step.pauseWork)}
  reset(){this.generation++;this.local=null;this.confirmed=null;this.pending=[]}
  private async flush(now:number){
   if(this.running||!this.pending.length)return

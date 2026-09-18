@@ -4,6 +4,19 @@ import { createKitchen, joinKitchen, commandKitchen, moveFreely, nearbyStation, 
 const player=()=>{const k=createKitchen(0);joinKitchen(k,0);return k.players[0]}
 const deferred=()=>{let resolve!:(p:KitchenPlayer)=>void;let reject!:()=>void;const promise=new Promise<KitchenPlayer>((yes,no)=>{resolve=yes;reject=no});return {promise,resolve,reject}}
 describe('free kitchen controls',()=>{
+ it('drops unsent dependent interactions after rejection without dropping movement',async()=>{
+  const first=deferred(),second=deferred(),requests:InputCommand[]=[],p=player()
+  const sync=new KitchenMovement(command=>{requests.push(command);return requests.length===1?first.promise:second.promise},()=>{})
+  const local=sync.tick(p,{x:1,y:0},.02,1000)
+  sync.activate(1010,crypto.randomUUID(),{station:'plate-return',held:null})
+  sync.pauseWork(1011,crypto.randomUUID())
+  sync.tick(p,{x:1,y:0},.02,1020)
+  sync.cancelInteractions()
+  first.resolve({...local});await Promise.resolve();await Promise.resolve()
+  expect(requests).toHaveLength(2)
+  expect(requests[1].steps).toEqual([{x:1,y:0,dt:.02}])
+  second.resolve({...local});await Promise.resolve();await Promise.resolve()
+ })
  it('does not rewind local movement when a stale poll arrives after acknowledgement',async()=>{
   const p=player(),network=deferred(),sync=new KitchenMovement(()=>network.promise,()=>{})
   const local=sync.tick(p,{x:1,y:0},.02,1000)

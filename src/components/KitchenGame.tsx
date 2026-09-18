@@ -67,7 +67,7 @@ export default function KitchenGame({classRoom}:{classRoom?:string}){
    if(seen.current?.round!==k.startedAt){interactions.reset();setReaches({})}
    const rejection=interactions.reconcile(k,next.seat)
    setPrediction(interactions.saving?interactions.view:null)
-   if(rejection){setToast({text:rejection,until:performance.now()+2200});setReaches(old=>{const copy={...old};delete copy[next.seat];return copy});kitchenSound('error',soundMuted.current)}
+   if(rejection){movement.cancelInteractions();setToast({text:rejection,until:performance.now()+2200});setReaches(old=>{const copy={...old};delete copy[next.seat];return copy});kitchenSound('error',soundMuted.current)}
   }
   live.current.session=next;setSession(next)
   if((next.state.kitchen?.served??0)>(previous?.state.kitchen?.served??0))kitchenSound('serve',soundMuted.current)
@@ -77,7 +77,7 @@ export default function KitchenGame({classRoom}:{classRoom?:string}){
   const added:Record<number,Reach>={}
   for(const [key,p] of Object.entries(k.players))if(p.interaction&&p.interaction.id>(seen.current.ids[Number(key)]??0)&&!(Number(key)===next.seat&&interactions.wasPredicted(p.interaction.actionId)))added[Number(key)]={...p.interaction,seat:Number(key),began:performance.now()}
   seen.current.ids=ids;if(Object.keys(added).length)setReaches(old=>({...old,...added}))
- },[interactions])
+ },[interactions,movement])
  const action=useCallback((body:Record<string,unknown>)=>{
   requestVersion.current++
   const work=serial.current.catch(()=>{}).then(async()=>{try{const next=await request({room:id,...body});apply(next);setError('');return next}catch(e){setError(e instanceof Error&&e.message!=='Failed to fetch'&&e.name!=='TimeoutError'?e.message:'Connection interrupted. Reconnecting…');return null}})

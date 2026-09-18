@@ -104,7 +104,9 @@ export function returnedPlateCount(station,now=Date.now()) {
  return (station?.count??0)+(station?.returnAt??[]).filter(at=>at<=now).length
 }
 export function advanceKitchen(state,now=Date.now()) {
+ let changed=false
  for(const definition of STATIONS){
+  const before=JSON.stringify(state.stations[definition.id])
   const station=state.stations[definition.id]??={ingredients:[],item:null,readyAt:0}
   if(definition.type==='plates'&&station.count===undefined)station.count=5
   // Older rooms have unattended timers. Keep their progress, but require a chef to resume.
@@ -119,16 +121,19 @@ export function advanceKitchen(state,now=Date.now()) {
     if(!station.dirtyCount)station.worker=null
    }
   }
+  if(before!==JSON.stringify(station))changed=true
  }
  const returns=state.stations['plate-return'],due=(returns.returnAt??[]).filter(at=>at<=now)
- if(due.length){returns.count=(returns.count??0)+due.length;returns.lastReturnAt=Math.max(...due);returns.returnAt=returns.returnAt.filter(at=>at>now)}
+ if(due.length){returns.count=(returns.count??0)+due.length;returns.lastReturnAt=Math.max(...due);returns.returnAt=returns.returnAt.filter(at=>at>now);changed=true}
  for(const p of Object.values(state.players)) {
   if(p.path.length&&now>=p.startedAt+movementDuration(p)) {
    const destination=p.path[p.path.length-1];p.x=destination.x;p.y=destination.y;p.path=[]
    const target=p.target;p.target=null
    if(target)interact(state,p,target,now)
+   changed=true
   }
  }
+ if(changed)state.revision++
 }
 // A work timer belongs to one stationary chef; pots never acquire a worker.
 function stopWork(state,p,now) {
@@ -319,6 +324,8 @@ function applyInputs(state,player,body,now) {
  if(!Array.isArray(body.steps)||!body.steps.length||body.steps.length>64)throw new Error('Invalid movement batch')
  let duration=0
  for(const step of body.steps) {
+  if(step.intent?.result!==undefined&&step.intent.result!==null&&typeof step.intent.result!=='string')throw new Error('Invalid interaction result')
+  if(step.intent?.after!==undefined&&(typeof step.intent.after!=='string'||!/^[a-f0-9-]{36}$/.test(step.intent.after)))throw new Error('Invalid interaction dependency')
   if(step.activate===true||step.pauseWork===true){if(step.at!==undefined&&(!Number.isFinite(step.at)||step.at<0))throw new Error('Invalid action time');if(step.actionId!==undefined&&(typeof step.actionId!=='string'||!/^[a-f0-9-]{36}$/.test(step.actionId)))throw new Error('Invalid action');if(step.intent!==undefined&&(!step.intent||!STATIONS.some(s=>s.id===step.intent.station)||(step.intent.held!==null&&typeof step.intent.held!=='string')))throw new Error('Invalid interaction intent');continue}
   if(!Number.isFinite(step.dt)||step.dt<0||step.dt>.25||!Number.isFinite(step.x)||Math.abs(step.x)>1||!Number.isFinite(step.y)||Math.abs(step.y)>1)throw new Error('Invalid movement input')
   if(step.dash!==undefined&&typeof step.dash!=='boolean')throw new Error('Invalid movement input')
@@ -333,16 +340,28 @@ function applyInputs(state,player,body,now) {
  player.inputCredit=Math.max(0,credit-duration);player.inputAt=now
  const position=positionAt(player,now);Object.assign(player,position,{path:[],target:null})
  for(const step of body.steps) {
-  if(step.pauseWork===true){stopWork(state,player,step.at===undefined?now:Math.min(now,Math.max(now-12000,step.at)));if(step.actionId)player.lastActionId=step.actionId}
+  if(step.pauseWork===true){stopWork(state,player,step.at===undefined?now:Math.min(now,Math.max(now-12000,step.at)));if(step.actionId)recordActionResult(player,step.actionId,'')}
   else if(step.activate===true){
-   if(step.actionId&&step.actionId===player.lastActionId)continue
-   const station=nearbyStation(player),previous=player.interaction?.id
+   if(step.actionId&&(step.actionId===player.lastActionId||player.actionResults?.some(result=>result.id===step.actionId)))continue
+   const station=nearbyStation(player),previous=player.interaction?.id,before=player.held
+   const actionAt=step.at===undefined?now:Math.min(now,Math.max(now-12000,step.at))
+   const dependency=step.intent?.after&&player.actionResults?.find(result=>result.id===step.intent.after)
    // A delayed press must never become a transfer at another counter, or the
    // opposite action after inventory changes (placing instead of picking up).
-   if(step.intent&&(station?.id!==step.intent.station||player.held!==step.intent.held))player.notice='The counter changed. Try again.'
-   else if(station)interact(state,player,station.id,step.at===undefined?now:Math.min(now,Math.max(now-12000,step.at)))
+   if(step.intent?.after&&(!dependency||dependency.accepted===false))player.notice='The previous action changed. Try again.'
+   else if(step.intent&&(station?.id!==step.intent.station||player.held!==step.intent.held))player.notice='The counter changed. Try again.'
+   else if(station&&step.intent&&Object.hasOwn(step.intent,'result')){
+    // Validate the intended transfer before committing any inventory mutation.
+    // A counter that changed from a plate to an onion must never substitute it.
+    const seat=Object.keys(state.players).find(seat=>state.players[seat]===player)
+    const trial={...state,stations:structuredClone(state.stations),orders:structuredClone(state.orders),players:{...state.players,[seat]:structuredClone(player)}}
+    interact(trial,trial.players[seat],station.id,actionAt)
+    if(trial.players[seat].held!==step.intent.result)player.notice='The counter changed. Try again.'
+    else {Object.assign(player,trial.players[seat]);state.stations=trial.stations;state.orders=trial.orders;state.served=trial.served}
+   }
+   else if(station)interact(state,player,station.id,actionAt)
    else player.notice='Face a nearby counter'
-   if(step.actionId){player.lastActionId=step.actionId;if(player.interaction?.id!==previous)player.interaction.actionId=step.actionId}
+   if(step.actionId){recordActionResult(player,step.actionId,player.notice,{station:station?.id,before,at:actionAt});if(player.interaction?.id!==previous)player.interaction.actionId=step.actionId}
   }
   else {
    let remaining=step.dt
@@ -366,4 +385,9 @@ function applyInputs(state,player,body,now) {
  }
  player.commandId=body.commandId
  state.revision++
+}
+function recordActionResult(player,id,notice,details={}) {
+ player.lastActionId=id
+ ;(player.actionResults??=[]).push({id,held:player.held,notice,accepted:!notice||notice==='Served!',...details})
+ if(player.actionResults.length>64)player.actionResults.splice(0,player.actionResults.length-64)
 }
