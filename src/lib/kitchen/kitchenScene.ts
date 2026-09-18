@@ -194,11 +194,12 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
    const app=host.closest('.kitchen-app'),viewport=host.getBoundingClientRect()
    const stick=app?.querySelector('.kitchen-thumbstick')?.getBoundingClientRect()
    const actions=app?.querySelector('.kitchen-touch-actions')?.getBoundingClientRect()
-   const hud=app?.querySelector('.kitchen-hud')?.getBoundingClientRect()
+   const orders=app?.querySelector('.kitchen-orders')?.getBoundingClientRect()
+   const hudActions=app?.querySelector('.kitchen-hud-actions')?.getBoundingClientRect()
    Object.assign(camera,fitKitchenCamera(roomBounds,w,h,{
-    left:Math.max(inset('left'),stick?stick.right-viewport.left+4:0),
-    right:Math.max(inset('right'),actions?viewport.right-actions.left+4:0),
-    top:Math.max(inset('top'),hud?hud.bottom-viewport.top+4:0),bottom:inset('bottom'),
+    left:Math.max(inset('left'),stick?stick.right-viewport.left+4:0,orders?orders.right-viewport.left+4:0),
+    right:Math.max(inset('right'),actions?viewport.right-actions.left+4:0,hudActions?viewport.right-hudActions.left+4:0),
+    top:inset('top'),bottom:inset('bottom'),
    }))
   }else{
    const aspect=w/h,half=Math.max(5.4,7.4/aspect)
