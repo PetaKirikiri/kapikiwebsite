@@ -40,6 +40,7 @@ export function createKitchen(now=Date.now()) {
 }
 // Existing rooms displayed five clean plates but had no inventory count.
 export const cleanPlateCount=(station)=>station?.count??5
+export const counterPlateCount=(station)=>station?.item==='plate'?(station.count??1):0
 export const dirtyPlateCount=(item)=>item==='dirty'?1:/^dirty:[1-9]\d*$/.test(item??'')?Number(item.slice(6)):0
 const dirtyPlateItem=(count)=>count===1?'dirty':`dirty:${count}`
 export const washedPlateCount=(station,now)=>station.cleanCount??(station.item==='plate'&&station.readyAt>0&&now>=station.readyAt?1:0)
@@ -182,8 +183,17 @@ function performInteraction(state,p,id,now) {
   p.held=null
  }
  if(definition.type==='counter') {
+  if(p.held==='plate'&&(!station.item||station.item==='plate')){
+   station.count=counterPlateCount(station)+1;station.item='plate';p.held=null;return
+  }
+  if(!p.held&&station.item==='plate'){
+   station.count=counterPlateCount(station)-1;p.held='plate'
+   if(!station.count)station.item=null
+   return
+  }
   if(p.held&&station.item)return fail('This counter is full')
   ;[p.held,station.item]=[station.item,p.held]
+  station.count=0
  }
  if(definition.type==='chop') {
   if(station.item) {

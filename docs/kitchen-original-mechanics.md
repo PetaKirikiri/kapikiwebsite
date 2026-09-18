@@ -16,7 +16,7 @@ Researched 18 September 2026. Target: **Overcooked! (2016)**, not Overcooked! 2 
 - Cookware is carried, put on counters, emptied at the bin, and returned to a vacant hob. Contents are not silently erased by touching a burnt pot.
 - Dirty plates can be carried together. Washing produces individual clean plates; collecting one pauses any remaining washing work.
 - Plate counts drive the models; the pre-existing five-plate supply is now finite. Five is this map's existing supply, **not a verified universal original-game value**.
-- Clean plates can be returned to the supply stack, per the user's subsequent explicit request. This is a deliberate convenience difference from the original-game guide, not a claim about the original's behaviour.
+- Clean plates can be returned to the supply stack or stacked on ordinary benches, per the user's subsequent explicit requests. They are picked up individually. This is a deliberate convenience difference from the original-game guide, not a claim about the original's behaviour. Stack height, not a floating number, communicates quantity.
 - Washing dishes are recessed within the basin; completed dishes occupy its drainboard.
 
 ## Not established or changed

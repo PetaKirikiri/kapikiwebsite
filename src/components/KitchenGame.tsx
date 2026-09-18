@@ -37,6 +37,7 @@ function stationAction(s:Station,k:Kitchen,player:KitchenPlayer,now:number){
  if(s.type==='pot')return potAction(state,held,now)
  if(s.type==='serve')return held?.startsWith('soup:')?'Serve':'Bring a bowl of soup'
  if(s.type==='trash')return carriedPot(held)||held?.startsWith('soup:')?'Empty contents':held==='plate'||dirtyPlateCount(held)?'Keep the plate':held?'Discard':'Bin'
+ if(held==='plate'&&state.item==='plate')return 'Stack plate'
  return held?(state.item?'Counter full':'Put down'):state.item?'Pick up':'Empty counter'
 }
 function SoundIcon({muted}:{muted:boolean}){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z" strokeLinejoin="round"/>{muted?<path d="m17 9 5 6m0-6-5 6"/>:<><path d="M17 8q4 4 0 8m3-11q6 7 0 14"/></>}</svg>}

@@ -8,6 +8,7 @@ export type Kitchen = {revision:number;startedAt:number;served:number;players:Re
 export type CarriedPot = {ingredients:string[];cookLeft:number;burnLeft:number;burnt:boolean}
 export function carriedPot(item:string|null|undefined):CarriedPot|null
 export function cleanPlateCount(station:Kitchen['stations'][string]|undefined):number
+export function counterPlateCount(station:Kitchen['stations'][string]|undefined):number
 export function dirtyPlateCount(item:string|null|undefined):number
 export function washedPlateCount(station:Kitchen['stations'][string],now:number):number
 export function potAction(station:Kitchen['stations'][string],held:string|null,now:number):string

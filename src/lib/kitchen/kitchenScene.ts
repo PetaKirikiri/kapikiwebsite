@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js'
 import { stationProgress } from './stationProgress'
 import { fitKitchenCamera } from './cameraFraming'
-import { KITCHEN_TIMING, carriedPot, cleanPlateCount, dirtyPlateCount, washedPlateCount, returnedPlateCount, STATIONS, type Kitchen, type KitchenPlayer, type KitchenInteraction } from './engine.mjs'
+import { KITCHEN_TIMING, carriedPot, cleanPlateCount, counterPlateCount, dirtyPlateCount, washedPlateCount, returnedPlateCount, STATIONS, type Kitchen, type KitchenPlayer, type KitchenInteraction } from './engine.mjs'
 export type SceneReach=KitchenInteraction&{began:number;seat:number}
 export type KitchenFrame={kitchen:Kitchen;players:Record<number,KitchenPlayer>;seat:number;selected:string|null;now:number;clock:number;reaches:SceneReach[]}
 import { CHEF_COLORS as COLORS } from './presentation'
@@ -225,7 +225,9 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
   for(const s of STATIONS){const model=stations.get(s.id)!,state=frame.kitchen.stations[s.id]??{ingredients:[],item:null,readyAt:0},active=state.readyAt>frame.now,burnt=s.type==='pot'&&state.readyAt>0&&frame.now>=state.readyAt+KITCHEN_TIMING.burn
    model.outline.visible=frame.selected===s.id
    const hidden=frame.reaches.some(r=>r.station===s.id&&r.kind==='place')
-   const stackCount=s.type==='plate-return'?returnedPlateCount(state,frame.now):s.type==='plates'?cleanPlateCount(state):null
+   const totalStack=s.type==='plate-return'?returnedPlateCount(state,frame.now):s.type==='plates'?cleanPlateCount(state):s.type==='counter'&&state.item==='plate'?counterPlateCount(state):null
+   const arriving=frame.reaches.filter(r=>r.station===s.id&&r.kind==='place'&&r.item==='plate').length
+   const stackCount=totalStack===null?null:Math.max(0,totalStack-arriving)
    const washed=s.type==='sink'?washedPlateCount(state,frame.now):0
    const dirty=s.type==='sink'&&state.item?(state.dirtyCount??(washed?0:1)):0
    const key=stackCount!==null?`stack:${stackCount}`:hidden?'':s.type==='sink'&&state.item?`sink:${dirty}:${washed}`:state.item??''
@@ -233,7 +235,7 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
    if(key!==model.key){
     model.items.clear()
     if(stackCount!==null){
-     for(let i=0;i<Math.min(stackCount,12);i++){const plate=food(s.type==='plates'?'plate':'dirty');plate.position.set(i%2?.025:-.025,.069+i*.14,i%3*.012);plate.rotation.y=i*1.7;plate.scale.setScalar(1.15);model.items.add(plate)}
+     for(let i=0;i<Math.min(stackCount,12);i++){const plate=food(s.type==='plate-return'?'dirty':'plate');plate.position.set(i%2?.025:-.025,.069+i*.14,i%3*.012);plate.rotation.y=i*1.7;plate.scale.setScalar(1.15);model.items.add(plate)}
     }
     else if(s.type==='sink'&&key){
      // Keep dirty dishes below the rim, and clean dishes on the drainboard.
@@ -258,14 +260,7 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
    if(model.burner)model.burner.material=mat(active?'#f5a144':'#526773',active?0:.3)
    model.steam.forEach((p,i)=>{p.visible=active;const t=(frame.clock/1300+i*.33)%1;p.position.y=1.59+t*.7;p.scale.setScalar(.04+t*.07);(p.material as THREE.MeshStandardMaterial).opacity=.4*(1-t)})
    const progress=stationProgress(s.type,state,frame.now),meter=model.meter
-   meter.root.visible=!!progress||stackCount!==null&&stackCount>0
-   if(stackCount!==null){
-    // A real stack plus an exact count remains readable even at phone scale.
-    for(const child of meter.root.children){child.visible=child instanceof THREE.Sprite;if(child.visible)child.scale.set(1.5,.47,1)}
-    const label=String(stackCount)
-    if(label!==meter.label){const c=meter.context;c.clearRect(0,0,256,80);c.font='bold 58px sans-serif';c.textAlign='center';c.textBaseline='middle';c.lineWidth=12;c.strokeStyle='#fff8e6';c.strokeText(label,128,42);c.fillStyle='#284753';c.fillText(label,128,42);meter.texture.needsUpdate=true;meter.label=label}
-    meter.root.position.y=1.35+Math.min(stackCount,12)*.14
-   }
+   meter.root.visible=!!progress
    if(progress){
     const color=progress.phase==='paused'?'#9aa4a6':progress.phase==='burnt'?'#d84c3e':progress.phase==='warning'?'#ee9239':progress.phase==='ready'?'#72b855':s.type==='sink'?'#68bdd4':'#92c657'
     meter.fill.material=meterMat(color);meter.fill.scale.x=Math.max(.001,progress.value);meter.fill.position.x=-.41+.41*progress.value
@@ -283,7 +278,9 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
    const handTarget=new THREE.Vector3(0,.75,.47)
    if(reach){const station=STATIONS.find(s=>s.id===reach.station)!,t=THREE.MathUtils.clamp((frame.clock-reach.began)/580,0,1),u=reach.kind==='pickup'?smooth((t-.22)/.65):smooth((t-.08)/.67)
     const fromDrainer=station.type==='sink'&&reach.kind==='pickup'
-    const surface=station.type==='chop'?1.08:station.type==='source'?1.39:station.type==='sink'?(fromDrainer?1.035:.815):station.type==='pot'&&carriedPot(reach.item)?1.12:1.012,foodHeight=reach.item.startsWith('raw:')&&station.type!=='source'?(reach.item.includes('onion')?.205:.18):0
+    const stack=reach.item==='plate'?(station.type==='plates'?cleanPlateCount(frame.kitchen.stations[station.id]):station.type==='counter'?counterPlateCount(frame.kitchen.stations[station.id]):null):null
+    const stackHeight=stack===null?0:.069+Math.min(11,Math.max(0,stack-(reach.kind==='place'?1:0)))*.14
+    const surface=station.type==='chop'?1.08:station.type==='source'?1.39:station.type==='sink'?(fromDrainer?1.035:.815):station.type==='pot'&&carriedPot(reach.item)?1.12:1.012+stackHeight,foodHeight=reach.item.startsWith('raw:')&&station.type!=='source'?(reach.item.includes('onion')?.205:.18):0
     const start=new THREE.Vector3(station.x,surface+foodHeight,station.y-(fromDrainer?.3:0)),end=new THREE.Vector3(Math.sin(m.angle)*.48+p.x,.75,Math.cos(m.angle)*.48+p.y),blend=reach.kind==='pickup'?u:1-u,pos=start.clone().lerp(end,blend);pos.y+=Math.sin(u*Math.PI)*.18
     let transfer=transfers.get(seat);const k=reach.item+reach.id
     if(!transfer||transfer.key!==k){if(transfer)scene.remove(transfer.root);transfer={root:food(reach.item),key:k};transfers.set(seat,transfer);scene.add(transfer.root)}transfer.root.position.copy(pos);transfer.root.visible=true

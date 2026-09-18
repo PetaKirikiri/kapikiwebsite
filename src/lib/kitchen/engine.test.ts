@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { KITCHEN_TIMING, carriedPot, cleanPlateCount, potAction, moveFreely, returnedPlateCount, STATIONS, STEP_MS, createKitchen, joinKitchen, commandKitchen, advanceKitchen, findPath, isFloor } from './engine.mjs'
+import { KITCHEN_TIMING, carriedPot, cleanPlateCount, counterPlateCount, potAction, moveFreely, returnedPlateCount, STATIONS, STEP_MS, createKitchen, joinKitchen, commandKitchen, advanceKitchen, findPath, isFloor } from './engine.mjs'
 describe('shared kitchen',()=>{
  it('routes around the island and rejects occupied or invalid destinations',()=>{
   const path=findPath({x:5,y:2},{x:5,y:4})!
@@ -224,6 +224,46 @@ describe('cookware and plate ownership',()=>{
   expect(p.held).toBeNull();expect(k.stations.plates.count).toBe(5)
   commandKitchen(k,0,{...body,commandId:crypto.randomUUID(),steps:[{...step,actionId:crypto.randomUUID()}]},1004)
   expect(p.held).toBeNull();expect(k.stations.plates.count).toBe(5)
+ })
+ it('stacks clean plates on a bench and collects them individually without losing plates',()=>{
+  const {k,p,use}=setup(),bench=k.stations['counter-4']
+  for(let count=1;count<=3;count++){
+   use('plates');use('counter-4')
+   expect(p.held).toBeNull();expect(p.notice).toBe('')
+   expect(counterPlateCount(bench)).toBe(count)
+   expect(counterPlateCount(JSON.parse(JSON.stringify(bench)))).toBe(count)
+  }
+  for(let count=2;count>=0;count--){
+   use('counter-4');expect(p.held).toBe('plate');expect(counterPlateCount(bench)).toBe(count)
+   use('plates')
+  }
+  expect(bench.item).toBeNull();expect(cleanPlateCount(k.stations.plates)).toBe(5)
+  p.held='raw:tomato';use('counter-4');expect(counterPlateCount(bench)).toBe(0)
+ })
+ it('accepts a plate on a legacy single-plate bench and shares the stack between chefs',()=>{
+  const {k,p,use}=setup(),bench=k.stations['counter-4']
+  bench.item='plate';p.held='plate';use('counter-4')
+  expect(counterPlateCount(bench)).toBe(2)
+  use('counter-4',1001,1);use('counter-4',1002,0)
+  expect(k.players[1].held).toBe('plate');expect(p.held).toBe('plate')
+  expect(counterPlateCount(bench)).toBe(0);expect(bench.item).toBeNull()
+ })
+ it.each(['dirty','raw:tomato','soup:tomato+tomato'])('does not mix %s into clean bench plates',(item)=>{
+  const {k,p,use}=setup(),bench=k.stations['counter-4']
+  bench.item='plate';bench.count=2;p.held=item;use('counter-4')
+  expect(p.held).toBe(item);expect(counterPlateCount(bench)).toBe(2)
+  bench.item=item;bench.count=0;p.held='plate';use('counter-4')
+  expect(p.held).toBe('plate');expect(bench.item).toBe(item)
+ })
+ it('does not repeat a bench-stack placement on retry or a stale queued press',()=>{
+  const {k,p,use}=setup(),bench=k.stations['counter-4']
+  p.held='plate';use('counter-4');p.held='plate'
+  const step={activate:true as const,actionId:crypto.randomUUID(),intent:{station:'counter-4',held:'plate'}}
+  const body={op:'input',commandId:crypto.randomUUID(),steps:[step]}
+  commandKitchen(k,0,body,1001);commandKitchen(k,0,body,1002)
+  commandKitchen(k,0,{...body,commandId:crypto.randomUUID()},1003)
+  commandKitchen(k,0,{...body,commandId:crypto.randomUUID(),steps:[{...step,actionId:crypto.randomUUID()}]},1004)
+  expect(p.held).toBeNull();expect(counterPlateCount(bench)).toBe(2)
  })
  it('carries a dirty stack, washes each plate, then picks clean plates up individually',()=>{
   const {k,p,use}=setup();k.stations['plate-return'].count=3
