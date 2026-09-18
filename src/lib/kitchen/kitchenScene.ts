@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js'
 import { stationProgress } from './stationProgress'
+import { fitKitchenCamera } from './cameraFraming'
 import { KITCHEN_TIMING, returnedPlateCount, STATIONS, type Kitchen, type KitchenPlayer, type KitchenInteraction } from './engine.mjs'
 export type SceneReach=KitchenInteraction&{began:number;seat:number}
 export type KitchenFrame={kitchen:Kitchen;players:Record<number,KitchenPlayer>;seat:number;selected:string|null;now:number;clock:number;reaches:SceneReach[]}
@@ -176,7 +177,35 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
   const pointer=mesh(root,geometry('pointer',()=>new THREE.ConeGeometry(.09,.17,3)),color,0,2.2,0);pointer.rotation.z=Math.PI;pointer.castShadow=false
   const model={root,body,hands,arms,feet,eyes,held,heldKey:'',pointer,angle:0};chefs.set(seat,model);return model
  }
- const resize=()=>{const w=host.clientWidth,h=host.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);const aspect=w/h,half=Math.max(5.4,7.4/aspect);camera.left=-half*aspect;camera.right=half*aspect;camera.top=half;camera.bottom=-half;camera.updateProjectionMatrix()}
+ // Project the room envelope once; fit the camera, never rescale the game world.
+ camera.updateMatrixWorld()
+ const roomBounds={left:Infinity,right:-Infinity,top:-Infinity,bottom:Infinity}
+ for(const x of [-1.05,12.05])for(const y of [-.88,2.3])for(const z of [-.95,8.05]){
+  const p=new THREE.Vector3(x,y,z).applyMatrix4(camera.matrixWorldInverse)
+  roomBounds.left=Math.min(roomBounds.left,p.x);roomBounds.right=Math.max(roomBounds.right,p.x)
+  roomBounds.top=Math.max(roomBounds.top,p.y);roomBounds.bottom=Math.min(roomBounds.bottom,p.y)
+ }
+ const resize=()=>{
+  const w=host.clientWidth,h=host.clientHeight;if(!w||!h)return
+  renderer.setSize(w,h,false)
+  const style=getComputedStyle(host),compact=style.getPropertyValue('--kitchen-landscape').trim()==='1'
+  if(compact){
+   const inset=(name:string)=>parseFloat(style.getPropertyValue(`--kitchen-camera-${name}`))||0
+   const app=host.closest('.kitchen-app'),viewport=host.getBoundingClientRect()
+   const stick=app?.querySelector('.kitchen-thumbstick')?.getBoundingClientRect()
+   const actions=app?.querySelector('.kitchen-touch-actions')?.getBoundingClientRect()
+   const hud=app?.querySelector('.kitchen-hud')?.getBoundingClientRect()
+   Object.assign(camera,fitKitchenCamera(roomBounds,w,h,{
+    left:Math.max(inset('left'),stick?stick.right-viewport.left+4:0),
+    right:Math.max(inset('right'),actions?viewport.right-actions.left+4:0),
+    top:Math.max(inset('top'),hud?hud.bottom-viewport.top+4:0),bottom:inset('bottom'),
+   }))
+  }else{
+   const aspect=w/h,half=Math.max(5.4,7.4/aspect)
+   camera.left=-half*aspect;camera.right=half*aspect;camera.top=half;camera.bottom=-half
+  }
+  camera.updateProjectionMatrix()
+ }
  const observer=new ResizeObserver(resize);observer.observe(host);resize()
  let previous=0
  const update=(frame:KitchenFrame)=>{

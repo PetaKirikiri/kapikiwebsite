@@ -15,9 +15,28 @@
  .kitchen-context:not(.has-notice):not(:has(.held-food)){visibility:hidden}
 }
 @media(any-pointer:coarse) and (orientation:landscape){
- .kitchen-app.is-playing{grid-template-rows:58px minmax(0,1fr) 34px;padding:0 max(8px,env(safe-area-inset-left))}
- .kitchen-hud{flex-wrap:nowrap;padding-top:0;gap:6px}.kitchen-brand{min-width:0;flex:0}.kitchen-brand>div,.kitchen-invite,.kitchen-fullscreen{display:none}
- .kitchen-orders{order:0;width:auto;flex:1}.kitchen-ticket{max-width:125px;height:40px}.kitchen-hud-actions{min-width:0;gap:5px}
- .kitchen-touch-controls{bottom:max(10px,env(safe-area-inset-bottom))}.kitchen-thumbstick{width:100px;height:100px}.kitchen-touch-actions button{width:60px!important;height:60px!important}.kitchen-touch-actions button:last-child{width:70px!important;height:70px!important}
+ .kitchen-app.is-playing{display:block;padding:0;min-height:0}
+ .kitchen-app.is-playing .kitchen-stage{position:absolute;inset:0;max-width:none}
+ .kitchen-app.is-playing .kitchen-world{
+  --kitchen-landscape:1;
+  --kitchen-camera-top:52px;--kitchen-camera-bottom:6px;
+  --kitchen-camera-left:108px;--kitchen-camera-right:144px;
+ }
+ .kitchen-app.is-playing .kitchen-hud{position:absolute;top:env(safe-area-inset-top,0px);left:0;max-width:none;padding:4px max(8px,env(safe-area-inset-right)) 0 max(8px,env(safe-area-inset-left));height:48px;display:grid;grid-template-columns:80px minmax(0,1fr) 80px;pointer-events:none}
+ .kitchen-hud{flex-wrap:nowrap;gap:6px}.kitchen-hud a,.kitchen-hud button{pointer-events:auto}.kitchen-brand{min-width:0;flex:0}.kitchen-brand>div,.kitchen-invite,.kitchen-fullscreen{display:none}
+ .kitchen-orders{order:0;width:auto;flex:1;gap:6px}.kitchen-ticket{flex:0 1 auto;min-width:0;max-width:104px;height:32px;padding:2px 5px;border-top-width:2px;gap:2px;border-radius:9px;box-shadow:0 2px 0 #87a7a440}
+ .ticket-dish{width:28px;height:26px}.ticket-divider{height:18px;margin:0 2px}.ticket-ingredients svg{width:22px;height:24px}.ticket-number{font-size:7px;top:-4px;padding:2px 3px}
+ .kitchen-hud-actions{min-width:0;gap:2px}.kitchen-score{gap:4px;margin-right:2px}.kitchen-score strong,.kitchen-score>span{font-size:19px}
+ .kitchen-icon-button{width:44px;height:44px;padding:11px;background:transparent;border:0;box-shadow:none;line-height:1}
+ .kitchen-touch-controls{left:max(8px,env(safe-area-inset-left));right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom))}
+ .kitchen-thumbstick{width:96px;height:96px;background:#28465318;border-color:#fff7e34d;box-shadow:none}.kitchen-thumbstick span{width:44px;height:44px}
+ .kitchen-touch-actions{gap:2px}
+ .kitchen-app .kitchen-touch-actions button,.kitchen-app .kitchen-touch-actions button:last-child{position:relative;width:64px;height:64px;padding:19px;background:transparent;border:0;box-shadow:none}
+ .kitchen-touch-actions button::before{content:'';position:absolute;inset:6px;border-radius:50%;background:#284653d9;border:1px solid #fff7e380;box-shadow:0 2px 0 #17313e40}
+ .kitchen-touch-actions button:last-child::before{background:#c9654fe6}
+ .kitchen-touch-actions svg{position:relative}
+ .kitchen-app.is-playing .kitchen-controls{position:absolute;bottom:max(6px,env(safe-area-inset-bottom));left:0;max-width:none;padding:0}
+ .kitchen-context{max-width:40%;min-height:28px;padding:4px 9px;font-size:10px}.kitchen-context .held-food{width:23px;height:23px}
+ .kitchen-error{top:54px}
  .kitchen-embedded{height:calc(100dvh - 70px)}
 }
