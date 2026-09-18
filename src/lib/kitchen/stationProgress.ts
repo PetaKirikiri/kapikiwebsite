@@ -1,6 +1,7 @@
 import { KITCHEN_TIMING, type Kitchen } from './engine.mjs'
 export function stationProgress(type:string,state:Kitchen['stations'][string],now:number){
  if(!['chop','sink','pot'].includes(type))return null
+ if(type==='sink'&&state.dirtyCount===0)return state.cleanCount?{phase:'ready',value:1,label:'✓'}:null
  const duration=type==='pot'?KITCHEN_TIMING.cook:type==='sink'?KITCHEN_TIMING.wash:KITCHEN_TIMING.chop
  if(type!=='pot'&&state.remainingMs&&!state.readyAt)return {phase:'paused',value:Math.max(0,1-state.remainingMs/duration),label:'Ⅱ'}
  if(!state.readyAt)return null

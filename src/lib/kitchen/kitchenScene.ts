@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js'
 import { stationProgress } from './stationProgress'
 import { fitKitchenCamera } from './cameraFraming'
-import { KITCHEN_TIMING, returnedPlateCount, STATIONS, type Kitchen, type KitchenPlayer, type KitchenInteraction } from './engine.mjs'
+import { KITCHEN_TIMING, carriedPot, cleanPlateCount, dirtyPlateCount, washedPlateCount, returnedPlateCount, STATIONS, type Kitchen, type KitchenPlayer, type KitchenInteraction } from './engine.mjs'
 export type SceneReach=KitchenInteraction&{began:number;seat:number}
 export type KitchenFrame={kitchen:Kitchen;players:Record<number,KitchenPlayer>;seat:number;selected:string|null;now:number;clock:number;reaches:SceneReach[]}
 import { CHEF_COLORS as COLORS } from './presentation'
@@ -26,7 +26,19 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
  function tube(parent:THREE.Object3D,color:string,points:THREE.Vector3[],radius:number){const key=`t${points.map(p=>p.toArray().join()).join('/')}:${radius}`;return mesh(parent,geometry(key,()=>new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),16,radius,7,false)),color,0,0,0)}
  function ring(parent:THREE.Object3D,color:string,x:number,y:number,z:number,r:number,t:number,metal=0){const m=mesh(parent,geometry(`ring${r},${t}`,()=>new THREE.TorusGeometry(r,t,8,32)),color,x,y,z,metal);m.rotation.x=Math.PI/2;return m}
  function vessel(parent:THREE.Object3D,key:string,color:string,profile:number[][],y:number,metal=0){return mesh(parent,geometry(key,()=>new THREE.LatheGeometry(profile.map(([r,h])=>new THREE.Vector2(r,h)),32)),color,0,y,0,metal)}
+ function potModel(){
+  const root=new THREE.Group()
+  vessel(root,'open-pot','#afbec1',[[0,0],[.265,0],[.315,.33],[.291,.33],[.248,.045],[0,.045]],0,.55)
+  const soup=cylinder(root,'#e7c367',0,.26,0,.274,.274,.014);soup.visible=false
+  ring(root,'#e4ede4',0,.359,0,.302,.024,.65)
+  for(const d of [-1,1]){box(root,'#859da3',d*.33,.24,0,.09,.055,.1,.015,.5);box(root,'#2b434e',d*.405,.24,0,.14,.085,.19,.035)}
+  return {root,soup}
+ }
  function food(item:string){const g=new THREE.Group();const onion=item.includes('onion')
+  const pot=carriedPot(item)
+  if(pot){const model=potModel();model.soup.visible=pot.ingredients.length>0;model.soup.material=mat(pot.burnt?'#4f4046':onion&&!pot.ingredients.includes('tomato')?'#e7c367':'#e07d42');g.add(model.root);return g}
+  if(item==='waste'){for(const x of [-.12,0,.12])ball(g,'#654b36',x,.04,x*.4,.09,.05,.08);return g}
+  if(dirtyPlateCount(item)>1){for(let i=0;i<Math.min(dirtyPlateCount(item),12);i++){const plate=food('dirty');plate.position.y=i*.14;g.add(plate)}return g}
   if(item==='plate'||item==='dirty'||item.startsWith('soup:')){vessel(g,'dish','#fff9e9',[[0,0],[.2,0],[.29,.035],[.31,.065],[.30,.085],[.23,.045],[0,.035]],0);ring(g,'#6b9fab',0,.073,0,.282,.012);if(item.startsWith('soup:')){cylinder(g,'#fff8e9',0,.08,0,.23,.16,.15);cylinder(g,onion?'#e6ba56':'#d4542f',0,.16,0,.196,.196,.012);ball(g,'#70984e',.04,.18,0,.025,.009,.06)}else if(item==='dirty'){ball(g,'#a86940',.025,.048,.035,.14,.009,.10);ball(g,'#c58645',-.14,.058,-.07,.055,.008,.035);ball(g,'#638044',.095,.061,-.085,.027,.009,.045)}}
   else if(item.startsWith('chopped:')){
    // Broad overlapping cut faces stay recognisable at the game's camera distance.
@@ -76,14 +88,14 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
   const text=new THREE.Sprite(material);text.position.set(0,.23,0);text.scale.set(.74,.23,1);text.renderOrder=11;root.add(text);meterResources.push({texture,material})
   return {root,fill,context,texture,label:''}
  }
- const stations=new Map<string,{root:THREE.Group;outline:THREE.Group;items:THREE.Group;key:string;knife?:THREE.Group;soup?:THREE.Mesh;burner?:THREE.Mesh;steam:THREE.Mesh[];meter:ReturnType<typeof progressMeter>}>()
+ const stations=new Map<string,{root:THREE.Group;outline:THREE.Group;items:THREE.Group;key:string;knife?:THREE.Group;pot?:THREE.Group;soup?:THREE.Mesh;burner?:THREE.Mesh;steam:THREE.Mesh[];meter:ReturnType<typeof progressMeter>}>()
  for(const s of STATIONS){const g=new THREE.Group();g.position.set(s.x,0,s.y);scene.add(g)
   const panel={source:'#669b69',chop:'#d6aa55',pot:'#c97660',counter:'#9388b1',plates:'#799aaa','plate-return':'#799aaa',sink:'#5f9fbb',trash:'#667078',serve:'#50978b'}[s.type]??'#9388b1'
    box(g,panel,0,s.type==='sink'?.39:.45,0,.94,s.type==='sink'?.69:.83,.94,.075);box(g,'#465762',0,.1,0,.84,.1,.82,.02)
    if(s.type!=='sink')box(g,s.type==='pot'?'#344653':'#f5efdc',0,.92,0,1,.17,1,.055)
    if(s.type!=='pot'){box(g,panel,0,.43,.481,.77,.55,.025,.025);box(g,'#f5ecd5',0,.64,.52,.23,.035,.05,.015)}
   const outline=new THREE.Group();g.add(outline);for(const d of [-1,1]){box(outline,'#ffd265',d*.51,1.025,0,.055,.035,1.075,.017);box(outline,'#ffd265',0,1.025,d*.51,1.075,.035,.055,.017)}outline.visible=false
-  let knife:THREE.Group|undefined,soup:THREE.Mesh|undefined,burner:THREE.Mesh|undefined;const steam:THREE.Mesh[]=[]
+  let knife:THREE.Group|undefined,pot:THREE.Group|undefined,soup:THREE.Mesh|undefined,burner:THREE.Mesh|undefined;const steam:THREE.Mesh[]=[]
   if(s.type==='source'){
    const accent=panel
    // One permanent ingredient emblem marks an unlimited supply drawer.
@@ -118,15 +130,11 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
    burner=cylinder(g,'#526773',0,1.065,0,.39,.39,.035,.3)
    cylinder(g,'#243540',0,1.09,0,.33,.33,.04)
    for(const d of [-1,1]){box(g,'#152c36',d*.37,1.105,0,.14,.065,.065,.015);box(g,'#152c36',0,1.105,d*.37,.065,.065,.14,.015)}
-   vessel(g,'open-pot','#afbec1',[[0,0],[.265,0],[.315,.33],[.291,.33],[.248,.045],[0,.045]],1.12,.55)
-   soup=cylinder(g,'#e7c367',0,1.38,0,.274,.274,.014);soup.visible=false
-   const rim=mesh(g,geometry('pot-rim',()=>new THREE.TorusGeometry(.302,.024,8,32)),'#e4ede4',0,1.479,0,.65);rim.rotation.x=Math.PI/2
-   for(const d of [-1,1]){box(g,'#859da3',d*.33,1.36,0,.09,.055,.1,.015,.5);box(g,'#2b434e',d*.405,1.36,0,.14,.085,.19,.035)}
+   const model=potModel();pot=model.root;soup=model.soup;pot.position.y=1.12;g.add(pot)
    for(let i=0;i<3;i++){const puff=ball(g,'#fff2dc',(i-1)*.12,1.7,0,.065,.09,.065);puff.material=new THREE.MeshStandardMaterial({color:'#fff2dc',transparent:true,opacity:.28,depthWrite:false});puff.castShadow=false;steam.push(puff)}
   }
   if(s.type==='plates'){
    box(g,'#405c69',0,1.02,0,.82,.035,.8,.055)
-   for(let i=0;i<5;i++){const f=food('plate');f.position.set(0,1.06+i*.075,0);f.scale.setScalar(1.15);g.add(f)}
   }
   if(s.type==='sink'){
    // A recessed steel bowl: surrounding worktop, deep floor, sloped sides and drain.
@@ -136,6 +144,8 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
    cylinder(g,'#344e5a',0,.793,0,.073,.073,.012);ring(g,'#dbe3dd',0,.801,0,.075,.011,.5)
    tube(g,'#d2dfd9',[new THREE.Vector3(0,1.01,-.4),new THREE.Vector3(0,1.5,-.4),new THREE.Vector3(0,1.51,-.05),new THREE.Vector3(0,1.32,-.05)],.045)
    for(const d of [-1,1])box(g,'#718d96',d*.21,1.015,-.4,.12,.045,.07,.02,.4)
+   // Drainboard at the rear: completed plates sit outside the recessed bowl.
+   box(g,'#b5c8c9',0,1.015,-.32,.68,.035,.31,.025,.4)
   }
   if(s.type==='trash'){
    // Waste chute fitted into the same worktop and cabinet as the other stations.
@@ -154,7 +164,7 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
   }
   const items=new THREE.Group();items.position.y=1.2;g.add(items)
   const meter=progressMeter(g);meter.root.visible=false
-  stations.set(s.id,{root:g,outline,items,key:'',knife,soup,burner,steam,meter})
+  stations.set(s.id,{root:g,outline,items,key:'',knife,pot,soup,burner,steam,meter})
  }
  type Chef={root:THREE.Group;body:THREE.Group;hands:THREE.Mesh[];arms:THREE.Mesh[];feet:THREE.Mesh[];eyes:THREE.Mesh[];held:THREE.Group;heldKey:string;pointer:THREE.Mesh;angle:number}
  const chefs=new Map<number,Chef>(),transfers=new Map<number,{root:THREE.Group;key:string}>()
@@ -214,20 +224,28 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
   const reaches=new Map(frame.reaches.map(r=>[r.seat,r]))
   for(const s of STATIONS){const model=stations.get(s.id)!,state=frame.kitchen.stations[s.id]??{ingredients:[],item:null,readyAt:0},active=state.readyAt>frame.now,burnt=s.type==='pot'&&state.readyAt>0&&frame.now>=state.readyAt+KITCHEN_TIMING.burn
    model.outline.visible=frame.selected===s.id
-   const hidden=frame.reaches.some(r=>r.station===s.id&&r.kind==='place'),key=s.type==='plate-return'?`returns:${returnedPlateCount(state,frame.now)}`:hidden?'':state.item??''
-   model.items.position.y=(s.type==='chop'?1.08:s.type==='sink'?.91:1.012)+(key.startsWith('raw:')?(key.includes('onion')?.205:.18):0)
+   const hidden=frame.reaches.some(r=>r.station===s.id&&r.kind==='place')
+   const stackCount=s.type==='plate-return'?returnedPlateCount(state,frame.now):s.type==='plates'?cleanPlateCount(state):null
+   const washed=s.type==='sink'?washedPlateCount(state,frame.now):0
+   const dirty=s.type==='sink'&&state.item?(state.dirtyCount??(washed?0:1)):0
+   const key=stackCount!==null?`stack:${stackCount}`:hidden?'':s.type==='sink'&&state.item?`sink:${dirty}:${washed}`:state.item??''
+   model.items.position.y=(s.type==='chop'?1.08:s.type==='sink'?.815:1.012)+(key.startsWith('raw:')?(key.includes('onion')?.205:.18):0)
    if(key!==model.key){
     model.items.clear()
-    if(s.type==='plate-return'){
-     const count=returnedPlateCount(state,frame.now)
-     for(let i=0;i<Math.min(count,12);i++){const plate=food('dirty');plate.position.set(i%2?.015:-.015,.069+i*.105,i%3*.012);plate.rotation.y=i*1.7;plate.scale.setScalar(1.15);model.items.add(plate)}
+    if(stackCount!==null){
+     for(let i=0;i<Math.min(stackCount,12);i++){const plate=food(s.type==='plates'?'plate':'dirty');plate.position.set(i%2?.025:-.025,.069+i*.14,i%3*.012);plate.rotation.y=i*1.7;plate.scale.setScalar(1.15);model.items.add(plate)}
+    }
+    else if(s.type==='sink'&&key){
+     // Keep dirty dishes below the rim, and clean dishes on the drainboard.
+     if(dirty){const plate=food('dirty');plate.scale.setScalar(.8);plate.position.z=.07;model.items.add(plate)}
+     for(let i=0;i<Math.min(washed,12);i++){const plate=food('plate');plate.scale.setScalar(.8);plate.position.set(0,.22+i*.11,-.3);model.items.add(plate)}
     }
     else if(key)model.items.add(food(key))
     model.key=key
    }
    if(s.type==='plate-return'){
     const last=Math.max(state.lastReturnAt??0,...(state.returnAt??[]).filter(at=>at<=frame.now)),elapsed=frame.now-last,top=model.items.children.at(-1)
-    if(top){const i=model.items.children.length-1;top.position.y=.069+i*.105+(elapsed>=0&&elapsed<320?.12*(1-elapsed/320)**2:0)}
+    if(top){const i=model.items.children.length-1;top.position.y=.069+i*.14+(elapsed>=0&&elapsed<320?.12*(1-elapsed/320)**2:0)}
    }
    if(model.knife){
     const swing=Math.sin(frame.clock/95),blend=1-Math.exp(-dt*18)
@@ -235,11 +253,19 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
     model.knife.position.y+=((active?1.18+Math.max(0,swing)*.17:1.10)-model.knife.position.y)*blend
     model.knife.position.z+=((active?.015:.17)-model.knife.position.z)*blend
    }
-   if(model.soup){model.soup.visible=state.ingredients.length>0;model.soup.position.y=state.ingredients.length>1?1.38:1.25;model.soup.material=mat(burnt?'#4f4046':state.ingredients.includes('tomato')?'#e07d42':'#e7c367')}
+   if(model.pot)model.pot.visible=state.potPresent!==false&&!frame.reaches.some(r=>r.station===s.id&&r.kind==='place'&&!!carriedPot(r.item))
+   if(model.soup){model.soup.visible=state.ingredients.length>0;model.soup.position.y=state.ingredients.length>1?.26:.13;model.soup.material=mat(burnt?'#4f4046':state.ingredients.includes('tomato')?'#e07d42':'#e7c367')}
    if(model.burner)model.burner.material=mat(active?'#f5a144':'#526773',active?0:.3)
    model.steam.forEach((p,i)=>{p.visible=active;const t=(frame.clock/1300+i*.33)%1;p.position.y=1.59+t*.7;p.scale.setScalar(.04+t*.07);(p.material as THREE.MeshStandardMaterial).opacity=.4*(1-t)})
    const progress=stationProgress(s.type,state,frame.now),meter=model.meter
-   meter.root.visible=!!progress
+   meter.root.visible=!!progress||stackCount!==null&&stackCount>0
+   if(stackCount!==null){
+    // A real stack plus an exact count remains readable even at phone scale.
+    for(const child of meter.root.children){child.visible=child instanceof THREE.Sprite;if(child.visible)child.scale.set(1.5,.47,1)}
+    const label=String(stackCount)
+    if(label!==meter.label){const c=meter.context;c.clearRect(0,0,256,80);c.font='bold 58px sans-serif';c.textAlign='center';c.textBaseline='middle';c.lineWidth=12;c.strokeStyle='#fff8e6';c.strokeText(label,128,42);c.fillStyle='#284753';c.fillText(label,128,42);meter.texture.needsUpdate=true;meter.label=label}
+    meter.root.position.y=1.35+Math.min(stackCount,12)*.14
+   }
    if(progress){
     const color=progress.phase==='paused'?'#9aa4a6':progress.phase==='burnt'?'#d84c3e':progress.phase==='warning'?'#ee9239':progress.phase==='ready'?'#72b855':s.type==='sink'?'#68bdd4':'#92c657'
     meter.fill.material=meterMat(color);meter.fill.scale.x=Math.max(.001,progress.value);meter.fill.position.x=-.41+.41*progress.value
@@ -252,12 +278,13 @@ export function createKitchenScene(canvas:HTMLCanvasElement,host:HTMLElement){
    const phase=frame.clock/95,step=p.walking?Math.sin(phase):0;m.body.position.y=p.walking?Math.abs(Math.sin(phase))* .035:Math.sin(frame.clock/550+seat)*.006
    m.feet.forEach((foot,i)=>{foot.position.z=.07+step*(i?-.11:.11);foot.position.y=.12+Math.max(0,step*(i?-1:1))*.055;foot.rotation.x=step*(i?-.2:.2)})
    m.eyes.forEach(eye=>eye.scale.y=(frame.clock+seat*719)%4100>3970?.01:.068)
-   const reach=reaches.get(seat),heldKey=reach?'':p.held??''
+   const reach=reaches.get(seat),heldKey=reach&&reach.item!=='waste'?'':p.held??''
    if(heldKey!==m.heldKey){m.held.clear();if(heldKey)m.held.add(food(heldKey));m.heldKey=heldKey}m.held.position.set(0,.75,.48)
    const handTarget=new THREE.Vector3(0,.75,.47)
    if(reach){const station=STATIONS.find(s=>s.id===reach.station)!,t=THREE.MathUtils.clamp((frame.clock-reach.began)/580,0,1),u=reach.kind==='pickup'?smooth((t-.22)/.65):smooth((t-.08)/.67)
-    const surface=station.type==='chop'?1.08:station.type==='source'?1.39:station.type==='sink'?.91:1.012,foodHeight=reach.item.startsWith('raw:')&&station.type!=='source'?(reach.item.includes('onion')?.205:.18):0
-    const start=new THREE.Vector3(station.x,surface+foodHeight,station.y),end=new THREE.Vector3(Math.sin(m.angle)*.48+p.x,.75,Math.cos(m.angle)*.48+p.y),blend=reach.kind==='pickup'?u:1-u,pos=start.clone().lerp(end,blend);pos.y+=Math.sin(u*Math.PI)*.18
+    const fromDrainer=station.type==='sink'&&reach.kind==='pickup'
+    const surface=station.type==='chop'?1.08:station.type==='source'?1.39:station.type==='sink'?(fromDrainer?1.035:.815):station.type==='pot'&&carriedPot(reach.item)?1.12:1.012,foodHeight=reach.item.startsWith('raw:')&&station.type!=='source'?(reach.item.includes('onion')?.205:.18):0
+    const start=new THREE.Vector3(station.x,surface+foodHeight,station.y-(fromDrainer?.3:0)),end=new THREE.Vector3(Math.sin(m.angle)*.48+p.x,.75,Math.cos(m.angle)*.48+p.y),blend=reach.kind==='pickup'?u:1-u,pos=start.clone().lerp(end,blend);pos.y+=Math.sin(u*Math.PI)*.18
     let transfer=transfers.get(seat);const k=reach.item+reach.id
     if(!transfer||transfer.key!==k){if(transfer)scene.remove(transfer.root);transfer={root:food(reach.item),key:k};transfers.set(seat,transfer);scene.add(transfer.root)}transfer.root.position.copy(pos);transfer.root.visible=true
     m.root.updateMatrixWorld(true)

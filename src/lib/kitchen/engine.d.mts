@@ -4,7 +4,13 @@ export type KitchenInteraction = {id:number;station:string;item:string;kind:'pic
 export type MotionInstruction = Point & {id:number;dt:number;origin?:Point;input?:Point & {dash?:boolean};facing?:Point;held?:string|null}
 export type KitchenPlayer = Point & {motionId?:number;motion?:MotionInstruction[];path:Point[];startedAt:number;target:string|null;held:string|null;notice:string;commandId?:string;facing?:Point;walking?:boolean;interaction?:KitchenInteraction;lastActionId?:string}
 export type Station = {id:string;type:string;label:string;x:number;y:number;ingredient?:string}
-export type Kitchen = {revision:number;startedAt:number;served:number;players:Record<number,KitchenPlayer>;stations:Record<string,{ingredients:string[];item:string|null;readyAt:number;count?:number;returnAt?:number[];lastReturnAt?:number;worker?:number|null;remainingMs?:number;workStartedAt?:number}>;orders:{id:number;ingredients:string[]}[]}
+export type Kitchen = {revision:number;startedAt:number;served:number;players:Record<number,KitchenPlayer>;stations:Record<string,{ingredients:string[];item:string|null;readyAt:number;potPresent?:boolean;dirtyCount?:number;cleanCount?:number;count?:number;returnAt?:number[];lastReturnAt?:number;worker?:number|null;remainingMs?:number;workStartedAt?:number}>;orders:{id:number;ingredients:string[]}[]}
+export type CarriedPot = {ingredients:string[];cookLeft:number;burnLeft:number;burnt:boolean}
+export function carriedPot(item:string|null|undefined):CarriedPot|null
+export function cleanPlateCount(station:Kitchen['stations'][string]|undefined):number
+export function dirtyPlateCount(item:string|null|undefined):number
+export function washedPlateCount(station:Kitchen['stations'][string],now:number):number
+export function potAction(station:Kitchen['stations'][string],held:string|null,now:number):string
 export const WIDTH:number, HEIGHT:number, STEP_MS:number
 export const STATIONS:Station[]
 export const recipes:string[][]

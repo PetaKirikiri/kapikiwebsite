@@ -36,7 +36,26 @@ export function findPath(start, end) {
 }
 export const recipes = [['tomato','tomato'],['onion','onion'],['onion','tomato']]
 export function createKitchen(now=Date.now()) {
- return { revision:0, startedAt:now, served:0, players:{}, stations:Object.fromEntries(STATIONS.map(s=>[s.id,{ingredients:[],item:null,readyAt:0}])), orders:[0,1,2].map(id=>({id,ingredients:recipes[id]})) }
+ return { revision:0, startedAt:now, served:0, players:{}, stations:Object.fromEntries(STATIONS.map(s=>[s.id,{ingredients:[],item:null,readyAt:0,...(s.type==='plates'?{count:5}:{})}])), orders:[0,1,2].map(id=>({id,ingredients:recipes[id]})) }
+}
+// Existing rooms displayed five clean plates but had no inventory count.
+export const cleanPlateCount=(station)=>station?.count??5
+export const dirtyPlateCount=(item)=>item==='dirty'?1:/^dirty:[1-9]\d*$/.test(item??'')?Number(item.slice(6)):0
+const dirtyPlateItem=(count)=>count===1?'dirty':`dirty:${count}`
+export const washedPlateCount=(station,now)=>station.cleanCount??(station.item==='plate'&&station.readyAt>0&&now>=station.readyAt?1:0)
+export function carriedPot(item) {
+ if(!item?.startsWith('pot:'))return null
+ try{return JSON.parse(item.slice(4))}catch{return null}
+}
+const emptyPot=()=>`pot:${JSON.stringify({ingredients:[],cookLeft:0,burnLeft:0,burnt:false})}`
+export function potAction(station,held,now) {
+ if(held?.startsWith('raw:'))return 'Chop it first'
+ if(station.potPresent===false)return carriedPot(held)?'Put pot on hob':'Bring a pot'
+ if(carriedPot(held))return 'Hob occupied'
+ if(!held)return 'Pick up pot'
+ if(station.readyAt&&now>=station.readyAt+KITCHEN_TIMING.burn)return 'Take the pot to the bin'
+ if(station.ingredients.length===2)return now<station.readyAt?'Still cooking':held==='plate'?'Plate soup':'Bring a clean plate'
+ return held?.startsWith('chopped:')?'Add ingredient':'Bring chopped ingredients'
 }
 export function joinKitchen(state,seat) {
  state.players[seat]??={x:2+seat*2,y:5,path:[],startedAt:0,target:null,held:null,notice:''}
@@ -86,8 +105,19 @@ export function returnedPlateCount(station,now=Date.now()) {
 export function advanceKitchen(state,now=Date.now()) {
  for(const definition of STATIONS){
   const station=state.stations[definition.id]??={ingredients:[],item:null,readyAt:0}
+  if(definition.type==='plates'&&station.count===undefined)station.count=5
   // Older rooms have unattended timers. Keep their progress, but require a chef to resume.
   if(['chop','sink'].includes(definition.type)&&station.item&&station.readyAt>now&&station.worker===undefined){station.remainingMs=station.readyAt-now;station.readyAt=0;station.worker=null}
+  if(definition.type==='sink'&&station.item){
+   station.dirtyCount??=1;station.cleanCount??=0
+   if(station.dirtyCount>0&&station.readyAt>0&&now>=station.readyAt){
+    const completed=Math.min(station.dirtyCount,1+Math.floor((now-station.readyAt)/KITCHEN_TIMING.wash))
+    station.dirtyCount-=completed;station.cleanCount+=completed
+    station.readyAt+=(completed-(station.dirtyCount?0:1))*KITCHEN_TIMING.wash
+    station.remainingMs=station.dirtyCount?KITCHEN_TIMING.wash:0
+    if(!station.dirtyCount)station.worker=null
+   }
+  }
  }
  const returns=state.stations['plate-return'],due=(returns.returnAt??[]).filter(at=>at<=now)
  if(due.length){returns.count=(returns.count??0)+due.length;returns.lastReturnAt=Math.max(...due);returns.returnAt=returns.returnAt.filter(at=>at>now)}
@@ -123,7 +153,7 @@ function interact(state,p,id,now) {
  const before=p.held
  performInteraction(state,p,id,now)
  if(before!==p.held){
-  p.interaction={id:(p.interaction?.id??0)+1,station:id,item:before??p.held,kind:before?'place':'pickup',at:now}
+  p.interaction={id:(p.interaction?.id??0)+1,station:id,item:id==='trash'&&p.held?'waste':before??p.held,kind:before?'place':'pickup',at:now}
  }
 }
 function performInteraction(state,p,id,now) {
@@ -132,13 +162,25 @@ function performInteraction(state,p,id,now) {
  p.notice=''
  const fail=(text)=>{p.notice=text}
  if(definition.type==='source') {if(p.held)return fail('Your hands are full');p.held=`raw:${definition.ingredient}`}
- if(definition.type==='plates') {if(p.held)return fail('Your hands are full');p.held='plate'}
+ if(definition.type==='plates') {
+  if(p.held==='plate'){station.count=cleanPlateCount(station)+1;p.held=null;return}
+  if(p.held)return fail('Only clean plates go here')
+  if(!cleanPlateCount(station))return fail('No clean plates')
+  station.count=cleanPlateCount(station)-1;p.held='plate'
+ }
  if(definition.type==='plate-return') {
+  const count=dirtyPlateCount(p.held)
+  if(count){station.count=(station.count??0)+count;p.held=null;return}
   if(p.held)return fail('Your hands are full')
   if(!(station.count>0))return fail('No dirty plates')
-  station.count--;p.held='dirty'
+  p.held=dirtyPlateItem(station.count);station.count=0
  }
- if(definition.type==='trash'){p.held=null}
+ if(definition.type==='trash'){
+  if(carriedPot(p.held)){p.held=emptyPot();return}
+  if(p.held?.startsWith('soup:')){p.held='plate';return}
+  if(p.held==='plate'||dirtyPlateCount(p.held))return fail('Keep the plate')
+  p.held=null
+ }
  if(definition.type==='counter') {
   if(p.held&&station.item)return fail('This counter is full')
   ;[p.held,station.item]=[station.item,p.held]
@@ -153,7 +195,20 @@ function performInteraction(state,p,id,now) {
   else fail('Bring a whole ingredient')
  }
  if(definition.type==='pot') {
-  if(station.readyAt&&now>=station.readyAt+KITCHEN_TIMING.burn){station.ingredients=[];station.readyAt=0;return fail('Burnt soup cleared')}
+  if(p.held?.startsWith('raw:'))return fail(potAction(station,p.held,now))
+  const pot=carriedPot(p.held)
+  if(station.potPresent===false){
+   if(!pot)return fail('Bring a pot')
+   station.potPresent=true;station.ingredients=pot.ingredients
+   station.readyAt=pot.cookLeft>0?now+pot.cookLeft:pot.ingredients.length===2?now-KITCHEN_TIMING.burn+(pot.burnt?0:pot.burnLeft):0
+   p.held=null;return
+  }
+  if(pot)return fail('Hob occupied')
+  if(!p.held){
+   p.held=`pot:${JSON.stringify({ingredients:station.ingredients.slice(),cookLeft:station.readyAt?Math.max(0,station.readyAt-now):0,burnLeft:station.readyAt?Math.max(0,Math.min(KITCHEN_TIMING.burn,station.readyAt+KITCHEN_TIMING.burn-now)):KITCHEN_TIMING.burn,burnt:!!station.readyAt&&now>=station.readyAt+KITCHEN_TIMING.burn})}`
+   station.potPresent=false;station.ingredients=[];station.readyAt=0;return
+  }
+  if(station.readyAt&&now>=station.readyAt+KITCHEN_TIMING.burn)return fail('Take the pot to the bin')
   if(station.ingredients.length===2) {
    if(now<station.readyAt)return fail('Still cooking')
    if(p.held!=='plate')return fail('Bring a clean plate')
@@ -161,7 +216,7 @@ function performInteraction(state,p,id,now) {
   } else if(p.held?.startsWith('chopped:')) {
    station.ingredients.push(p.held.split(':')[1]);p.held=null
    if(station.ingredients.length===2)station.readyAt=now+KITCHEN_TIMING.cook
-  } else fail('Add two chopped ingredients')
+  } else fail(potAction(station,p.held,now))
  }
  if(definition.type==='serve') {
   if(!p.held?.startsWith('soup:'))return fail('Bring a plated soup')
@@ -173,12 +228,24 @@ function performInteraction(state,p,id,now) {
   (returns.returnAt??=[]).push(now+KITCHEN_TIMING.plateReturn)
  }
  if(definition.type==='sink') {
+  const count=dirtyPlateCount(p.held)
+  if(count){
+   const seat=Number(Object.keys(state.players).find(seat=>state.players[seat]===p))
+   if(station.worker!=null&&station.worker!==seat&&station.readyAt>now)return fail('Station in use')
+   station.item='plate';station.dirtyCount=(station.dirtyCount??0)+count;station.cleanCount??=0
+   const remaining=station.readyAt>now?station.readyAt-now:station.remainingMs||KITCHEN_TIMING.wash
+   beginWork(state,p,station,remaining,now);p.held=null;return
+  }
   if(station.item) {
    if(p.held)return fail('Your hands are full')
+   if(station.cleanCount>0){
+    stopWork(state,p,now);station.cleanCount--;p.held='plate'
+    if(!station.dirtyCount&&!station.cleanCount){station.item=null;station.readyAt=0;station.remainingMs=0;station.worker=null}
+    return
+   }
    if(resumeWork(state,p,station,now))return
    if(now<station.readyAt)return fail('Still washing')
-   p.held='plate';station.item=null;station.readyAt=0;station.remainingMs=0;station.worker=null
-  }else if(p.held==='dirty'){station.item='plate';beginWork(state,p,station,KITCHEN_TIMING.wash,now);p.held=null}
+  }
   else fail('Bring a dirty plate')
  }
 }

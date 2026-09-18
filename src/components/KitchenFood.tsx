@@ -1,4 +1,7 @@
+import { dirtyPlateCount } from '../lib/kitchen/engine.mjs'
 export default function KitchenFood({item,scale=1}:{item:string;scale?:number}) {
+ if(dirtyPlateCount(item)>1)return <g transform={`scale(${scale})`} pointerEvents="none">{Array.from({length:Math.min(dirtyPlateCount(item),5)},(_,i)=><g key={i} transform={`translate(0 ${-i*5})`}><KitchenFood item="dirty"/></g>)}</g>
+ if(item.startsWith('pot:'))return <g transform={`scale(${scale})`} pointerEvents="none"><path d="M-18-10v22q0 7 18 7t18-7V-10M-18-4h-7v9h7M18-4h7v9h-7" fill="#afbec1" stroke="#405c69" strokeWidth="3"/><ellipse cy="-10" rx="18" ry="7" fill="#405c69" stroke="#dce7df" strokeWidth="3"/></g>
  const onion=item.includes('onion'),chopped=item.startsWith('chopped:'),plate=['plate','dirty'].includes(item)||item.startsWith('soup:')
  return <g transform={`scale(${scale})`} pointerEvents="none">{plate?<><ellipse rx="22" ry="15" fill="#fffdf5" stroke="#d8d9c9" strokeWidth="3"/><ellipse rx="16" ry="10" fill={item.startsWith('soup:')?onion?'#e8c76c':'#d55f42':'#f2f0e6'}/>{item==='dirty'&&<path d="M-10 2l7 3m3-8l8 5m-5 4l7-2" stroke="#b8864d" strokeWidth="3" strokeLinecap="round"/>}</>:chopped?<>{[[-9,-5,-18],[9,-1,16],[-3,8,-8]].map(([x,y,angle],i)=><g key={i} transform={`translate(${x} ${y}) rotate(${angle})`}>
    <ellipse cy="2" rx="12" ry="9" fill={onion?'#946399':'#ba3e2c'}/>

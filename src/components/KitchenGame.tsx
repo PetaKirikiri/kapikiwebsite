@@ -7,7 +7,7 @@ import { KitchenMovement } from '../lib/kitchen/movementSync'
 import { RemoteMovement } from '../lib/kitchen/remoteMovement'
 import { KitchenInteractions } from '../lib/kitchen/interactionSync'
 import { kitchenSound } from '../lib/kitchen/audio'
-import { KITCHEN_TIMING, returnedPlateCount, moveFreely, nearbyStation, type KitchenPlayer, type Kitchen, type Station, type KitchenInteraction } from '../lib/kitchen/engine.mjs'
+import { cleanPlateCount, dirtyPlateCount, washedPlateCount, carriedPot, potAction, returnedPlateCount, moveFreely, nearbyStation, type KitchenPlayer, type Kitchen, type Station, type KitchenInteraction } from '../lib/kitchen/engine.mjs'
 import './KitchenGame.css'
 import './KitchenTouchControls.css'
 
@@ -17,7 +17,7 @@ type Reach=KitchenInteraction&{began:number;seat:number}
 const KitchenWorld3D=lazy(()=>import('./KitchenWorld3D'))
 const REACH_MS=580
 const roomFromHash=()=>new URLSearchParams(window.location.hash.split('?')[1]??'').get('room')??''
-const itemName=(item:string|null)=>!item?'Empty hands':item==='plate'?'Plate':item==='dirty'?'Dirty plate':item.startsWith('soup:')?'Soup':`${item.startsWith('chopped:')?'Chopped ':''}${item.split(':')[1]}`
+const itemName=(item:string|null)=>!item?'Empty hands':carriedPot(item)?'Pot':item==='plate'?'Plate':dirtyPlateCount(item)?`${dirtyPlateCount(item)} dirty plate${dirtyPlateCount(item)>1?'s':''}`:item.startsWith('soup:')?'Soup':`${item.startsWith('chopped:')?'Chopped ':''}${item.split(':')[1]}`
 async function request(body?:Record<string,unknown>,room?:string):Promise<Session>{
  const response=await fetch(body?'/__classroom':`/__classroom?room=${encodeURIComponent(room??'')}`,{method:body?'POST':'GET',credentials:'same-origin',signal:AbortSignal.timeout(12000),...(body?{headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{})})
  const data=await response.json();if(!response.ok)throw Error(data.error??'Unable to connect');return data
@@ -25,16 +25,18 @@ async function request(body?:Record<string,unknown>,room?:string):Promise<Sessio
 function stationAction(s:Station,k:Kitchen,player:KitchenPlayer,now:number){
  const held=player.held,state=k.stations[s.id]
  if(s.type==='source')return held?'Hands full':`Pick up ${s.ingredient}`
- if(s.type==='plate-return')return held?'Hands full':returnedPlateCount(state,now)>0?'Pick up dirty plate':state?.returnAt?.length?'Plates returning…':'No dirty plates'
- if(s.type==='plates')return held?'Hands full':'Pick up plate'
+ if(s.type==='plate-return')return dirtyPlateCount(held)?'Put down plates':held?'Hands full':returnedPlateCount(state,now)>0?'Pick up dirty plates':state?.returnAt?.length?'Plates returning…':'No dirty plates'
+ if(s.type==='plates')return held==='plate'?'Return plate':held?'Only clean plates go here':cleanPlateCount(state)?'Pick up plate':'No clean plates'
  if(s.type==='chop'||s.type==='sink'){
+  if(s.type==='sink'&&dirtyPlateCount(held))return 'Wash plates'
+  if(s.type==='sink'&&washedPlateCount(state,now)>0)return held?'Hands full':'Pick up clean plate'
   if(state.item&&state.remainingMs&&!state.readyAt)return held?'Hands full':s.type==='chop'?'Resume chopping':'Resume washing'
   if(state.item)return held?'Hands full':now<state.readyAt?(s.type==='chop'?'Chopping…':'Washing…'):'Pick up'
-  return s.type==='chop'?(held?.startsWith('raw:')?'Chop':'Bring an ingredient'):(held==='dirty'?'Wash plate':'Bring a dirty plate')
+  return s.type==='chop'?(held?.startsWith('raw:')?'Chop':'Bring an ingredient'):'Bring a dirty plate'
  }
- if(s.type==='pot')return state.readyAt&&now>=state.readyAt+KITCHEN_TIMING.burn?'Clear burnt soup':state.ingredients.length===2?now<state.readyAt?'Cooking…':held==='plate'?'Plate soup':'Bring a plate':held?.startsWith('chopped:')?'Add ingredient':'Bring chopped ingredients'
+ if(s.type==='pot')return potAction(state,held,now)
  if(s.type==='serve')return held?.startsWith('soup:')?'Serve':'Bring a bowl of soup'
- if(s.type==='trash')return held?'Discard':'Bin'
+ if(s.type==='trash')return carriedPot(held)||held?.startsWith('soup:')?'Empty contents':held==='plate'||dirtyPlateCount(held)?'Keep the plate':held?'Discard':'Bin'
  return held?(state.item?'Counter full':'Put down'):state.item?'Pick up':'Empty counter'
 }
 function SoundIcon({muted}:{muted:boolean}){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z" strokeLinejoin="round"/>{muted?<path d="m17 9 5 6m0-6-5 6"/>:<><path d="M17 8q4 4 0 8m3-11q6 7 0 14"/></>}</svg>}

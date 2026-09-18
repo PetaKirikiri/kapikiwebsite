@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { KITCHEN_TIMING, moveFreely, returnedPlateCount, STATIONS, STEP_MS, createKitchen, joinKitchen, commandKitchen, advanceKitchen, findPath, isFloor } from './engine.mjs'
+import { KITCHEN_TIMING, carriedPot, cleanPlateCount, potAction, moveFreely, returnedPlateCount, STATIONS, STEP_MS, createKitchen, joinKitchen, commandKitchen, advanceKitchen, findPath, isFloor } from './engine.mjs'
 describe('shared kitchen',()=>{
  it('routes around the island and rejects occupied or invalid destinations',()=>{
   const path=findPath({x:5,y:2},{x:5,y:4})!
@@ -48,7 +48,8 @@ describe('shared kitchen',()=>{
   k.stations['pot-a']={item:null,ingredients:['tomato','tomato'],readyAt:10}
   commandKitchen(k,0,{op:'move',station:'pot-a'},30000);advanceKitchen(k,40000)
   expect(k.stations['pot-a'].ingredients).toEqual([])
-  expect(k.players[0].notice).toBe('Burnt soup cleared')
+  expect(k.stations['pot-a'].potPresent).toBe(false)
+  expect(carriedPot(k.players[0].held)).toMatchObject({ingredients:['tomato','tomato'],burnt:true})
  })
  it.each([['chop-a','raw:tomato','chopped:tomato',3000],['sink','dirty','plate',5000]] as const)('pauses %s on movement and lets another chef resume the remaining work',(id,input,output,duration)=>{
   const k=createKitchen(0);joinKitchen(k,0);joinKitchen(k,1)
@@ -92,8 +93,8 @@ describe('shared kitchen',()=>{
   expect(k.stations['plate-return'].returnAt).toEqual([])
   Object.assign(k.players[0],{x:10,y:3,facing:{x:1,y:0}})
   commandKitchen(k,0,{op:'input',commandId:crypto.randomUUID(),steps:[{activate:true}]},13001)
-  expect(k.players[0].held).toBe('dirty');expect(k.stations['plate-return'].count).toBe(2)
-  advanceKitchen(k,90000);expect(k.stations['plate-return'].count).toBe(2)
+  expect(k.players[0].held).toBe('dirty:3');expect(k.stations['plate-return'].count).toBe(0)
+  advanceKitchen(k,90000);expect(k.stations['plate-return'].count).toBe(0)
  })
  it('cannot collect a plate before it has returned',()=>{
   const k=createKitchen(0);joinKitchen(k,0)
@@ -150,4 +151,95 @@ describe('shared kitchen',()=>{
   expect(p.held).toBe('chopped:tomato');expect(k.stations['counter-4'].item).toBeNull()
  })
 
+})
+
+describe('cookware and plate ownership',()=>{
+ const setup=()=>{
+  const k=createKitchen(0);joinKitchen(k,0);joinKitchen(k,1)
+  const use=(id:string,now=1000,seat=0)=>{
+   const s=STATIONS.find(s=>s.id===id)!,p=k.players[seat],below=s.y===0||s.y===3&&s.type==='counter'
+   Object.assign(p,{x:s.x===11?10:s.x,y:s.x===11?s.y:s.y+(below?1:-1),path:[],target:null,facing:s.x===11?{x:1,y:0}:{x:0,y:below?-1:1}})
+   commandKitchen(k,seat,{op:'input',commandId:crypto.randomUUID(),steps:[{activate:true}]},now)
+  }
+  return {k,use,p:k.players[0]}
+ }
+ it.each(['tomato','onion'])('asks for preparation, not recipe quantities, when carrying raw %s',(ingredient)=>{
+  const {k,p,use}=setup();p.held=`raw:${ingredient}`
+  for(const ingredients of [[],['tomato'],['tomato','onion']]){
+   k.stations['pot-a'].ingredients=ingredients.slice();use('pot-a')
+   expect(p.notice).toBe('Chop it first');expect(p.held).toBe(`raw:${ingredient}`)
+   expect(k.stations['pot-a'].ingredients).toEqual(ingredients)
+   expect(potAction(k.stations['pot-a'],p.held,1000)).toBe(p.notice)
+  }
+ })
+ it('requires carrying the burnt pot to the bin and returning the empty pot',()=>{
+  const {k,p,use}=setup();k.stations['pot-a'].ingredients=['tomato','onion'];k.stations['pot-a'].readyAt=1000
+  p.held='plate';use('pot-a',20000)
+  expect(p.notice).toBe('Take the pot to the bin');expect(k.stations['pot-a'].ingredients).toHaveLength(2)
+  p.held=null;use('pot-a',20001)
+  expect(carriedPot(p.held)).toMatchObject({ingredients:['tomato','onion'],burnt:true})
+  expect(k.stations['pot-a'].potPresent).toBe(false)
+  use('pot-a',20002,1);expect(k.players[1].held).toBeNull();expect(k.players[1].notice).toBe('Bring a pot')
+  use('counter-4',20003);expect(p.held).toBeNull();expect(carriedPot(k.stations['counter-4'].item)?.burnt).toBe(true)
+  use('counter-4',20004);use('trash',20005)
+  expect(carriedPot(p.held)).toMatchObject({ingredients:[],burnt:false})
+  expect(p.interaction?.item).toBe('waste')
+  use('pot-a',20006)
+  expect(p.held).toBeNull();expect(k.stations['pot-a']).toMatchObject({potPresent:true,ingredients:[],readyAt:0})
+ })
+ it('pauses cooking off the hob and preserves it through counter storage and reload',()=>{
+  const {k,p,use}=setup();k.stations['pot-a'].ingredients=['onion','onion'];k.stations['pot-a'].readyAt=13000
+  use('pot-a',4000);expect(carriedPot(p.held)?.cookLeft).toBe(9000)
+  use('counter-4',5000);use('counter-4',99000)
+  p.held=JSON.parse(JSON.stringify(p.held))
+  use('pot-a',100000);expect(k.stations['pot-a'].readyAt).toBe(109000)
+ })
+ it('cannot overwrite another pot or discard a plate',()=>{
+  const {k,p,use}=setup();use('pot-a');const pot=p.held
+  use('pot-b');expect(p.held).toBe(pot);expect(p.notice).toBe('Hob occupied')
+  use('pot-a');p.held='soup:tomato+tomato';use('trash');expect(p.held).toBe('plate')
+  use('trash');expect(p.held).toBe('plate')
+  p.held='dirty:3';use('trash');expect(p.held).toBe('dirty:3')
+  expect(k.stations['pot-b'].potPresent).not.toBe(false)
+ })
+ it('depletes the clean supply and accepts a returned clean plate without creating extras',()=>{
+  const {k,p,use}=setup()
+  for(let i=0;i<5;i++){use('plates');expect(p.held).toBe('plate');p.held=null}
+  use('plates');expect(p.held).toBeNull();expect(cleanPlateCount(k.stations.plates)).toBe(0)
+  p.held='plate';use('plates');expect(p.held).toBeNull();expect(k.stations.plates.count).toBe(1)
+  use('plates');expect(p.held).toBe('plate');expect(k.stations.plates.count).toBe(0)
+  use('counter-4');expect(p.held).toBeNull();expect(k.stations['counter-4'].item).toBe('plate')
+ })
+ it.each(['dirty','dirty:3','soup:tomato+tomato','raw:tomato'])('rejects %s from the clean stack without changing inventory',(held)=>{
+  const {k,p,use}=setup();p.held=held;use('plates')
+  expect(p.held).toBe(held);expect(k.stations.plates.count).toBe(5)
+  expect(p.notice).toBe('Only clean plates go here')
+ })
+ it('acknowledges a clean-plate return only once across retried or queued presses',()=>{
+  const {k,p,use}=setup();p.held='plate';use('plates');p.held='plate';k.stations.plates.count=4
+  const actionId=crypto.randomUUID(),step={activate:true as const,actionId,intent:{station:'plates',held:'plate'}}
+  const body={op:'input',commandId:crypto.randomUUID(),steps:[step]}
+  commandKitchen(k,0,body,1001);commandKitchen(k,0,body,1002)
+  commandKitchen(k,0,{...body,commandId:crypto.randomUUID()},1003)
+  expect(p.held).toBeNull();expect(k.stations.plates.count).toBe(5)
+  commandKitchen(k,0,{...body,commandId:crypto.randomUUID(),steps:[{...step,actionId:crypto.randomUUID()}]},1004)
+  expect(p.held).toBeNull();expect(k.stations.plates.count).toBe(5)
+ })
+ it('carries a dirty stack, washes each plate, then picks clean plates up individually',()=>{
+  const {k,p,use}=setup();k.stations['plate-return'].count=3
+  use('plate-return');expect(p.held).toBe('dirty:3')
+  use('sink',2000);expect(p.held).toBeNull();expect(k.stations.sink.dirtyCount).toBe(3)
+  advanceKitchen(k,7000);expect(k.stations.sink).toMatchObject({dirtyCount:2,cleanCount:1,readyAt:12000})
+  advanceKitchen(k,17000);expect(k.stations.sink).toMatchObject({dirtyCount:0,cleanCount:3,worker:null})
+  for(let i=0;i<3;i++){use('sink',17001+i);expect(p.held).toBe('plate');p.held=null}
+  expect(k.stations.sink.item).toBeNull();use('sink',17005);expect(p.held).toBeNull()
+ })
+ it('pauses the remaining stack when a clean plate is collected, without duplicating completions',()=>{
+  const {k,p,use}=setup();p.held='dirty:3';use('sink',1000)
+  use('sink',7000);expect(p.held).toBe('plate');expect(k.stations.sink).toMatchObject({dirtyCount:2,cleanCount:0,remainingMs:4000,readyAt:0})
+  advanceKitchen(k,50000);expect(k.stations.sink.cleanCount).toBe(0)
+  p.held=null;use('sink',50001);advanceKitchen(k,59001)
+  expect(k.stations.sink).toMatchObject({dirtyCount:0,cleanCount:2})
+  advanceKitchen(k,60000);expect(k.stations.sink.cleanCount).toBe(2)
+ })
 })

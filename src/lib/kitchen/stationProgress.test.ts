@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { KITCHEN_TIMING, createKitchen, joinKitchen, commandKitchen } from './engine.mjs'
+import { KITCHEN_TIMING, carriedPot, createKitchen, joinKitchen, commandKitchen } from './engine.mjs'
 import { stationProgress } from './stationProgress'
 const state={readyAt:20000,item:null,ingredients:['tomato','tomato']}
 describe('station timers',()=>{
@@ -28,7 +28,7 @@ describe('station timers',()=>{
   use(19999);expect(p.held).toBe('plate')
   use(20000);expect(p.held).toBe('soup:tomato+tomato')
   k.stations['pot-a']={...state};p.held=null
-  use(32000);expect(k.stations['pot-a'].ingredients).toEqual([]);expect(p.notice).toBe('Burnt soup cleared')
+  use(32000);expect(k.stations['pot-a'].potPresent).toBe(false);expect(carriedPot(p.held)?.burnt).toBe(true)
  })
  it('freezes paused progress instead of letting the wall clock complete it',()=>{
   const paused={item:'chopped:tomato',ingredients:[],readyAt:0,remainingMs:1500,worker:null}
