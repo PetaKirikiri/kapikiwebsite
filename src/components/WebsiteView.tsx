@@ -54,6 +54,12 @@ type WebsiteViewProps = {
 
 type CurriculumLevel = 1 | 2 | 3 | 4 | 5 | 6
 
+// Keep existing methodology links working while its introduction is hidden.
+function currentWebsiteSection() {
+  const section = window.location.hash || '#website-top'
+  return section === '#methodology' ? '#level-finder' : section
+}
+
 
 function demoManifest(
   sentence: WebsitePreviewSentence,
@@ -87,12 +93,16 @@ export default function WebsiteView({
   const [selectedLevel, setSelectedLevel] = useState<CurriculumLevel>(1)
   const [showLevelOverview, setShowLevelOverview] = useState(true)
   const [accountOpen, setAccountOpen] = useState(() => ['#account', '#join'].includes(window.location.hash))
-  const [activeSection, setActiveSection] = useState(() => window.location.hash || '#website-top')
+  const [activeSection, setActiveSection] = useState(currentWebsiteSection)
   useEffect(() => {
     const openAccount = () => {
-      setActiveSection(window.location.hash || '#website-top')
+      const section = currentWebsiteSection()
+      if (window.location.hash === '#methodology') window.history.replaceState(null, '', '#level-finder')
+      setActiveSection(section)
+      if (section === '#level-finder') setShowLevelOverview(true)
       if (['#account', '#join'].includes(window.location.hash)) setAccountOpen(true)
     }
+    openAccount()
     window.addEventListener('hashchange', openAccount)
     return () => window.removeEventListener('hashchange', openAccount)
   }, [])
@@ -182,14 +192,14 @@ export default function WebsiteView({
         <a href="#website-top" className="site-wordmark" aria-label="Ka Piki"><KaPikiWordmark /></a>
         <nav aria-label="Website navigation" className="site-nav">
           {[
-            ['#methodology', 'Methodology'],
+            ['#level-finder', 'Methodology'],
             ['#competency', 'Capabilities'],
           ].map(([href, label]) => {
-            const active = activeSection === href || (href === '#methodology' && ['#level-finder', '#teacher', '#account', '#join'].includes(activeSection))
+            const active = activeSection === href || (href === '#level-finder' && ['#teacher', '#account', '#join'].includes(activeSection))
             const journey = `${activeSection}:${navReplay}`
             const prefix = href === '#competency' ? 'Your' : 'Our'
             const showPrefix = !!prefix && active && completedNav === journey
-            return <a key={href} href={href} onClick={() => { setCompletedNav(''); if (active) setNavReplay(value => value + 1) }} aria-label={prefix ? `${prefix} ${label}` : undefined} aria-current={active ? 'location' : undefined} className={`site-nav-item${active ? ' site-nav-item-active' : ''}`}>
+            return <a key={href} href={href} onClick={() => { if (href === '#level-finder') setShowLevelOverview(true); setCompletedNav(''); if (active) setNavReplay(value => value + 1) }} aria-label={prefix ? `${prefix} ${label}` : undefined} aria-current={active ? 'location' : undefined} className={`site-nav-item${active ? ' site-nav-item-active' : ''}`}>
               {prefix ? <span className={`site-nav-prefix${showPrefix ? ' site-nav-prefix-visible' : ''}`} aria-hidden="true"><span style={{ clipPath: `inset(0 0 0 ${ourReveal}%)` }}>{prefix}&nbsp;</span></span> : null}
               <span className="site-nav-anchor">{active ? <NavigationRail key={navReplay} noun={!!prefix} leftWord={prefix} onLeftReveal={setOurReveal} onComplete={() => setCompletedNav(journey)} /> : null}{label}</span>
             </a>
@@ -201,11 +211,10 @@ export default function WebsiteView({
         {activeSection !== '#competency' ? <span className="site-section-audience">For learners</span> : null}
         <nav aria-label={activeSection === '#competency' ? 'Capabilities sections' : 'Learning sections'}>
           {(activeSection === '#competency' ? [['#competency', 'Team capabilities']] : [
-            ['#methodology', 'How you learn'],
             ['#level-finder', 'Levels'],
             ['#training', 'APP'],
             ['#classroom', 'Classroom'],
-          ]).map(([href, label]) => <a key={href} href={href} aria-current={activeSection === href ? 'page' : undefined}>{label}</a>)}
+          ]).map(([href, label]) => <a key={href} href={href} onClick={() => { if (href === '#level-finder') setShowLevelOverview(true) }} aria-current={activeSection === href ? 'page' : undefined}>{label}</a>)}
         </nav>
       </div> : null}
 
@@ -233,7 +242,7 @@ export default function WebsiteView({
           </section>
           <section className="site-offer-story site-offer-story-grammar">
             <div><h2>Deep learning. Simple patterns.</h2><p>Build your command of sentence structures over 50 weeks. Digital rākau make the patterns visible, keeping complex grammatical terminology out of the way.</p></div>
-            <figure><a href="#methodology" aria-label="Explore our digital rākau methodology"><img src={offerGrammar} loading="lazy" alt="Digital rākau show how a WHEN word grows onto a verb alongside noun phrases" /></a><figcaption>Our digital rākau system</figcaption></figure>
+            <figure><a href="#level-finder" aria-label="Explore course levels"><img src={offerGrammar} loading="lazy" alt="Digital rākau show how a WHEN word grows onto a verb alongside noun phrases" /></a><figcaption>Our digital rākau system</figcaption></figure>
           </section>
         </div>
         <p className="site-corporate-closing">You bring the team. We take care of the rest.</p>
