@@ -1,3 +1,5 @@
+import { readWebsiteJson } from '../lib/websiteData'
+import LevelCourseOverview from './LevelCourseOverview'
 import GuessWhoGame from './GuessWhoGame'
 import KitchenGame from './KitchenGame'
 import LiveClassroom from './LiveClassroom'
@@ -75,12 +77,15 @@ export default function WebsiteView({
   const connectedLocally = localData !== undefined
   const [fetchedData, setFetchedData] = useState<WebsitePreviewData | null>(null)
   const [fetchError, setFetchError] = useState<string | null>(null)
+  const [trainingError, setTrainingError] = useState<string | null>(null)
+  const [loadAttempt, setLoadAttempt] = useState(0)
   const [localStates, setLocalStates] = useState<ReadonlyMap<number, BusManifestSheet>>(new Map())
   const [navReplay, setNavReplay] = useState(0)
   const [methodStep, setMethodStep] = useState(0)
   const [completedNav, setCompletedNav] = useState('')
   const [ourReveal, setOurReveal] = useState(100)
   const [selectedLevel, setSelectedLevel] = useState<CurriculumLevel>(1)
+  const [showLevelOverview, setShowLevelOverview] = useState(true)
   const [accountOpen, setAccountOpen] = useState(() => ['#account', '#join'].includes(window.location.hash))
   const [activeSection, setActiveSection] = useState(() => window.location.hash || '#website-top')
   useEffect(() => {
@@ -95,27 +100,25 @@ export default function WebsiteView({
   useEffect(() => {
     if (connectedLocally) return
     const controller = new AbortController()
-    void fetch('/__website_preview_data', { signal: controller.signal })
-      .then(async (response) => {
-        if (!response.ok) throw new Error(`The course examples could not load (${response.status}).`)
-        return response.json() as Promise<WebsitePreviewData>
-      })
+    void readWebsiteJson<WebsitePreviewData>('/__website_preview_data', controller.signal)
       .then(async course => {
-        const response = await fetch('/__training_content', { signal: controller.signal })
-        if (!response.ok) throw new Error('App content could not load from the database.')
-        const { content } = await response.json() as { content: { structureId: number; textMi: string; correct: string; alternative: string; active: boolean }[] }
-        setFetchedData({ ...course, sentences: course.sentences.map(sentence => ({ ...sentence, training: content.find(row => row.structureId === sentence.structureId && row.textMi === sentence.textMi) })) })
-      })
-      .catch((cause: unknown) => {
-        if (!controller.signal.aborted) {
-          setFetchError(cause instanceof Error ? cause.message : 'The course examples could not load.')
+        if (controller.signal.aborted) return
+        setFetchedData(course)
+        try {
+          const { content } = await readWebsiteJson<{ content: { structureId: number; textMi: string; correct: string; alternative: string; active: boolean }[] }>('/__training_content', controller.signal)
+          if (!controller.signal.aborted) setFetchedData({ ...course, sentences: course.sentences.map(sentence => ({ ...sentence, training: content.find(row => row.structureId === sentence.structureId && row.textMi === sentence.textMi) })) })
+        } catch {
+          if (!controller.signal.aborted) setTrainingError('Practice content is temporarily unavailable. Please try again.')
         }
       })
+      .catch(() => {
+        if (!controller.signal.aborted) setFetchError('Course examples are temporarily unavailable.')
+      })
     return () => controller.abort()
-  }, [connectedLocally])
+  }, [connectedLocally, loadAttempt])
 
   const data = connectedLocally ? localData : fetchedData
-  const error = connectedLocally ? localError : fetchError
+  const error = connectedLocally ? localError : fetchError ?? (activeSection.startsWith('#training') ? trainingError : null)
 
   const states = useMemo(() => {
     const next = new Map<number, BusManifestSheet>()
@@ -134,11 +137,9 @@ export default function WebsiteView({
   }
 
   const changeLevel = (nextLevel: CurriculumLevel) => {
-    const scrollTop = window.scrollY
     setSelectedLevel(nextLevel)
-    window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
-      window.scrollTo(0, scrollTop)
-    }))
+    setShowLevelOverview(false)
+    window.scrollTo({ top: 0, behavior: 'instant' })
   }
 
   const levelSentences = data?.sentences.filter((sentence) => sentence.curriculumLevel === selectedLevel) ?? []
@@ -182,13 +183,11 @@ export default function WebsiteView({
         <nav aria-label="Website navigation" className="site-nav">
           {[
             ['#methodology', 'Methodology'],
-            ['#level-finder', 'Levels'],
             ['#competency', 'Capabilities'],
-            ['#training', 'APP'],
           ].map(([href, label]) => {
-            const active = activeSection === href || (href === '#level-finder' && activeSection === '#teacher')
+            const active = activeSection === href || (href === '#methodology' && ['#level-finder', '#teacher', '#account', '#join'].includes(activeSection))
             const journey = `${activeSection}:${navReplay}`
-            const prefix = href === '#competency' ? 'Your' : href === '#methodology' || href === '#level-finder' ? 'Our' : undefined
+            const prefix = href === '#competency' ? 'Your' : 'Our'
             const showPrefix = !!prefix && active && completedNav === journey
             return <a key={href} href={href} onClick={() => { setCompletedNav(''); if (active) setNavReplay(value => value + 1) }} aria-label={prefix ? `${prefix} ${label}` : undefined} aria-current={active ? 'location' : undefined} className={`site-nav-item${active ? ' site-nav-item-active' : ''}`}>
               {prefix ? <span className={`site-nav-prefix${showPrefix ? ' site-nav-prefix-visible' : ''}`} aria-hidden="true"><span style={{ clipPath: `inset(0 0 0 ${ourReveal}%)` }}>{prefix}&nbsp;</span></span> : null}
@@ -197,6 +196,18 @@ export default function WebsiteView({
           })}
         </nav>
       </header>
+
+      {activeSection !== '#website-top' ? <div className="site-section-navigation">
+        {activeSection !== '#competency' ? <span className="site-section-audience">For learners</span> : null}
+        <nav aria-label={activeSection === '#competency' ? 'Capabilities sections' : 'Learning sections'}>
+          {(activeSection === '#competency' ? [['#competency', 'Team capabilities']] : [
+            ['#methodology', 'How you learn'],
+            ['#level-finder', 'Levels'],
+            ['#training', 'APP'],
+            ['#classroom', 'Classroom'],
+          ]).map(([href, label]) => <a key={href} href={href} aria-current={activeSection === href ? 'page' : undefined}>{label}</a>)}
+        </nav>
+      </div> : null}
 
       {activeSection === '#website-top' ? <main className="site-corporate-welcome" aria-label="Corporate training">
         <div className="site-corporate-offer">
@@ -273,22 +284,20 @@ export default function WebsiteView({
         </div>
       </section> : activeSection === '#competency' ? <section id="competency" className="site-methodology" aria-label="Capabilities">
         <CapabilitiesDashboard />
-      </section> : <section id="level-finder" className="site-learning">
-        <header className="site-level-header">
-          <h1>Find your level.</h1>
-          <nav className="site-level-nav" aria-label="Choose your level">
-            <div className="site-level-buttons">{([1, 2, 3, 4, 5, 6] as const).map(level => <button key={level} type="button" aria-label={`Level ${level}`} aria-pressed={selectedLevel === level} disabled={data == null} onClick={() => changeLevel(level)}>{level}</button>)}</div>
-          </nav>
-          <button type="button" className="site-level-signup" onClick={() => setAccountOpen(true)}>Sign up · Level {selectedLevel}</button>
+      </section> : <section id="level-finder" className={`site-learning${showLevelOverview ? '' : ' site-level-detail'}`}>
+        {!showLevelOverview ? <button type="button" className="level-course-back" onClick={() => setShowLevelOverview(true)}>← All levels</button> : null}
+        <header className={`site-level-header${showLevelOverview ? ' site-level-header-overview' : ''}`}>
+          <h1>{showLevelOverview ? 'Course levels' : `Level ${selectedLevel}`}</h1>
+          {!showLevelOverview ? <button type="button" className="site-level-signup" disabled={data == null} onClick={() => setAccountOpen(true)}>Sign up · Level {selectedLevel}</button> : null}
         </header>
-        {error != null ? <p role="alert" className="rounded-xl bg-red-50 p-4 text-red-700">{error}</p> : null}
+        {error != null ? <div role="alert" className="site-load-error"><p>{error}</p><button type="button" onClick={() => { setFetchError(null); setTrainingError(null); setLoadAttempt(value => value + 1) }}>Try again</button></div> : null}
         {data == null && error == null ? (
           <p role="status" className="site-loading">Loading levels…</p>
         ) : null}
 
         {data != null ? <>
           <div className="site-level-layout">
-            <div className="site-sentence-panel">
+            {showLevelOverview ? <LevelCourseOverview sentences={data.sentences} onSelect={changeLevel} /> : <div className="site-sentence-panel">
             <div className="site-sentences" aria-label={`Level ${selectedLevel} sentence structures`}>
               {levelSentences.length === 0 ? <p className="px-3 py-6 text-slate-600">No sentence structures assigned to this level yet.</p> :
               <FamilyConnectorSentenceView
@@ -319,7 +328,7 @@ export default function WebsiteView({
                 readOnly
               />}
             </div>
-            </div>
+            </div>}
           </div>
 
         </> : null}

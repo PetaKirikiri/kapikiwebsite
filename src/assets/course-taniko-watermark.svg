@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <!-- Original decorative weaving-inspired repeat, separate from grammar shapes. -->
+  <defs>
+    <g id="diamond" fill="white">
+      <path fill-rule="evenodd" d="M48 0h12v12h12v12h12v12h12v24H84v12H72v12H60v12H36V84H24V72H12V60H0V36h12V24h12V12h12V0h12Zm0 18L18 48l30 30 30-30-30-30Z"/>
+      <path d="m48 30 18 18-18 18-18-18Z"/>
+    </g>
+    <g id="triangles" fill="white">
+      <path d="M0 24 24 0l24 24ZM48 24 72 0l24 24ZM96 24 120 0l24 24ZM144 24 168 0l24 24Z"/>
+    </g>
+  </defs>
+  <path d="M0 3h192M0 37h192M0 155h192M0 189h192" fill="none" stroke="white" stroke-width="2"/>
+  <use href="#triangles" y="8"/>
+  <use href="#diamond" y="48"/>
+  <use href="#diamond" x="96" y="48"/>
+  <use href="#triangles" transform="translate(192 184) rotate(180)"/>
+</svg>
