@@ -1,15 +1,14 @@
 import type { WebsitePreviewSentence } from './WebsiteView'
 import { CURRICULUM_LEVELS, type CurriculumLevel } from '../lib/sentenceStructureLevels'
-import NavigationRail from './NavigationRail'
 
 // Editorial summaries of the course. Structure membership and counts come from the live roster.
 const LEVEL_PRESENTATION = {
-  1: { welcome: 'Start with the language to introduce yourself and describe the world around you.', title: 'Foundations', phrase: 'Ko · He', topics: ['Pepeha', 'Pronunciation', 'Vocabulary', 'Sentence patterns'] },
-  2: { welcome: 'Build on your foundations to talk about where things are and what is happening.', title: 'Actions & time', phrase: 'I · Kei te · Ka', topics: ['Position', 'Past & present', 'Future actions', 'What should happen'] },
-  3: { welcome: 'Expand your everyday language with ways to say no, give instructions and express what you want.', title: 'Negatives & instructions', phrase: 'Kāore · Kaua', topics: ['Negatives', 'Not yet', 'Instructions', 'Desired outcomes'] },
-  4: { welcome: 'Make your meaning clearer when talking about belonging, purpose and who is doing what.', title: 'Ownership & emphasis', phrase: 'Nā · Nō · Mā · Mō', topics: ['Belonging', 'Who it is for', 'Who did it', 'Who will do it'] },
-  5: { welcome: 'Develop more ways to express yourself through comparisons, ability and different perspectives.', title: 'Expression & ability', phrase: 'Ka taea', topics: ['Comparisons', 'Habits', 'Ability', 'Passive sentences'] },
-  6: { welcome: 'Keep the conversation going with questions about why, when and what might happen.', title: 'Questions & conditions', phrase: 'He aha?', topics: ['Why?', 'When?', 'What if?', 'Negative questions'] },
+  1: { welcome: 'Start with the language to introduce yourself and describe the world around you.', title: 'Foundations', capability: 'Introduce yourself and describe your world', topics: ['Pepeha', 'Pronunciation', 'Vocabulary', 'Sentence patterns'] },
+  2: { welcome: 'Build on your foundations to talk about where things are and what is happening.', title: 'Actions & time', capability: 'Talk about what happens and when', topics: ['Position', 'Past & present', 'Future actions', 'What should happen'] },
+  3: { welcome: 'Expand your everyday language with ways to say no, give instructions and express what you want.', title: 'Negatives & instructions', capability: 'Express your needs and give instructions', topics: ['Negatives', 'Not yet', 'Instructions', 'Desired outcomes'] },
+  4: { welcome: 'Make your meaning clearer when talking about belonging, purpose and who is doing what.', title: 'Ownership & emphasis', capability: 'Explain belonging, purpose and responsibility', topics: ['Belonging', 'Who it is for', 'Who did it', 'Who will do it'] },
+  5: { welcome: 'Develop more ways to express yourself through comparisons, ability and different perspectives.', title: 'Expression & ability', capability: 'Compare ideas and express what is possible', topics: ['Comparisons', 'Habits', 'Ability', 'Passive sentences'] },
+  6: { welcome: 'Keep the conversation going with questions about why, when and what might happen.', title: 'Questions & conditions', capability: 'Ask why, when and what if', topics: ['Why?', 'When?', 'What if?', 'Negative questions'] },
 } as const
 
 // Familiar interface symbols for scanning course topics; these are not grammar shapes.
@@ -47,18 +46,17 @@ export default function LevelCourseOverview({ sentences, onSelect }: {
   return <div className="level-course-grid" aria-label="Course levels">
     {CURRICULUM_LEVELS.map(level => {
       const count = sentences.filter(sentence => sentence.curriculumLevel === level).length
-      const { title, phrase, topics, welcome } = LEVEL_PRESENTATION[level]
+      const { title, capability, topics, welcome } = LEVEL_PRESENTATION[level]
       return <article key={level} className={`level-course-card level-course-card-${level}`} aria-labelledby={`course-level-${level}`}>
         <div className="level-course-cover">
           <div className="level-course-cover-top">
             <span id={`course-level-${level}`} className="level-course-label">Level {level}</span>
             <span className="level-course-sequence" aria-hidden="true">{CURRICULUM_LEVELS.map(step => <i key={step} className={step <= level ? 'is-filled' : undefined} />)}</span>
           </div>
-          <p className="level-course-phrase" lang="mi">{phrase}</p>
-          <div className="level-course-brand" aria-hidden="true"><NavigationRail noun={level === 1 || level === 4} /></div>
+          <h2 className="level-course-capability">{capability}</h2>
         </div>
         <div className="level-course-body">
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <p className="level-course-welcome">{welcome}</p>
           <ul className="level-course-topics-list">{topics.map((topic, index) => <li key={topic}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d={TOPIC_ICONS[LEVEL_ICONS[level][index]]} /></svg>
