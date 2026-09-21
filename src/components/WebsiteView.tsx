@@ -1,5 +1,6 @@
 import { readWebsiteJson } from '../lib/websiteData'
 import LevelCourseOverview from './LevelCourseOverview'
+import CourseFormat from './CourseFormat'
 import GuessWhoGame from './GuessWhoGame'
 import KitchenGame from './KitchenGame'
 import LiveClassroom from './LiveClassroom'
@@ -299,6 +300,7 @@ export default function WebsiteView({
           <h1>{showLevelOverview ? 'Course levels' : `Level ${selectedLevel}`}</h1>
           {!showLevelOverview ? <button type="button" className="site-level-signup" disabled={data == null} onClick={() => setAccountOpen(true)}>Sign up · Level {selectedLevel}</button> : null}
         </header>
+        {showLevelOverview ? <CourseFormat /> : null}
         {error != null ? <div role="alert" className="site-load-error"><p>{error}</p><button type="button" onClick={() => { setFetchError(null); setTrainingError(null); setLoadAttempt(value => value + 1) }}>Try again</button></div> : null}
         {data == null && error == null ? (
           <p role="status" className="site-loading">Loading levels…</p>
