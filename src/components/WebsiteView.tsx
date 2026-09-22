@@ -1,6 +1,7 @@
 import { readWebsiteJson } from '../lib/websiteData'
 import LevelCourseOverview from './LevelCourseOverview'
 import CourseFormat from './CourseFormat'
+import LevelOnePepeha from './LevelOnePepeha'
 import GuessWhoGame from './GuessWhoGame'
 import KitchenGame from './KitchenGame'
 import LiveClassroom from './LiveClassroom'
@@ -322,7 +323,9 @@ export default function WebsiteView({
 
         {data != null ? <>
           <div className="site-level-layout">
-            {showLevelOverview ? <LevelCourseOverview sentences={data.sentences} onSelect={changeLevel} /> : <div className="site-sentence-panel">
+            {showLevelOverview ? <LevelCourseOverview sentences={data.sentences} onSelect={changeLevel} /> : <div>
+            {selectedLevel === 1 ? <LevelOnePepeha /> : null}
+            <div className="site-sentence-panel">
             <div className="site-sentences" aria-label={`Level ${selectedLevel} sentence structures`}>
               {levelSentences.length === 0 ? <p className="px-3 py-6 text-slate-600">No sentence structures assigned to this level yet.</p> :
               <FamilyConnectorSentenceView
@@ -352,6 +355,7 @@ export default function WebsiteView({
                 }}
                 readOnly
               />}
+            </div>
             </div>
             </div>}
           </div>
