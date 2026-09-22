@@ -209,12 +209,9 @@ export default function WebsiteView({
       </header>
 
       {activeSection !== '#website-top' ? <div className="site-section-navigation">
-        {activeSection !== '#competency' ? <span className="site-section-audience">For learners</span> : null}
         <nav aria-label={activeSection === '#competency' ? 'Capabilities sections' : 'Learning sections'}>
           {(activeSection === '#competency' ? [['#competency', 'Team capabilities']] : [
             ['#level-finder', 'Levels'],
-            ['#training', 'APP'],
-            ['#classroom', 'Classroom'],
           ]).map(([href, label]) => <a key={href} href={href} onClick={() => { if (href === '#level-finder') setShowLevelOverview(true) }} aria-current={activeSection === href ? 'page' : undefined}>{label}</a>)}
         </nav>
       </div> : null}
