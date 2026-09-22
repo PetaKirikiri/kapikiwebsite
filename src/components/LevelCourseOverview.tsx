@@ -1,3 +1,4 @@
+import './SiteIdentity.css'
 import type { WebsitePreviewSentence } from './WebsiteView'
 import { CURRICULUM_LEVELS, type CurriculumLevel } from '../lib/sentenceStructureLevels'
 
@@ -47,13 +48,13 @@ export default function LevelCourseOverview({ sentences, onSelect }: {
     {CURRICULUM_LEVELS.map(level => {
       const count = sentences.filter(sentence => sentence.curriculumLevel === level).length
       const { title, capability, topics, welcome } = LEVEL_PRESENTATION[level]
-      return <article key={level} className={`level-course-card level-course-card-${level}`} aria-labelledby={`course-level-${level}`}>
-        <div className="level-course-cover">
+      return <article key={level} className={`site-card level-course-card level-course-card-${level}`} aria-labelledby={`course-level-${level}`}>
+        <div className="site-card-cover level-course-cover">
           <div className="level-course-cover-top">
             <span id={`course-level-${level}`} className="level-course-label">Level {level}</span>
             <span className="level-course-sequence" aria-hidden="true">{CURRICULUM_LEVELS.map(step => <i key={step} className={step <= level ? 'is-filled' : undefined} />)}</span>
           </div>
-          <h2 className="level-course-capability">{capability}</h2>
+          <h2 className="site-card-title level-course-capability">{capability}</h2>
         </div>
         <div className="level-course-body">
           <h3>{title}</h3>

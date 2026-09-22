@@ -471,21 +471,20 @@
 #level-finder { max-width: 1188px; padding-top: 32px; }
 #level-finder .site-level-header-overview { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .level-course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.level-course-card { --cover: #214b3d; --cover-ink: #e8f5df; --cover-mark: #91bb95; display: flex; flex-direction: column; min-width: 0; border: 1px solid #d8ddd5; border-radius: 12px; overflow: hidden; background: #fdfdf9; color: var(--site-ink); box-shadow: 0 3px 0 #213b3508; transition: box-shadow .18s ease, border-color .18s ease; }
-.level-course-card-2 { --cover: #225769; --cover-ink: #e4f4f8; --cover-mark: #7ac0d6; }
-.level-course-card-3 { --cover: #58496d; --cover-ink: #f2eafb; --cover-mark: #b69adf; }
-.level-course-card-4 { --cover: #2a5855; --cover-ink: #e4f5ed; --cover-mark: #79c8bd; }
-.level-course-card-5 { --cover: #645633; --cover-ink: #fff4d6; --cover-mark: #deca8f; }
-.level-course-card-6 { --cover: #70445b; --cover-ink: #fbeaf2; --cover-mark: #e2a4c0; }
+.level-course-card { display: flex; flex-direction: column; transition: box-shadow .18s ease, border-color .18s ease; }
+.level-course-card-2 { --cover: var(--ka-blue); --cover-ink: #e4f4f8; --cover-mark: #7ac0d6; }
+.level-course-card-3 { --cover: var(--ka-purple); --cover-ink: #f2eafb; --cover-mark: #b69adf; }
+.level-course-card-4 { --cover: var(--ka-teal); --cover-ink: #e4f5ed; --cover-mark: #79c8bd; }
+.level-course-card-5 { --cover: var(--ka-ochre); --cover-ink: #fff4d6; --cover-mark: #deca8f; }
+.level-course-card-6 { --cover: var(--ka-rose); --cover-ink: #fbeaf2; --cover-mark: #e2a4c0; }
 .level-course-card:hover, .level-course-card:focus-within { border-color: var(--cover); box-shadow: 0 8px 24px #213b3512; }
-.level-course-cover { position: relative; isolation: isolate; min-height: 176px; padding: 22px 24px; overflow: hidden; background: var(--cover); color: var(--cover-ink); }
+.level-course-cover { min-height: 176px; padding: 22px 24px; }
 .level-course-cover-top { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .level-course-label { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .level-course-sequence { display: flex; gap: 4px; }
 .level-course-sequence i { display: block; width: 6px; height: 6px; border-radius: 50%; border: 1px solid var(--cover-mark); }
 .level-course-sequence .is-filled { background: var(--cover-mark); }
-.level-course-cover::before { content: ''; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: url('../assets/course-taniko-watermark.svg') right center / 192px 192px repeat; opacity: .15; mask-image: linear-gradient(to right, transparent 4%, #0004 42%, #000 100%); }
-.level-course-capability { position: relative; margin: 28px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(25px, 2.3vw, 30px); font-weight: 400; line-height: 1.15; letter-spacing: -.025em; text-wrap: balance; }
+.level-course-capability { position: relative; margin: 28px 0 0; }
 .level-course-body { display: flex; flex-direction: column; flex: 1; padding: 24px; }
 .level-course-body h3 { margin: 0; min-height: 54px; font-size: 22px; font-weight: 600; line-height: 1.2; letter-spacing: -.035em; }
 .level-course-welcome { margin: 10px 0 0; min-height: 63px; font-size: 14px; line-height: 1.5; color: var(--site-muted); }

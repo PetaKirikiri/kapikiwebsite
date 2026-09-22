@@ -1,3 +1,4 @@
+import './SiteIdentity.css'
 import { Fragment, useState } from 'react'
 import './CapabilitiesDashboard.css'
 
@@ -56,8 +57,8 @@ export default function CapabilitiesDashboard() {
         <label className="cap-team-filter">Team<select value={team} onChange={event => { setTeam(event.target.value); setSelected(null) }} aria-label="Filter team">{['Entire team', 'Customer services', 'Operations', 'Leadership'].map(value => <option key={value}>{value}</option>)}</select></label>
       </header>
       <div className="cap-skill-overview">
-        <section className="cap-metric cap-theme-green" aria-label="Pronunciation overview">
-          <header><span className="cap-metric-icon"><CapabilityIcon kind="pronunciation" /></span><h3>Pronunciation</h3></header>
+        <section className="site-card cap-metric cap-theme-green" aria-label="Pronunciation overview">
+          <header className="site-card-cover"><span className="cap-metric-icon"><CapabilityIcon kind="pronunciation" /></span><h3 className="site-card-title">Pronunciation</h3></header>
           <div className="cap-metric-body"><div className="cap-metric-number">{independent}<small> / {cohort.length}</small></div><span className="cap-metric-caption">Staff assessed as independent</span>
             <div className="cap-cohort-dots" aria-label={`${independent} of ${cohort.length} staff assessed as independent`}>{cohort.map(person => <span key={person.name} className={statusClass(person.pronunciation)} title={`${person.name}: ${person.pronunciation}`}>{person.pronunciation === 'Independent' ? '✓' : person.pronunciation === 'Not assessed' ? '–' : '·'}</span>)}</div>
             <footer>{cohort.filter(person => ['Learning', 'With support'].includes(person.pronunciation)).length} practising · {cohort.filter(person => person.pronunciation === 'Not assessed').length} not assessed</footer>
@@ -65,8 +66,8 @@ export default function CapabilitiesDashboard() {
         </section>
         {metrics.map(metric => {
           const average = Math.round(cohort.reduce((sum, person) => sum + person[metric.key], 0) / cohort.length)
-          return <section className={`cap-metric cap-theme-${metric.theme}`} key={metric.key} aria-label={`${metric.title} overview`}>
-            <header><span className="cap-metric-icon"><CapabilityIcon kind={metric.key} /></span><h3>{metric.title}</h3></header>
+          return <section className={`site-card cap-metric cap-theme-${metric.theme}`} key={metric.key} aria-label={`${metric.title} overview`}>
+            <header className="site-card-cover"><span className="cap-metric-icon"><CapabilityIcon kind={metric.key} /></span><h3 className="site-card-title">{metric.title}</h3></header>
             <div className="cap-metric-body"><div className="cap-metric-number">{average}<small> / {metric.total}</small></div><span className="cap-metric-caption">{metric.caption}</span>
               <meter className="cap-summary-meter" min={0} max={metric.total} value={average} aria-label={`Team average: ${metric.caption}`}>{average} of {metric.total}</meter>
               <footer>Team average · introduced content</footer>

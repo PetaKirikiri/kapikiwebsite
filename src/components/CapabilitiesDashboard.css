@@ -1,10 +1,10 @@
 .cap-introduction { max-width: 780px; margin-bottom: clamp(32px, 4vw, 52px); }
-.cap-introduction h1 { margin: 0 0 20px; color: #203e35; font: 600 clamp(28px, 3.2vw, 42px)/1.15 var(--site-font, sans-serif); letter-spacing: -.035em; text-wrap: balance; }
+.cap-introduction h1 { margin: 0 0 20px; color: var(--site-ink); font: 400 clamp(32px, 3.7vw, 44px)/1.15 var(--ka-heading); letter-spacing: -.025em; text-wrap: balance; }
 .cap-introduction ul { list-style: disc outside; margin: 0; padding-left: 22px; color: var(--site-muted, #697c72); font-size: 17px; line-height: 1.65; }
 .cap-introduction li { padding-left: 5px; margin-bottom: 8px; }
 .cap-introduction li:last-child { margin-bottom: 0; }
 .cap-introduction li::marker { color: #43846c; }
-.cap-dashboard { max-width: 1600px; color: #203e35; }
+.cap-dashboard { --cap-accent: var(--ka-green); --cap-track: #dce2d7; max-width: 1600px; color: var(--site-ink); }
 .cap-dashboard-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; }
 .site-methodology .cap-dashboard-header h2 { font-family: inherit; font-size: 26px; font-weight: 600; margin: 8px 0 0; }
 .cap-demo { display: inline-flex; padding: 5px 9px; border: 1px solid #cbd4cc; border-radius: 4px; font-size: 10px; font-weight: 600; color: #53685c; text-transform: uppercase; letter-spacing: .1em; }
@@ -13,21 +13,17 @@
 .cap-dashboard :is(select,input) { border: 1px solid #cbd4cc; background: #fff; padding: 11px 14px; font-size: 13px; max-width: 100%; }
 .cap-dashboard button { cursor: pointer; }
 .cap-dashboard :is(input,select,button,[tabindex]):focus-visible { outline: 3px solid #71b38e; outline-offset: 3px; }
-.cap-theme-green { --cap-accent: #286148; --cap-tint: #e4efe7; --cap-track: #d9e6db; }
-.cap-theme-blue { --cap-accent: #28657b; --cap-tint: #e5eff3; --cap-track: #dae8ee; }
-.cap-theme-purple { --cap-accent: #72558a; --cap-tint: #eee8f3; --cap-track: #e5ddeb; }
-.cap-theme-rose { --cap-accent: #96546e; --cap-tint: #f5e9ee; --cap-track: #eddde4; }
-.cap-skill-overview { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; margin-bottom: 32px; }
-.cap-metric { overflow: hidden; border: 1px solid var(--cap-track); border-radius: 12px; background: #fff; box-shadow: 0 3px 0 #203e3505; }
-.cap-metric > header { display: flex; align-items: center; gap: 10px; min-height: 78px; padding: 16px; background: var(--cap-tint); color: var(--cap-accent); border-top: 4px solid var(--cap-accent); }
-.cap-metric-icon { display: grid; place-items: center; flex: 0 0 30px; }
-.cap-metric-icon svg { width: 30px; height: 30px; }
-.maori-site .cap-dashboard .cap-metric h3 { font-family: inherit; font-size: 16px; line-height: 1.3; font-weight: 650; letter-spacing: -.02em; margin: 0; color: var(--cap-accent); }
-.cap-metric-body { padding: 22px 20px 18px; }
-.cap-metric-number { font-size: 44px; line-height: 1.1; font-weight: 600; letter-spacing: -.045em; color: var(--cap-accent); font-variant-numeric: tabular-nums; }
+.cap-skill-overview { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; margin-bottom: 32px; }
+.cap-metric { display: flex; flex-direction: column; }
+.cap-metric > header { display: flex; align-items: center; gap: 14px; min-height: 112px; padding: 22px 24px; }
+.cap-metric-icon { display: grid; place-items: center; flex: 0 0 26px; color: var(--cover-mark); }
+.cap-metric-icon svg { width: 26px; height: 26px; }
+.maori-site .cap-dashboard .cap-metric h3 { font-family: var(--ka-heading); font-size: 25px; line-height: 1.15; font-weight: 400; letter-spacing: -.025em; margin: 0; color: var(--cover-ink); }
+.cap-metric-body { padding: 24px; }
+.cap-metric-number { font-size: 38px; line-height: 1.1; font-weight: 600; letter-spacing: -.045em; color: var(--cap-accent); font-variant-numeric: tabular-nums; }
 .cap-metric-number small { font-size: 20px; color: #77867e; font-weight: 400; letter-spacing: -.025em; }
 .cap-metric-caption { display: block; font-size: 12px; margin: 8px 0 18px; color: #506057; }
-.cap-metric footer { font-size: 11px; color: #66756c; margin-top: 15px; }
+.cap-metric footer { font-size: 11px; color: var(--site-muted); margin-top: 18px; padding-top: 14px; border-top: 1px solid #dce2d7; }
 .cap-dashboard meter { display: block; appearance: none; width: 100%; height: 7px; border: 0; background: var(--cap-track); border-radius: 10px; overflow: hidden; }
 .cap-dashboard meter::-webkit-meter-bar { height: 7px; border: 0; border-radius: 10px; background: var(--cap-track); }
 .cap-dashboard meter::-webkit-meter-optimum-value { background: var(--cap-accent); border-radius: 10px; }
@@ -40,7 +36,7 @@
 .cap-status-learning { --status-ink: #346c8b; --status-tint: #e6eff6; }
 .cap-status-not-assessed { --status-ink: #69736d; --status-tint: #edf0ed; }
 .cap-cohort-dots > span,.cap-assessment { color: var(--status-ink); background: var(--status-tint); }
-.maori-site .cap-dashboard .cap-students { border: 1px solid #d4ded5; border-radius: 12px; background: #fff; overflow: hidden; }
+.maori-site .cap-dashboard .cap-students { border: 1px solid var(--ka-card-line); border-radius: var(--ka-card-radius); background: var(--ka-card-paper); box-shadow: var(--ka-card-shadow); overflow: hidden; }
 .cap-table-toolbar { padding: 22px 24px 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
 .maori-site .cap-dashboard .cap-table-toolbar h3 { font-family: inherit; font-size: 20px; margin: 0; font-weight: 600; }
 .cap-table-toolbar h3 span { display: inline-block; font-size: 12px; margin-left: 8px; padding: 4px 8px; border-radius: 20px; background: #edf2eb; vertical-align: middle; }
@@ -52,7 +48,7 @@
 .cap-dashboard thead th { padding: 16px 20px; font-weight: 600; font-size: 12px; border-top: 1px solid #e1e7e0; border-bottom: 1px solid #e1e7e0; }
 .cap-dashboard thead small { display: block; font-size: 10px; font-weight: 400; margin-top: 4px; color: #657268; }
 .cap-dashboard tbody :is(th,td) { padding: 18px 20px; border-top: 1px solid #e9eee7; }
-.maori-site .cap-dashboard tbody th { background: #fff; }
+.maori-site .cap-dashboard tbody th { background: var(--ka-card-paper); }
 .cap-dashboard tbody tr:hover > :is(th,td),.cap-dashboard .cap-row-selected > :is(th,td) { background: #f5f8f3; }
 .cap-dashboard .cap-person-button { display: flex; gap: 10px; align-items: center; border: 0; padding: 0; text-align: left; background: transparent; font-size: 13px; font-weight: 600; width: 100%; }
 .cap-avatar { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #e7eee4; color: #46604d; font-size: 11px; flex-shrink: 0; }
@@ -69,19 +65,19 @@
 .cap-person-detail span { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #637368; margin-bottom: 6px; }
 .cap-person-detail strong { font-size: 13px; font-weight: 500; }
 .cap-dashboard .cap-detail-row td { background: #f5f8f3; padding: 22px 24px; }
-@media(max-width:1100px) { .cap-skill-overview { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:1200px) { .cap-skill-overview { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media(max-width:600px) {
   .cap-dashboard-header { align-items: flex-start; flex-direction: column; }
   .cap-team-filter { width: 100%; justify-content: space-between; }
-  .cap-skill-overview { gap: 10px; }
-  .cap-metric > header { padding: 12px 10px; gap: 7px; min-height: 74px; }
+  .cap-skill-overview { grid-template-columns: 1fr; gap: 20px; }
+  .cap-metric > header { display: flex; align-items: center; gap: 14px; min-height: 112px; padding: 22px 24px; }
   .cap-metric-icon { flex-basis: 22px; }
   .cap-metric-icon svg { width: 22px; height: 22px; }
-  .maori-site .cap-dashboard .cap-metric h3 { font-size: 13px; }
-  .cap-metric-body { padding: 16px 12px; }
+  .maori-site .cap-dashboard .cap-metric h3 { font-size: 26px; }
+  .cap-metric-body { padding: 22px 24px; }
   .cap-metric-number { font-size: 34px; }
   .cap-metric-number small { font-size: 15px; }
-  .cap-metric-caption { min-height: 32px; line-height: 1.4; }
+  .cap-metric-caption { line-height: 1.4; }
   .cap-metric footer { font-size: 10px; line-height: 1.5; }
   .cap-cohort-dots { gap: 3px; }
   .cap-cohort-dots > span { width: 19px; height: 19px; font-size: 12px; }

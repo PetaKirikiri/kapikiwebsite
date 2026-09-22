@@ -1,0 +1,53 @@
+/* Shared public-site card identity. Course colours identify levels; other cards use the brand green. */
+:root {
+  --ka-card-paper: #fdfdf9;
+  --ka-card-line: #d8ddd5;
+  --ka-card-radius: 12px;
+  --ka-card-shadow: 0 3px 0 #213b3508;
+  --ka-heading: Georgia, 'Times New Roman', serif;
+  --ka-green: #214b3d;
+  --ka-green-ink: #e8f5df;
+  --ka-green-mark: #91bb95;
+  --ka-blue: #225769;
+  --ka-purple: #58496d;
+  --ka-teal: #2a5855;
+  --ka-ochre: #645633;
+  --ka-rose: #70445b;
+}
+.site-card {
+  --cover: var(--ka-green);
+  --cover-ink: var(--ka-green-ink);
+  --cover-mark: var(--ka-green-mark);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--ka-card-line);
+  border-radius: var(--ka-card-radius);
+  background: var(--ka-card-paper);
+  color: var(--site-ink, #213b35);
+  box-shadow: var(--ka-card-shadow);
+}
+.site-card-cover {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--cover);
+  color: var(--cover-ink);
+}
+.site-card-cover::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: url('../assets/course-taniko-watermark.svg') right center / 192px 192px repeat;
+  opacity: .15;
+  mask-image: linear-gradient(to right, transparent 4%, #0004 42%, #000 100%);
+}
+.site-card-title {
+  font-family: var(--ka-heading);
+  font-size: clamp(25px, 2.3vw, 30px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
