@@ -20,7 +20,13 @@ export default function CapabilitiesDashboard() {
   const cohort = people.filter(person => team === 'Entire team' || person.team === team)
   const visible = cohort.filter(person => person.name.toLowerCase().includes(query.toLowerCase()))
   const person = people.find(person => person.name === selected)
-  return <div className="cap-dashboard">
+  return <>
+    <header className="cap-introduction">
+      <h1>A clear view of your team’s capability.</h1>
+      <p>Understand what your staff can do in te reo Māori, where they need support and what to focus on next.</p>
+      <p>Bring individual learning into a shared view of practical skills, completed activities and next steps, so you can plan development across your organisation.</p>
+    </header>
+    <div className="cap-dashboard">
     <header className="cap-dashboard-header">
       <div><span className="cap-demo">Sample data</span><h3>Team capabilities</h3></div>
       <select aria-label="Filter team" value={team} onChange={event => setTeam(event.target.value)}>{['Entire team', 'Customer services', 'Operations', 'Leadership'].map(value => <option key={value}>{value}</option>)}</select>
@@ -39,5 +45,6 @@ export default function CapabilitiesDashboard() {
       <div className="cap-detail-grid"><div><h5>Can do independently</h5><ul>{skills.filter((_, index) => person.abilities[index] === 'Independent').map(skill => <li key={skill}>{skill}</li>)}</ul>{!person.abilities.includes('Independent') && <span>None confirmed yet</span>}</div><div><h5>Needs support or practice</h5><ul>{skills.filter((_, index) => ['Learning', 'With support'].includes(person.abilities[index])).map(skill => <li key={skill}>{skill}</li>)}</ul>{!person.abilities.some(status => ['Learning', 'With support'].includes(status)) && <span>None recorded</span>}</div><div><h5>Completed</h5><span>{person.completed}</span><h5>Next step</h5><span>{person.next}</span></div></div>
       <div className="cap-identity"><strong>Iwi affiliation</strong><span>{person.iwi} · Optional, self-described</span></div>
     </section>}
-  </div>
+    </div>
+  </>
 }
