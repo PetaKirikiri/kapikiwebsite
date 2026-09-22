@@ -23,8 +23,12 @@ export default function CapabilitiesDashboard() {
   return <>
     <header className="cap-introduction">
       <h1>A clear view of your team’s capability.</h1>
-      <p>Understand what your staff can do in te reo Māori, where they need support and what to focus on next.</p>
-      <p>Bring individual learning into a shared view of practical skills, completed activities and next steps, so you can plan development across your organisation.</p>
+      <ul>
+        <li>See what each staff member can do in te reo Māori.</li>
+        <li>Identify where support and further practice are needed.</li>
+        <li>Track completed activities and individual next steps.</li>
+        <li>Plan development across your organisation.</li>
+      </ul>
     </header>
     <div className="cap-dashboard">
     <header className="cap-dashboard-header">
