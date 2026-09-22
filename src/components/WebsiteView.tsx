@@ -29,6 +29,7 @@ import offerCapabilities from '../assets/offer-capabilities.png'
 import offerClassroom from '../assets/offer-classroom.png'
 import offerApp from '../assets/offer-app.png'
 import offerGrammar from '../assets/offer-grammar.png'
+import directorPortrait from '../assets/peta-kirikiri-portrait-v4.jpg'
 
 export type WebsitePreviewSentence = {
   readonly structureId: number
@@ -193,12 +194,12 @@ export default function WebsiteView({
         <a href="#website-top" className="site-wordmark" aria-label="Ka Piki"><KaPikiWordmark /></a>
         <nav aria-label="Website navigation" className="site-nav">
           {[
-            ['#level-finder', 'Methodology'],
-            ['#competency', 'Capabilities'],
-          ].map(([href, label]) => {
+            ['#level-finder', 'Methodology', 'Our'],
+            ['#competency', 'Capabilities', 'Your'],
+            ['#about', 'Us', 'About'],
+          ].map(([href, label, prefix]) => {
             const active = activeSection === href || (href === '#level-finder' && ['#teacher', '#account', '#join'].includes(activeSection))
             const journey = `${activeSection}:${navReplay}`
-            const prefix = href === '#competency' ? 'Your' : 'Our'
             const showPrefix = !!prefix && active && completedNav === journey
             return <a key={href} href={href} onClick={() => { if (href === '#level-finder') setShowLevelOverview(true); setCompletedNav(''); if (active) setNavReplay(value => value + 1) }} aria-label={prefix ? `${prefix} ${label}` : undefined} aria-current={active ? 'location' : undefined} className={`site-nav-item${active ? ' site-nav-item-active' : ''}`}>
               {prefix ? <span className={`site-nav-prefix${showPrefix ? ' site-nav-prefix-visible' : ''}`} aria-hidden="true"><span style={{ clipPath: `inset(0 0 0 ${ourReveal}%)` }}>{prefix}&nbsp;</span></span> : null}
@@ -208,7 +209,7 @@ export default function WebsiteView({
         </nav>
       </header>
 
-      {activeSection !== '#website-top' ? <div className="site-section-navigation">
+      {activeSection !== '#website-top' && activeSection !== '#about' ? <div className="site-section-navigation">
         <nav aria-label={activeSection === '#competency' ? 'Capabilities sections' : 'Learning sections'}>
           {(activeSection === '#competency' ? [['#competency', 'Team capabilities']] : [
             ['#level-finder', 'Levels'],
@@ -244,6 +245,22 @@ export default function WebsiteView({
           </section>
         </div>
         <p className="site-corporate-closing">You bring the team. We take care of the rest.</p>
+      </main> : activeSection === '#about' ? <main id="about" className="site-about" aria-labelledby="site-about-heading">
+        <h1 id="site-about-heading">About us</h1>
+        <div className="site-about-profile">
+          <img className="site-about-portrait" src={directorPortrait} width={1122} height={1402} alt="Peta Kirikiri, Director of Ka Piki" />
+          <div className="site-about-copy">
+            <h2>Peta Kirikiri</h2>
+            <p className="site-about-role">Director</p>
+            <div className="site-about-introduction">
+              <p>My reo journey began with the Kōhanga Reo initiative. But without a pathway to continue learning in te reo at school, it became a case of use it or lose it.</p>
+              <p>Later in life, I returned to university to reconnect with the language, but I struggled. Complex grammar, essays and research felt far removed from what I wanted: to chat, connect with people and feel confident using te reo socially. I knew I was capable, but couldn’t understand why learning felt so difficult.</p>
+              <p>That experience made me question traditional teaching methods. I found my way into teaching because I believed I could make the experience easier for others.</p>
+              <p>For the past 20 years, my teaching has focused entirely on professional development for government clients. That same aim still guides my work: making te reo easier to learn and use with other people.</p>
+              <a className="site-offer-link" href="#level-finder">Our methodology <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
       </main> : activeSection === '#methodology' ? <section id="methodology" className="site-methodology" aria-label="Methodology">
         <div className="methodology-simple-examples">
           <div id="method-step-0" className={`methodology-step${methodStep === 0 ? ' methodology-step-active' : ''}`}>
