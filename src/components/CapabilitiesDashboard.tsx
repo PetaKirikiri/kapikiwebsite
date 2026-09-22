@@ -75,8 +75,9 @@ export default function CapabilitiesDashboard() {
           </section>
         })}
       </div>
-      <section className="cap-students" aria-label="Team capability matrix">
-        <div className="cap-table-toolbar"><h3>Your team <span>{cohort.length}</span></h3><input type="search" aria-label="Search team members" placeholder="Find a person" value={query} onChange={event => setQuery(event.target.value)} /></div>
+      <section className="site-card cap-students" aria-label="Team capability matrix">
+        <header className="site-card-cover cap-team-cover"><h3 className="site-card-title">Your team</h3><span className="cap-team-count">{cohort.length} team members</span></header>
+        <div className="cap-table-toolbar"><input type="search" aria-label="Search team members" placeholder="Find a person" value={query} onChange={event => setQuery(event.target.value)} /></div>
         <div className="cap-legend" aria-label="Pronunciation assessment key">{statuses.map(status => <span className={statusClass(status)} key={status}>{status}</span>)}</div>
         <div className="cap-table-scroll" tabIndex={0} role="region" aria-label="Staff capability comparison">
           <table><thead><tr><th scope="col">Team member</th><th scope="col">Pronunciation</th>{metrics.map(metric => <th scope="col" key={metric.key}>{metric.title}<small>{metric.caption}</small></th>)}<th scope="col">Last completed</th></tr></thead><tbody>

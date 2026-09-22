@@ -38,8 +38,10 @@
 .cap-cohort-dots > span,.cap-assessment { color: var(--status-ink); background: var(--status-tint); }
 .maori-site .cap-dashboard .cap-students { border: 1px solid var(--ka-card-line); border-radius: var(--ka-card-radius); background: var(--ka-card-paper); box-shadow: var(--ka-card-shadow); overflow: hidden; }
 .cap-table-toolbar { padding: 22px 24px 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
-.maori-site .cap-dashboard .cap-table-toolbar h3 { font-family: inherit; font-size: 20px; margin: 0; font-weight: 600; }
-.cap-table-toolbar h3 span { display: inline-block; font-size: 12px; margin-left: 8px; padding: 4px 8px; border-radius: 20px; background: #edf2eb; vertical-align: middle; }
+.cap-team-cover { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 112px; padding: 22px 24px; }
+.maori-site .cap-dashboard .cap-team-cover h3 { margin: 0; font-family: var(--ka-heading); font-size: 28px; font-weight: 400; line-height: 1.15; letter-spacing: -.025em; color: var(--cover-ink); }
+.cap-team-count { color: var(--cover-ink); font-size: 12px; white-space: nowrap; }
+.cap-table-toolbar input { width: min(100%, 300px); }
 .cap-legend { display: flex; flex-wrap: wrap; gap: 18px; padding: 0 24px 20px; }
 .cap-legend > span { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #5e6c63; }
 .cap-legend > span::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--status-ink); }
@@ -81,6 +83,7 @@
   .cap-metric footer { font-size: 10px; line-height: 1.5; }
   .cap-cohort-dots { gap: 3px; }
   .cap-cohort-dots > span { width: 19px; height: 19px; font-size: 12px; }
+  .cap-team-cover { min-height: 100px; padding: 22px 24px; gap: 12px; flex-wrap: wrap; }
   .cap-table-toolbar { padding: 18px 16px; }
   .cap-table-toolbar input { width: 100%; }
   .cap-legend { padding: 0 16px 18px; gap: 10px 14px; }
