@@ -1,3 +1,5 @@
+import './SiteIdentity.css'
+import './TrainingIdentity.css'
 import { useEffect, useRef, useState } from 'react'
 
 export default function TrainingNavigation() {
@@ -13,15 +15,15 @@ export default function TrainingNavigation() {
     else dialog.current?.close()
   }, [open])
   return <>
-    <nav className="training-topbar" aria-label="Training navigation">
+    <nav className="site-card-cover training-topbar" aria-label="Training navigation">
       <a className="training-nav-icon" href="#level-finder" aria-label="Back to website">‹</a>
-      <a className="training-app-name" href="#training" aria-label="Ka Piki training">Ka Piki<span>TRAINING</span></a>
+      <a className="training-app-name" href="#training" aria-label="Ka Piki training">KA PIKI<span>APP</span></a>
       <button className="training-profile-button" aria-label="Open profile" aria-haspopup="dialog" onClick={() => { setDraft(name); setOpen(true) }}>
         {name ? <span>{Array.from(name.trim())[0]?.toLocaleUpperCase()}</span> : <span className="training-person" aria-hidden="true" />}
       </button>
     </nav>
     <dialog className="training-profile-sheet" ref={dialog} onCancel={() => setOpen(false)} onClose={() => setOpen(false)} aria-labelledby="training-profile-title">
-      <header><h2 id="training-profile-title">Your profile</h2><button type="button" aria-label="Close profile" onClick={() => setOpen(false)}>×</button></header>
+      <header className="site-card-cover"><h2 id="training-profile-title">Your profile</h2><button type="button" aria-label="Close profile" onClick={() => setOpen(false)}>×</button></header>
       <a className="training-admin-entry" href="#training-admin" onClick={() => setOpen(false)}>Admin console <span>Content progression →</span></a>
       <form onSubmit={async event => { event.preventDefault(); setSaving(true); setError(''); try {
         const response = await fetch('/__training_profile', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: draft.trim() }) })

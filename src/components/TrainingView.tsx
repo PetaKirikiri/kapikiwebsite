@@ -55,7 +55,7 @@ function TrainingRound({ examples, data }: { examples: ReturnType<typeof trainin
   if (index === null) return <p role="status">{saveError || 'Loading…'}</p>
   return <>
     {saveError ? <p role="alert">{saveError}</p> : null}
-    <div className="training-card" tabIndex={0} aria-label="Māori sentence. When choices are shown, swipe or use left and right arrow keys."
+    <div className="site-card training-card" tabIndex={0} aria-label="Māori sentence. When choices are shown, swipe or use left and right arrow keys."
       onKeyDown={event => { if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); choose(event.key === 'ArrowLeft' ? 0 : 1) } }}
       onPointerDown={event => { origin.current = { x: event.clientX, y: event.clientY } }}
       onPointerCancel={() => { origin.current = null }}
