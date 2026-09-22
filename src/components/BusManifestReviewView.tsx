@@ -807,7 +807,7 @@ export default function BusManifestReviewView({
       document.fonts?.removeEventListener('loadingdone', measure)
       window.removeEventListener('resize', measure)
     }
-  }, [loading, paragraphs, savedBusManifests, passageAddresses, continuousParagraph, showPosTags])
+  }, [loading, connectorDrawings, paragraphs, savedBusManifests, passageAddresses, continuousParagraph, showPosTags])
 
   const searchMatches = useMemo(() => {
     const query = searchQuery.trim().toLocaleLowerCase('mi').replace(/\s+/gu, ' ')
