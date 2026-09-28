@@ -45,7 +45,10 @@
 .moe-level-number { position: relative; isolation: isolate; overflow: hidden; display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; background: var(--session-color); border-radius: 6px; color: #fff; font-size: 22px; font-weight: 650; }
 .moe-session-title h4 { margin: 0; font-size: 21px; line-height: 1.2; font-weight: 650; letter-spacing: -.02em; }
 .moe-club-level { display: block; margin-top: 3px; color: var(--site-muted); font-size: 12px; }
-.moe-session-description { flex: 1; min-height: 3em; margin: 16px 0 20px; color: var(--site-muted); font-size: 15px; line-height: 1.5; }
+.moe-session-skills { flex: 1; list-style: disc; margin: 18px 0 22px; padding-left: 18px; color: var(--site-muted); font-size: 14px; line-height: 1.45; }
+.moe-session-skills li + li { margin-top: 9px; }
+.moe-session-skills strong { color: var(--site-ink, #213b35); font-weight: 600; }
+.moe-session-skills span { display: block; }
 .moe-level-number::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url('../assets/header-taniko-watermark.svg') center / 80px 48px repeat; opacity: .3; }
 .moe-session button, .moe-description-button { position: relative; isolation: isolate; overflow: hidden; flex-shrink: 0; display: block; width: 100%; min-height: 44px; padding: 11px 16px; border: 1px solid var(--session-color); border-radius: 6px; background: var(--session-color); color: #fff; font: inherit; font-size: 14px; font-weight: 650; text-align: center; text-decoration: none; cursor: pointer; }
 .moe-session button:hover { filter: brightness(1.1); text-decoration: none; }

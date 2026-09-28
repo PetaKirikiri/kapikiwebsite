@@ -49,10 +49,10 @@ export function MoeTimetable({ onRegister, learnerFocus = false }: { onRegister:
       <div className="moe-timetable">
         {MOE_CLASSES.map(({ day, startDate, sessions }) => <section key={day} className="site-card moe-day" aria-label={`${day} classes`}>
           <header className="site-card-cover moe-day-heading"><h3 className="site-card-title">{day}</h3><p>From {startDate}</p></header>
-          <div className="moe-day-sessions">{sessions.map(({ level, time, title, description }) => <article key={level} id={`moe-class-${level}`} className={`moe-session moe-session-${level}`} aria-label={`${title}, ${day}, ${time}`}>
+          <div className="moe-day-sessions">{sessions.map(({ level, time, title }) => <article key={level} id={`moe-class-${level}`} className={`moe-session moe-session-${level}`} aria-label={`${title}, ${day}, ${time}`}>
             <p className="moe-time">{time}</p>
             <div className="moe-session-title"><span className="moe-level-number" aria-hidden="true">{level}</span><div><h4>{learnerFocus ? LEVEL_PRESENTATION[level].title : title}</h4>{learnerFocus || level === 6 ? <span className="moe-club-level">Level {level}</span> : null}</div></div>
-            <p className="moe-session-description">{description}</p>
+            <ul className="moe-session-skills" aria-label={`Level ${level} skills`}>{LEVEL_PRESENTATION[level].skills.map(skill => <li key={skill.label}><strong>{skill.label}</strong><span>{skill.pattern}</span></li>)}</ul>
             <a className="moe-description-button" href={moeLevelRoute(level)} aria-label={learnerFocus ? `Explore Level ${level} content` : `Level description for ${title}`}>{learnerFocus ? 'Explore the content' : 'Level description'}</a>
             <button type="button" onClick={() => onRegister(level, moeInterestContext(level))} aria-label={`Register interest in ${title}`}>Register interest</button>
           </article>)}</div>
