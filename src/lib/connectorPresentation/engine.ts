@@ -1,3 +1,4 @@
+import { wordSupportTarget } from './wordSupport'
 import { busManifestSheetSchema, type BusManifestSheet } from '../busManifestContract'
 import type { ConnectorLibrary } from './blueprints'
 import type { PatternRule } from './patterns'
@@ -30,6 +31,7 @@ export function presentSentence(input: {
   return { version: 1 as const, state, words: plans.map((presentation, index) => ({
     text: state.tokens[index]!.surfaceText,
     presentation,
+    support: wordSupportTarget(state.tokens[index]!.surfaceText, state.tokens[index]!.acceptedPosCode, { sentence: input.text, state, tokenIndex: index, color: presentation.materialColor }),
     layout: planWordLayout(input.textWidths?.[index] ?? 0, index < words.length - 1,
       presentation.rightConnectorEnd, state.tokens[index]!.rightRail, presentation),
   })) }

@@ -1,0 +1,123 @@
+.moe-offer { padding: 32px var(--site-gutter) 64px; }
+.moe-intro { margin-bottom: 36px; }
+.moe-intro-cover { padding: 30px 32px; }
+.moe-ministry-logo { display: block; width: 228px; max-width: 100%; height: auto; margin-bottom: 30px; }
+.moe-audience > span { display: block; margin-bottom: 10px; font-size: 12px; color: #d9e5db; }
+.moe-intro-main { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 28px; }
+.moe-intro h1 { margin: 0; font-family: var(--ka-heading); font-size: clamp(30px, 4vw, 44px); font-weight: 400; letter-spacing: -.025em; line-height: 1.12; text-wrap: balance; color: var(--cover-ink); }
+.moe-lead { margin: 14px 0 0; max-width: 60ch; color: #d9e5db; font-size: 16px; line-height: 1.5; }
+.moe-start { display: grid; gap: 8px; min-width: 155px; padding: 2px 0 2px 24px; border-left: 1px solid #bed3c44d; }
+.moe-start > span, .moe-start time > span { font-size: 13px; color: #d9e5db; }
+.moe-start time { display: grid; gap: 5px; }
+.moe-start strong { font-size: 25px; font-weight: 600; line-height: 1.15; }
+.moe-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; padding: 24px 32px; list-style: none; }
+.moe-facts li { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start; gap: 14px; min-width: 0; }
+.moe-facts li + li { border-left: 1px solid var(--ka-card-line); padding-left: 24px; }
+.moe-benefit-icon { position: relative; isolation: isolate; overflow: hidden; display: grid; place-items: center; width: 44px; height: 48px; border-radius: 8px; background: var(--ka-green); color: var(--ka-green-ink); }
+.moe-benefit-icon::before { content: ''; position: absolute; inset: 0; z-index: -1; background: url('../assets/header-taniko-watermark.svg') center / 100px 60px repeat; opacity: .18; }
+.moe-benefit-icon svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.moe-benefit-copy { display: flex; flex-direction: column; align-items: flex-start; height: 100%; min-width: 0; }
+.moe-benefit-copy h2 { margin: 0; font-family: var(--ka-heading); color: var(--ka-green); font-size: 22px; line-height: 1.15; font-weight: 400; letter-spacing: -.02em; text-wrap: balance; }
+.moe-benefit-copy p { margin: 6px 0 16px; color: var(--site-muted); font-size: 12px; line-height: 1.5; }
+.moe-benefit-button { position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; margin-top: auto; padding: 10px; border: 1px solid var(--ka-card-line); border-radius: 5px; background: transparent; color: #52665a; font-size: 11px; font-weight: 400; line-height: 1.2; text-decoration: none; transition: background-color .15s, border-color .15s; }
+.moe-benefit-button::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: var(--ka-green); mask: url('../assets/header-taniko-watermark.svg') center / 120px 72px repeat; opacity: .025; }
+.moe-benefit-button:hover { background: #214b3d08; border-color: #98ab9e; color: var(--ka-green); text-decoration: none; }
+.moe-benefit-button:focus-visible { outline: 2px solid var(--ka-green); outline-offset: 4px; }
+.moe-support { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 0; border-top: 1px solid var(--ka-card-line); background: #f3f6ef; }
+.moe-support li { padding-right: 18px; }
+.moe-support li:nth-child(4n + 1) { border-left: 0; padding-left: 0; }
+.moe-support .moe-benefit-copy p { max-width: 25ch; }
+.moe-timetable { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.moe-day-heading { padding: 24px; }
+.moe-day-heading .site-card-title { margin: 0; }
+.moe-day { display: flex; flex-direction: column; }
+.moe-day-sessions { display: grid; grid-template-rows: repeat(2, minmax(0, 1fr)); flex: 1; padding: 0 24px; }
+.moe-session { --session-color: var(--ka-green); display: flex; flex-direction: column; min-width: 0; padding: 24px 0; }
+.moe-session + .moe-session { border-top: 1px solid var(--ka-card-line); }
+.moe-session-2 { --session-color: var(--ka-blue); }
+.moe-session-3 { --session-color: var(--ka-purple); }
+.moe-session-4 { --session-color: var(--ka-teal); }
+.moe-session-5 { --session-color: var(--ka-ochre); }
+.moe-session-6 { --session-color: var(--ka-rose); }
+.moe-time { margin: 0 0 18px; color: var(--site-muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+.moe-timetable-learner .moe-time { color: var(--site-ink, #213b35); font-size: 22px; font-weight: 700; line-height: 1.25; }
+.moe-session-title { display: flex; gap: 12px; align-items: center; min-height: 48px; }
+.moe-level-number { position: relative; isolation: isolate; overflow: hidden; display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; background: var(--session-color); border-radius: 6px; color: #fff; font-size: 22px; font-weight: 650; }
+.moe-session-title h4 { margin: 0; font-size: 21px; line-height: 1.2; font-weight: 650; letter-spacing: -.02em; }
+.moe-club-level { display: block; margin-top: 3px; color: var(--site-muted); font-size: 12px; }
+.moe-session-description { flex: 1; min-height: 3em; margin: 16px 0 20px; color: var(--site-muted); font-size: 15px; line-height: 1.5; }
+.moe-level-number::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url('../assets/header-taniko-watermark.svg') center / 80px 48px repeat; opacity: .3; }
+.moe-session button, .moe-description-button { position: relative; isolation: isolate; overflow: hidden; flex-shrink: 0; display: block; width: 100%; min-height: 44px; padding: 11px 16px; border: 1px solid var(--session-color); border-radius: 6px; background: var(--session-color); color: #fff; font: inherit; font-size: 14px; font-weight: 650; text-align: center; text-decoration: none; cursor: pointer; }
+.moe-session button:hover { filter: brightness(1.1); text-decoration: none; }
+.moe-session button:active { filter: brightness(.95); }
+@media (max-width: 800px) { .moe-timetable { grid-template-columns: 1fr; } .moe-day-sessions { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; padding: 0; } .moe-session { padding: 24px; } .moe-session + .moe-session { border-top: 0; border-left: 1px solid var(--ka-card-line); } }
+@media (max-width: 460px) { .moe-day-sessions { display: block; } .moe-session + .moe-session { border-left: 0; border-top: 1px solid var(--ka-card-line); } .moe-session-description { min-height: 0; } }
+
+.moe-day-heading p { margin: 9px 0 0; font-size: 13px; color: var(--cover-ink); }
+
+@media (max-width: 650px) {
+  .moe-intro-cover { padding: 24px; }
+  .moe-ministry-logo { width: 210px; margin-bottom: 26px; }
+  .moe-intro-main { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .moe-start { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; border-left: 0; border-top: 1px solid #bed3c44d; padding: 16px 0 0; }
+  .moe-start time { display: flex; align-items: baseline; gap: 6px; }
+  .moe-start strong { font-size: 19px; }
+  .moe-facts { padding: 20px; gap: 10px; }
+  .moe-facts li { grid-template-columns: minmax(0, 1fr); grid-template-rows: 48px 1fr; gap: 12px; }
+  .moe-facts li + li { padding-left: 12px; }
+  .moe-benefit-copy h2 { font-size: 20px; }
+  .moe-benefit-copy p { font-size: 11px; line-height: 1.4; }
+}
+@media (max-width: 380px) {
+  .moe-intro-cover { padding: 20px; }
+  .moe-facts { padding: 18px 16px; gap: 8px; }
+  .moe-facts li + li { padding-left: 8px; }
+}
+.moe-offer .site-card-cover::before { background-image: url('../assets/header-taniko-watermark.svg'); background-size: 240px 144px; opacity: .075; }
+
+.moe-description-button { margin-bottom: 10px; background: transparent; color: var(--session-color); box-sizing: border-box; }
+.moe-description-button:hover { background: #214b3d0a; text-decoration: none; }
+.moe-session button:focus-visible, .moe-description-button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+.site-learning.moe-level-page .site-level-signup { padding: 11px 20px; border: 1px solid var(--ka-green); border-radius: 6px; background: var(--ka-green); color: #fff; text-decoration: none; }
+
+@media (max-width: 800px) {
+  .moe-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 22px; }
+  .moe-facts li:nth-child(3) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 1000px) {
+  .moe-support { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .moe-support li:nth-child(even) { border-left: 1px solid var(--ka-card-line); padding-left: 24px; }
+  .moe-support li:nth-child(odd) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 650px) { .moe-support li:nth-child(even) { padding-left: 12px; } }
+@media (max-width: 380px) { .moe-support li:nth-child(even) { padding-left: 8px; } }
+
+.moe-session button::before, .moe-description-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: currentColor;
+  mask: url('../assets/header-taniko-watermark.svg') center / 120px 72px repeat;
+  opacity: .13;
+}
+.moe-description-button::before { opacity: .08; }
+.moe-offer-jump { display: inline-block; color: var(--cover-ink); border: 1px solid #e8f5df70; padding: 10px 16px; margin-top: 16px; border-radius: 6px; text-decoration: none; font-size: 14px; }
+.moe-offer-jump:hover { background: #ffffff12; }
+
+@media (min-width: 801px) {
+  .moe-facts:has(> li:nth-child(2):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .moe-facts:has(> li:nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 650px) {
+  .moe-facts:has(> li:nth-child(2):last-child) { grid-template-columns: 1fr; }
+  .moe-facts:has(> li:nth-child(2):last-child) li { grid-template-columns: 44px minmax(0, 1fr); grid-template-rows: auto; padding: 0; border-left: 0; }
+  .moe-facts:has(> li:nth-child(2):last-child) li + li { padding-top: 18px; border-top: 1px solid var(--ka-card-line); }
+}
+@media (max-width: 800px) {
+  .moe-facts:has(> li:nth-child(3):last-child) { grid-template-columns: 1fr; }
+  .moe-facts:has(> li:nth-child(3):last-child) li { grid-template-columns: 44px minmax(0, 1fr); grid-template-rows: auto; padding: 0; border-left: 0; }
+  .moe-facts:has(> li:nth-child(3):last-child) li + li { padding-top: 18px; border-top: 1px solid var(--ka-card-line); }
+}

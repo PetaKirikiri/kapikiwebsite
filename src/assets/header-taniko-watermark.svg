@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="144" viewBox="0 0 240 144" fill="none">
+  <!-- Original UI interpretation of paired-diamond and zigzag arrangements in tāniko.
+       Reference: https://collections.tepapa.govt.nz/topic/3644
+       Not a reproduction of a specific weaver's work or an iwi-specific design. -->
+  <defs>
+    <g id="pair" stroke="#d1e2d3" stroke-linejoin="miter">
+      <path d="m120 6 30 30-30 30-30-30Zm0 72 30 30-30 30-30-30Z" stroke-width="3"/>
+      <path d="m120 15 21 21-21 21-21-21Zm0 72 21 21-21 21-21-21Z" stroke-width="1"/>
+      <path d="m120 26 10 10-10 10-10-10Zm0 72 10 10-10 10-10-10Z" fill="#d1e2d3" stroke="none"/>
+    </g>
+  </defs>
+  <use href="#pair"/>
+  <g stroke="#d1e2d3" stroke-linejoin="miter">
+    <path d="m88 0-36 36 36 36-36 36 36 36M152 0l36 36-36 36 36 36-36 36" stroke-width="4"/>
+    <path d="m76 0-36 36 36 36-36 36 36 36M164 0l36 36-36 36 36 36-36 36" stroke-width="1.5"/>
+    <path d="m64 0-36 36 36 36-36 36 36 36M176 0l36 36-36 36 36 36-36 36" stroke-width="3"/>
+    <path d="m52 0-36 36 36 36-36 36 36 36M188 0l36 36-36 36 36 36-36 36" stroke-width="1"/>
+    <path d="m0 54 18 18L0 90m240-36-18 18 18 18" stroke-width="1.5"/>
+  </g>
+</svg>

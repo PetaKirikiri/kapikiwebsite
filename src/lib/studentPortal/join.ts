@@ -16,7 +16,7 @@ export function emailJoinRequest(form: FormData, ratings: SkillRatings, level: n
   const email = String(form.get('email') ?? '').trim()
   const goals = String(form.get('goals') ?? '').trim()
   if (!name || name.length > 160) throw new Error('Please enter your name.')
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error('Please enter a valid email address.')
+  if (!email || email.length > 320 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error('Please enter a valid email address.')
   if (goals.length > 3000) throw new Error('Please keep your learning goals under 3,000 characters.')
   if (!Number.isInteger(level) || level < 1 || level > 6) throw new Error('Please choose a starting level.')
   return { email, options: { emailRedirectTo: redirect, shouldCreateUser: true,
@@ -24,8 +24,10 @@ export function emailJoinRequest(form: FormData, ratings: SkillRatings, level: n
   } }
 }
 
-export function interestRequest(form: FormData, ratings: SkillRatings, level: number) {
+export function interestRequest(form: FormData, ratings: SkillRatings, level: number, context = '') {
   const request = emailJoinRequest(form, ratings, level, '', '')
   const { name, selected_level, goals, self_ratings } = request.options.data
-  return { name, email: request.email, selected_level, goals, self_ratings }
+  const recordedGoals = context ? [context, goals].filter(Boolean).join('\n\n') : goals
+  if (recordedGoals.length > 3000) throw new Error('Please keep your learning goals shorter.')
+  return { name, email: request.email, selected_level, goals: recordedGoals, self_ratings }
 }

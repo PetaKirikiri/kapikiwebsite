@@ -4,4 +4,4 @@
 @source "../src/components/BusManifestReviewView.tsx";
 
 /* The public preview is a full website, not a padded app workspace. */
-#root > main { padding: 0; background: #f6f5ef; }
+#root > div { padding: 0; background: #f6f5ef; }

@@ -6,18 +6,38 @@
   "functions": {
     "api/course.js": {
       "maxDuration": 60,
-      "regions": ["syd1"]
+      "regions": [
+        "syd1"
+      ]
     },
     "api/training.js": {
       "maxDuration": 60,
-      "regions": ["syd1"]
+      "regions": [
+        "syd1"
+      ]
     },
     "api/classroom.js": {
       "maxDuration": 30,
-      "regions": ["syd1"]
+      "regions": [
+        "syd1"
+      ]
+    },
+    "api/interest.js": {
+      "maxDuration": 30,
+      "regions": [
+        "syd1"
+      ]
     }
   },
   "rewrites": [
+    {
+      "source": "/__course_interest",
+      "destination": "/api/interest"
+    },
+    {
+      "source": "/__word_support",
+      "destination": "/api/training?route=__word_support"
+    },
     {
       "source": "/__classroom",
       "destination": "/api/classroom"

@@ -1,5 +1,6 @@
 /* Shared public-site card identity. Course colours identify levels; other cards use the brand green. */
 :root {
+  --ka-taniko-pattern: url('../assets/header-taniko-watermark.svg');
   --ka-card-paper: #fdfdf9;
   --ka-card-line: #d8ddd5;
   --ka-card-radius: 12px;
@@ -39,8 +40,8 @@
   z-index: -1;
   inset: 0;
   pointer-events: none;
-  background: url('../assets/course-taniko-watermark.svg') right center / 192px 192px repeat;
-  opacity: .15;
+  background: var(--ka-taniko-pattern) right center / 240px 144px repeat;
+  opacity: .08;
   mask-image: linear-gradient(to right, transparent 4%, #0004 42%, #000 100%);
 }
 .site-card-title {
@@ -51,3 +52,12 @@
   letter-spacing: -.025em;
   text-wrap: balance;
 }
+.maori-site p.site-benefit-intro {
+  max-width: 65ch;
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--site-muted, #53655b);
+  text-wrap: pretty;
+}
+.maori-site .site-card-cover p.site-benefit-intro { color: var(--cover-ink); }

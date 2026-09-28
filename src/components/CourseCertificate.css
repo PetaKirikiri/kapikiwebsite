@@ -1,0 +1,49 @@
+.course-certificate {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  border: 1px solid var(--ka-card-line);
+  background: var(--ka-card-paper);
+  color: var(--ka-green);
+  box-shadow: 0 8px 28px #213b3510;
+}
+.course-certificate-band {
+  position: relative;
+  background: var(--ka-green);
+  overflow: hidden;
+}
+.course-certificate-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ka-taniko-pattern) center / 180px 108px repeat;
+  opacity: .25;
+}
+.course-certificate-paper { padding: clamp(24px, 4vw, 48px); min-width: 0; }
+.course-certificate-brand { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.course-certificate-brand .site-kapiki-logo { font: 800 25px/1 Arial, sans-serif; letter-spacing: -.05em; }
+.course-certificate-sample { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--site-muted, #5c6b62); }
+.course-certificate-award { padding: 44px 0 40px; }
+.course-certificate .course-certificate-subject { margin: 0 0 12px; color: var(--ka-green); font-size: 13px; letter-spacing: .15em; text-transform: uppercase; }
+.course-certificate .course-certificate-award h2 { font: 400 clamp(30px, 3.5vw, 45px)/1.12 var(--ka-heading); margin: 0; text-wrap: balance; }
+.course-certificate .course-certificate-recipient { margin: 38px 0 16px; padding-bottom: 14px; border-bottom: 1px solid var(--ka-card-line); color: var(--ka-green); font: 400 clamp(28px, 3vw, 38px)/1.2 var(--ka-heading); overflow-wrap: anywhere; }
+.course-certificate .course-certificate-statement { margin: 0 0 8px; font-size: 14px; }
+.course-certificate .course-certificate-course { margin: 0; color: var(--ka-green); font-size: clamp(19px, 2vw, 24px); font-weight: 600; line-height: 1.3; }
+.course-certificate-details { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.course-certificate-details > div { display: grid; gap: 6px; }
+.course-certificate-details > div:last-child { text-align: right; }
+.course-certificate-details strong { font-size: 14px; font-weight: 600; }
+.course-certificate-details span { color: var(--site-muted, #5c6b62); font-size: 12px; }
+.moe-certificate-notes { max-width: 900px; margin: 22px auto 0; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px 24px; }
+.moe-proof-body .moe-certificate-notes p { margin: 0; font-size: 14px; }
+.moe-certificate-notes a { font-size: 13px; }
+@media (max-width: 600px) {
+  .course-certificate { grid-template-columns: 16px minmax(0, 1fr); }
+  .course-certificate-paper { padding: 24px 20px; }
+  .course-certificate-award { padding: 30px 0; }
+  .course-certificate .course-certificate-award h2 { font-size: 30px; }
+  .course-certificate .course-certificate-recipient { margin-top: 30px; }
+  .course-certificate-brand .site-kapiki-logo { font-size: 22px; }
+}

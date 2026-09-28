@@ -1,9 +1,17 @@
 import { readWebsiteJson } from '../lib/websiteData'
+import { readWebsiteCourse, subscribeToWebsiteCourse } from '../lib/websiteCourseData'
 import LevelCourseOverview from './LevelCourseOverview'
 import CourseFormat from './CourseFormat'
+import MoeOffer from './MoeOffer'
+import MoeOfferV2 from './MoeOfferV2'
+import MoeBenefitPage from './MoeBenefitPage'
+import { websiteRoute, contextualRoute, normaliseWebsiteHash } from '../lib/websiteRoutes'
+import { moeInterestContext } from '../lib/moeOffer'
 import LevelOnePepeha from './LevelOnePepeha'
-import GuessWhoGame from './GuessWhoGame'
+import LevelExplorer from './LevelExplorer'
+import { installWebsiteNavigation } from '../lib/websiteNavigation'
 import KitchenGame from './KitchenGame'
+import GuessWhoGame from './GuessWhoGame'
 import LiveClassroom from './LiveClassroom'
 import { useEffect, useMemo, useState } from 'react'
 import type { BusManifestSheet } from '../lib/busManifestContract'
@@ -13,24 +21,23 @@ import type { BusManifestUserWrite } from './BusManifestReviewView'
 import FamilyConnectorSentenceView from './FamilyConnectorSentenceView'
 import { unresolvedSentence as blankSheet } from '../lib/connectorPresentation/engine'
 import './WebsiteView.css'
+import './SiteIdentity.css'
 import CapabilitiesDashboard from './CapabilitiesDashboard'
 import StudentPortal from './studentPortal/StudentPortal'
-import { translatedSegments } from '../lib/connectorPresentation/translation'
-import type { CSSProperties } from 'react'
+import SentenceTranslation from './SentenceTranslation'
 import TrainingView from './TrainingView'
 import TrainingNavigation from './TrainingNavigation'
 import TrainingAdmin from './TrainingAdmin'
 import KaPikiWordmark from './KaPikiWordmark'
 import NavigationRail from './NavigationRail'
-import { WORD_CLASS_VISUAL_PALETTE } from './railVisualPalette'
-import IsolatedAnchorView from './IsolatedAnchorView'
 import ClassroomRoom from './ClassroomRoom'
 import corporateHarakeke from '../assets/corporate-harakeke-v1.jpg'
 import offerCapabilities from '../assets/offer-capabilities.png'
 import offerClassroom from '../assets/offer-classroom.png'
-import offerApp from '../assets/offer-app.png'
+import offerApp from '../assets/offer-app-taniko.png'
 import offerGrammar from '../assets/offer-grammar.png'
-import directorPortrait from '../assets/peta-kirikiri-portrait-v4.jpg'
+import directorPortrait from '../assets/peta-kirikiri-portrait-v5.png'
+import ministryLogo from '../assets/ministry-of-education-logo-white.svg'
 
 export type WebsitePreviewSentence = {
   readonly structureId: number
@@ -47,6 +54,7 @@ export type WebsitePreviewData = {
 }
 
 type WebsiteViewProps = {
+  readonly intakeVersion?: 1 | 2
   /**
    * The main local app supplies its already-connected Review Desk snapshot.
    * Omit this prop only for the isolated Website preview entry point.
@@ -60,7 +68,7 @@ type CurriculumLevel = 1 | 2 | 3 | 4 | 5 | 6
 // Keep existing methodology links working while its introduction is hidden.
 function currentWebsiteSection() {
   const section = window.location.hash || '#website-top'
-  return section === '#methodology' ? '#level-finder' : section
+  return normaliseWebsiteHash(section)
 }
 
 
@@ -80,58 +88,74 @@ function demoManifest(
 }
 
 export default function WebsiteView({
+  intakeVersion = 2,
   localData,
   localError = null,
 }: WebsiteViewProps = {}) {
   const connectedLocally = localData !== undefined
   const [fetchedData, setFetchedData] = useState<WebsitePreviewData | null>(null)
+  const [trainingContent, setTrainingContent] = useState<readonly (NonNullable<WebsitePreviewSentence['training']> & { structureId: number; textMi: string })[]>([])
   const [fetchError, setFetchError] = useState<string | null>(null)
   const [trainingError, setTrainingError] = useState<string | null>(null)
   const [loadAttempt, setLoadAttempt] = useState(0)
   const [localStates, setLocalStates] = useState<ReadonlyMap<number, BusManifestSheet>>(new Map())
   const [navReplay, setNavReplay] = useState(0)
-  const [methodStep, setMethodStep] = useState(0)
   const [completedNav, setCompletedNav] = useState('')
   const [ourReveal, setOurReveal] = useState(100)
-  const [selectedLevel, setSelectedLevel] = useState<CurriculumLevel>(1)
-  const [showLevelOverview, setShowLevelOverview] = useState(true)
-  const [accountOpen, setAccountOpen] = useState(() => ['#account', '#join'].includes(window.location.hash))
+  const [selectedLevel, setSelectedLevel] = useState<CurriculumLevel>(() => websiteRoute(window.location.hash).level ?? 1)
+  const [showLevelOverview, setShowLevelOverview] = useState(() => !websiteRoute(window.location.hash).level)
+  const [interestContext, setInterestContext] = useState('')
+  const [accountOpen, setAccountOpen] = useState(() => ['#account', '#join'].includes(websiteRoute(window.location.hash).surface))
   const [activeSection, setActiveSection] = useState(currentWebsiteSection)
+  const route = websiteRoute(activeSection)
+  const moeRoute = route.moe
+  const moeBenefit = route.benefit
+  const surface = route.surface
+  const link = (path: string) => contextualRoute(moeRoute, path)
+  const registrationContext = moeRoute ? moeInterestContext(selectedLevel) : interestContext
+  const Offer = intakeVersion === 2 ? MoeOfferV2 : MoeOffer
+  useEffect(() => installWebsiteNavigation(section => {
+    setActiveSection(section)
+    setInterestContext('')
+    const next = websiteRoute(section)
+    setShowLevelOverview(!next.level)
+    if (next.level) setSelectedLevel(next.level)
+    setAccountOpen(['#account', '#join'].includes(next.surface))
+    if (['#account', '#join'].includes(next.surface)) setSelectedLevel(1)
+  }), [])
+
   useEffect(() => {
-    const openAccount = () => {
-      const section = currentWebsiteSection()
-      if (window.location.hash === '#methodology') window.history.replaceState(null, '', '#level-finder')
-      setActiveSection(section)
-      if (section === '#level-finder') setShowLevelOverview(true)
-      if (['#account', '#join'].includes(window.location.hash)) setAccountOpen(true)
-    }
-    openAccount()
-    window.addEventListener('hashchange', openAccount)
-    return () => window.removeEventListener('hashchange', openAccount)
-  }, [])
+    if (connectedLocally) return
+    let active = true
+    const unsubscribe = subscribeToWebsiteCourse(course => {
+      if (active) { setFetchedData(course); setFetchError(null) }
+    })
+    void readWebsiteCourse().then(course => {
+      if (active) { setFetchedData(course); setFetchError(null) }
+    }).catch(() => {
+      if (active) setFetchError('Course examples are temporarily unavailable.')
+    })
+    return () => { active = false; unsubscribe() }
+  }, [connectedLocally, loadAttempt])
 
   useEffect(() => {
     if (connectedLocally) return
     const controller = new AbortController()
-    void readWebsiteJson<WebsitePreviewData>('/__website_preview_data', controller.signal)
-      .then(async course => {
-        if (controller.signal.aborted) return
-        setFetchedData(course)
-        try {
-          const { content } = await readWebsiteJson<{ content: { structureId: number; textMi: string; correct: string; alternative: string; active: boolean }[] }>('/__training_content', controller.signal)
-          if (!controller.signal.aborted) setFetchedData({ ...course, sentences: course.sentences.map(sentence => ({ ...sentence, training: content.find(row => row.structureId === sentence.structureId && row.textMi === sentence.textMi) })) })
-        } catch {
-          if (!controller.signal.aborted) setTrainingError('Practice content is temporarily unavailable. Please try again.')
-        }
-      })
-      .catch(() => {
-        if (!controller.signal.aborted) setFetchError('Course examples are temporarily unavailable.')
-      })
+    // Independent of the course read: practice must not extend the lesson waterfall.
+    void readWebsiteJson<{ content: typeof trainingContent }>('/__training_content', controller.signal)
+      .then(({ content }) => { if (!controller.signal.aborted) { setTrainingContent(content); setTrainingError(null) } })
+      .catch(() => { if (!controller.signal.aborted) setTrainingError('Practice content is temporarily unavailable. Please try again.') })
     return () => controller.abort()
   }, [connectedLocally, loadAttempt])
 
-  const data = connectedLocally ? localData : fetchedData
-  const error = connectedLocally ? localError : fetchError ?? (activeSection.startsWith('#training') ? trainingError : null)
+  const data = useMemo(() => {
+    if (connectedLocally) return localData
+    if (!fetchedData) return null
+    return { ...fetchedData, sentences: fetchedData.sentences.map(sentence => ({
+      ...sentence, training: trainingContent.find(row => row.structureId === sentence.structureId && row.textMi === sentence.textMi),
+    })) }
+  }, [connectedLocally, localData, fetchedData, trainingContent])
+  const error = connectedLocally ? localError : fetchError ?? ((surface === '#practice' || (route.level && route.tab === 'practice') || activeSection.startsWith('#training')) ? trainingError : null)
 
   const states = useMemo(() => {
     const next = new Map<number, BusManifestSheet>()
@@ -150,10 +174,12 @@ export default function WebsiteView({
   }
 
   const changeLevel = (nextLevel: CurriculumLevel) => {
-    setSelectedLevel(nextLevel)
-    setShowLevelOverview(false)
-    window.scrollTo({ top: 0, behavior: 'instant' })
+    window.location.assign(link(`#levels/${nextLevel}`))
   }
+  useEffect(() => {
+    const current = websiteRoute(activeSection)
+    document.title = `${current.notFound ? 'Page not found' : current.level ? `Level ${current.level}` : current.benefit?.label ?? (current.overview ? 'Course levels' : current.surface === '#moe' ? 'October intake' : current.surface === '#competency' ? 'Team capabilities' : current.surface === '#about' ? 'About us' : current.surface === '#practice' ? 'Practice preview' : 'Te reo Māori')} · ${current.moe ? 'MOE · ' : ''}Ka Piki`
+  }, [activeSection, intakeVersion])
 
   const levelSentences = data?.sentences.filter((sentence) => sentence.curriculumLevel === selectedLevel) ?? []
   const courseOrderByStructureId = useMemo(() => {
@@ -164,24 +190,10 @@ export default function WebsiteView({
     return new Map(ordered.map((sentence, index) => [sentence.structureId, index]))
   }, [data])
 
-  const methodologySentences = ['I whai te manu whero i te manu kākāriki', 'Me whai te manu whero i te manu kākāriki']
-    .flatMap(text => data?.sentences.filter(sentence => sentence.textMi.replace(/[.!]$/u, '') === text) ?? [])
-  const methodologyReady = !!methodologySentences[0]?.state
-  useEffect(() => {
-    if (activeSection !== '#methodology' || !methodologyReady) return
-    setMethodStep(0)
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { setMethodStep(3); return }
-    const timers = [1, 2, 3].map(step => window.setTimeout(() => {
-      document.getElementById(`method-step-${step}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-      timers.push(window.setTimeout(() => setMethodStep(step), 850))
-    }, 7600 + (step - 1) * 4800))
-    return () => timers.forEach(clearTimeout)
-  }, [activeSection, methodologyReady])
-
-  if (activeSection.split('?')[0] === '#guess-who') return <GuessWhoGame key={activeSection} />
   if (activeSection.split('?')[0] === '#kitchen') return <KitchenGame key={activeSection} />
+  if (activeSection.split('?')[0] === '#guess-who') return <GuessWhoGame key={activeSection} />
   if (activeSection.split('?')[0] === '#live-class') return <LiveClassroom key={activeSection} />
-  if (activeSection === '#classroom') return <ClassroomRoom data={data} error={error} />
+  if (activeSection === '#classroom' || activeSection === '#classroom-2d') return <ClassroomRoom data={data} error={error} />
   if (activeSection === '#training' || activeSection === '#training-admin') {
     return <main className="training-app" aria-label="Ka Piki training app">
       <TrainingNavigation />
@@ -191,18 +203,28 @@ export default function WebsiteView({
 
   return (
     <section id="website-top" aria-label="Website" data-testid="website-workspace" className="maori-site">
-      <header className="site-header">
-        <a href="#website-top" className="site-wordmark" aria-label="Ka Piki"><KaPikiWordmark /></a>
+      <button type="button" className="site-skip-content" onClick={() => {
+        const main = document.querySelector<HTMLElement>('.maori-site main')
+        if (main) { main.tabIndex = -1; main.focus({ preventScroll: true }); main.scrollIntoView({ block: 'start' }) }
+      }}>Skip to content</button>
+      <header className={`site-header${moeRoute ? ' site-header-moe' : ''}`}>
+        <div className="site-header-branding">
+        <a href={moeRoute ? '#moe' : '#website-top'} className="site-wordmark" aria-label="Ka Piki"><KaPikiWordmark /></a>
+        {moeRoute ? <a href="#moe" className="site-moe-home" aria-label="Ka Piki October intake for Ministry of Education staff" aria-current={activeSection === '#moe' ? 'page' : undefined}>
+          <img src={ministryLogo} width={150} height={44} alt="Ministry of Education" />
+        </a> : null}
+        </div>
         <nav aria-label="Website navigation" className="site-nav">
           {[
-            ['#level-finder', 'Methodology', 'Our'],
+            ['#level-finder', 'Levels', ''],
             ['#competency', 'Capabilities', 'Your'],
-            ['#about', 'Us', 'About'],
+            ['#about', 'About', ''],
           ].map(([href, label, prefix]) => {
-            const active = activeSection === href || (href === '#level-finder' && ['#teacher', '#account', '#join'].includes(activeSection))
+            const learnerCapabilities = intakeVersion === 2 && href === '#competency'
+            const active = (learnerCapabilities ? route.benefit?.id === 'capability-reference' : surface === href) || (href === '#level-finder' && (route.overview || !!route.level))
             const journey = `${activeSection}:${navReplay}`
             const showPrefix = !!prefix && active && completedNav === journey
-            return <a key={href} href={href} onClick={() => { if (href === '#level-finder') setShowLevelOverview(true); setCompletedNav(''); if (active) setNavReplay(value => value + 1) }} aria-label={prefix ? `${prefix} ${label}` : undefined} aria-current={active ? 'location' : undefined} className={`site-nav-item${active ? ' site-nav-item-active' : ''}`}>
+            return <a key={href} href={link(learnerCapabilities ? '#benefits/capability-reference' : href)} onClick={() => { if (href === '#level-finder') setShowLevelOverview(true); setCompletedNav(''); if (active) setNavReplay(value => value + 1) }} aria-label={prefix ? `${prefix} ${label}` : undefined} aria-current={active ? 'location' : undefined} className={`site-nav-item${active ? ' site-nav-item-active' : ''}`}>
               {prefix ? <span className={`site-nav-prefix${showPrefix ? ' site-nav-prefix-visible' : ''}`} aria-hidden="true"><span style={{ clipPath: `inset(0 0 0 ${ourReveal}%)` }}>{prefix}&nbsp;</span></span> : null}
               <span className="site-nav-anchor">{active ? <NavigationRail key={navReplay} noun={!!prefix} leftWord={prefix} onLeftReveal={setOurReveal} onComplete={() => setCompletedNav(journey)} /> : null}{label}</span>
             </a>
@@ -210,19 +232,11 @@ export default function WebsiteView({
         </nav>
       </header>
 
-      {activeSection !== '#website-top' && activeSection !== '#about' ? <div className="site-section-navigation">
-        <nav aria-label={activeSection === '#competency' ? 'Capabilities sections' : 'Learning sections'}>
-          {(activeSection === '#competency' ? [['#competency', 'Team capabilities']] : [
-            ['#level-finder', 'Levels'],
-          ]).map(([href, label]) => <a key={href} href={href} onClick={() => { if (href === '#level-finder') setShowLevelOverview(true) }} aria-current={activeSection === href ? 'page' : undefined}>{label}</a>)}
-        </nav>
-      </div> : null}
 
-      {activeSection === '#website-top' ? <main className="site-corporate-welcome" aria-label="Corporate training">
+      {route.notFound ? <main className="moe-benefit-page"><h1>Page not found</h1><a className="moe-feature-button" href={moeRoute ? '#moe' : '#website-top'}>{moeRoute ? 'Back to MOE classes' : 'Back to Ka Piki'}</a></main> : surface === '#practice' ? <main className="training-app site-practice-preview"><a className="site-context-return" href={link('#benefits/app')}>Back to app overview</a><h1>Try the practice app</h1><p className="site-preview-label">Preview · answers stay in this session</p><TrainingView preview data={data} error={error} /></main> : moeBenefit ? <MoeBenefitPage key={`${moeRoute}:${moeBenefit.id}`} benefit={moeBenefit} moe={moeRoute} practiceData={data} practiceError={error ?? trainingError} /> : surface === '#moe' ? <Offer onRegister={(level, context) => { setSelectedLevel(level); setInterestContext(context); setAccountOpen(true) }} /> : activeSection === '#website-top' ? <main className="site-corporate-welcome" aria-label="Corporate training">
         <div className="site-corporate-offer">
-          <p className="site-eyebrow">Te reo Māori for your organisation</p>
-          <h1>Your team’s Māori capability.<br />Managed for you.</h1>
-          <p className="site-corporate-lead">Fun, interactive classes. Practice between sessions. A clear view of progress. We take care of the coordination.</p>
+          <h1>Build your team’s Māori capability.<br />Without the extra workload.</h1>
+          <p className="site-corporate-lead">Practical learning for staff. Clear oversight for you. Managed by us.</p>
         </div>
         <figure className="site-corporate-image">
           <img src={corporateHarakeke} width={1536} height={1024} fetchPriority="high" alt="An AI-generated study of interwoven harakeke fibres in natural flax and deep olive tones" />
@@ -230,23 +244,23 @@ export default function WebsiteView({
         <div className="site-offer-stories">
           <section className="site-offer-story">
             <div><h2>Know your team.</h2><p>See what your people can do—and where they need support—in one clear snapshot.</p></div>
-            <figure><a href="#competency" aria-label="Explore team capabilities"><img src={offerCapabilities} loading="lazy" alt="Ka Piki team capability dashboard showing skills and individual progress with sample data" /></a><figcaption>Capabilities dashboard · sample data</figcaption></figure>
+            <figure><a href="#competency" aria-label="Explore team capabilities"><img src={offerCapabilities} loading="lazy" alt="Ka Piki team capability dashboard showing skills and individual progress with sample data" /></a><a className="site-offer-link" href="#competency">Your capabilities</a></figure>
           </section>
           <section className="site-offer-story site-offer-story-classroom">
             <div><h2>A class to take part in.</h2><p>Talk, play and solve things together. A shared interactive world, not just another video call.</p></div>
-            <figure><a href="#classroom" aria-label="Explore the interactive classroom"><img src={offerClassroom} loading="lazy" alt="Ka Piki classroom with a teacher, students, a shared Māori sentence whiteboard and Āe and Kāo activity areas" /></a><figcaption>Interactive classroom · local prototype</figcaption></figure>
+            <figure><a href="#live-classes" aria-label="Explore the interactive classroom"><img src={offerClassroom} loading="lazy" alt="Ka Piki classroom with a teacher, students, a shared Māori sentence whiteboard and Āe and Kāo activity areas" /></a><a className="site-offer-link" href="#live-classes">Explore the classroom</a></figure>
           </section>
           <section className="site-offer-story site-offer-story-app">
             <div><h2>Keep learning between classes.</h2><p>Short app practice keeps vocabulary and sentence patterns fresh, around your team’s working day.</p></div>
-            <figure><a href="#training" aria-label="Explore the practice app"><img src={offerApp} loading="lazy" alt="Actual Ka Piki practice screen with a visual Māori sentence and two English answer choices" /></a><figcaption>The Ka Piki practice app</figcaption></figure>
+            <figure><a href="#app-showcase" aria-label="Explore the practice app"><img src={offerApp} loading="lazy" alt="Actual Ka Piki practice screen with a visual Māori sentence and two English answer choices" /></a><a className="site-offer-link" href="#app-showcase">Explore the app</a></figure>
           </section>
           <section className="site-offer-story site-offer-story-grammar">
-            <div><h2>Deep learning. Simple patterns.</h2><p>Build your command of sentence structures over 50 weeks. Digital rākau make the patterns visible, keeping complex grammatical terminology out of the way.</p></div>
-            <figure><a href="#level-finder" aria-label="Explore course levels"><img src={offerGrammar} loading="lazy" alt="Digital rākau show how a WHEN word grows onto a verb alongside noun phrases" /></a><figcaption>Our digital rākau system</figcaption></figure>
+            <div><h2>Deep learning. Simple patterns.</h2><p>Build your command of sentence structures, one course at a time. Digital rākau make the patterns visible, keeping complex grammatical terminology out of the way.</p></div>
+            <figure><a href={link('#level-finder')} aria-label="Explore course levels"><img src={offerGrammar} loading="lazy" alt="Digital rākau show how a WHEN word grows onto a verb alongside noun phrases" /></a><a className="site-offer-link" href={link('#level-finder')}>Explore the levels</a></figure>
           </section>
         </div>
         <p className="site-corporate-closing">You bring the team. We take care of the rest.</p>
-      </main> : activeSection === '#about' ? <main id="about" className="site-about" aria-labelledby="site-about-heading">
+      </main> : surface === '#about' ? <main id="about" className="site-about" aria-labelledby="site-about-heading">
         <h1 id="site-about-heading">About us</h1>
         <div className="site-about-profile">
           <img className="site-about-portrait" src={directorPortrait} width={1122} height={1402} alt="Peta Kirikiri, Director of Ka Piki" />
@@ -258,112 +272,43 @@ export default function WebsiteView({
               <p>Later in life, I returned to university to reconnect with the language, but I struggled. Complex grammar, essays and research felt far removed from what I wanted: to chat, connect with people and feel confident using te reo socially. I knew I was capable, but couldn’t understand why learning felt so difficult.</p>
               <p>That experience made me question traditional teaching methods. I found my way into teaching because I believed I could make the experience easier for others.</p>
               <p>For the past 20 years, my teaching has focused entirely on professional development for government clients. That same aim still guides my work: making te reo easier to learn and use with other people.</p>
-              <a className="site-offer-link" href="#level-finder">Our methodology <span aria-hidden="true">→</span></a>
+              <a className="site-offer-link" href={link('#level-finder')}>Explore the levels</a>
             </div>
           </div>
         </div>
-      </main> : activeSection === '#methodology' ? <section id="methodology" className="site-methodology" aria-label="Methodology">
-        <div className="methodology-simple-examples">
-          <div id="method-step-0" className={`methodology-step${methodStep === 0 ? ' methodology-step-active' : ''}`}>
-          <p>Put the words in ORDER.</p>
-          {data && methodologySentences[0]?.state ? <div className="methodology-word-order methodology-order-growth" aria-label="bird eat food becomes eat bird food">
-            {([
-              ['noun', 'the', 'bird'], ['verb', 'past', 'eat'], ['noun', 'my', 'food'],
-            ] as const).map(([example, left, anchor]) => <div key={anchor} className={`methodology-order-${anchor}`}>
-              <IsolatedAnchorView state={methodologySentences[0]!.state!} catalog={data.catalog} presentation germinationOnly example={example}
-                displayWords={{ left, anchor }} prefixStage="hidden" growAnchor />
-            </div>)}
-          </div> : <p role="status">{error ?? 'Loading example…'}</p>}
-          </div>
-          {data && methodologySentences[0]?.state ? <>
-            {(['noun', 'verb'] as const).map((step, index) => <div key={step} id={`method-step-${index + 1}`} className={`methodology-step${methodStep === index + 1 ? ' methodology-step-active' : ''}`}>
-            <p><span style={{ color: WORD_CLASS_VISUAL_PALETTE[step] }}>{step === 'noun' ? 'Nouns' : 'Verbs'}</span> need <span style={{ color: step === 'noun' ? WORD_CLASS_VISUAL_PALETTE.determiner : WORD_CLASS_VISUAL_PALETTE.tam }}>{step === 'noun' ? 'WHICH' : 'WHEN'}</span> words.</p>
-            <div className="methodology-sentence-line" style={{ minHeight: 94 }}>
-              {<>
-              {([
-                ['verb', 'past', 'eat'],
-                ['noun', 'the', 'bird'],
-                ['noun', 'my', 'food'],
-              ] as const).map(([example, left, anchor]) => <IsolatedAnchorView key={anchor}
-                state={methodologySentences[0]!.state!} catalog={data.catalog} presentation germinationOnly example={example}
-                displayWords={{ left, anchor }} active={methodStep >= index + 1}
-                prefixStage={step === 'noun' && example === 'verb' ? 'hidden' : step === 'verb' && example === 'noun' ? 'complete' : undefined}
-              />)}
-              </>}
-            </div>
-            </div>)}
-            <div id="method-step-3" className={`methodology-step${methodStep === 3 ? ' methodology-step-active' : ''}`}>
-            <p>Marker the VICTIM or the DOER.</p>
-            <div className="methodology-sentence-line">
-              {([
-                ['verb', 'past', 'eat'],
-                ['noun', 'the', 'bird'],
-                ['who', 'my', 'food'],
-              ] as const).map(([example, left, anchor]) => <IsolatedAnchorView key={anchor}
-                state={methodologySentences[0]!.state!} catalog={data.catalog} presentation germinationOnly example={example}
-                displayWords={{ left, anchor }} active={methodStep >= 3} prefixStage="complete"
-              />)}
-            </div>
-            </div>
-          </> : <p role="status">{error ?? 'Loading example…'}</p>}
-        </div>
-      </section> : activeSection === '#competency' ? <section id="competency" className="site-methodology" aria-label="Capabilities">
+      </main> : surface === '#competency' ? <main id="competency" className="site-methodology" aria-label="Capabilities">
         <CapabilitiesDashboard />
-      </section> : <section id="level-finder" className={`site-learning${showLevelOverview ? '' : ' site-level-detail'}`}>
-        {!showLevelOverview ? <button type="button" className="level-course-back" onClick={() => setShowLevelOverview(true)}>← All levels</button> : null}
-        <header className={`site-level-header${showLevelOverview ? ' site-level-header-overview' : ''}`}>
-          <h1>{showLevelOverview ? 'Course levels' : `Level ${selectedLevel}`}</h1>
-          {!showLevelOverview ? <button type="button" className="site-level-signup" disabled={data == null} onClick={() => setAccountOpen(true)}>Sign up · Level {selectedLevel}</button> : null}
-        </header>
-        {showLevelOverview ? <CourseFormat /> : null}
+      </main> : <main id="level-finder" className={`site-learning${showLevelOverview ? '' : ' site-level-detail'}${moeRoute ? ' moe-level-page' : ''}`}>
+        {showLevelOverview ? <header className="site-card site-card-cover site-level-header site-level-header-overview"><h1>Course levels</h1><p className="site-benefit-intro">Start with what you already know and see what you could do next. Each level builds on the language you have made your own.</p></header> : null}
+        {showLevelOverview && !moeRoute ? <CourseFormat linked /> : null}
         {error != null ? <div role="alert" className="site-load-error"><p>{error}</p><button type="button" onClick={() => { setFetchError(null); setTrainingError(null); setLoadAttempt(value => value + 1) }}>Try again</button></div> : null}
-        {data == null && error == null ? (
-          <p role="status" className="site-loading">Loading levels…</p>
-        ) : null}
+        <div id="course-levels" className="site-level-layout">
+          {showLevelOverview ? <LevelCourseOverview sentences={data?.sentences} onSelect={changeLevel} /> : <LevelExplorer level={selectedLevel} moe={moeRoute} tab={route.tab} onRegister={() => setAccountOpen(true)}>
+            {route.tab === 'structures' ? <>
+              {data == null && error == null ? <div className="site-lesson-loading" role="status" aria-label="Loading lesson examples"><span /><span /><span /></div> : null}
+              {data ? <>
+                <div className="site-sentence-panel"><div className="site-sentences" aria-label={`Level ${selectedLevel} sentence structures`}>
+                  {levelSentences.length === 0 ? <p>No sentence structures assigned to this level yet.</p> : <FamilyConnectorSentenceView
+                    key={selectedLevel} loading={false}
+                    paragraphs={levelSentences.map(sentence => renderUnassessedPassage(sentence.textMi))}
+                    savedBusManifests={levelSentences.map(sentence => demoManifest(sentence, states.get(sentence.structureId) ?? blankSheet(sentence.textMi), courseOrderByStructureId.get(sentence.structureId) ?? sentence.sortOrder))}
+                    posCatalog={data.catalog} passageAddresses={levelSentences.map(sentence => ({ structureId: sentence.structureId }))}
+                    onBusManifestWrite={handleLocalWrite} showPassageSearch={false} showPassageLabel={false}
+                    showStructureNotes collapsibleStructureNotes
+                    renderPassageSupplement={(index, materials, joins) => <SentenceTranslation text={levelSentences[index]!.textMi} materials={materials} joins={joins} />}
+                    readOnly />}
+                </div></div>
+              </> : null}
+            </> : route.tab === 'stories' ? selectedLevel === 1 ? data ? <LevelOnePepeha catalog={data.catalog} sentences={data.sentences} /> : !error ? <p role="status">Loading pepeha…</p> : null : <div className="level-empty"><h2>Reading material · Level {selectedLevel}</h2><p>Reading material for this level has not been added yet.</p><button type="button" onClick={() => { window.location.assign(link(`#levels/${selectedLevel}?tab=structures`)) }}>Explore the sentence structures</button></div> : <>
+              <p className="site-preview-label">Level {selectedLevel} practice · answers stay in this session</p>
+              <TrainingView key={selectedLevel} preview data={data ? { ...data, sentences: levelSentences } : null} error={error ?? trainingError} />
+            </>}
+          </LevelExplorer>}
 
-        {data != null ? <>
-          <div className="site-level-layout">
-            {showLevelOverview ? <LevelCourseOverview sentences={data.sentences} onSelect={changeLevel} /> : <div>
-            {selectedLevel === 1 ? <LevelOnePepeha /> : null}
-            <div className="site-sentence-panel">
-            <div className="site-sentences" aria-label={`Level ${selectedLevel} sentence structures`}>
-              {levelSentences.length === 0 ? <p className="px-3 py-6 text-slate-600">No sentence structures assigned to this level yet.</p> :
-              <FamilyConnectorSentenceView
-                key={selectedLevel}
-                loading={false}
-                paragraphs={levelSentences.map((sentence) => renderUnassessedPassage(sentence.textMi))}
-                savedBusManifests={levelSentences.map((sentence) => demoManifest(sentence,
-                  states.get(sentence.structureId) ?? blankSheet(sentence.textMi),
-                  courseOrderByStructureId.get(sentence.structureId) ?? sentence.sortOrder))}
-                posCatalog={data.catalog}
-                passageAddresses={levelSentences.map((sentence) => ({ structureId: sentence.structureId }))}
-                onBusManifestWrite={handleLocalWrite}
-                showPassageSearch={false}
-                showPassageLabel={false}
-                showStructureNotes
-                collapsibleStructureNotes
-                renderPassageSupplement={(index, materials, joins) => {
-                  const segments = translatedSegments(levelSentences[index]!.textMi, materials, joins)
-                  return <div className="site-translation" lang="en" aria-label="English translation">
-                    {segments ? segments.map((segment, part) => <span key={part}>
-                      {part > 0 && !segment.connectedBefore ? ' ' : null}<span title={segment.sourceText ? `Matches: ${segment.sourceText}` : undefined}>
-                        {segment.parts.map((piece, pieceIndex) => <span key={pieceIndex} className={piece.color ? 'site-translation-match' : undefined}
-                          style={piece.color ? { '--translation-color': piece.color } as CSSProperties : undefined}>{pieceIndex === 0 && segment.connectedBefore ? ' ' : null}{piece.text}</span>)}
-                      </span>
-                    </span>) : <span>Translation not yet available.</span>}
-                  </div>
-                }}
-                readOnly
-              />}
-            </div>
-            </div>
-            </div>}
-          </div>
+        </div>
+      </main>}
 
-        </> : null}
-      </section>}
-
-      <StudentPortal level={selectedLevel} open={accountOpen} onClose={() => { setAccountOpen(false); if (['#account', '#join'].includes(window.location.hash)) { window.history.replaceState(null, '', window.location.pathname + window.location.search); setActiveSection('#level-finder') } }} />
+      <StudentPortal key={registrationContext || selectedLevel} context={registrationContext} level={selectedLevel} open={accountOpen} onClose={() => { setAccountOpen(false); if (['#account', '#join'].includes(websiteRoute(window.location.hash).surface)) { window.location.hash = moeRoute ? '#moe' : '#level-finder' } }} />
     </section>
   )
 }

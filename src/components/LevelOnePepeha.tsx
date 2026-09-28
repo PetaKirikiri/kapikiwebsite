@@ -1,3 +1,9 @@
+import { useEffect, useState, type ReactNode } from 'react'
+import FamilyConnectorSentenceView from './FamilyConnectorSentenceView'
+import SentenceTranslation from './SentenceTranslation'
+import { tagText, unresolvedSentence } from '../lib/connectorPresentation/engine'
+import { renderUnassessedPassage } from '../lib/busManifestTeam/reviewDeskDisplay'
+import type { BusManifestSheet, BusManifestPosCatalog } from '../lib/busManifestContract'
 import './SiteIdentity.css'
 import './LevelOnePepeha.css'
 
@@ -32,26 +38,74 @@ const SECTIONS = [
   ] },
 ] as const
 
-export default function LevelOnePepeha() {
-  return <section className="site-card level-pepeha" aria-labelledby="level-pepeha-heading">
-    <header className="site-card-cover level-pepeha-cover">
-      <span className="level-pepeha-eyebrow">Pūrākau · Level 1</span>
-      <h2 className="site-card-title" id="level-pepeha-heading">Ko Maia ahau.</h2>
-      <p>Maia’s pepeha</p>
-    </header>
-    <p className="level-pepeha-intro">Meet Maia, a fictional teacher. Her pepeha connects the places and people she comes from with her life today.</p>
+const SENTENCES = SECTIONS.flatMap<readonly [string, string]>(section => section.lines)
+const NO_WRITES = () => {}
+
+type Analysis = { state: BusManifestSheet | null; failed: boolean }
+type SavedSentence = { readonly textMi: string; readonly state: BusManifestSheet | null }
+const NO_SAVED_SENTENCES: readonly SavedSentence[] = []
+
+function savedState(sentences: readonly SavedSentence[], text: string): BusManifestSheet | null {
+  const state = sentences.find(sentence => sentence.textMi === text)?.state
+  if (!state || state.tokens.map(token => token.surfaceText).join(' ') !== text) return null
+  return state
+}
+
+function PepehaCard({ heading, children }: { heading: ReactNode; children: ReactNode }) {
+  return <div className="site-card level-pepeha-card">
+    <header className="site-card-cover level-pepeha-cover level-pepeha-card-heading">{heading}</header>
+    <div className="level-pepeha-lines">{children}</div>
+  </div>
+}
+
+export default function LevelOnePepeha({ catalog, sentences = NO_SAVED_SENTENCES }: {
+  catalog: BusManifestPosCatalog; sentences?: readonly SavedSentence[]
+}) {
+  const [analyses, setAnalyses] = useState<Record<string, Analysis>>({})
+  useEffect(() => {
+    const controller = new AbortController()
+    let next = 0
+    // Limit requests while each sentence keeps its own read-only analysis boundary.
+    async function worker() {
+      while (next < SENTENCES.length && !controller.signal.aborted) {
+        const [mi] = SENTENCES[next++]!
+        if (savedState(sentences, mi)) continue
+        try {
+          const state = await tagText(mi, controller.signal)
+          if (!controller.signal.aborted) setAnalyses(current => ({ ...current, [mi]: { state, failed: false } }))
+        } catch {
+          if (!controller.signal.aborted) setAnalyses(current => ({ ...current, [mi]: { state: null, failed: true } }))
+        }
+      }
+    }
+    void worker()
+    void worker()
+    return () => controller.abort()
+  }, [sentences])
+
+  function sentence([mi, en]: readonly [string, string]) {
+    const state = savedState(sentences, mi) ?? analyses[mi]?.state ?? unresolvedSentence(mi)
+    // Unanalysed text has no drawable grammar. Avoid reserving an empty rail row.
+    if (!state.tokens.some(token => token.acceptedPosCode != null)) return <div className="level-pepeha-line" key={mi}>
+      <p className="level-pepeha-plain" lang="mi">{mi}</p>
+      <p className="level-pepeha-translation" lang="en">{en}</p>
+    </div>
+    return <div className="level-pepeha-line" key={mi}>
+      <FamilyConnectorSentenceView loading={false} paragraphs={[renderUnassessedPassage(mi)]}
+        savedBusManifests={[]} presentationStates={[state]} passageAddresses={[]}
+        posCatalog={catalog} onBusManifestWrite={NO_WRITES} showPassageLabel={false}
+        showPassageSearch={false} readOnly
+        renderPassageSupplement={(_index, materials, joins) => <SentenceTranslation text={mi} materials={materials} joins={joins} fallback={en} className="level-pepeha-translation" />} />
+    </div>
+  }
+
+  return <section className="level-pepeha" aria-label="Pepeha">
     <ol className="level-pepeha-sections">
-      {SECTIONS.map(({ title, meaning, lines }, index) => <li key={title}>
-        <div className="level-pepeha-section-label">
+      {SECTIONS.map(({ title, meaning, lines }, index) => <li key={title} id={`pepeha-section-${index + 1}`} tabIndex={-1}>
+        <PepehaCard heading={<div className="level-pepeha-section-label">
           <span className="level-pepeha-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
           <div><h3 lang="mi">{title}</h3><p>{meaning}</p></div>
-        </div>
-        <div className="level-pepeha-lines">
-          {lines.map(([maori, english]) => <div className="level-pepeha-line" key={maori}>
-            <p lang="mi">{maori}</p>
-            <p lang="en">{english}</p>
-          </div>)}
-        </div>
+        </div>}>{lines.map(sentence)}</PepehaCard>
       </li>)}
     </ol>
   </section>

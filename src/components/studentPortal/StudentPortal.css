@@ -38,3 +38,8 @@
 .portal-rating-options button { width: 35px; height: 35px; padding: 0; border-radius: 50%; }
 .portal-rating-options button[aria-pressed=true] { background: #173d37; border-color: #173d37; color: white; }
 @media(max-width: 390px) { .portal-rating-options { gap: 3px; }.portal-rating-options button { width: 29px; height: 34px; }.portal-skill-row { font-size: 13px; } }
+
+.portal-selected-class { margin: 0 0 20px; padding: 12px 14px; border-left: 3px solid #214b3d; background: #f5f3ed; color: #213b35; font-size: 14px; line-height: 1.5; }
+.portal-join-optional summary { padding: 8px 0; }
+.portal-join-optional summary span { float: right; font-size: 12px; font-weight: 400; color: #62746d; }
+.portal-join-optional[open] summary { margin-bottom: 16px; }

@@ -1,0 +1,26 @@
+/* A sentence blueprint owns its cover, example, translation and explanation. */
+.course-entry { margin: 0; }
+.course-entry-heading { display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 20px 28px; }
+.course-entry-heading::before { background-image: url('../assets/header-taniko-watermark.svg'); background-size: 240px 144px; opacity: .09; }
+.course-entry-number { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid #e8f5df45; border-radius: 7px; color: var(--cover-ink); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.course-entry-heading h3 { margin: 0; font-size: 26px; color: var(--cover-ink); }
+.course-entry-heading button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 40px; padding: 8px 12px; border: 1px solid #e8f5df45; border-radius: 6px; background: #ffffff08; color: var(--cover-ink); font: inherit; font-size: 12px; cursor: pointer; }
+.course-entry-heading button:hover, .course-entry-heading button[aria-expanded=true] { background: #ffffff18; border-color: #e8f5df80; }
+.course-entry-heading button:focus-visible { outline: 2px solid var(--cover-ink); outline-offset: 3px; }
+.course-entry-content { min-width: 0; padding: 26px 28px 28px; }
+.course-entry-content > p[data-testid] { margin: 0; padding: 0; border: 0; border-radius: 0; font-size: 21px; }
+.maori-site .site-sentences .course-entry .site-translation { margin: 12px 0 0 !important; padding: 0; border: 0; font-size: 14px; font-weight: 400; line-height: 1.9; color: var(--site-muted); }
+.course-entry-explanation { margin: 0; padding: 20px 28px; border-top: 1px solid var(--ka-card-line); background: #edf2eb; color: var(--site-ink, #213b35); font-size: 14px; line-height: 1.65; }
+.course-entry-explanation[hidden] { display: none; }
+#level-finder .site-sentence-panel { padding: 0; border: 0; border-radius: 0; background: transparent; }
+#level-finder .site-sentences { padding: 0; }
+.site-sentences article:has(> .course-entry) { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+@media (max-width: 650px) {
+  .course-entry-heading { grid-template-columns: 32px minmax(0, 1fr) auto; gap: 10px; padding: 18px 20px; }
+  .course-entry-number { width: 32px; height: 32px; font-size: 12px; }
+  .course-entry-heading h3 { font-size: 22px; }
+  .course-entry-heading button { padding: 8px 10px; }
+  .course-entry-content { padding: 22px 20px 24px; }
+  .course-entry-explanation { padding: 18px 20px; }
+  .site-sentences article:has(> .course-entry) { gap: 20px; }
+}

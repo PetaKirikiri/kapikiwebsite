@@ -2455,8 +2455,78 @@
       10
     ]
   ],
-  "Kāore e taea e te manu whero te manu kākāriki te whai": [["The",4],["red",6],["bird",5],["cannot",0],["chase",11],["the",7],["green",9],["bird",8]],
-  "Kāore e taea e te manu whero te rere ki te manu kākāriki": [["The",4],["red",6],["bird",5],["cannot",0],["fly",8],["to",9],["the",10],["green",12],["bird",11]],
+  "Kāore e taea e te manu whero te manu kākāriki te whai": [
+    [
+      "The",
+      4
+    ],
+    [
+      "red",
+      6
+    ],
+    [
+      "bird",
+      5
+    ],
+    [
+      "cannot",
+      0
+    ],
+    [
+      "chase",
+      11
+    ],
+    [
+      "the",
+      7
+    ],
+    [
+      "green",
+      9
+    ],
+    [
+      "bird",
+      8
+    ]
+  ],
+  "Kāore e taea e te manu whero te rere ki te manu kākāriki": [
+    [
+      "The",
+      4
+    ],
+    [
+      "red",
+      6
+    ],
+    [
+      "bird",
+      5
+    ],
+    [
+      "cannot",
+      0
+    ],
+    [
+      "fly",
+      8
+    ],
+    [
+      "to",
+      9
+    ],
+    [
+      "the",
+      10
+    ],
+    [
+      "green",
+      12
+    ],
+    [
+      "bird",
+      11
+    ]
+  ],
   "Kāore e taea e te manu whero te rere ki ngā manu kākāriki?": [
     [
       "Can't",
@@ -3063,6 +3133,210 @@
     [
       "bird",
       8
+    ]
+  ],
+  "Ko Maia ahau.": [
+    [
+      "I",
+      2
+    ],
+    [
+      "am",
+      0
+    ],
+    [
+      "Maia.",
+      1
+    ]
+  ],
+  "Ko Ngongotahā te maunga.": [
+    [
+      "Ngongotahā",
+      1
+    ],
+    [
+      "is",
+      0
+    ],
+    [
+      "the",
+      2
+    ],
+    [
+      "mountain.",
+      3
+    ]
+  ],
+  "Ko Rotorua te roto.": [
+    [
+      "Rotorua",
+      1
+    ],
+    [
+      "is",
+      0
+    ],
+    [
+      "the",
+      2
+    ],
+    [
+      "lake.",
+      3
+    ]
+  ],
+  "Nō Rotorua ahau.": [
+    [
+      "I",
+      2
+    ],
+    [
+      "am from",
+      0
+    ],
+    [
+      "Rotorua.",
+      1
+    ]
+  ],
+  "Nō Rotorua ōku tūpuna.": [
+    [
+      "My",
+      2
+    ],
+    [
+      "ancestors",
+      3
+    ],
+    [
+      "are from",
+      0
+    ],
+    [
+      "Rotorua.",
+      1
+    ]
+  ],
+  "Ko Mere tōku whaea.": [
+    [
+      "Mere",
+      1
+    ],
+    [
+      "is",
+      0
+    ],
+    [
+      "my",
+      2
+    ],
+    [
+      "mother.",
+      3
+    ]
+  ],
+  "Ko Hemi tōku matua.": [
+    [
+      "Hemi",
+      1
+    ],
+    [
+      "is",
+      0
+    ],
+    [
+      "my",
+      2
+    ],
+    [
+      "father.",
+      3
+    ]
+  ],
+  "Ko Hana tōku teina.": [
+    [
+      "Hana",
+      1
+    ],
+    [
+      "is",
+      0
+    ],
+    [
+      "my",
+      2
+    ],
+    [
+      "younger sister.",
+      3
+    ]
+  ],
+  "Ko Rangi tāku tama.": [
+    [
+      "Rangi",
+      1
+    ],
+    [
+      "is",
+      0
+    ],
+    [
+      "my",
+      2
+    ],
+    [
+      "son.",
+      3
+    ]
+  ],
+  "Ko Aroha tāku tamāhine.": [
+    [
+      "Aroha",
+      1
+    ],
+    [
+      "is",
+      0
+    ],
+    [
+      "my",
+      2
+    ],
+    [
+      "daughter.",
+      3
+    ]
+  ],
+  "He kaiako ahau.": [
+    [
+      "I",
+      2
+    ],
+    [
+      "am a",
+      0
+    ],
+    [
+      "teacher.",
+      1
+    ]
+  ],
+  "Kei Pōneke tōku kāinga.": [
+    [
+      "My",
+      2
+    ],
+    [
+      "home",
+      3
+    ],
+    [
+      "is in",
+      0
+    ],
+    [
+      "Wellington.",
+      1
     ]
   ]
 }

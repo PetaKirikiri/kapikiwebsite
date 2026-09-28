@@ -25,3 +25,11 @@ Course sentences, tags, shapes, and pattern settings stay live in Connectors. Tr
 `website-preview` is the only app entry point. Shared rendering dependencies retain their original source paths to preserve geometry and behaviour. Review controls in the shared renderer are disabled on the website; no review or design workspace is mounted and no mutation API is exposed.
 
 The replacement preserves previous repository contents in Git history. No database reset, curriculum rewrite, or deployment is performed by this repository export.
+
+## Ministry October intake
+
+Share `https://kapikiwebsite.vercel.app/#moe`. The Ministry landing page, six level pages, benefit pages and interest form keep the `#moe` context. The original offer remains at `/october-intake-v1.html#moe`; `/october-intake-v2.html#moe` is also retained.
+
+The public form posts to `/__course_interest` → `api/interest.js`. It uses the existing server-only `WORDS_SUPABASE_URL` and `WORDS_DB_PASSWORD` settings (and optional `WORDS_DB_HOST`), writes `public.kp_course_interest`, and returns confirmation only after the insert succeeds. It does not expose database credentials to the browser, send email, create accounts or reserve class places. Selected class/date/time are retained in the goals field. Access submitted interests through the private database; anonymous visitors cannot read registrations.
+
+Run `node --test interest-api.test.mjs` to check request validation and save/error responses. Course word explanations use the existing read-only word-support implementation through `/__word_support`.

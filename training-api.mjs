@@ -1,3 +1,4 @@
+import { readWordSupport } from './wordSupport.mjs'
 import { nextTrainingQuestion, trainingCoverage, structureCoverage } from './trainingCoverage.mjs'
 import pg from 'pg'
 import { wordsDatabaseConnection } from './words-database.mjs'
@@ -14,6 +15,14 @@ export async function trainingApi(req,res) {
   const host=req.headers.host; const origin=req.headers.origin
   if (origin && new URL(origin).host!==host || req.headers['sec-fetch-site']==='cross-site') return json(403,{error:'Open this action from the app.'})
   const db=database()
+  if(route==='__word_support') {
+   if(req.method!=='GET')return json(405,{error:'Read only.'})
+   const word=(url.searchParams.get('word')??'').normalize('NFC').trim().toLowerCase(),pos=url.searchParams.get('pos')||null
+   if(!word||word.length>100||!/^[\p{L}\p{M}’' -]+$/u.test(word)||pos&&!/^[a-z_]{1,80}$/.test(pos))return json(400,{error:'Choose a word.'})
+   const sentence=(url.searchParams.get('sentence')??'').normalize('NFC').trim()
+   if(sentence.length>2000)return json(400,{error:'Sentence is too long.'})
+   return json(200,await readWordSupport(db,word,pos,sentence))
+  }
   if(route==='__website_preview_data' && req.method==='GET') {
    const [sentences,groups,types,labels,mappings,categories]=await Promise.all([
     db.query('select s.structure_id::int as "structureId",s.sort_order as "sortOrder",s.text_mi as "textMi",s.curriculum_level as "curriculumLevel",f.state from public.sentence_structure s left join public.floor_plan f using(structure_id) order by s.sort_order'),

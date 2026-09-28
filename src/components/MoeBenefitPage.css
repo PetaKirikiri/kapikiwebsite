@@ -1,0 +1,64 @@
+.moe-benefit-page { padding: 24px var(--site-gutter) 56px; }
+.moe-benefit-page a { color: var(--ka-green); text-underline-offset: 4px; }
+.moe-benefit-page a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.moe-proof-header > svg, .moe-proof-icon > svg { width: 26px; height: 26px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.moe-proof-header { display: flex; align-items: center; gap: 20px; padding: 28px 32px; }
+.moe-proof-header > svg { width: 40px; height: 40px; }
+.moe-proof-header > div { flex: 1; }
+.moe-proof-header h1 { margin: 0; font: 400 clamp(28px, 3vw, 40px)/1.15 var(--ka-heading); }
+.moe-proof-header p { max-width: 65ch; margin: 10px 0 0; color: #d5e3d6; font-size: 15px; line-height: 1.5; }
+.moe-proof-return { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; text-decoration-color: #a5b5aa; }
+.moe-proof-return:hover { text-decoration-color: currentColor; }
+.moe-proof-body { padding: 28px 32px; }
+.moe-proof-body h2 { margin: 0; font: 400 25px/1.2 var(--ka-heading); }
+.moe-proof-body p { color: var(--site-muted, #5c6b62); line-height: 1.55; font-size: 15px; margin: 7px 0 0; }
+.moe-proof-icon { width: 44px; height: 48px; display: grid; place-items: center; flex-shrink: 0; border-radius: 8px; background: var(--ka-green); color: var(--ka-green-ink); position: relative; overflow: hidden; isolation: isolate; }
+.moe-proof-icon::before, .moe-feature-button::before { content: ''; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: var(--ka-taniko-pattern) center / 120px 72px repeat; opacity: .15; }
+.moe-app-demonstration { max-width: 820px; margin-inline: auto; }
+.moe-app-live.training-app { min-height: 0; border: 1px solid var(--ka-card-line); border-radius: 14px; overflow: hidden; box-shadow: 0 12px 32px #213b3510; }
+.moe-app-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 24px; }
+.moe-app-bar strong { font: 750 25px/1 Arial, sans-serif; letter-spacing: -.05em; }
+.moe-app-bar span { font-size: 13px; }
+.moe-app-live.training-app .training { min-height: 0; max-width: none; padding: 24px; }
+.moe-app-live.training-app .training-card { padding: 24px; }
+.moe-app-live.training-app .training-prompt { height: 180px; min-height: 0; }
+.moe-app-live.training-app .training-choices button { min-height: 88px; }
+.moe-proof-body .moe-app-invitation { text-align: center; font-size: 14px; margin-top: 16px; }
+.moe-app-capture { margin: 0 auto; max-width: 400px; }
+.moe-app-capture img { display: block; width: 100%; height: auto; border: 1px solid var(--ka-card-line); border-radius: 12px; }
+.moe-app-capture figcaption { text-align: center; color: var(--site-muted); font-size: 13px; margin-top: 12px; }
+.moe-proof-highlights { list-style: none; padding: 0; margin: 0; display: grid; gap: 30px; }
+.moe-proof-highlights li, .moe-proof-gallery figcaption { display: flex; gap: 16px; align-items: flex-start; }
+.moe-proof-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.moe-proof-gallery:not(.moe-proof-gallery-pair) > figure:first-child { grid-column: 1 / -1; }
+.moe-proof-gallery figure { margin: 0; min-width: 0; }
+.moe-proof-gallery img { width: 100%; height: auto; display: block; border: 1px solid var(--ka-card-line); border-radius: 8px; }
+.moe-proof-gallery:not(.moe-proof-gallery-pair) > figure:first-child img { max-height: 520px; object-fit: contain; background: #f3f4ed; }
+.moe-proof-gallery figcaption { padding-top: 18px; }
+.moe-proof-reading:hover h2 { text-decoration: underline; text-underline-offset: 5px; }
+.moe-syllabus-showcase { display: grid; gap: 32px; }
+/* Frame the actual tabs and expanded example in the unmodified 1024 × 576 capture. */
+.moe-syllabus-screen { position: relative; overflow: hidden; aspect-ratio: 760 / 418; max-width: 900px; width: 100%; margin-inline: auto; border: 1px solid var(--ka-card-line); border-radius: 8px; background: #f5f4ee; }
+.moe-syllabus-screen img { position: absolute; width: 134.736842%; max-width: none; height: auto; left: -17.368421%; top: -9.090909%; }
+.moe-syllabus-features { grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 28px; border-top: 1px solid var(--ka-card-line); gap: 24px; }
+.moe-syllabus-features h2 { font-size: 23px; }
+.moe-proof-reading { display: flex; gap: 18px; padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--ka-card-line); text-decoration: none; }
+.moe-proof-reading span:not(.moe-proof-icon) { display: inline-block; margin-top: 12px; font-size: 14px; text-decoration: underline; }
+.moe-proof-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding: 20px 32px; border-top: 1px solid var(--ka-card-line); }
+.moe-feature-button, .moe-benefit-page .moe-feature-button { display: inline-block; padding: 12px 20px; position: relative; isolation: isolate; overflow: hidden; background: var(--ka-green); color: white; border: 1px solid var(--ka-green); border-radius: 6px; font: inherit; font-size: 14px; font-weight: 600; text-align: center; text-decoration: none; cursor: pointer; }
+.moe-feature-button:hover { filter: brightness(1.12); }
+@media (max-width: 700px) {
+  .moe-proof-header, .moe-proof-body { padding: 22px; }
+  .moe-proof-header { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 14px; align-items: center; }
+  .moe-proof-header > div { display: contents; }
+  .moe-proof-header h1 { grid-column: 2; grid-row: 1; font-size: 26px; }
+  .moe-proof-header > svg { width: 28px; height: 28px; }
+  .moe-proof-header p { grid-column: 1 / -1; margin: 0; font-size: 14px; }
+  .moe-proof-gallery, .moe-syllabus-features { grid-template-columns: 1fr; }
+  .moe-app-live.training-app .training { padding: 12px; }
+  .moe-app-live.training-app .training-card { padding: 16px 10px; }
+  .moe-app-live.training-app .training-choices { grid-template-columns: 1fr; }
+  .moe-app-live.training-app .training-choices button { min-height: 64px; padding: 14px; }
+  .moe-proof-body h2 { font-size: 23px; }
+  .moe-proof-footer { padding: 20px 22px; justify-content: flex-start; }
+}

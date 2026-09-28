@@ -1,3 +1,4 @@
+import './SiteIdentity.css'
 import './CourseFormat.css'
 
 const COURSE_FORMAT = [
@@ -6,13 +7,18 @@ const COURSE_FORMAT = [
   { title: 'App access', detail: 'Practice between classes', icon: 'M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm2 3h6m-4 14h2M9 11l2 2 4-4' },
 ] as const
 
-export default function CourseFormat() {
-  return <section className="course-format" aria-labelledby="course-format-heading">
-    <h2 id="course-format-heading">How the courses run</h2>
+const COURSE_LINKS = [null, '#benefits/live-classes', '#benefits/app'] as const
+
+export default function CourseFormat({ linked = true }: { linked?: boolean }) {
+  return <section className="course-format site-card" aria-labelledby="course-format-heading">
+    <header className="course-format-cover site-card-cover">
+      <h2 id="course-format-heading" className="site-card-title">How the courses run</h2>
+      <p className="site-benefit-intro">Make room for your reo in a busy working week, with regular classes and practice that fits around you.</p>
+    </header>
     <dl className="course-format-facts">
-      {COURSE_FORMAT.map(({ title, detail, icon }) => <div key={title} className="course-format-fact">
+      {COURSE_FORMAT.map(({ title, detail, icon }, index) => <div key={title} className="course-format-fact">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d={icon} /></svg>
-        <div><dt>{title}</dt><dd>{detail}</dd></div>
+        <div><dt>{title}</dt><dd>{detail}</dd>{linked && COURSE_LINKS[index] ? <a className="course-format-link" href={COURSE_LINKS[index]!}>{index === 1 ? 'See the classroom' : 'See the app'}</a> : null}</div>
       </div>)}
     </dl>
     <div className="course-format-approach">

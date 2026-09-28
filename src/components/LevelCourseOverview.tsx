@@ -1,16 +1,10 @@
+import { LEVEL_PRESENTATION } from '../lib/coursePresentation'
 import './SiteIdentity.css'
 import type { WebsitePreviewSentence } from './WebsiteView'
 import { CURRICULUM_LEVELS, type CurriculumLevel } from '../lib/sentenceStructureLevels'
 
 // Editorial summaries of the course. Structure membership and counts come from the live roster.
-const LEVEL_PRESENTATION = {
-  1: { welcome: 'Start with the language to introduce yourself and describe the world around you.', title: 'Foundations', capability: 'Introduce yourself and describe your world', topics: ['Pepeha', 'Pronunciation', 'Vocabulary', 'Sentence patterns'] },
-  2: { welcome: 'Build on your foundations to talk about where things are and what is happening.', title: 'Actions & time', capability: 'Talk about what happens and when', topics: ['Position', 'Past & present', 'Future actions', 'What should happen'] },
-  3: { welcome: 'Expand your everyday language with ways to say no, give instructions and express what you want.', title: 'Negatives & instructions', capability: 'Express your needs and give instructions', topics: ['Negatives', 'Not yet', 'Instructions', 'Desired outcomes'] },
-  4: { welcome: 'Make your meaning clearer when talking about belonging, purpose and who is doing what.', title: 'Ownership & emphasis', capability: 'Explain belonging, purpose and responsibility', topics: ['Belonging', 'Who it is for', 'Who did it', 'Who will do it'] },
-  5: { welcome: 'Develop more ways to express yourself through comparisons, ability and different perspectives.', title: 'Expression & ability', capability: 'Compare ideas and express what is possible', topics: ['Comparisons', 'Habits', 'Ability', 'Passive sentences'] },
-  6: { welcome: 'Keep the conversation going with questions about why, when and what might happen.', title: 'Questions & conditions', capability: 'Ask why, when and what if', topics: ['Why?', 'When?', 'What if?', 'Negative questions'] },
-} as const
+
 
 // Familiar interface symbols for scanning course topics; these are not grammar shapes.
 const TOPIC_ICONS = {
@@ -42,12 +36,12 @@ const LEVEL_ICONS = {
 } as const
 
 export default function LevelCourseOverview({ sentences, onSelect }: {
-  sentences: readonly WebsitePreviewSentence[]; onSelect: (level: CurriculumLevel) => void
+  sentences?: readonly WebsitePreviewSentence[]; onSelect: (level: CurriculumLevel) => void
 }) {
   return <div className="level-course-grid" aria-label="Course levels">
     {CURRICULUM_LEVELS.map(level => {
-      const count = sentences.filter(sentence => sentence.curriculumLevel === level).length
-      const { title, capability, topics, welcome } = LEVEL_PRESENTATION[level]
+      const count = sentences?.filter(sentence => sentence.curriculumLevel === level).length
+      const { title, capability, topics } = LEVEL_PRESENTATION[level]
       return <article key={level} className={`site-card level-course-card level-course-card-${level}`} aria-labelledby={`course-level-${level}`}>
         <div className="site-card-cover level-course-cover">
           <div className="level-course-cover-top">
@@ -58,14 +52,13 @@ export default function LevelCourseOverview({ sentences, onSelect }: {
         </div>
         <div className="level-course-body">
           <h3>{title}</h3>
-          <p className="level-course-welcome">{welcome}</p>
           <ul className="level-course-topics-list">{topics.map((topic, index) => <li key={topic}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d={TOPIC_ICONS[LEVEL_ICONS[level][index]]} /></svg>
             <span>{topic}</span>
           </li>)}</ul>
           <footer className="level-course-footer">
-            <span className="level-course-count">{count} sentence {count === 1 ? 'structure' : 'structures'}</span>
-            <button type="button" className="level-course-learn-more" aria-label={`Learn more about Level ${level}`} onClick={() => onSelect(level)}>Learn more <span aria-hidden="true">↗</span></button>
+            <span className="level-course-count">{count != null ? `${count} sentence ${count === 1 ? 'structure' : 'structures'}` : '\u00a0'}</span>
+            <button type="button" className="level-course-learn-more" aria-label={`Learn more about Level ${level}`} onClick={() => onSelect(level)}>Explore this level</button>
           </footer>
         </div>
       </article>

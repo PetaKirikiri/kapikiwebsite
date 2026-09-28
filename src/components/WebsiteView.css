@@ -55,7 +55,17 @@
 }
 .site-step-controls button:disabled { cursor: default; opacity: .28; }
 .maori-site :is(a,button):focus-visible { outline: 3px solid #398aa6; outline-offset: 5px; }
-.site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 25px var(--site-gutter); background: var(--site-ink); color: #fff; }
+.site-header { position: relative; isolation: isolate; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 25px var(--site-gutter); background: var(--site-ink); color: #fff; }
+.site-header::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: url('../assets/header-taniko-watermark.svg') center / 200px 120px repeat;
+  opacity: .075;
+  mask-image: linear-gradient(to right, #0005, #000 35%, #000 75%, #0008);
+}
 .site-wordmark { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; white-space: nowrap; font-size: 26px; line-height: 1; font-weight: 750; letter-spacing: -1.3px; }
 .site-brand-motif { width: 44px; height: 34px; object-fit: contain; }
 .site-kapiki-logo { display: block; margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 34px; font-weight: 900; line-height: 1; letter-spacing: -.04em; white-space: nowrap; }
@@ -96,7 +106,6 @@
 .site-level-arrow { margin-left: auto; opacity: 0; }
 .site-level-buttons button[aria-pressed=true] .site-level-arrow { opacity: 1; }
 .site-level-hint { font-size: 14px; line-height: 1.7; margin-top: 30px; color: var(--site-muted); }
-.site-sentence-panel { min-width: 0; background: #f7f9fa; border: 1px solid #e7ecef; border-radius: 8px; overflow: hidden; }
 .site-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 25px 30px; border-bottom: 1px solid var(--site-line); }
 .site-panel-heading .site-eyebrow { color: var(--site-muted); font-size: 12px; }
 .site-panel-heading h3 { display: flex; gap: 16px; align-items: baseline; font-size: 24px; font-weight: 500; letter-spacing: -.035em; margin: 7px 0 0; }
@@ -217,7 +226,6 @@
 .site-level-buttons button:disabled { cursor: default; opacity: .5; }
 .site-level-header + .site-loading, .site-level-header + [role=alert] { margin-inline: var(--site-gutter); }
 .site-level-number, .site-level-arrow { display: none; }
-.site-sentence-panel { border: 0; background: transparent; overflow: visible; }
 .site-sentences { padding: 0; }
 .site-sentences article > p { padding-left: 0; }
 .site-sentences article > p::before { content: none; }
@@ -308,6 +316,10 @@
 .site-methodology .methodology-example article > p { max-width: none; margin: 0; }
 .site-methodology p { max-width: 68ch; margin: 0 0 14px; color: var(--site-muted); font-size: 17px; line-height: 1.65; }
 .site-loading { padding: 24px 0; font-size: 16px; color: var(--site-muted); }
+.site-lesson-loading { display: grid; gap: 16px; margin-block: 24px; padding: 28px; border: 1px solid var(--site-line); border-radius: 16px; background: #fdfdfa; }
+.site-lesson-loading span { display: block; height: 18px; width: 72%; border-radius: 4px; background: #e5ebe5; }
+.site-lesson-loading span:first-child { width: 38%; height: 26px; }
+.site-lesson-loading span:last-child { width: 55%; }
 /* Compact course entries; the engine-owned sentence artwork is untouched. */
 .maori-site .site-sentences .structure-note-heading { gap: 10px; padding: 14px 0 0; }
 .maori-site .site-sentences .structure-note-heading h3 { font-size: 15px; line-height: 1.4; font-weight: 500; }
@@ -319,19 +331,6 @@
 .maori-site .site-sentences .structure-note-detail { margin: 0 0 4px; padding: 8px 0 16px; font-size: 13px; line-height: 1.5; max-width: none; }
 .maori-site .site-sentences .structure-note-detail > span { display: none; }
 .maori-site .site-sentences .structure-note-detail p { margin: 0; max-width: 76ch; }
-.site-sentences article:has(> .course-entry) { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 48px; align-items: start; }
-.site-sentences article > .course-entry { min-width: 0; margin: 0; padding: 16px 0 20px; border-bottom: 1px solid var(--site-line); }
-.course-entry-heading { display: flex; align-items: baseline; gap: 10px; min-height: 32px; flex-wrap: wrap; }
-.course-entry-number { flex-shrink: 0; font-size: 12px; color: var(--site-muted); font-variant-numeric: tabular-nums; }
-.course-entry-heading h3 { margin: 0; color: var(--site-ink); font-size: 15px; font-weight: 600; line-height: 1.4; }
-.course-entry-heading button { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; gap: 5px; margin: -6px 0; min-height: 36px; padding: 6px; border: 0; background: transparent; color: var(--site-muted); font-size: 12px; font-weight: 400; }
-.course-entry-heading button:hover { color: var(--site-ink); text-decoration: underline; text-underline-offset: 3px; }
-.course-entry-content { padding-top: 2px; min-width: 0; }
-.maori-site .site-sentences .course-entry-content > p[data-testid] { margin: 0; padding: 0; border: 0; border-radius: 0; }
-.maori-site .site-sentences .course-entry .site-translation { margin: 4px 0 0 !important; padding: 0; border: 0; font-size: 14px; line-height: 1.7; font-weight: 600; color: #405c60; }
-.course-entry-explanation { margin: 14px 0 0; padding: 0; color: var(--site-muted); font-size: 13px; line-height: 1.6; max-width: 65ch; }
-.course-entry-explanation[hidden] { display: none; }
-@media (min-width: 760px) { .site-sentences article:has(> .course-entry) { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; } }
 @media(max-width: 650px) {
   .site-story-heading { align-items: stretch; flex-direction: column; gap: 12px; }
   .site-story .site-support { gap: 0; }
@@ -350,9 +349,6 @@
 .maori-site .cap-dashboard h3 { font-family: var(--site-heading); font-size: clamp(28px, 3vw, 40px); font-weight: 400; letter-spacing: -.025em; }
 .maori-site .cap-dashboard :is(.cap-stat,.cap-students,.cap-distribution) { border-color: var(--site-line); border-radius: 4px; }
 .maori-site .cap-dashboard :is(input,select,button) { border-radius: 4px; }
-.maori-site .cap-dashboard th { background: var(--site-paper); }
-.maori-site .course-entry-heading h3 { font-size: 17px; font-weight: 500; }
-.maori-site .site-sentences .course-entry .site-translation { color: var(--site-ink); }
 @media(max-width: 760px) {
   #methodology, #competency { padding-top: 28px; }
   .methodology-step { padding: 18px; }
@@ -396,7 +392,7 @@
 
 /* One page grid for the brand, navigation, controls and course content. */
 .maori-site { --site-gutter: max(24px, calc((100% - 1080px) / 2)); min-height: 100vh; }
-.site-header { padding: 20px var(--site-gutter); gap: 24px; }
+.site-header { padding: 20px var(--site-gutter); gap: 24px; align-items: baseline; }
 .site-header .site-nav { gap: 28px; }
 .site-section-navigation { padding: 0 var(--site-gutter); gap: 32px; align-items: center; flex-direction: row; }
 .site-section-navigation nav { gap: 28px; }
@@ -410,7 +406,6 @@
 .site-level-header .site-level-buttons button { width: 100%; min-height: 44px; padding: 10px 6px; border: 0; border-right: 1px solid var(--site-line); border-radius: 0; font-size: 14px; gap: 3px; }
 .site-level-header .site-level-buttons button:last-child { border-right: 0; }
 .site-level-layout { padding: 0 var(--site-gutter) 48px; }
-.site-sentence-panel { padding: 8px 24px; background: #fff; border: 1px solid #dddcd3; border-radius: 6px; }
 .site-load-error { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin: 0 var(--site-gutter) 32px; padding: 20px 24px; border: 1px solid var(--site-line); border-radius: 6px; background: #fff; }
 .site-load-error p { margin: 0; color: var(--site-muted); font-size: 15px; line-height: 1.5; }
 .site-load-error button { flex-shrink: 0; border: 1px solid var(--site-line); border-radius: 4px; min-height: 40px; padding: 8px 16px; background: var(--site-paper); font-size: 14px; cursor: pointer; }
@@ -427,7 +422,6 @@
   .site-level-signup { min-height: 40px; padding: 8px 10px; font-size: 12px; }
   .site-level-header .site-level-buttons { width: 100%; }
   .site-level-label { display: none; }
-  .site-sentence-panel { padding: 4px 16px; }
   .site-load-error { padding: 16px; gap: 12px; align-items: flex-start; }
 }
 @media (max-width: 380px) {
@@ -448,28 +442,17 @@
 #level-finder .site-level-buttons button:hover:enabled { background: #ffffff90; color: var(--site-ink); }
 #level-finder .site-level-label { display: none; }
 #level-finder .site-level-layout { padding: 0; }
-#level-finder .site-sentence-panel { padding: 0 24px; border: 1px solid #e0e1d9; border-radius: 6px; }
-#level-finder .site-sentences article:has(> .course-entry) { grid-template-columns: minmax(0, 1fr); }
-#level-finder .site-sentences article > .course-entry { padding: 22px 0 24px; border-color: #e5e6df; }
-#level-finder .site-sentences article > .course-entry:last-child { border-bottom: 0; }
-#level-finder .course-entry-heading { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; align-items: baseline; gap: 8px; min-height: 28px; margin-bottom: 12px; }
-#level-finder .course-entry-heading h3 { font-size: 14px; font-weight: 500; color: var(--site-muted); letter-spacing: 0; }
-#level-finder .course-entry-number { color: #79857e; font-size: 11px; }
-#level-finder .course-entry-heading button { justify-self: end; font-size: 12px; padding-right: 0; margin-block: -8px; min-height: 40px; }
-#level-finder .course-entry-content, #level-finder .course-entry-explanation { margin-left: 30px; }
-.maori-site #level-finder .course-entry .site-translation { margin-top: 8px !important; font-size: 13px; font-weight: 400; color: var(--site-muted); }
 #level-finder .site-load-error, #level-finder .site-loading { margin-inline: 0; }
 @media (max-width: 650px) {
   #level-finder { padding: 24px 20px 40px; }
   #level-finder .site-level-header h1 { font-size: 22px; }
   #level-finder .site-level-signup { font-size: 12px; }
-  #level-finder .site-sentence-panel { padding-inline: 16px; }
-  #level-finder .course-entry-content, #level-finder .course-entry-explanation { margin-left: 0; }
 }
 
 /* Course covers use the same colour language and saved koru as the site. */
 #level-finder { max-width: 1188px; padding-top: 32px; }
-#level-finder .site-level-header-overview { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#level-finder .site-level-header-overview { display: block; padding: 28px 32px; margin-bottom: 28px; background: var(--cover); }
+#level-finder .site-level-header-overview h1 { margin: 0; color: var(--cover-ink); font: 400 clamp(28px, 3vw, 38px)/1.15 var(--ka-heading); }
 .level-course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .level-course-card { display: flex; flex-direction: column; transition: box-shadow .18s ease, border-color .18s ease; }
 .level-course-card-2 { --cover: var(--ka-blue); --cover-ink: #e4f4f8; --cover-mark: #7ac0d6; }
@@ -515,10 +498,13 @@
 .site-about-introduction { max-width: 560px; margin-top: 36px; }
 .site-about-introduction p { margin: 0 0 28px; color: var(--site-muted); font-size: 18px; line-height: 1.75; }
 .site-about-introduction .site-offer-link { font-size: 15px; }
-@media (max-width: 480px) {
-  .maori-site .site-header { flex-direction: column; align-items: stretch; gap: 6px; }
-  .maori-site .site-header .site-wordmark { align-self: flex-start; }
-  .maori-site .site-header .site-nav { justify-content: space-between; flex-wrap: nowrap; gap: 12px; }
+@media (max-width: 650px) {
+  .maori-site .site-header .site-nav { flex-wrap: nowrap; gap: 18px; font-size: 12px; }
+}
+@media (max-width: 420px) {
+  .maori-site .site-header { flex-direction: column; align-items: center; gap: 12px; padding-block: 20px 14px; }
+  .maori-site .site-header .site-wordmark { align-self: center; }
+  .maori-site .site-header .site-nav { width: 100%; margin-left: 0; justify-content: space-between; gap: 12px; font-size: 13px; }
 }
 @media (max-width: 650px) {
   .site-about { padding-top: 36px; padding-bottom: 56px; }
@@ -528,3 +514,38 @@
   .site-about-introduction { margin-top: 24px; }
   .site-about-introduction p { font-size: 16px; }
 }
+
+/* MOE is a secondary identity beside the primary KA PIKI wordmark. */
+.site-header-branding { display: flex; align-items: center; gap: 24px; }
+.site-header-moe { align-items: center; }
+.site-header-moe .site-nav-item { padding: 8px 0; }
+.site-header .site-moe-home { display: inline-flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 5px; padding: 2px 0 2px 24px; border-left: 1px solid #c0d4c840; color: #c0d4c8; white-space: nowrap; }
+.site-header .site-moe-home:hover { color: #fff; }
+.site-moe-home img { display: block; width: 126px; height: auto; }
+.site-moe-home strong { font-size: 14px; font-weight: 600; line-height: 1.2; color: #e8f5df; }
+.site-moe-home span { font-size: 10px; font-weight: 500; line-height: 1.2; letter-spacing: .04em; }
+@media (max-width: 760px) {
+  .maori-site .site-header-moe { flex-direction: column; align-items: stretch; gap: 12px; }
+  .site-header-moe .site-header-branding { width: 100%; justify-content: space-between; gap: 18px; }
+  .maori-site .site-header-moe .site-nav { width: 100%; justify-content: space-between; gap: 24px; }
+  .site-header-moe .site-moe-home { padding-left: 18px; }
+  .site-header-moe .site-moe-home img { width: 120px; }
+}
+
+/* One compact return and one meaningful class action per level. */
+.site-context-return { display: inline-block; margin: 0 0 18px; color: var(--ka-green); font-size: 14px; text-underline-offset: 4px; }
+.site-course-action { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px; margin-top: 28px; }
+.site-course-action strong { font-family: var(--ka-heading); font-size: 26px; font-weight: 400; }
+.site-course-action p { margin: 6px 0 0; font-size: 14px; color: var(--site-muted); }
+.site-practice-preview { max-width: 1000px; margin: 32px auto; padding: 0 24px; }
+.site-practice-preview h1 { font: 32px var(--ka-heading); color: var(--ka-green); }
+.site-practice-preview .training { min-height: 400px; }
+.site-preview-label { color: var(--site-muted); font-size: 13px; }
+[id^='pepeha-section-'], [id^='moe-class-'], #moe-timetable { scroll-margin-top: 24px; }
+@media(max-width: 550px) { .site-course-action { align-items: stretch; flex-direction: column; }.site-course-action button { width: 100%; } }
+.maori-site .site-practice-preview { min-height: 0; background: transparent; }
+.maori-site .site-practice-preview .training { padding: 24px 0; min-height: 0; }
+.maori-site .site-practice-preview .training-prompt { min-height: 140px; margin-bottom: 24px; }
+@media(max-width: 550px) { .maori-site .site-practice-preview { padding: 0 20px; }.maori-site .site-practice-preview .training-prompt { min-height: 120px; } }
+.site-skip-content { position: fixed; z-index: 100; left: 16px; top: 12px; transform: translateY(-180%); padding: 12px 18px; background: white; color: var(--ka-green); border: 2px solid var(--ka-green); border-radius: 6px; }
+.site-skip-content:focus { transform: none; }

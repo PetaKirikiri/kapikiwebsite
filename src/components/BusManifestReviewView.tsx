@@ -1,3 +1,5 @@
+import type { WordSupportTarget } from '../lib/connectorPresentation/wordSupport'
+import { useWordSupport } from './useWordSupport'
 import { sentenceMeasurementFrame } from '../lib/connectorPresentation/browserMeasurements'
 import {
   Fragment,
@@ -25,6 +27,7 @@ import { compileConnectorLibrary } from '../lib/connectorPresentation/blueprints
 import { presentSentence } from '../lib/connectorPresentation/engine'
 import structureNotes from '../lib/connectorPresentation/structureNotes.json'
 import './SentenceStructureNotes.css'
+import './PosTextAnnotations.css'
 import CourseSentenceEntry from './CourseSentenceEntry'
 import type {
   BusManifestSourceAddress,
@@ -96,6 +99,15 @@ type PosPickerCategory = NonNullable<
 >[number]
 
 export type BusManifestReviewViewProps = {
+  readonly onWordExplain?: (target: WordSupportTarget) => void
+  readonly presentation?: 'connectors' | 'pos-annotations'
+  readonly highlightedTokenIndex?: number
+  /** Accepted display state for an unaddressed, read-only sentence preview. */
+  readonly presentationStates?: readonly (ReviewDeskSheet | null)[]
+  readonly draftReview?: {
+    readonly states: readonly ReviewDeskSheet[]
+    readonly onChange: (paragraphIndex: number, state: ReviewDeskSheet) => void
+  }
   readonly loading: boolean
   readonly paragraphs: readonly (readonly EngineRenderToken[])[]
   readonly savedBusManifests: readonly SavedBusManifest[]
@@ -317,7 +329,7 @@ function PosPicker({
           >
             <nav
               className="flex min-w-0 flex-1 flex-wrap gap-1"
-              aria-label="POS families"
+              aria-label="Broad POS"
             >
               {catalog.groups.map((candidate) => {
                 const current = candidate.groupCode === group?.groupCode
@@ -440,10 +452,10 @@ function PosPicker({
             className="grid grid-cols-[5.5rem_minmax(0,1fr)] gap-2 border-b border-indigo-900/70 bg-indigo-950/50 p-2"
           >
             <h3 id="pos-picker-tier-1-heading" className="py-1.5 text-[10px] font-black uppercase tracking-wide text-indigo-300">
-              1 Family
+              1 Broad POS
             </h3>
             <div className="flex min-w-0 items-start gap-2">
-              <nav className="flex min-w-0 flex-1 flex-wrap gap-1" aria-label="POS families">
+              <nav className="flex min-w-0 flex-1 flex-wrap gap-1" aria-label="Broad POS">
                 {catalog.groups.map((candidate) => {
                   const current = candidate.groupCode === group?.groupCode
                   return (
@@ -532,7 +544,7 @@ function PosPicker({
             className="grid grid-cols-[5.5rem_minmax(0,1fr)] gap-2 border-b border-emerald-900/70 bg-emerald-950/30 p-2"
           >
             <h3 id="pos-picker-tier-3-heading" className="py-1.5 text-[10px] font-black uppercase tracking-wide text-emerald-300">
-              3 Ours
+              3 Specific POS
             </h3>
             <div className="flex min-w-0 flex-wrap gap-1" aria-live="polite">
               {allMatchingOptions.length > 0 ? allMatchingOptions.map((option) => {
@@ -675,6 +687,11 @@ const KORU_STORY_HEIGHT_PX = CONNECTOR_RAIL_LAYOUT.storyHeight
 const KORU_STORY_CONNECTION_WIDTH_PX = CONNECTOR_RAIL_LAYOUT.connectionWidth
 const KORU_STORY_END_WIDTH_PX = CONNECTOR_RAIL_LAYOUT.connectionWidth
 export default function BusManifestReviewView({
+  onWordExplain,
+  highlightedTokenIndex,
+  presentation = 'connectors',
+  presentationStates,
+  draftReview,
   loading,
   paragraphs,
   savedBusManifests,
@@ -697,6 +714,7 @@ export default function BusManifestReviewView({
   guestPatternCategoryMatches = [],
   onGuestPatternCategoryToggle,
 }: BusManifestReviewViewProps) {
+  const wordSupport = useWordSupport()
   const patternSettings = useConnectorPatterns()
   const {
     collection: connectorDrawings,
@@ -761,6 +779,7 @@ export default function BusManifestReviewView({
   }, [approvedPassageKeys, enablePassageApproval])
 
   useLayoutEffect(() => {
+    if (presentation === 'pos-annotations') return
     let active = true
     const measure = () => {
       if (!active) return
@@ -807,7 +826,7 @@ export default function BusManifestReviewView({
       document.fonts?.removeEventListener('loadingdone', measure)
       window.removeEventListener('resize', measure)
     }
-  }, [loading, connectorDrawings, paragraphs, savedBusManifests, passageAddresses, continuousParagraph, showPosTags])
+  }, [presentation, loading, connectorDrawings, paragraphs, savedBusManifests, presentationStates, draftReview?.states, passageAddresses, continuousParagraph, showPosTags])
 
   const searchMatches = useMemo(() => {
     const query = searchQuery.trim().toLocaleLowerCase('mi').replace(/\s+/gu, ' ')
@@ -880,6 +899,12 @@ export default function BusManifestReviewView({
     paragraphIndex: number,
     updater: (state: ReviewDeskSheet) => ReviewDeskSheet,
   ) {
+    if (readOnly) return
+    const draft = draftReview?.states[paragraphIndex]
+    if (draft != null) {
+      draftReview!.onChange(paragraphIndex, updater(draft))
+      return
+    }
     const sourceAddress = passageAddresses[paragraphIndex]
     const savedReview = reviewForAddress(savedBusManifests, sourceAddress)
     if (sourceAddress == null || savedReview == null) return
@@ -944,7 +969,7 @@ export default function BusManifestReviewView({
   if (loading) {
     return <p className="rounded border border-slate-200 bg-white px-4 py-8 text-center text-sm text-slate-600">Loading passages…</p>
   }
-  if (connectorDrawings.length === 0) {
+  if (presentation === 'connectors' && connectorDrawings.length === 0) {
     return <p role={connectorDrawingsError ? 'alert' : undefined}
       className="rounded border border-slate-200 bg-white px-4 py-8 text-center text-sm text-slate-600">
       {connectorDrawingsLoading ? 'Loading connector shapes…' : connectorDrawingsError ?? 'The complete connector shape pack is unavailable.'}
@@ -955,7 +980,8 @@ export default function BusManifestReviewView({
   }
 
   return (
-    <section aria-label="POS review reader" className="min-w-0">
+    <section aria-label="POS review reader" className={presentation === 'pos-annotations' ? 'pos-annotations min-w-0' : 'min-w-0'}>
+      {wordSupport.modal}
       {showPassageSearch ? (
         <form
           role="search"
@@ -990,8 +1016,8 @@ export default function BusManifestReviewView({
           const tokens = paragraphs[paragraphIndex]
           const address = passageAddresses[paragraphIndex]
           const saved = reviewForAddress(savedBusManifests, address)
-          const visibleState = saved?.state ?? null
-          const controlsEditable = saved != null && !readOnly
+          const visibleState = draftReview?.states[paragraphIndex] ?? saved?.state ?? (readOnly ? presentationStates?.[paragraphIndex] : null) ?? null
+          const controlsEditable = (draftReview?.states[paragraphIndex] != null || saved != null) && !readOnly
           const addressKey = sourceKeyOrNull(address)
           const canOpenUnsavedFloor = !readOnly && saved == null && address != null &&
             onUnsavedControlIntent != null
@@ -1112,6 +1138,8 @@ export default function BusManifestReviewView({
               {tokens.map((token, tokenIndex) => {
                 const savedToken = visibleState?.tokens[tokenIndex]
                 const acceptedPosCode = savedToken?.acceptedPosCode ?? null
+                const support = sentencePlan.words[tokenIndex]!.support
+                const explainWord = () => (onWordExplain ?? wordSupport.open)(support)
                 const wordLayout = sentencePlan.words[tokenIndex]!.layout
                 const blockWidth = wordLayout.blockWidth
                 const connectorAnchor = wordLayout.connectorCenter
@@ -1125,6 +1153,22 @@ export default function BusManifestReviewView({
                 const rightConnectorFamily = topology?.rightConnectorFamily ?? null
                 const connectorDesign = topology?.blueprint ?? null
                 const label = posType?.abbreviation ?? null
+                if (presentation === 'pos-annotations') {
+                  if (!/\p{L}/u.test(token.text)) return <Fragment key={tokenIndex}><span className="pos-annotation-punctuation">{token.text}</span>{' '}</Fragment>
+                  return <Fragment key={tokenIndex}><button
+                    type="button"
+                    className="pos-annotation-word"
+                    data-testid={`pos-${paragraphIndex}-${tokenIndex}`}
+                    disabled={!controlsEnabled}
+                    aria-label={`${token.text}: ${posType?.label ?? 'unassigned'} — change POS`}
+                    title={posType?.label ?? 'Choose a part of speech'}
+                    onClick={(event) => {
+                      posPickerReturnFocus.current = event.currentTarget
+                      if (controlsEditable) setEditingGuest({ paragraphIndex, tokenIndex })
+                      else runUnsavedControlIntent(paragraphIndex, { kind: 'edit_pos', tokenIndex })
+                    }}
+                  ><span className="pos-annotation-label" aria-hidden="true">{label ?? '?'}</span><span data-word-text>{token.text}</span></button>{' '}</Fragment>
+                }
                 const checkpointState = savedToken?.checkpointState ?? null
                 const dotMayEnd = checkpointState === 'may_end'
                 const railState = savedToken?.rightRail ?? null
@@ -1219,13 +1263,10 @@ export default function BusManifestReviewView({
                       data-testid={`checkpoint-${paragraphIndex}-${tokenIndex}`}
                       data-checkpoint-state={checkpointState ?? 'undecided'}
                       data-checkpoint-connector-design-id={checkpointConnectorDesign?.id ?? 'none'}
-                      disabled={!controlsEnabled}
-                      aria-label={readOnly
-                        ? checkpointState == null
-                          ? `Checkpoint unknown after ${token.text}`
-                          : dotMayEnd
-                            ? `May end after ${token.text}`
-                            : `Must continue after ${token.text}`
+                      disabled={!controlsEnabled && !readOnly}
+                      tabIndex={readOnly ? -1 : undefined}
+                      aria-hidden={readOnly || undefined}
+                      aria-label={readOnly ? `Explain ${token.text} connector`
                         : openingUnsavedFloor
                         ? `Opening this Floor to set the checkpoint after ${token.text}`
                         : canOpenUnsavedFloor
@@ -1249,6 +1290,7 @@ export default function BusManifestReviewView({
                           : dotMayEnd ? 'May end here' : 'Must continue'}
                       onClick={(event) => {
                         event.stopPropagation()
+                        if (readOnly) { explainWord(); return }
                         if (!controlsEditable) {
                           runUnsavedControlIntent(paragraphIndex, {
                             kind: 'set_checkpoint',
@@ -1276,7 +1318,7 @@ export default function BusManifestReviewView({
                         checkpointState == null
                           ? 'border-0 bg-transparent'
                           : 'bg-transparent'
-                      } ${controlsEnabled ? 'cursor-pointer' : 'cursor-default'}`}
+                      } ${controlsEnabled || readOnly ? 'cursor-pointer' : 'cursor-default'}`}
                       style={{
                         top: RAIL_CENTER_OFFSET_PX - KORU_STORY_HEIGHT_PX / 2,
                         left: connectorAnchor,
@@ -1293,11 +1335,14 @@ export default function BusManifestReviewView({
                         <button
                           type="button"
                           data-testid={`rail-control-${paragraphIndex}-${tokenIndex}`}
-                          disabled={!controlsEnabled}
-                          aria-label={railCycleAriaLabel}
-                          title={railCycleTitle}
+                          disabled={!controlsEnabled && !readOnly}
+                      tabIndex={readOnly ? -1 : undefined}
+                      aria-hidden={readOnly || undefined}
+                          aria-label={readOnly ? `Explain ${token.text} rail` : railCycleAriaLabel}
+                          title={readOnly ? `Explain ${token.text}` : railCycleTitle}
                           onClick={(event) => {
                             event.stopPropagation()
+                        if (readOnly) { explainWord(); return }
                             if (!controlsEditable) {
                               runUnsavedControlIntent(paragraphIndex, {
                                 kind: 'set_right_rail',
@@ -1309,7 +1354,7 @@ export default function BusManifestReviewView({
                             cycleRail()
                           }}
                           className={`absolute top-2 z-40 h-4 bg-transparent ${
-                            controlsEnabled ? 'cursor-pointer' : 'cursor-default'
+                            controlsEnabled || readOnly ? 'cursor-pointer' : 'cursor-default'
                           }`}
                           style={{ left: connectorAnchor, width: `${outgoingWidth}px` }}
                         />
@@ -1317,11 +1362,14 @@ export default function BusManifestReviewView({
                           <button
                             type="button"
                             data-testid={`rail-control-continuation-${paragraphIndex}-${tokenIndex}`}
-                            disabled={!controlsEnabled}
-                            aria-label={railCycleAriaLabel}
-                            title={railCycleTitle}
+                            disabled={!controlsEnabled && !readOnly}
+                      tabIndex={readOnly ? -1 : undefined}
+                      aria-hidden={readOnly || undefined}
+                            aria-label={readOnly ? `Explain ${token.text} rail` : railCycleAriaLabel}
+                            title={readOnly ? `Explain ${token.text}` : railCycleTitle}
                             onClick={(event) => {
                               event.stopPropagation()
+                        if (readOnly) { explainWord(); return }
                               if (!controlsEditable) {
                                 runUnsavedControlIntent(paragraphIndex, {
                                   kind: 'set_right_rail',
@@ -1333,7 +1381,7 @@ export default function BusManifestReviewView({
                               cycleRail()
                             }}
                             className={`absolute z-40 h-4 bg-transparent ${
-                              controlsEnabled ? 'cursor-pointer' : 'cursor-default'
+                              controlsEnabled || readOnly ? 'cursor-pointer' : 'cursor-default'
                             }`}
                             style={{
                               left: `${railVisual.continuation.left}px`,
@@ -1364,9 +1412,13 @@ export default function BusManifestReviewView({
                         })
                       }}
                     /> : null}
-                    <span data-word-text style={{ '--word-ink': topology?.materialColor } as CSSProperties} className={label == null ? 'text-slate-800' : 'text-slate-900'}>
+                    {readOnly ? <>
+                      <button type="button" tabIndex={-1} aria-hidden="true" className="word-support-trigger absolute z-30 border-0 bg-transparent p-0" aria-label={`Explain ${token.text} shape`} onClick={explainWord}
+                        style={{ top: RAIL_CENTER_OFFSET_PX - KORU_STORY_HEIGHT_PX / 2, left: wordLayout.blockLeft, width: blockWidth, height: KORU_STORY_HEIGHT_PX }} />
+                      <button type="button" data-word-text aria-current={highlightedTokenIndex === tokenIndex ? 'true' : undefined} className="word-support-text word-support-trigger" aria-label={`Explain ${token.text}`} onClick={explainWord} style={{ '--word-ink': topology?.materialColor } as CSSProperties}>{token.text}</button>
+                    </> : <span data-word-text style={{ '--word-ink': topology?.materialColor } as CSSProperties} className={label == null ? 'text-slate-800' : 'text-slate-900'}>
                       {token.text}
-                    </span>
+                    </span>}
                   </span>
                 )
               })}
@@ -1398,18 +1450,18 @@ export default function BusManifestReviewView({
         })}
       </article>
 
-      {editingGuest != null && reviewForAddress(
+      {editingGuest != null && (draftReview?.states[editingGuest.paragraphIndex] != null || reviewForAddress(
         savedBusManifests,
         passageAddresses[editingGuest.paragraphIndex],
-      ) != null ? (
+      ) != null) ? (
         <PosPicker
           catalog={posCatalog}
           hierarchy={posPickerHierarchy}
           selectedPosCode={
-            reviewForAddress(
+            (draftReview?.states[editingGuest.paragraphIndex] ?? reviewForAddress(
               savedBusManifests,
               passageAddresses[editingGuest.paragraphIndex],
-            )?.state.tokens[editingGuest.tokenIndex]?.acceptedPosCode ?? null
+            )?.state)?.tokens[editingGuest.tokenIndex]?.acceptedPosCode ?? null
           }
           selectedCategoryCodes={new Set(
             categoryMatchesByAddress.get(`${passageAddresses[editingGuest.paragraphIndex]?.structureId}:${editingGuest.tokenIndex}`) ?? [],
