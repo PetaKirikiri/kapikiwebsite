@@ -10,7 +10,10 @@
 .level-carousel option { color: var(--ka-green); background: var(--ka-card-paper); }
 .level-intro-main { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 28px; margin-top: 24px; }
 .level-explorer-heading h1 { margin: 0; font: 400 clamp(32px, 4vw, 44px)/1.12 var(--ka-heading); letter-spacing: -.025em; color: var(--cover-ink); text-wrap: balance; }
-.level-intro-lead { max-width: 54ch; margin: 16px 0 0; color: #d9e5db; font-size: 16px; line-height: 1.55; }
+.level-intro-skills { list-style: disc; max-width: 58ch; margin: 18px 0 0; padding-left: 18px; color: #d9e5db; font-size: 15px; line-height: 1.5; }
+.level-intro-skills li + li { margin-top: 7px; }
+.level-intro-skills strong { color: var(--cover-ink); font-weight: 600; }
+.level-intro-skills span::before { content: " — "; }
 .level-explorer-heading h1:focus { outline: none; }
 .level-register { display: inline-flex; align-items: center; min-height: 44px; margin-top: 22px; padding: 10px 16px; border: 1px solid #bed3c477; border-radius: 6px; background: transparent; color: var(--cover-ink); font: inherit; font-size: 14px; cursor: pointer; }
 .level-register:hover { background: #ffffff0d; border-color: #bed3c4; }

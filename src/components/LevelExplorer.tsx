@@ -49,7 +49,7 @@ export default function LevelExplorer({ level, moe, tab, onRegister, children }:
     </div>
     <div className="level-intro-main">
       <div className="level-explorer-heading"><h1 id="level-explorer-title" tabIndex={-1}>{course.title}</h1>
-        <p className="level-intro-lead">{course.welcome}</p>
+        <ul className="level-intro-skills" aria-label="Skills in this level">{course.skills.map(skill => <li key={skill.label}><strong>{skill.label}</strong><span>{skill.pattern}</span></li>)}</ul>
         <button type="button" className="level-register" onClick={onRegister}>Register interest</button>
       </div>
       <div className="level-class-bar">
