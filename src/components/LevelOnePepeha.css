@@ -48,3 +48,5 @@
   .level-pepeha-sections { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
   .level-pepeha-sections > li:first-child { grid-column: 1 / -1; }
 }
+
+.level-reading-speaker { display: block; margin-bottom: 4px; color: var(--site-muted, #5a645e); font-size: 12px; font-weight: 700; }

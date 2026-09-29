@@ -7,7 +7,8 @@ import MoeOfferV2 from './MoeOfferV2'
 import MoeBenefitPage from './MoeBenefitPage'
 import { websiteRoute, contextualRoute, normaliseWebsiteHash } from '../lib/websiteRoutes'
 import { moeInterestContext } from '../lib/moeOffer'
-import LevelOnePepeha from './LevelOnePepeha'
+import LevelOnePepeha, { LevelReadingMaterial } from './LevelOnePepeha'
+import { LEVEL_READING_MATERIAL } from '../lib/levelReadingMaterial'
 import LevelExplorer from './LevelExplorer'
 import { installWebsiteNavigation } from '../lib/websiteNavigation'
 import KitchenGame from './KitchenGame'
@@ -299,7 +300,9 @@ export default function WebsiteView({
                     readOnly />}
                 </div></div>
               </> : null}
-            </> : route.tab === 'stories' ? selectedLevel === 1 ? data ? <LevelOnePepeha catalog={data.catalog} sentences={data.sentences} /> : !error ? <p role="status">Loading pepeha…</p> : null : <div className="level-empty"><h2>Reading material · Level {selectedLevel}</h2><p>Reading material for this level has not been added yet.</p><button type="button" onClick={() => { window.location.assign(link(`#levels/${selectedLevel}?tab=structures`)) }}>Explore the sentence structures</button></div> : <>
+            </> : route.tab === 'stories' ? selectedLevel === 1
+              ? <LevelOnePepeha catalog={data?.catalog} sentences={data?.sentences} />
+              : <LevelReadingMaterial key={selectedLevel} reading={LEVEL_READING_MATERIAL[selectedLevel]} catalog={data?.catalog} /> : <>
               <p className="site-preview-label">Level {selectedLevel} practice · answers stay in this session</p>
               <TrainingView key={selectedLevel} preview data={data ? { ...data, sentences: levelSentences } : null} error={error ?? trainingError} />
             </>}

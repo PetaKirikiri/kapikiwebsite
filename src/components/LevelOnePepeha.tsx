@@ -1,9 +1,10 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import FamilyConnectorSentenceView from './FamilyConnectorSentenceView'
 import SentenceTranslation from './SentenceTranslation'
 import { tagText, unresolvedSentence } from '../lib/connectorPresentation/engine'
 import { renderUnassessedPassage } from '../lib/busManifestTeam/reviewDeskDisplay'
 import type { BusManifestSheet, BusManifestPosCatalog } from '../lib/busManifestContract'
+import type { ReadingLine, ReadingMaterialContent } from '../lib/levelReadingMaterial'
 import './SiteIdentity.css'
 import './LevelOnePepeha.css'
 
@@ -38,7 +39,7 @@ const SECTIONS = [
   ] },
 ] as const
 
-const SENTENCES = SECTIONS.flatMap<readonly [string, string]>(section => section.lines)
+const PEPEHA: ReadingMaterialContent = { id: 'pepeha', title: 'Pepeha', sections: SECTIONS }
 const NO_WRITES = () => {}
 
 type Analysis = { state: BusManifestSheet | null; failed: boolean }
@@ -58,17 +59,24 @@ function PepehaCard({ heading, children }: { heading: ReactNode; children: React
   </div>
 }
 
-export default function LevelOnePepeha({ catalog, sentences = NO_SAVED_SENTENCES }: {
-  catalog: BusManifestPosCatalog; sentences?: readonly SavedSentence[]
-}) {
+type ReadingProps = { catalog?: BusManifestPosCatalog; sentences?: readonly SavedSentence[] }
+
+export default function LevelOnePepeha(props: ReadingProps) {
+  return <LevelReadingMaterial reading={PEPEHA} {...props} />
+}
+
+/** The same read-only reading cards and sentence renderer at every level. */
+export function LevelReadingMaterial({ reading, catalog, sentences = NO_SAVED_SENTENCES }: ReadingProps & { reading: ReadingMaterialContent }) {
+  const lines = useMemo(() => reading.sections.flatMap(section => section.lines), [reading])
   const [analyses, setAnalyses] = useState<Record<string, Analysis>>({})
   useEffect(() => {
+    if (!catalog) return
     const controller = new AbortController()
     let next = 0
     // Limit requests while each sentence keeps its own read-only analysis boundary.
     async function worker() {
-      while (next < SENTENCES.length && !controller.signal.aborted) {
-        const [mi] = SENTENCES[next++]!
+      while (next < lines.length && !controller.signal.aborted) {
+        const [mi] = lines[next++]!
         if (savedState(sentences, mi)) continue
         try {
           const state = await tagText(mi, controller.signal)
@@ -81,16 +89,18 @@ export default function LevelOnePepeha({ catalog, sentences = NO_SAVED_SENTENCES
     void worker()
     void worker()
     return () => controller.abort()
-  }, [sentences])
+  }, [sentences, lines, catalog])
 
-  function sentence([mi, en]: readonly [string, string]) {
+  function sentence([mi, en, speaker]: ReadingLine) {
     const state = savedState(sentences, mi) ?? analyses[mi]?.state ?? unresolvedSentence(mi)
     // Unanalysed text has no drawable grammar. Avoid reserving an empty rail row.
-    if (!state.tokens.some(token => token.acceptedPosCode != null)) return <div className="level-pepeha-line" key={mi}>
+    if (!catalog || !state.tokens.some(token => token.acceptedPosCode != null)) return <div className="level-pepeha-line" key={mi}>
+      {speaker && <span className="level-reading-speaker">{speaker}</span>}
       <p className="level-pepeha-plain" lang="mi">{mi}</p>
       <p className="level-pepeha-translation" lang="en">{en}</p>
     </div>
     return <div className="level-pepeha-line" key={mi}>
+      {speaker && <span className="level-reading-speaker">{speaker}</span>}
       <FamilyConnectorSentenceView loading={false} paragraphs={[renderUnassessedPassage(mi)]}
         savedBusManifests={[]} presentationStates={[state]} passageAddresses={[]}
         posCatalog={catalog} onBusManifestWrite={NO_WRITES} showPassageLabel={false}
@@ -99,11 +109,11 @@ export default function LevelOnePepeha({ catalog, sentences = NO_SAVED_SENTENCES
     </div>
   }
 
-  return <section className="level-pepeha" aria-label="Pepeha">
+  return <section className="level-pepeha" aria-label={reading.title}>
     <ol className="level-pepeha-sections">
-      {SECTIONS.map(({ title, meaning, lines }, index) => <li key={title} id={`pepeha-section-${index + 1}`} tabIndex={-1}>
+      {reading.sections.map(({ title, meaning, lines }, index) => <li key={title} id={`${reading.id}-section-${index + 1}`} tabIndex={-1}>
         <PepehaCard heading={<div className="level-pepeha-section-label">
-          <span className="level-pepeha-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+          {reading.sections.length > 1 && <span className="level-pepeha-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>}
           <div><h3 lang="mi">{title}</h3><p>{meaning}</p></div>
         </div>}>{lines.map(sentence)}</PepehaCard>
       </li>)}
