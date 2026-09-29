@@ -24,3 +24,12 @@ it('covers every reading with exact sentence seats, matching rail boundaries, an
     }
   }
 })
+
+it('keeps Level 2 within its taught action and position structures', () => {
+  const permitted = new Set(['tam', 'transitive_verb', 'pronoun', 'determiner', 'noun', 'nominal_predicate', 'object_marker'])
+  for (const [text] of LEVEL_READING_MATERIAL[2].sections[0].lines) {
+    const { state } = LEVEL_READING_ANNOTATIONS.find(item => item.textMi === text)!
+    expect(state.tokens.every(token => permitted.has(token.acceptedPosCode!))).toBe(true)
+  }
+  expect(LEVEL_READING_MATERIAL[2].sections[0].lines.map(([text]) => text)).toContain('I kai ahau i te parāoa.')
+})

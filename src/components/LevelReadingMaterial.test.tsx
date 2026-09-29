@@ -56,7 +56,7 @@ it('keeps a full reading visible when automatic analysis is unavailable', async 
   vi.mocked(tagText).mockRejectedValue(new Error('Offline'))
   const { host } = await mount(6, true)
   expect(host.querySelectorAll('.level-pepeha-plain')).toHaveLength(14)
-  expect(host.textContent).toContain('Mā te mahi tahi e pai ai te māra mō te katoa.')
+  expect(host.textContent).toContain('Ka taea e tātou ngā huawhenua te tiaki.')
   expect(host.textContent).not.toContain('Offline')
   expect(renderSentence).not.toHaveBeenCalled()
 })
