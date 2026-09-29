@@ -9,6 +9,7 @@ import { websiteRoute, contextualRoute, normaliseWebsiteHash } from '../lib/webs
 import { moeInterestContext } from '../lib/moeOffer'
 import LevelOnePepeha, { LevelReadingMaterial } from './LevelOnePepeha'
 import { LEVEL_READING_MATERIAL } from '../lib/levelReadingMaterial'
+import { LEVEL_READING_ANNOTATIONS } from '../lib/levelReadingAnnotations'
 import LevelExplorer from './LevelExplorer'
 import { installWebsiteNavigation } from '../lib/websiteNavigation'
 import KitchenGame from './KitchenGame'
@@ -304,7 +305,7 @@ export default function WebsiteView({
               </> : null}
             </> : route.tab === 'vocabulary' ? <Suspense fallback={<p role="status">Loading vocabulary…</p>}><LevelVocabulary key={selectedLevel} level={selectedLevel} /></Suspense> : route.tab === 'stories' ? selectedLevel === 1
               ? <LevelOnePepeha catalog={data?.catalog} sentences={data?.sentences} />
-              : <LevelReadingMaterial key={selectedLevel} reading={LEVEL_READING_MATERIAL[selectedLevel]} catalog={data?.catalog} /> : <>
+              : <LevelReadingMaterial key={selectedLevel} reading={LEVEL_READING_MATERIAL[selectedLevel]} catalog={data?.catalog} sentences={LEVEL_READING_ANNOTATIONS} /> : <>
               <p className="site-preview-label">Level {selectedLevel} practice · answers stay in this session</p>
               <TrainingView key={selectedLevel} preview data={data ? { ...data, sentences: levelSentences } : null} error={error ?? trainingError} />
             </>}

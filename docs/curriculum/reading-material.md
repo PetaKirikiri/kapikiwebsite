@@ -39,3 +39,16 @@ Original Māori and English composition; the links below were used to check cons
 ## Presentation
 
 Reuses Level 1's card and read-only sentence renderer. The complete Māori reading and English support appear immediately, even while course data or grammar analysis is unavailable. Each sentence uses the existing read-only analysis endpoint independently; there are at most two simultaneous requests, cancelled on leaving the reading. No component-owned POS lists or fabricated rails are introduced. Unknown grammar remains plain text.
+
+## Reading rail annotations
+
+The owner requested the same visible rails as Level 1 for all five new readings.
+`levelReadingAnnotations.json` contains 69 sentence-specific editorial display
+annotations and explicit English phrase alignments. WebsiteView passes those
+exact-text states into the existing read-only LevelReadingMaterial renderer.
+They are not automatic engine results, word-wide rules, or confirmed learned
+knowledge; this update performs no database writes or learning consolidation.
+
+The source sentences and translations are preserved. Schema validation rejects
+mismatched seats; coverage tests check all lines, mirrored rail boundaries, and
+translation reconstruction. Unrelated text still uses the existing analysis path.

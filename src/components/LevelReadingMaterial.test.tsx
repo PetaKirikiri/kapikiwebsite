@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { afterEach, expect, it, vi } from 'vitest'
 import { LevelReadingMaterial } from './LevelOnePepeha'
 import { LEVEL_READING_MATERIAL } from '../lib/levelReadingMaterial'
+import { LEVEL_READING_ANNOTATIONS } from '../lib/levelReadingAnnotations'
 import { tagText, unresolvedSentence } from '../lib/connectorPresentation/engine'
 import type { BusManifestPosCatalog } from '../lib/busManifestContract'
 
@@ -18,11 +19,11 @@ const catalog = { groups: [], posTypes: [], dictionaryPosLabels: [], dictionaryP
 ;(globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true
 const mounted: (() => Promise<void>)[] = []
 afterEach(async () => { for (const cleanup of mounted.splice(0)) await cleanup(); vi.clearAllMocks() })
-async function mount(level: keyof typeof LEVEL_READING_MATERIAL, withCatalog = false) {
+async function mount(level: keyof typeof LEVEL_READING_MATERIAL, withCatalog = false, sentences?: typeof LEVEL_READING_ANNOTATIONS) {
   const host = document.createElement('div'); document.body.append(host)
   const root = createRoot(host)
   mounted.push(async () => { await act(async () => root.unmount()); host.remove() })
-  await act(async () => root.render(createElement(LevelReadingMaterial, { reading: LEVEL_READING_MATERIAL[level], catalog: withCatalog ? catalog : undefined })))
+  await act(async () => root.render(createElement(LevelReadingMaterial, { reading: LEVEL_READING_MATERIAL[level], catalog: withCatalog ? catalog : undefined, sentences })))
   return { host, root }
 }
 
@@ -39,6 +40,17 @@ it('shows the complete bilingual reading at every new level before catalogue or 
     expect(host.querySelector('[role="status"]')).toBeNull()
   }
   expect(tagText).not.toHaveBeenCalled()
+})
+it('renders every authored reading immediately through the shared rail renderer without automatic tagging', async () => {
+  vi.mocked(tagText).mockRejectedValue(new Error('Automatic tagging is unavailable'))
+  for (const level of [2, 3, 4, 5, 6] as const) {
+    const { host } = await mount(level, true, LEVEL_READING_ANNOTATIONS)
+    expect(host.querySelectorAll('.level-pepeha-plain')).toHaveLength(0)
+    expect(host.querySelectorAll('.level-pepeha-line')).toHaveLength(LEVEL_READING_MATERIAL[level].sections[0].lines.length)
+    for (const [, english] of LEVEL_READING_MATERIAL[level].sections[0].lines) expect(host.textContent).toContain(english)
+  }
+  expect(tagText).not.toHaveBeenCalled()
+  for (const [props] of renderSentence.mock.calls) expect(props.readOnly).toBe(true)
 })
 it('keeps a full reading visible when automatic analysis is unavailable', async () => {
   vi.mocked(tagText).mockRejectedValue(new Error('Offline'))

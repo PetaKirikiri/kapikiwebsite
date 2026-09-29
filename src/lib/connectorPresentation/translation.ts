@@ -1,10 +1,12 @@
 import translations from './englishTranslations.json'
+import readingAnnotations from '../levelReadingAnnotations.json'
 import { WORD_CLASS_VISUAL_PALETTE } from '../../components/railVisualPalette'
 
 // Teaching translations, not POS evidence. Exact text keys prevent stale
 // alignment from being reused after the canonical Māori sentence changes.
 export function translatedSegments(text: string, materials: readonly (string | undefined)[], joins: readonly boolean[] = []) {
-  const entry = (translations as Record<string, (string | number | null)[][]>)[text]
+  const entry = (readingAnnotations as Record<string, { translation: (string | number | null)[][] }>)[text]?.translation
+    ?? (translations as Record<string, (string | number | null)[][]>)[text]
   if (!entry) return null
   const words = text.split(/\s+/u)
   // English may reorder or omit words inside a connected Māori phrase.

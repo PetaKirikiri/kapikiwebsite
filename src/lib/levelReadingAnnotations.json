@@ -1,0 +1,6783 @@
+{
+  "I haere ahau ki Rotorua i te mutunga wiki.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "I",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "haere",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ahau",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "Rotorua",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "i",
+          "acceptedPosCode": "location_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "mutunga",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "wiki.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        2
+      ],
+      [
+        "went",
+        1
+      ],
+      [
+        "to",
+        3
+      ],
+      [
+        "Rotorua",
+        4
+      ],
+      [
+        "over",
+        5
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "weekend.",
+        7
+      ]
+    ]
+  },
+  "I noho ahau ki te kāinga o tōku whaea.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "I",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "noho",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ahau",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "kāinga",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "o",
+          "acceptedPosCode": "genitive_linker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "tōku",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "whaea.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        2
+      ],
+      [
+        "stayed",
+        1
+      ],
+      [
+        "at",
+        3
+      ],
+      [
+        "my",
+        7
+      ],
+      [
+        "mother’s",
+        8
+      ],
+      [
+        "home.",
+        5
+      ]
+    ]
+  },
+  "I hīkoi māua ki te roto i te ata.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "I",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "hīkoi",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "māua",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "roto",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "i",
+          "acceptedPosCode": "location_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "ata.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The two of us",
+        2
+      ],
+      [
+        "walked",
+        1
+      ],
+      [
+        "to",
+        3
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "lake",
+        5
+      ],
+      [
+        "in",
+        6
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "morning.",
+        8
+      ]
+    ]
+  },
+  "I titiro māua ki ngā manu i runga i te wai.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "I",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "titiro",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "māua",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "manu",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "i",
+          "acceptedPosCode": "location_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "runga",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "i",
+          "acceptedPosCode": "location_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 10,
+          "surfaceText": "wai.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "We",
+        2
+      ],
+      [
+        "watched",
+        1
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "birds",
+        5
+      ],
+      [
+        "on",
+        7
+      ],
+      [
+        "the",
+        9
+      ],
+      [
+        "water.",
+        10
+      ]
+    ]
+  },
+  "I kai māua i te parāoa me ngā hēki.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "I",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "kai",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "māua",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "parāoa",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "me",
+          "acceptedPosCode": "preposition",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "hēki.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "We",
+        2
+      ],
+      [
+        "ate",
+        1
+      ],
+      [
+        "bread",
+        5
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "eggs.",
+        8
+      ]
+    ]
+  },
+  "Kua hoki ahau ki Pōneke.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kua",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "hoki",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ahau",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "Pōneke.",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        2
+      ],
+      [
+        "have",
+        0
+      ],
+      [
+        "returned",
+        1
+      ],
+      [
+        "to",
+        3
+      ],
+      [
+        "Wellington.",
+        4
+      ]
+    ]
+  },
+  "Kei te inu ahau i te kāwhe ināianei.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kei",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "te",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "inu",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ahau",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "kāwhe",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "ināianei.",
+          "acceptedPosCode": "adverb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        3
+      ],
+      [
+        "am",
+        0
+      ],
+      [
+        "drinking",
+        2
+      ],
+      [
+        "coffee",
+        6
+      ],
+      [
+        "now.",
+        7
+      ]
+    ]
+  },
+  "Kei runga taku pukapuka i te tēpu.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kei",
+          "acceptedPosCode": "nominal_predicate",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "runga",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "taku",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "pukapuka",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "i",
+          "acceptedPosCode": "location_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "tēpu.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "My",
+        2
+      ],
+      [
+        "book",
+        3
+      ],
+      [
+        "is on",
+        0
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "table.",
+        6
+      ]
+    ]
+  },
+  "E pānui ana ahau i taku pukapuka.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "E",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "pānui",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "accept",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ana",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ahau",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "taku",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "pukapuka.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        3
+      ],
+      [
+        "am",
+        0
+      ],
+      [
+        "reading",
+        1
+      ],
+      [
+        "my",
+        5
+      ],
+      [
+        "book.",
+        6
+      ]
+    ]
+  },
+  "Ka hoki ahau ki te mahi āpōpō.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Ka",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "hoki",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ahau",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "mahi",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "āpōpō.",
+          "acceptedPosCode": "adverb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        2
+      ],
+      [
+        "will",
+        0
+      ],
+      [
+        "go back",
+        1
+      ],
+      [
+        "to",
+        3
+      ],
+      [
+        "work",
+        5
+      ],
+      [
+        "tomorrow.",
+        6
+      ]
+    ]
+  },
+  "Ka kōrero ahau ki ngā tamariki mō ngā manu.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Ka",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "kōrero",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ahau",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "tamariki",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "mō",
+          "acceptedPosCode": "preposition",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "manu.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        2
+      ],
+      [
+        "will",
+        0
+      ],
+      [
+        "talk",
+        1
+      ],
+      [
+        "to",
+        3
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "children",
+        5
+      ],
+      [
+        "about",
+        6
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "birds.",
+        8
+      ]
+    ]
+  },
+  "Kua pō.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kua",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "pō.",
+          "acceptedPosCode": "stative_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Night",
+        1
+      ],
+      [
+        "has fallen.",
+        0
+      ]
+    ]
+  },
+  "Me moe ahau ināianei.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Me",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "moe",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ahau",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ināianei.",
+          "acceptedPosCode": "adverb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        2
+      ],
+      [
+        "should",
+        0
+      ],
+      [
+        "sleep",
+        1
+      ],
+      [
+        "now.",
+        3
+      ]
+    ]
+  },
+  "Kei te whakarite kai a Maia rāua ko Hana.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kei",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "te",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "whakarite",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "kai",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "a",
+          "acceptedPosCode": "personal_article",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "Maia",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "rāua",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "ko",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "Hana.",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Maia",
+        5
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "Hana",
+        8
+      ],
+      [
+        "are",
+        0
+      ],
+      [
+        "getting food ready.",
+        2
+      ]
+    ]
+  },
+  "Kāore au i hoko parāoa inanahi.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kāore",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "au",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "i",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "hoko",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "parāoa",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "inanahi.",
+          "acceptedPosCode": "adverb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        1
+      ],
+      [
+        "did not",
+        0
+      ],
+      [
+        "buy",
+        3
+      ],
+      [
+        "bread",
+        4
+      ],
+      [
+        "yesterday.",
+        5
+      ]
+    ]
+  },
+  "Kei konei he raihi me ngā huawhenua.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kei",
+          "acceptedPosCode": "nominal_predicate",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "konei",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "he",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "raihi",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "me",
+          "acceptedPosCode": "preposition",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "huawhenua.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "There is",
+        2
+      ],
+      [
+        "rice",
+        3
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "there are",
+        5
+      ],
+      [
+        "vegetables",
+        6
+      ],
+      [
+        "here.",
+        1
+      ]
+    ]
+  },
+  "Kāore anō au kia horoi i ngā huawhenua.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kāore",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "anō",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "au",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "kia",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "horoi",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "huawhenua.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        2
+      ],
+      [
+        "have not",
+        0
+      ],
+      [
+        "washed",
+        4
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "vegetables",
+        7
+      ],
+      [
+        "yet.",
+        1
+      ]
+    ]
+  },
+  "Horoia ngā huawhenua.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Horoia",
+          "acceptedPosCode": "passive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": null,
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "huawhenua.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Wash",
+        0
+      ],
+      [
+        "the",
+        1
+      ],
+      [
+        "vegetables.",
+        2
+      ]
+    ]
+  },
+  "Kaua e tango i tērā maripi.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kaua",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "e",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "tango",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "tērā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "maripi.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Do not",
+        0
+      ],
+      [
+        "take",
+        2
+      ],
+      [
+        "that",
+        4
+      ],
+      [
+        "knife.",
+        5
+      ]
+    ]
+  },
+  "Ehara tērā i te maripi pai.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Ehara",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "tērā",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "maripi",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "pai.",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "That",
+        1
+      ],
+      [
+        "is not",
+        0
+      ],
+      [
+        "a",
+        3
+      ],
+      [
+        "good",
+        5
+      ],
+      [
+        "knife.",
+        4
+      ]
+    ]
+  },
+  "Tangohia tēnei maripi.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Tangohia",
+          "acceptedPosCode": "passive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": null,
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "tēnei",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "maripi.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Take",
+        0
+      ],
+      [
+        "this",
+        1
+      ],
+      [
+        "knife.",
+        2
+      ]
+    ]
+  },
+  "Kia tūpato.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kia",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "tūpato.",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Be",
+        0
+      ],
+      [
+        "careful.",
+        1
+      ]
+    ]
+  },
+  "Kāore au i te tapahi i ngā huawhenua ināianei.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kāore",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "au",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "i",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "te",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "tapahi",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "huawhenua",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "ināianei.",
+          "acceptedPosCode": "adverb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        1
+      ],
+      [
+        "am not",
+        0
+      ],
+      [
+        "cutting",
+        4
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "vegetables",
+        7
+      ],
+      [
+        "now.",
+        8
+      ]
+    ]
+  },
+  "E tatari ana au ki te raihi.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "E",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "tatari",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "accept",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ana",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "au",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "raihi.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        3
+      ],
+      [
+        "am",
+        0
+      ],
+      [
+        "waiting",
+        1
+      ],
+      [
+        "for",
+        4
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "rice.",
+        6
+      ]
+    ]
+  },
+  "Kāti te tatari.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kāti",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "te",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "tatari.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Stop",
+        0
+      ],
+      [
+        "waiting.",
+        2
+      ]
+    ]
+  },
+  "Kua rite te raihi.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kua",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "rite",
+          "acceptedPosCode": "stative_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "raihi.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        2
+      ],
+      [
+        "rice",
+        3
+      ],
+      [
+        "is ready.",
+        1
+      ]
+    ]
+  },
+  "E noho ki te tēpu.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "E",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "noho",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "tēpu.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Sit",
+        1
+      ],
+      [
+        "at",
+        2
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "table.",
+        4
+      ]
+    ]
+  },
+  "Kāore au e kai i te raihi katoa!": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kāore",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "au",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "e",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "kai",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "raihi",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "katoa!",
+          "acceptedPosCode": "modifier",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        1
+      ],
+      [
+        "will not",
+        0
+      ],
+      [
+        "eat",
+        3
+      ],
+      [
+        "all",
+        7
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "rice!",
+        6
+      ]
+    ]
+  },
+  "He hui tā mātou rōpū āpōpō.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "He",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "hui",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "tā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "mātou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "rōpū",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "āpōpō.",
+          "acceptedPosCode": "adverb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Our",
+        3
+      ],
+      [
+        "group",
+        4
+      ],
+      [
+        "has a",
+        0
+      ],
+      [
+        "meeting",
+        1
+      ],
+      [
+        "tomorrow.",
+        5
+      ]
+    ]
+  },
+  "Nō te kura tēnei whare.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Nō",
+          "acceptedPosCode": "nominal_predicate",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "kura",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "tēnei",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "whare.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "This",
+        3
+      ],
+      [
+        "building",
+        4
+      ],
+      [
+        "belongs to",
+        0
+      ],
+      [
+        "the",
+        1
+      ],
+      [
+        "school.",
+        2
+      ]
+    ]
+  },
+  "Mō tō mātou rōpū te ruma nui.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Mō",
+          "acceptedPosCode": "nominal_predicate",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "tō",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "mātou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "rōpū",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ruma",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "nui.",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        4
+      ],
+      [
+        "large",
+        6
+      ],
+      [
+        "room",
+        5
+      ],
+      [
+        "is for",
+        0
+      ],
+      [
+        "our",
+        2
+      ],
+      [
+        "group.",
+        3
+      ]
+    ]
+  },
+  "Nā Maia tēnei pukapuka.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Nā",
+          "acceptedPosCode": "nominal_predicate",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "Maia",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "tēnei",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "pukapuka.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "This",
+        2
+      ],
+      [
+        "book",
+        3
+      ],
+      [
+        "belongs to",
+        0
+      ],
+      [
+        "Maia.",
+        1
+      ]
+    ]
+  },
+  "Ehara nāku.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Ehara",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "nāku.",
+          "acceptedPosCode": "nominal_predicate",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "It is not",
+        0
+      ],
+      [
+        "mine.",
+        1
+      ]
+    ]
+  },
+  "Mā ngā tamariki ngā pukapuka hou.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Mā",
+          "acceptedPosCode": "nominal_predicate",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "tamariki",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "pukapuka",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "hou.",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        3
+      ],
+      [
+        "new",
+        5
+      ],
+      [
+        "books",
+        4
+      ],
+      [
+        "are for",
+        0
+      ],
+      [
+        "the",
+        1
+      ],
+      [
+        "children.",
+        2
+      ]
+    ]
+  },
+  "Nā Hana te hui i whakarite.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Nā",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "Hana",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "hui",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "i",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "whakarite.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Hana",
+        1
+      ],
+      [
+        "organised",
+        5
+      ],
+      [
+        "the",
+        2
+      ],
+      [
+        "meeting.",
+        3
+      ]
+    ]
+  },
+  "Ehara nāku te hui i whakarite.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Ehara",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "nāku",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "hui",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "i",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "whakarite.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "It was not",
+        0
+      ],
+      [
+        "me",
+        1
+      ],
+      [
+        "who organised",
+        5
+      ],
+      [
+        "the",
+        2
+      ],
+      [
+        "meeting.",
+        3
+      ]
+    ]
+  },
+  "Nāku ngā kai i hoko.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Nāku",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": null,
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "kai",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "i",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "hoko.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        0
+      ],
+      [
+        "bought",
+        4
+      ],
+      [
+        "the",
+        1
+      ],
+      [
+        "food.",
+        2
+      ]
+    ]
+  },
+  "Mā Maia te kōrero e tīmata.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Mā",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "Maia",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "kōrero",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "e",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "tīmata.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Maia",
+        1
+      ],
+      [
+        "will",
+        4
+      ],
+      [
+        "start",
+        5
+      ],
+      [
+        "the",
+        2
+      ],
+      [
+        "discussion.",
+        3
+      ]
+    ]
+  },
+  "Māku ngā pukapuka e kawe.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Māku",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": null,
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "pukapuka",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "e",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "kawe.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        0
+      ],
+      [
+        "will",
+        3
+      ],
+      [
+        "bring",
+        4
+      ],
+      [
+        "the",
+        1
+      ],
+      [
+        "books.",
+        2
+      ]
+    ]
+  },
+  "Mā Hana ngā tamariki e āwhina.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Mā",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "Hana",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "tamariki",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "e",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "āwhina.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Hana",
+        1
+      ],
+      [
+        "will",
+        4
+      ],
+      [
+        "help",
+        5
+      ],
+      [
+        "the",
+        2
+      ],
+      [
+        "children.",
+        3
+      ]
+    ]
+  },
+  "Ehara māna ngā pereti e horoi.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Ehara",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "māna",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "pereti",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "e",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "horoi.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "She",
+        1
+      ],
+      [
+        "will not be the one to",
+        0
+      ],
+      [
+        "wash",
+        5
+      ],
+      [
+        "the",
+        2
+      ],
+      [
+        "plates.",
+        3
+      ]
+    ]
+  },
+  "Māku tērā mahi.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Māku",
+          "acceptedPosCode": "nominal_predicate",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": null,
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "tērā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "mahi.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "That",
+        1
+      ],
+      [
+        "job",
+        2
+      ],
+      [
+        "is for me.",
+        0
+      ]
+    ]
+  },
+  "Haere ai au ki te māra o te kura i ngā ata.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Haere",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "ai",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "au",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "māra",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "o",
+          "acceptedPosCode": "genitive_linker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "kura",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "i",
+          "acceptedPosCode": "location_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 10,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 11,
+          "surfaceText": "ata.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        2
+      ],
+      [
+        "usually",
+        1
+      ],
+      [
+        "go",
+        0
+      ],
+      [
+        "to",
+        3
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "school",
+        8
+      ],
+      [
+        "garden",
+        5
+      ],
+      [
+        "in",
+        9
+      ],
+      [
+        "the",
+        10
+      ],
+      [
+        "mornings.",
+        11
+      ]
+    ]
+  },
+  "Mahi ai mātou ko ngā tamariki i reira.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Mahi",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "ai",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "mātou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ko",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "tamariki",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "i",
+          "acceptedPosCode": "location_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "reira.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        4
+      ],
+      [
+        "children",
+        5
+      ],
+      [
+        "and I",
+        2
+      ],
+      [
+        "regularly",
+        1
+      ],
+      [
+        "work",
+        0
+      ],
+      [
+        "there.",
+        7
+      ]
+    ]
+  },
+  "He nui ake te māra hou i te māra tawhito.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "He",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "nui",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ake",
+          "acceptedPosCode": "modifier",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "māra",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "hou",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "i",
+          "acceptedPosCode": "preposition",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "māra",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "tawhito.",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        3
+      ],
+      [
+        "new",
+        5
+      ],
+      [
+        "garden",
+        4
+      ],
+      [
+        "is bigger",
+        1
+      ],
+      [
+        "than",
+        6
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "old",
+        9
+      ],
+      [
+        "garden.",
+        8
+      ]
+    ]
+  },
+  "He taumaha rawa tēnei pouaka.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "He",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "taumaha",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "rawa",
+          "acceptedPosCode": "modifier",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "tēnei",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "pouaka.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "This",
+        3
+      ],
+      [
+        "box",
+        4
+      ],
+      [
+        "is too",
+        2
+      ],
+      [
+        "heavy.",
+        1
+      ]
+    ]
+  },
+  "Kāore e taea e au te pouaka te kawe.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kāore",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "e",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "taea",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "e",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "au",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "pouaka",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "te",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "kawe.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I",
+        4
+      ],
+      [
+        "cannot",
+        0
+      ],
+      [
+        "carry",
+        8
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "box.",
+        6
+      ]
+    ]
+  },
+  "Ka taea e Hana te pouaka te kawe.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Ka",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "taea",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "e",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "Hana",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "pouaka",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "te",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "kawe.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Hana",
+        3
+      ],
+      [
+        "can",
+        1
+      ],
+      [
+        "carry",
+        7
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "box.",
+        5
+      ]
+    ]
+  },
+  "He kaha ake ia i ahau.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "He",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "kaha",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ake",
+          "acceptedPosCode": "modifier",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ia",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "i",
+          "acceptedPosCode": "preposition",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ahau.",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "She",
+        3
+      ],
+      [
+        "is stronger",
+        1
+      ],
+      [
+        "than",
+        4
+      ],
+      [
+        "me.",
+        5
+      ]
+    ]
+  },
+  "I kawea te pouaka e Hana ki te māra.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "I",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "kawea",
+          "acceptedPosCode": "passive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "pouaka",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "e",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "Hana",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "māra.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        2
+      ],
+      [
+        "box",
+        3
+      ],
+      [
+        "was",
+        0
+      ],
+      [
+        "carried",
+        1
+      ],
+      [
+        "to",
+        6
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "garden",
+        8
+      ],
+      [
+        "by",
+        4
+      ],
+      [
+        "Hana.",
+        5
+      ]
+    ]
+  },
+  "I whakatōngia ngā kākano e ngā tamariki.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "I",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "whakatōngia",
+          "acceptedPosCode": "passive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "kākano",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "e",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "tamariki.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        2
+      ],
+      [
+        "seeds",
+        3
+      ],
+      [
+        "were",
+        0
+      ],
+      [
+        "planted",
+        1
+      ],
+      [
+        "by",
+        4
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "children.",
+        6
+      ]
+    ]
+  },
+  "I tuhia ngā ingoa ki ngā pepa e Maia.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "I",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "tuhia",
+          "acceptedPosCode": "passive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ingoa",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "pepa",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "e",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "Maia.",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        2
+      ],
+      [
+        "names",
+        3
+      ],
+      [
+        "were",
+        0
+      ],
+      [
+        "written",
+        1
+      ],
+      [
+        "on",
+        4
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "labels",
+        6
+      ],
+      [
+        "by",
+        7
+      ],
+      [
+        "Maia.",
+        8
+      ]
+    ]
+  },
+  "Kua tupu ngā kākano.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kua",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "tupu",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "kākano.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        2
+      ],
+      [
+        "seeds",
+        3
+      ],
+      [
+        "have",
+        0
+      ],
+      [
+        "sprouted.",
+        1
+      ]
+    ]
+  },
+  "Ka taea e ngā tamariki ngā huawhenua te tiaki.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Ka",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "taea",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "e",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "tamariki",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "huawhenua",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "te",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "tiaki.",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        3
+      ],
+      [
+        "children",
+        4
+      ],
+      [
+        "can",
+        1
+      ],
+      [
+        "look after",
+        8
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "vegetables.",
+        6
+      ]
+    ]
+  },
+  "He māmā ake te mahi inā mahi tahi tātou.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "He",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "māmā",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "ake",
+          "acceptedPosCode": "modifier",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "mahi",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "inā",
+          "acceptedPosCode": "conditional_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "mahi",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "tahi",
+          "acceptedPosCode": "modifier",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "tātou.",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        3
+      ],
+      [
+        "work",
+        4
+      ],
+      [
+        "is easier",
+        1
+      ],
+      [
+        "when",
+        5
+      ],
+      [
+        "we",
+        8
+      ],
+      [
+        "work",
+        6
+      ],
+      [
+        "together.",
+        7
+      ]
+    ]
+  },
+  "Kei te kōrero a Maia rāua ko Hana mō te māra o te kura.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kei",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "te",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "kōrero",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "a",
+          "acceptedPosCode": "personal_article",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "Maia",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "rāua",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "ko",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "Hana",
+          "acceptedPosCode": "proper_name",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "mō",
+          "acceptedPosCode": "preposition",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 10,
+          "surfaceText": "māra",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 11,
+          "surfaceText": "o",
+          "acceptedPosCode": "genitive_linker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 12,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 13,
+          "surfaceText": "kura.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Maia",
+        4
+      ],
+      [
+        "and",
+        5
+      ],
+      [
+        "Hana",
+        7
+      ],
+      [
+        "are",
+        0
+      ],
+      [
+        "talking",
+        2
+      ],
+      [
+        "about",
+        8
+      ],
+      [
+        "the",
+        9
+      ],
+      [
+        "school",
+        13
+      ],
+      [
+        "garden.",
+        10
+      ]
+    ]
+  },
+  "He aha koutou i tīmata ai i tēnei māra?": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "He",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "aha",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "koutou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "i",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "tīmata",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ai",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "tēnei",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "māra?",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Why",
+        1
+      ],
+      [
+        "did",
+        3
+      ],
+      [
+        "you",
+        2
+      ],
+      [
+        "start",
+        4
+      ],
+      [
+        "this",
+        7
+      ],
+      [
+        "garden?",
+        8
+      ]
+    ]
+  },
+  "Ki ōku whakaaro, he mea nui te ako a ngā tamariki ki te whakatō kai.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Ki",
+          "acceptedPosCode": "preposition",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "ōku",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "whakaaro,",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "he",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "mea",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "nui",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "ako",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "a",
+          "acceptedPosCode": "genitive_linker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 10,
+          "surfaceText": "tamariki",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 11,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 12,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 13,
+          "surfaceText": "whakatō",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 14,
+          "surfaceText": "kai.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "I think",
+        2
+      ],
+      [
+        "it is",
+        3
+      ],
+      [
+        "important",
+        5
+      ],
+      [
+        "for",
+        8
+      ],
+      [
+        "children",
+        10
+      ],
+      [
+        "to learn",
+        7
+      ],
+      [
+        "to",
+        11
+      ],
+      [
+        "grow",
+        13
+      ],
+      [
+        "food.",
+        14
+      ]
+    ]
+  },
+  "He aha koutou i kore ai e tono i te hapori?": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "He",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "aha",
+          "acceptedPosCode": "nominal_marker",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "koutou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "i",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "kore",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ai",
+          "acceptedPosCode": "negative",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "e",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "tono",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 10,
+          "surfaceText": "hapori?",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Why",
+        1
+      ],
+      [
+        "did",
+        3
+      ],
+      [
+        "you",
+        2
+      ],
+      [
+        "not",
+        4
+      ],
+      [
+        "invite",
+        7
+      ],
+      [
+        "the",
+        9
+      ],
+      [
+        "community?",
+        10
+      ]
+    ]
+  },
+  "Kāore anō te mahere kia oti i taua wā.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Kāore",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "anō",
+          "acceptedPosCode": "negative",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "mahere",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "kia",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "oti",
+          "acceptedPosCode": "stative_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "i",
+          "acceptedPosCode": "location_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "taua",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "wā.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "The",
+        2
+      ],
+      [
+        "plan",
+        3
+      ],
+      [
+        "was not",
+        0
+      ],
+      [
+        "finished",
+        5
+      ],
+      [
+        "yet",
+        1
+      ],
+      [
+        "at",
+        6
+      ],
+      [
+        "that",
+        7
+      ],
+      [
+        "time.",
+        8
+      ]
+    ]
+  },
+  "Nōnahea koutou i kōrero ai ki ngā whānau?": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Nōnahea",
+          "acceptedPosCode": "adverb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "koutou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "i",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "kōrero",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "ai",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "whānau?",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "When",
+        0
+      ],
+      [
+        "did",
+        2
+      ],
+      [
+        "you",
+        1
+      ],
+      [
+        "talk",
+        3
+      ],
+      [
+        "to",
+        5
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "families?",
+        7
+      ]
+    ]
+  },
+  "I kōrero mātou ki a rātou i tērā wiki.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "I",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "kōrero",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "mātou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "a",
+          "acceptedPosCode": "personal_article",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "rātou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "i",
+          "acceptedPosCode": "location_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "tērā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "wiki.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "We",
+        2
+      ],
+      [
+        "talked",
+        1
+      ],
+      [
+        "to",
+        3
+      ],
+      [
+        "them",
+        5
+      ],
+      [
+        "last",
+        7
+      ],
+      [
+        "week.",
+        8
+      ]
+    ]
+  },
+  "Ki te whakaae te kura, ka whakatuwhera mātou i te māra ki te hapori.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Ki",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "whakaae",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "kura,",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ka",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "whakatuwhera",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "mātou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 10,
+          "surfaceText": "māra",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 11,
+          "surfaceText": "ki",
+          "acceptedPosCode": "target_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 12,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 13,
+          "surfaceText": "hapori.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "If",
+        0
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "school",
+        4
+      ],
+      [
+        "agrees,",
+        2
+      ],
+      [
+        "we",
+        7
+      ],
+      [
+        "will",
+        5
+      ],
+      [
+        "open",
+        6
+      ],
+      [
+        "the",
+        9
+      ],
+      [
+        "garden",
+        10
+      ],
+      [
+        "to",
+        11
+      ],
+      [
+        "the",
+        12
+      ],
+      [
+        "community.",
+        13
+      ]
+    ]
+  },
+  "Āhea koutou e whakatuwhera ai i te māra?": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Āhea",
+          "acceptedPosCode": "adverb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "koutou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "e",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "whakatuwhera",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "ai",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "māra?",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "When",
+        0
+      ],
+      [
+        "will",
+        2
+      ],
+      [
+        "you",
+        1
+      ],
+      [
+        "open",
+        3
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "garden?",
+        7
+      ]
+    ]
+  },
+  "Mēnā ka oti ngā mahi, ka whakatuwhera mātou ā tērā marama.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Mēnā",
+          "acceptedPosCode": "conditional_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "ka",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "oti",
+          "acceptedPosCode": "stative_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "mahi,",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ka",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "whakatuwhera",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "mātou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "ā",
+          "acceptedPosCode": "location_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "tērā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 10,
+          "surfaceText": "marama.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "If",
+        0
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "work",
+        4
+      ],
+      [
+        "is finished,",
+        2
+      ],
+      [
+        "we",
+        7
+      ],
+      [
+        "will",
+        5
+      ],
+      [
+        "open",
+        6
+      ],
+      [
+        "it",
+        null
+      ],
+      [
+        "next",
+        9
+      ],
+      [
+        "month.",
+        10
+      ]
+    ]
+  },
+  "Mehemea ka tae mai ngā whānau, ka nui ake te āwhina.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Mehemea",
+          "acceptedPosCode": "conditional_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "ka",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "tae",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "mai",
+          "acceptedPosCode": "directional_particle",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "whānau,",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "ka",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "nui",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "ake",
+          "acceptedPosCode": "modifier",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 10,
+          "surfaceText": "āwhina.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "If",
+        0
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "families",
+        5
+      ],
+      [
+        "come,",
+        2
+      ],
+      [
+        "there will be",
+        6
+      ],
+      [
+        "more",
+        8
+      ],
+      [
+        "help.",
+        10
+      ]
+    ]
+  },
+  "Engari me kōrero tātou mō te tiaki i te māra.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Engari",
+          "acceptedPosCode": "preposition",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": null,
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "me",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "kōrero",
+          "acceptedPosCode": "intransitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "tātou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "mō",
+          "acceptedPosCode": "preposition",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "tiaki",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "māra.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "But",
+        0
+      ],
+      [
+        "we",
+        3
+      ],
+      [
+        "should",
+        1
+      ],
+      [
+        "discuss",
+        2
+      ],
+      [
+        "looking after",
+        6
+      ],
+      [
+        "the",
+        8
+      ],
+      [
+        "garden.",
+        9
+      ]
+    ]
+  },
+  "Āe, me whakarite tātou i ngā kawenga.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Āe,",
+          "acceptedPosCode": "interjection",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": null,
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "me",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "whakarite",
+          "acceptedPosCode": "transitive_verb",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "tātou",
+          "acceptedPosCode": "pronoun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "off",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "i",
+          "acceptedPosCode": "object_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "ngā",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "kawenga.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "Yes,",
+        0
+      ],
+      [
+        "we",
+        3
+      ],
+      [
+        "should",
+        1
+      ],
+      [
+        "organise",
+        2
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "responsibilities.",
+        6
+      ]
+    ]
+  },
+  "Mā te mahi tahi e pai ai te māra mō te katoa.": {
+    "state": {
+      "schemaVersion": 9,
+      "tokens": [
+        {
+          "tokenIndex": 0,
+          "surfaceText": "Mā",
+          "acceptedPosCode": "agent_marker",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": null,
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 1,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 2,
+          "surfaceText": "mahi",
+          "acceptedPosCode": "noun",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 3,
+          "surfaceText": "tahi",
+          "acceptedPosCode": "modifier",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 4,
+          "surfaceText": "e",
+          "acceptedPosCode": "tam",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 5,
+          "surfaceText": "pai",
+          "acceptedPosCode": "adjective",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "yellow",
+          "rightRail": "yellow"
+        },
+        {
+          "tokenIndex": 6,
+          "surfaceText": "ai",
+          "acceptedPosCode": "tam",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "yellow",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 7,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 8,
+          "surfaceText": "māra",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": "off"
+        },
+        {
+          "tokenIndex": 9,
+          "surfaceText": "mō",
+          "acceptedPosCode": "preposition",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "off",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 10,
+          "surfaceText": "te",
+          "acceptedPosCode": "determiner",
+          "checkpointState": "must_continue",
+          "rightConnectorEnd": "send",
+          "leftRail": "green",
+          "rightRail": "green"
+        },
+        {
+          "tokenIndex": 11,
+          "surfaceText": "katoa.",
+          "acceptedPosCode": "noun",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
+          "leftRail": "green",
+          "rightRail": null
+        }
+      ]
+    },
+    "translation": [
+      [
+        "By",
+        0
+      ],
+      [
+        "working",
+        2
+      ],
+      [
+        "together,",
+        3
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "garden",
+        8
+      ],
+      [
+        "will be",
+        4
+      ],
+      [
+        "good",
+        5
+      ],
+      [
+        "for",
+        9
+      ],
+      [
+        "everyone.",
+        11
+      ]
+    ]
+  }
+}
