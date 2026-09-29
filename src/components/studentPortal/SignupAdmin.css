@@ -1,0 +1,46 @@
+.signup-admin { max-width: 1120px; margin: 0 auto; padding: 32px 24px 64px; color: #213b35; font-family: Arial, Helvetica, sans-serif; }
+.signup-admin * { box-sizing: border-box; }
+.signup-admin-back { display: inline-block; margin-bottom: 24px; color: inherit; text-underline-offset: 4px; }
+.signup-admin-cover { padding: 32px; }
+.signup-admin-cover img { display: block; width: 200px; height: auto; margin-bottom: 24px; }
+.signup-admin-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.signup-admin h1 { margin: 0; font: 400 42px/1.15 var(--ka-heading); }
+.signup-admin-heading p { margin: 10px 0 0; color: var(--ka-green-ink); }
+.signup-admin h2 { font: 400 26px/1.25 var(--ka-heading); margin: 0; }
+.signup-admin button { cursor: pointer; font: inherit; border: 1px solid #cdd7cb; border-radius: 7px; background: transparent; color: inherit; padding: 11px 16px; min-height: 44px; }
+.signup-admin button:hover { background: #e8eee4; }
+.signup-admin button:disabled { opacity: .6; cursor: wait; }
+.signup-admin-cover button { border-color: #e8f5df66; color: var(--ka-green-ink); }
+.signup-admin-cover button:hover { background: #ffffff12; }
+.signup-admin :focus-visible { outline: 3px solid #b78b41; outline-offset: 3px; }
+.signup-admin input { width: 100%; background: white; color: #213b35; border: 1px solid #b8c8bc; border-radius: 7px; padding: 12px; font: inherit; }
+.signup-admin label { display: grid; gap: 8px; font-size: 14px; font-weight: 600; }
+.signup-admin-login { display: grid; gap: 20px; max-width: 460px; padding: 40px 32px; margin: 0 auto; }
+.signup-admin-login p { margin: 0; color: #5d6c63; line-height: 1.5; }
+.signup-admin .signup-admin-primary { background: var(--ka-green); color: var(--ka-green-ink); }
+.signup-admin-counts { display: grid; grid-template-columns: repeat(7,1fr); padding: 24px; gap: 8px; border-bottom: 1px solid #d8ddd5; }
+.signup-admin-counts button { display: grid; gap: 6px; padding: 14px 6px; border-color: transparent; text-align: center; }
+.signup-admin-counts button[aria-pressed=true] { background: #e8eee4; border-color: #bccbbb; }
+.signup-admin-counts strong { font: 400 30px/1.1 var(--ka-heading); }
+.signup-admin-counts span { font-size: 13px; }
+.signup-admin-toolbar { display: flex; align-items: end; gap: 16px; justify-content: space-between; padding: 24px 32px 12px; }
+.signup-admin-toolbar label { width: min(100%,380px); }
+.signup-admin-results { margin: 0 32px 24px; font-size: 13px; color: #5d6c63; }
+.signup-admin-class { margin: 0 32px 32px; }
+.signup-admin-class > header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.signup-admin-class h2 span { font: 600 13px Arial, sans-serif; margin-left: 8px; padding: 4px 8px; border-radius: 12px; background: #e8eee4; vertical-align: middle; }
+.signup-admin-class header p { margin: 0; font-size: 14px; color: #5d6c63; }
+.signup-admin-table { overflow-x: auto; }
+.signup-admin table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+.signup-admin th, .signup-admin td { padding: 14px 12px; border-bottom: 1px solid #d8ddd5; vertical-align: top; line-height: 1.5; }
+.signup-admin thead th { background: #f1f3eb; font-size: 12px; color: #5d6c63; }
+.signup-admin tbody th { min-width: 170px; font-weight: 600; }
+.signup-admin td a { color: #214b3d; text-underline-offset: 3px; }
+.signup-admin time { white-space: nowrap; }
+.signup-admin small { display: block; color: #8a5b27; font-weight: 400; }
+.signup-admin summary { cursor: pointer; white-space: nowrap; }
+.signup-admin details p { white-space: pre-wrap; min-width: 140px; margin: 8px 0; }
+.signup-admin-notice, .signup-admin-footnote { margin: 24px 32px; color: #5d6c63; line-height: 1.5; }
+.signup-admin-footnote { font-size: 13px; }
+.signup-admin-error { margin: 0 32px 24px; background: #fff0ec; color: #863d2a; padding: 16px; border-radius: 7px; }
+@media(max-width:700px) { .signup-admin { padding: 20px 12px; }.signup-admin-cover { padding: 24px; }.signup-admin h1 { font-size: 34px; }.signup-admin-counts { grid-template-columns: repeat(4,1fr); padding: 16px; }.signup-admin-toolbar { padding: 24px 20px 12px; }.signup-admin-class { margin: 0 20px 28px; }.signup-admin-results { margin-left: 20px; }.signup-admin-heading { align-items: end; }.signup-admin-login { padding: 28px 24px; } }

@@ -27,9 +27,19 @@
       "regions": [
         "syd1"
       ]
+    },
+    "api/signup-admin.js": {
+      "maxDuration": 30,
+      "regions": [
+        "syd1"
+      ]
     }
   },
   "rewrites": [
+    {
+      "source": "/__signup_admin",
+      "destination": "/api/signup-admin"
+    },
     {
       "source": "/__course_interest",
       "destination": "/api/interest"
