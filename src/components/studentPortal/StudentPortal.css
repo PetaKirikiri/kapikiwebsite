@@ -43,3 +43,26 @@
 .portal-join-optional summary { padding: 8px 0; }
 .portal-join-optional summary span { float: right; font-size: 12px; font-weight: 400; color: #62746d; }
 .portal-join-optional[open] summary { margin-bottom: 16px; }
+
+/* Registration shares the MOE offer's cover and typography. */
+.student-portal.portal-auth-dialog { box-sizing: border-box; padding: 0; width: min(560px, calc(100vw - 32px)); border-color: #d8ded5; background: #fcfcf8; }
+.portal-auth-dialog .portal-header { position: relative; padding: 28px 32px; border: 0; color: var(--ka-green-ink); background: var(--ka-green); }
+.portal-auth-dialog .portal-header::before { background-image: url('../../assets/header-taniko-watermark.svg'); background-size: 240px 144px; opacity: .075; }
+.portal-header-content { min-width: 0; }
+.portal-ministry-logo { display: block; width: 200px; height: auto; max-width: calc(100% - 36px); margin-bottom: 24px; }
+.portal-brand { display: block; margin-bottom: 24px; font-weight: 900; font-size: 24px; }
+.portal-auth-dialog h2 { margin: 0 0 12px; font: 400 clamp(30px, 5vw, 38px)/1.15 var(--ka-heading); color: var(--ka-green-ink); }
+.portal-class-details { display: grid; gap: 6px; font-size: 15px; line-height: 1.45; }
+.portal-class-details strong { font-size: 18px; font-weight: 600; }
+.portal-class-meta { font-size: 13px; opacity: .8; }
+.student-portal .portal-close { position: absolute; top: 16px; right: 16px; display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border-color: #e8f5df40; background: transparent; color: var(--ka-green-ink); }
+.student-portal .portal-close:hover:not(:disabled) { background: #ffffff12; }
+.portal-auth-dialog .portal-auth { margin: 0; max-width: none; padding: 28px 32px 32px; }
+.portal-auth-dialog .portal-form { margin: 0; }
+.portal-auth-dialog .portal-primary { background: var(--ka-green); border-color: var(--ka-green); }
+.portal-auth-dialog > .portal-error { margin: 0 32px 24px; }
+@media(max-width: 480px) {
+  .portal-auth-dialog .portal-header { padding: 24px; }
+  .portal-auth-dialog .portal-auth { padding: 24px; }
+  .portal-ministry-logo { width: 180px; margin-bottom: 20px; }
+}

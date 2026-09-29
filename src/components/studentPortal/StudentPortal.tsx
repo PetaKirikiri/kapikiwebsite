@@ -2,10 +2,15 @@ import { useEffect, useRef, useState } from 'react'
 import type { FormEvent } from 'react'
 import { interestRegistrationAvailable, submitCourseInterest } from '../../lib/studentPortal/interestSubmission'
 import { LANGUAGE_SKILLS, interestRequest, type SkillRatings } from '../../lib/studentPortal/join'
+import ministryLogo from '../../assets/ministry-of-education-logo-white.svg'
+import { MOE_CLASSES } from '../../lib/moeOffer'
+import '../SiteIdentity.css'
 import './StudentPortal.css'
 
 type Props = { context?: string; level: number; open: boolean; onClose: () => void }
 export default function StudentPortal({ context = '', level, open, onClose }: Props) {
+  const classDay = context.startsWith('MOE ·') ? MOE_CLASSES.find(day => day.sessions.some(session => session.level === level)) : undefined
+  const selectedClass = classDay?.sessions.find(session => session.level === level)
   const dialog = useRef<HTMLDialogElement>(null)
   const submitting = useRef(false)
   const [ratings, setRatings] = useState<SkillRatings>({})
@@ -33,9 +38,19 @@ export default function StudentPortal({ context = '', level, open, onClose }: Pr
     finally { submitting.current = false; setBusy(false) }
   }
   return <dialog ref={dialog} className="student-portal portal-auth-dialog" onCancel={onClose} onClose={onClose} aria-labelledby="portal-title">
-    <header className="portal-header"><div><h2 id="portal-title">{`Interest in Level ${level}`}</h2></div><button type="button" onClick={onClose} aria-label="Close interest form">✕</button></header>
+    <header className="portal-header site-card-cover">
+      <div className="portal-header-content">
+        {selectedClass ? <img className="portal-ministry-logo" src={ministryLogo} width={200} height={58} alt="Te Tāhuhu o te Mātauranga | Ministry of Education" /> : <span className="portal-brand">KA PIKI</span>}
+        <h2 id="portal-title">{selectedClass?.title ?? `Level ${level}`}</h2>
+        {selectedClass && classDay ? <div className="portal-class-details">
+          <strong>{classDay.day} · {selectedClass.time}</strong>
+          <span>Starts {classDay.startDate} 2026</span>
+          <span className="portal-class-meta">Live online · New Zealand time</span>
+        </div> : context ? <p>{context}</p> : null}
+      </div>
+      <button type="button" className="portal-close" onClick={onClose} aria-label="Close interest form">✕</button>
+    </header>
     <div className="portal-auth">
-      {context ? <p className="portal-selected-class">{context}</p> : null}
       {notice ? <div role="status" className="portal-message"><p>{notice}</p><p>This records your interest; your class place is not yet confirmed.</p><button type="button" onClick={onClose}>Done</button></div> : <form onSubmit={submit} className="portal-form" aria-busy={busy}>
         <label><span className="portal-field-heading">Your name<small>Required</small></span><input name="name" autoComplete="name" required maxLength={160} /></label>
         <label><span className="portal-field-heading">Email<small>Required</small></span><input name="email" type="email" autoComplete="email" required maxLength={320} /></label>
@@ -48,7 +63,6 @@ export default function StudentPortal({ context = '', level, open, onClose }: Pr
         </details>
         <button className="portal-primary" disabled={busy || !!notice || !interestRegistrationAvailable}>{busy ? 'Sending…' : 'Register interest'}</button>
         {!interestRegistrationAvailable && <p role="alert" className="portal-error">Interest registration is temporarily unavailable. Please try again later.</p>}
-        <small>An expression of interest only. No account or commitment.</small>
       </form>}
     </div>
     {error && <p role="alert" className="portal-error">{error}</p>}

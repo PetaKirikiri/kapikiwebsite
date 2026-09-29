@@ -308,7 +308,7 @@ export default function WebsiteView({
         </div>
       </main>}
 
-      <StudentPortal key={registrationContext || selectedLevel} context={registrationContext} level={selectedLevel} open={accountOpen} onClose={() => { setAccountOpen(false); if (['#account', '#join'].includes(websiteRoute(window.location.hash).surface)) { window.location.hash = moeRoute ? '#moe' : '#level-finder' } }} />
+      <StudentPortal key={`${accountOpen}:${registrationContext || selectedLevel}`} context={registrationContext} level={selectedLevel} open={accountOpen} onClose={() => { setAccountOpen(false); if (['#account', '#join'].includes(websiteRoute(window.location.hash).surface)) { window.location.hash = moeRoute ? '#moe' : '#level-finder' } }} />
     </section>
   )
 }
