@@ -2198,7 +2198,7 @@
         {
           "tokenIndex": 2,
           "surfaceText": "tatari.",
-          "acceptedPosCode": "transitive_verb",
+          "acceptedPosCode": "intransitive_verb",
           "checkpointState": "may_end",
           "rightConnectorEnd": "cap",
           "leftRail": "green",
@@ -4821,8 +4821,8 @@
           "tokenIndex": 5,
           "surfaceText": "inā",
           "acceptedPosCode": "conditional_marker",
-          "checkpointState": "must_continue",
-          "rightConnectorEnd": "send",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
           "leftRail": "off",
           "rightRail": "yellow"
         },
@@ -5617,8 +5617,8 @@
           "tokenIndex": 0,
           "surfaceText": "Nōnahea",
           "acceptedPosCode": "adverb",
-          "checkpointState": "must_continue",
-          "rightConnectorEnd": "send",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
           "leftRail": null,
           "rightRail": "yellow"
         },
@@ -6023,8 +6023,8 @@
           "tokenIndex": 0,
           "surfaceText": "Āhea",
           "acceptedPosCode": "adverb",
-          "checkpointState": "must_continue",
-          "rightConnectorEnd": "send",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
           "leftRail": null,
           "rightRail": "yellow"
         },
@@ -6128,8 +6128,8 @@
           "tokenIndex": 0,
           "surfaceText": "Mēnā",
           "acceptedPosCode": "conditional_marker",
-          "checkpointState": "must_continue",
-          "rightConnectorEnd": "send",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
           "leftRail": null,
           "rightRail": "yellow"
         },
@@ -6276,8 +6276,8 @@
           "tokenIndex": 0,
           "surfaceText": "Mehemea",
           "acceptedPosCode": "conditional_marker",
-          "checkpointState": "must_continue",
-          "rightConnectorEnd": "send",
+          "checkpointState": "may_end",
+          "rightConnectorEnd": "cap",
           "leftRail": null,
           "rightRail": "yellow"
         },
