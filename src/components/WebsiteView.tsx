@@ -14,7 +14,7 @@ import { installWebsiteNavigation } from '../lib/websiteNavigation'
 import KitchenGame from './KitchenGame'
 import GuessWhoGame from './GuessWhoGame'
 import LiveClassroom from './LiveClassroom'
-import { useEffect, useMemo, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
 import type { BusManifestSheet } from '../lib/busManifestContract'
 import { renderUnassessedPassage } from '../lib/busManifestTeam/reviewDeskDisplay'
 import type { ReviewDeskPosCatalog, SavedBusManifest } from '../lib/busManifestTeam/reviewDeskGateway'
@@ -39,6 +39,8 @@ import offerApp from '../assets/offer-app-taniko.png'
 import offerGrammar from '../assets/offer-grammar.png'
 import directorPortrait from '../assets/peta-kirikiri-portrait-v5.png'
 import ministryLogo from '../assets/ministry-of-education-logo-white.svg'
+
+const LevelVocabulary = lazy(() => import('./LevelVocabulary'))
 
 export type WebsitePreviewSentence = {
   readonly structureId: number
@@ -300,7 +302,7 @@ export default function WebsiteView({
                     readOnly />}
                 </div></div>
               </> : null}
-            </> : route.tab === 'stories' ? selectedLevel === 1
+            </> : route.tab === 'vocabulary' ? <Suspense fallback={<p role="status">Loading vocabulary…</p>}><LevelVocabulary key={selectedLevel} level={selectedLevel} /></Suspense> : route.tab === 'stories' ? selectedLevel === 1
               ? <LevelOnePepeha catalog={data?.catalog} sentences={data?.sentences} />
               : <LevelReadingMaterial key={selectedLevel} reading={LEVEL_READING_MATERIAL[selectedLevel]} catalog={data?.catalog} /> : <>
               <p className="site-preview-label">Level {selectedLevel} practice · answers stay in this session</p>

@@ -1,0 +1,21 @@
+.level-vocabulary-cover { padding: 24px 30px; }
+.level-vocabulary-cover h2 { margin: 0; color: var(--cover-ink); font: 400 30px/1.15 var(--ka-heading); }
+.level-vocabulary-cover p { margin: 8px 0 0; color: var(--cover-ink); }
+.level-vocabulary-tools { display: grid; grid-template-columns: minmax(0, 320px) 1fr; gap: 8px 20px; align-items: center; padding: 24px 30px; }
+.level-vocabulary-tools label { grid-column: 1 / -1; font-size: 14px; color: var(--ka-green); }
+.level-vocabulary-tools input { width: 100%; min-width: 0; min-height: 44px; box-sizing: border-box; border: 1px solid var(--ka-card-line); border-radius: 6px; padding: 10px 12px; background: var(--ka-card-paper); color: var(--ka-green); font: inherit; }
+.level-vocabulary-tools [role=status] { justify-self: end; color: var(--site-muted); font-size: 14px; }
+.level-vocabulary table { width: 100%; border-collapse: collapse; table-layout: fixed; text-align: left; }
+.level-vocabulary th, .level-vocabulary td { padding: 14px 30px; border-top: 1px solid var(--ka-card-line); overflow-wrap: anywhere; }
+.level-vocabulary thead { background: var(--ka-paper); color: var(--ka-green); font-size: 14px; }
+.level-vocabulary th:first-child { width: 34%; }
+.level-vocabulary tbody th { font-weight: 500; color: var(--ka-green); font-size: 18px; }
+.level-vocabulary td { color: var(--site-muted); line-height: 1.5; }
+.level-vocabulary-empty { padding: 8px 30px 24px; color: var(--site-muted); }
+@media(max-width: 650px) {
+  .level-vocabulary-cover, .level-vocabulary-tools { padding: 20px; }
+  .level-vocabulary-tools { grid-template-columns: minmax(0, 1fr); }
+  .level-vocabulary-tools [role=status] { justify-self: start; }
+  .level-vocabulary th, .level-vocabulary td { padding: 12px 20px; }
+  .level-vocabulary td { font-size: 14px; }
+}

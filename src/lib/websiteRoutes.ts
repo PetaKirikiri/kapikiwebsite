@@ -1,7 +1,7 @@
 import { findMoeBenefit } from './moeBenefits'
 import type { CurriculumLevel } from './sentenceStructureLevels'
 
-export type LevelTab = 'structures' | 'stories' | 'practice'
+export type LevelTab = 'structures' | 'vocabulary' | 'stories' | 'practice'
 
 export function normaliseWebsiteHash(hash: string) {
   const [path, query] = (hash || '#website-top').split('?')
@@ -40,7 +40,7 @@ export function websiteRoute(hash: string) {
   const classNumber = params.get('class')
   const target = level === 1 && section && /^[1-7]$/.test(section) ? `pepeha-section-${section}` : classNumber && /^[1-6]$/.test(classNumber) ? `moe-class-${classNumber}` : params.has('timetable') ? 'moe-timetable' : null
   const requestedTab = params.get('tab')
-  const tab: LevelTab = level === 1 && target?.startsWith('pepeha-') ? 'stories' : requestedTab === 'stories' || requestedTab === 'practice' ? requestedTab : 'structures'
+  const tab: LevelTab = level === 1 && target?.startsWith('pepeha-') ? 'stories' : requestedTab === 'vocabulary' || requestedTab === 'stories' || requestedTab === 'practice' ? requestedTab : 'structures'
   const example = Math.max(1, Math.min(1000, Number(params.get('example')) || 1))
   return { tab, example: Math.floor(example), canonical, path: path!, moe, surface, level, benefit, overview, notFound: !known, target }
 }

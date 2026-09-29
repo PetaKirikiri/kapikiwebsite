@@ -7,6 +7,7 @@ import './LevelExplorer.css'
 
 const TABS = [
   { id: 'structures', label: 'Sentence structures', icon: 'M3 5h7v5H3Zm11 9h7v5h-7ZM6 10v6h8' },
+  { id: 'vocabulary', label: 'Vocabulary', icon: 'M4 3h16v18H4ZM8 7h8M8 12h8M8 17h5' },
   { id: 'stories', label: 'Reading material', icon: 'M12 6C9 3 5 3 2 4v15c4-1 7-1 10 2 3-3 6-3 10-2V4c-3-1-7-1-10 2Zm0 0v15' },
   { id: 'practice', label: 'Practice', icon: 'M20 7H8a5 5 0 0 0-5 5m13-9 4 4-4 4M4 17h12a5 5 0 0 0 5-5M8 13l-4 4 4 4' },
 ] as const

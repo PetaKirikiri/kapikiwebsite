@@ -1,0 +1,7755 @@
+{
+  "schemaVersion": 1,
+  "status": "initial-partial-editorial-draft",
+  "target": {
+    "distinctApprovedVocabulary": 1000,
+    "byEndOfLevel": 6,
+    "approvedSoFar": 0,
+    "kiwahaCountedSeparately": true
+  },
+  "countingPolicy": {
+    "normalisation": "NFC and case folding; preserve macrons",
+    "senses": "One spelling can require several assessed readings without automatically adding to the vocabulary total.",
+    "forms": "Variant spellings, singular/plural relations and passive forms require explicit review before distinct counts.",
+    "phrases": "Keep multiword constructions, job titles and kiwaha separate from distinct single-word vocabulary.",
+    "repeat": "Previously introduced items recur without being counted again."
+  },
+  "groups": [
+    {
+      "id": "L1-1",
+      "level": 1,
+      "title": "Identity and people",
+      "structureFocus": "ko / he",
+      "rationale": "Introduce and identify people; teach pronoun distinctions in context.",
+      "wordKeys": [
+        "te",
+        "he",
+        "ko",
+        "ia",
+        "koe",
+        "rātou",
+        "au",
+        "whanaunga",
+        "ahau",
+        "tātou",
+        "tamariki",
+        "tangata",
+        "koutou",
+        "māua",
+        "pāpā",
+        "whānau",
+        "ingoa",
+        "tāngata",
+        "tama",
+        "matua",
+        "kuia",
+        "kōrua",
+        "tāua",
+        "whaea",
+        "mātua",
+        "koroua",
+        "tamaiti",
+        "mokopuna",
+        "tuakana",
+        "tūpuna",
+        "tungāne",
+        "teina",
+        "tuahine",
+        "whakapapa",
+        "tamāhine",
+        "mātou",
+        "ngā",
+        "rāua",
+        "tuākana"
+      ]
+    },
+    {
+      "id": "L1-2",
+      "level": 1,
+      "title": "Belonging and places",
+      "structureFocus": "nō / kei",
+      "rationale": "Origin and present location. Do not equate the lake and inside readings of roto.",
+      "wordKeys": [
+        "kei",
+        "roto",
+        "reira",
+        "whare",
+        "kura",
+        "wāhi",
+        "waka",
+        "iwi",
+        "whenua",
+        "kāinga",
+        "moana",
+        "awa",
+        "konei",
+        "hea",
+        "maunga",
+        "marae",
+        "rohe",
+        "hapū",
+        "tari",
+        "nō",
+        "ngahere"
+      ]
+    },
+    {
+      "id": "L1-3",
+      "level": 1,
+      "title": "Naming and describing",
+      "structureFocus": "he",
+      "rationale": "Use concrete referents and simple descriptions. mā has a colour reading here, not the Level 4 beneficiary reading.",
+      "wordKeys": [
+        "tēnei",
+        "mā",
+        "nui",
+        "ēnei",
+        "tēnā",
+        "manu",
+        "rākau",
+        "roa",
+        "ika",
+        "iti",
+        "pukapuka",
+        "pango",
+        "ērā",
+        "pepa",
+        "kurī",
+        "kino",
+        "whero",
+        "poto",
+        "pene",
+        "kākano",
+        "kākāriki",
+        "kōwhai",
+        "ēnā",
+        "parauri",
+        "kākāpō",
+        "pai",
+        "tērā"
+      ]
+    },
+    {
+      "id": "L1-4",
+      "level": 1,
+      "title": "Numbers and quantities",
+      "structureFocus": "e rua / kotahi / kāorekau / tokorua",
+      "rationale": "Count things and people using the appropriate constructions.",
+      "wordKeys": [
+        "rua",
+        "tekau",
+        "kotahi",
+        "toru",
+        "rau",
+        "tahi",
+        "maha",
+        "rima",
+        "whā",
+        "ono",
+        "waru",
+        "iwa",
+        "tokorua",
+        "mano",
+        "whitu",
+        "tokomaha",
+        "tokotoru",
+        "kāorekau",
+        "e"
+      ]
+    },
+    {
+      "id": "L1-5",
+      "level": 1,
+      "title": "Introducing your work",
+      "structureFocus": "he / ko",
+      "rationale": "Start with useful single word occupations. Agency job title phrases remain separate expressions.",
+      "wordKeys": [
+        "mahi",
+        "ākonga",
+        "kaiako",
+        "kaimahi",
+        "kaiwhakahaere",
+        "kaitātari",
+        "kaitohutohu"
+      ]
+    },
+    {
+      "id": "L2-1",
+      "level": 2,
+      "title": "Everyday actions",
+      "structureFocus": "i / kua / kei te / e … ana / ka / me",
+      "rationale": "Introduce the action reading of each word in supported sentences, reusing Level 1 vocabulary.",
+      "wordKeys": [
+        "i",
+        "ki",
+        "ka",
+        "e",
+        "ana",
+        "me",
+        "kua",
+        "haere",
+        "hoki",
+        "mahi",
+        "kōrero",
+        "noho",
+        "kite",
+        "tū",
+        "titiro",
+        "rere",
+        "tīmata",
+        "waiata",
+        "tākaro",
+        "hanga",
+        "mutu",
+        "moe",
+        "karanga",
+        "oma",
+        "tuhi",
+        "ako",
+        "kata",
+        "whakarongo",
+        "hoko",
+        "hīkoi",
+        "pānui",
+        "kanikani",
+        "kaukau",
+        "inu",
+        "kai",
+        "whai"
+      ]
+    },
+    {
+      "id": "L2-2",
+      "level": 2,
+      "title": "Food and daily routines",
+      "structureFocus": "action structures",
+      "rationale": "Practical conversation choices. Unranked items require a usefulness reason, not an invented rank.",
+      "wordKeys": [
+        "ika",
+        "miraka",
+        "hēki",
+        "parāoa",
+        "tina",
+        "heihei",
+        "mīti",
+        "parakuihi",
+        "āporo",
+        "kūmara",
+        "huawhenua",
+        "kaihapa",
+        "kawhe",
+        "raihi",
+        "wai"
+      ]
+    },
+    {
+      "id": "L2-3",
+      "level": 2,
+      "title": "Time and position",
+      "structureFocus": "actions / kei … i …",
+      "rationale": "Teach the intended time or position meaning explicitly; single spellings can serve different functions.",
+      "wordKeys": [
+        "atu",
+        "mai",
+        "rā",
+        "roto",
+        "taha",
+        "muri",
+        "mua",
+        "raro",
+        "pō",
+        "tata",
+        "waho",
+        "marama",
+        "ata",
+        "waenganui",
+        "tawhiti",
+        "wiki",
+        "ahiahi",
+        "āpōpō",
+        "ināianei",
+        "inanahi",
+        "runga",
+        "tau"
+      ]
+    },
+    {
+      "id": "L3-1",
+      "level": 3,
+      "title": "Needs and responses",
+      "structureFocus": "kāore / ehara / kāore anō … kia",
+      "rationale": "Ask for help and explain needs, without treating negative markers as freely interchangeable.",
+      "wordKeys": [
+        "kia",
+        "anō",
+        "kore",
+        "mōhio",
+        "kāore",
+        "tika",
+        "pātai",
+        "rongo",
+        "hiahia",
+        "whakautu",
+        "āe",
+        "āwhina",
+        "ehara",
+        "pīrangi",
+        "mataku",
+        "mārama",
+        "hē",
+        "raruraru",
+        "mamae",
+        "kāo",
+        "matekai",
+        "ngenge",
+        "hiainu",
+        "māuiui"
+      ]
+    },
+    {
+      "id": "L3-2",
+      "level": 3,
+      "title": "Instructions",
+      "structureFocus": "commands / kaua e / kāti / kia",
+      "rationale": "Select and verify command and passive forms per verb before creating exercises.",
+      "wordKeys": [
+        "tere",
+        "āta",
+        "kaua",
+        "tuku",
+        "tiaki",
+        "tatari",
+        "tiki",
+        "hoatu",
+        "horoi",
+        "kawe",
+        "pupuri",
+        "kāti",
+        "tango",
+        "tūpato",
+        "whakarite",
+        "whakatā",
+        "whakatika",
+        "hōmai",
+        "tapahi",
+        "kati",
+        "whakatuwhera",
+        "whāia",
+        "tō"
+      ]
+    },
+    {
+      "id": "L3-3",
+      "level": 3,
+      "title": "Objects used in tasks",
+      "structureFocus": "instruction contexts",
+      "rationale": "Give meaningful instructions with known actions and practical objects.",
+      "wordKeys": [
+        "ringa",
+        "kākahu",
+        "pouaka",
+        "waewae",
+        "waea",
+        "kanohi",
+        "hū",
+        "upoko",
+        "waha",
+        "karu",
+        "taputapu",
+        "pēke",
+        "pōtae",
+        "taringa",
+        "rorohiko",
+        "tēpu",
+        "tūru",
+        "ipu",
+        "kūaha",
+        "maripi",
+        "pereti"
+      ]
+    },
+    {
+      "id": "L4-1",
+      "level": 4,
+      "title": "Possession and responsibility",
+      "structureFocus": "nā / nō / mā / mō",
+      "rationale": "Readings and a/o relationships require their own teaching targets. Known spellings do not count as new words again.",
+      "wordKeys": [
+        "nā",
+        "mō",
+        "mā",
+        "ōna",
+        "tōku",
+        "ōku",
+        "tāna",
+        "aku",
+        "āna",
+        "māku",
+        "tōu",
+        "tāku",
+        "nāna",
+        "māna",
+        "tāu",
+        "ōu",
+        "āu",
+        "mōna",
+        "nāku",
+        "mōku",
+        "nōku",
+        "nōna",
+        "nō",
+        "tōna"
+      ]
+    },
+    {
+      "id": "L4-2",
+      "level": 4,
+      "title": "Work and shared responsibilities",
+      "structureFocus": "nā … i / mā … e",
+      "rationale": "Explain who is responsible and who things are for. Verify each chosen structure fit.",
+      "wordKeys": [
+        "kaupapa",
+        "rangatira",
+        "rōpū",
+        "mana",
+        "hui",
+        "moni",
+        "whakaae",
+        "utu",
+        "whakahaere",
+        "tohutohu",
+        "tautoko",
+        "ture",
+        "kaitiaki",
+        "whakarite",
+        "tono",
+        "mahere",
+        "ārahi",
+        "whāinga",
+        "kawenga",
+        "pūtea",
+        "ratonga"
+      ]
+    },
+    {
+      "id": "L4-3",
+      "level": 4,
+      "title": "Belongings and resources",
+      "structureFocus": "ownership / beneficiaries",
+      "rationale": "Reuse known nouns in possession contexts; do not count them again.",
+      "wordKeys": [
+        "whare",
+        "waka",
+        "whenua",
+        "taonga",
+        "pukapuka",
+        "motokā",
+        "mīhini",
+        "kēmu",
+        "māra",
+        "pahi",
+        "rongoā",
+        "kai",
+        "pahikara"
+      ]
+    },
+    {
+      "id": "L5-1",
+      "level": 5,
+      "title": "Comparison and qualities",
+      "structureFocus": "ake … i",
+      "rationale": "Compare qualities. Resolve spelling variants and the easy/light versus mother readings.",
+      "wordKeys": [
+        "ake",
+        "tino",
+        "noa",
+        "rawa",
+        "māmā",
+        "kaha",
+        "rerekē",
+        "wera",
+        "ātaahua",
+        "mahana",
+        "rawe",
+        "whānui",
+        "uaua",
+        "taumaha",
+        "ngāwari",
+        "teitei",
+        "ōrite",
+        "makariri",
+        "maroke",
+        "whāiti",
+        "mātao",
+        "mākū",
+        "hōhonu"
+      ]
+    },
+    {
+      "id": "L5-2",
+      "level": 5,
+      "title": "Ability and habits",
+      "structureFocus": "ka taea e / kāore e taea e / verb + ai",
+      "rationale": "Use ability and habit structures with already familiar actions; unsupported words stay pending.",
+      "wordKeys": [
+        "tonu",
+        "ai",
+        "ake",
+        "taea",
+        "anake",
+        "whakamātau",
+        "pakari",
+        "māia",
+        "pūkenga",
+        "whakamātautau",
+        "auau",
+        "katoa",
+        "pai",
+        "whakaharatau",
+        "hei"
+      ]
+    },
+    {
+      "id": "L5-3",
+      "level": 5,
+      "title": "Actions from another perspective",
+      "structureFocus": "passive sentences",
+      "rationale": "These are form targets. Do not automatically inflate the distinct vocabulary total with every passive spelling.",
+      "wordKeys": [
+        "kitea",
+        "hoatu",
+        "tuhia",
+        "hangaia",
+        "tukuna",
+        "tangohia",
+        "tukua",
+        "whāia",
+        "kawea",
+        "horoia",
+        "kīia",
+        "whakatuwheratia",
+        "hora"
+      ]
+    },
+    {
+      "id": "L6-1",
+      "level": 6,
+      "title": "Questions and explanations",
+      "structureFocus": "he aha … ai / nōnahea / āhea",
+      "rationale": "Multiword question frames belong with structures, not the single word count.",
+      "wordKeys": [
+        "whakaaro",
+        "pēhea",
+        "take",
+        "whakamārama",
+        "pēwhea",
+        "pūtake",
+        "mōhiotanga",
+        "aha",
+        "āhea",
+        "nōnahea",
+        "mea"
+      ]
+    },
+    {
+      "id": "L6-2",
+      "level": 6,
+      "title": "Conditions and discussion",
+      "structureFocus": "mēnā / mehemea / ki te",
+      "rationale": "Teach condition and explanation frames as linked constructions, not interchangeable tokens.",
+      "wordKeys": [
+        "pea",
+        "ahakoa",
+        "mehemea",
+        "mēnā",
+        "tūmanako",
+        "pono",
+        "whakapae",
+        "engari",
+        "heoi",
+        "kōwhiri",
+        "whakaaroaro"
+      ]
+    },
+    {
+      "id": "L6-3",
+      "level": 6,
+      "title": "Stories, community and opinions",
+      "structureFocus": "integrated conversation",
+      "rationale": "Integrate earlier vocabulary in useful discussion; identify new senses separately from new words.",
+      "wordKeys": [
+        "kōrero",
+        "tikanga",
+        "āhuatanga",
+        "mātauranga",
+        "oranga",
+        "hangarau",
+        "kāwanatanga",
+        "tutuki",
+        "whakanui",
+        "hauora",
+        "pūrākau",
+        "pakiwaitara",
+        "whakapai",
+        "angitu",
+        "hapori",
+        "hītori",
+        "taiao",
+        "whakarerekē",
+        "whanaketanga"
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "key": "te",
+      "word": "te",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 1,
+      "lexemeId": "1708",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "he",
+      "word": "he",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 9,
+      "lexemeId": "158",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ko",
+      "word": "ko",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 10,
+      "lexemeId": "542",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ia",
+      "word": "ia",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 15,
+      "lexemeId": "346",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "koe",
+      "word": "koe",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 33,
+      "lexemeId": "544",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rātou",
+      "word": "rātou",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 35,
+      "lexemeId": "1555",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "au",
+      "word": "au",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 36,
+      "lexemeId": "67",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whanaunga",
+      "word": "whanaunga",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 40,
+      "lexemeId": "2288",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ahau",
+      "word": "ahau",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 43,
+      "lexemeId": "5",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tātou",
+      "word": "tātou",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 53,
+      "lexemeId": "1915",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tamariki",
+      "word": "tamariki",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 57,
+      "lexemeId": "1625",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tangata",
+      "word": "tangata",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 59,
+      "lexemeId": "1633",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "koutou",
+      "word": "koutou",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 77,
+      "lexemeId": "604",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "māua",
+      "word": "māua",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 93,
+      "lexemeId": "945",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pāpā",
+      "word": "pāpā",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 100,
+      "lexemeId": "1341",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whānau",
+      "word": "whānau",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 107,
+      "lexemeId": "2340",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ingoa",
+      "word": "ingoa",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 114,
+      "lexemeId": "364",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tāngata",
+      "word": "tāngata",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 118,
+      "lexemeId": "1892",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tama",
+      "word": "tama",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 141,
+      "lexemeId": "1623",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "matua",
+      "word": "matua",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 144,
+      "lexemeId": "815",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kuia",
+      "word": "kuia",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 180,
+      "lexemeId": "612",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kōrua",
+      "word": "kōrua",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 207,
+      "lexemeId": "708",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tāua",
+      "word": "tāua",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 217,
+      "lexemeId": "1919",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whaea",
+      "word": "whaea",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 221,
+      "lexemeId": "2108",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mātua",
+      "word": "mātua",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 225,
+      "lexemeId": "943",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "koroua",
+      "word": "koroua",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 285,
+      "lexemeId": "593",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tamaiti",
+      "word": "tamaiti",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 291,
+      "lexemeId": "1624",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mokopuna",
+      "word": "mokopuna",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 340,
+      "lexemeId": "869",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tuakana",
+      "word": "tuakana",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 633,
+      "lexemeId": "1817",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tūpuna",
+      "word": "tūpuna",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 686,
+      "lexemeId": "2003",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tungāne",
+      "word": "tungāne",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 706,
+      "lexemeId": "1849",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "teina",
+      "word": "teina",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 763,
+      "lexemeId": "1710",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tuahine",
+      "word": "tuahine",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 793,
+      "lexemeId": "1813",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakapapa",
+      "word": "whakapapa",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 799,
+      "lexemeId": "2214",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tamāhine",
+      "word": "tamāhine",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": 887,
+      "lexemeId": "1629",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mātou",
+      "word": "mātou",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "942",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ngā",
+      "word": "ngā",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1024",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rāua",
+      "word": "rāua",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1556",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tuākana",
+      "word": "tuākana",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1866",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kei",
+      "word": "kei",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 16,
+      "lexemeId": "492",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "roto",
+      "word": "roto",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        2
+      ],
+      "groupIds": [
+        "L1-2",
+        "L2-3"
+      ],
+      "frequencyRank": 39,
+      "lexemeId": "1536",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "reira",
+      "word": "reira",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 52,
+      "lexemeId": "1484",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whare",
+      "word": "whare",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        4
+      ],
+      "groupIds": [
+        "L1-2",
+        "L4-3"
+      ],
+      "frequencyRank": 60,
+      "lexemeId": "2295",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kura",
+      "word": "kura",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 63,
+      "lexemeId": "623",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "wāhi",
+      "word": "wāhi",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 67,
+      "lexemeId": "2366",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "waka",
+      "word": "waka",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        4
+      ],
+      "groupIds": [
+        "L1-2",
+        "L4-3"
+      ],
+      "frequencyRank": 74,
+      "lexemeId": "2080",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "iwi",
+      "word": "iwi",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 79,
+      "lexemeId": "380",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whenua",
+      "word": "whenua",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        4
+      ],
+      "groupIds": [
+        "L1-2",
+        "L4-3"
+      ],
+      "frequencyRank": 82,
+      "lexemeId": "2314",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kāinga",
+      "word": "kāinga",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 88,
+      "lexemeId": "638",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "moana",
+      "word": "moana",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 106,
+      "lexemeId": "855",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "awa",
+      "word": "awa",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 152,
+      "lexemeId": "81",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "konei",
+      "word": "konei",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 159,
+      "lexemeId": "567",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hea",
+      "word": "hea",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 186,
+      "lexemeId": "159",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "maunga",
+      "word": "maunga",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 216,
+      "lexemeId": "822",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "marae",
+      "word": "marae",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 309,
+      "lexemeId": "777",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rohe",
+      "word": "rohe",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 362,
+      "lexemeId": "1524",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hapū",
+      "word": "hapū",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 679,
+      "lexemeId": "128",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tari",
+      "word": "tari",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 780,
+      "lexemeId": "1672",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "nō",
+      "word": "nō",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        4
+      ],
+      "groupIds": [
+        "L1-2",
+        "L4-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1063",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tēnei",
+      "word": "tēnei",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 32,
+      "lexemeId": "1931",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mā",
+      "word": "mā",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        4
+      ],
+      "groupIds": [
+        "L1-3",
+        "L4-1"
+      ],
+      "frequencyRank": 38,
+      "lexemeId": "896",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "nui",
+      "word": "nui",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 48,
+      "lexemeId": "1048",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ēnei",
+      "word": "ēnei",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 69,
+      "lexemeId": "2422",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tēnā",
+      "word": "tēnā",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 73,
+      "lexemeId": "1932",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "manu",
+      "word": "manu",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 89,
+      "lexemeId": "772",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rākau",
+      "word": "rākau",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 91,
+      "lexemeId": "1551",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "roa",
+      "word": "roa",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 98,
+      "lexemeId": "1522",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ika",
+      "word": "ika",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        2
+      ],
+      "groupIds": [
+        "L1-3",
+        "L2-2"
+      ],
+      "frequencyRank": 157,
+      "lexemeId": "353",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "iti",
+      "word": "iti",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 177,
+      "lexemeId": "377",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pukapuka",
+      "word": "pukapuka",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        4
+      ],
+      "groupIds": [
+        "L1-3",
+        "L4-3"
+      ],
+      "frequencyRank": 178,
+      "lexemeId": "1291",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pango",
+      "word": "pango",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 181,
+      "lexemeId": "1139",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ērā",
+      "word": "ērā",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 182,
+      "lexemeId": "2425",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pepa",
+      "word": "pepa",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 229,
+      "lexemeId": "1203",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kurī",
+      "word": "kurī",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 262,
+      "lexemeId": "630",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kino",
+      "word": "kino",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 282,
+      "lexemeId": "519",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whero",
+      "word": "whero",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 365,
+      "lexemeId": "2319",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "poto",
+      "word": "poto",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 396,
+      "lexemeId": "1271",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pene",
+      "word": "pene",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 576,
+      "lexemeId": "1201",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kākano",
+      "word": "kākano",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 671,
+      "lexemeId": "640",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kākāriki",
+      "word": "kākāriki",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 676,
+      "lexemeId": "643",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kōwhai",
+      "word": "kōwhai",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 716,
+      "lexemeId": "717",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ēnā",
+      "word": "ēnā",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 836,
+      "lexemeId": "2424",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "parauri",
+      "word": "parauri",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": 932,
+      "lexemeId": "1168",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kākāpō",
+      "word": "kākāpō",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "642",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pai",
+      "word": "pai",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        5
+      ],
+      "groupIds": [
+        "L1-3",
+        "L5-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1107",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tērā",
+      "word": "tērā",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1937",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rua",
+      "word": "rua",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 70,
+      "lexemeId": "1539",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tekau",
+      "word": "tekau",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 99,
+      "lexemeId": "1713",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kotahi",
+      "word": "kotahi",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 116,
+      "lexemeId": "596",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "toru",
+      "word": "toru",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 156,
+      "lexemeId": "1805",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rau",
+      "word": "rau",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 158,
+      "lexemeId": "1473",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tahi",
+      "word": "tahi",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 167,
+      "lexemeId": "1583",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "maha",
+      "word": "maha",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 179,
+      "lexemeId": "727",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rima",
+      "word": "rima",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 220,
+      "lexemeId": "1509",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whā",
+      "word": "whā",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 224,
+      "lexemeId": "2333",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ono",
+      "word": "ono",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 290,
+      "lexemeId": "1086",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "waru",
+      "word": "waru",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 307,
+      "lexemeId": "2086",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "iwa",
+      "word": "iwa",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 402,
+      "lexemeId": "378",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tokorua",
+      "word": "tokorua",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 407,
+      "lexemeId": "1786",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mano",
+      "word": "mano",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 419,
+      "lexemeId": "770",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whitu",
+      "word": "whitu",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 462,
+      "lexemeId": "2327",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tokomaha",
+      "word": "tokomaha",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 710,
+      "lexemeId": "1784",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tokotoru",
+      "word": "tokotoru",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": 797,
+      "lexemeId": "1787",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kāorekau",
+      "word": "kāorekau",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-4"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "650",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mahi",
+      "word": "mahi",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        2
+      ],
+      "groupIds": [
+        "L1-5",
+        "L2-1"
+      ],
+      "frequencyRank": 26,
+      "lexemeId": "733",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ākonga",
+      "word": "ākonga",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-5"
+      ],
+      "frequencyRank": 436,
+      "lexemeId": "2395",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaiako",
+      "word": "kaiako",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-5"
+      ],
+      "frequencyRank": 447,
+      "lexemeId": "389",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaimahi",
+      "word": "kaimahi",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-5"
+      ],
+      "frequencyRank": 451,
+      "lexemeId": "395",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaiwhakahaere",
+      "word": "kaiwhakahaere",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-5"
+      ],
+      "frequencyRank": 625,
+      "lexemeId": "410",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaitātari",
+      "word": "kaitātari",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-5"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaitohutohu",
+      "word": "kaitohutohu",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-5"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "e",
+      "word": "e",
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        2
+      ],
+      "groupIds": [
+        "L1-4",
+        "L2-1"
+      ],
+      "frequencyRank": 5,
+      "lexemeId": "88",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ngahere",
+      "word": "ngahere",
+      "firstProposedLevel": 1,
+      "revisitLevels": [],
+      "groupIds": [
+        "L1-2"
+      ],
+      "frequencyRank": 266,
+      "lexemeId": "994",
+      "dictionarySenseCount": 1,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "i",
+      "word": "i",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 2,
+      "lexemeId": "344",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ki",
+      "word": "ki",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 3,
+      "lexemeId": "501",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ka",
+      "word": "ka",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 4,
+      "lexemeId": "382",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ana",
+      "word": "ana",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 11,
+      "lexemeId": "27",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "me",
+      "word": "me",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 13,
+      "lexemeId": "826",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kua",
+      "word": "kua",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 19,
+      "lexemeId": "606",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "haere",
+      "word": "haere",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 22,
+      "lexemeId": "102",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hoki",
+      "word": "hoki",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 23,
+      "lexemeId": "219",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kōrero",
+      "word": "kōrero",
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        6
+      ],
+      "groupIds": [
+        "L2-1",
+        "L6-3"
+      ],
+      "frequencyRank": 34,
+      "lexemeId": "703",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "noho",
+      "word": "noho",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 45,
+      "lexemeId": "1042",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kite",
+      "word": "kite",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 65,
+      "lexemeId": "535",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tū",
+      "word": "tū",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 72,
+      "lexemeId": "1986",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "titiro",
+      "word": "titiro",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 92,
+      "lexemeId": "1759",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rere",
+      "word": "rere",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 109,
+      "lexemeId": "1496",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tīmata",
+      "word": "tīmata",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 129,
+      "lexemeId": "1947",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "waiata",
+      "word": "waiata",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 130,
+      "lexemeId": "2066",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tākaro",
+      "word": "tākaro",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 136,
+      "lexemeId": "1880",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hanga",
+      "word": "hanga",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 140,
+      "lexemeId": "119",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mutu",
+      "word": "mutu",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 147,
+      "lexemeId": "894",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "moe",
+      "word": "moe",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 160,
+      "lexemeId": "856",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "karanga",
+      "word": "karanga",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 176,
+      "lexemeId": "441",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "oma",
+      "word": "oma",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 192,
+      "lexemeId": "1081",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tuhi",
+      "word": "tuhi",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 226,
+      "lexemeId": "1827",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ako",
+      "word": "ako",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 260,
+      "lexemeId": "22",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kata",
+      "word": "kata",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 280,
+      "lexemeId": "458",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakarongo",
+      "word": "whakarongo",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 283,
+      "lexemeId": "2236",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hoko",
+      "word": "hoko",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 304,
+      "lexemeId": "222",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hīkoi",
+      "word": "hīkoi",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 320,
+      "lexemeId": "316",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pānui",
+      "word": "pānui",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 359,
+      "lexemeId": "1338",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kanikani",
+      "word": "kanikani",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 363,
+      "lexemeId": "426",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaukau",
+      "word": "kaukau",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 364,
+      "lexemeId": "470",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "inu",
+      "word": "inu",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 509,
+      "lexemeId": "365",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kai",
+      "word": "kai",
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        4
+      ],
+      "groupIds": [
+        "L2-1",
+        "L4-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "388",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "miraka",
+      "word": "miraka",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": 387,
+      "lexemeId": "845",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hēki",
+      "word": "hēki",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": 454,
+      "lexemeId": "309",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "parāoa",
+      "word": "parāoa",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": 496,
+      "lexemeId": "1179",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tina",
+      "word": "tina",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": 621,
+      "lexemeId": "1741",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "heihei",
+      "word": "heihei",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": 646,
+      "lexemeId": "163",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mīti",
+      "word": "mīti",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": 697,
+      "lexemeId": "954",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "parakuihi",
+      "word": "parakuihi",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": 719,
+      "lexemeId": "1162",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "āporo",
+      "word": "āporo",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": 775,
+      "lexemeId": "2401",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kūmara",
+      "word": "kūmara",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": 803,
+      "lexemeId": "720",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "huawhenua",
+      "word": "huawhenua",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaihapa",
+      "word": "kaihapa",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kawhe",
+      "word": "kawhe",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "raihi",
+      "word": "raihi",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "wai",
+      "word": "wai",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "2063",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "atu",
+      "word": "atu",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 12,
+      "lexemeId": "65",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mai",
+      "word": "mai",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 14,
+      "lexemeId": "737",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rā",
+      "word": "rā",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 20,
+      "lexemeId": "1549",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "taha",
+      "word": "taha",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 81,
+      "lexemeId": "1580",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "muri",
+      "word": "muri",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 101,
+      "lexemeId": "893",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mua",
+      "word": "mua",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 103,
+      "lexemeId": "884",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "raro",
+      "word": "raro",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 108,
+      "lexemeId": "1466",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pō",
+      "word": "pō",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 125,
+      "lexemeId": "1383",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tata",
+      "word": "tata",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 135,
+      "lexemeId": "1675",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "waho",
+      "word": "waho",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 155,
+      "lexemeId": "2062",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "marama",
+      "word": "marama",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 194,
+      "lexemeId": "778",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ata",
+      "word": "ata",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 239,
+      "lexemeId": "59",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "waenganui",
+      "word": "waenganui",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 247,
+      "lexemeId": "2055",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tawhiti",
+      "word": "tawhiti",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 258,
+      "lexemeId": "1706",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "wiki",
+      "word": "wiki",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 361,
+      "lexemeId": "2357",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ahiahi",
+      "word": "ahiahi",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 475,
+      "lexemeId": "7",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "āpōpō",
+      "word": "āpōpō",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": 558,
+      "lexemeId": "2403",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ināianei",
+      "word": "ināianei",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "369",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "inanahi",
+      "word": "inanahi",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "360",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "runga",
+      "word": "runga",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1547",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tau",
+      "word": "tau",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1681",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whai",
+      "word": "whai",
+      "firstProposedLevel": 2,
+      "revisitLevels": [],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 90,
+      "lexemeId": "2110",
+      "dictionarySenseCount": 10,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kia",
+      "word": "kia",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 17,
+      "lexemeId": "503",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "anō",
+      "word": "anō",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 25,
+      "lexemeId": "38",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kore",
+      "word": "kore",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 49,
+      "lexemeId": "579",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mōhio",
+      "word": "mōhio",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 51,
+      "lexemeId": "957",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kāore",
+      "word": "kāore",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 62,
+      "lexemeId": "649",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tika",
+      "word": "tika",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 111,
+      "lexemeId": "1732",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pātai",
+      "word": "pātai",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 120,
+      "lexemeId": "1347",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rongo",
+      "word": "rongo",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 134,
+      "lexemeId": "1528",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hiahia",
+      "word": "hiahia",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 139,
+      "lexemeId": "181",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakautu",
+      "word": "whakautu",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 149,
+      "lexemeId": "2272",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "āe",
+      "word": "āe",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 171,
+      "lexemeId": "2382",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "āwhina",
+      "word": "āwhina",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 172,
+      "lexemeId": "2417",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ehara",
+      "word": "ehara",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 189,
+      "lexemeId": "93",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pīrangi",
+      "word": "pīrangi",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 243,
+      "lexemeId": "1381",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mataku",
+      "word": "mataku",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 292,
+      "lexemeId": "793",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mārama",
+      "word": "mārama",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 305,
+      "lexemeId": "923",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hē",
+      "word": "hē",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 384,
+      "lexemeId": "307",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "raruraru",
+      "word": "raruraru",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 385,
+      "lexemeId": "1469",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mamae",
+      "word": "mamae",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 450,
+      "lexemeId": "751",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kāo",
+      "word": "kāo",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 477,
+      "lexemeId": "648",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "matekai",
+      "word": "matekai",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 749,
+      "lexemeId": "807",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ngenge",
+      "word": "ngenge",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": 840,
+      "lexemeId": "1010",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hiainu",
+      "word": "hiainu",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "māuiui",
+      "word": "māuiui",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "946",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tere",
+      "word": "tere",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 128,
+      "lexemeId": "1719",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "āta",
+      "word": "āta",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 143,
+      "lexemeId": "2408",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaua",
+      "word": "kaua",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 173,
+      "lexemeId": "465",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tuku",
+      "word": "tuku",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 228,
+      "lexemeId": "1837",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tiaki",
+      "word": "tiaki",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 248,
+      "lexemeId": "1725",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tatari",
+      "word": "tatari",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 279,
+      "lexemeId": "1676",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tiki",
+      "word": "tiki",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 288,
+      "lexemeId": "1735",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hoatu",
+      "word": "hoatu",
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        5
+      ],
+      "groupIds": [
+        "L3-2",
+        "L5-3"
+      ],
+      "frequencyRank": 299,
+      "lexemeId": "214",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "horoi",
+      "word": "horoi",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 313,
+      "lexemeId": "236",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kawe",
+      "word": "kawe",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 334,
+      "lexemeId": "481",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pupuri",
+      "word": "pupuri",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 343,
+      "lexemeId": "1305",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kāti",
+      "word": "kāti",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 351,
+      "lexemeId": "662",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tango",
+      "word": "tango",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 382,
+      "lexemeId": "1637",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tūpato",
+      "word": "tūpato",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 429,
+      "lexemeId": "1999",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakarite",
+      "word": "whakarite",
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4
+      ],
+      "groupIds": [
+        "L3-2",
+        "L4-2"
+      ],
+      "frequencyRank": 481,
+      "lexemeId": "2234",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakatā",
+      "word": "whakatā",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 675,
+      "lexemeId": "2263",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakatika",
+      "word": "whakatika",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 700,
+      "lexemeId": "2254",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hōmai",
+      "word": "hōmai",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 712,
+      "lexemeId": "329",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tapahi",
+      "word": "tapahi",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": 744,
+      "lexemeId": "1650",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kati",
+      "word": "kati",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "462",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakatuwhera",
+      "word": "whakatuwhera",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "2261",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ringa",
+      "word": "ringa",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 154,
+      "lexemeId": "1511",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kākahu",
+      "word": "kākahu",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 168,
+      "lexemeId": "639",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pouaka",
+      "word": "pouaka",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 205,
+      "lexemeId": "1273",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "waewae",
+      "word": "waewae",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 212,
+      "lexemeId": "2057",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "waea",
+      "word": "waea",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 244,
+      "lexemeId": "2051",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kanohi",
+      "word": "kanohi",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 276,
+      "lexemeId": "428",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hū",
+      "word": "hū",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 342,
+      "lexemeId": "336",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "upoko",
+      "word": "upoko",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 357,
+      "lexemeId": "2039",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "waha",
+      "word": "waha",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 370,
+      "lexemeId": "2058",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "karu",
+      "word": "karu",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 374,
+      "lexemeId": "455",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "taputapu",
+      "word": "taputapu",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 375,
+      "lexemeId": "1660",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pēke",
+      "word": "pēke",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 377,
+      "lexemeId": "1366",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pōtae",
+      "word": "pōtae",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 404,
+      "lexemeId": "1395",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "taringa",
+      "word": "taringa",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 421,
+      "lexemeId": "1673",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rorohiko",
+      "word": "rorohiko",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 423,
+      "lexemeId": "1534",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tēpu",
+      "word": "tēpu",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 510,
+      "lexemeId": "1936",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tūru",
+      "word": "tūru",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 594,
+      "lexemeId": "2011",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ipu",
+      "word": "ipu",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": 729,
+      "lexemeId": "371",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kūaha",
+      "word": "kūaha",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "maripi",
+      "word": "maripi",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pereti",
+      "word": "pereti",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1207",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whāia",
+      "word": "whāia",
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        5
+      ],
+      "groupIds": [
+        "L3-2",
+        "L5-3"
+      ],
+      "frequencyRank": 658,
+      "lexemeId": "2334",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tō",
+      "word": "tō",
+      "firstProposedLevel": 3,
+      "revisitLevels": [],
+      "groupIds": [
+        "L3-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "nā",
+      "word": "nā",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 18,
+      "lexemeId": "1054",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mō",
+      "word": "mō",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 30,
+      "lexemeId": "955",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ōna",
+      "word": "ōna",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 66,
+      "lexemeId": "2438",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tōku",
+      "word": "tōku",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 71,
+      "lexemeId": "1975",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ōku",
+      "word": "ōku",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 161,
+      "lexemeId": "2437",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tāna",
+      "word": "tāna",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 162,
+      "lexemeId": "1889",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "aku",
+      "word": "aku",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 204,
+      "lexemeId": "24",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "āna",
+      "word": "āna",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 223,
+      "lexemeId": "2399",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "māku",
+      "word": "māku",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 238,
+      "lexemeId": "911",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tōu",
+      "word": "tōu",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 257,
+      "lexemeId": "1985",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tāku",
+      "word": "tāku",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 259,
+      "lexemeId": "1882",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "nāna",
+      "word": "nāna",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 302,
+      "lexemeId": "1058",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "māna",
+      "word": "māna",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 336,
+      "lexemeId": "917",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tāu",
+      "word": "tāu",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 356,
+      "lexemeId": "1918",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ōu",
+      "word": "ōu",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 403,
+      "lexemeId": "2441",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "āu",
+      "word": "āu",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 446,
+      "lexemeId": "2413",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mōna",
+      "word": "mōna",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 505,
+      "lexemeId": "968",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "nāku",
+      "word": "nāku",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 559,
+      "lexemeId": "1057",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mōku",
+      "word": "mōku",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 667,
+      "lexemeId": "965",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "nōku",
+      "word": "nōku",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 958,
+      "lexemeId": "1067",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "nōna",
+      "word": "nōna",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": 959,
+      "lexemeId": "1068",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tōna",
+      "word": "tōna",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1977",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaupapa",
+      "word": "kaupapa",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 131,
+      "lexemeId": "474",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rangatira",
+      "word": "rangatira",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 174,
+      "lexemeId": "1449",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rōpū",
+      "word": "rōpū",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 193,
+      "lexemeId": "1568",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mana",
+      "word": "mana",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 251,
+      "lexemeId": "753",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hui",
+      "word": "hui",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 289,
+      "lexemeId": "260",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "moni",
+      "word": "moni",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 296,
+      "lexemeId": "874",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakaae",
+      "word": "whakaae",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 329,
+      "lexemeId": "2116",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "utu",
+      "word": "utu",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 330,
+      "lexemeId": "2048",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakahaere",
+      "word": "whakahaere",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 348,
+      "lexemeId": "2129",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tohutohu",
+      "word": "tohutohu",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 372,
+      "lexemeId": "1776",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tautoko",
+      "word": "tautoko",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 389,
+      "lexemeId": "1703",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ture",
+      "word": "ture",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 399,
+      "lexemeId": "1856",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaitiaki",
+      "word": "kaitiaki",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 431,
+      "lexemeId": "405",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tono",
+      "word": "tono",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 485,
+      "lexemeId": "1793",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mahere",
+      "word": "mahere",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 515,
+      "lexemeId": "732",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ārahi",
+      "word": "ārahi",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 638,
+      "lexemeId": "2405",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whāinga",
+      "word": "whāinga",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 737,
+      "lexemeId": "2335",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kawenga",
+      "word": "kawenga",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 816,
+      "lexemeId": "484",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pūtea",
+      "word": "pūtea",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": 951,
+      "lexemeId": "1426",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ratonga",
+      "word": "ratonga",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "taonga",
+      "word": "taonga",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-3"
+      ],
+      "frequencyRank": 138,
+      "lexemeId": "1646",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "motokā",
+      "word": "motokā",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-3"
+      ],
+      "frequencyRank": 255,
+      "lexemeId": "877",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mīhini",
+      "word": "mīhini",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-3"
+      ],
+      "frequencyRank": 298,
+      "lexemeId": "953",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kēmu",
+      "word": "kēmu",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-3"
+      ],
+      "frequencyRank": 317,
+      "lexemeId": "672",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "māra",
+      "word": "māra",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-3"
+      ],
+      "frequencyRank": 615,
+      "lexemeId": "922",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pahi",
+      "word": "pahi",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-3"
+      ],
+      "frequencyRank": 641,
+      "lexemeId": "1104",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rongoā",
+      "word": "rongoā",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-3"
+      ],
+      "frequencyRank": 913,
+      "lexemeId": "1530",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pahikara",
+      "word": "pahikara",
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
+      "groupIds": [
+        "L4-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ake",
+      "word": "ake",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1",
+        "L5-2"
+      ],
+      "frequencyRank": 41,
+      "lexemeId": "20",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tino",
+      "word": "tino",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 42,
+      "lexemeId": "1746",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "noa",
+      "word": "noa",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 44,
+      "lexemeId": "1039",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rawa",
+      "word": "rawa",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 46,
+      "lexemeId": "1479",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "māmā",
+      "word": "māmā",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 87,
+      "lexemeId": "916",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kaha",
+      "word": "kaha",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 95,
+      "lexemeId": "385",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rerekē",
+      "word": "rerekē",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 215,
+      "lexemeId": "1498",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "wera",
+      "word": "wera",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 263,
+      "lexemeId": "2102",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ātaahua",
+      "word": "ātaahua",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 268,
+      "lexemeId": "2409",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mahana",
+      "word": "mahana",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 306,
+      "lexemeId": "728",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "rawe",
+      "word": "rawe",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 315,
+      "lexemeId": "1481",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whānui",
+      "word": "whānui",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 323,
+      "lexemeId": "2343",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "uaua",
+      "word": "uaua",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 328,
+      "lexemeId": "2026",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "taumaha",
+      "word": "taumaha",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 344,
+      "lexemeId": "1687",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ngāwari",
+      "word": "ngāwari",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 367,
+      "lexemeId": "1032",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "teitei",
+      "word": "teitei",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 405,
+      "lexemeId": "1711",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ōrite",
+      "word": "ōrite",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 425,
+      "lexemeId": "2440",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "makariri",
+      "word": "makariri",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 556,
+      "lexemeId": "742",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "maroke",
+      "word": "maroke",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 573,
+      "lexemeId": "787",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whāiti",
+      "word": "whāiti",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 627,
+      "lexemeId": "2336",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mātao",
+      "word": "mātao",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 653,
+      "lexemeId": "936",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mākū",
+      "word": "mākū",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 717,
+      "lexemeId": "914",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hōhonu",
+      "word": "hōhonu",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-1"
+      ],
+      "frequencyRank": 776,
+      "lexemeId": "324",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tonu",
+      "word": "tonu",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 29,
+      "lexemeId": "1795",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ai",
+      "word": "ai",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 37,
+      "lexemeId": "14",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "taea",
+      "word": "taea",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 96,
+      "lexemeId": "1578",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "anake",
+      "word": "anake",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 165,
+      "lexemeId": "29",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakamātau",
+      "word": "whakamātau",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 506,
+      "lexemeId": "2187",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pakari",
+      "word": "pakari",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 630,
+      "lexemeId": "1115",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "māia",
+      "word": "māia",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 682,
+      "lexemeId": "905",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pūkenga",
+      "word": "pūkenga",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 685,
+      "lexemeId": "1406",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakamātautau",
+      "word": "whakamātautau",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 784,
+      "lexemeId": "2188",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "auau",
+      "word": "auau",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 856,
+      "lexemeId": "71",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false,
+      "frequencySenseNote": "The frequency PDF glosses the barking reading; this course group intends the frequency or repetition reading. Do not treat the source band as sense-specific evidence."
+    },
+    {
+      "key": "katoa",
+      "word": "katoa",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "463",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakaharatau",
+      "word": "whakaharatau",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kitea",
+      "word": "kitea",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": 122,
+      "lexemeId": "536",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tuhia",
+      "word": "tuhia",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": 311,
+      "lexemeId": "1828",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hangaia",
+      "word": "hangaia",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": 312,
+      "lexemeId": "120",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tukuna",
+      "word": "tukuna",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": 321,
+      "lexemeId": "1839",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tangohia",
+      "word": "tangohia",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": 418,
+      "lexemeId": "1639",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tukua",
+      "word": "tukua",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": 622,
+      "lexemeId": "1838",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kawea",
+      "word": "kawea",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": 879,
+      "lexemeId": "482",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "horoia",
+      "word": "horoia",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kīia",
+      "word": "kīia",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "679",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakatuwheratia",
+      "word": "whakatuwheratia",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hei",
+      "word": "hei",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-2"
+      ],
+      "frequencyRank": 28,
+      "lexemeId": "161",
+      "dictionarySenseCount": 9,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hora",
+      "word": "hora",
+      "firstProposedLevel": 5,
+      "revisitLevels": [],
+      "groupIds": [
+        "L5-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakaaro",
+      "word": "whakaaro",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": 55,
+      "lexemeId": "2121",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pēhea",
+      "word": "pēhea",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": 153,
+      "lexemeId": "1362",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "take",
+      "word": "take",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": 184,
+      "lexemeId": "1609",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakamārama",
+      "word": "whakamārama",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": 245,
+      "lexemeId": "2186",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pēwhea",
+      "word": "pēwhea",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": 817,
+      "lexemeId": "1376",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pūtake",
+      "word": "pūtake",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": 863,
+      "lexemeId": "1425",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mōhiotanga",
+      "word": "mōhiotanga",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": 920,
+      "lexemeId": "958",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "aha",
+      "word": "aha",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "2",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "āhea",
+      "word": "āhea",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "2383",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "nōnahea",
+      "word": "nōnahea",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "1069",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pea",
+      "word": "pea",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": 104,
+      "lexemeId": "1193",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ahakoa",
+      "word": "ahakoa",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": 117,
+      "lexemeId": "3",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mehemea",
+      "word": "mehemea",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": 150,
+      "lexemeId": "829",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mēnā",
+      "word": "mēnā",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": 264,
+      "lexemeId": "948",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tūmanako",
+      "word": "tūmanako",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": 546,
+      "lexemeId": "1994",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pono",
+      "word": "pono",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": 656,
+      "lexemeId": "1257",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakapae",
+      "word": "whakapae",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": 876,
+      "lexemeId": "2205",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "engari",
+      "word": "engari",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "95",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "heoi",
+      "word": "heoi",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "171",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kōwhiri",
+      "word": "kōwhiri",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakaaroaro",
+      "word": "whakaaroaro",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-2"
+      ],
+      "frequencyRank": null,
+      "lexemeId": "2122",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tikanga",
+      "word": "tikanga",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 145,
+      "lexemeId": "1733",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "āhuatanga",
+      "word": "āhuatanga",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 200,
+      "lexemeId": "2387",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mātauranga",
+      "word": "mātauranga",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 286,
+      "lexemeId": "939",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "oranga",
+      "word": "oranga",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 371,
+      "lexemeId": "1089",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hangarau",
+      "word": "hangarau",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 664,
+      "lexemeId": "121",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "kāwanatanga",
+      "word": "kāwanatanga",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 715,
+      "lexemeId": "667",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tutuki",
+      "word": "tutuki",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 755,
+      "lexemeId": "1864",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakanui",
+      "word": "whakanui",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 855,
+      "lexemeId": "2200",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hauora",
+      "word": "hauora",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 868,
+      "lexemeId": "150",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pūrākau",
+      "word": "pūrākau",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 899,
+      "lexemeId": "1422",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "pakiwaitara",
+      "word": "pakiwaitara",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 960,
+      "lexemeId": "1127",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakapai",
+      "word": "whakapai",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": 976,
+      "lexemeId": "2209",
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "angitu",
+      "word": "angitu",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hapori",
+      "word": "hapori",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "hītori",
+      "word": "hītori",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "taiao",
+      "word": "taiao",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whakarerekē",
+      "word": "whakarerekē",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "whanaketanga",
+      "word": "whanaketanga",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-3"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "mea",
+      "word": "mea",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "L6-1"
+      ],
+      "frequencyRank": 27,
+      "lexemeId": "827",
+      "dictionarySenseCount": 9,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    }
+  ],
+  "constructionExpressions": [
+    {
+      "level": 6,
+      "text": "he aha … ai",
+      "type": "question frame"
+    },
+    {
+      "level": 6,
+      "text": "he aha i kore ai …",
+      "type": "negative question frame"
+    },
+    {
+      "level": 6,
+      "text": "ki te",
+      "type": "conditional frame"
+    },
+    {
+      "level": 6,
+      "text": "nā reira",
+      "type": "linking expression"
+    },
+    {
+      "level": 6,
+      "text": "nō reira",
+      "type": "linking expression"
+    },
+    {
+      "level": 6,
+      "text": "nā te mea",
+      "type": "reason frame"
+    },
+    {
+      "level": 6,
+      "text": "nō te mea",
+      "type": "reason frame"
+    }
+  ],
+  "kiwaha": [
+    {
+      "id": "kiwaha-draft-1",
+      "proposedLevel": 1,
+      "text": "Tau kē!",
+      "teachingMeaning": "A positive reaction to something impressive.",
+      "conversationUse": "Praise",
+      "sourceUrl": "https://maoridictionary.co.nz/search?histLoanWords=&idiom=&keywords=Tau+ke&loan=&phrase=&proverb=",
+      "sourceChecked": "2026-09-29",
+      "usageNote": "Teach as a conversational response, not a word by word translation.",
+      "status": "source-checked-awaiting-teacher-approval",
+      "countsTowardVocabularyTarget": false,
+      "approvedExample": null
+    },
+    {
+      "id": "kiwaha-draft-2",
+      "proposedLevel": 2,
+      "text": "Ka mau te wehi!",
+      "teachingMeaning": "An emphatic reaction, often admiration.",
+      "conversationUse": "React to an achievement",
+      "sourceUrl": "https://maoridictionary.co.nz/search?keywords=te+wehi",
+      "sourceChecked": "2026-09-29",
+      "usageNote": "Can also convey fear or a negative reaction. Include context and delivery.",
+      "status": "source-checked-awaiting-teacher-approval",
+      "countsTowardVocabularyTarget": false,
+      "approvedExample": null
+    },
+    {
+      "id": "kiwaha-draft-3",
+      "proposedLevel": 3,
+      "text": "Hei aha!",
+      "teachingMeaning": "Let a minor concern go.",
+      "conversationUse": "Reassure or dismiss",
+      "sourceUrl": "https://maoridictionary.co.nz/word/1023",
+      "sourceChecked": "2026-09-29",
+      "usageNote": "Can sound dismissive. Do not use a trivial reassurance scenario to teach dismissing serious concerns.",
+      "status": "source-checked-awaiting-teacher-approval",
+      "countsTowardVocabularyTarget": false,
+      "approvedExample": null
+    },
+    {
+      "id": "kiwaha-draft-4",
+      "proposedLevel": 4,
+      "text": "Koia kei a koe!",
+      "teachingMeaning": "Recognise someone’s effort.",
+      "conversationUse": "Praise with attention to tone",
+      "sourceUrl": "https://maoridictionary.co.nz/search?keywords=kei",
+      "sourceChecked": "2026-09-29",
+      "usageNote": "Can also criticise. Initial practice must make the intended supportive use clear.",
+      "status": "source-checked-awaiting-teacher-approval",
+      "countsTowardVocabularyTarget": false,
+      "approvedExample": null
+    },
+    {
+      "id": "kiwaha-draft-5",
+      "proposedLevel": 5,
+      "text": "Kei runga noa atu!",
+      "teachingMeaning": "Recognise outstanding work.",
+      "conversationUse": "Strong praise",
+      "sourceUrl": "https://maoridictionary.co.nz/search?keywords=kei+runga",
+      "sourceChecked": "2026-09-29",
+      "usageNote": "Treat the whole expression as the target, not a literal location statement.",
+      "status": "source-checked-awaiting-teacher-approval",
+      "countsTowardVocabularyTarget": false,
+      "approvedExample": null
+    },
+    {
+      "id": "kiwaha-draft-6",
+      "proposedLevel": 6,
+      "text": "Māna",
+      "teachingMeaning": "Signal that your statement may need correcting.",
+      "conversationUse": "Qualify an opinion",
+      "sourceUrl": "https://maoridictionary.co.nz/word/10433",
+      "sourceChecked": "2026-09-29",
+      "usageNote": "This idiomatic reading must remain distinct from the beneficiary reading of māna.",
+      "status": "source-checked-awaiting-teacher-approval",
+      "countsTowardVocabularyTarget": false,
+      "approvedExample": null
+    }
+  ],
+  "unallocatedRankedKeys": [
+    "o",
+    "a",
+    "nei",
+    "tētahi",
+    "ā",
+    "kātahi",
+    "ō",
+    "āhua",
+    "iho",
+    "kī",
+    "tae",
+    "puta",
+    "whakaaturanga",
+    "māorimāori",
+    "pikitia",
+    "rangi",
+    "mau",
+    "reo",
+    "rānei",
+    "ao",
+    "taua",
+    "hoa",
+    "mātau",
+    "kāre",
+    "arā",
+    "toa",
+    "tuatahi",
+    "kupu",
+    "pā",
+    "momo",
+    "pēnei",
+    "pērā",
+    "huri",
+    "papa",
+    "rite",
+    "mere",
+    "ora",
+    "tohu",
+    "hau",
+    "mate",
+    "whakaahua",
+    "tangi",
+    "pou",
+    "tuna",
+    "heke",
+    "wāhanga",
+    "pakeke",
+    "whakataetae",
+    "aua",
+    "tāne",
+    "ināianeiwrittenasināianeiinoldertexts",
+    "hou",
+    "tinana",
+    "ahi",
+    "hēoi",
+    "ngāti",
+    "wahine",
+    "huarahi",
+    "hia",
+    "kau",
+    "mihi",
+    "ngaro",
+    "auē",
+    "tuarua",
+    "aroha",
+    "uru",
+    "anei",
+    "hua",
+    "rārangi",
+    "piki",
+    "tauira",
+    "whakaatu",
+    "kiia",
+    "rō",
+    "kete",
+    "moko",
+    "toi",
+    "kāhore",
+    "hāora",
+    "pākehā",
+    "tipu",
+    "mutunga",
+    "whatu",
+    "huia",
+    "tīma",
+    "oti",
+    "rūma",
+    "taki",
+    "ara",
+    "hunga",
+    "rahi",
+    "riro",
+    "koia",
+    "tiro",
+    "kararehe",
+    "mīharo",
+    "motu",
+    "nuinga",
+    "reka",
+    "tai",
+    "eke",
+    "taka",
+    "whakahoki",
+    "toka",
+    "kōtiro",
+    "puku",
+    "otirā",
+    "takoto",
+    "koro",
+    "pū",
+    "mahia",
+    "paku",
+    "hāereere",
+    "nē",
+    "tatau",
+    "kiri",
+    "waiho",
+    "taniwha",
+    "kōhanga",
+    "kapa",
+    "tūturu",
+    "haka",
+    "hī",
+    "koinei",
+    "kimi",
+    "inā",
+    "hopu",
+    "whetū",
+    "tua",
+    "rangatahi",
+    "wāhine",
+    "pau",
+    "tipuna",
+    "koa",
+    "haerenga",
+    "mata",
+    "oho",
+    "kaitā",
+    "pae",
+    "putanga",
+    "karaka",
+    "tīpuna",
+    "patu",
+    "ngākau",
+    "peke",
+    "hine",
+    "wehi",
+    "whiwhi",
+    "taenga",
+    "whiti",
+    "mātakitaki",
+    "whakamahi",
+    "whakaata",
+    "tonga",
+    "moenga",
+    "whawhai",
+    "tirohia",
+    "whakamahia",
+    "ahu",
+    "māhanga",
+    "ngaru",
+    "nāianei",
+    "manawa",
+    "matau",
+    "mura",
+    "atua",
+    "nama",
+    "poaka",
+    "tini",
+    "tohunga",
+    "waimarie",
+    "kiwi",
+    "kō",
+    "kuhu",
+    "whea",
+    "neke",
+    "hōiho",
+    "hiko",
+    "tapu",
+    "whāngai",
+    "hika",
+    "ina",
+    "huna",
+    "kui",
+    "hinga",
+    "tūtaki",
+    "aho",
+    "hiki",
+    "pēpi",
+    "takiwā",
+    "toroa",
+    "hari",
+    "kōkā",
+    "mahara",
+    "pēnā",
+    "whārangi",
+    "piri",
+    "uri",
+    "māhunga",
+    "wawata",
+    "moemoeā",
+    "pōro",
+    "rapu",
+    "wānanga",
+    "ngutu",
+    "hinengaro",
+    "hā",
+    "kaumātua",
+    "māu",
+    "moutere",
+    "tāone",
+    "karakia",
+    "mōkai",
+    "pakanga",
+    "rīwai",
+    "pī",
+    "hinu",
+    "pōuri",
+    "haruru",
+    "kapu",
+    "poti",
+    "wareware",
+    "anga",
+    "kāri",
+    "rino",
+    "whakawhiti",
+    "tēhea",
+    "tētehi",
+    "hākinakina",
+    "mahue",
+    "maumahara",
+    "taura",
+    "āhei",
+    "kaipuke",
+    "ohorere",
+    "peka",
+    "puare",
+    "puke",
+    "kōhatu",
+    "tahuri",
+    "tuatoru",
+    "wairua",
+    "wehe",
+    "whakamutunga",
+    "whakapono",
+    "tiriti",
+    "huruhuru",
+    "one",
+    "kahurangi",
+    "makawe",
+    "rama",
+    "roimata",
+    "whakatau",
+    "kauwhata",
+    "niho",
+    "nunui",
+    "paepae",
+    "rongonui",
+    "wātea",
+    "ārai",
+    "pounamu",
+    "ringaringa",
+    "haramaihaeremai",
+    "mauria",
+    "taraka",
+    "oneone",
+    "taumata",
+    "hoariri",
+    "hokinga",
+    "kitenga",
+    "puna",
+    "tirotiro",
+    "whakamuri",
+    "whakatipu",
+    "āku",
+    "hoe",
+    "karani",
+    "nuku",
+    "poi",
+    "tūranga",
+    "uta",
+    "pirihimana",
+    "punua",
+    "pupuhi",
+    "whakamau",
+    "anā",
+    "aro",
+    "kiore",
+    "whakararo",
+    "painga",
+    "pūtaiao",
+    "ua",
+    "whakangahau",
+    "māharahara",
+    "pakaru",
+    "whakaari",
+    "mauī",
+    "putiputi",
+    "tīmatanga",
+    "ihu",
+    "raki",
+    "rererangi",
+    "matapihi",
+    "ngeru",
+    "pāmu",
+    "tapa",
+    "tōkena",
+    "pouakawhakaata",
+    "meneti",
+    "pito",
+    "tūrehu",
+    "umere",
+    "huka",
+    "raru",
+    "riri",
+    "tākuta",
+    "manaaki",
+    "motuhake",
+    "peita",
+    "keke",
+    "tunu",
+    "whakatū",
+    "hāngai",
+    "hōia",
+    "hurihuri",
+    "kīhai",
+    "kirikiri",
+    "mārō",
+    "pūkaha",
+    "rapa",
+    "reti",
+    "ū",
+    "whakaritea",
+    "hai",
+    "pakupaku",
+    "ruku",
+    "taihoa",
+    "tawhito",
+    "whutupōro",
+    "ātea",
+    "awhi",
+    "miro",
+    "mita",
+    "puhi",
+    "ākuanei",
+    "kapua",
+    "waenga",
+    "here",
+    "kakī",
+    "haurua",
+    "ine",
+    "patua",
+    "tipua",
+    "kare",
+    "moka",
+    "pākete",
+    "whakahokia",
+    "mātaki",
+    "mōhiotia",
+    "pātītī",
+    "tuarā",
+    "hākari",
+    "haria",
+    "pōhēhē",
+    "purua",
+    "toro",
+    "waihanga",
+    "harakeke",
+    "hōhā",
+    "nāwai",
+    "pēkana",
+    "tapahia",
+    "whakahirahira",
+    "hono",
+    "matimati",
+    "pakitara",
+    "atawhai",
+    "hararei",
+    "manuhiri",
+    "rīpene",
+    "wero",
+    "hokohoko",
+    "pīpī",
+    "uhi",
+    "whakaora",
+    "kauhoe",
+    "hāparangi",
+    "huakina",
+    "ira",
+    "mokemoke",
+    "otaota",
+    "kāpia",
+    "rata",
+    "tīkina",
+    "herea",
+    "tupu",
+    "paoro",
+    "poro",
+    "tumeke",
+    "whakatakoto",
+    "whanga",
+    "tāia",
+    "whakaputa",
+    "koi",
+    "pere",
+    "tirohanga",
+    "toe",
+    "toenga",
+    "whakamā",
+    "tao",
+    "taro",
+    "whakamīharo",
+    "karāhe",
+    "katakata",
+    "mauri",
+    "purapura",
+    "pūrere",
+    "rēhia",
+    "tī",
+    "tukutuku",
+    "whakamua",
+    "whakarunga",
+    "harikoa",
+    "irirangi",
+    "maramara",
+    "marangai",
+    "pāngarau",
+    "puehu",
+    "purei",
+    "tuhituhi",
+    "whakamāori",
+    "pahū",
+    "tame",
+    "ngārara",
+    "noke",
+    "parirau",
+    "ope",
+    "whakamaua",
+    "wiriwiri",
+    "hipi",
+    "pari",
+    "poraka",
+    "porohita",
+    "porowhita",
+    "tamatāne",
+    "weka",
+    "wīra",
+    "auahi",
+    "ētehi",
+    "kaituhi",
+    "kōtuku",
+    "rāwhiti",
+    "hāngi",
+    "kaikōrero",
+    "kāreti",
+    "pata",
+    "rango",
+    "taiapa",
+    "tāra",
+    "tihi",
+    "tohorā",
+    "turituri",
+    "whakangā",
+    "kongakonga",
+    "makere",
+    "nanakia",
+    "tīni",
+    "tote",
+    "tōtika",
+    "whakatūpato",
+    "kauaka",
+    "kāwana",
+    "kekeno",
+    "mārika",
+    "matū",
+    "ngata",
+    "pare",
+    "whakatata",
+    "rerenga",
+    "tāhau",
+    "tomo",
+    "akoranga",
+    "kaute",
+    "kēhua",
+    "tuhinga",
+    "whakahau",
+    "aituā",
+    "kohi",
+    "konā",
+    "paipa",
+    "paru",
+    "pūngāwerewere",
+    "rangona",
+    "rekareka",
+    "tātai",
+    "tuawhā",
+    "tinihanga",
+    "wharekura",
+    "horo",
+    "koha",
+    "manga",
+    "pani",
+    "pātene",
+    "pāua",
+    "rori",
+    "tapuwae",
+    "tauhou",
+    "whakaheke",
+    "whakakī",
+    "whakapakari",
+    "kaitākaro",
+    "kōiwi",
+    "kupenga",
+    "pekapeka",
+    "hao",
+    "hemo",
+    "kāpata",
+    "pana",
+    "ui",
+    "uku",
+    "uwha",
+    "whakauru",
+    "ariki",
+    "kāwhe",
+    "kikī",
+    "kohikohi",
+    "miriona",
+    "panga",
+    "tāhuhu",
+    "toto",
+    "wehenga",
+    "kāpene",
+    "karere",
+    "kiromita",
+    "nekeneke",
+    "paki",
+    "pakipaki",
+    "putu",
+    "reri",
+    "whakatikatika",
+    "hāmama",
+    "kapi",
+    "ngunguru",
+    "pātata",
+    "pātiki",
+    "roanga",
+    "tira",
+    "tuanui",
+    "whāriki",
+    "kakara",
+    "kimihia",
+    "kōhua",
+    "kukume",
+    "ngātahi",
+    "piriti",
+    "retireti",
+    "rita",
+    "taraiwa",
+    "tarau",
+    "tuki",
+    "whara",
+    "haina",
+    "kā",
+    "kake",
+    "kano",
+    "mīere",
+    "panana",
+    "piro",
+    "tāpiri",
+    "tohua",
+    "whakatoi",
+    "whiua",
+    "ahatia",
+    "ākau",
+    "āwangawanga",
+    "kaimoana",
+    "kaipūtaiao",
+    "kānga",
+    "māhau",
+    "mokomoko",
+    "pūmau",
+    "taupoki",
+    "tuhituhinga",
+    "awatea",
+    "haunga",
+    "hokona",
+    "kahu",
+    "pirau",
+    "pūrerehua",
+    "uira",
+    "whakatūria",
+    "whiu",
+    "haki",
+    "hāunga",
+    "koina",
+    "maringi",
+    "ngau",
+    "oreore",
+    "tonoa",
+    "whakairo",
+    "whakapaipai",
+    "whāwhā",
+    "kōkiri",
+    "kōpae",
+    "pāhi",
+    "paruparu",
+    "poka",
+    "puru",
+    "tātahi",
+    "uhia",
+    "wao",
+    "kara",
+    "kōrerorero",
+    "kōrerotia",
+    "piupiu",
+    "puoro",
+    "reta",
+    "tonutia",
+    "hekenga",
+    "meatia",
+    "nau",
+    "ngaungau",
+    "pupū",
+    "taitama",
+    "taunga",
+    "wahie",
+    "waiariki",
+    "whakahīhī",
+    "whakapiri",
+    "whāki",
+    "aihikirīmi",
+    "hara",
+    "kakau",
+    "kōrere",
+    "kuini",
+    "pōhatu",
+    "wawe",
+    "aorangi",
+    "hāwhe",
+    "huritau",
+    "kamo"
+  ],
+  "blockers": [
+    {
+      "kind": "source-provenance",
+      "detail": "Original list and corpus are unknown."
+    },
+    {
+      "kind": "rank-gaps",
+      "ranks": [
+        6,
+        459,
+        727
+      ]
+    },
+    {
+      "kind": "malformed-import",
+      "words": [
+        "māorimāori",
+        "ināianeiwrittenasināianeiinoldertexts"
+      ],
+      "action": "Quarantine. Verify original source before corrections."
+    },
+    {
+      "kind": "unranked-core",
+      "words": [
+        "ngā",
+        "nō",
+        "kai",
+        "pai"
+      ],
+      "action": "Retain as curriculum candidates, without assigning invented frequency ranks."
+    }
+  ],
+  "courseStructures": [
+    {
+      "id": "1",
+      "level": 1,
+      "label": "Unique Label",
+      "maori": "Ko Charlie te manu",
+      "english": "The bird is Charlie"
+    },
+    {
+      "id": "2",
+      "level": 1,
+      "label": "Shared Label",
+      "maori": "He kākāpō te manu",
+      "english": "The bird is a kākāpō"
+    },
+    {
+      "id": "3",
+      "level": 1,
+      "label": "Origin Location",
+      "maori": "Nō Wellington te manu",
+      "english": "The bird is from Wellington"
+    },
+    {
+      "id": "4",
+      "level": 1,
+      "label": "Current Location",
+      "maori": "Kei te ngahere te manu",
+      "english": "The bird is at/in the forest"
+    },
+    {
+      "id": "6",
+      "level": 1,
+      "label": "Quantity Non-humans",
+      "maori": "E rua ngā manu",
+      "english": "The birds are in an amount of 2 (There are two birds)"
+    },
+    {
+      "id": "7",
+      "level": 1,
+      "label": "Quantity Humans",
+      "maori": "Tokorua ngā tāngata",
+      "english": "The humans are in an amount of 2 (There are two people)"
+    },
+    {
+      "id": "62",
+      "level": 1,
+      "label": "Quantity One",
+      "maori": "Kotahi te manu",
+      "english": "The bird is in the amount of 1 (There is one bird)"
+    },
+    {
+      "id": "63",
+      "level": 1,
+      "label": "Quantity Zero",
+      "maori": "Kāorekau ngā manu",
+      "english": "The birds are in an amount of 0 (There are 0 birds/humans)"
+    },
+    {
+      "id": "5",
+      "level": 2,
+      "label": "Location Above",
+      "maori": "Kei runga te manu i te kākano",
+      "english": "The bird is above the seed"
+    },
+    {
+      "id": "20",
+      "level": 2,
+      "label": "Normal Past",
+      "maori": "I whai te manu whero i te manu kākāriki",
+      "english": "The bird ate the seed"
+    },
+    {
+      "id": "21",
+      "level": 2,
+      "label": "Normal Recent Past",
+      "maori": "Kua whai te manu whero i te manu kākāriki",
+      "english": "The bird has eaten the seed"
+    },
+    {
+      "id": "22",
+      "level": 2,
+      "label": "Normal Present Short",
+      "maori": "Kei te whai te manu whero i te manu kākāriki",
+      "english": "The bird eats the seed"
+    },
+    {
+      "id": "23",
+      "level": 2,
+      "label": "Normal Present Long",
+      "maori": "E whai ana te manu whero i te manu kākāriki",
+      "english": "The bird is eating the seed"
+    },
+    {
+      "id": "24",
+      "level": 2,
+      "label": "Normal Relative Future",
+      "maori": "Ka whai te manu whero i te manu kākāriki",
+      "english": "The bird will eat the seed"
+    },
+    {
+      "id": "25",
+      "level": 2,
+      "label": "Should",
+      "maori": "Me whai te manu whero i te manu kākāriki",
+      "english": "The bird should eat the seed"
+    },
+    {
+      "id": "10",
+      "level": 3,
+      "label": "Negative Shared Label",
+      "maori": "Ehara te manu i te kākapō",
+      "english": "The bird is not a kākāpō"
+    },
+    {
+      "id": "28",
+      "level": 3,
+      "label": "Normal Negative Past",
+      "maori": "Kāore te manu whero i whai i te manu kākāriki",
+      "english": "The bird did not eat the seed"
+    },
+    {
+      "id": "29",
+      "level": 3,
+      "label": "Normal Negative Present",
+      "maori": "Kāore te manu whero i te whai i te manu kākāriki",
+      "english": "The bird is not eating the seed"
+    },
+    {
+      "id": "30",
+      "level": 3,
+      "label": "Normal Negative Future",
+      "maori": "Kāore te manu whero e whai i te manu kākāriki",
+      "english": "The bird will not eat the seed"
+    },
+    {
+      "id": "31",
+      "level": 3,
+      "label": "Normal Not yet",
+      "maori": "Kāore anō te manu whero kia whai i te manu kākāriki",
+      "english": "The bird has not yet eaten the seed"
+    },
+    {
+      "id": "57",
+      "level": 3,
+      "label": "Command — i",
+      "maori": "Whaia te manu kākāriki",
+      "english": "Eat the seed"
+    },
+    {
+      "id": "58",
+      "level": 3,
+      "label": "Command — ki",
+      "maori": "E rere ki te manu kākāriki",
+      "english": "Fly to the seed"
+    },
+    {
+      "id": "59",
+      "level": 3,
+      "label": "Command — Don't",
+      "maori": "Kaua e whai i te manu kākāriki",
+      "english": "Don't eat the seed"
+    },
+    {
+      "id": "60",
+      "level": 3,
+      "label": "Command — Stop",
+      "maori": "Kāti te whai i te manu kākāriki",
+      "english": "Stop eating the seed"
+    },
+    {
+      "id": "61",
+      "level": 3,
+      "label": "Command — Stop (wish)",
+      "maori": "Kia tere tō mahi",
+      "english": "May your work be fast"
+    },
+    {
+      "id": "11",
+      "level": 4,
+      "label": "Ownership Past",
+      "maori": "Nā te manu te kākano",
+      "english": "The seed/nest belongs to the bird"
+    },
+    {
+      "id": "12",
+      "level": 4,
+      "label": null,
+      "maori": "Nō te manu te whare",
+      "english": null
+    },
+    {
+      "id": "13",
+      "level": 4,
+      "label": "Ownership Future",
+      "maori": "Mā te manu te kākano",
+      "english": "The seed/house will belong to the bird"
+    },
+    {
+      "id": "14",
+      "level": 4,
+      "label": null,
+      "maori": "Mō te manu te whare",
+      "english": null
+    },
+    {
+      "id": "15",
+      "level": 4,
+      "label": "Negative Ownership Past",
+      "maori": "Ehara Nā te manu te kākano",
+      "english": "The seed/house does not belong to the bird"
+    },
+    {
+      "id": "16",
+      "level": 4,
+      "label": null,
+      "maori": "Ehara Nō te manu te whare",
+      "english": null
+    },
+    {
+      "id": "17",
+      "level": 4,
+      "label": "Negative Ownership Future",
+      "maori": "Ehara Mā te manu te kākano",
+      "english": "The seed/house is not for the bird"
+    },
+    {
+      "id": "18",
+      "level": 4,
+      "label": null,
+      "maori": "Ehara Mō te manu te whare",
+      "english": null
+    },
+    {
+      "id": "32",
+      "level": 4,
+      "label": "Bird Emphasis Past",
+      "maori": "Nā te manu whero te manu kākāriki i whai",
+      "english": "The bird ate the seed"
+    },
+    {
+      "id": "33",
+      "level": 4,
+      "label": null,
+      "maori": "Nā te manu whero i rere ki te manu kākāriki",
+      "english": null
+    },
+    {
+      "id": "34",
+      "level": 4,
+      "label": "Bird Emphasis Future",
+      "maori": "Mā te manu whero te manu kākāriki e whai",
+      "english": "It will be the bird that eats the seed"
+    },
+    {
+      "id": "35",
+      "level": 4,
+      "label": null,
+      "maori": "Mā te manu whero e rere ki te manu kākāriki",
+      "english": null
+    },
+    {
+      "id": "36",
+      "level": 4,
+      "label": "Bird Emphasis Negative Past",
+      "maori": "Ehara Nā te manu whero te manu kākāriki i whai",
+      "english": "The bird did not eat the seed"
+    },
+    {
+      "id": "37",
+      "level": 4,
+      "label": null,
+      "maori": "Ehara Nā te manu whero i rere ki te manu kākāriki",
+      "english": null
+    },
+    {
+      "id": "38",
+      "level": 4,
+      "label": "Bird Emphasis Negative Future",
+      "maori": "Ehara Mā te manu whero te manu kākāriki e whai",
+      "english": "It will not be the bird that eats the seed"
+    },
+    {
+      "id": "39",
+      "level": 4,
+      "label": null,
+      "maori": "Ehara Mā te manu whero e rere ki te manu kākāriki",
+      "english": null
+    },
+    {
+      "id": "19",
+      "level": 5,
+      "label": "Comparison",
+      "maori": "He nui ake te manu i te kākano",
+      "english": "The bird is bigger than the seed"
+    },
+    {
+      "id": "26",
+      "level": 5,
+      "label": "Purpose",
+      "maori": "Hei whai te manu whero i te manu kākāriki",
+      "english": "The bird purpose is to eat the seed"
+    },
+    {
+      "id": "27",
+      "level": 5,
+      "label": "Habitual",
+      "maori": "Whai ai te manu whero i te manu kākāriki",
+      "english": "The bird always eats the seed"
+    },
+    {
+      "id": "40",
+      "level": 5,
+      "label": "Able",
+      "maori": "Ka taea e te manu whero te manu kākāriki te whai",
+      "english": "The bird is able to eat the seed"
+    },
+    {
+      "id": "41",
+      "level": 5,
+      "label": null,
+      "maori": "Ka taea e te manu whero te rere ki te manu kākāriki",
+      "english": null
+    },
+    {
+      "id": "42",
+      "level": 5,
+      "label": "Not able",
+      "maori": "Kāore e taea e te manu whero te manu kākāriki te whai",
+      "english": "The bird is not able to eat the seed"
+    },
+    {
+      "id": "43",
+      "level": 5,
+      "label": null,
+      "maori": "Kāore e taea e te manu whero te rere ki te manu kākāriki",
+      "english": null
+    },
+    {
+      "id": "55",
+      "level": 5,
+      "label": "Passive",
+      "maori": "I whaia te manu kākāriki e te manu whero",
+      "english": "The seed was eaten by the bird"
+    },
+    {
+      "id": "56",
+      "level": 5,
+      "label": "Stative",
+      "maori": "Kua hora ngā kākano i te manu",
+      "english": "The seeds have been spread by the bird"
+    },
+    {
+      "id": "44",
+      "level": 6,
+      "label": "Why Past",
+      "maori": "He aha te manu whero i whai ai i te manu kākāriki?",
+      "english": "Why did the bird eat the seed?"
+    },
+    {
+      "id": "45",
+      "level": 6,
+      "label": "Why Present",
+      "maori": "He aha te manu whero i te whai ai i te manu kākāriki?",
+      "english": "Why is the bird eating the seed?"
+    },
+    {
+      "id": "46",
+      "level": 6,
+      "label": "Why Future",
+      "maori": "He aha te manu whero e whai ai i te manu kākāriki?",
+      "english": "Why will the bird eat the seed?"
+    },
+    {
+      "id": "47",
+      "level": 6,
+      "label": "Why Negative Past",
+      "maori": "He aha te manu whero i kore ai i whai i te manu kākāriki?",
+      "english": "Why didn't the bird eat the seed?"
+    },
+    {
+      "id": "48",
+      "level": 6,
+      "label": "Why Negative Present",
+      "maori": "He aha te manu whero i kore ai i te whai i te manu kākāriki?",
+      "english": "Why isn't the bird eating the seed?"
+    },
+    {
+      "id": "49",
+      "level": 6,
+      "label": "Why Negative Future",
+      "maori": "He aha te manu whero i kore ai e whai i te manu kākāriki?",
+      "english": "Why won't the bird eat the seed?"
+    },
+    {
+      "id": "50",
+      "level": 6,
+      "label": "When Past",
+      "maori": "Nōnahea te manu whero i whai ai i te manu kākāriki?",
+      "english": "When did the bird eat the seed?"
+    },
+    {
+      "id": "51",
+      "level": 6,
+      "label": "When Future",
+      "maori": "Āhea te manu whero e whai ai i te manu kākāriki?",
+      "english": "When will the bird eat the seed?"
+    },
+    {
+      "id": "52",
+      "level": 6,
+      "label": null,
+      "maori": "Mēnā Ka whai te manu whero i te manu kākāriki…",
+      "english": null
+    },
+    {
+      "id": "53",
+      "level": 6,
+      "label": null,
+      "maori": "Mehemea Ka whai te manu whero i te manu kākāriki…",
+      "english": null
+    },
+    {
+      "id": "54",
+      "level": 6,
+      "label": "If — In the event of",
+      "maori": "Ki te whai te manu whero i te manu kākāriki",
+      "english": "If the bird eat the seed"
+    },
+    {
+      "id": "64",
+      "level": 6,
+      "label": "If — Often Implies the reverse",
+      "maori": "Mēnā Ka whai te manu whero i te manu kākāriki",
+      "english": "If the bird eat the seed"
+    }
+  ],
+  "auditCorrections": {
+    "date": "2026-09-29",
+    "scope": "Vocabulary only. Canonical sentences and English meanings are unchanged.",
+    "removedCandidates": [
+      {
+        "word": "kāwhe",
+        "retained": "kawhe",
+        "reason": "Calf was incorrectly included alongside coffee. Preserve its source rank in the unallocated source pool, not on kawhe.",
+        "sourceUrl": "https://maoridictionary.co.nz/search?keywords=kawhe"
+      },
+      {
+        "word": "whaia",
+        "retained": "whāia",
+        "reason": "Use the documented passive form of whai for the intended command and passive targets. Do not count the unmacronised duplicate.",
+        "sourceUrl": "https://maoridictionary.co.nz/search?keywords=whai"
+      },
+      {
+        "word": "ataahua",
+        "retained": "ātaahua",
+        "reason": "Use the Te Aka headword spelling for the intended beautiful reading. Do not count the unmacronised duplicate.",
+        "sourceUrl": "https://maoridictionary.co.nz/search?keywords=ataahua"
+      }
+    ],
+    "prerequisites": [
+      {
+        "word": "e",
+        "level": 1,
+        "use": "Counting; revisit other uses in Level 2."
+      },
+      {
+        "word": "ngahere",
+        "level": 1,
+        "use": "Location example."
+      },
+      {
+        "word": "whai",
+        "level": 2,
+        "use": "Pursuing or following in action examples."
+      },
+      {
+        "word": "whāia",
+        "level": 3,
+        "use": "Command form; revisit passive sentences in Level 5."
+      },
+      {
+        "word": "tō",
+        "level": 3,
+        "use": "Possessive prerequisite in Kia tere tō mahi."
+      },
+      {
+        "word": "hei",
+        "level": 5,
+        "use": "Purpose construction."
+      },
+      {
+        "word": "hora",
+        "level": 5,
+        "use": "Stative example."
+      },
+      {
+        "word": "mea",
+        "level": 6,
+        "use": "Component of the reason expressions nā te mea and nō te mea."
+      }
+    ],
+    "remaining": "Context-specific meaning selection, worked examples, broader sequencing and canonical sentence corrections remain open."
+  }
+}
