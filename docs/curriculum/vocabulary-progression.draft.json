@@ -110,7 +110,6 @@
         "pukapuka",
         "pango",
         "pepa",
-        "kino",
         "whero",
         "poto",
         "pene",
@@ -1660,21 +1659,6 @@
       ],
       "frequencyRank": 229,
       "lexemeId": "1203",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
-      "key": "kino",
-      "word": "kino",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 282,
-      "lexemeId": "519",
       "dictionarySenseCount": 0,
       "status": "draft-needs-sense-and-form-review",
       "selectedSenseId": null,
@@ -7121,7 +7105,8 @@
     "ērā",
     "manu",
     "kurī",
-    "kākāpō"
+    "kākāpō",
+    "kino"
   ],
   "blockers": [
     {
@@ -7640,6 +7625,10 @@
       {
         "word": "manu",
         "reason": "Owner removed animal vocabulary from Level 1 on 2026-09-30. Keep unallocated until a later teaching level is agreed."
+      },
+      {
+        "word": "kino",
+        "reason": "Owner removed this adjective from Level 1 on 2026-09-30 as too strong for the introductory vocabulary. Preserve any later allocation; otherwise defer placement."
       }
     ],
     "prerequisites": [
