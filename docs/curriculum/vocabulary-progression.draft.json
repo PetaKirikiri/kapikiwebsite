@@ -82,7 +82,6 @@
         "kāinga",
         "moana",
         "awa",
-        "konei",
         "hea",
         "maunga",
         "marae",
@@ -1365,21 +1364,6 @@
       ],
       "frequencyRank": 152,
       "lexemeId": "81",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
-      "key": "konei",
-      "word": "konei",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-2"
-      ],
-      "frequencyRank": 159,
-      "lexemeId": "567",
       "dictionarySenseCount": 0,
       "status": "draft-needs-sense-and-form-review",
       "selectedSenseId": null,
@@ -7106,7 +7090,8 @@
     "manu",
     "kurī",
     "kākāpō",
-    "kino"
+    "kino",
+    "konei"
   ],
   "blockers": [
     {
@@ -7629,6 +7614,10 @@
       {
         "word": "kino",
         "reason": "Owner removed this adjective from Level 1 on 2026-09-30 as too strong for the introductory vocabulary. Preserve any later allocation; otherwise defer placement."
+      },
+      {
+        "word": "konei",
+        "reason": "Owner removed this word from Level 1 vocabulary on 2026-09-30. Preserve any later allocation; otherwise defer placement."
       }
     ],
     "prerequisites": [
