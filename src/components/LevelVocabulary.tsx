@@ -8,7 +8,7 @@ export default function LevelVocabulary({ level }: { level: CurriculumLevel }) {
   const words = courseVocabulary(level)
   const normalise = (text: string) => text.normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase('mi')
   const search = normalise(query.trim())
-  const visible = words.filter(item => normalise(`${item.word} ${item.english} ${item.topics.join(' ')}`).includes(search))
+  const visible = words.filter(item => normalise(`${item.word} ${item.english}`).includes(search))
 
   return <section className="site-card level-vocabulary" aria-labelledby="level-vocabulary-title">
     <header className="site-card-cover level-vocabulary-cover">
@@ -21,11 +21,10 @@ export default function LevelVocabulary({ level }: { level: CurriculumLevel }) {
       <span role="status">{visible.length === words.length ? `${words.length} words` : `${visible.length} of ${words.length} words`}</span>
     </div>
     <table aria-label={`Level ${level} vocabulary`}>
-      <thead><tr><th scope="col">Māori</th><th scope="col">English</th><th scope="col" className="level-vocabulary-topic">Topic</th></tr></thead>
+      <thead><tr><th scope="col">Māori</th><th scope="col">English</th></tr></thead>
       <tbody>{visible.map(item => <tr key={item.key}>
         <th scope="row" lang="mi">{item.word}</th>
-        <td className="level-vocabulary-meaning">{item.english}<span className="level-vocabulary-mobile-topic">{item.topics.join(' · ')}</span></td>
-        <td className="level-vocabulary-topic">{item.topics.join(' · ')}</td>
+        <td className="level-vocabulary-meaning">{item.english}</td>
       </tr>)}</tbody>
     </table>
     {visible.length === 0 ? <p className="level-vocabulary-empty">No matching words.</p> : null}
