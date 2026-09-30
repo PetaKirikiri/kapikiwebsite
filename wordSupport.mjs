@@ -79,3 +79,51 @@ export async function readWordSupport(db, word, pos, sentence = '') {
   support.teAka.senses = [...senses.values()]
   return support
 }
+
+/** Read-only vocabulary projection of source labels and existing word-level assignments. */
+export async function readVocabularyPos(db, words) {
+  const result = await db.query(`
+    with requested as (select word, ord from unnest($1::text[]) with ordinality r(word, ord)),
+    identities as (
+      select distinct r.word, l.lexeme_id from requested r
+      join public.lexeme l on l.language_code='mi' and (
+        lower(normalize(l.lemma,NFC))=r.word or exists (
+          select 1 from public.lexeme_alias a where a.lexeme_id=l.lexeme_id
+          and lower(normalize(a.alias,NFC))=r.word
+        )
+      )
+    ), source as (
+      select distinct i.word, s.pos_label_code as code,
+        coalesce(dl.display_label,s.pos_label_code) as label, e.source_url as url
+      from identities i join public.dictionary_entry e using(lexeme_id)
+      join public.dictionary_sense s using(entry_id)
+      left join public.dictionary_pos_label dl on dl.label_code=s.pos_label_code
+      where e.source_code='te_aka' and s.pos_label_code is not null
+    ), assigned as (
+      select distinct i.word, p.code, p.label, p.group_code, g.display_label as broad_label, 'unreviewed' as status
+      from identities i join public.lexeme_pos_capability c using(lexeme_id)
+      join public.pos_type p on p.code=c.pos_code
+      join public.pos_group g on g.group_code=p.group_code
+    ), confirmed as (
+      select distinct r.word, p.code, p.label, g.group_code, g.display_label as broad_label, 'confirmed' as status
+      from requested r join public.learned_maori_word w on w.word=r.word
+      cross join lateral jsonb_array_elements(w.conditions) c
+      left join public.pos_type p on p.code=c->'local'->>'ours'
+      left join public.pos_group g on g.group_code=c->'local'->>'family'
+      where jsonb_array_length(c->'sources')>0
+    ), internal as (select * from assigned union select * from confirmed)
+    select r.word,
+      coalesce((select jsonb_agg(v order by v.label) from (
+        select distinct code,label,url from source where word=r.word
+      ) v),'[]') as "teAka",
+      coalesce((select jsonb_agg(v order by v.label,v.status) from (
+        select distinct group_code as code,broad_label as label,status from internal x where x.word=r.word and x.group_code is not null
+        and (x.status='confirmed' or not exists(select 1 from confirmed c where c.word=x.word and c.group_code=x.group_code))
+      ) v),'[]') as "broadPos",
+      coalesce((select jsonb_agg(v order by v.label,v.status) from (
+        select distinct code,label,status from internal x where x.word=r.word and x.code is not null
+        and (x.status='confirmed' or not exists(select 1 from confirmed c where c.word=x.word and c.code=x.code))
+      ) v),'[]') as "specificPos"
+    from requested r order by r.ord`, [words])
+  return result.rows
+}

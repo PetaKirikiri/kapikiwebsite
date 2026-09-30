@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { liveApi } from './live-api.mjs'
 import { signupAdminApi } from './signup-admin-api.mjs'
+import { trainingApi } from './training-api.mjs'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
@@ -14,6 +15,12 @@ export default defineConfig(({ mode }) => {
       name: 'read-only-course-api',
       configureServer(server) {
         Object.assign(process.env, env)
+        server.middlewares.use('/__word_support', (req, res) => {
+          const url = new URL(req.url, 'http://local')
+          url.searchParams.set('route', '__word_support')
+          req.url = url.pathname + url.search
+          void trainingApi(req, res)
+        })
         server.middlewares.use('/__signup_admin', (req, res) => { void signupAdminApi(req, res) })
         server.middlewares.use(liveApi(env.CONNECTORS_API_URL || 'http://127.0.0.1:5176'))
       },

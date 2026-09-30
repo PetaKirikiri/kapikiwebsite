@@ -1,4 +1,4 @@
-import { readWordSupport } from './wordSupport.mjs'
+import { readWordSupport, readVocabularyPos } from './wordSupport.mjs'
 import { nextTrainingQuestion, trainingCoverage, structureCoverage } from './trainingCoverage.mjs'
 import pg from 'pg'
 import { wordsDatabaseConnection } from './words-database.mjs'
@@ -17,6 +17,13 @@ export async function trainingApi(req,res) {
   const db=database()
   if(route==='__word_support') {
    if(req.method!=='GET')return json(405,{error:'Read only.'})
+   if(url.searchParams.has('words')) {
+    const input=url.searchParams.getAll('words')
+    if(!input.length||input.length>256)return json(400,{error:'Choose up to 256 words.'})
+    const words=[...new Set(input.map(word=>word.normalize('NFC').trim().toLowerCase()))]
+    if(words.some(word=>!word||word.length>100||!/^[\p{L}\p{M}’' -]+$/u.test(word)))return json(400,{error:'Choose valid words.'})
+    return json(200,{words:await readVocabularyPos(db,words)})
+   }
    const word=(url.searchParams.get('word')??'').normalize('NFC').trim().toLowerCase(),pos=url.searchParams.get('pos')||null
    if(!word||word.length>100||!/^[\p{L}\p{M}’' -]+$/u.test(word)||pos&&!/^[a-z_]{1,80}$/.test(pos))return json(400,{error:'Choose a word.'})
    const sentence=(url.searchParams.get('sentence')??'').normalize('NFC').trim()
