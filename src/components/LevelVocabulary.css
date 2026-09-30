@@ -6,9 +6,9 @@
 .level-vocabulary-tools input { width: 100%; min-width: 0; min-height: 44px; box-sizing: border-box; border: 1px solid var(--ka-card-line); border-radius: 6px; padding: 10px 12px; background: var(--ka-card-paper); color: var(--ka-green); font: inherit; }
 .level-vocabulary-tools [role=status] { justify-self: end; color: var(--site-muted); font-size: 14px; }
 .level-vocabulary table { width: 100%; border-collapse: collapse; table-layout: fixed; text-align: left; }
-.level-vocabulary th, .level-vocabulary td { padding: 14px 20px; border-top: 1px solid var(--ka-card-line); overflow-wrap: anywhere; }
+.level-vocabulary th, .level-vocabulary td { padding: 14px 14px; border-top: 1px solid var(--ka-card-line); overflow-wrap: anywhere; }
 .level-vocabulary thead { background: var(--ka-paper); color: var(--ka-green); font-size: 14px; }
-.level-vocabulary th:first-child { width: 15%; }
+.level-vocabulary th:first-child { width: 14%; }
 .level-vocabulary td.level-vocabulary-meaning { color: var(--ka-green); }
 .level-vocabulary tbody th { font-weight: 500; color: var(--ka-green); font-size: 18px; }
 .level-vocabulary td { color: var(--site-muted); line-height: 1.5; }
@@ -19,13 +19,13 @@
   .level-vocabulary-tools [role=status] { justify-self: start; }
   .level-vocabulary th, .level-vocabulary td { padding: 12px 20px; }
   .level-vocabulary td { font-size: 14px; }
-  .level-vocabulary th:first-child { width: 15%; }
+  .level-vocabulary th:first-child { width: 14%; }
 }
 
 .level-vocabulary-table-wrap { overflow-x: auto; }
 .level-vocabulary table { min-width: 760px; }
-.level-vocabulary th:nth-child(2) { width: 25%; }
-.level-vocabulary th:nth-child(3), .level-vocabulary th:nth-child(4), .level-vocabulary th:nth-child(5) { width: 20%; }
+.level-vocabulary th:nth-child(2) { width: 22%; }
+.level-vocabulary th:nth-child(3), .level-vocabulary th:nth-child(4), .level-vocabulary th:nth-child(5), .level-vocabulary th:nth-child(6) { width: 16%; }
 .level-vocabulary-pos { margin: 0; padding: 0; list-style: none; font-size: 14px; }
 .level-vocabulary-pos li + li { margin-top: 8px; }
 .level-vocabulary-pos a { color: var(--ka-green); text-decoration-color: var(--ka-card-line); text-underline-offset: 3px; }

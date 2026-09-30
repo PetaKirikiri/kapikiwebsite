@@ -111,7 +111,19 @@ export async function readVocabularyPos(db, words) {
       left join public.pos_type p on p.code=c->'local'->>'ours'
       left join public.pos_group g on g.group_code=c->'local'->>'family'
       where jsonb_array_length(c->'sources')>0
-    ), internal as (select * from assigned union select * from confirmed)
+    ), internal as (select * from assigned union select * from confirmed),
+    categories as (
+      select i.word, c.category_code as code, c.label
+      from identities i join public.lexeme_category lc using(lexeme_id)
+      join public.word_category c on c.category_code=lc.category_code
+      union
+      select r.word, cat.category_code as code, cat.label
+      from requested r join public.learned_maori_word w on w.word=r.word
+      cross join lateral jsonb_array_elements(w.conditions) c
+      cross join lateral jsonb_array_elements_text(c->'local'->'categories') code(value)
+      join public.word_category cat on cat.category_code=code.value
+      where jsonb_array_length(c->'sources')>0
+    )
     select r.word,
       coalesce((select jsonb_agg(v order by v.label) from (
         select distinct code,label,url from source where word=r.word
@@ -123,7 +135,10 @@ export async function readVocabularyPos(db, words) {
       coalesce((select jsonb_agg(v order by v.label,v.status) from (
         select distinct code,label,status from internal x where x.word=r.word and x.code is not null
         and (x.status='confirmed' or not exists(select 1 from confirmed c where c.word=x.word and c.code=x.code))
-      ) v),'[]') as "specificPos"
+      ) v),'[]') as "specificPos",
+      coalesce((select jsonb_agg(v order by v.label) from (
+        select distinct code,label from categories where word=r.word
+      ) v),'[]') as categories
     from requested r order by r.ord`, [words])
   return result.rows
 }

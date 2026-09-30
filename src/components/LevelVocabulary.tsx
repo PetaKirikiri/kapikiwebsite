@@ -33,16 +33,17 @@ export default function LevelVocabulary({ level }: { level: CurriculumLevel }) {
       <input id="level-vocabulary-search" type="search" value={query} onChange={event => setQuery(event.target.value)} />
       <span role="status">{visible.length === words.length ? `${words.length} words` : `${visible.length} of ${words.length} words`}</span>
     </div>
-    {failed === level ? <p className="level-vocabulary-error" role="alert">POS information could not be loaded. <button type="button" onClick={() => setAttempt(value => value + 1)}>Retry</button></p> : null}
+    {failed === level ? <p className="level-vocabulary-error" role="alert">Word information could not be loaded. <button type="button" onClick={() => setAttempt(value => value + 1)}>Retry</button></p> : null}
     <div className="level-vocabulary-table-wrap" tabIndex={0} role="region" aria-label="Vocabulary table">
     <table aria-label={`Level ${level} vocabulary`}>
-      <thead><tr><th scope="col">Māori</th><th scope="col">English</th><th scope="col" title="Recorded POS labels across the word’s Te Aka readings">Te Aka POS</th><th scope="col">Broad POS</th><th scope="col">Specific POS</th></tr></thead>
+      <thead><tr><th scope="col">Māori</th><th scope="col">English</th><th scope="col" title="Recorded POS labels across the word’s Te Aka readings">Te Aka POS</th><th scope="col">Broad POS</th><th scope="col">Specific POS</th><th scope="col" title="Recorded categories across this word’s uses">Category</th></tr></thead>
       <tbody>{visible.map(item => <tr key={item.key}>
         <th scope="row" lang="mi">{item.word}</th>
         <td className="level-vocabulary-meaning">{item.english}</td>
         <td><DictionaryPos value={posByWord.get(item.key)} failed={failed === level} /></td>
         <td><InternalPos value={posByWord.get(item.key)?.broadPos} failed={failed === level} /></td>
         <td><InternalPos value={posByWord.get(item.key)?.specificPos} failed={failed === level} /></td>
+        <td><Categories value={posByWord.get(item.key)?.categories} failed={failed === level} /></td>
       </tr>)}</tbody>
     </table>
     </div>
@@ -67,4 +68,9 @@ function InternalPos({ value, failed }: { value?: VocabularyPos['specificPos']; 
   return <ul className="level-vocabulary-pos">{value.map(pos => <li key={pos.code}>
     {pos.label}<small title={pos.status === 'unreviewed' ? 'Existing word-level assignment that has not been confirmed through review.' : 'Recorded in confirmed word knowledge.'}>{pos.status === 'unreviewed' ? 'Unreviewed' : 'Confirmed'}</small>
   </li>)}</ul>
+}
+
+function Categories({ value, failed }: { value?: VocabularyPos['categories']; failed: boolean }) {
+  if (!value || !value.length) return <span className="level-vocabulary-pos-empty" aria-label={failed ? 'Unavailable' : !value ? 'Loading category' : 'No recorded category'}>{failed ? 'Unavailable' : !value ? '…' : '—'}</span>
+  return <ul className="level-vocabulary-pos">{value.map(category => <li key={category.code}>{category.label}</li>)}</ul>
 }
