@@ -6,12 +6,12 @@ import { createInterestHandler } from './interest-api.mjs'
 const valid = { name: 'Test learner', email: 'test@example.invalid', selected_level: 2, goals: 'MOE · Monday 2pm – 3pm', self_ratings: { Speaking: 3 } }
 async function run(body, options = {}) {
   const calls = []
-  const query = async (...args) => { calls.push(args); if (options.fail) throw Error('Private database information'); return { rowCount: 1 } }
+  const query = async (...args) => { calls.push(args); if (options.fail) throw Error('Private database information'); return { rowCount: 1, rows:[{id:'11111111-2222-4333-8444-555555555555'}] } }
   const request = Readable.from([typeof body === 'string' ? body : JSON.stringify(body)])
   request.method = options.method || 'POST'
   request.headers = { host: 'kapikiwebsite.vercel.app', origin: 'https://kapikiwebsite.vercel.app', 'content-type': 'application/json', ...options.headers }
   const response = { status: 0, headers: {}, setHeader(key,value) {this.headers[key]=value}, writeHead(code,headers) {this.status=code;Object.assign(this.headers,headers)}, end(body){this.body=JSON.parse(body)} }
-  await createInterestHandler(query)(request,response)
+  await createInterestHandler(query, options.notify)(request,response)
   return { calls, ...response }
 }
 test('saves the selected class with parameterized values and no contact data in response', async()=>{
@@ -26,3 +26,5 @@ test('rejects cross-site submissions and GET without exposing registrations',asy
  for(const options of [{method:'GET'},{headers:{origin:'https://other.example'}},{headers:{'sec-fetch-site':'cross-site'}},{headers:{'content-type':'text/plain'}}]){const r=await run(valid,options);assert.ok([403,405,415].includes(r.status));assert.equal(r.calls.length,0)}
 })
 test('does not claim success or expose database details after a failed write',async()=>{const r=await run(valid,{fail:true});assert.equal(r.status,503);assert.equal(r.body.saved,undefined);assert.ok(!JSON.stringify(r.body).includes('Private'))})
+test('mail failure cannot undo a saved signup',async()=>{let called=false;const r=await run(valid,{notify:async()=>{called=true;throw Error('mail failed')}});assert.equal(called,true);assert.equal(r.status,201);assert.deepEqual(r.body,{saved:true})})
+test('failed signup never attempts notification',async()=>{let called=false;await run(valid,{fail:true,notify:async()=>{called=true}});assert.equal(called,false)})

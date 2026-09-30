@@ -1,5 +1,6 @@
 import pg from 'pg'
 import { wordsDatabaseConnection } from './words-database.mjs'
+import { deliverSignupNotification } from './signup-mail.mjs'
 
 let pool
 const skills = new Set(['Grammar', 'Listening', 'Pronunciation', 'Speaking', 'Vocabulary', 'Reading', 'Writing'])
@@ -16,7 +17,7 @@ function readInterest(value) {
   return [name.trim(), email.trim(), level, goals, JSON.stringify(ratings)]
 }
 
-export function createInterestHandler(query) {
+export function createInterestHandler(query, notify = async () => {}) {
   return async function interestHandler(req, res) {
     const json = (status, value) => {
       res.writeHead(status, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' })
@@ -40,7 +41,10 @@ export function createInterestHandler(query) {
       values = readInterest(JSON.parse(Buffer.concat(chunks).toString('utf8')))
     } catch { return json(400, { error: 'Please check your name, email and selected level.' }) }
     try {
-      await query('insert into public.kp_course_interest (name,email,selected_level,goals,self_ratings) values ($1,$2,$3,$4,$5::jsonb)', values)
+      const saved = await query('insert into public.kp_course_interest (name,email,selected_level,goals,self_ratings) values ($1,$2,$3,$4,$5::jsonb) returning id', values)
+      // Email errors must never make a saved registration appear to have failed.
+      try { if (saved.rows?.[0]?.id) await notify(saved.rows[0].id) }
+      catch { console.warn('signup_mail: notification queued for follow-up') }
       return json(201, { saved: true })
     } catch {
       return json(503, { error: 'We couldn’t confirm your registration. Please try again.' })
@@ -48,7 +52,8 @@ export function createInterestHandler(query) {
   }
 }
 
-export const interestApi = createInterestHandler((...args) => {
+export const interestQuery = (...args) => {
   if (!pool) { pool = new pg.Pool({ ...wordsDatabaseConnection(), max: 2, statement_timeout: 15000 }); pool.on('error', () => {}) }
   return pool.query(...args)
-})
+}
+export const interestApi = createInterestHandler(interestQuery, id => deliverSignupNotification(interestQuery, id))
