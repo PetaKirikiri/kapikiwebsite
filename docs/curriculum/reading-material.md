@@ -1,25 +1,52 @@
-# Reading material, Levels 2–6
+# Controlled reading material
 
-These controlled readings practise the course's existing sentence structures with different vocabulary. Each sentence's `sourceStructureIds` in `levelReadingAnnotations.json` identifies the canonical course example(s) it follows. Earlier-level structures may be reused; extra conjunctions, time adjuncts, genitive phrases, opinion frames and nominalised clauses must not be introduced merely to make the story flow more naturally.
+Updated 30 September 2026. The course roster and allocated vocabulary determine
+what each reading may use. Storytelling does not introduce an extra grammar syllabus.
 
-## Grammar scope
+| Level | Reading | Situation and payoff | Current-level teaching | Earlier teaching reused |
+| --- | --- | --- | --- | --- |
+| 1 | Pepeha | A practical introduction | Naming, classification, origin, location | — |
+| 2 | Te parāoa | Hana has already eaten the bread; Maia takes charge of buying the replacement | Past, completed and future actions; suggestions | Location, counting people, absence |
+| 3 | Te waea | Maia searches bags while holding the missing phone | Present negatives, not yet, stop doing something | Location, completed and current actions, suggestions |
+| 4 | Ngā pukapuka | Reading the names reveals that two books have been swapped | Ownership and agent-emphatic past/future actions | Naming, reading, suggestions, ordinary past actions |
+| 5 | Te pouaka | Neither person can carry a box; removing the books makes it manageable | Habitual actions, ability/inability, comparisons, passives | Location, suggestions |
+| 6 | Ngā mahi | Both people already have a job and try to avoid washing dishes; they agree to share it | Why someone will not do something; a conditional offer | Assigning responsibility, negatives, future actions, suggestions |
 
-| Level | Reading | Structures used |
-| --- | --- | --- |
-| 2 | Te mutunga wiki — The weekend | i, kua, kei te, e … ana, ka and me with a subject and one object; kei runga … i … for position. |
-| 3 | Te whakarite kai — Getting lunch ready | The Level 2 action structures, negatives, not yet, passive commands, kaua e, kāti, kia and e noho ki … |
-| 4 | Te hui — The meeting | Naming, ownership and intended recipients; past/future agent emphasis and their negatives. |
-| 5 | He māra hou — A new garden | Habitual ai, comparison with ake … i, ability/inability, passives and previously taught completed actions. |
-| 6 | Te māra o te hapori — The community garden | Why/when questions, negative why, conditional clauses with a taught action as the consequence; earlier-level actions, intended recipients and ability. |
+Each ordinary line carries `curriculum.structures`: references to the actual
+course structure IDs. These are editorial traceability, not grammar-engine input.
+Checks reject later-level references, missing references, and words outside the
+cumulative vocabulary allocation (apart from named people and places).
+Every later reading must use both its current level and previous-level frames.
+These checks do not certify naturalness or grammatical correctness by themselves;
+the lines have also been compared with their referenced course frames.
 
-The canonical examples and their current curriculum assignments were checked against the live course projection on 29 September 2026. The 69 reading sentences are editorial examples, not additional canonical structures. The source IDs are curriculum references, never automatic tagging evidence.
+## Kīwaha
 
-## Vocabulary
+Only the two expressions explicitly allocated below are exposed. They are taught
+as whole responses and are not permission to introduce their component grammar.
+They do not count towards the ordinary vocabulary target or create learned POS.
 
-Vocabulary allocation is still a draft. Familiar words may change within an existing grammatical slot; adding a new grammatical phrase is not a vocabulary substitution. These readings do not claim to complete the 1,000-word progression.
+| Expression | Introducing level | Meaning here | Dictionary source |
+| --- | --- | --- | --- |
+| Tau kē! | 1 | Great! | https://maoridictionary.co.nz/word/1845 |
+| Hei aha! | 3 | Never mind! | https://maoridictionary.co.nz/word/1023 |
 
-## Presentation
+`courseLevel` and `english` on the existing vocabulary draft records select the
+published expressions. Other proposed expressions remain unpublished. The earlier
+teacher-review status remains explicit; course allocation does not claim formal
+teacher approval. Every reading occurrence links to its introducing level's
+vocabulary page within the same MOE or general route.
 
-All readings reuse Level 1's read-only rail renderer. Exact-sentence editorial annotations and English phrase alignments are bundled for immediate display. They do not update Floor Plans, Guest Records, automatic tagging rules or learner progress. Level 1 remains unchanged.
+## Presentation and outstanding rail coverage
 
-Checks cover sentence/token identity, mirrored rail boundaries, original English reconstruction, full rendered reading coverage, and Level 2's restricted grammatical inventory. The shared connector geometry remains unchanged.
+The existing reading cards and shared sentence renderer remain. Repeated dialogue
+keeps separate speaker rows but requests automatic analysis only once per exact text.
+Exact saved annotations may be reused only for the same sentence. No POS, rails,
+word knowledge, or canonical sentence records were generated from the editorial
+structure references.
+
+At verification on 30 September, both the local and public `__website_sentence`
+service returned an entirely unresolved state for `I hoko ahau i te parāoa.`,
+with zero Floor reads and writes. New sentences therefore remain readable with
+English translations but do not yet have complete rails. This is an outstanding
+tagging-service limitation, not completed visual acceptance of rail coverage.

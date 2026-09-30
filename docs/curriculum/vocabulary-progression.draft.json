@@ -6237,12 +6237,14 @@
       "text": "Tau kē!",
       "teachingMeaning": "A positive reaction to something impressive.",
       "conversationUse": "Praise",
-      "sourceUrl": "https://maoridictionary.co.nz/search?histLoanWords=&idiom=&keywords=Tau+ke&loan=&phrase=&proverb=",
+      "sourceUrl": "https://maoridictionary.co.nz/word/1845",
       "sourceChecked": "2026-09-29",
       "usageNote": "Teach as a conversational response, not a word by word translation.",
       "status": "source-checked-awaiting-teacher-approval",
       "countsTowardVocabularyTarget": false,
-      "approvedExample": null
+      "approvedExample": null,
+      "courseLevel": 1,
+      "english": "Great!"
     },
     {
       "id": "kiwaha-draft-2",
@@ -6268,7 +6270,9 @@
       "usageNote": "Can sound dismissive. Do not use a trivial reassurance scenario to teach dismissing serious concerns.",
       "status": "source-checked-awaiting-teacher-approval",
       "countsTowardVocabularyTarget": false,
-      "approvedExample": null
+      "approvedExample": null,
+      "courseLevel": 3,
+      "english": "Never mind!"
     },
     {
       "id": "kiwaha-draft-4",

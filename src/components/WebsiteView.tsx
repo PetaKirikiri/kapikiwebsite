@@ -304,8 +304,8 @@ export default function WebsiteView({
                 </div></div>
               </> : null}
             </> : route.tab === 'vocabulary' ? <Suspense fallback={<p role="status">Loading vocabulary…</p>}><LevelVocabulary key={selectedLevel} level={selectedLevel} catalog={data?.catalog} /></Suspense> : route.tab === 'stories' ? selectedLevel === 1
-              ? <LevelOnePepeha catalog={data?.catalog} sentences={data?.sentences} />
-              : <LevelReadingMaterial key={selectedLevel} reading={LEVEL_READING_MATERIAL[selectedLevel]} catalog={data?.catalog} sentences={LEVEL_READING_ANNOTATIONS} /> : <>
+              ? <LevelOnePepeha catalog={data?.catalog} sentences={data?.sentences} moe={route.moe} />
+              : <LevelReadingMaterial key={selectedLevel} reading={LEVEL_READING_MATERIAL[selectedLevel]} catalog={data?.catalog} sentences={LEVEL_READING_ANNOTATIONS} moe={route.moe} /> : <>
               <p className="site-preview-label">Level {selectedLevel} practice · answers stay in this session</p>
               <TrainingView key={selectedLevel} preview data={data ? { ...data, sentences: levelSentences } : null} error={error ?? trainingError} />
             </>}

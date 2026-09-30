@@ -1,5 +1,6 @@
 import { findMoeBenefit } from './moeBenefits'
 import type { CurriculumLevel } from './sentenceStructureLevels'
+import { courseKiwaha } from './courseKiwaha'
 
 export type LevelTab = 'structures' | 'vocabulary' | 'stories' | 'practice'
 
@@ -38,7 +39,8 @@ export function websiteRoute(hash: string) {
   const params = new URLSearchParams(query)
   const section = params.get('section')
   const classNumber = params.get('class')
-  const target = level === 1 && section && /^[1-7]$/.test(section) ? `pepeha-section-${section}` : classNumber && /^[1-6]$/.test(classNumber) ? `moe-class-${classNumber}` : params.has('timetable') ? 'moe-timetable' : null
+  const kiwahaTarget = level && section === 'kiwaha' && params.get('tab') === 'vocabulary' && courseKiwaha(level).length > 0
+  const target = kiwahaTarget ? 'level-kiwaha-title' : level === 1 && section && /^[1-7]$/.test(section) ? `pepeha-section-${section}` : classNumber && /^[1-6]$/.test(classNumber) ? `moe-class-${classNumber}` : params.has('timetable') ? 'moe-timetable' : null
   const requestedTab = params.get('tab')
   const tab: LevelTab = level === 1 && target?.startsWith('pepeha-') ? 'stories' : requestedTab === 'vocabulary' || requestedTab === 'stories' || requestedTab === 'practice' ? requestedTab : 'structures'
   const example = Math.max(1, Math.min(1000, Number(params.get('example')) || 1))

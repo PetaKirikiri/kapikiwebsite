@@ -50,3 +50,4 @@
 }
 
 .level-reading-speaker { display: block; margin-bottom: 4px; color: var(--site-muted, #5a645e); font-size: 12px; font-weight: 700; }
+.level-reading-kiwaha { display: inline-block; margin-top: 6px; color: var(--ka-green); font-size: 12px; text-underline-offset: 3px; }

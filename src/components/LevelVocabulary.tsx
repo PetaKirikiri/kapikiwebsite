@@ -1,5 +1,6 @@
 import { type ReactNode, useEffect, useMemo, useState } from 'react'
 import { courseVocabulary } from '../lib/courseVocabulary'
+import { courseKiwaha } from '../lib/courseKiwaha'
 import type { CurriculumLevel } from '../lib/sentenceStructureLevels'
 import { fetchVocabularyPos, type VocabularyPos } from '../lib/vocabularyPos'
 import type { BusManifestPosCatalog } from '../lib/busManifestContract'
@@ -48,12 +49,20 @@ export default function LevelVocabulary({ level, catalog }: { level: CurriculumL
   const normalise = (text: string) => text.normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase('mi')
   const search = normalise(query.trim())
   const visible = words.filter(item => normalise(`${item.word} ${item.english}`).includes(search))
+  const kiwaha = courseKiwaha(level).filter(item => normalise(`${item.text} ${item.english}`).includes(search))
 
   return <section className="site-card level-vocabulary" aria-labelledby="level-vocabulary-title">
     <header className="site-card-cover level-vocabulary-cover">
       <h2 id="level-vocabulary-title">Vocabulary</h2>
       <p>Words for Level {level}</p>
     </header>
+    {kiwaha.length > 0 && <section className="level-vocabulary-kiwaha" aria-labelledby="level-kiwaha-title">
+      <h3 id="level-kiwaha-title">Kīwaha · Level {level}</h3>
+      <dl>{kiwaha.map(item => <div key={item.id}>
+        <dt lang="mi">{item.text}</dt><dd>{item.english}</dd>
+        <dd><a href={item.sourceUrl} target="_blank" rel="noreferrer" aria-label={`Te Aka entry for ${item.text}`}>Te Aka</a></dd>
+      </div>)}</dl>
+    </section>}
     <div className="level-vocabulary-tools">
       <label htmlFor="level-vocabulary-search">Find a Māori or English word</label>
       <input id="level-vocabulary-search" type="search" value={query} onChange={event => setQuery(event.target.value)} />

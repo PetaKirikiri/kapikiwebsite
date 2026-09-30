@@ -5,41 +5,12 @@ import { tagText, unresolvedSentence } from '../lib/connectorPresentation/engine
 import { renderUnassessedPassage } from '../lib/busManifestTeam/reviewDeskDisplay'
 import type { BusManifestSheet, BusManifestPosCatalog } from '../lib/busManifestContract'
 import type { ReadingLine, ReadingMaterialContent } from '../lib/levelReadingMaterial'
+import { LEVEL_ONE_READING } from '../lib/levelOneReadingMaterial'
+import { readingKiwaha } from '../lib/courseKiwaha'
 import './SiteIdentity.css'
 import './LevelOnePepeha.css'
 
-// A fictional worked example, separate from the canonical sentence roster.
-// Possessive and sibling usage: https://kupu.maori.nz/possession/t-possession
-// https://kupu.maori.nz/kupu/teina and https://kupu.maori.nz/kupu/tam%C4%81hine
-const SECTIONS = [
-  { title: 'Tūrangawaewae', meaning: 'Places I belong', lines: [
-    ['Ko Ngongotahā te maunga.', 'Ngongotahā is the mountain.'],
-    ['Ko Rotorua te roto.', 'Rotorua is the lake.'],
-    ['Nō Rotorua ahau.', 'I am from Rotorua.'],
-  ] },
-  { title: 'Tūpuna', meaning: 'Ancestors', lines: [
-    ['Nō Rotorua ōku tūpuna.', 'My ancestors are from Rotorua.'],
-  ] },
-  { title: 'Mātua', meaning: 'Parents', lines: [
-    ['Ko Mere tōku whaea.', 'Mere is my mother.'],
-    ['Ko Hemi tōku matua.', 'Hemi is my father.'],
-  ] },
-  { title: 'Tuākana, tēina', meaning: 'Siblings', lines: [
-    ['Ko Hana tōku teina.', 'Hana is my younger sister.'],
-  ] },
-  { title: 'Tamariki', meaning: 'Children', lines: [
-    ['Ko Rangi tāku tama.', 'Rangi is my son.'],
-    ['Ko Aroha tāku tamāhine.', 'Aroha is my daughter.'],
-  ] },
-  { title: 'Mahi', meaning: 'Work', lines: [
-    ['He kaiako ahau.', 'I am a teacher.'],
-  ] },
-  { title: 'Kāinga', meaning: 'Home', lines: [
-    ['Kei Pōneke tōku kāinga.', 'My home is in Wellington.'],
-  ] },
-] as const
-
-const PEPEHA: ReadingMaterialContent = { id: 'pepeha', title: 'Pepeha', sections: SECTIONS }
+const PEPEHA = LEVEL_ONE_READING
 const NO_WRITES = () => {}
 
 type Analysis = { state: BusManifestSheet | null; failed: boolean }
@@ -59,15 +30,15 @@ function PepehaCard({ heading, children }: { heading: ReactNode; children: React
   </div>
 }
 
-type ReadingProps = { catalog?: BusManifestPosCatalog; sentences?: readonly SavedSentence[] }
+type ReadingProps = { catalog?: BusManifestPosCatalog; sentences?: readonly SavedSentence[]; moe?: boolean }
 
 export default function LevelOnePepeha(props: ReadingProps) {
   return <LevelReadingMaterial reading={PEPEHA} {...props} />
 }
 
 /** The same read-only reading cards and sentence renderer at every level. */
-export function LevelReadingMaterial({ reading, catalog, sentences = NO_SAVED_SENTENCES }: ReadingProps & { reading: ReadingMaterialContent }) {
-  const lines = useMemo(() => reading.sections.flatMap(section => section.lines), [reading])
+export function LevelReadingMaterial({ reading, catalog, sentences = NO_SAVED_SENTENCES, moe = false }: ReadingProps & { reading: ReadingMaterialContent }) {
+  const lines = useMemo(() => [...new Map(reading.sections.flatMap(section => section.lines).map(line => [line[0], line])).values()], [reading])
   const [analyses, setAnalyses] = useState<Record<string, Analysis>>({})
   useEffect(() => {
     if (!catalog) return
@@ -76,7 +47,8 @@ export function LevelReadingMaterial({ reading, catalog, sentences = NO_SAVED_SE
     // Limit requests while each sentence keeps its own read-only analysis boundary.
     async function worker() {
       while (next < lines.length && !controller.signal.aborted) {
-        const [mi] = lines[next++]!
+        const [mi, , , curriculum] = lines[next++]!
+        if (curriculum?.kiwahaId) continue
         if (savedState(sentences, mi)) continue
         try {
           const state = await tagText(mi, controller.signal)
@@ -91,15 +63,22 @@ export function LevelReadingMaterial({ reading, catalog, sentences = NO_SAVED_SE
     return () => controller.abort()
   }, [sentences, lines, catalog])
 
-  function sentence([mi, en, speaker]: ReadingLine) {
+  function sentence([mi, en, speaker, curriculum]: ReadingLine, index: number) {
+    const kiwaha = readingKiwaha(curriculum?.kiwahaId)
+    if (kiwaha) return <div className="level-pepeha-line" key={`${index}-${mi}`}>
+      {speaker && <span className="level-reading-speaker">{speaker}</span>}
+      <p className="level-pepeha-plain" lang="mi">{mi}</p>
+      <p className="level-pepeha-translation" lang="en">{en}</p>
+      <a className="level-reading-kiwaha" href={`#${moe ? 'moe/' : ''}levels/${kiwaha.level}?tab=vocabulary&section=kiwaha`}>Kīwaha · Level {kiwaha.level}</a>
+    </div>
     const state = savedState(sentences, mi) ?? analyses[mi]?.state ?? unresolvedSentence(mi)
     // Unanalysed text has no drawable grammar. Avoid reserving an empty rail row.
-    if (!catalog || !state.tokens.some(token => token.acceptedPosCode != null)) return <div className="level-pepeha-line" key={mi}>
+    if (!catalog || !state.tokens.some(token => token.acceptedPosCode != null)) return <div className="level-pepeha-line" key={`${index}-${mi}`}>
       {speaker && <span className="level-reading-speaker">{speaker}</span>}
       <p className="level-pepeha-plain" lang="mi">{mi}</p>
       <p className="level-pepeha-translation" lang="en">{en}</p>
     </div>
-    return <div className="level-pepeha-line" key={mi}>
+    return <div className="level-pepeha-line" key={`${index}-${mi}`}>
       {speaker && <span className="level-reading-speaker">{speaker}</span>}
       <FamilyConnectorSentenceView loading={false} paragraphs={[renderUnassessedPassage(mi)]}
         savedBusManifests={[]} presentationStates={[state]} passageAddresses={[]}

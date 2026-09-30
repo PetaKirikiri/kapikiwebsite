@@ -39,3 +39,12 @@
 .level-vocabulary-pos-rail > span { flex-shrink: 0; }
 .level-vocabulary-pos li + li { margin-top: 14px; }
 .level-vocabulary td, .level-vocabulary tbody th { vertical-align: top; }
+.level-vocabulary-kiwaha { padding: 20px 30px; border-bottom: 1px solid var(--ka-card-line); }
+.level-vocabulary-kiwaha h3 { margin: 0 0 12px; color: var(--ka-green); font-size: 16px; }
+.level-vocabulary-kiwaha dl { margin: 0; }
+.level-vocabulary-kiwaha dl > div { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; }
+.level-vocabulary-kiwaha dt { color: var(--ka-green); font-size: 20px; }
+.level-vocabulary-kiwaha dd { margin: 0; color: var(--site-muted); }
+.level-vocabulary-kiwaha a { color: var(--ka-green); font-size: 13px; text-underline-offset: 3px; }
+#level-kiwaha-title { scroll-margin-top: 24px; }
+#level-kiwaha-title[tabindex="-1"]:focus { outline: none; }
