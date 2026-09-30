@@ -48,3 +48,18 @@
 .level-vocabulary-kiwaha a { color: var(--ka-green); font-size: 13px; text-underline-offset: 3px; }
 #level-kiwaha-title { scroll-margin-top: 24px; }
 #level-kiwaha-title[tabindex="-1"]:focus { outline: none; }
+
+.level-vocabulary-reading-language { padding: 20px 30px; border-bottom: 1px solid var(--ka-card-line); }
+.level-vocabulary-reading-language h3 { margin: 0 0 12px; color: var(--ka-green); font-size: 16px; }
+.level-vocabulary-reading-language dl { margin: 0; }
+.level-vocabulary-reading-language dl > div { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; }
+.level-vocabulary-reading-language dt { color: var(--ka-green); font-size: 20px; }
+.level-vocabulary-reading-language dd { margin: 0; color: var(--site-muted); }
+.level-vocabulary-reading-language a { color: var(--ka-green); font-size: 13px; text-underline-offset: 3px; }
+#level-reading-language-title { scroll-margin-top: 24px; }
+#level-reading-language-title[tabindex="-1"]:focus { outline: none; }
+
+.level-vocabulary-reading-language dl > div + div { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--ka-card-line); }
+.level-vocabulary-reading-language .level-vocabulary-language-example { flex-basis: 100%; font-size: 14px; line-height: 1.5; }
+.level-vocabulary-language-example span { display: block; }
+.level-vocabulary-language-example [lang="mi"] { color: var(--ka-green); }

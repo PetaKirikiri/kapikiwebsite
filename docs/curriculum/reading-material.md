@@ -6,10 +6,10 @@ what each reading may use. Storytelling does not introduce an extra grammar syll
 | Level | Reading | Situation and payoff | Current-level teaching | Earlier teaching reused |
 | --- | --- | --- | --- | --- |
 | 1 | Pepeha | A practical introduction | Naming, classification, origin, location | — |
-| 2 | Te parāoa | Hana has already eaten the bread; Maia takes charge of buying the replacement | Past, completed and future actions; suggestions | Location, counting people, absence |
-| 3 | Te waea | Maia searches bags while holding the missing phone | Present negatives, not yet, stop doing something | Location, completed and current actions, suggestions |
+| 2 | Te parāoa | Hana ate the bread yesterday and offers to buy it tomorrow; Maia wants it now | Past and future actions; suggestions; time anchors | Location, absence |
+| 3 | Te waea | Maia opens a bag while holding the missing phone | Present negatives, not yet; afterwards | Location, past and current actions, suggestions |
 | 4 | Ngā pukapuka | Reading the names reveals that two books have been swapped | Ownership and agent-emphatic past/future actions | Naming, reading, suggestions, ordinary past actions |
-| 5 | Te pouaka | Neither person can carry a box; removing the books makes it manageable | Habitual actions, ability/inability, comparisons, passives | Location, suggestions |
+| 5 | Te pouaka | Maia carries the emptied box; Hana carries the books | Habitual actions, ability/inability, passives | Location, suggestions, agent-emphatic future, sequencing |
 | 6 | Ngā mahi | Both people already have a job and try to avoid washing dishes; they agree to share it | Why someone will not do something; a conditional offer | Assigning responsibility, negatives, future actions, suggestions |
 
 Each ordinary line carries `curriculum.structures`: references to the actual
@@ -36,6 +36,29 @@ published expressions. Other proposed expressions remain unpublished. The earlie
 teacher-review status remains explicit; course allocation does not claim formal
 teacher approval. Every reading occurrence links to its introducing level's
 vocabulary page within the same MOE or general route.
+
+## Time and linking words
+
+These are explicit editorial additions for narrative flow, recorded in
+`courseReadingLanguage.ts` and linked from each story to the introducing level's
+vocabulary section. Source evidence supports meaning/use, not the chosen course
+level. This is not an expansion of the canonical sentence roster or learned POS.
+
+| Introducing level | Expressions | Bounded use |
+| --- | --- | --- |
+| 2 | inanahi, ināianei, āpōpō | End-position yesterday, now, tomorrow with compatible frames |
+| 3 | i muri mai | Later event in a past account: I muri mai, i … |
+| 4 | ā | Joining complete clauses for successive actions only |
+| 5 | Reuse earlier expressions | No extra connector introduced |
+| 6 | engari | Contrast between complete clauses |
+
+Every use records an expression ID as well as its base sentence-frame references.
+Checks reject missing/unknown IDs, later-level expressions, incompatible frame
+references and unsupported positions. Conjunctions require two clause references.
+Only the exact registered expression is exempt from the ordinary-word allocation;
+its other senses are not authorised. Naturalness and actual grammatical structure
+still require editorial review. No “luckily”, “until” or unallocated indefinite
+phrases were added. Linked source examples are exposed beside these expressions.
 
 ## Presentation and outstanding rail coverage
 

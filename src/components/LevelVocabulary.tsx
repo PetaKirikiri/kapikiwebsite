@@ -1,5 +1,6 @@
 import { type ReactNode, useEffect, useMemo, useState } from 'react'
 import { courseVocabulary } from '../lib/courseVocabulary'
+import { courseReadingLanguage } from '../lib/courseReadingLanguage'
 import { courseKiwaha } from '../lib/courseKiwaha'
 import type { CurriculumLevel } from '../lib/sentenceStructureLevels'
 import { fetchVocabularyPos, type VocabularyPos } from '../lib/vocabularyPos'
@@ -49,6 +50,7 @@ export default function LevelVocabulary({ level, catalog }: { level: CurriculumL
   const normalise = (text: string) => text.normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase('mi')
   const search = normalise(query.trim())
   const visible = words.filter(item => normalise(`${item.word} ${item.english}`).includes(search))
+  const readingLanguage = courseReadingLanguage(level).filter(item => normalise(`${item.text} ${item.english}`).includes(search))
   const kiwaha = courseKiwaha(level).filter(item => normalise(`${item.text} ${item.english}`).includes(search))
 
   return <section className="site-card level-vocabulary" aria-labelledby="level-vocabulary-title">
@@ -61,6 +63,14 @@ export default function LevelVocabulary({ level, catalog }: { level: CurriculumL
       <dl>{kiwaha.map(item => <div key={item.id}>
         <dt lang="mi">{item.text}</dt><dd>{item.english}</dd>
         <dd><a href={item.sourceUrl} target="_blank" rel="noreferrer" aria-label={`Te Aka entry for ${item.text}`}>Te Aka</a></dd>
+      </div>)}</dl>
+    </section>}
+    {readingLanguage.length > 0 && <section className="level-vocabulary-reading-language" aria-labelledby="level-reading-language-title">
+      <h3 id="level-reading-language-title">Time &amp; linking words · Level {level}</h3>
+      <dl>{readingLanguage.map(item => <div key={item.id}>
+        <dt lang="mi">{item.text}</dt><dd>{item.english}</dd>
+        <dd className="level-vocabulary-language-example"><span lang="mi">{item.example[0]}</span><span>{item.example[1]}</span></dd>
+        <dd><a href={item.sourceUrl} target="_blank" rel="noreferrer" aria-label={`Source for ${item.text}`}>{item.sourceUrl.includes('maoridictionary') ? 'Te Aka' : 'Kauwhata Reo'}</a></dd>
       </div>)}</dl>
     </section>}
     <div className="level-vocabulary-tools">

@@ -4,6 +4,7 @@ import SentenceTranslation from './SentenceTranslation'
 import { tagText, unresolvedSentence } from '../lib/connectorPresentation/engine'
 import { renderUnassessedPassage } from '../lib/busManifestTeam/reviewDeskDisplay'
 import type { BusManifestSheet, BusManifestPosCatalog } from '../lib/busManifestContract'
+import { READING_LANGUAGE } from '../lib/courseReadingLanguage'
 import type { ReadingLine, ReadingMaterialContent } from '../lib/levelReadingMaterial'
 import { LEVEL_ONE_READING } from '../lib/levelOneReadingMaterial'
 import { readingKiwaha } from '../lib/courseKiwaha'
@@ -39,6 +40,8 @@ export default function LevelOnePepeha(props: ReadingProps) {
 /** The same read-only reading cards and sentence renderer at every level. */
 export function LevelReadingMaterial({ reading, catalog, sentences = NO_SAVED_SENTENCES, moe = false }: ReadingProps & { reading: ReadingMaterialContent }) {
   const lines = useMemo(() => [...new Map(reading.sections.flatMap(section => section.lines).map(line => [line[0], line])).values()], [reading])
+  const languageIds = new Set(lines.flatMap(line => line[3]?.language ?? []))
+  const language = READING_LANGUAGE.filter(entry => languageIds.has(entry.id))
   const [analyses, setAnalyses] = useState<Record<string, Analysis>>({})
   useEffect(() => {
     if (!catalog) return
@@ -97,5 +100,9 @@ export function LevelReadingMaterial({ reading, catalog, sentences = NO_SAVED_SE
         </div>}>{lines.map(sentence)}</PepehaCard>
       </li>)}
     </ol>
+    {language.length > 0 && <nav className="level-reading-language" aria-label="Time and linking words in this story">
+      <span>Time &amp; linking words</span>
+      {language.map(entry => <a key={entry.id} lang="mi" href={`#${moe ? 'moe/' : ''}levels/${entry.level}?tab=vocabulary&section=reading-language`} aria-label={`${entry.text} — Level ${entry.level} vocabulary`}>{entry.text}</a>)}
+    </nav>}
   </section>
 }
