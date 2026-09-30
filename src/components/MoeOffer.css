@@ -128,5 +128,10 @@
   .moe-facts:has(> li:nth-child(3):last-child) li + li { padding-top: 18px; border-top: 1px solid var(--ka-card-line); }
 }
 
-.moe-policy-message { margin: 20px 0 0; max-width: 60ch; color: #d9e5db; font-size: 16px; line-height: 1.5; }
-.moe-policy-message a { color: inherit; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+ .moe-policy-message { display: grid; justify-items: start; gap: 5px; margin: 24px 0 0; padding: 16px 20px; max-width: 480px; border-left: 2px solid #a7c5ae; border-radius: 0 8px 8px 0; background: #102f263d; color: #d9e5db; line-height: 1.5; }
+.moe-policy-message strong { color: #edf4e5; font-size: 15px; font-weight: 600; }
+.moe-policy-message span { font-size: 13px; }
+.moe-policy-message a { color: #edf4e5; font-size: 13px; text-decoration: underline; text-decoration-color: #a7c5ae80; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.moe-policy-message a:hover { text-decoration-color: currentColor; }
+.moe-policy-message a:focus-visible { outline: 2px solid #edf4e5; outline-offset: 4px; }
+@media (max-width: 460px) { .moe-policy-message { padding: 14px 16px; } }
