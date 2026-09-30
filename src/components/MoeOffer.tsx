@@ -26,6 +26,7 @@ export default function MoeOffer({ onRegister, content }: { onRegister: (level: 
           <div className="moe-intro-copy">
             <h1 id="moe-heading">Te reo Māori classes</h1>
             <p className="moe-lead">{content?.lead ?? 'A complete learning programme for your team. Live teaching, bespoke digital activities, stories and games, with resources, app practice and progress support built in.'}</p>
+            <p className="moe-policy-message">The Policy Group is opening up its classes. Contact Esther Boyle for more information: <a href="mailto:Esther.Boyle@education.govt.nz">Esther.Boyle@education.govt.nz</a></p>
           <a className="moe-offer-jump" href={content?.action?.href ?? '#moe?timetable'}>{content?.action?.label ?? 'Find your class'}</a></div>
           <div className="moe-start"><span>Starts Monday</span><time dateTime="2026-10-12"><strong>12 October</strong><span>2026</span></time></div>
         </div>
