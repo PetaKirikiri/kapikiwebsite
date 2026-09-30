@@ -303,7 +303,7 @@ export default function WebsiteView({
                     readOnly />}
                 </div></div>
               </> : null}
-            </> : route.tab === 'vocabulary' ? <Suspense fallback={<p role="status">Loading vocabulary…</p>}><LevelVocabulary key={selectedLevel} level={selectedLevel} /></Suspense> : route.tab === 'stories' ? selectedLevel === 1
+            </> : route.tab === 'vocabulary' ? <Suspense fallback={<p role="status">Loading vocabulary…</p>}><LevelVocabulary key={selectedLevel} level={selectedLevel} catalog={data?.catalog} /></Suspense> : route.tab === 'stories' ? selectedLevel === 1
               ? <LevelOnePepeha catalog={data?.catalog} sentences={data?.sentences} />
               : <LevelReadingMaterial key={selectedLevel} reading={LEVEL_READING_MATERIAL[selectedLevel]} catalog={data?.catalog} sentences={LEVEL_READING_ANNOTATIONS} /> : <>
               <p className="site-preview-label">Level {selectedLevel} practice · answers stay in this session</p>
