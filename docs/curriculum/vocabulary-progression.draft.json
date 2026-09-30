@@ -97,25 +97,19 @@
       "level": 1,
       "title": "Naming and describing",
       "structureFocus": "he",
-      "rationale": "Use concrete referents and simple descriptions. mā has a colour reading here, not the Level 4 beneficiary reading.",
+      "rationale": "Use concrete referents and simple descriptions.",
       "wordKeys": [
         "tēnei",
-        "mā",
         "nui",
         "tēnā",
         "rākau",
         "roa",
         "iti",
         "pukapuka",
-        "pango",
         "pepa",
-        "whero",
         "poto",
         "pene",
         "kākano",
-        "kākāriki",
-        "kōwhai",
-        "parauri",
         "pai",
         "tērā"
       ]
@@ -1495,12 +1489,9 @@
     {
       "key": "mā",
       "word": "mā",
-      "firstProposedLevel": 1,
-      "revisitLevels": [
-        4
-      ],
+      "firstProposedLevel": 4,
+      "revisitLevels": [],
       "groupIds": [
-        "L1-3",
         "L4-1"
       ],
       "frequencyRank": 38,
@@ -1619,21 +1610,6 @@
       "countsTowardApprovedTarget": false
     },
     {
-      "key": "pango",
-      "word": "pango",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 181,
-      "lexemeId": "1139",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
       "key": "pepa",
       "word": "pepa",
       "firstProposedLevel": 1,
@@ -1643,21 +1619,6 @@
       ],
       "frequencyRank": 229,
       "lexemeId": "1203",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
-      "key": "whero",
-      "word": "whero",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 365,
-      "lexemeId": "2319",
       "dictionarySenseCount": 0,
       "status": "draft-needs-sense-and-form-review",
       "selectedSenseId": null,
@@ -1703,51 +1664,6 @@
       ],
       "frequencyRank": 671,
       "lexemeId": "640",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
-      "key": "kākāriki",
-      "word": "kākāriki",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 676,
-      "lexemeId": "643",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
-      "key": "kōwhai",
-      "word": "kōwhai",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 716,
-      "lexemeId": "717",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
-      "key": "parauri",
-      "word": "parauri",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 932,
-      "lexemeId": "1168",
       "dictionarySenseCount": 0,
       "status": "draft-needs-sense-and-form-review",
       "selectedSenseId": null,
@@ -7091,7 +7007,12 @@
     "kurī",
     "kākāpō",
     "kino",
-    "konei"
+    "konei",
+    "kākāriki",
+    "kōwhai",
+    "pango",
+    "parauri",
+    "whero"
   ],
   "blockers": [
     {
@@ -7618,6 +7539,30 @@
       {
         "word": "konei",
         "reason": "Owner removed this word from Level 1 vocabulary on 2026-09-30. Preserve any later allocation; otherwise defer placement."
+      },
+      {
+        "word": "kākāriki",
+        "reason": "Owner removed colour vocabulary from Level 1 on 2026-09-30. Defer placement."
+      },
+      {
+        "word": "kōwhai",
+        "reason": "Owner removed colour vocabulary from Level 1 on 2026-09-30. Defer placement."
+      },
+      {
+        "word": "mā",
+        "reason": "Owner removed colour vocabulary from Level 1 on 2026-09-30. Retain the existing later-level allocation for its separate grammatical use."
+      },
+      {
+        "word": "pango",
+        "reason": "Owner removed colour vocabulary from Level 1 on 2026-09-30. Defer placement."
+      },
+      {
+        "word": "parauri",
+        "reason": "Owner removed colour vocabulary from Level 1 on 2026-09-30. Defer placement."
+      },
+      {
+        "word": "whero",
+        "reason": "Owner removed colour vocabulary from Level 1 on 2026-09-30. Defer placement."
       }
     ],
     "prerequisites": [
