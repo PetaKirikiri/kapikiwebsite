@@ -103,7 +103,6 @@
         "tēnei",
         "mā",
         "nui",
-        "ēnei",
         "tēnā",
         "manu",
         "rākau",
@@ -112,7 +111,6 @@
         "iti",
         "pukapuka",
         "pango",
-        "ērā",
         "pepa",
         "kurī",
         "kino",
@@ -122,7 +120,6 @@
         "kākano",
         "kākāriki",
         "kōwhai",
-        "ēnā",
         "parauri",
         "kākāpō",
         "pai",
@@ -1550,21 +1547,6 @@
       "countsTowardApprovedTarget": false
     },
     {
-      "key": "ēnei",
-      "word": "ēnei",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 69,
-      "lexemeId": "2422",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
       "key": "tēnā",
       "word": "tēnā",
       "firstProposedLevel": 1,
@@ -1685,21 +1667,6 @@
       ],
       "frequencyRank": 181,
       "lexemeId": "1139",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
-      "key": "ērā",
-      "word": "ērā",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 182,
-      "lexemeId": "2425",
       "dictionarySenseCount": 0,
       "status": "draft-needs-sense-and-form-review",
       "selectedSenseId": null,
@@ -1835,21 +1802,6 @@
       ],
       "frequencyRank": 716,
       "lexemeId": "717",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
-      "key": "ēnā",
-      "word": "ēnā",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 836,
-      "lexemeId": "2424",
       "dictionarySenseCount": 0,
       "status": "draft-needs-sense-and-form-review",
       "selectedSenseId": null,
@@ -7215,7 +7167,10 @@
     "aorangi",
     "hāwhe",
     "huritau",
-    "kamo"
+    "kamo",
+    "ēnei",
+    "ēnā",
+    "ērā"
   ],
   "blockers": [
     {
@@ -7706,6 +7661,18 @@
         "retained": "ātaahua",
         "reason": "Use the Te Aka headword spelling for the intended beautiful reading. Do not count the unmacronised duplicate.",
         "sourceUrl": "https://maoridictionary.co.nz/search?keywords=ataahua"
+      },
+      {
+        "word": "ēnei",
+        "reason": "Owner deferred this plural demonstrative from Level 1 on 2026-09-30 as too early. Keep unallocated until a later teaching level is agreed."
+      },
+      {
+        "word": "ēnā",
+        "reason": "Owner deferred this plural demonstrative from Level 1 on 2026-09-30 as too early. Keep unallocated until a later teaching level is agreed."
+      },
+      {
+        "word": "ērā",
+        "reason": "Owner deferred this plural demonstrative from Level 1 on 2026-09-30 as too early. Keep unallocated until a later teaching level is agreed."
       }
     ],
     "prerequisites": [
