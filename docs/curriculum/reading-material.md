@@ -10,7 +10,7 @@ what each reading may use. Storytelling does not introduce an extra grammar syll
 | 3 | Te waea | Maia opens a bag while holding the missing phone | Present negatives, not yet; afterwards | Location, past and current actions, suggestions |
 | 4 | Ngā pukapuka | Reading the names reveals that two books have been swapped | Ownership and agent-emphatic past/future actions | Naming, reading, suggestions, ordinary past actions |
 | 5 | Te pouaka | Maia carries the emptied box; Hana carries the books | Habitual actions, ability/inability, passives | Location, suggestions, agent-emphatic future, sequencing |
-| 6 | Ngā mahi | Both people already have a job and try to avoid washing dishes; they agree to share it | Why someone will not do something; a conditional offer | Assigning responsibility, negatives, future actions, suggestions |
+| 6 | Te pahikara | A narrator who cannot afford a bicycle finds money, takes it out, faces its owner, and returns it; the narrator still walks home | A conditional temptation and a consequential why-question | Ability, absence, location, past actions, ownership, beneficiary, agent emphasis, sequencing |
 
 Each ordinary line carries `curriculum.structures`: references to the actual
 course structure IDs. These are editorial traceability, not grammar-engine input.
