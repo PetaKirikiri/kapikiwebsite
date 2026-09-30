@@ -1,6 +1,9 @@
 import type { CurriculumLevel } from './sentenceStructureLevels'
 import { findMoeBenefit, type MoeBenefitId } from './moeBenefits'
 
+export const MOE_COURSE_PRICE = '$300 per student'
+export const MOE_COURSE_INCLUSIONS = '10 hours of live online classes: one hour weekly for 10 weeks, plus access to the app.'
+
 export const MOE_CLASSES = [
   { day: 'Monday', startDate: '12 October', sessions: [
     { level: 1, time: '1pm – 2pm', title: 'Level 1', description: 'Introduce yourself and describe your world.' },

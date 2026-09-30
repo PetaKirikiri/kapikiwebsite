@@ -4,7 +4,7 @@ import './SiteIdentity.css'
 import './MoeOffer.css'
 import { MOE_BENEFITS, moeBenefitAction, type MoeBenefitId } from '../lib/moeBenefits'
 import MoeBenefitIcon, { type MoeIconId } from './MoeBenefitIcon'
-import { MOE_CLASSES, moeLevelRoute, moeInterestContext } from '../lib/moeOffer'
+import { MOE_CLASSES, MOE_COURSE_PRICE, MOE_COURSE_INCLUSIONS, moeLevelRoute, moeInterestContext } from '../lib/moeOffer'
 import { LEVEL_PRESENTATION } from '../lib/coursePresentation'
 
 
@@ -27,6 +27,7 @@ export default function MoeOffer({ onRegister, content }: { onRegister: (level: 
             <h1 id="moe-heading">Te reo Māori classes</h1>
             <p className="moe-lead">{content?.lead ?? 'A complete learning programme for your team. Live teaching, bespoke digital activities, stories and games, with resources, app practice and progress support built in.'}</p>
             <aside className="moe-policy-message"><strong>Te reo Māori classes for the MOE network</strong><span>The Policy Group has been hosting te reo Māori classes for the past 10 years and has developed six levels for students. These classes are now open to anyone within the MOE network.</span><span>Please check the levels and schedule below, choose the level that suits you, and sign up.</span><span>Please forward any further questions to Esther Boyle.</span><span>Contact: <a href="mailto:Esther.Boyle@education.govt.nz">Esther.Boyle@education.govt.nz</a></span></aside>
+          <div className="moe-course-price"><strong>{MOE_COURSE_PRICE}</strong><span>Same price for every course.</span><p>{MOE_COURSE_INCLUSIONS}</p></div>
           <a className="moe-offer-jump" href={content?.action?.href ?? '#moe?timetable'}>{content?.action?.label ?? 'Find your class'}</a></div>
           <div className="moe-start"><span>Starts Monday</span><time dateTime="2026-10-12"><strong>12 October</strong><span>2026</span></time></div>
         </div>
@@ -54,6 +55,7 @@ export function MoeTimetable({ onRegister, learnerFocus = false }: { onRegister:
             <p className="moe-time">{time}</p>
             <div className="moe-session-title"><span className="moe-level-number" aria-hidden="true">{level}</span><div><h4>{learnerFocus ? LEVEL_PRESENTATION[level].title : title}</h4>{learnerFocus || level === 6 ? <span className="moe-club-level">Level {level}</span> : null}</div></div>
             <ul className="moe-session-skills" aria-label={`Level ${level} skills`}>{LEVEL_PRESENTATION[level].skills.map(skill => <li key={skill.label}><strong>{skill.label}</strong><span>{skill.pattern}</span></li>)}</ul>
+            <p className="moe-session-price">{MOE_COURSE_PRICE}</p>
             <a className="moe-description-button" href={moeLevelRoute(level)} aria-label={learnerFocus ? `Explore Level ${level} content` : `Level description for ${title}`}>{learnerFocus ? 'Explore the content' : 'Level description'}</a>
             <button type="button" onClick={() => onRegister(level, moeInterestContext(level))} aria-label={`Register interest in ${title}`}>Register interest</button>
           </article>)}</div>

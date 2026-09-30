@@ -135,3 +135,9 @@
 .moe-policy-message a:hover { text-decoration-color: currentColor; }
 .moe-policy-message a:focus-visible { outline: 2px solid #edf4e5; outline-offset: 4px; }
 @media (max-width: 460px) { .moe-policy-message { padding: 14px 16px; } }
+
+.moe-course-price { margin-top: 22px; color: var(--cover-ink); }
+.moe-course-price > strong { display: block; font-size: 24px; font-weight: 600; }
+.moe-course-price > span { display: block; margin-top: 4px; font-size: 14px; color: #d9e5db; }
+.moe-course-price p { margin: 8px 0 0; max-width: 58ch; font-size: 15px; line-height: 1.5; color: #d9e5db; }
+.moe-session-price { margin: 18px 0 0; color: var(--ka-green); font-size: 16px; font-weight: 600; }

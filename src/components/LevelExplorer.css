@@ -50,3 +50,5 @@
  .level-tabs button:nth-child(3)::before { display: none; }
  .level-tabs button + button::before { top: 16px; bottom: 16px; }.level-tabs .moe-benefit-icon { width: 34px; height: 38px; }
 }
+
+.level-course-price { margin: 18px 0 0; max-width: 250px; line-height: 1.5; }

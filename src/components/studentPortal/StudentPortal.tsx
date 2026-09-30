@@ -3,7 +3,7 @@ import type { FormEvent } from 'react'
 import { interestRegistrationAvailable, submitCourseInterest } from '../../lib/studentPortal/interestSubmission'
 import { LANGUAGE_SKILLS, interestRequest, type SkillRatings } from '../../lib/studentPortal/join'
 import ministryLogo from '../../assets/ministry-of-education-logo-white.svg'
-import { MOE_CLASSES } from '../../lib/moeOffer'
+import { MOE_CLASSES, MOE_COURSE_PRICE, MOE_COURSE_INCLUSIONS } from '../../lib/moeOffer'
 import '../SiteIdentity.css'
 import './StudentPortal.css'
 
@@ -46,6 +46,9 @@ export default function StudentPortal({ context = '', level, open, onClose }: Pr
           <strong>{classDay.day} · {selectedClass.time}</strong>
           <span>Starts {classDay.startDate} 2026</span>
           <span className="portal-class-meta">Live online · New Zealand time</span>
+          <strong className="portal-course-price">{MOE_COURSE_PRICE}</strong>
+          <span>Same price for every course.</span>
+          <span className="portal-class-meta">{MOE_COURSE_INCLUSIONS}</span>
         </div> : context ? <p>{context}</p> : null}
       </div>
       <button type="button" className="portal-close" onClick={onClose} aria-label="Close interest form">✕</button>

@@ -1,7 +1,7 @@
 import { useRef, type ReactNode } from 'react'
 import { LEVEL_PRESENTATION } from '../lib/coursePresentation'
 import { CURRICULUM_LEVELS, type CurriculumLevel } from '../lib/sentenceStructureLevels'
-import { MOE_CLASSES } from '../lib/moeOffer'
+import { MOE_CLASSES, MOE_COURSE_PRICE, MOE_COURSE_INCLUSIONS } from '../lib/moeOffer'
 import { contextualRoute, type LevelTab } from '../lib/websiteRoutes'
 import './LevelExplorer.css'
 
@@ -54,7 +54,7 @@ export default function LevelExplorer({ level, moe, tab, onRegister, children }:
         <button type="button" className="level-register" onClick={onRegister}>Register interest</button>
       </div>
       <div className="level-class-bar">
-        {moe ? <div><strong>{day.day} · {session.time}</strong><span>Starts {day.startDate} 2026</span></div> : <div><strong>10 weeks · One hour weekly</strong><span>Register to discuss class times</span></div>}
+        {moe ? <div><strong>{day.day} · {session.time}</strong><span>Starts {day.startDate} 2026</span><p className="level-course-price"><strong>{MOE_COURSE_PRICE}</strong><span>Same price for every course.</span><span>{MOE_COURSE_INCLUSIONS}</span></p></div> : <div><strong>10 weeks · One hour weekly</strong><span>Register to discuss class times</span></div>}
       </div>
     </div>
     </header>
