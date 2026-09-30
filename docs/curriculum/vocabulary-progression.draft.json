@@ -99,9 +99,7 @@
       "structureFocus": "he",
       "rationale": "Use concrete referents and simple descriptions.",
       "wordKeys": [
-        "tēnei",
         "nui",
-        "tēnā",
         "rākau",
         "roa",
         "iti",
@@ -110,8 +108,7 @@
         "poto",
         "pene",
         "kākano",
-        "pai",
-        "tērā"
+        "pai"
       ]
     },
     {
@@ -1472,21 +1469,6 @@
       "countsTowardApprovedTarget": false
     },
     {
-      "key": "tēnei",
-      "word": "tēnei",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 32,
-      "lexemeId": "1931",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
       "key": "mā",
       "word": "mā",
       "firstProposedLevel": 4,
@@ -1511,21 +1493,6 @@
       ],
       "frequencyRank": 48,
       "lexemeId": "1048",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
-      "key": "tēnā",
-      "word": "tēnā",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": 73,
-      "lexemeId": "1932",
       "dictionarySenseCount": 0,
       "status": "draft-needs-sense-and-form-review",
       "selectedSenseId": null,
@@ -1682,21 +1649,6 @@
       ],
       "frequencyRank": null,
       "lexemeId": "1107",
-      "dictionarySenseCount": 0,
-      "status": "draft-needs-sense-and-form-review",
-      "selectedSenseId": null,
-      "countsTowardApprovedTarget": false
-    },
-    {
-      "key": "tērā",
-      "word": "tērā",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
-      "frequencyRank": null,
-      "lexemeId": "1937",
       "dictionarySenseCount": 0,
       "status": "draft-needs-sense-and-form-review",
       "selectedSenseId": null,
@@ -7012,7 +6964,10 @@
     "kōwhai",
     "pango",
     "parauri",
-    "whero"
+    "whero",
+    "tēnei",
+    "tēnā",
+    "tērā"
   ],
   "blockers": [
     {
@@ -7563,6 +7518,18 @@
       {
         "word": "whero",
         "reason": "Owner removed colour vocabulary from Level 1 on 2026-09-30. Defer placement."
+      },
+      {
+        "word": "tēnei",
+        "reason": "Owner removed singular demonstratives from Level 1 on 2026-09-30, alongside the previously deferred plural forms. Preserve any later allocation; otherwise defer placement."
+      },
+      {
+        "word": "tēnā",
+        "reason": "Owner removed singular demonstratives from Level 1 on 2026-09-30, alongside the previously deferred plural forms. Preserve any later allocation; otherwise defer placement."
+      },
+      {
+        "word": "tērā",
+        "reason": "Owner removed singular demonstratives from Level 1 on 2026-09-30, alongside the previously deferred plural forms. Preserve any later allocation; otherwise defer placement."
       }
     ],
     "prerequisites": [
