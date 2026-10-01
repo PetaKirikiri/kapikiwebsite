@@ -11,7 +11,7 @@ export function createSignupAdminHandler({ query }) {
     if (req.method === 'GET') {
       const removed = new URL(req.url || '/', 'http://local').searchParams.get('removed') === 'true'
       try {
-        const rows = await query(`select id, name, email, selected_level, created_at
+        const rows = await query(`select id, name, email, selected_level, created_at, department_group
           from public.kp_course_interest where goals like 'MOE ·%' and removed_at is ${removed ? 'not null' : 'null'}
           order by created_at desc, id desc`)
         return json(200, { registrations: rows.rows })

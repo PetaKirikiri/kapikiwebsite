@@ -15,7 +15,7 @@ async function run(body, options = {}) {
   return { calls, ...response }
 }
 test('saves the selected class with parameterized values and no contact data in response', async()=>{
- const r=await run(valid);assert.equal(r.status,201);assert.deepEqual(r.body,{saved:true});assert.deepEqual(r.calls[0][1],['Test learner','test@example.invalid',2,valid.goals,JSON.stringify(valid.self_ratings)])
+ const r=await run(valid);assert.equal(r.status,201);assert.deepEqual(r.body,{saved:true});assert.deepEqual(r.calls[0][1],['Test learner','test@example.invalid',2,valid.goals,JSON.stringify(valid.self_ratings),null])
 })
 test('requires only name, email and level',async()=>{assert.equal((await run({name:valid.name,email:valid.email,selected_level:6})).status,201)})
 test('rejects malformed, oversized and invalid form data before writing',async()=>{
@@ -28,3 +28,17 @@ test('rejects cross-site submissions and GET without exposing registrations',asy
 test('does not claim success or expose database details after a failed write',async()=>{const r=await run(valid,{fail:true});assert.equal(r.status,503);assert.equal(r.body.saved,undefined);assert.ok(!JSON.stringify(r.body).includes('Private'))})
 test('mail failure cannot undo a saved signup',async()=>{let called=false;const r=await run(valid,{notify:async()=>{called=true;throw Error('mail failed')}});assert.equal(called,true);assert.equal(r.status,201);assert.deepEqual(r.body,{saved:true})})
 test('failed signup never attempts notification',async()=>{let called=false;await run(valid,{fail:true,notify:async()=>{called=true}});assert.equal(called,false)})
+
+test('persists a trimmed department without putting it in learning goals', async () => {
+ const r=await run({...valid,department_group:'  Policy Group  '})
+ assert.equal(r.status,201)
+ assert.equal(r.calls[0][1][5],'Policy Group')
+ assert.equal(r.calls[0][1][3],valid.goals)
+ assert.match(r.calls[0][0],/department_group/)
+})
+test('rejects malformed departments before writing', async () => {
+ for(const department_group of [123,[],{},'a'.repeat(161)]) {
+  const r=await run({...valid,department_group})
+  assert.equal(r.status,400);assert.equal(r.calls.length,0)
+ }
+})

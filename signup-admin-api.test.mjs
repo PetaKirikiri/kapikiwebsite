@@ -22,7 +22,7 @@ test('standalone link loads registrations without a login or token', async () =>
 })
 test('query includes only MOE signups and excludes learning notes and ratings', async () => {
   const r = await run()
-  assert.match(r.calls[0].sql, /select id, name, email, selected_level, created_at\s+from/)
+  assert.match(r.calls[0].sql, /select id, name, email, selected_level, created_at, department_group\s+from/)
   assert.match(r.calls[0].sql, /where goals like 'MOE ·%'/)
   assert.doesNotMatch(r.calls[0].sql, /self_ratings|kp_signup_admins/)
   assert.match(r.calls[0].sql, /order by created_at desc, id desc/)

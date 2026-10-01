@@ -29,5 +29,8 @@ export function interestRequest(form: FormData, ratings: SkillRatings, level: nu
   const { name, selected_level, goals, self_ratings } = request.options.data
   const recordedGoals = context ? [context, goals].filter(Boolean).join('\n\n') : goals
   if (recordedGoals.length > 3000) throw new Error('Please keep your learning goals shorter.')
-  return { name, email: request.email, selected_level, goals: recordedGoals, self_ratings }
+  const department_group = String(form.get('department_group') ?? '').trim()
+  if (context.startsWith('MOE ·') && !department_group) throw new Error('Please enter your department or group.')
+  if (department_group.length > 160) throw new Error('Please keep your department or group under 160 characters.')
+  return { name, email: request.email, selected_level, goals: recordedGoals, self_ratings, department_group: department_group || null }
 }

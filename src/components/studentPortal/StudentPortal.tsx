@@ -57,6 +57,7 @@ export default function StudentPortal({ context = '', level, open, onClose }: Pr
       {notice ? <div role="status" className="portal-message"><p>{notice}</p><p>This records your interest; your class place is not yet confirmed.</p><button type="button" onClick={onClose}>Done</button></div> : <form onSubmit={submit} className="portal-form" aria-busy={busy}>
         <label><span className="portal-field-heading">Your name<small>Required</small></span><input name="name" autoComplete="name" required maxLength={160} /></label>
         <label><span className="portal-field-heading">Email<small>Required</small></span><input name="email" type="email" autoComplete="email" required maxLength={320} /></label>
+        {selectedClass && <label><span className="portal-field-heading">Department / group<small>Required</small></span><input name="department_group" required maxLength={160} /></label>}
         <details className="portal-join-optional"><summary>Your learning <span>Optional</span></summary>
           <label>What would you like to learn?<textarea name="goals" maxLength={3000 - (context ? context.length + 2 : 0)} rows={2} /></label>
           <div className="portal-rating-heading"><span>Your confidence</span><small>1 · Starting out &nbsp; 5 · Confident</small></div>
