@@ -28,7 +28,7 @@ export default function MoeOffer({ onRegister, content, courseData }: { courseDa
           <div className="moe-intro-copy">
             <h1 id="moe-heading">Te reo Māori classes</h1>
             <p className="moe-lead">{content?.lead ?? 'A complete learning programme for your team. Live teaching, bespoke digital activities, stories and games, with resources, app practice and progress support built in.'}</p>
-            <a className="moe-offer-jump" href={content?.action?.href ?? '#moe?timetable'}>Find your class <span aria-hidden="true">→</span></a>
+            <a className="moe-offer-jump" href={content?.action?.href ?? '#moe?timetable'}>Find your level <span aria-hidden="true">→</span></a>
           </div>
           <div className="moe-intake-details" aria-label="Course dates, cost and commitment">
             <p><span>Starts</span><strong><time dateTime="2026-10-12">12 October 2026</time></strong></p>
