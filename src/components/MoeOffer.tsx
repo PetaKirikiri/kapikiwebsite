@@ -1,4 +1,4 @@
-import CourseSkillExample from './CourseSkillExample'
+import { CoursePreviewExample } from './CourseSkillExample'
 import type { WebsitePreviewData } from './WebsiteView'
 import type { CurriculumLevel } from '../lib/sentenceStructureLevels'
 import ministryLogo from '../assets/ministry-of-education-logo-white.svg'
@@ -18,6 +18,15 @@ export type MoeOfferContent = {
   benefits: readonly { id: MoeBenefitId; icon?: MoeIconId; label: string; summary: string; group: 'format' | 'support'; action: { href: string; label: string } | null }[]
 }
 const originalBenefits: MoeOfferContent['benefits'] = MOE_BENEFITS.map(benefit => ({ ...benefit, action: moeBenefitAction(benefit.id) }))
+
+const COURSE_PREVIEWS: Record<CurriculumLevel, { textMi: string; textEn: string }> = {
+  1: { textMi: 'Nō Rotorua ahau.', textEn: 'I am from Rotorua.' },
+  2: { textMi: 'Kei te pānui ahau i te pukapuka.', textEn: 'I am reading the book.' },
+  3: { textMi: 'Kāore anō au kia horoi i ngā huawhenua.', textEn: 'I have not washed the vegetables yet.' },
+  4: { textMi: 'Nā Hana te hui i whakarite.', textEn: 'Hana organised the meeting.' },
+  5: { textMi: 'Ka taea e Hana te pouaka te kawe.', textEn: 'Hana can carry the box.' },
+  6: { textMi: 'Nōnahea koutou i whakarite ai i te mahere?', textEn: 'When did you prepare the plan?' },
+}
 
 export default function MoeOffer({ onRegister, content, courseData }: { courseData?: WebsitePreviewData | null; onRegister: (level: CurriculumLevel, context: string) => void; content?: MoeOfferContent }) {
   return <main className="moe-offer" aria-labelledby="moe-heading">
@@ -66,9 +75,9 @@ export function MoeTimetable({ onRegister, learnerFocus = false, courseData }: {
         {MOE_CLASSES.map(({ day, startDate, sessions }) => <section key={day} className="site-card moe-day" aria-label={`${day} classes`}>
           <header className="site-card-cover moe-day-heading"><h3 className="site-card-title">{day}</h3><p>From {startDate}</p></header>
           <div className="moe-day-sessions">{sessions.map(({ level, time, title }) => <article key={level} id={`moe-class-${level}`} className={`moe-session moe-session-${level}`} aria-label={`${title}, ${day}, ${time}`}>
-            <p className="moe-time">{time}</p>
-            <div className="moe-session-title"><span className="moe-level-number" aria-hidden="true">{level}</span><div><h4>{learnerFocus ? LEVEL_PRESENTATION[level].title : title}</h4>{learnerFocus || level === 6 ? <span className="moe-club-level">Level {level}</span> : null}</div></div>
-            <ul className="moe-session-skills" aria-label={`Level ${level} skills`}>{LEVEL_PRESENTATION[level].skills.map(skill => <li key={skill.label}><strong>{skill.label}</strong><CourseSkillExample data={courseData} level={level} structureId={skill.exampleStructureId} fallback={skill.pattern} /></li>)}</ul>
+            <div className="moe-session-title"><span className="moe-level-number" aria-hidden="true">{level}</span><div><h4>{learnerFocus ? LEVEL_PRESENTATION[level].title : title}</h4><p className="moe-time">Level {level}<span aria-hidden="true"> · </span>{time}</p></div></div>
+            <ul className="moe-session-skills" aria-label={`Level ${level} skills`}>{LEVEL_PRESENTATION[level].skills.map(skill => <li key={skill.label}><svg aria-hidden="true" viewBox="0 0 20 20"><path d="m5 10 3 3 7-7" /></svg><span>{skill.label}</span></li>)}</ul>
+            <CoursePreviewExample data={courseData} {...COURSE_PREVIEWS[level]} />
             <p className="moe-session-price"><strong>{MOE_COURSE_PRICE_AMOUNT}</strong><span>per student</span></p>
             <a className="moe-description-button" href={moeLevelRoute(level)} aria-label={learnerFocus ? `Explore Level ${level} content` : `Level description for ${title}`}>{learnerFocus ? 'Explore the content' : 'Level description'}</a>
             <button type="button" onClick={() => onRegister(level, moeInterestContext(level))} aria-label={`Register interest in ${title}`}>Register interest</button>

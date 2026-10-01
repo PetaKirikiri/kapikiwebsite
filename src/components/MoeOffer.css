@@ -39,18 +39,16 @@
 .moe-session-4 { --session-color: var(--ka-teal); }
 .moe-session-5 { --session-color: var(--ka-ochre); }
 .moe-session-6 { --session-color: var(--ka-rose); }
-.moe-time { margin: 0 0 18px; color: var(--site-muted); font-size: 14px; font-variant-numeric: tabular-nums; }
-.moe-timetable-learner .moe-time { color: var(--site-ink, #213b35); font-size: 22px; font-weight: 700; line-height: 1.25; }
-.moe-session-title { display: flex; gap: 12px; align-items: center; min-height: 72px; }
+.moe-time { margin: 6px 0 0; color: var(--site-muted); font-size: 13px; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.moe-session-title { display: flex; gap: 12px; align-items: center; min-height: 82px; }
 .moe-level-number { position: relative; isolation: isolate; overflow: hidden; display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; background: var(--session-color); border-radius: 6px; color: #fff; font-size: 22px; font-weight: 650; }
-.moe-session-title h4 { margin: 0; font-size: 21px; line-height: 1.2; font-weight: 650; letter-spacing: -.02em; }
+.moe-session-title h4 { margin: 0; color: var(--site-ink, #213b35); font: 400 28px/1.15 var(--ka-heading); letter-spacing: -.02em; }
 .moe-club-level { display: block; margin-top: 3px; color: var(--site-muted); font-size: 12px; }
-.moe-session-skills { flex: 1; list-style: none; margin: 22px 0 26px; padding: 0; }
-.moe-session-skills > li { padding: 12px 0; border-bottom: 1px solid var(--ka-card-line); }
-.moe-session-skills > li:first-child { padding-top: 0; }
-.moe-session-skills > li:last-child { padding-bottom: 0; border-bottom: 0; }
-.moe-session-skills > li > strong { display: block; color: var(--site-ink, #213b35); font: 400 20px/1.2 var(--ka-heading); }
-.moe-session-skills > li > span { display: block; margin-top: 5px; color: var(--session-color); font-size: 14px; line-height: 1.5; }
+.moe-session-skills { list-style: none; margin: 22px 0; padding: 0; }
+.moe-session-skills > li { display: flex; align-items: baseline; gap: 9px; padding: 4px 0; color: var(--site-ink, #213b35); font-size: 14px; line-height: 1.45; }
+.moe-session-skills > li > svg { flex: 0 0 16px; width: 16px; height: 16px; align-self: center; fill: none; stroke: var(--session-color); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.moe-course-example { margin-top: auto; padding: 16px 0; border-top: 1px solid var(--ka-card-line); border-bottom: 1px solid var(--ka-card-line); min-width: 0; min-height: 144px; display: flex; flex-direction: column; justify-content: center; }
+.moe-example-maori { margin: 0; font-size: 20px; line-height: 1.5; color: var(--site-ink, #213b35); }
 .moe-session[tabindex="-1"]:focus { outline: none; }
 .moe-level-number::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url('../assets/header-taniko-watermark.svg') center / 80px 48px repeat; opacity: .3; }
 .moe-session > button, .moe-description-button { position: relative; isolation: isolate; overflow: hidden; flex-shrink: 0; display: block; width: 100%; min-height: 44px; padding: 11px 16px; border: 1px solid var(--session-color); border-radius: 6px; background: var(--session-color); color: #fff; font: inherit; font-size: 14px; font-weight: 650; text-align: center; text-decoration: none; cursor: pointer; }
@@ -174,3 +172,5 @@
 .moe-course-contact { max-width: 72ch; margin: 32px 0 0; background: transparent; border-color: var(--ka-card-line); color: var(--site-muted); }
 .moe-course-contact strong, .moe-course-contact a { color: var(--ka-green); }
 .moe-course-contact a:focus-visible { outline-color: var(--ka-green); }
+
+.moe-skill-translation { margin: 6px 0 0; font-size: 14px; font-weight: 400; line-height: 1.6; color: var(--site-muted, #5d6c63); }
