@@ -146,26 +146,31 @@
 
 .moe-skill-example { margin-top: 8px; min-width: 0; color: var(--site-ink, #213b35); }
 
-/* One reading order: introduction, outcomes, practical details, then classes. */
-.moe-intro-main { display: block; }
-.moe-practical { border-top: 1px solid var(--ka-card-line); background: #f3f6ef; }
-.moe-practical-summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 24px 32px 0; }
-.moe-practical .moe-start { padding: 0; border: 0; min-width: 0; align-content: start; }
-.moe-practical .moe-start > span, .moe-practical .moe-course-price > span { color: var(--site-muted); font-size: 13px; }
-.moe-practical .moe-start strong, .moe-practical .moe-course-price > strong { color: var(--ka-green); font: 400 24px/1.2 var(--ka-heading); }
-.moe-practical .moe-course-price { margin: 0; padding-left: 24px; border-left: 1px solid var(--ka-card-line); }
-.moe-practical .moe-support { border-top: 0; }
-.moe-practical .moe-support .moe-benefit-copy p { max-width: 48ch; }
-.moe-next-step { padding: 0 32px 24px; }
-.moe-next-step .moe-offer-jump { margin: 0; background: var(--ka-green); border-color: var(--ka-green); color: #fff; }
-.moe-next-step .moe-offer-jump:hover { filter: brightness(1.1); }
-.moe-next-step .moe-offer-jump:focus-visible { outline: 2px solid var(--ka-green); outline-offset: 4px; }
+/* Keep the next action with the introduction; supporting information stays quieter. */
+.moe-intro-main { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr); align-items: center; gap: 40px; }
+.moe-intro-cover .moe-offer-jump { display: inline-flex; align-items: center; gap: 28px; margin-top: 22px; padding: 14px 22px; background: #e8f5df; border-color: #e8f5df; color: var(--ka-green); font-size: 16px; font-weight: 650; }
+.moe-intro-cover .moe-offer-jump:hover { background: #fff; }
+.moe-intro-cover .moe-offer-jump:focus-visible { outline: 2px solid #e8f5df; outline-offset: 4px; }
+.moe-intake-details { border-left: 1px solid #bed3c44d; padding-left: 28px; color: var(--cover-ink); }
+.moe-intake-details p { margin: 0 0 16px; display: grid; gap: 3px; }
+.moe-intake-details p:last-child { margin-bottom: 0; }
+.moe-intake-details strong { font-size: 18px; font-weight: 600; line-height: 1.4; }
+.moe-intake-details span { color: #d9e5db; font-size: 13px; line-height: 1.5; }
+.moe-intro > .moe-support:has(> li:only-child) { display: block; padding-top: 16px; padding-bottom: 16px; }
+.moe-intro > .moe-support:has(> li:only-child) li { grid-template-columns: 32px minmax(0, 1fr); gap: 14px; }
+.moe-intro > .moe-support:has(> li:only-child) .moe-benefit-icon { width: 32px; height: 36px; }
+.moe-intro > .moe-support:has(> li:only-child) .moe-benefit-copy { display: grid; grid-template-columns: 1fr auto; column-gap: 24px; align-items: center; }
+.moe-intro > .moe-support:has(> li:only-child) h2 { font: 600 15px/1.4 var(--ka-body, sans-serif); }
+.moe-intro > .moe-support:has(> li:only-child) p { max-width: none; margin: 3px 0 0; }
+.moe-intro > .moe-support:has(> li:only-child) a { grid-column: 2; grid-row: 1 / 3; margin: 0; }
+@media (max-width: 750px) {
+ .moe-intro-main { grid-template-columns: 1fr; gap: 24px; }
+ .moe-intake-details { border-left: 0; border-top: 1px solid #bed3c44d; padding: 18px 0 0; display: flex; flex-wrap: wrap; gap: 16px 24px; }
+ .moe-intake-details p { margin: 0; }
+ .moe-intake-details strong { font-size: 15px; }
+ .moe-intro > .moe-support:has(> li:only-child) .moe-benefit-copy { display: flex; }
+ .moe-intro > .moe-support:has(> li:only-child) a { margin-top: 10px; }
+}
 .moe-course-contact { max-width: 72ch; margin: 32px 0 0; background: transparent; border-color: var(--ka-card-line); color: var(--site-muted); }
 .moe-course-contact strong, .moe-course-contact a { color: var(--ka-green); }
 .moe-course-contact a:focus-visible { outline-color: var(--ka-green); }
-@media (max-width: 650px) {
-  .moe-practical-summary { grid-template-columns: 1fr; padding: 20px 20px 0; gap: 18px; }
-  .moe-practical .moe-start { display: grid; gap: 6px; }
-  .moe-practical .moe-course-price { padding: 0; border: 0; }
-  .moe-next-step { padding: 0 20px 20px; }
-}

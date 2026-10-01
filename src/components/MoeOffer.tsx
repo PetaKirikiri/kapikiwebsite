@@ -28,8 +28,13 @@ export default function MoeOffer({ onRegister, content, courseData }: { courseDa
           <div className="moe-intro-copy">
             <h1 id="moe-heading">Te reo Māori classes</h1>
             <p className="moe-lead">{content?.lead ?? 'A complete learning programme for your team. Live teaching, bespoke digital activities, stories and games, with resources, app practice and progress support built in.'}</p>
+            <a className="moe-offer-jump" href={content?.action?.href ?? '#moe?timetable'}>Find your class <span aria-hidden="true">→</span></a>
           </div>
-
+          <div className="moe-intake-details" aria-label="Course dates, cost and commitment">
+            <p><span>Starts</span><strong><time dateTime="2026-10-12">12 October 2026</time></strong></p>
+            <p><span>Every course</span><strong>{MOE_COURSE_PRICE}</strong></p>
+            <p><strong>1 hour weekly · 10 weeks</strong><span>10 hours live online, plus app access</span></p>
+          </div>
         </div>
       </div>
       {(['format'] as const).map(group => <ul key={group} className="moe-facts" aria-label={content ? 'What you will gain' : 'Course format'}>
@@ -41,21 +46,14 @@ export default function MoeOffer({ onRegister, content, courseData }: { courseDa
           </div>
         </li> })}
       </ul>)}
-      <section className="moe-practical" aria-label="Course dates, cost and commitment">
-        <div className="moe-practical-summary">
-          <div className="moe-start"><span>Starts Monday</span><time dateTime="2026-10-12"><strong>12 October 2026</strong></time></div>
-          <div className="moe-course-price"><strong>{MOE_COURSE_PRICE}</strong><span>Same price for every course.</span></div>
-        </div>
         <ul className="moe-facts moe-support" aria-label="Class format and app access">
-          {(content?.benefits ?? originalBenefits).filter(benefit => benefit.group === 'support').map(benefit => <li key={benefit.id}>
+          {(content?.benefits ?? originalBenefits).filter(benefit => benefit.group === 'support' && (!content?.learnerClasses || benefit.id !== 'live-classes')).map(benefit => <li key={benefit.id}>
             <span className="moe-benefit-icon" aria-hidden="true"><MoeBenefitIcon id={benefit.icon ?? benefit.id} /></span>
             <div className="moe-benefit-copy"><h2>{benefit.label}</h2><p>{benefit.summary}</p>
               {benefit.action ? <a className="moe-benefit-button" href={benefit.action.href}>{benefit.action.label}</a> : null}
             </div>
           </li>)}
         </ul>
-        <div className="moe-next-step"><a className="moe-offer-jump" href={content?.action?.href ?? '#moe?timetable'}>{content?.action?.label ?? 'Find your class'}</a></div>
-      </section>
     </header>
     <MoeTimetable courseData={courseData} onRegister={onRegister} learnerFocus={content?.learnerClasses} />
             <aside className="moe-policy-message moe-course-contact" aria-label="About these classes and contact"><strong>Te reo Māori classes for the MOE network</strong><span>The Policy Group has been hosting te reo Māori classes for the past 10 years and has developed six levels for students. These classes are now open to anyone within the MOE network.</span><span>Please forward any further questions to Esther Boyle.</span><span>Contact: <a href="mailto:Esther.Boyle@education.govt.nz">Esther.Boyle@education.govt.nz</a></span></aside>
