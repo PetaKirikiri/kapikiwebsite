@@ -140,6 +140,8 @@
 .moe-course-price > strong { display: block; font-size: 24px; font-weight: 600; }
 .moe-course-price > span { display: block; margin-top: 4px; font-size: 14px; color: #d9e5db; }
 .moe-course-price p { margin: 8px 0 0; max-width: 58ch; font-size: 15px; line-height: 1.5; color: #d9e5db; }
-.moe-session-price { margin: 18px 0 0; color: var(--ka-green); font-size: 16px; font-weight: 600; }
+.moe-session-price { display: flex; justify-content: center; align-items: baseline; gap: 7px; margin: 10px 0 18px; color: var(--ka-green); line-height: 1.3; }
+.moe-session-price strong { font: 400 24px/1.3 var(--ka-heading); }
+.moe-session-price span { color: var(--site-muted, #5d6c63); font-size: 13px; font-weight: 400; }
 
 .moe-skill-example { margin-top: 8px; min-width: 0; color: var(--site-ink, #213b35); }
