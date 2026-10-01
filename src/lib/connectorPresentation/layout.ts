@@ -28,6 +28,7 @@ export function planWordLayout(
   rightEnd?: 'send' | 'accept' | 'cap' | null,
   rightRail?: 'green' | 'yellow' | 'off' | null,
   presentation?: { standalone?: boolean; attachNext?: boolean; separateAfter?: boolean; flatEnding?: boolean; face?: unknown; incomingJoin?: unknown },
+  continuousRail = false,
 ) {
   // Faces are centred on shared word boundaries and may extend into both
   // neighbouring materials. Do not make a short word reserve a complete face:
@@ -47,7 +48,7 @@ export function planWordLayout(
   // A standalone terminal already keeps its whole face inside its own word
   // slot, so it only needs the visible inter-section gap. Reserving another
   // half-face here makes negative sections look detached from what follows.
-  const gapAfter = joinsNext ? 0
+  const gapAfter = (continuousRail && hasNextWord) || joinsNext ? 0
     : presentation?.flatEnding || (presentation?.standalone && presentation.separateAfter)
       ? visibleBlockGap
       : CONNECTOR_RAIL_LAYOUT.wordGap

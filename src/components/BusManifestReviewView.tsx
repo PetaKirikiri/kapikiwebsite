@@ -99,6 +99,7 @@ type PosPickerCategory = NonNullable<
 >[number]
 
 export type BusManifestReviewViewProps = {
+  readonly continuousRail?: boolean
   readonly onWordExplain?: (target: WordSupportTarget) => void
   readonly presentation?: 'connectors' | 'pos-annotations'
   readonly highlightedTokenIndex?: number
@@ -688,6 +689,7 @@ const KORU_STORY_CONNECTION_WIDTH_PX = CONNECTOR_RAIL_LAYOUT.connectionWidth
 const KORU_STORY_END_WIDTH_PX = CONNECTOR_RAIL_LAYOUT.connectionWidth
 export default function BusManifestReviewView({
   onWordExplain,
+  continuousRail = false,
   highlightedTokenIndex,
   presentation = 'connectors',
   presentationStates,
@@ -1036,6 +1038,7 @@ export default function BusManifestReviewView({
             control.passageIndex === paragraphIndex,
           ) ?? null
           const sentencePlan = presentSentence({
+            continuousRail: readOnly && continuousRail,
             text: tokens.map(token => token.text).join(' '), state: visibleState,
             families: familyByPosCode, library: connectorLibrary, rules: patternSettings.rules,
             textWidths: tokens.map((_, index) => wordEnds.get(`${paragraphIndex}:${index}`) ?? 0),

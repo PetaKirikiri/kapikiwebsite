@@ -20,6 +20,7 @@ export function presentSentence(input: {
   families: ReadonlyMap<string, string>
   library: ConnectorLibrary
   rules?: readonly PatternRule[]
+  continuousRail?: boolean
   textWidths?: readonly number[]
 }) {
   const state = busManifestSheetSchema.parse(input.state ?? unresolvedSentence(input.text))
@@ -27,13 +28,13 @@ export function presentSentence(input: {
   if (state.tokens.length !== words.length || state.tokens.some((token, i) => token.surfaceText !== words[i]?.surfaceText)) {
     throw new Error('Sentence text and tagging state do not match.')
   }
-  const plans = projectSentenceConnectors(state.tokens, input.families, input.library, input.rules)
+  const plans = projectSentenceConnectors(state.tokens, input.families, input.library, input.rules, input.continuousRail)
   return { version: 1 as const, state, words: plans.map((presentation, index) => ({
     text: state.tokens[index]!.surfaceText,
     presentation,
     support: wordSupportTarget(state.tokens[index]!.surfaceText, state.tokens[index]!.acceptedPosCode, { sentence: input.text, state, tokenIndex: index, color: presentation.materialColor }),
     layout: planWordLayout(input.textWidths?.[index] ?? 0, index < words.length - 1,
-      presentation.rightConnectorEnd, state.tokens[index]!.rightRail, presentation),
+      presentation.rightConnectorEnd, state.tokens[index]!.rightRail, presentation, input.continuousRail),
   })) }
 }
 

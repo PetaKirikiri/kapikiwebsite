@@ -14,7 +14,7 @@ export function CoursePreviewExample({ data, textMi, textEn }: {
   const state = saved ?? LEVEL_READING_ANNOTATIONS.find(item => item.textMi === textMi)?.state
   const matches = state?.tokens.map(token => token.surfaceText).join(' ') === textMi
   return <div className="moe-course-example">
-    {data && state && matches ? <FamilyConnectorSentenceView displaySize="compact" loading={false}
+    {data && state && matches ? <FamilyConnectorSentenceView displaySize="compact" loading={false} continuousRail
       paragraphs={[renderUnassessedPassage(textMi)]} savedBusManifests={[]}
       presentationStates={[state]} passageAddresses={[]} posCatalog={data.catalog} onBusManifestWrite={noWrite}
       showPassageSearch={false} showPassageLabel={false} showPosTags={false} readOnly

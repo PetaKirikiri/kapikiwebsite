@@ -155,7 +155,7 @@ function endsHeAhaQuestionLead(tokens: BusManifestSheet['tokens'], index: number
     && tokens[1]?.surfaceText.toLocaleLowerCase('mi-NZ') === 'aha'
 }
 
-export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], families: ReadonlyMap<string, string>, library: ConnectorLibrary, rules: readonly PatternRule[] = []) {
+export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], families: ReadonlyMap<string, string>, library: ConnectorLibrary, rules: readonly PatternRule[] = [], continuousRail = false) {
   const markerRoleAt = (index: number): 'send' | 'accept' | null => tokens[index]?.acceptedPosCode === 'agent_marker'
     ? 'accept' : ['object_marker', 'target_marker'].includes(tokens[index]?.acceptedPosCode ?? '') ? 'send' : null
   const markerBlueprintAt = (index: number) => markerRoleAt(index)
@@ -210,7 +210,7 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
       ? `Pattern conflict between ${token.surfaceText} and ${next.surfaceText}: the selected left and right connectors do not mate.` : null
     const planned = blueprint && ends.rightConnectorEnd ? planConnectorFace(library, blueprint,
       endsNegativeSection ? 'accept' : ends.rightConnectorEnd === 'cap' ? exposedRole : ends.rightConnectorEnd,
-      left, attachNegative ? right : ends.rightConnectorEnd === 'cap' || endsNegativeSection ? CONNECTOR_PAGE_BACKGROUND : right) : null
+      left, attachNegative || (continuousRail && next != null) ? right : ends.rightConnectorEnd === 'cap' || endsNegativeSection ? CONNECTOR_PAGE_BACKGROUND : right) : null
     const face: ConnectorFacePlan | null = continuesSection ? null : planned && conflict
       ? { blueprintId: planned.blueprintId, role: planned.role, label: conflict, status: 'unavailable', reason: conflict } : planned
     const continuesPreviousSection = sharesContinuousSection(previous, token)
