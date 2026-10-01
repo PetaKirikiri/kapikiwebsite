@@ -37,3 +37,7 @@
 .signup-admin-footnote { font-size: 13px; }
 .signup-admin-error { margin: 0 32px 24px; background: #fff0ec; color: #863d2a; padding: 16px; border-radius: 7px; }
 @media(max-width:700px) { .signup-admin { padding: 20px 12px; }.signup-admin-cover { padding: 24px; }.signup-admin h1 { font-size: 34px; }.signup-admin-counts { grid-template-columns: repeat(4,1fr); padding: 16px; }.signup-admin-toolbar { padding: 24px 20px 12px; }.signup-admin-class { margin: 0 20px 28px; }.signup-admin-results { margin-left: 20px; }.signup-admin-heading { align-items: end; } }
+
+.signup-admin-views { display: flex; gap: 8px; padding: 24px 32px 0; }
+.signup-admin-views button[aria-pressed=true] { background: #214b3d; border-color: #214b3d; color: #f1f3eb; }
+.signup-admin .signup-admin-row-action { padding: 8px 12px; font-size: 13px; white-space: nowrap; }
