@@ -1,3 +1,4 @@
+import type { WebsitePreviewData } from './WebsiteView'
 import type { CurriculumLevel } from '../lib/sentenceStructureLevels'
 import MoeOffer, { type MoeOfferContent } from './MoeOffer'
 
@@ -17,6 +18,6 @@ const content: MoeOfferContent = {
   ],
 }
 
-export default function MoeOfferV2({ onRegister }: { onRegister: (level: CurriculumLevel, context: string) => void }) {
-  return <MoeOffer content={content} onRegister={onRegister} />
+export default function MoeOfferV2({ onRegister, courseData }: { courseData?: WebsitePreviewData | null; onRegister: (level: CurriculumLevel, context: string) => void }) {
+  return <MoeOffer courseData={courseData} content={content} onRegister={onRegister} />
 }

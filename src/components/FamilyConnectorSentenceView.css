@@ -5,3 +5,7 @@
 .connector-sentence-fit-content [data-testid^="passage-"] { padding: 0; border: 0; border-radius: 0; }
 @media (max-width: 1100px) { .connector-sentence-teaching { zoom: 1.8; } }
 @media (max-width: 760px) { .connector-sentence-teaching { zoom: 1.2; } }
+
+/* Compact examples scale the complete shared sentence, preserving its rail geometry. */
+.connector-sentence-compact { zoom: .875; }
+.connector-sentence-compact [data-testid^="passage-"] { margin: 0; padding: 0; border: 0; border-radius: 0; }

@@ -4,7 +4,7 @@ import BusManifestReviewView, {
 import './FamilyConnectorSentenceView.css'
 import { useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 
-type Props = BusManifestReviewViewProps & { readonly displaySize?: 'default' | 'teaching' | 'fit' }
+type Props = BusManifestReviewViewProps & { readonly displaySize?: 'default' | 'teaching' | 'fit' | 'compact' }
 
 function FittedSentence({ children }: { children: ReactNode }) {
   const frame = useRef<HTMLDivElement>(null)
@@ -32,6 +32,7 @@ function FittedSentence({ children }: { children: ReactNode }) {
  */
 export default function FamilyConnectorSentenceView({ displaySize = 'default', ...props }: Props) {
   if (displaySize === 'default') return <BusManifestReviewView {...props} />
+  if (displaySize === 'compact') return <div className="connector-sentence-compact"><BusManifestReviewView {...props} /></div>
   if (displaySize === 'fit') return <FittedSentence><BusManifestReviewView {...props} /></FittedSentence>
   return <div className="connector-sentence-teaching"><BusManifestReviewView {...props} /></div>
 }

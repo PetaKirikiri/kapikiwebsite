@@ -46,16 +46,16 @@
 .moe-session-title h4 { margin: 0; font-size: 21px; line-height: 1.2; font-weight: 650; letter-spacing: -.02em; }
 .moe-club-level { display: block; margin-top: 3px; color: var(--site-muted); font-size: 12px; }
 .moe-session-skills { flex: 1; list-style: none; margin: 22px 0 26px; padding: 0; }
-.moe-session-skills li { padding: 12px 0; border-bottom: 1px solid var(--ka-card-line); }
-.moe-session-skills li:first-child { padding-top: 0; }
-.moe-session-skills li:last-child { padding-bottom: 0; border-bottom: 0; }
-.moe-session-skills strong { display: block; color: var(--site-ink, #213b35); font: 400 20px/1.2 var(--ka-heading); }
-.moe-session-skills span { display: block; margin-top: 5px; color: var(--session-color); font-size: 14px; line-height: 1.5; }
+.moe-session-skills > li { padding: 12px 0; border-bottom: 1px solid var(--ka-card-line); }
+.moe-session-skills > li:first-child { padding-top: 0; }
+.moe-session-skills > li:last-child { padding-bottom: 0; border-bottom: 0; }
+.moe-session-skills > li > strong { display: block; color: var(--site-ink, #213b35); font: 400 20px/1.2 var(--ka-heading); }
+.moe-session-skills > li > span { display: block; margin-top: 5px; color: var(--session-color); font-size: 14px; line-height: 1.5; }
 .moe-session[tabindex="-1"]:focus { outline: none; }
 .moe-level-number::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url('../assets/header-taniko-watermark.svg') center / 80px 48px repeat; opacity: .3; }
-.moe-session button, .moe-description-button { position: relative; isolation: isolate; overflow: hidden; flex-shrink: 0; display: block; width: 100%; min-height: 44px; padding: 11px 16px; border: 1px solid var(--session-color); border-radius: 6px; background: var(--session-color); color: #fff; font: inherit; font-size: 14px; font-weight: 650; text-align: center; text-decoration: none; cursor: pointer; }
-.moe-session button:hover { filter: brightness(1.1); text-decoration: none; }
-.moe-session button:active { filter: brightness(.95); }
+.moe-session > button, .moe-description-button { position: relative; isolation: isolate; overflow: hidden; flex-shrink: 0; display: block; width: 100%; min-height: 44px; padding: 11px 16px; border: 1px solid var(--session-color); border-radius: 6px; background: var(--session-color); color: #fff; font: inherit; font-size: 14px; font-weight: 650; text-align: center; text-decoration: none; cursor: pointer; }
+.moe-session > button:hover { filter: brightness(1.1); text-decoration: none; }
+.moe-session > button:active { filter: brightness(.95); }
 @media (max-width: 800px) { .moe-timetable { grid-template-columns: 1fr; } .moe-day-sessions { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; padding: 0; } .moe-session { padding: 24px; } .moe-session + .moe-session { border-top: 0; border-left: 1px solid var(--ka-card-line); } }
 @media (max-width: 460px) { .moe-day-sessions { display: block; } .moe-session + .moe-session { border-left: 0; border-top: 1px solid var(--ka-card-line); } }
 
@@ -83,7 +83,7 @@
 
 .moe-description-button { margin-bottom: 10px; background: transparent; color: var(--session-color); box-sizing: border-box; }
 .moe-description-button:hover { background: #214b3d0a; text-decoration: none; }
-.moe-session button:focus-visible, .moe-description-button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.moe-session > button:focus-visible, .moe-description-button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
 .site-learning.moe-level-page .site-level-signup { padding: 11px 20px; border: 1px solid var(--ka-green); border-radius: 6px; background: var(--ka-green); color: #fff; text-decoration: none; }
 
@@ -99,7 +99,7 @@
 @media (max-width: 650px) { .moe-support li:nth-child(even) { padding-left: 12px; } }
 @media (max-width: 380px) { .moe-support li:nth-child(even) { padding-left: 8px; } }
 
-.moe-session button::before, .moe-description-button::before {
+.moe-session > button::before, .moe-description-button::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -141,3 +141,5 @@
 .moe-course-price > span { display: block; margin-top: 4px; font-size: 14px; color: #d9e5db; }
 .moe-course-price p { margin: 8px 0 0; max-width: 58ch; font-size: 15px; line-height: 1.5; color: #d9e5db; }
 .moe-session-price { margin: 18px 0 0; color: var(--ka-green); font-size: 16px; font-weight: 600; }
+
+.moe-skill-example { margin-top: 8px; min-width: 0; color: var(--site-ink, #213b35); }
