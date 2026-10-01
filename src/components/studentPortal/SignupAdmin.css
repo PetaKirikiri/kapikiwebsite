@@ -41,3 +41,8 @@
 .signup-admin-views { display: flex; gap: 8px; padding: 24px 32px 0; }
 .signup-admin-views button[aria-pressed=true] { background: #214b3d; border-color: #214b3d; color: #f1f3eb; }
 .signup-admin .signup-admin-row-action { padding: 8px 12px; font-size: 13px; white-space: nowrap; }
+
+.signup-admin-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: start; }
+.signup-admin-move { display: grid; gap: 8px; min-width: 140px; }
+.signup-admin-move select { min-height: 44px; width: 100%; border: 1px solid #b8c8bc; border-radius: 7px; padding: 8px; background: white; color: #213b35; font: inherit; }
+.signup-admin-move > div { display: flex; gap: 6px; }

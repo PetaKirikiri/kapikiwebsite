@@ -81,3 +81,22 @@ test('missing records and write failures are not reported as success', async () 
   const r = await run({ method: 'PATCH', body: { id, action: 'remove' }, fail: true })
   assert.equal(r.status, 503); assert.doesNotMatch(JSON.stringify(r.body), /password/)
 })
+test('moves only an active MOE signup at the expected level and rejects duplicates', async () => {
+  const r = await run({ method: 'PATCH', body: { id, action: 'move', fromLevel: 2, level: 3 } })
+  assert.equal(r.status, 200)
+  assert.equal(r.body.registration.selected_level, 3)
+  assert.deepEqual(r.calls[0].values, [id, 3, 2])
+  assert.match(r.calls[0].sql, /signup\.selected_level = \$3/)
+  assert.match(r.calls[0].sql, /signup\.removed_at is null/)
+  assert.match(r.calls[0].sql, /not exists/)
+  assert.match(r.calls[0].sql, /lower\(trim\(other.email\)\)/)
+  assert.doesNotMatch(r.calls[0].sql, /set email|set created_at|delete from/)
+  assert.equal((await run({ method: 'PATCH', body: { id, action: 'move', fromLevel: 2, level: 3 }, found: false })).status, 409)
+})
+test('invalid or unchanged destination levels do not write', async () => {
+  for (const level of [0, 7, 2, 2.5, '3', null]) {
+    const r = await run({ method: 'PATCH', body: { id, action: 'move', fromLevel: 2, level } })
+    assert.equal(r.status, 400); assert.equal(r.calls.length, 0)
+  }
+  assert.equal((await run({ method: 'PATCH', body: { id, action: 'move', level: 3 } })).status, 400)
+})

@@ -37,9 +37,21 @@ export function createSignupAdminHandler({ query }) {
         }
         body = JSON.parse(Buffer.concat(chunks).toString('utf8'))
       }
-      if (!body || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(body.id) || !['remove', 'restore'].includes(body.action)) throw Error('Invalid request')
+      if (!body || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(body.id) || !['remove', 'restore', 'move'].includes(body.action)) throw Error('Invalid request')
+      if (body.action === 'move' && (!Number.isInteger(body.level) || body.level < 1 || body.level > 6 || !Number.isInteger(body.fromLevel) || body.fromLevel < 1 || body.fromLevel > 6 || body.level === body.fromLevel)) throw Error('Invalid level')
     } catch { return json(400, { error: 'Choose a valid signup and action.' }) }
     try {
+      if (body.action === 'move') {
+        const result = await query(`update public.kp_course_interest as signup set selected_level = $2
+          where signup.id = $1::uuid and signup.goals like 'MOE ·%' and signup.removed_at is null
+            and signup.selected_level = $3
+            and not exists (select 1 from public.kp_course_interest other
+              where lower(trim(other.email)) = lower(trim(signup.email)) and other.id <> signup.id
+                and other.selected_level = $2 and other.removed_at is null and other.goals like 'MOE ·%')
+          returning signup.id, signup.name, signup.email, signup.selected_level, signup.created_at, signup.department_group`, [body.id, body.level, body.fromLevel])
+        if (!result.rows.length) return json(409, { error: 'The signup has changed, or this person already has a signup at that level. Refresh the list; remove the older signup if both are listed.' })
+        return json(200, { saved: true, registration: result.rows[0] })
+      }
       const result = await query(`update public.kp_course_interest
         set removed_at = ${body.action === 'remove' ? 'coalesce(removed_at, now())' : 'null'}
         where id = $1::uuid and goals like 'MOE ·%' returning id`, [body.id])

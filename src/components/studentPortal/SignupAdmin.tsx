@@ -33,6 +33,21 @@ export default function SignupAdmin() {
     } catch (error) { setError(error instanceof Error ? error.message : 'The change could not be saved.') }
     finally { setBusy(false) }
   }
+  async function moveRegistration(row: Registration, level: number) {
+    setBusy(true); setError(''); setNotice('')
+    try {
+      const response = await fetch('/__signup_admin', {
+        method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: row.id, action: 'move', level, fromLevel: row.selected_level }),
+      })
+      const result = await response.json()
+      if (!response.ok) throw new Error(result.error || 'The level could not be changed.')
+      setRows(current => current.map(item => item.id === row.id ? result.registration : item))
+      setNotice(`${row.name} moved from Level ${row.selected_level} to Level ${level}.`)
+      setRefresh(value => value + 1)
+    } catch (error) { setError(error instanceof Error ? error.message : 'The level could not be changed.') }
+    finally { setBusy(false) }
+  }
   const [loadedAt, setLoadedAt] = useState<Date | null>(null)
   useEffect(() => {
     const controller = new AbortController()
@@ -58,13 +73,13 @@ export default function SignupAdmin() {
         <button aria-pressed={removed} disabled={busy} onClick={() => { setRemoved(true); setNotice('') }}>Removed</button>
       </div>
       {notice && <p className="signup-admin-notice" role="status">{notice}</p>}
-      <SignupRoster rows={loading ? [] : rows} loading={loading || busy} loadedAt={loading ? null : loadedAt} removed={removed} onChange={changeRegistration} onRefresh={() => setRefresh(value => value + 1)} />
+      <SignupRoster rows={loading ? [] : rows} loading={loading || busy} loadedAt={loading ? null : loadedAt} removed={removed} onChange={changeRegistration} onMove={moveRegistration} onRefresh={() => setRefresh(value => value + 1)} />
       {error && <p className="signup-admin-error" role="alert">{error}</p>}
     </section>
   </main>
 }
 
-export function SignupRoster({ rows, loading, loadedAt, onRefresh, removed = false, onChange }: { rows: Registration[]; loading: boolean; loadedAt: Date | null; onRefresh: () => void; removed?: boolean; onChange?: (row: Registration) => void }) {
+export function SignupRoster({ rows, loading, loadedAt, onRefresh, removed = false, onChange, onMove }: { rows: Registration[]; loading: boolean; loadedAt: Date | null; onRefresh: () => void; removed?: boolean; onChange?: (row: Registration) => void; onMove?: (row: Registration, level: number) => void }) {
   const [search, setSearch] = useState('')
   const [level, setLevel] = useState(0)
   const filtered = useMemo(() => rows.filter(row => (!level || row.selected_level === level) && `${row.name} ${row.email} ${row.department_group || ''}`.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase())), [rows, level, search])
@@ -83,10 +98,23 @@ export function SignupRoster({ rows, loading, loadedAt, onRefresh, removed = fal
             <div className="signup-admin-table"><table><thead><tr><th scope="col">Name</th><th scope="col">Email</th><th scope="col">Department / group</th><th scope="col">Signed up</th>{onChange && <th scope="col">Action</th>}</tr></thead><tbody>{people.map(row => <tr key={row.id}>
               <th scope="row">{row.name}{(duplicateEmails.get(row.email.toLowerCase()) || 0) > 1 && <small>Repeat email</small>}</th>
               <td><a href={`mailto:${row.email}`}>{row.email}</a></td><td>{row.department_group || '—'}</td><td><time dateTime={row.created_at}>{date.format(new Date(row.created_at))}</time></td>
-              {onChange && <td><button className="signup-admin-row-action" disabled={loading} aria-label={`${removed ? 'Restore' : 'Remove'} ${row.name} — ${item.title}`} onClick={() => onChange(row)}>{removed ? 'Restore' : 'Remove'}</button></td>}
+              {onChange && <td><div className="signup-admin-actions">{!removed && onMove && <MoveLevel row={row} disabled={loading} onMove={onMove} />}<button className="signup-admin-row-action" disabled={loading} aria-label={`${removed ? 'Restore' : 'Remove'} ${row.name} — ${item.title}`} onClick={() => onChange(row)}>{removed ? 'Restore' : 'Remove'}</button></div></td>}
             </tr>)}</tbody></table></div>
           </section>
         })}
         {loadedAt && <p className="signup-admin-footnote">Registrations of interest. Class places are not yet confirmed.</p>}
   </>
+}
+
+function MoveLevel({ row, disabled, onMove }: { row: Registration; disabled: boolean; onMove: (row: Registration, level: number) => void }) {
+  const [editing, setEditing] = useState(false)
+  const [level, setLevel] = useState(row.selected_level)
+  if (!editing) return <button className="signup-admin-row-action" disabled={disabled} onClick={() => setEditing(true)} aria-label={`Move ${row.name} to another level`}>Move level</button>
+  return <form className="signup-admin-move" onSubmit={event => { event.preventDefault(); onMove(row, level) }}>
+    <label>Move to<select aria-label={`New level for ${row.name}`} value={level} disabled={disabled} onChange={event => setLevel(Number(event.target.value))}>
+      {classes.map(item => <option key={item.level} value={item.level}>{item.title}</option>)}
+    </select></label>
+    <div><button className="signup-admin-row-action" type="submit" disabled={disabled || level === row.selected_level}>Save</button>
+    <button className="signup-admin-row-action" type="button" disabled={disabled} onClick={() => setEditing(false)}>Cancel</button></div>
+  </form>
 }
