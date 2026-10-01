@@ -14,7 +14,9 @@ export function liveApi(upstream, serviceKey = '') {
     }
     try {
       let body
-      if (pathname === '/__website_preview_data') {
+      if (req.method === 'GET' && ['/__connector_shapes', '/__connector_patterns'].includes(pathname)) {
+        // Public display reads retain their explicit snapshot selection.
+      } else if (pathname === '/__website_preview_data') {
         if (req.method !== 'GET') throw new Error('GET required')
       } else {
         if (req.method !== 'POST') throw new Error('POST required')
@@ -37,7 +39,7 @@ export function liveApi(upstream, serviceKey = '') {
           body = JSON.stringify({ textMi: input.textMi })
         }
       }
-      const response = await fetch(new URL(pathname, base), {
+      const response = await fetch(new URL(req.url, base), {
         method: req.method,
         headers: {
           'content-type': 'application/json',
@@ -48,7 +50,7 @@ export function liveApi(upstream, serviceKey = '') {
         redirect: 'error',
       })
       if (!(response.headers.get('content-type') ?? '').includes('application/json')) throw new Error('Course service returned an invalid response')
-      res.writeHead(response.status, { 'content-type': 'application/json', 'cache-control': 'no-store' })
+      res.writeHead(response.status, { 'content-type': 'application/json', 'cache-control': response.headers.get('cache-control') ?? 'no-store' })
       Readable.fromWeb(response.body).pipe(res)
     } catch (error) {
       if (!res.headersSent) res.writeHead(502, { 'content-type': 'application/json', 'cache-control': 'no-store' })

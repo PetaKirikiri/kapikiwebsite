@@ -9,7 +9,7 @@ function database() {
  return pool
 }
 export async function trainingApi(req,res) {
- const json=(status,body)=>{res.writeHead(status,{'content-type':'application/json','cache-control':'no-store'});res.end(JSON.stringify(body))}
+ const json=(status,body,cache='no-store')=>{res.writeHead(status,{'content-type':'application/json','cache-control':cache});res.end(JSON.stringify(body))}
  try {
   const url=new URL(req.url,'https://app.local'); const route=url.searchParams.get('route') || url.pathname.split('/').pop()
   const host=req.headers.host; const origin=req.headers.origin
@@ -40,6 +40,20 @@ export async function trainingApi(req,res) {
     db.query('select category_code as "categoryCode",label,description from public.word_category order by sort_order')
    ])
    return json(200,{sentences:sentences.rows,catalog:{groups:groups.rows,posTypes:types.rows,dictionaryPosLabels:labels.rows,dictionaryPosMappings:mappings.rows,wordCategories:categories.rows}})
+  }
+  if(route==='__connector_shapes' && req.method==='GET') {
+   const raw=url.searchParams.get('ids')??''
+   if(!/^\d{1,16}(,\d{1,16}){0,31}$/.test(raw))return json(400,{error:'Choose approved snapshot IDs.'})
+   const ids=raw.split(',').map(Number)
+   if(ids.some(id=>!Number.isSafeInteger(id)||id<=0)||new Set(ids).size!==ids.length)return json(400,{error:'Invalid snapshot IDs.'})
+   const shapes=(await db.query('select shape from public.connector_shape where id = any($1::bigint[]) order by id',[ids])).rows.map(row=>row.shape)
+   if(shapes.length!==ids.length)return json(404,{error:'An approved connector snapshot is missing.'})
+   return json(200,{shapes},'public, max-age=31536000, s-maxage=31536000, immutable')
+  }
+  if(route==='__connector_patterns' && req.method==='GET') {
+   const installed=(await db.query("select to_regclass('public.connector_pattern_setting') is not null as installed")).rows[0].installed
+   const rules=installed?(await db.query('select pattern_key,revision,value from public.connector_pattern_setting order by pattern_key')).rows.map(row=>({key:row.pattern_key,revision:row.revision,...row.value})):[]
+   return json(200,{installed,rules},'public, max-age=0, s-maxage=60, stale-while-revalidate=300')
   }
   if(['__connector_shapes','__connector_patterns'].includes(route)) {
    if(req.method!=='POST')return json(405,{error:'POST required.'})

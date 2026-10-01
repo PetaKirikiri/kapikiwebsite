@@ -1,3 +1,4 @@
+import { useConnectorDrawingSymbols } from './ConnectorDrawingSymbols'
 import {
   assertLockedPatternDrawing,
   type LockedPatternDrawing,
@@ -14,6 +15,8 @@ export default function PatternDrawer({
   drawerTestId?: string
   ariaLabel: string
 }>) {
+  const symbols = useConnectorDrawingSymbols()
+  const symbol = symbols?.get(drawing.path)
   assertLockedPatternDrawing(drawing)
   return (
     <svg
@@ -28,7 +31,8 @@ export default function PatternDrawer({
       role="img"
       aria-label={ariaLabel}
     >
-      <path data-testid={testId} d={drawing.path} {...drawing.drawing} />
+      {symbol ? <use data-testid={testId} href={`#${symbol}`} {...drawing.drawing} />
+        : <path data-testid={testId} d={drawing.path} {...drawing.drawing} />}
     </svg>
   )
 }

@@ -101,8 +101,12 @@ export type CompiledFace = Readonly<{
 }> | Readonly<{ status: 'unavailable'; reason: string }>
 export type ConnectorLibrary = ReadonlyMap<ConnectorBlueprintId, Readonly<Record<ConnectingRole, CompiledFace>>>
 
+const compiledLibraries = new WeakMap<readonly LockedDesign[], ConnectorLibrary>()
+
 export function compileConnectorLibrary(collection: readonly LockedDesign[]): ConnectorLibrary {
-  return new Map(CONNECTOR_BLUEPRINTS.map((blueprint) => {
+  const cached = compiledLibraries.get(collection)
+  if (cached) return cached
+  const library: ConnectorLibrary = new Map(CONNECTOR_BLUEPRINTS.map((blueprint) => {
     const compile = (role: ConnectingRole): CompiledFace => {
       const face = blueprint.faces[role]
       if (face == null) return { status: 'unavailable', reason: `${blueprint.label}: no saved ${role} face is approved.` }
@@ -122,4 +126,6 @@ export function compileConnectorLibrary(collection: readonly LockedDesign[]): Co
     }
     return [blueprint.id, { send: compile('send'), accept: compile('accept') }] as const
   }))
+  compiledLibraries.set(collection, library)
+  return library
 }

@@ -1,3 +1,5 @@
+import ConnectorDrawingSymbols from './ConnectorDrawingSymbols'
+import { refreshConnectorPatterns } from '../lib/connectorPresentation/patternStore'
 import { readWebsiteJson } from '../lib/websiteData'
 import { readWebsiteCourse, subscribeToWebsiteCourse } from '../lib/websiteCourseData'
 import LevelCourseOverview from './LevelCourseOverview'
@@ -91,7 +93,13 @@ function demoManifest(
   }
 }
 
-export default function WebsiteView({
+export default function WebsiteView(props: WebsiteViewProps = {}) {
+  return import.meta.env.VITE_DB_ONLY === 'true'
+    ? <ConnectorDrawingSymbols><WebsiteContent {...props} /></ConnectorDrawingSymbols>
+    : <WebsiteContent {...props} />
+}
+
+function WebsiteContent({
   intakeVersion = 2,
   localData,
   localError = null,
@@ -117,6 +125,8 @@ export default function WebsiteView({
   const surface = route.surface
   const link = (path: string) => contextualRoute(moeRoute, path)
   const registrationContext = moeRoute ? moeInterestContext(selectedLevel) : interestContext
+  const needsPractice = surface === '#practice' || route.tab === 'practice' || activeSection.startsWith('#training')
+    || ['app', 'learning-support'].includes(moeBenefit?.id ?? '')
   const Offer = intakeVersion === 2 ? MoeOfferV2 : MoeOffer
   useEffect(() => installWebsiteNavigation(section => {
     setActiveSection(section)
@@ -130,6 +140,7 @@ export default function WebsiteView({
 
   useEffect(() => {
     if (connectedLocally) return
+    if (import.meta.env.VITE_DB_ONLY === 'true') void refreshConnectorPatterns()
     let active = true
     const unsubscribe = subscribeToWebsiteCourse(course => {
       if (active) { setFetchedData(course); setFetchError(null) }
@@ -143,14 +154,14 @@ export default function WebsiteView({
   }, [connectedLocally, loadAttempt])
 
   useEffect(() => {
-    if (connectedLocally) return
+    if (connectedLocally || !needsPractice) return
     const controller = new AbortController()
     // Independent of the course read: practice must not extend the lesson waterfall.
     void readWebsiteJson<{ content: typeof trainingContent }>('/__training_content', controller.signal)
       .then(({ content }) => { if (!controller.signal.aborted) { setTrainingContent(content); setTrainingError(null) } })
       .catch(() => { if (!controller.signal.aborted) setTrainingError('Practice content is temporarily unavailable. Please try again.') })
     return () => controller.abort()
-  }, [connectedLocally, loadAttempt])
+  }, [connectedLocally, loadAttempt, needsPractice])
 
   const data = useMemo(() => {
     if (connectedLocally) return localData

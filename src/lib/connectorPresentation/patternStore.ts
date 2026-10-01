@@ -9,8 +9,11 @@ function publish(next: Snapshot) { snapshot = next; listeners.forEach((listener)
 export const getPatternSnapshot = () => snapshot
 export function subscribePatternSnapshot(listener: () => void) { listeners.add(listener); return () => { listeners.delete(listener) } }
 async function request(body: unknown) {
-  const response = await fetch('/__connector_patterns', { method: 'POST', headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(body), signal: AbortSignal.timeout(20000) })
+  const publicRead = import.meta.env.VITE_DB_ONLY === 'true' && (body as { operation: string }).operation === 'read'
+  const response = await fetch('/__connector_patterns', publicRead
+    ? { signal: AbortSignal.timeout(20000) }
+    : { method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(body), signal: AbortSignal.timeout(20000) })
   const result = await response.json() as { rules?: unknown; error?: string; installed?: boolean }
   if (!response.ok) throw new Error(result.error ?? 'Could not load connector patterns.')
   return { rules: patternRulesSchema.parse(result.rules), installed: result.installed === true }

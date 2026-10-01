@@ -4,6 +4,10 @@ import { getPatternSnapshot, refreshConnectorPatterns, subscribePatternSnapshot 
 export function useConnectorPatterns() {
   const state = useSyncExternalStore(subscribePatternSnapshot, getPatternSnapshot, getPatternSnapshot)
   useEffect(() => {
+    if (import.meta.env.VITE_DB_ONLY === 'true') {
+      if (!getPatternSnapshot().loaded) void refreshConnectorPatterns()
+      return
+    }
     void refreshConnectorPatterns()
     const refresh = () => { if (document.visibilityState !== 'hidden') void refreshConnectorPatterns() }
     window.addEventListener('focus', refresh)

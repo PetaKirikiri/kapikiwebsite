@@ -1,7 +1,12 @@
+import { usePublicConnectorShapes } from '../lib/connectorPresentation/publicShapeStore'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { isCompleteProductionCollection, readDesignSpaceCollection, readProductionDesignSpaceCollection, loadDesignSpaceCollection, syncDesignSpaceCollection, type LockedDesign } from './designSpaceCollection'
 
-export function useDesignSpaceCollection(options: Readonly<{ production?: boolean }> = {}) {
+// The build selects one stable hook implementation; editor refresh/save stays intact.
+export const useDesignSpaceCollection = import.meta.env.VITE_DB_ONLY === 'true'
+  ? usePublicConnectorShapes : useEditableDesignSpaceCollection
+
+function useEditableDesignSpaceCollection(options: Readonly<{ production?: boolean }> = {}) {
   const production = options.production === true
   const [collection, setCollection] = useState(() => production
     ? readProductionDesignSpaceCollection()
