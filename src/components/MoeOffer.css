@@ -145,3 +145,27 @@
 .moe-session-price span { color: var(--site-muted, #5d6c63); font-size: 13px; font-weight: 400; }
 
 .moe-skill-example { margin-top: 8px; min-width: 0; color: var(--site-ink, #213b35); }
+
+/* One reading order: introduction, outcomes, practical details, then classes. */
+.moe-intro-main { display: block; }
+.moe-practical { border-top: 1px solid var(--ka-card-line); background: #f3f6ef; }
+.moe-practical-summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 24px 32px 0; }
+.moe-practical .moe-start { padding: 0; border: 0; min-width: 0; align-content: start; }
+.moe-practical .moe-start > span, .moe-practical .moe-course-price > span { color: var(--site-muted); font-size: 13px; }
+.moe-practical .moe-start strong, .moe-practical .moe-course-price > strong { color: var(--ka-green); font: 400 24px/1.2 var(--ka-heading); }
+.moe-practical .moe-course-price { margin: 0; padding-left: 24px; border-left: 1px solid var(--ka-card-line); }
+.moe-practical .moe-support { border-top: 0; }
+.moe-practical .moe-support .moe-benefit-copy p { max-width: 48ch; }
+.moe-next-step { padding: 0 32px 24px; }
+.moe-next-step .moe-offer-jump { margin: 0; background: var(--ka-green); border-color: var(--ka-green); color: #fff; }
+.moe-next-step .moe-offer-jump:hover { filter: brightness(1.1); }
+.moe-next-step .moe-offer-jump:focus-visible { outline: 2px solid var(--ka-green); outline-offset: 4px; }
+.moe-course-contact { max-width: 72ch; margin: 32px 0 0; background: transparent; border-color: var(--ka-card-line); color: var(--site-muted); }
+.moe-course-contact strong, .moe-course-contact a { color: var(--ka-green); }
+.moe-course-contact a:focus-visible { outline-color: var(--ka-green); }
+@media (max-width: 650px) {
+  .moe-practical-summary { grid-template-columns: 1fr; padding: 20px 20px 0; gap: 18px; }
+  .moe-practical .moe-start { display: grid; gap: 6px; }
+  .moe-practical .moe-course-price { padding: 0; border: 0; }
+  .moe-next-step { padding: 0 20px 20px; }
+}

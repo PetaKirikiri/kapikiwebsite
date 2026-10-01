@@ -11,10 +11,8 @@ const content: MoeOfferContent = {
   benefits: [
     { id: 'professional-learning', label: 'Te reo Māori skills', summary: 'Develop your speaking, listening, reading and writing in te reo Māori, at the right level for you.', group: 'format', action: { href: '#moe/benefits/professional-learning', label: 'Explore more' } },
     { id: 'course-certificate', label: 'Certificate', summary: 'Pass your course and add the certificate to your CV and LinkedIn.', group: 'format', action: { href: '#moe/benefits/course-certificate', label: 'Explore more' } },
-    { id: 'live-classes', label: 'Live online', summary: 'Join from work or home.', group: 'support', action: null },
-    { id: 'course-length', label: '10 weeks', summary: 'From the week of 12 October.', group: 'support', action: null },
-    { id: 'class-bookings', icon: 'duration', label: '1 hour weekly', summary: 'Choose a class that fits your week.', group: 'support', action: null },
-    { id: 'learning-support', label: 'App-based support', summary: 'Practise when it suits you, between classes.', group: 'support', action: { href: '#moe/benefits/learning-support', label: 'Explore more' } },
+    { id: 'live-classes', label: 'Live online', summary: '10 hours of live classes: one hour weekly for 10 weeks. Join from work or home.', group: 'support', action: null },
+    { id: 'learning-support', label: 'App-based support', summary: 'App access is included. Practise when it suits you, between classes.', group: 'support', action: { href: '#moe/benefits/learning-support', label: 'Explore more' } },
   ],
 }
 
