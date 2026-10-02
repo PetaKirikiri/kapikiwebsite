@@ -1,3 +1,4 @@
+import { installWebsiteAnalytics } from '../lib/websiteAnalytics'
 import ConnectorDrawingSymbols from './ConnectorDrawingSymbols'
 import { refreshConnectorPatterns } from '../lib/connectorPresentation/patternStore'
 import { readWebsiteJson } from '../lib/websiteData'
@@ -94,6 +95,7 @@ function demoManifest(
 }
 
 export default function WebsiteView(props: WebsiteViewProps = {}) {
+  useEffect(() => { installWebsiteAnalytics() }, [])
   return import.meta.env.VITE_DB_ONLY === 'true'
     ? <ConnectorDrawingSymbols><WebsiteContent {...props} /></ConnectorDrawingSymbols>
     : <WebsiteContent {...props} />

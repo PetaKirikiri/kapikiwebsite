@@ -3,9 +3,19 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "crons": [{ "path": "/api/signup-mail", "schedule": "0 1 * * *" }],
+  "crons": [
+    {
+      "path": "/api/signup-mail",
+      "schedule": "0 1 * * *"
+    }
+  ],
   "functions": {
-    "api/signup-mail.js": { "maxDuration": 60, "regions": ["syd1"] },
+    "api/signup-mail.js": {
+      "maxDuration": 60,
+      "regions": [
+        "syd1"
+      ]
+    },
     "api/course.js": {
       "maxDuration": 60,
       "regions": [
@@ -35,9 +45,19 @@
       "regions": [
         "syd1"
       ]
+    },
+    "api/analytics.js": {
+      "maxDuration": 30,
+      "regions": [
+        "syd1"
+      ]
     }
   },
   "rewrites": [
+    {
+      "source": "/__analytics",
+      "destination": "/api/analytics"
+    },
     {
       "source": "/__signup_admin",
       "destination": "/api/signup-admin"
