@@ -7,7 +7,7 @@ export type LearningRecord = {
 }
 export type Interest = { id: string; selected_level: number; created_at: string }
 export type PortalLesson = {
-  id: string; title: string; level: number; startsAt: string; endsAt: string;
+  id: string; title: string; level: number; lessonNumber?: number; videoUrl?: string; trainingUrl?: string; startsAt: string; endsAt: string;
   timezone: string; meetingUrl?: string; notes: { title: string; body: string }[];
 }
 export function meetingLink(value?: string) {

@@ -1,23 +1,226 @@
-/* Reuse the website identity; portal layout remains task-focused. */
-.portal-shell{background:#f5f3eb;color:var(--ka-green)}
-.portal-sidebar{position:relative;isolation:isolate;background:var(--ka-green);color:var(--ka-green-ink);border-right:1px solid #365e4d}
-.portal-sidebar:before{content:'';position:absolute;inset:0;pointer-events:none;background:var(--ka-taniko-pattern) center top / 240px 144px repeat;opacity:.045;z-index:-1}
-.portal-brand-block{display:grid;gap:24px;padding:0 12px}.portal-logo{padding:0;color:white;font-size:28px;letter-spacing:-1px;line-height:1}.portal-moe-identity{width:142px;max-width:100%;height:auto}
-.portal-sidebar .learning-tabs button{color:#c6d8c7}.portal-sidebar .learning-tabs button:hover{background:#ffffff0c}.portal-sidebar .learning-tabs button[aria-pressed=true],.portal-sidebar .learning-tabs button[aria-pressed=true]:hover{background:#e8f5df;color:var(--ka-green);box-shadow:none}.portal-student{border-color:#c4dcc326}.portal-student small{color:#bed1bf}.portal-avatar{background:#e8f5df}
-.portal-main .learning-heading h1{font-family:var(--ka-heading);font-weight:400;font-size:32px;letter-spacing:-.025em}.portal-browse{color:var(--ka-green)}
-.portal-focus-card{grid-template-columns:1fr;border-radius:var(--ka-card-radius);background:var(--cover);color:var(--cover-ink);border-color:var(--ka-card-line);box-shadow:var(--ka-card-shadow)}
-.portal-focus-card:before{background-size:340px 204px;opacity:.17;mask-image:linear-gradient(to right,transparent 15%,#0006 52%,#000 100%)}
-.portal-focus-copy h2{font-family:var(--ka-heading);color:var(--cover-ink)}.portal-focus-level{background:transparent;border-color:#cde4c54d;color:var(--cover-ink)}.portal-focus-schedule{color:var(--cover-ink)}
-.portal-focus-actions .portal-focus-primary{background:var(--cover-ink);color:var(--cover);box-shadow:none;border-radius:6px}.portal-focus-actions .portal-focus-primary:hover{background:white}.portal-focus-pending{color:var(--cover-ink);opacity:.75}
-.portal-home-practice h2,.portal-home-notes h2,.portal-interest-list>h2,.portal-assessment-list>h2{font-family:var(--ka-heading);font-size:25px;font-weight:400}
-.portal-home-practice .portal-activity-tile{background:var(--ka-card-paper);border-color:var(--ka-card-line);border-radius:var(--ka-card-radius);box-shadow:var(--ka-card-shadow)}
-.portal-home-practice .portal-activity-symbol{position:relative;isolation:isolate;overflow:hidden;background:var(--ka-green);color:var(--ka-green-ink);border-radius:8px}.portal-home-practice .portal-activity-symbol:before{content:'';position:absolute;inset:0;background:var(--ka-taniko-pattern) center / 100px 60px repeat;opacity:.15;z-index:-1}
-.portal-home-practice .portal-activity-sand .portal-activity-symbol{background:var(--ka-ochre);color:#fff4d6}.portal-home-practice .portal-activity-blue .portal-activity-symbol{background:var(--ka-blue);color:#e4f4f8}
-.portal-enrolled-card{border-radius:var(--ka-card-radius);background:var(--ka-card-paper);box-shadow:var(--ka-card-shadow)}
-.portal-course-visual{height:130px;padding:23px 25px;display:flex;align-items:flex-end;justify-content:space-between;background:var(--cover);color:var(--cover-ink)}
-.portal-course-visual:before{inset:0;width:auto;height:auto;right:0;top:0;border:0;border-radius:0;background:var(--ka-taniko-pattern) right center / 240px 144px repeat;opacity:.16;mask-image:linear-gradient(to right,transparent,#000)}
-.portal-course-visual:after{display:none}.portal-course-number{font-size:26px;font-family:var(--ka-heading);font-weight:400;opacity:1}.portal-course-visual .portal-course-status{color:var(--cover-ink);background:#ffffff0c;border-color:#ffffff33}.portal-course-visual .level-course-sequence{padding-bottom:6px}
-.portal-course-content h2{font-family:var(--ka-heading)}.portal-course-content>button{background:transparent;border:1px solid var(--ka-card-line);color:var(--ka-green);border-radius:6px}.portal-course-content>button:hover{background:#edf2e8}
-.portal-home-notes .portal-lesson-list>button,.portal-progress-card,.portal-session-card,.portal-score-card{background:var(--ka-card-paper);border-color:var(--ka-card-line);border-radius:var(--ka-card-radius);box-shadow:var(--ka-card-shadow)}
-.portal-home-notes .portal-note-icon{color:var(--ka-green);background:#edf2e8;border-color:var(--ka-card-line);box-shadow:3px 3px 0 #dfe7d7}
-@media(max-width:650px){.portal-brand-block{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:0 8px}.portal-logo{font-size:24px}.portal-moe-identity{width:116px}.portal-sidebar{gap:20px}.portal-main .learning-heading h1{font-size:29px}.portal-focus-card{min-height:250px}.portal-course-visual{height:120px}.portal-focus-card:before{background-size:240px 144px}.portal-course-number{font-size:24px}}
+/* The learning portal shares the public site's header, paper and card system. */
+.learning-portal:has(.portal-shell) {
+  max-width: none;
+  min-height: calc(100vh - 88px);
+  padding: 0;
+  background: var(--site-paper);
+  color: var(--site-ink);
+}
+.portal-shell {
+  height: auto;
+  overflow: visible;
+  display: block;
+  min-height: 0;
+  background: var(--site-paper);
+  color: var(--site-ink);
+}
+.portal-sidebar {
+  display: block;
+  padding: 0 var(--site-gutter);
+  background: transparent;
+  color: var(--site-ink);
+  border: 0;
+  border-bottom: 1px solid var(--site-line);
+}
+.portal-sidebar .learning-tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 0;
+}
+.portal-sidebar .learning-tabs button {
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 8px;
+  padding: 19px 0 16px;
+  color: var(--site-muted);
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font: 400 13px Arial, Helvetica, sans-serif;
+}
+.portal-sidebar .learning-tabs button svg { width: 17px; height: 17px; }
+.portal-sidebar .learning-tabs button:hover,
+.portal-sidebar .learning-tabs button[aria-pressed=true],
+.portal-sidebar .learning-tabs button[aria-pressed=true]:hover {
+  background: transparent;
+  color: var(--site-ink);
+  box-shadow: none;
+}
+.portal-sidebar .learning-tabs button[aria-pressed=true] {
+  border-bottom-color: var(--ka-green);
+  font-weight: 600;
+}
+.portal-main { height: auto; overflow: visible; max-width: none; min-width: 0; padding: 32px var(--site-gutter) 64px; }
+.portal-main .learning-heading { margin-bottom: 26px; }
+.portal-main .learning-heading h1 {
+  font-family: var(--ka-heading);
+  font-weight: 400;
+  font-size: clamp(30px, 3vw, 40px);
+  letter-spacing: -.025em;
+}
+button.portal-browse {
+  padding: 10px 14px;
+  border: 1px solid var(--ka-card-line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--site-ink);
+  font: 600 13px Arial, Helvetica, sans-serif;
+}
+.portal-focus-card {
+  grid-template-columns: 1fr;
+  min-height: 0;
+  padding: 32px;
+  border-radius: var(--ka-card-radius);
+  border-color: var(--ka-card-line);
+  background: var(--cover);
+  color: var(--cover-ink);
+  box-shadow: var(--ka-card-shadow);
+}
+.portal-focus-card::before { background-size: 240px 144px; opacity: .08; }
+.portal-focus-copy h2 { font-family: var(--ka-heading); font-size: clamp(32px, 4vw, 44px); color: var(--cover-ink); }
+.portal-focus-level { padding: 0; border: 0; background: transparent; color: var(--cover-ink); }
+.portal-focus-schedule { color: var(--cover-ink); }
+.portal-focus-actions .portal-focus-primary {
+  border-radius: 6px;
+  background: var(--cover-ink);
+  color: var(--cover);
+  box-shadow: none;
+}
+.portal-focus-actions .portal-focus-primary:hover { background: white; }
+.portal-focus-pending { color: var(--cover-ink); opacity: .75; }
+.portal-home-practice, .portal-home-notes { margin-top: 32px; }
+.portal-home-practice h2, .portal-home-notes h2, .portal-interest-list > h2,
+.portal-assessment-list > h2 {
+  font-family: var(--ka-heading);
+  font-size: 26px;
+  font-weight: 400;
+}
+.portal-activity-grid .portal-activity-tile,
+.portal-enrolled-card, .portal-progress-card, .portal-session-card,
+.portal-score-card, .portal-training-card, .portal-note-reader {
+  background: var(--ka-card-paper);
+  border: 1px solid var(--ka-card-line);
+  border-radius: var(--ka-card-radius);
+  box-shadow: var(--ka-card-shadow);
+}
+.portal-activity-grid .portal-activity-symbol {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--ka-green);
+  color: var(--ka-green-ink);
+  border-radius: 8px;
+}
+.portal-activity-symbol::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--ka-taniko-pattern) center / 100px 60px repeat;
+  opacity: .08;
+}
+.portal-course-visual {
+  height: 130px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background: var(--cover);
+  color: var(--cover-ink);
+}
+.portal-course-visual::before { inset: 0; width: auto; height: auto; border: 0; border-radius: 0; background: var(--ka-taniko-pattern) right center / 240px 144px repeat; opacity: .08; }
+.portal-course-visual::after { display: none; }
+.portal-course-number { font: 400 28px var(--ka-heading); opacity: 1; }
+.portal-course-visual .portal-course-status { color: var(--cover-ink); background: transparent; border-color: #ffffff33; }
+.portal-course-content h2, .portal-note-reader h2 { font-family: var(--ka-heading); }
+.portal-home-notes .portal-lesson-list > button { background: var(--ka-card-paper); border-color: var(--ka-card-line); border-radius: var(--ka-card-radius); box-shadow: var(--ka-card-shadow); }
+.portal-home-notes .portal-note-icon { color: var(--ka-green); background: transparent; border-color: var(--ka-card-line); box-shadow: none; }
+.learning-signin { border-color: var(--ka-card-line); border-radius: var(--ka-card-radius); background: var(--ka-card-paper); }
+.learning-signin h1 { font-family: var(--ka-heading); font-weight: 400; }
+.learning-portal :focus-visible { outline: 3px solid #398aa6; outline-offset: 3px; }
+@media (max-width: 650px) {
+  .portal-sidebar .learning-tabs { gap: 20px; }
+  .portal-main { padding-top: 24px; }
+  .portal-focus-card { padding: 24px; }
+  .portal-main .learning-heading { align-items: center; gap: 12px; }
+  .portal-main .learning-heading h1 { font-size: 29px; }
+}
+
+.learning-simple-home{max-width:850px;display:grid;gap:32px}.learning-simple-home h2{font-size:20px;margin:0 0 14px}.learning-classroom-entry{display:flex;align-items:center;gap:14px;padding:20px 24px;border-radius:12px;background:#234d40;color:#fff;text-decoration:none;font-size:20px}.learning-classroom-entry span:last-child{margin-left:auto}.learning-course-links{border:1px solid #dce2d6;border-radius:12px;overflow:hidden}.learning-course-links a{display:flex;align-items:center;gap:24px;padding:18px 20px;color:#234d40;text-decoration:none;background:#fff}.learning-course-links a+a{border-top:1px solid #e7ebe4}.learning-course-links a:hover{background:#f0f5eb}.learning-course-links a>span:first-child{font-size:13px;color:#61736a}.learning-course-links a>span:last-child{margin-left:auto}.learning-simple-home .portal-activity-tile{min-height:100px}.portal-main .learning-heading{margin-bottom:28px}
+
+.learning-portal .learning-classroom-entry{color:#fff}
+
+.learning-course-home{width:min(760px,100%);margin:0 auto;padding:36px 24px 60px;color:#234d40;box-sizing:border-box;display:grid;gap:30px}.learning-course-home header p{margin:0 0 8px;font-size:14px;color:#61736a}.learning-course-home h1{margin:0;font-size:36px}.learning-course-home h2{font-size:19px;margin:0 0 14px}.learning-course-lessons{display:grid;grid-template-columns:1fr 1fr;gap:10px}.learning-portal .learning-course-lessons a,.learning-portal .learning-course-materials a{display:flex;align-items:center;justify-content:space-between;padding:17px 20px;border:1px solid #dce2d6;border-radius:8px;background:#fff;color:#234d40;text-decoration:none}.learning-course-lessons a:hover,.learning-course-materials a:hover{background:#edf3e8}.learning-course-materials{display:grid;gap:10px}@media(max-width:500px){.learning-course-home{padding:26px 16px}.learning-course-lessons{grid-template-columns:1fr 1fr}.learning-portal .learning-course-lessons a{padding:16px 12px}}
+
+.learning-course-tabs{display:flex;gap:24px;border-bottom:1px solid #dce2d6}.learning-portal .learning-course-tabs button{padding:12px 0;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;color:#61736a}.learning-portal .learning-course-tabs button[aria-pressed=true]{border-bottom-color:#234d40;color:#234d40;font-weight:600}.learning-course-home>section[hidden]{display:none}
+
+.student-learning-shell{width:100%}.learning-stable-tabs{display:flex;gap:8px;padding:0 24px;background:#f5f4ee;border-bottom:1px solid #dce2d6;position:sticky;top:0;z-index:5;overflow-x:auto}.learning-portal .learning-stable-tabs button{flex-shrink:0;padding:18px 16px;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;color:#61736a}.learning-portal .learning-stable-tabs button[aria-pressed=true]{color:#234d40;border-bottom-color:#234d40;font-weight:600}.student-learning-shell .learning-course-home{width:min(1100px,100%)}
+.learning-portal:has(>.student-learning-shell){max-width:none;padding:0}.learning-stable-tabs{padding-left:24px;padding-right:24px}
+
+.learning-portal .learning-stable-tabs button{display:inline-flex;align-items:center;gap:9px}.learning-stable-tabs svg{flex-shrink:0}
+
+/* Lesson index uses the same cover, paper, type and borders as the level pages. */
+.student-learning-shell .learning-course-home{width:min(1040px,100%);padding:28px var(--site-gutter,24px) 56px;gap:24px}
+.learning-course-home .learning-page-heading{padding:22px 24px 26px}
+.learning-course-home .learning-page-heading p{display:flex;align-items:center;gap:12px;margin:0 0 12px;color:var(--cover-ink);font:400 13px/1.4 var(--ka-body,Arial,sans-serif)}
+.learning-level-badge{padding-right:12px;border-right:1px solid #bed3c477}
+.learning-course-home .learning-page-heading h1{margin:0;color:var(--cover-ink);font:400 clamp(26px,3vw,34px)/1.12 var(--ka-heading);letter-spacing:-.025em}
+.learning-course-lessons{display:grid;grid-template-columns:1fr;gap:0}
+.learning-portal .learning-course-lessons a{display:flex;justify-content:flex-start;align-items:center;gap:20px;min-height:60px;padding:14px 24px;border:0;border-radius:0;background:transparent;box-shadow:none;color:var(--site-ink);text-decoration:none}
+.learning-portal .learning-course-lessons a+a{border-top:1px solid var(--ka-card-line)}
+.learning-lesson-number{flex:0 0 24px;color:var(--site-muted);font:400 12px/1.4 var(--ka-body,Arial,sans-serif);font-variant-numeric:tabular-nums}
+.learning-lesson-label{font:500 15px/1.4 var(--ka-body,Arial,sans-serif)}
+.learning-lesson-arrow{margin-left:auto;color:var(--ka-green);flex-shrink:0}
+.learning-portal .learning-course-lessons a:hover{background:#e8f5df66}
+.learning-portal .learning-course-lessons a:focus-visible{outline:2px solid var(--ka-green);outline-offset:-3px}
+@media(max-width:600px){.student-learning-shell .learning-course-home{padding:20px 16px 40px}.learning-course-home .learning-page-heading{padding:20px}.learning-portal .learning-course-lessons a{padding:14px 20px}.learning-portal .learning-stable-tabs button{padding:15px 10px;font-size:13px}.learning-stable-tabs{padding:0 10px;gap:2px}}
+
+/* Bring the established tāniko and green palette into each lesson. */
+.learning-course-lessons.site-card{border:0;background:transparent;box-shadow:none;gap:10px;overflow:visible}
+.learning-portal .learning-course-lessons a{position:relative;isolation:isolate;overflow:hidden;min-height:72px;padding:0 24px 0 0;gap:22px;border:1px solid #c6d7bb;border-radius:var(--ka-card-radius);background:#e8f0dc;color:var(--ka-green)}
+.learning-portal .learning-course-lessons a+a{border-top:1px solid #c6d7bb}
+.learning-portal .learning-course-lessons a::before{content:'';position:absolute;z-index:-1;inset:0 0 0 55%;background:var(--ka-taniko-pattern) right center/240px 144px repeat;background-color:#527a58;opacity:.16;mask-image:linear-gradient(to right,transparent,#000)}
+.learning-lesson-number{align-self:stretch;display:grid;place-items:center;flex:0 0 72px;color:var(--ka-green-ink);background:var(--ka-green);font:400 24px/1 var(--ka-heading)}
+.learning-lesson-label{font:400 21px/1.2 var(--ka-heading)}
+.learning-portal .learning-course-lessons a:hover{background:#dcebc9;border-color:#7c9f70}
+.learning-portal .learning-course-lessons a:focus-visible{outline-offset:3px}
+@media(max-width:600px){.learning-portal .learning-course-lessons a{padding:0 16px 0 0;min-height:68px}.learning-lesson-number{flex-basis:64px}}
+
+.learning-lesson-row{overflow:hidden;border:1px solid #c6d7bb;border-radius:var(--ka-card-radius);background:#e8f0dc}
+.learning-lesson-main{display:flex;align-items:stretch;background:var(--ka-taniko-pattern) right center/240px 144px repeat}
+.learning-portal .learning-course-lessons .learning-lesson-open{border:0;border-radius:0;flex:1;min-width:0;background:#e8f0dc;gap:20px}.learning-course-lessons .learning-lesson-open::before{display:none}
+.learning-lesson-actions{display:flex;align-items:center;gap:8px;padding:12px 18px;background:#e8f0dce8}
+.learning-portal .learning-lesson-actions a,.learning-portal .learning-lesson-actions button{min-height:36px;padding:7px 10px;border:1px solid #afc39f;border-radius:6px;box-shadow:none;background:#edf3e6;color:#617359;font:400 13px/1.3 Arial,sans-serif;white-space:nowrap}
+.learning-portal .learning-lesson-actions a::before{display:none}.learning-portal .learning-lesson-actions .is-available{background:var(--ka-green);border-color:var(--ka-green);color:var(--ka-green-ink)}
+.learning-portal .learning-lesson-actions button:disabled{opacity:.55;cursor:default}.learning-lesson-notes{padding:20px 24px;background:var(--ka-card-paper);border-top:1px solid var(--ka-card-line)}.learning-lesson-notes p{white-space:pre-wrap}
+@media(max-width:650px){.learning-lesson-main{flex-direction:column}.learning-lesson-actions{padding:10px 14px;justify-content:flex-end}.learning-portal .learning-course-lessons .learning-lesson-open{min-height:62px}}
+
+.learning-lesson-copy{display:grid;gap:6px;padding:12px 0}.learning-lesson-schedule{display:flex;flex-wrap:wrap;gap:4px 12px;color:#52684c;font:400 12px/1.45 Arial,sans-serif}
+
+.learning-portal .learning-lesson-actions .lesson-attend{border-color:var(--ka-green);color:var(--ka-green);background:var(--ka-card-paper)}.learning-lesson-actions{flex-wrap:wrap}@media(max-width:850px){.learning-lesson-main{flex-direction:column}.learning-lesson-actions{justify-content:flex-end}}
+/* Compact lesson cards, with a distinct timetable and resource footer. */
+.learning-course-lessons.site-card{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.learning-lesson-row{border-color:#becdb3;box-shadow:var(--ka-card-shadow)}
+.learning-lesson-main{flex-direction:column;background:var(--ka-card-paper)}
+.learning-portal .learning-course-lessons .learning-lesson-open{min-height:108px;padding:18px;gap:16px;background:linear-gradient(100deg,#e8f0dc 45%,#d6e5c8);position:relative}
+.learning-course-lessons .learning-lesson-open::before{display:block;opacity:.12;inset:0 0 0 45%}
+.learning-lesson-number{align-self:center;flex:0 0 48px;height:56px;border-radius:6px;background:var(--ka-green);font-size:23px;box-shadow:0 2px 0 #16352b18}
+.learning-lesson-copy{padding:0;gap:10px}.learning-lesson-label{font-size:24px}.learning-lesson-schedule{display:grid;gap:3px;font-size:12px;line-height:1.4}.learning-lesson-schedule time{font-weight:600;color:var(--ka-green)}
+.learning-lesson-actions{display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:6px;padding:12px;background:var(--ka-card-paper);border-top:1px solid #cbd9bf}
+.learning-portal .learning-lesson-actions a,.learning-portal .learning-lesson-actions button{justify-content:center;min-height:38px;padding:8px 5px;border:1px solid #d4ddcd;border-radius:5px;font-size:12px;background:#f1f4eb;color:#64735b}
+.learning-portal .learning-lesson-actions button:disabled{opacity:1;color:#7c8875;border-color:#e0e5da;background:#f5f6f0}
+.learning-portal .learning-lesson-actions .lesson-attend{background:var(--ka-green);color:var(--ka-green-ink);border-color:var(--ka-green)}
+.learning-portal .learning-lesson-actions .is-available{background:#dceacb;color:#254c36;border-color:#9bb48a}
+@media(max-width:760px){.learning-course-lessons.site-card{grid-template-columns:1fr}.learning-portal .learning-course-lessons .learning-lesson-open{min-height:96px}.learning-lesson-actions{padding:12px;justify-content:stretch}}
+
+.learning-account-menu{position:relative;flex-shrink:0;margin-left:auto;align-self:center;color:var(--site-ink)}
+.learning-account-menu summary{display:grid;place-items:center;width:40px;height:40px;border:1px solid #a9bb9e;border-radius:50%;cursor:pointer;list-style:none;background:var(--ka-card-paper)}
+.learning-account-menu summary::-webkit-details-marker{display:none}
+.learning-account-menu>div{position:absolute;right:0;top:48px;z-index:20;display:grid;gap:8px;width:min(250px,75vw);padding:14px;border:1px solid var(--ka-card-line);border-radius:10px;background:var(--ka-card-paper);box-shadow:0 8px 24px #102f2e30}
+.learning-account-menu>div>span{font-size:12px;overflow-wrap:anywhere}
+.learning-portal .learning-account-menu button{padding:10px;text-align:left;color:var(--site-ink);background:transparent;border:0;font-size:14px}
+.student-learning-shell .learning-stable-tabs{overflow:visible;flex-wrap:wrap}

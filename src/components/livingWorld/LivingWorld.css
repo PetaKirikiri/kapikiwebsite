@@ -1,0 +1,172 @@
+.ka-living-world{--ka-world-gold:#dfc482;--ka-world-night:#13382f;--ka-world-paper:#f7f2e5;--ka-world-art:url('../../assets/living-world/forest-glade-v2.png');position:relative;min-height:100dvh;background:var(--ka-world-night)}
+/* One shared scene. Its layers never intercept learning controls. */
+.ka-forest-scene{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;background:#173b35}
+.ka-forest-art{position:absolute;inset:-2%;background:var(--ka-world-art) 70% 55%/cover no-repeat}
+.ka-forest-shade{position:absolute;inset:0;background:linear-gradient(90deg,#102f2ef2,#12373270 48%,#0b27221a 80%),linear-gradient(0deg,#0d2c2a9c,transparent 55%)}
+.ka-forest-mist{position:absolute;inset:-15%;background:radial-gradient(ellipse at 65% 65%,#a6dacc2b,transparent 45%);animation:ka-mist 28s ease-in-out infinite alternate}
+.ka-forest-lights{position:absolute;inset:0}
+.ka-forest-lights i{position:absolute;left:48%;top:68%;width:4px;height:4px;border-radius:50%;background:#ffe6aa;box-shadow:0 0 7px 2px #e7c46a8a;animation:ka-firefly 10s ease-in-out infinite;opacity:0}
+.ka-forest-lights i:nth-child(2){left:65%;top:32%;animation-delay:-4s;animation-duration:13s}
+.ka-forest-lights i:nth-child(3){left:83%;top:56%;animation-delay:-7s}
+.ka-forest-lights i:nth-child(4){left:33%;top:83%;animation-delay:-2s;animation-duration:14s}
+.ka-forest-lights i:nth-child(5){left:74%;top:78%;animation-delay:-6s;width:3px;height:3px}
+.ka-forest-lights i:nth-child(6){left:56%;top:43%;animation-delay:-8s;animation-duration:15s}
+.ka-forest-lights i:nth-child(7){left:92%;top:26%;animation-delay:-3s;width:3px;height:3px}
+.ka-forest-lights i:nth-child(8){left:22%;top:30%;animation-delay:-9s;animation-duration:17s}
+.ka-living-world .site-header{background:linear-gradient(110deg,#10382e,#234e3e);border-bottom:1px solid #c4c38b40}
+.ka-living-world .site-header::before{opacity:.11}
+.ka-living-world :is(a,button):focus-visible{outline:3px solid #caac5d;outline-offset:3px}
+.ka-living-world :is(.site-nav-item,.learning-stable-tabs button,.lesson-section-tabs button){transition:background .2s,color .2s,box-shadow .2s}
+/* Forest surroundings and warm, legible lesson cards. */
+.ka-living-world .student-learning-shell{position:relative;isolation:isolate;min-height:calc(100dvh - 88px);background:#12372f}
+.ka-living-world .student-learning-shell::before{content:'';position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(180deg,#143c3270,#12372fe8 820px),var(--ka-world-art) center top/1600px auto no-repeat}
+.ka-living-world .student-learning-shell .learning-stable-tabs{background:#12382fef;border-bottom:1px solid #b8c59540;padding:0 max(24px,calc((100% - 1136px)/2));gap:14px;backdrop-filter:blur(12px)}
+.ka-living-world .learning-portal .learning-stable-tabs button{color:#c8d8c5;padding:20px 16px;font-size:14px;border-bottom:3px solid transparent}
+.ka-living-world .learning-portal .learning-stable-tabs button[aria-pressed=true]{color:#ffe6aa;background:linear-gradient(0deg,#eacb7214,transparent);border-color:#ddc078}
+.ka-living-world .learning-stable-tabs button:hover{color:#fff6d8;background:#ffffff08}
+.ka-living-world .student-learning-shell .learning-course-home{width:min(1200px,100%);padding:30px 32px 64px;gap:24px}
+.ka-living-world .learning-course-home .learning-page-heading{position:relative;isolation:isolate;min-height:290px;display:flex;align-items:center;padding:38px 40px;border:1px solid #b9c49a70;border-radius:20px;background:#143a31;box-shadow:inset 0 0 0 4px #fff4cb08,0 18px 45px -25px #061d20}
+.ka-living-world .learning-page-heading::before,.ka-living-world .lesson-overview-header::before{display:none}
+.ka-heading-copy{position:relative;z-index:1;width:62%}
+.ka-living-world .learning-course-home .learning-page-heading p{color:#d5ddbb;font-size:14px;letter-spacing:.035em;margin-bottom:19px}
+.ka-living-world .learning-level-badge{border:1px solid #d9cf9270;border-radius:20px;padding:6px 12px;background:#d8dab90c;font-size:12px}
+.ka-living-world .learning-course-home .learning-page-heading h1{color:#fff1d3;font-size:clamp(38px,4.8vw,62px);line-height:1.08;text-shadow:0 3px 20px #001d20;text-wrap:balance}
+.ka-living-world .learning-course-lessons.site-card{overflow:visible;border:0;box-shadow:none;background:transparent;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ka-living-world .learning-lesson-row{border:1px solid #d7cf9c;border-radius:17px;background:var(--ka-world-paper);box-shadow:0 4px 0 #081f2445,0 12px 24px #031e2524;transition:transform .25s,box-shadow .25s,border-color .25s}
+.ka-living-world .learning-portal .learning-course-lessons .learning-lesson-open{min-height:142px;padding:24px;gap:23px;background:linear-gradient(115deg,#f6f1df,#e4eccf)}
+.ka-living-world .learning-lesson-row:nth-child(3n+2) .learning-lesson-open{background:linear-gradient(115deg,#f4eedc,#dce8d6)}
+.ka-living-world .learning-lesson-row:nth-child(3n) .learning-lesson-open{background:linear-gradient(115deg,#f4efdf,#d7e7e0)}
+.ka-living-world .learning-course-lessons .learning-lesson-open::before{opacity:.09;background-size:300px 180px;inset:0 0 0 35%}
+.ka-living-world .learning-lesson-number{position:relative;flex:0 0 65px;height:72px;border-radius:40% 40% 46% 46%;border:1px solid #c5ae6a;outline:1px solid #baad7880;outline-offset:4px;background:radial-gradient(ellipse at 35% 0%,#577556,#214f41 70%);box-shadow:inset 0 0 0 4px #153c3233,0 4px 8px #16382c21;color:#fff0c4;font:400 28px/1 Georgia,serif;transition:transform .25s}
+.ka-living-world .learning-lesson-copy{position:relative;gap:10px}
+.ka-living-world .learning-lesson-label{font:400 29px/1.15 Georgia,serif;color:#234d3e}
+.ka-living-world .learning-lesson-schedule{color:#556d60;font-size:12px;gap:3px}
+.ka-living-world .learning-lesson-schedule time{color:#365749;font-weight:600}
+.ka-living-world .learning-lesson-actions{border-top:1px solid #d8debf;background:#f9f5e9;padding:13px 14px;gap:8px}
+.ka-living-world .learning-portal .learning-lesson-actions :is(a,button){display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:39px;padding:8px 5px;border-radius:8px;border-color:#d4d9bf;font-size:12px}
+.ka-living-world .learning-lesson-actions svg{flex-shrink:0}
+.ka-living-world .learning-portal .learning-lesson-actions button:disabled{background:#eeeee1;border-color:#dfe2cf;color:#7c8673}
+.ka-living-world .learning-portal .learning-lesson-actions .lesson-attend{background:linear-gradient(#386349,#234a3c);color:#fff2cf;border-color:#33513e;box-shadow:inset 0 1px #d3d5aa30,0 2px 2px #243d2514}
+.ka-living-world .learning-portal .learning-lesson-actions .is-available{background:#e2ebc9;color:#315534;border-color:#aab978}
+.ka-living-world .learning-course-home>section:not([hidden]){animation:ka-arrive .4s ease-out both}
+.ka-living-world .learning-course-home>section:not([aria-label=Lessons]){border-radius:16px;background:var(--ka-world-paper);padding:20px}
+@media(hover:hover){.ka-living-world .learning-lesson-row:hover{transform:translateY(-4px);border-color:#f0d890;box-shadow:0 4px 0 #071d1d45,0 18px 26px #031b284a,0 0 22px #d7bb5820}.ka-living-world .learning-lesson-open:hover .learning-lesson-number{transform:rotate(-4deg)}}
+/* Shared illustrated companion, separate from all grammatical rendering. */
+.ka-companion{position:relative;display:block;flex-shrink:0;width:260px;height:260px;padding:0!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.ka-creature{display:block;width:100%;height:100%;object-fit:contain;transform-origin:50% 90%;filter:drop-shadow(0 10px 12px #041d20a0);animation:ka-creature-idle 16s ease-in-out infinite}
+.ka-companion:hover .ka-creature{filter:drop-shadow(0 10px 12px #041d20a0) drop-shadow(0 0 8px #f1db851c)}
+.ka-companion.is-greeting .ka-creature{animation:ka-creature-greet 1.4s ease-in-out}
+.ka-companion-greeting{position:absolute;z-index:3;top:18%;left:-14px;white-space:nowrap;padding:10px 16px;border:1px solid #e5ce91;border-radius:18px 18px 3px 18px;background:#fff5d9;color:#34553c;box-shadow:0 5px 15px #0a32294d;font:600 14px/1.3 Arial,sans-serif;opacity:0;transform:translateY(7px);transition:opacity .18s,transform .18s;pointer-events:none}
+.ka-companion.is-greeting .ka-companion-greeting{opacity:1;transform:translateY(0)}
+.ka-page-companion{position:absolute;right:4%;bottom:-6px;width:280px;height:280px;z-index:2}
+.ka-overview-companion{position:absolute;right:12px;bottom:-8px;width:172px;height:172px;z-index:2}
+.ka-offer-companion{position:absolute;right:-6px;bottom:-16px;width:175px;height:190px;z-index:2}
+.ka-living-world .moe-intro-main,.ka-living-world .moe-audience{position:relative;z-index:1}
+.ka-living-world .moe-intro-cover{border-bottom:1px solid #c4ba83}
+.ka-living-world .moe-intake-details{position:relative;padding-right:140px}
+/* The environment continues around the classroom's teaching canvas. */
+.ka-living-world .lesson-workspace-sidebar{background:linear-gradient(#12392be0,#102e2af5),var(--ka-world-art) center/cover;border-right:1px solid #c9bf8740}
+.ka-living-world .lesson-workspace-sidebar::before{opacity:.085}
+.ka-living-world .lesson-workspace-sidebar a[aria-current=page]{background:linear-gradient(100deg,#e6e9c3,#c9d9ad);color:#1c4834;border:1px solid #c8c38a;box-shadow:0 2px 7px #061d2230}
+.ka-living-world .lesson-workspace-classroom,.ka-living-world .lesson-workspace-canvas{background:#e8ede0}
+.ka-living-world .lesson-section-tabs{background:#1e4639;border-bottom:1px solid #bcbb87;padding:9px 12px}
+.ka-living-world .lesson-section-tabs button{color:#d3dfc8;border:1px solid transparent;border-radius:9px;box-shadow:none}
+.ka-living-world .lesson-section-tabs button[aria-selected=true]{color:#fff0c6;background:#456349;border-color:#b9b378;box-shadow:inset 0 -2px #d9bd7b}
+.ka-living-world .lesson-wrap-time{color:inherit;opacity:.8}
+.ka-living-world .lesson-overview{border:1px solid #b9c59a;background:#f8f5e9;border-radius:17px;box-shadow:0 5px 0 #405b3410,0 15px 28px -18px #24463866}
+.ka-living-world .lesson-overview .lesson-overview-header{position:relative;isolation:isolate;min-height:180px;display:flex;flex-direction:column;justify-content:center;padding:24px 180px 24px 24px;border-bottom:1px solid #b9ba80}
+.ka-living-world .lesson-overview-header>p,.ka-living-world .lesson-overview-header>h1{position:relative;z-index:1;color:#fff0ce}
+.ka-living-world .lesson-overview .lesson-overview-header h1{font-size:clamp(28px,2.8vw,40px);line-height:1.12;text-wrap:balance}
+.ka-living-world .lesson-overview-sections .lesson-overview-purpose{background:linear-gradient(135deg,#eaf0d2,#e0e9c8);border:1px solid #bccb9d;border-radius:13px}
+.ka-living-world .lesson-overview-sections .lesson-overview-goal{background:linear-gradient(135deg,#ede7f1,#e0deec);border:1px solid #c7bfd4;border-radius:13px}
+.ka-living-world .lesson-overview-goal h2{color:#574565}
+.ka-living-world .lesson-teaching-card{border-color:#bcc79f;background:#fcf8ed;border-radius:16px}
+.ka-living-world .lesson-workspace-chat{background:#fbf8ef;border-color:#bdc9ab;box-shadow:0 6px 25px #143d2c0d}
+.ka-living-world .lesson-chat-prompt{background:#e8edcf;border-left:3px solid #bba65a}
+.ka-living-world .lesson-chat-answer{animation:ka-arrive .3s ease-out both}
+.ka-living-world .lesson-chat-answer:has(.lesson-answer-tick){background:#e0eec4;border:1px solid #aabf80}
+.ka-living-world .lesson-camera-tile.is-hand-raised{box-shadow:0 0 0 2px #dbb964,0 0 18px #e8c87435}
+.ka-living-world .lesson-stage-frame{overflow:auto}
+.ka-overview-words{padding:0 20px}
+.ka-overview-words .lesson-word-showcase{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:16px 0 0}
+.ka-overview-words .lesson-word-showcase>div{padding:10px 14px;background:#f2f0e3;border-color:#d9ddc8;font-size:22px}
+.ka-motion-toggle{position:fixed;bottom:12px;left:12px;z-index:60;display:grid;place-items:center;width:32px;height:32px;border:1px solid #c4bd8777;border-radius:50%;color:#f2dfac;background:#234a3ee6;cursor:pointer;box-shadow:0 2px 8px #06262030}
+@keyframes ka-mist{from{transform:translateX(-3%) scale(1);opacity:.5}to{transform:translateX(3%) scale(1.07);opacity:1}}
+@keyframes ka-firefly{0%,100%{opacity:0;transform:translate(0,8px)}25%{opacity:.75}55%{opacity:.15;transform:translate(18px,-12px)}75%{opacity:.6}}
+@keyframes ka-creature-idle{0%,45%,75%,100%{transform:rotate(0) scale(1)}53%,61%{transform:rotate(-2deg) scale(1.018)}67%{transform:rotate(1deg) scale(1)}}
+@keyframes ka-creature-greet{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-6px) rotate(-5deg)}55%{transform:translateY(0) rotate(3deg)}78%{transform:translateY(-2px) rotate(-2deg)}}
+@keyframes ka-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.ka-living-world[data-hidden=true] :is(.ka-creature,.ka-forest-mist,.ka-forest-lights i){animation-play-state:paused!important}
+.ka-living-world[data-motion=paused] :is(.ka-creature,.ka-forest-mist,.ka-forest-lights i){animation:none!important}
+@media(max-width:850px){
+ .ka-living-world .student-learning-shell .learning-course-home{padding:22px 20px 50px}
+ .ka-living-world .learning-course-lessons.site-card{gap:16px}
+ .ka-living-world .learning-portal .learning-course-lessons .learning-lesson-open{padding:22px 18px;gap:17px}
+ .ka-living-world .learning-lesson-number{flex-basis:50px;height:58px;font-size:23px}
+ .ka-living-world .learning-lesson-label{font-size:25px}
+ .ka-living-world .learning-lesson-actions{gap:5px;padding:10px}
+ .ka-living-world .learning-portal .learning-lesson-actions :is(a,button){font-size:11px;gap:3px}
+}
+@media(max-width:760px){
+ .ka-living-world .learning-course-lessons.site-card{grid-template-columns:1fr}
+ .ka-living-world .learning-course-home .learning-page-heading{min-height:240px;padding:28px}
+ .ka-page-companion{width:220px;height:220px;right:1%}
+ .ka-living-world .learning-portal .learning-course-lessons .learning-lesson-open{min-height:126px}
+ .ka-living-world .learning-portal .learning-lesson-actions :is(a,button){font-size:12px;gap:5px}
+ .ka-living-world .moe-intake-details{padding-right:145px}
+ .ka-offer-companion{width:150px;height:160px}
+}
+@media(max-width:650px){
+ .ka-living-world .student-learning-shell .learning-stable-tabs{padding:0 12px;gap:2px}
+ .ka-living-world .learning-portal .learning-stable-tabs button{padding:16px 10px;font-size:13px}
+ .ka-living-world .student-learning-shell .learning-course-home{padding:16px 14px 45px;gap:20px}
+ .ka-living-world .learning-course-home .learning-page-heading{min-height:216px;padding:24px}
+ .ka-living-world .learning-course-home .learning-page-heading h1{font-size:37px}
+ .ka-living-world .learning-course-home .learning-page-heading p{flex-wrap:wrap;gap:8px;font-size:12px;margin-bottom:12px}
+ .ka-heading-copy{width:63%}
+ .ka-page-companion{width:177px;height:177px;right:-6px}
+ .ka-companion-greeting{left:-18px;font-size:12px;padding:7px 11px}
+ .ka-living-world .lesson-workspace-classroom{overflow:auto}
+ .ka-living-world .lesson-workspace-surface{flex:none;display:flex;flex-direction:column}
+ .ka-living-world .lesson-workspace-canvas{min-height:420px;overflow:visible}
+ .ka-living-world .lesson-stage-frame{flex:none;overflow:visible}
+ .ka-living-world .lesson-workspace-chat{min-height:270px;max-height:420px}
+ .ka-living-world .lesson-overview-sections{grid-template-columns:1fr}
+ .ka-living-world .lesson-overview .lesson-overview-header{padding:20px 15px 100px;min-height:210px}
+ .ka-living-world .lesson-overview .lesson-overview-header h1{font-size:28px;max-width:none}
+ .ka-overview-companion{width:112px;height:112px;right:0;bottom:-2px}
+ .ka-overview-words{padding:0 12px}
+ .ka-overview-words .lesson-word-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .ka-motion-toggle{bottom:7px;left:7px;width:28px;height:28px}
+}
+@media(prefers-reduced-motion:reduce){
+ .ka-living-world :is(.ka-creature,.ka-forest-mist,.ka-forest-lights i,.lesson-chat-answer,.learning-course-home>section){animation:none!important}
+ .ka-living-world :is(.ka-companion-greeting,.learning-lesson-row,.learning-lesson-number){transition:none}
+ .ka-living-world .learning-lesson-row:hover,.ka-living-world .learning-lesson-open:hover .learning-lesson-number{transform:none}
+}
+
+/* Layered ambient motion stays separate from the teaching and rail animations. */
+.ka-forest-art{animation:ka-canopy-drift 24s ease-in-out infinite alternate;transform-origin:75% 70%}
+.ka-forest-sunlight{position:absolute;inset:-20%;background:conic-gradient(from 155deg at 80% 0%,transparent 0deg,#ead99718 7deg,transparent 14deg,#dcebb313 23deg,transparent 32deg);transform-origin:80% 0;animation:ka-sunlight 17s ease-in-out infinite alternate}
+.ka-forest-mist{background:radial-gradient(ellipse at 70% 75%,#afd8cc38,transparent 48%);animation-duration:19s}
+.ka-forest-mist-near{inset:30% -25% -35%;background:radial-gradient(ellipse at 70% 60%,#d2e4d52a,transparent 55%);animation:ka-near-mist 14s ease-in-out infinite alternate}
+.ka-forest-leaves{position:absolute;inset:0;overflow:hidden}
+.ka-forest-leaves i{position:absolute;left:76%;top:-12%;width:8px;height:4px;background:#a7b66c99;border-radius:90% 0 90% 0;animation:ka-leaf-fall 18s linear infinite;opacity:0}
+.ka-forest-leaves i:nth-child(2){left:92%;animation-delay:-7s;animation-duration:23s;width:6px}
+.ka-forest-leaves i:nth-child(3){left:61%;animation-delay:-13s;animation-duration:21s}
+.ka-forest-leaves i:nth-child(4){left:85%;animation-delay:-3s;animation-duration:26s;width:5px}
+.ka-forest-leaves i:nth-child(5){left:70%;animation-delay:-17s;animation-duration:29s}
+.ka-companion-body{display:block;width:100%;height:100%;transform-origin:50% 92%;animation:ka-breathe 4.6s ease-in-out infinite}
+.ka-creature{animation:ka-curious-idle 12.8s ease-in-out infinite;transform-origin:50% 88%}
+.ka-companion:hover .ka-creature{animation:ka-attentive 2.8s ease-in-out infinite}
+.ka-companion.is-greeting .ka-creature{animation:ka-creature-greet 1.4s ease-in-out}
+@keyframes ka-canopy-drift{from{transform:scale(1.015) translateX(-.3%)}to{transform:scale(1.04) translateX(.3%)}}
+@keyframes ka-sunlight{from{opacity:.35;transform:rotate(-3deg)}to{opacity:.9;transform:rotate(3deg)}}
+@keyframes ka-near-mist{from{opacity:.35;transform:translateX(5%)}to{opacity:.85;transform:translateX(-7%)}}
+@keyframes ka-leaf-fall{0%{opacity:0;transform:translate(0,0) rotate(0)}10%{opacity:.5}40%{transform:translate(-22px,90px) rotate(100deg)}70%{opacity:.4;transform:translate(8px,180px) rotate(230deg)}100%{opacity:0;transform:translate(-35px,320px) rotate(350deg)}}
+@keyframes ka-breathe{0%,100%{transform:scale(1,1)}48%{transform:scale(1.012,1.025) translateY(-1px)}}
+@keyframes ka-curious-idle{0%,15%,100%{transform:rotate(0) translateY(0)}25%,34%{transform:rotate(-3deg) translateY(-1px)}43%,62%{transform:rotate(0) translateY(0)}70%,77%{transform:rotate(2deg) translateY(-2px)}86%{transform:rotate(-.7deg) translateY(0)}}
+@keyframes ka-attentive{0%,100%{transform:rotate(-3deg) translateY(-2px)}50%{transform:rotate(-1deg) translateY(-4px)}}
+.ka-living-world[data-hidden=true] :is(.ka-companion-body,.ka-forest-art,.ka-forest-sunlight,.ka-forest-leaves i){animation-play-state:paused!important}
+.ka-living-world[data-motion=paused] :is(.ka-companion-body,.ka-forest-art,.ka-forest-sunlight,.ka-forest-leaves i){animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.ka-living-world :is(.ka-companion-body,.ka-forest-art,.ka-forest-sunlight,.ka-forest-leaves i){animation:none!important}}
