@@ -12,3 +12,9 @@
 .jitsi-class-call :focus-visible{outline:3px solid #b78b41;outline-offset:3px}
 .classroom-sidebar .jitsi-class-call{margin:12px 8px;flex-shrink:0}
 .classroom-sidebar .jitsi-call-frame{height:440px}
+.lesson-jitsi-panel{flex-shrink:0;max-height:60dvh;overflow:auto}
+.lesson-jitsi-panel .jitsi-class-call{margin:0;border-radius:0;border-width:0 0 1px}
+.lesson-jitsi-panel .jitsi-call-frame{height:clamp(280px,42dvh,480px);min-height:280px}
+.lesson-call-presence{padding:4px 12px;justify-content:flex-start}
+.lesson-call-presence .lesson-camera-tile{height:auto;width:auto;min-width:50px;padding:4px 8px;border-radius:4px}
+.lesson-call-presence .is-empty{display:none}
