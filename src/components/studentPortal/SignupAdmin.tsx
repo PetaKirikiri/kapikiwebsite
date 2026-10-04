@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { MOE_CLASSES } from '../../lib/moeOffer'
 import MoeBenefitIcon from '../MoeBenefitIcon'
+import KaPikiWordmark from '../KaPikiWordmark'
 import ministryLogo from '../../assets/ministry-of-education-logo-white.svg'
+import '../WebsiteView.css'
 import '../SiteIdentity.css'
 import './SignupAdmin.css'
 
@@ -23,7 +25,23 @@ export default function SignupAdmin() {
       .finally(() => { if (!controller.signal.aborted) setLoading(false) })
     return () => controller.abort()
   }, [])
-  return <main className="signup-admin">
+  return <div className="maori-site">
+    <header className="site-header site-header-moe">
+      <div className="site-header-branding">
+        <a href="/#moe" className="site-wordmark" aria-label="Ka Piki"><KaPikiWordmark /></a>
+        <a href="/#moe" className="site-moe-home" aria-label="Ka Piki October intake for Ministry of Education staff"><img src={ministryLogo} width={150} height={44} alt="Ministry of Education" /></a>
+      </div>
+      <nav aria-label="Website navigation" className="site-nav">
+        {[
+          ['/#moe?timetable', 'Levels', 'Our Levels'],
+          ['/#moe/benefits/capability-reference', 'Capabilities', 'Your Capabilities'],
+          ['/#moe/about', 'Story', 'Our Story'],
+          ['/#moe/my-learning', 'Learning', 'My Learning'],
+          ['/#moe/lessons?level=1&lesson=1', 'Classroom', 'Classroom'],
+        ].map(([href, label, name]) => <a key={href} href={href} aria-label={name} className="site-nav-item"><span className="site-nav-anchor">{label}</span></a>)}
+      </nav>
+    </header>
+    <main className="signup-admin">
     <a className="signup-admin-back" href="/#moe">← MOE classes</a>
     <header className="site-card site-card-cover signup-admin-page-header">
       <img src={ministryLogo} width="200" height="58" alt="Ministry of Education" />
@@ -31,7 +49,8 @@ export default function SignupAdmin() {
       <p>October 2026 intake</p>
     </header>
     {loading ? <p role="status">Loading…</p> : error ? <p className="signup-admin-error" role="alert">{error}</p> : <SignupRoster rows={rows} />}
-  </main>
+    </main>
+  </div>
 }
 
 export function SignupRoster({ rows }: { rows: Registration[] }) {
