@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { User } from '@supabase/supabase-js'
 import { studentClient } from '../../lib/studentPortal/client'
 import LearningSignIn from './LearningSignIn'
+import PasswordSetup, { needsPasswordSetup } from './PasswordSetup'
 import { attendanceSummary, loadLearning, statusLabel, meetingLink } from '../../lib/studentPortal/learning'
 import type { LearningData } from '../../lib/studentPortal/learning'
 import StudentWorkspace from './StudentWorkspace'
@@ -100,7 +101,7 @@ function AuthenticatedLearningPortal() {
     return () => { active = false; listener.subscription.unsubscribe() }
   }, [])
   useEffect(() => {
-    if (!user) return
+    if (!user || needsPasswordSetup(user)) return
     let active = true
     setError(''); setData(null)
     void loadLearning(user.id).then(result => { if (active) setData(result) }).catch(() => { if (active) setError('We couldn’t load your learning record. Please try again.') })
@@ -108,7 +109,7 @@ function AuthenticatedLearningPortal() {
   }, [user, revision])
   async function signOut() { const result = await studentClient!.auth.signOut(); if (result.error) setError(result.error.message) }
   return <main className="learning-portal">
-    {checking ? <p role="status">Opening your portal…</p> : !user ? <LearningSignIn /> : <><div className="learning-account"><span>{user.email}</span><button onClick={() => setProfile(!profile)}>{profile ? 'Back to my learning' : 'My profile'}</button><button onClick={() => void signOut()}>Sign out</button></div>{profile ? <section className="student-portal learning-profile"><StudentWorkspace user={user} level={1} departmentCode="" onSignOut={signOut} /></section> : data ? <LearningDashboard data={data} name={String(user.user_metadata.name ?? '').split(' ')[0]} /> : !error && <p role="status">Loading your learning record…</p>}</>}
+    {checking ? <p role="status">Opening your portal…</p> : !user ? <LearningSignIn /> : needsPasswordSetup(user) ? <PasswordSetup user={user} onComplete={setUser} onSignOut={() => void signOut()} /> : <><div className="learning-account"><span>{user.email}</span><button onClick={() => setProfile(!profile)}>{profile ? 'Back to my learning' : 'My profile'}</button><button onClick={() => void signOut()}>Sign out</button></div>{profile ? <section className="student-portal learning-profile"><StudentWorkspace user={user} level={1} departmentCode="" onSignOut={signOut} /></section> : data ? <LearningDashboard data={data} name={String(user.user_metadata.name ?? '').split(' ')[0]} /> : !error && <p role="status">Loading your learning record…</p>}</>}
     {error && <p className="portal-error" role="alert">{error} {user && <button onClick={() => setRevision(value => value + 1)}>Try again</button>}</p>}
   </main>
 }

@@ -24,6 +24,11 @@ export default function LearningSignIn() {
           if (result.error.code === 'email_not_confirmed') throw new Error('Confirm your email first. Choose “Email me a sign-in link” below.')
           throw result.error
         }
+        // A successful password login proves the learner already knows their password.
+        if (result.data.user && result.data.user.user_metadata?.password_setup_complete !== true) {
+          const saved = await studentClient.auth.updateUser({ data: { password_setup_complete: true } })
+          if (saved.error) throw saved.error
+        }
       } else {
         const redirect = new URL('/', window.location.origin)
         redirect.searchParams.set('studentPortal', window.location.hash.startsWith('#moe') ? 'moe' : '1')
