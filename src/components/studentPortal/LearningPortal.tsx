@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import type { FormEvent } from 'react'
 import type { User } from '@supabase/supabase-js'
-import { studentClient, errorMessage } from '../../lib/studentPortal/client'
+import { studentClient } from '../../lib/studentPortal/client'
+import LearningSignIn from './LearningSignIn'
 import { attendanceSummary, loadLearning, statusLabel, meetingLink } from '../../lib/studentPortal/learning'
 import type { LearningData } from '../../lib/studentPortal/learning'
 import StudentWorkspace from './StudentWorkspace'
@@ -90,8 +90,6 @@ function AuthenticatedLearningPortal() {
   const [checking, setChecking] = useState(true)
   const [data, setData] = useState<LearningData | null>(null)
   const [error, setError] = useState('')
-  const [sent, setSent] = useState(false)
-  const [busy, setBusy] = useState(false)
   const [profile, setProfile] = useState(false)
   const [revision, setRevision] = useState(0)
   useEffect(() => {
@@ -108,21 +106,9 @@ function AuthenticatedLearningPortal() {
     void loadLearning(user.id).then(result => { if (active) setData(result) }).catch(() => { if (active) setError('We couldn’t load your learning record. Please try again.') })
     return () => { active = false }
   }, [user, revision])
-  async function signIn(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    if (!studentClient || busy) return
-    const email = String(new FormData(event.currentTarget).get('email')).trim()
-    setBusy(true); setError('')
-    try {
-      const redirect = new URL(window.location.href); redirect.hash = '#my-learning'; redirect.searchParams.set('studentPortal', '1')
-      const { error } = await studentClient.auth.signInWithOtp({ email, options: { emailRedirectTo: redirect.href } })
-      if (error) throw error
-      setSent(true)
-    } catch (error) { setError(errorMessage(error)) } finally { setBusy(false) }
-  }
   async function signOut() { const result = await studentClient!.auth.signOut(); if (result.error) setError(result.error.message) }
   return <main className="learning-portal">
-    {checking ? <p role="status">Opening your portal…</p> : !user ? <section className="learning-signin"><p>KA PIKI</p><h1>My learning</h1><p>Sign in to see your courses, attendance, learning and results.</p>{!studentClient ? <p role="alert">Student sign-in is temporarily unavailable.</p> : sent ? <div role="status"><h2>Check your email</h2><p>Follow the sign-in link to open your learning portal.</p><button onClick={() => setSent(false)}>Use another email</button></div> : <form className="portal-form" onSubmit={signIn}><label>Email<input name="email" type="email" autoComplete="email" required /></label><small>Use the email you registered for your course with.</small><button disabled={busy}>{busy ? 'Sending…' : 'Email me a sign-in link'}</button></form>}</section> : <><div className="learning-account"><span>{user.email}</span><button onClick={() => setProfile(!profile)}>{profile ? 'Back to my learning' : 'My profile'}</button><button onClick={() => void signOut()}>Sign out</button></div>{profile ? <section className="student-portal learning-profile"><StudentWorkspace user={user} level={1} departmentCode="" onSignOut={signOut} /></section> : data ? <LearningDashboard data={data} name={String(user.user_metadata.name ?? '').split(' ')[0]} /> : !error && <p role="status">Loading your learning record…</p>}</>}
+    {checking ? <p role="status">Opening your portal…</p> : !user ? <LearningSignIn /> : <><div className="learning-account"><span>{user.email}</span><button onClick={() => setProfile(!profile)}>{profile ? 'Back to my learning' : 'My profile'}</button><button onClick={() => void signOut()}>Sign out</button></div>{profile ? <section className="student-portal learning-profile"><StudentWorkspace user={user} level={1} departmentCode="" onSignOut={signOut} /></section> : data ? <LearningDashboard data={data} name={String(user.user_metadata.name ?? '').split(' ')[0]} /> : !error && <p role="status">Loading your learning record…</p>}</>}
     {error && <p className="portal-error" role="alert">{error} {user && <button onClick={() => setRevision(value => value + 1)}>Try again</button>}</p>}
   </main>
 }

@@ -28,11 +28,12 @@ export function errorMessage(error: unknown) {
 
 // Authentication callbacks may replace the route fragment with access tokens.
 // Wait for Supabase to consume the callback before restoring the portal route.
-if (studentClient && typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('studentPortal') === '1') {
+const portalCallback = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('studentPortal') : null
+if (studentClient && (portalCallback === '1' || portalCallback === 'moe')) {
   void studentClient.auth.getSession().then(() => {
     const destination = new URL(window.location.href)
     destination.searchParams.delete('studentPortal')
-    destination.hash = '#my-learning'
+    destination.hash = portalCallback === 'moe' ? '#moe/my-learning' : '#my-learning'
     window.history.replaceState(window.history.state, '', destination)
     window.dispatchEvent(new HashChangeEvent('hashchange'))
   })

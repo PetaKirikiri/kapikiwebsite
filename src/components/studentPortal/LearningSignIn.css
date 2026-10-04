@@ -1,0 +1,14 @@
+.learning-login{width:100%;max-width:480px;margin:32px auto}
+.learning-login>header{padding:30px 32px}
+.learning-login h1{margin:0;font-family:var(--ka-heading);font-size:38px;font-weight:400}
+.learning-login>header p{margin:10px 0 0;color:var(--ka-green-ink);font-size:16px}
+.learning-login-body{padding:30px 32px}
+.learning-login form{display:grid;gap:12px}
+.learning-login label{font-size:15px;font-weight:600}
+.learning-login input{width:100%;min-height:48px;box-sizing:border-box;padding:12px;font:inherit;border:1px solid #b6c9bd;border-radius:6px;background:#fff;color:#213b35}
+.learning-login label:not(:first-child){margin-top:8px}
+.learning-portal .learning-login-primary{margin-top:12px;min-height:48px;background:var(--ka-green);color:var(--ka-green-ink);font-weight:600}
+.learning-portal .learning-login-alternative{border:0;background:transparent;text-decoration:underline;text-underline-offset:4px}
+.learning-login .portal-error{margin:4px 0;font-size:14px}
+.learning-login h2{font-family:var(--ka-heading);font-weight:400}
+@media(max-width:520px){.learning-login{margin:12px auto}.learning-login>header,.learning-login-body{padding:24px}}
