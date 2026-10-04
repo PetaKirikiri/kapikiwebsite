@@ -518,7 +518,7 @@
 /* MOE is a secondary identity beside the primary KA PIKI wordmark. */
 .site-header-branding { display: flex; align-items: center; gap: 24px; }
 .site-header-moe { align-items: center; }
-.site-header-moe .site-nav-item { padding: 8px 0; }
+.site-header-moe .site-nav-item { padding: 21px 0 5px; }
 .site-header .site-moe-home { display: inline-flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 5px; padding: 2px 0 2px 24px; border-left: 1px solid #c0d4c840; color: #c0d4c8; white-space: nowrap; }
 .site-header .site-moe-home:hover { color: #fff; }
 .site-moe-home img { display: block; width: 126px; height: auto; }
@@ -549,3 +549,19 @@
 @media(max-width: 550px) { .maori-site .site-practice-preview { padding: 0 20px; }.maori-site .site-practice-preview .training-prompt { min-height: 120px; } }
 .site-skip-content { position: fixed; z-index: 100; left: 16px; top: 12px; transform: translateY(-180%); padding: 12px 18px; background: white; color: var(--ka-green); border: 2px solid var(--ka-green); border-radius: 6px; }
 .site-skip-content:focus { transform: none; }
+
+.site-policy-announcement { padding: 20px 24px; margin: 24px 0; border-left: 3px solid #173d37; background: #edf2ec; color: #173d37; }
+.site-policy-announcement strong { font-size: 18px; font-weight: 600; }
+.site-policy-announcement p { margin: 8px 0 0; font-size: 15px; line-height: 1.5; }
+
+.level-course-cover .level-course-outcome { margin: 12px 0 0; color: var(--cover-ink); font: 400 14px/1.5 var(--ka-body, sans-serif); opacity: .85; }
+
+/* Keep the sentence pattern primary; English remains quiet supporting text. */
+.maori-site .site-sentences .site-translation-match { border-bottom-width: 1px; border-bottom-color: color-mix(in srgb, var(--translation-color) 45%, transparent); }
+.maori-site .site-sentences .course-entry-heading h3 { font: 500 19px/1.35 var(--ka-body, sans-serif); letter-spacing: 0; }
+.maori-site .site-sentences article > h2 { font: 500 18px/1.4 var(--ka-body, sans-serif); }
+
+.connector-phrase-meaning { display: block; width: 0; min-width: 100%; box-sizing: border-box; padding: 5px 18px 10px 2px; color: #52675f; font: 400 13px/1.45 var(--ka-body, sans-serif); letter-spacing: 0; text-align: left; }
+.maori-site .course-entry-content:has(.connector-phrase-meaning) .site-translation { margin-top: 8px !important; padding-top: 12px; border-top: 1px solid var(--ka-card-line); color: var(--ka-green); }
+
+.connector-meaning-color { color: #263f37; background: color-mix(in srgb, var(--meaning-color) 20%, transparent); border-bottom: 2px solid var(--meaning-color); padding: 1px 0 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }

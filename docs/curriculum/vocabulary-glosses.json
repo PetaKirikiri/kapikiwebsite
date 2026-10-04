@@ -1,6 +1,19 @@
 {
   "note": "Concise teaching glosses for the current course contexts, not exhaustive dictionary definitions or approved engine sense assignments. Checked against available Te Aka dictionary records, with editorial functional descriptions for grammatical words.",
   "meanings": {
+    "a": "personal marker before a name, as in Ka haere a Hana",
+    "tēnei": "this; this one (near me)",
+    "ēnei": "these; these ones (near me)",
+    "tēnā": "that; that one (near you)",
+    "ēnā": "those; those ones (near you)",
+    "tērā": "that; that one (over there)",
+    "ērā": "those; those ones (over there)",
+    "tētahi": "a particular; another; one (of a group)",
+    "ētahi": "some; other (more than one)",
+    "āku": "my (more than one possession, a category)",
+    "tā": "possessive before an owner: one possession, a category",
+    "ā": "possessive before an owner: more than one possession, a category; also and then",
+    "ō": "possessive before an owner: more than one possession, o category",
     "te": "the (one)",
     "he": "a; an; some",
     "ko": "marks a name or identity",
@@ -229,7 +242,7 @@
     "kati": "close; shut",
     "whakatuwhera": "open",
     "whāia": "follow!; pursue! (command form)",
-    "tō": "pull; drag",
+    "tō": "your (one possession); also o category possessive before a named owner",
     "ringa": "hand; arm",
     "kākahu": "clothing; clothes",
     "pouaka": "box",
@@ -390,6 +403,7 @@
     "whanaketanga": "development; growth"
   },
   "levelMeanings": {
+    "1": { "kore": "zero" },
     "2": {
       "e": "with ana, marks an action in progress",
       "roto": "inside; within",

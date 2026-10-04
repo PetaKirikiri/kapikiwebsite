@@ -6,3 +6,12 @@ export const LEVEL_PRESENTATION = {
   5: { skills: [{"label": "Comparisons", "pattern": "ake … i", "exampleStructureId": 19}, {"label": "Habitual actions", "pattern": "verb + ai", "exampleStructureId": 27}, {"label": "Ability and inability", "pattern": "ka taea e / kāore e taea e", "exampleStructureId": 40}, {"label": "Passive sentences", "pattern": "i whaia … e …", "exampleStructureId": 55}], title: 'Expression & ability', capability: 'Compare ideas and express what is possible', topics: ['Comparisons', 'Habits', 'Ability', 'Passive sentences'] },
   6: { skills: [{"label": "Why questions", "pattern": "he aha … ai", "exampleStructureId": 44}, {"label": "When questions", "pattern": "nōnahea / āhea", "exampleStructureId": 50}, {"label": "Why something did not happen", "pattern": "he aha … i kore ai …", "exampleStructureId": 49}, {"label": "If clauses", "pattern": "mēnā / mehemea / ki te", "exampleStructureId": 54}], title: 'Kōrero Club', capability: 'Ask why, when and what if', topics: ['Why?', 'When?', 'What if?', 'Negative questions'] },
 } as const
+
+export const LEVEL_ENTRY_GUIDANCE = {
+  1: 'No prior sentence structures are required. You may know a few words or greetings but still need help introducing yourself.',
+  2: 'You can introduce yourself with ko, describe someone with he, and use nō and kei to say where you are from and where you are.',
+  3: 'You can describe past, completed, ongoing and future actions using i, kua, kei te, e … ana and ka.',
+  4: 'You can describe actions across time, make negative statements with ehara and kāore, and give instructions using commands, kaua e and kia.',
+  5: 'You can describe actions and negate them. You recognise ownership and purpose with nā / nō and mā / mō, and can say who did or will do something with nā … i and mā … e.',
+  6: 'You can compare with ake … i, describe habits with ai, express ability with ka taea e, and recognise passive sentences.',
+} as const

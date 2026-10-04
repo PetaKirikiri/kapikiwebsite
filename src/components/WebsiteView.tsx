@@ -29,6 +29,9 @@ import './WebsiteView.css'
 import './SiteIdentity.css'
 import CapabilitiesDashboard from './CapabilitiesDashboard'
 import StudentPortal from './studentPortal/StudentPortal'
+import LearningPortal from './studentPortal/LearningPortal'
+import LessonRoom from './lessons/LessonRoom'
+import LessonWorkspace from './lessons/LessonWorkspace'
 import SentenceTranslation from './SentenceTranslation'
 import TrainingView from './TrainingView'
 import TrainingNavigation from './TrainingNavigation'
@@ -36,6 +39,7 @@ import TrainingAdmin from './TrainingAdmin'
 import KaPikiWordmark from './KaPikiWordmark'
 import NavigationRail from './NavigationRail'
 import ClassroomRoom from './ClassroomRoom'
+import ClassroomHouse from './ClassroomHouse'
 import corporateHarakeke from '../assets/corporate-harakeke-v1.jpg'
 import offerCapabilities from '../assets/offer-capabilities.png'
 import offerClassroom from '../assets/offer-classroom.png'
@@ -195,7 +199,7 @@ function WebsiteContent({
   }
   useEffect(() => {
     const current = websiteRoute(activeSection)
-    document.title = `${current.notFound ? 'Page not found' : current.level ? `Level ${current.level}` : current.benefit?.label ?? (current.overview ? 'Course levels' : current.surface === '#moe' ? 'October intake' : current.surface === '#competency' ? 'Team capabilities' : current.surface === '#about' ? 'About us' : current.surface === '#practice' ? 'Practice preview' : 'Te reo Māori')} · ${current.moe ? 'MOE · ' : ''}Ka Piki`
+    document.title = `${current.notFound ? 'Page not found' : current.level ? `Level ${current.level}` : current.benefit?.label ?? (current.overview ? 'Course levels' : current.surface === '#moe' ? 'October intake' : current.surface === '#competency' ? 'Team capabilities' : current.surface === '#lessons' ? 'Lessons' : current.surface === '#my-learning' ? 'My learning' : current.surface === '#about' ? 'About us' : current.surface === '#practice' ? 'Practice preview' : 'Te reo Māori')} · ${current.moe ? 'MOE · ' : ''}Ka Piki`
   }, [activeSection, intakeVersion])
 
   const levelSentences = data?.sentences.filter((sentence) => sentence.curriculumLevel === selectedLevel) ?? []
@@ -209,7 +213,9 @@ function WebsiteContent({
 
   if (activeSection.split('?')[0] === '#kitchen') return <KitchenGame key={activeSection} />
   if (activeSection.split('?')[0] === '#guess-who') return <GuessWhoGame key={activeSection} />
+  if (surface === '#lessons' && !new URLSearchParams(activeSection.split('?')[1]).has('session') && !new URLSearchParams(activeSection.split('?')[1]).has('manage')) return <LessonWorkspace key={activeSection} />
   if (activeSection.split('?')[0] === '#live-class') return <LiveClassroom key={activeSection} />
+  if (activeSection === '#classroom-3d') return <ClassroomHouse />
   if (activeSection === '#classroom' || activeSection === '#classroom-2d') return <ClassroomRoom data={data} error={error} />
   if (activeSection === '#training' || activeSection === '#training-admin') {
     return <main className="training-app" aria-label="Ka Piki training app">
@@ -233,12 +239,14 @@ function WebsiteContent({
         </div>
         <nav aria-label="Website navigation" className="site-nav">
           {[
-            ['#level-finder', 'Levels', ''],
+            ['#level-finder', 'Levels', 'Our'],
             ['#competency', 'Capabilities', 'Your'],
-            ['#about', 'About', ''],
+            ['#about', 'Story', 'Our'],
+            ['#my-learning', 'Learning', 'My'],
+            ...(moeRoute ? [['#lessons?level=1&lesson=1', 'Classroom', '']] : []),
           ].map(([href, label, prefix]) => {
             const learnerCapabilities = intakeVersion === 2 && href === '#competency'
-            const active = (learnerCapabilities ? route.benefit?.id === 'capability-reference' : surface === href) || (href === '#level-finder' && (route.overview || !!route.level))
+            const active = (learnerCapabilities ? route.benefit?.id === 'capability-reference' : surface === href) || (href === '#level-finder' && (route.overview || !!route.level || route.target === 'moe-timetable'))
             const journey = `${activeSection}:${navReplay}`
             const showPrefix = !!prefix && active && completedNav === journey
             return <a key={href} href={link(learnerCapabilities ? '#benefits/capability-reference' : href)} onClick={() => { if (href === '#level-finder') setShowLevelOverview(true); setCompletedNav(''); if (active) setNavReplay(value => value + 1) }} aria-label={prefix ? `${prefix} ${label}` : undefined} aria-current={active ? 'location' : undefined} className={`site-nav-item${active ? ' site-nav-item-active' : ''}`}>
@@ -250,11 +258,15 @@ function WebsiteContent({
       </header>
 
 
-      {route.notFound ? <main className="moe-benefit-page"><h1>Page not found</h1><a className="moe-feature-button" href={moeRoute ? '#moe' : '#website-top'}>{moeRoute ? 'Back to MOE classes' : 'Back to Ka Piki'}</a></main> : surface === '#practice' ? <main className="training-app site-practice-preview"><a className="site-context-return" href={link('#benefits/app')}>Back to app overview</a><h1>Try the practice app</h1><p className="site-preview-label">Preview · answers stay in this session</p><TrainingView preview data={data} error={error} /></main> : moeBenefit ? <MoeBenefitPage key={`${moeRoute}:${moeBenefit.id}`} benefit={moeBenefit} moe={moeRoute} practiceData={data} practiceError={error ?? trainingError} /> : surface === '#moe' ? <Offer courseData={data} onRegister={(level, context) => { setSelectedLevel(level); setInterestContext(context); setAccountOpen(true) }} /> : activeSection === '#website-top' ? <main className="site-corporate-welcome" aria-label="Corporate training">
+      {surface === '#lessons' ? <LessonRoom key={activeSection} /> : surface === '#my-learning' ? <LearningPortal /> : route.notFound ? <main className="moe-benefit-page"><h1>Page not found</h1><a className="moe-feature-button" href={moeRoute ? '#moe' : '#website-top'}>{moeRoute ? 'Back to MOE classes' : 'Back to Ka Piki'}</a></main> : surface === '#practice' ? <main className="training-app site-practice-preview"><a className="site-context-return" href={link('#benefits/app')}>Back to app overview</a><h1>Try the practice app</h1><p className="site-preview-label">Preview · answers stay in this session</p><TrainingView preview data={data} error={error} /></main> : moeBenefit ? <MoeBenefitPage key={`${moeRoute}:${moeBenefit.id}`} benefit={moeBenefit} moe={moeRoute} practiceData={data} practiceError={error ?? trainingError} /> : surface === '#moe' ? <Offer courseData={data} onRegister={(level, context) => { setSelectedLevel(level); setInterestContext(context); setAccountOpen(true) }} /> : activeSection === '#website-top' ? <main className="site-corporate-welcome" aria-label="Corporate training">
         <div className="site-corporate-offer">
           <h1>Build your team’s Māori capability.<br />Without the extra workload.</h1>
           <p className="site-corporate-lead">Practical learning for staff. Clear oversight for you. Managed by us.</p>
         </div>
+        <aside className="site-policy-announcement" aria-label="Policy Group classes">
+          <strong>The Policy Group is opening up its classes.</strong>
+          <p>Contact Esther Boyle for more information: <a href="mailto:Esther.Boyle@education.govt.nz">Esther.Boyle@education.govt.nz</a></p>
+        </aside>
         <figure className="site-corporate-image">
           <img src={corporateHarakeke} width={1536} height={1024} fetchPriority="high" alt="An AI-generated study of interwoven harakeke fibres in natural flax and deep olive tones" />
         </figure>
@@ -297,7 +309,6 @@ function WebsiteContent({
         <CapabilitiesDashboard />
       </main> : <main id="level-finder" className={`site-learning${showLevelOverview ? '' : ' site-level-detail'}${moeRoute ? ' moe-level-page' : ''}`}>
         {showLevelOverview ? <header className="site-card site-card-cover site-level-header site-level-header-overview"><h1>Course levels</h1><p className="site-benefit-intro">Start with what you already know and see what you could do next. Each level builds on the language you have made your own.</p></header> : null}
-        {showLevelOverview && !moeRoute ? <CourseFormat linked /> : null}
         {error != null ? <div role="alert" className="site-load-error"><p>{error}</p><button type="button" onClick={() => { setFetchError(null); setTrainingError(null); setLoadAttempt(value => value + 1) }}>Try again</button></div> : null}
         <div id="course-levels" className="site-level-layout">
           {showLevelOverview ? <LevelCourseOverview sentences={data?.sentences} onSelect={changeLevel} /> : <LevelExplorer level={selectedLevel} moe={moeRoute} tab={route.tab} onRegister={() => setAccountOpen(true)}>
@@ -311,12 +322,12 @@ function WebsiteContent({
                     savedBusManifests={levelSentences.map(sentence => demoManifest(sentence, states.get(sentence.structureId) ?? blankSheet(sentence.textMi), courseOrderByStructureId.get(sentence.structureId) ?? sentence.sortOrder))}
                     posCatalog={data.catalog} passageAddresses={levelSentences.map(sentence => ({ structureId: sentence.structureId }))}
                     onBusManifestWrite={handleLocalWrite} showPassageSearch={false} showPassageLabel={false}
-                    showStructureNotes collapsibleStructureNotes
-                    renderPassageSupplement={(index, materials, joins) => <SentenceTranslation text={levelSentences[index]!.textMi} materials={materials} joins={joins} />}
+                    showStructureNotes collapsibleStructureNotes showPhraseMeanings
+                    renderPassageSupplement={(index, materials, joins) => <SentenceTranslation plain text={levelSentences[index]!.textMi} materials={materials} joins={joins} />}
                     readOnly />}
                 </div></div>
               </> : null}
-            </> : route.tab === 'vocabulary' ? <Suspense fallback={<p role="status">Loading vocabulary…</p>}><LevelVocabulary key={selectedLevel} level={selectedLevel} catalog={data?.catalog} /></Suspense> : route.tab === 'stories' ? selectedLevel === 1
+            </> : route.tab === 'vocabulary' ? <Suspense fallback={<p role="status">Loading vocabulary…</p>}><LevelVocabulary key={selectedLevel} level={selectedLevel} catalog={data?.catalog} sentences={data?.sentences} /></Suspense> : route.tab === 'stories' ? selectedLevel === 1
               ? <LevelOnePepeha catalog={data?.catalog} sentences={data?.sentences} moe={route.moe} />
               : <LevelReadingMaterial key={selectedLevel} reading={LEVEL_READING_MATERIAL[selectedLevel]} catalog={data?.catalog} sentences={LEVEL_READING_ANNOTATIONS} moe={route.moe} /> : <>
               <p className="site-preview-label">Level {selectedLevel} practice · answers stay in this session</p>
@@ -325,6 +336,7 @@ function WebsiteContent({
           </LevelExplorer>}
 
         </div>
+        {showLevelOverview && !moeRoute ? <CourseFormat linked /> : null}
       </main>}
 
       <StudentPortal key={`${accountOpen}:${registrationContext || selectedLevel}`} context={registrationContext} level={selectedLevel} open={accountOpen} onClose={() => { setAccountOpen(false); if (['#account', '#join'].includes(websiteRoute(window.location.hash).surface)) { window.location.hash = moeRoute ? '#moe' : '#level-finder' } }} />

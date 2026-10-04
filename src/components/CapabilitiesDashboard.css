@@ -107,3 +107,15 @@
   .maori-site .cap-person-button { width: 100%; }
   .maori-site .cap-table-scroll .cap-detail-row { padding-top: 0; }
 }
+
+.cap-dashboard-header { justify-content: flex-end; }
+.cap-metric { border-top: 3px solid var(--cap-accent); }
+.cap-metric > .cap-metric-heading { min-height: 0; flex: none; padding: 18px 20px 0; }
+.cap-metric-heading .cap-metric-icon { color: var(--cap-accent); }
+.maori-site .cap-dashboard .cap-metric h3 { color: var(--ka-green); font: 600 16px/1.3 var(--ka-body, sans-serif); letter-spacing: 0; }
+.maori-site .cap-metric p.site-benefit-intro { color: var(--site-muted); font-size: 12px; line-height: 1.5; }
+.cap-team-cover { min-height: 0; padding: 20px 24px; border-bottom: 1px solid var(--ka-card-line); }
+.maori-site .cap-dashboard .cap-team-cover h3 { color: var(--ka-green); font: 600 20px/1.3 var(--ka-body, sans-serif); }
+.cap-team-cover .site-benefit-intro, .cap-team-count { color: var(--site-muted); }
+.cap-students thead th { background: #edf1e9; color: var(--ka-green); font: 600 13px/1.4 var(--ka-body, sans-serif); }
+.cap-students thead th::before { display: none; }

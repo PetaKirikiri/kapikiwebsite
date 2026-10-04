@@ -1,3 +1,4 @@
+import KitchenGame from './KitchenGame'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import LoungeSprite from './LoungeSprite'
 import ClassWhiteboard, { type BoardState } from './ClassWhiteboard'
@@ -6,7 +7,7 @@ import './LiveClassroom.css'
 import './LiveHouse.css'
 
 type Member = { seat: number; name: string; x: number; y: number; movement: number; look: 'male' | 'female'; color: string; lastSeen: string; eliminated: number[]; guess: number | null; correct: boolean | null }
-type Room = { room: string; joined: boolean; seat: number; state: { round: number; chosen: boolean; revealed: boolean; target?: number | null; surface?: 'room' | 'whiteboard'; whiteboard?: BoardState }; members: Member[]; messages: { id: string; seat: number; text: string }[]; ended?: boolean }
+type Room = { room: string; joined: boolean; seat: number; state: { round: number; chosen: boolean; revealed: boolean; target?: number | null; surface?: 'room' | 'whiteboard' | 'kitchen'; whiteboard?: BoardState }; members: Member[]; messages: { id: string; seat: number; text: string }[]; ended?: boolean }
 type Motion = { x: number; y: number; tx: number; ty: number; walking: boolean; stride: number; facing: number; direction: 'front' | 'back' | 'side' }
 const cards = [
   { name: 'Charlie', look: 'male', color: '#398aa6' }, { name: 'Hana', look: 'female', color: '#ba657f' },
@@ -148,8 +149,8 @@ export default function LiveClassroom() {
       <button disabled={pending || !name.trim()}>{pending ? 'Connecting…' : id ? 'Join class' : 'Start class'}</button>
     </form> : <div className="live-layout">
       <div className="live-main">
-        <nav className="live-surfaces" aria-label="Class activity">{teacher ? <>{(['room', 'whiteboard'] as const).map(surface => <button key={surface} disabled={pending} aria-pressed={(room.state.surface ?? 'room') === surface} onClick={() => void act('surface', { surface })}>{surface === 'room' ? 'Room' : 'Whiteboard'}</button>)}</> : <span className="live-surface-name">{room.state.surface === 'whiteboard' ? 'Whiteboard' : 'Room'}</span>}</nav>
-        {room.state.surface === 'whiteboard' ? <ClassWhiteboard board={room.state.whiteboard ?? { revision: 0, blocks: [] }} teacher={teacher} pending={pending} onChange={change => act('whiteboard', change)} /> : <>
+        <nav className="live-surfaces" aria-label="Class activity">{teacher ? <>{(['room', 'whiteboard', 'kitchen'] as const).map(surface => <button key={surface} disabled={pending} aria-pressed={(room.state.surface ?? 'room') === surface} onClick={() => void act('surface', { surface })}>{surface === 'room' ? 'Room' : surface === 'kitchen' ? 'Kitchen' : 'Whiteboard'}</button>)}</> : <span className="live-surface-name">{room.state.surface === 'whiteboard' ? 'Whiteboard' : room.state.surface === 'kitchen' ? 'Kitchen' : 'Room'}</span>}</nav>
+        {room.state.surface === 'kitchen' ? <KitchenGame classRoom={id} /> : room.state.surface === 'whiteboard' ? <ClassWhiteboard board={room.state.whiteboard ?? { revision: 0, blocks: [] }} teacher={teacher} pending={pending} onChange={change => act('whiteboard', change)} /> : <>
 
         <div className="classroom-floor live-floor" role="application" aria-label="Shared house. Click to walk, or use WASD or arrow keys." tabIndex={0}
           onPointerDown={event => { if((event.target as HTMLElement).closest('button'))return;const rect=event.currentTarget.getBoundingClientRect();move(cameraX+(event.clientX-rect.left)/rect.width*800,(event.clientY-rect.top)/rect.height*500);event.currentTarget.focus() }}

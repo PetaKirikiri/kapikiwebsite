@@ -65,7 +65,6 @@ function AppDemonstration({ data, error }: { data?: WebsitePreviewData | null; e
   const ready = new Set(examples.map(item => item.meaning.toLocaleLowerCase())).size >= 2
   return <div className="moe-app-demonstration">
     {ready ? <div className="training-app moe-app-live">
-      <div className="site-card-cover moe-app-bar"><strong>KA PIKI</strong><span>Practice</span></div>
       <TrainingView preview data={data} sentenceSize="fit" />
     </div> : <figure className="moe-app-capture">
       <img src={appScreen} alt="Ka Piki practice app: a Māori sentence with coloured rākau above two English answer choices" />

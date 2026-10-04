@@ -1,0 +1,7 @@
+.difference-status { position: absolute; top: 2%; left: 35%; width: 30%; z-index: 500; display: flex; justify-content: space-around; align-items: center; padding: 6px 10px; border-radius: 5px; color: #fff4df; background: #243c35df; font-size: clamp(12px, 1.5cqw, 20px); }
+.difference-status .puzzle-reset { position: static; color: inherit; }
+.difference-object { position: absolute; width: 18%; height: 23%; transform: translate(-50%, -50%); z-index: 490; }
+.difference-hotspot { width: 100%; height: 100%; border: 2px solid transparent; border-radius: 15%; background: transparent; cursor: pointer; }
+.difference-hotspot:hover, .difference-hotspot:focus-visible { border-color: #fff1bb90; background: #fff0a510; }
+.difference-hotspot.is-found { border-color: #95d4af; }
+.difference-mark { position: absolute; right: -12%; bottom: 0; border: 1px solid #b8c9b7; border-radius: 50%; width: 30%; aspect-ratio: 1; background: #f5f3ed; color: #214a36; cursor: pointer; }

@@ -50,7 +50,7 @@ export default function CapabilitiesDashboard() {
   const independent = cohort.filter(person => person.pronunciation === 'Independent').length
   return <>
     <section className="cap-introduction site-card" aria-labelledby="cap-introduction-heading">
-      <header className="site-card-cover"><h1 id="cap-introduction-heading" className="site-card-title">A clear view of your team’s capability.</h1></header>
+      <header className="site-card-cover"><h1 id="cap-introduction-heading" className="site-card-title">Team capabilities</h1></header>
       <ul>
         {capabilityBenefits.map(({ text, icon }) => <li key={text}>
           <svg className="cap-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d={icon} /></svg>
@@ -60,12 +60,11 @@ export default function CapabilitiesDashboard() {
     </section>
     <div className="cap-dashboard">
       <header className="cap-dashboard-header">
-        <h2>Team capabilities</h2>
         <label className="cap-team-filter">Team<select value={team} onChange={event => { setTeam(event.target.value); setSelected(null) }} aria-label="Filter team">{['Entire team', 'Customer services', 'Operations', 'Leadership'].map(value => <option key={value}>{value}</option>)}</select></label>
       </header>
       <div className="cap-skill-overview">
         <section className="site-card cap-metric cap-theme-green" aria-label="Pronunciation overview">
-          <header className="site-card-cover"><span className="cap-metric-icon"><CapabilityIcon kind="pronunciation" /></span><div><h3 className="site-card-title">Pronunciation</h3><p className="site-benefit-intro">See who can pronounce words independently and who needs support.</p></div></header>
+          <header className="cap-metric-heading"><span className="cap-metric-icon"><CapabilityIcon kind="pronunciation" /></span><div><h3 className="site-card-title">Pronunciation</h3><p className="site-benefit-intro">See who can pronounce words independently and who needs support.</p></div></header>
           <div className="cap-metric-body"><div className="cap-metric-number">{independent}<small> / {cohort.length}</small></div><span className="cap-metric-caption">Staff assessed as independent</span>
             <div className="cap-cohort-dots" aria-label={`${independent} of ${cohort.length} staff assessed as independent`}>{cohort.map(person => <span key={person.name} className={statusClass(person.pronunciation)} title={`${person.name}: ${person.pronunciation}`}>{person.pronunciation === 'Independent' ? '✓' : person.pronunciation === 'Not assessed' ? '–' : '·'}</span>)}</div>
             <footer>{cohort.filter(person => ['Learning', 'With support'].includes(person.pronunciation)).length} practising · {cohort.filter(person => person.pronunciation === 'Not assessed').length} not assessed</footer>
@@ -74,7 +73,7 @@ export default function CapabilitiesDashboard() {
         {metrics.map(metric => {
           const average = Math.round(cohort.reduce((sum, person) => sum + person[metric.key], 0) / cohort.length)
           return <section className={`site-card cap-metric cap-theme-${metric.theme}`} key={metric.key} aria-label={`${metric.title} overview`}>
-            <header className="site-card-cover"><span className="cap-metric-icon"><CapabilityIcon kind={metric.key} /></span><div><h3 className="site-card-title">{metric.title}</h3><p className="site-benefit-intro">{metric.benefit}</p></div></header>
+            <header className="cap-metric-heading"><span className="cap-metric-icon"><CapabilityIcon kind={metric.key} /></span><div><h3 className="site-card-title">{metric.title}</h3><p className="site-benefit-intro">{metric.benefit}</p></div></header>
             <div className="cap-metric-body"><div className="cap-metric-number">{average}<small> / {metric.total}</small></div><span className="cap-metric-caption">{metric.caption}</span>
               <meter className="cap-summary-meter" min={0} max={metric.total} value={average} aria-label={`Team average: ${metric.caption}`}>{average} of {metric.total}</meter>
               <footer>Team average · introduced content</footer>
@@ -83,7 +82,7 @@ export default function CapabilitiesDashboard() {
         })}
       </div>
       <section className="site-card cap-students" aria-label="Team capability matrix">
-        <header className="site-card-cover cap-team-cover"><div><h3 className="site-card-title">Your team</h3><p className="site-benefit-intro">Know what each person can do, where they need support and what to focus on next.</p></div><span className="cap-team-count">{visible.length} {visible.length === 1 ? 'team member' : 'team members'}</span></header>
+        <header className="cap-team-cover"><div><h3 className="site-card-title">Your team</h3><p className="site-benefit-intro">Know what each person can do, where they need support and what to focus on next.</p></div><span className="cap-team-count">{visible.length} {visible.length === 1 ? 'team member' : 'team members'}</span></header>
         <div className="cap-table-toolbar"><input type="search" aria-label="Search team members" placeholder="Find a person" value={query} onChange={event => setQuery(event.target.value)} /></div>
         <div className="cap-legend" aria-label="Pronunciation assessment key">{statuses.map(status => <span className={statusClass(status)} key={status}>{status}</span>)}</div>
         <div className="cap-table-scroll" tabIndex={0} role="region" aria-label="Staff capability comparison">

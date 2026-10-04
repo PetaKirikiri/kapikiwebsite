@@ -16,26 +16,146 @@
   },
   "groups": [
     {
+      "id": "reference-1",
+      "level": 1,
+      "title": "Pronouns: one person",
+      "structureFocus": "Cumulative reference in taught sentence frames",
+      "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
+      "wordKeys": [
+        "au",
+        "ahau",
+        "koe",
+        "ia"
+      ]
+    },
+    {
+      "id": "reference-2",
+      "level": 2,
+      "title": "Pronouns: two people",
+      "structureFocus": "Cumulative reference in taught sentence frames",
+      "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
+      "wordKeys": [
+        "māua",
+        "tāua",
+        "kōrua",
+        "rāua"
+      ]
+    },
+    {
+      "id": "reference-3",
+      "level": 3,
+      "title": "Pronouns: three or more people",
+      "structureFocus": "Cumulative reference in taught sentence frames",
+      "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
+      "wordKeys": [
+        "mātou",
+        "tātou",
+        "koutou",
+        "rātou"
+      ]
+    },
+    {
+      "id": "reference-4",
+      "level": 1,
+      "title": "Articles: naming and number",
+      "structureFocus": "Cumulative reference in taught sentence frames",
+      "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
+      "wordKeys": [
+        "te",
+        "ngā",
+        "he"
+      ]
+    },
+    {
+      "id": "reference-5",
+      "level": 2,
+      "title": "Demonstratives: here",
+      "structureFocus": "Cumulative reference in taught sentence frames",
+      "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
+      "wordKeys": [
+        "tēnei",
+        "ēnei"
+      ]
+    },
+    {
+      "id": "reference-6",
+      "level": 3,
+      "title": "Demonstratives: near you and over there",
+      "structureFocus": "Cumulative reference in taught sentence frames",
+      "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
+      "wordKeys": [
+        "tēnā",
+        "ēnā",
+        "tērā",
+        "ērā"
+      ]
+    },
+    {
+      "id": "reference-7",
+      "level": 4,
+      "title": "Determiners: introducing another person or thing",
+      "structureFocus": "Cumulative reference in taught sentence frames",
+      "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
+      "wordKeys": [
+        "tētahi",
+        "ētahi"
+      ]
+    },
+    {
+      "id": "reference-8",
+      "level": 4,
+      "title": "Possessives: one possession",
+      "structureFocus": "Cumulative reference in taught sentence frames",
+      "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
+      "wordKeys": [
+        "tāku",
+        "tōku",
+        "tāu",
+        "tōu",
+        "tāna",
+        "tōna"
+      ]
+    },
+    {
+      "id": "reference-9",
+      "level": 5,
+      "title": "Possessives: more than one possession",
+      "structureFocus": "Cumulative reference in taught sentence frames",
+      "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
+      "wordKeys": [
+        "āku",
+        "ōku",
+        "āu",
+        "ōu",
+        "āna",
+        "ōna",
+        "aku"
+      ]
+    },
+    {
+      "id": "reference-10",
+      "level": 6,
+      "title": "Possessives: shared ownership",
+      "structureFocus": "Cumulative reference in taught sentence frames",
+      "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
+      "wordKeys": [
+        "tā",
+        "tō",
+        "ā",
+        "ō"
+      ]
+    },
+    {
       "id": "L1-1",
       "level": 1,
       "title": "Identity and people",
       "structureFocus": "ko / he",
       "rationale": "Introduce and identify people; teach pronoun distinctions in context.",
       "wordKeys": [
-        "te",
-        "he",
         "ko",
-        "ia",
-        "koe",
-        "rātou",
-        "au",
         "whanaunga",
-        "ahau",
-        "tātou",
         "tamariki",
         "tangata",
-        "koutou",
-        "māua",
         "pāpā",
         "whānau",
         "ingoa",
@@ -43,8 +163,6 @@
         "tama",
         "matua",
         "kuia",
-        "kōrua",
-        "tāua",
         "whaea",
         "mātua",
         "koroua",
@@ -57,9 +175,6 @@
         "tuahine",
         "whakapapa",
         "tamāhine",
-        "mātou",
-        "ngā",
-        "rāua",
         "tuākana"
       ]
     },
@@ -118,6 +233,7 @@
       "structureFocus": "e rua / kotahi / kāorekau / tokorua",
       "rationale": "Count things and people using the appropriate constructions.",
       "wordKeys": [
+        "kore",
         "rua",
         "tekau",
         "kotahi",
@@ -162,6 +278,7 @@
       "structureFocus": "i / kua / kei te / e … ana / ka / me",
       "rationale": "Introduce the action reading of each word in supported sentences, reusing Level 1 vocabulary.",
       "wordKeys": [
+        "a",
         "i",
         "ki",
         "ka",
@@ -360,27 +477,15 @@
         "nā",
         "mō",
         "mā",
-        "ōna",
-        "tōku",
-        "ōku",
-        "tāna",
-        "aku",
-        "āna",
         "māku",
-        "tōu",
-        "tāku",
         "nāna",
         "māna",
-        "tāu",
-        "ōu",
-        "āu",
         "mōna",
         "nāku",
         "mōku",
         "nōku",
         "nōna",
-        "nō",
-        "tōna"
+        "nō"
       ]
     },
     {
@@ -584,12 +689,252 @@
   ],
   "vocabulary": [
     {
+      "key": "a",
+      "word": "a",
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "L2-1"
+      ],
+      "frequencyRank": 8,
+      "lexemeId": "1",
+      "dictionarySenseCount": 6,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tēnei",
+      "word": "tēnei",
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "reference-5"
+      ],
+      "frequencyRank": 32,
+      "lexemeId": "1931",
+      "dictionarySenseCount": 4,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ēnei",
+      "word": "ēnei",
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "reference-5"
+      ],
+      "frequencyRank": 69,
+      "lexemeId": "2422",
+      "dictionarySenseCount": 2,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tēnā",
+      "word": "tēnā",
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "reference-6"
+      ],
+      "frequencyRank": 73,
+      "lexemeId": "1932",
+      "dictionarySenseCount": 4,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ēnā",
+      "word": "ēnā",
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "reference-6"
+      ],
+      "frequencyRank": 836,
+      "lexemeId": "2424",
+      "dictionarySenseCount": 2,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tērā",
+      "word": "tērā",
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "reference-6"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ērā",
+      "word": "ērā",
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "reference-6"
+      ],
+      "frequencyRank": 182,
+      "lexemeId": "2425",
+      "dictionarySenseCount": 2,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tētahi",
+      "word": "tētahi",
+      "firstProposedLevel": 4,
+      "revisitLevels": [
+        5,
+        6
+      ],
+      "groupIds": [
+        "reference-7"
+      ],
+      "frequencyRank": 24,
+      "lexemeId": "1939",
+      "dictionarySenseCount": 3,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ētahi",
+      "word": "ētahi",
+      "firstProposedLevel": 4,
+      "revisitLevels": [
+        5,
+        6
+      ],
+      "groupIds": [
+        "reference-7"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "āku",
+      "word": "āku",
+      "firstProposedLevel": 5,
+      "revisitLevels": [
+        6
+      ],
+      "groupIds": [
+        "reference-9"
+      ],
+      "frequencyRank": 541,
+      "lexemeId": "2396",
+      "dictionarySenseCount": 3,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "tā",
+      "word": "tā",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "reference-10"
+      ],
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ā",
+      "word": "ā",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "reference-10"
+      ],
+      "frequencyRank": 31,
+      "lexemeId": "2373",
+      "dictionarySenseCount": 9,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "ō",
+      "word": "ō",
+      "firstProposedLevel": 6,
+      "revisitLevels": [],
+      "groupIds": [
+        "reference-10"
+      ],
+      "frequencyRank": 50,
+      "lexemeId": "2428",
+      "dictionarySenseCount": 7,
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false
+    },
+    {
       "key": "te",
       "word": "te",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-4"
       ],
       "frequencyRank": 1,
       "lexemeId": "1708",
@@ -602,9 +947,15 @@
       "key": "he",
       "word": "he",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-4"
       ],
       "frequencyRank": 9,
       "lexemeId": "158",
@@ -632,9 +983,15 @@
       "key": "ia",
       "word": "ia",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-1"
       ],
       "frequencyRank": 15,
       "lexemeId": "346",
@@ -647,9 +1004,15 @@
       "key": "koe",
       "word": "koe",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-1"
       ],
       "frequencyRank": 33,
       "lexemeId": "544",
@@ -661,10 +1024,14 @@
     {
       "key": "rātou",
       "word": "rātou",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-3"
       ],
       "frequencyRank": 35,
       "lexemeId": "1555",
@@ -677,9 +1044,15 @@
       "key": "au",
       "word": "au",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-1"
       ],
       "frequencyRank": 36,
       "lexemeId": "67",
@@ -707,9 +1080,15 @@
       "key": "ahau",
       "word": "ahau",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-1"
       ],
       "frequencyRank": 43,
       "lexemeId": "5",
@@ -721,10 +1100,14 @@
     {
       "key": "tātou",
       "word": "tātou",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-3"
       ],
       "frequencyRank": 53,
       "lexemeId": "1915",
@@ -766,10 +1149,14 @@
     {
       "key": "koutou",
       "word": "koutou",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-3"
       ],
       "frequencyRank": 77,
       "lexemeId": "604",
@@ -781,10 +1168,15 @@
     {
       "key": "māua",
       "word": "māua",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-2"
       ],
       "frequencyRank": 93,
       "lexemeId": "945",
@@ -901,10 +1293,15 @@
     {
       "key": "kōrua",
       "word": "kōrua",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-2"
       ],
       "frequencyRank": 207,
       "lexemeId": "708",
@@ -916,10 +1313,15 @@
     {
       "key": "tāua",
       "word": "tāua",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-2"
       ],
       "frequencyRank": 217,
       "lexemeId": "1919",
@@ -1111,10 +1513,14 @@
     {
       "key": "mātou",
       "word": "mātou",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-3"
       ],
       "frequencyRank": null,
       "lexemeId": "942",
@@ -1127,9 +1533,15 @@
       "key": "ngā",
       "word": "ngā",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-4"
       ],
       "frequencyRank": null,
       "lexemeId": "1024",
@@ -1141,10 +1553,15 @@
     {
       "key": "rāua",
       "word": "rāua",
-      "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L1-1"
+        "reference-2"
       ],
       "frequencyRank": null,
       "lexemeId": "1556",
@@ -3139,9 +3556,10 @@
     {
       "key": "kore",
       "word": "kore",
-      "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "firstProposedLevel": 1,
+      "revisitLevels": [2, 3, 4, 5, 6],
       "groupIds": [
+        "L1-4",
         "L3-1"
       ],
       "frequencyRank": 49,
@@ -4124,9 +4542,14 @@
       "key": "tō",
       "word": "tō",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L3-2"
+        "L3-2",
+        "reference-10"
       ],
       "frequencyRank": null,
       "lexemeId": null,
@@ -4168,10 +4591,12 @@
     {
       "key": "ōna",
       "word": "ōna",
-      "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "firstProposedLevel": 5,
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-9"
       ],
       "frequencyRank": 66,
       "lexemeId": "2438",
@@ -4184,9 +4609,12 @@
       "key": "tōku",
       "word": "tōku",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-8"
       ],
       "frequencyRank": 71,
       "lexemeId": "1975",
@@ -4198,10 +4626,12 @@
     {
       "key": "ōku",
       "word": "ōku",
-      "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "firstProposedLevel": 5,
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-9"
       ],
       "frequencyRank": 161,
       "lexemeId": "2437",
@@ -4214,9 +4644,12 @@
       "key": "tāna",
       "word": "tāna",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-8"
       ],
       "frequencyRank": 162,
       "lexemeId": "1889",
@@ -4228,10 +4661,12 @@
     {
       "key": "aku",
       "word": "aku",
-      "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "firstProposedLevel": 5,
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-9"
       ],
       "frequencyRank": 204,
       "lexemeId": "24",
@@ -4243,10 +4678,12 @@
     {
       "key": "āna",
       "word": "āna",
-      "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "firstProposedLevel": 5,
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-9"
       ],
       "frequencyRank": 223,
       "lexemeId": "2399",
@@ -4274,9 +4711,12 @@
       "key": "tōu",
       "word": "tōu",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-8"
       ],
       "frequencyRank": 257,
       "lexemeId": "1985",
@@ -4289,9 +4729,12 @@
       "key": "tāku",
       "word": "tāku",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-8"
       ],
       "frequencyRank": 259,
       "lexemeId": "1882",
@@ -4334,9 +4777,12 @@
       "key": "tāu",
       "word": "tāu",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-8"
       ],
       "frequencyRank": 356,
       "lexemeId": "1918",
@@ -4348,10 +4794,12 @@
     {
       "key": "ōu",
       "word": "ōu",
-      "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "firstProposedLevel": 5,
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-9"
       ],
       "frequencyRank": 403,
       "lexemeId": "2441",
@@ -4363,10 +4811,12 @@
     {
       "key": "āu",
       "word": "āu",
-      "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "firstProposedLevel": 5,
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-9"
       ],
       "frequencyRank": 446,
       "lexemeId": "2413",
@@ -4454,9 +4904,12 @@
       "key": "tōna",
       "word": "tōna",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
-        "L4-1"
+        "reference-8"
       ],
       "frequencyRank": null,
       "lexemeId": "1977",
@@ -6234,17 +6687,17 @@
     {
       "id": "kiwaha-draft-1",
       "proposedLevel": 1,
-      "text": "Tau kē!",
-      "teachingMeaning": "A positive reaction to something impressive.",
+      "text": "Ka pai!",
+      "teachingMeaning": "A simple positive response or praise.",
       "conversationUse": "Praise",
-      "sourceUrl": "https://maoridictionary.co.nz/word/1845",
-      "sourceChecked": "2026-09-29",
+      "sourceUrl": "https://maoridictionary.co.nz/search?keywords=kapai",
+      "sourceChecked": "2026-10-04",
       "usageNote": "Teach as a conversational response, not a word by word translation.",
       "status": "source-checked-awaiting-teacher-approval",
       "countsTowardVocabularyTarget": false,
       "approvedExample": null,
       "courseLevel": 1,
-      "english": "Great!"
+      "english": "Good!"
     },
     {
       "id": "kiwaha-draft-2",
@@ -6316,12 +6769,8 @@
   ],
   "unallocatedRankedKeys": [
     "o",
-    "a",
     "nei",
-    "tētahi",
-    "ā",
     "kātahi",
-    "ō",
     "āhua",
     "iho",
     "kī",
@@ -6589,7 +7038,6 @@
     "tirotiro",
     "whakamuri",
     "whakatipu",
-    "āku",
     "hoe",
     "karani",
     "nuku",
@@ -6956,9 +7404,6 @@
     "hāwhe",
     "huritau",
     "kamo",
-    "ēnei",
-    "ēnā",
-    "ērā",
     "manu",
     "kurī",
     "kākāpō",
@@ -6968,10 +7413,7 @@
     "kōwhai",
     "pango",
     "parauri",
-    "whero",
-    "tēnei",
-    "tēnā",
-    "tērā"
+    "whero"
   ],
   "blockers": [
     {
@@ -7465,15 +7907,18 @@
       },
       {
         "word": "ēnei",
-        "reason": "Owner deferred this plural demonstrative from Level 1 on 2026-09-30 as too early. Keep unallocated until a later teaching level is agreed."
+        "reason": "Previously deferred from Level 1. Reallocated after the owner approved staged demonstratives on 2026-10-02.",
+        "resolvedAtLevel": 2
       },
       {
         "word": "ēnā",
-        "reason": "Owner deferred this plural demonstrative from Level 1 on 2026-09-30 as too early. Keep unallocated until a later teaching level is agreed."
+        "reason": "Previously deferred from Level 1. Reallocated after the owner approved staged demonstratives on 2026-10-02.",
+        "resolvedAtLevel": 3
       },
       {
         "word": "ērā",
-        "reason": "Owner deferred this plural demonstrative from Level 1 on 2026-09-30 as too early. Keep unallocated until a later teaching level is agreed."
+        "reason": "Previously deferred from Level 1. Reallocated after the owner approved staged demonstratives on 2026-10-02.",
+        "resolvedAtLevel": 3
       },
       {
         "word": "ika",

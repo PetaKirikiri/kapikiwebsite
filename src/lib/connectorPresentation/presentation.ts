@@ -1,6 +1,7 @@
+import { PRESENTATION_PROFILES, resolveSentenceColors, type PresentationProfileId } from './colorInterpretation'
 import type { BusManifestSheet } from '../busManifestContract'
-import { projectConnectorTopology, projectedBlockBounds } from '../busManifestTeam/connectorTopology'
-import { railVisualPair, WORD_CLASS_VISUAL_PALETTE } from '../../components/railVisualPalette'
+import { projectConnectorTopology } from '../busManifestTeam/connectorTopology'
+import { railVisualPair } from '../../components/railVisualPalette'
 import { CONNECTOR_BLUEPRINTS, connectorBlueprintFor, type ConnectorBlueprint, type ConnectorLibrary, type ConnectorRole, type CompiledFace } from './blueprints'
 import { applyPatternsToTokens, effectiveBoundaryPattern, patternFacesMate, effectivePatternFor, oppositeRole, type PatternRule, type PatternFace } from './patterns'
 
@@ -73,97 +74,26 @@ export function planPatternPiece(library: ConnectorLibrary, face: PatternFace, s
   return { ...plan, role: face.role, label: `${blueprint.label}: ${side} ${face.role === 'send' ? 'Sends' : 'Receives'}` }
 }
 
-function interpolate(start: string, end: string, progress: number): string {
-  const ratio = Math.max(0, Math.min(1, progress))
-  const channel = (offset: number) => Math.round(parseInt(start.slice(offset, offset + 2), 16)
-    + (parseInt(end.slice(offset, offset + 2), 16) - parseInt(start.slice(offset, offset + 2), 16)) * ratio)
-    .toString(16).padStart(2, '0')
-  return `#${channel(1)}${channel(3)}${channel(5)}`
-}
-
-function materialColor(tokens: BusManifestSheet['tokens'], index: number, families: ReadonlyMap<string, string>): string | undefined {
-  const token = tokens[index]
-  if (!token) return undefined
-  const isAbilityDoerMarker = token.acceptedPosCode === 'agent_marker'
-    && tokens.some((item) => item.acceptedPosCode === 'tam'
-      && item.surfaceText.toLocaleLowerCase('mi-NZ') === 'taea')
-  const isHeAhaQuestionLead = (
-    (index === 0 && token.surfaceText.toLocaleLowerCase('mi-NZ') === 'he'
-      && tokens[1]?.surfaceText.toLocaleLowerCase('mi-NZ') === 'aha')
-    || (index === 1 && token.surfaceText.toLocaleLowerCase('mi-NZ') === 'aha'
-      && tokens[0]?.surfaceText.toLocaleLowerCase('mi-NZ') === 'he')
-  )
-  if (isHeAhaQuestionLead) return WORD_CLASS_VISUAL_PALETTE.tam
-  if (isAbilityDoerMarker) return WORD_CLASS_VISUAL_PALETTE.verb
-  if (token.surfaceText.toLocaleLowerCase('mi-NZ') === 'ake') {
-    return WORD_CLASS_VISUAL_PALETTE.nominalPredicate
-  }
-  if (token.acceptedPosCode === 'stative_verb') return WORD_CLASS_VISUAL_PALETTE.adjective
-  if (token.acceptedPosCode === 'agent_marker'
-    && tokens.some((item) => item.acceptedPosCode === 'stative_verb')) {
-    return WORD_CLASS_VISUAL_PALETTE.adjective
-  }
-  const family = token.acceptedPosCode == null ? null : families.get(token.acceptedPosCode)
-  if (family === 'verb') return WORD_CLASS_VISUAL_PALETTE.verb
-  if (family === 'adjective') return WORD_CLASS_VISUAL_PALETTE.adjective
-  if (family === 'noun') {
-    const followsNominalLead = ['nominal_marker', 'nominal_predicate']
-      .includes(tokens[index - 1]?.acceptedPosCode ?? '')
-    return token.acceptedPosCode === 'proper_name' ? WORD_CLASS_VISUAL_PALETTE.properName
-      : followsNominalLead ? WORD_CLASS_VISUAL_PALETTE.nominalNoun
-        : WORD_CLASS_VISUAL_PALETTE.noun
-  }
-  if (family === 'particle' && token.acceptedPosCode === 'tam') return WORD_CLASS_VISUAL_PALETTE.tam
-  if (family === 'particle' && ['negative', 'postposed_predicate_particle'].includes(token.acceptedPosCode ?? '')) {
-    return WORD_CLASS_VISUAL_PALETTE.negative
-  }
-  if (family === 'particle' && ['nominal_marker', 'nominal_predicate'].includes(token.acceptedPosCode ?? '')) {
-    return WORD_CLASS_VISUAL_PALETTE.nominalPredicate
-  }
-  if (family === 'particle' && token.acceptedPosCode === 'location_marker') {
-    return WORD_CLASS_VISUAL_PALETTE.nominalPredicate
-  }
-  if (family === 'particle' && token.acceptedPosCode === 'determiner') {
-    return WORD_CLASS_VISUAL_PALETTE.determiner
-  }
-  if (family === 'particle' && token.acceptedPosCode === 'object_marker') {
-    const followsNominalPredicate = tokens.slice(0, index).some((item) =>
-      ['nominal_predicate', 'location_marker'].includes(item.acceptedPosCode ?? ''))
-      && !tokens.slice(0, index).some((item) => item.acceptedPosCode != null
-        && families.get(item.acceptedPosCode) === 'verb')
-    if (followsNominalPredicate) return WORD_CLASS_VISUAL_PALETTE.nominalPredicate
-    return WORD_CLASS_VISUAL_PALETTE.objectMarker
-  }
-  if (family === 'particle' && token.acceptedPosCode === 'target_marker') {
-    return WORD_CLASS_VISUAL_PALETTE.verb
-  }
-  if (family === 'particle' && token.acceptedPosCode === 'agent_marker') return WORD_CLASS_VISUAL_PALETTE.agentMarker
-  if (family === 'particle' && [
-    'directional_particle', 'genitive_linker',
-    'preposition', 'role_marker',
-  ].includes(token.acceptedPosCode ?? '')) return WORD_CLASS_VISUAL_PALETTE.relationMarker
-  const rail = token.rightRail === 'yellow' || token.rightRail === 'green' ? token.rightRail : token.leftRail
-  if (rail !== 'yellow' && rail !== 'green') return undefined
-  const pair = railVisualPair(rail)
-  const { start, end } = projectedBlockBounds(tokens, index, rail)
-  return interpolate(pair[0], pair[1], (index - start) / Math.max(1, end - start))
-}
-
 function endsHeAhaQuestionLead(tokens: BusManifestSheet['tokens'], index: number): boolean {
   return index === 1
     && tokens[0]?.surfaceText.toLocaleLowerCase('mi-NZ') === 'he'
     && tokens[1]?.surfaceText.toLocaleLowerCase('mi-NZ') === 'aha'
 }
 
-export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], families: ReadonlyMap<string, string>, library: ConnectorLibrary, rules: readonly PatternRule[] = [], continuousRail = false) {
+export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], families: ReadonlyMap<string, string>, library: ConnectorLibrary, rules: readonly PatternRule[] = [], continuousRail = false, profile: PresentationProfileId = 'original') {
   const markerRoleAt = (index: number): 'send' | 'accept' | null => tokens[index]?.acceptedPosCode === 'agent_marker'
     ? 'accept' : ['object_marker', 'target_marker'].includes(tokens[index]?.acceptedPosCode ?? '') ? 'send' : null
   const markerBlueprintAt = (index: number) => markerRoleAt(index)
     ? CONNECTOR_BLUEPRINTS.find(item => item.id === 'two-frond-arrow') : undefined
   const effective = applyPatternsToTokens(tokens, families, rules)
   const topology = projectConnectorTopology(effective, families)
-  const materials = tokens.map((_, index) => materialColor(tokens, index, families))
+  const materials = resolveSentenceColors(tokens, families, profile)
+  const config = PRESENTATION_PROFILES[profile]
   return tokens.map((token, index) => {
+    const compoundFraction = token.acceptedPosCode === 'nominal_predicate'
+      ? ({ tokorua: 4 / 7, kotahi: 2 / 6 } as Record<string, number>)[token.surfaceText.toLocaleLowerCase('mi-NZ')]
+      : token.acceptedPosCode === 'negative' && token.surfaceText.toLocaleLowerCase('mi-NZ') === 'kāorekau' ? 5 / 8 : undefined
+    const compoundNominal = compoundFraction != null
     const ends = topology[index]!
     const previous = tokens[index - 1]
     const rule = effectivePatternFor(token.acceptedPosCode, families.get(token.acceptedPosCode ?? ''), rules)
@@ -183,7 +113,9 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
       next.acceptedPosCode, families.get(next.acceptedPosCode ?? ''), rules) : null
     const endsDetachedClauseLead = ['conditional_marker', 'adverb']
       .includes(token.acceptedPosCode ?? '') && ends.rightConnectorEnd === 'cap'
-    const blueprint = endsHeAhaQuestionLead(tokens, index)
+    const blueprint = compoundNominal
+      ? CONNECTOR_BLUEPRINTS.find(item => item.id === 'fat-wave')!
+      : endsHeAhaQuestionLead(tokens, index)
       ? connectorBlueprintFor('tam', 'particle')
       : endsDetachedClauseLead
       ? connectorBlueprintFor(token.acceptedPosCode, families.get(token.acceptedPosCode ?? '') ?? null)
@@ -193,14 +125,14 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
       ? CONNECTOR_BLUEPRINTS.find((item) => item.id === boundary.face.blueprintId)!
       : rule ? CONNECTOR_BLUEPRINTS.find((item) => item.id === rule.right.blueprintId)!
       : connectorBlueprintFor(token.acceptedPosCode, token.acceptedPosCode == null ? null : families.get(token.acceptedPosCode) ?? null)
-    const left = token.acceptedPosCode === 'nominal_predicate' && token.surfaceText.toLocaleLowerCase('mi-NZ') === 'tokorua'
-      ? WORD_CLASS_VISUAL_PALETTE.nominalNoun : materials[index] ?? UNKNOWN_MATERIAL
+    const left = compoundNominal
+      ? config.compound[1] : materials[index] ?? UNKNOWN_MATERIAL
     const right = materials[index + 1] ?? UNKNOWN_MATERIAL
     // A closed TAM uses the approved bottom-to-up Skinny Wave receiver. This
     // keeps E-kai-ana's terminal curl consistent without changing the verb's
     // two outward sending arms or the stored checkpoint/topology.
     const followsNominalLead = ['nominal_marker', 'nominal_predicate'].includes(previous?.acceptedPosCode ?? '')
-    const exposedRole = token.acceptedPosCode === 'nominal_predicate' && token.surfaceText.toLocaleLowerCase('mi-NZ') === 'tokorua'
+    const exposedRole = compoundNominal
       ? 'accept' : token.acceptedPosCode === 'tam' && ends.rightConnectorEnd === 'cap'
       ? 'accept' : families.get(token.acceptedPosCode ?? '') === 'noun'
         ? followsNominalLead ? 'accept' : rule?.right.role ?? 'accept'
@@ -211,7 +143,8 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
     const planned = blueprint && ends.rightConnectorEnd ? planConnectorFace(library, blueprint,
       endsNegativeSection ? 'accept' : ends.rightConnectorEnd === 'cap' ? exposedRole : ends.rightConnectorEnd,
       left, attachNegative || (continuousRail && next != null) ? right : ends.rightConnectorEnd === 'cap' || endsNegativeSection ? CONNECTOR_PAGE_BACKGROUND : right) : null
-    const face: ConnectorFacePlan | null = continuesSection ? null : planned && conflict
+    const markerOwnsBoundary = continuousRail && markerRoleAt(index + 1) != null
+    const face: ConnectorFacePlan | null = continuesSection || markerOwnsBoundary ? null : planned && conflict
       ? { blueprintId: planned.blueprintId, role: planned.role, label: conflict, status: 'unavailable', reason: conflict } : planned
     const continuesPreviousSection = sharesContinuousSection(previous, token)
     const previousRule = previous && effectivePatternFor(previous.acceptedPosCode, families.get(previous.acceptedPosCode ?? ''), rules)
@@ -227,11 +160,11 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
     const incomingConflict = incoming && rule && previousBoundary?.owner === 'right'
       && (incoming.blueprintId !== rule.left.blueprintId || incoming.role !== rule.left.role)
       ? `Pattern conflict at ${token.surfaceText}: its left connector does not match the preceding word.` : null
-    const plannedLeft = incoming ? planPatternPiece(library, rule?.left ?? incoming, 'left', left) : null
+    const plannedLeft = incoming ? planPatternPiece(library, previousBoundary?.owner === 'right' ? rule?.left ?? incoming : incoming, 'left', left) : null
     const leftFace = continuesPreviousSection || followsNegativeSection ? null : incomingConflict && plannedLeft
       ? { ...plannedLeft, status: 'unavailable' as const, reason: incomingConflict } : plannedLeft
     const rightFace = !continuesSection && blueprint && ends.rightConnectorEnd
-      ? planPatternPiece(library, { blueprintId: blueprint.id, role: endsNegativeSection ? 'accept' : ends.rightConnectorEnd === 'cap' ? exposedRole : rule?.right.role ?? ends.rightConnectorEnd }, 'right', left) : null
+      ? planPatternPiece(library, { blueprintId: blueprint.id, role: endsNegativeSection ? 'accept' : ends.rightConnectorEnd === 'cap' ? exposedRole : ends.rightConnectorEnd }, 'right', left) : null
     const incomingJoin = !continuesPreviousSection && !followsNegativeSection && previousBlueprint && incoming
       ? planConnectorFace(library, previousBlueprint, effective[index - 1]!.rightConnectorEnd as 'send' | 'accept', materials[index - 1] ?? UNKNOWN_MATERIAL, left) : null
     const marker = markerBlueprintAt(index)
@@ -240,11 +173,9 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
     const previousMarker = markerBlueprintAt(index - 1)
     const markerRole = markerRoleAt(index)
     const previousMarkerRole = markerRoleAt(index - 1)
-    const compoundNominal = token.acceptedPosCode === 'nominal_predicate'
-      && token.surfaceText.toLocaleLowerCase('mi-NZ') === 'tokorua'
     const compoundFace = compoundNominal
       ? planConnectorFace(library, CONNECTOR_BLUEPRINTS.find(item => item.id === 'fat-wave')!, 'send',
-        WORD_CLASS_VISUAL_PALETTE.nominalPredicate, WORD_CLASS_VISUAL_PALETTE.nominalNoun)
+        config.compound[0], config.compound[1])
       : null
     // Participant-arrow material always belongs to the marker. The saved
     // orientation controls direction only; it must not make a receiving or
@@ -253,15 +184,15 @@ export function projectSentenceConnectors(tokens: BusManifestSheet['tokens'], fa
       ? planConnectorFace(library, marker, markerRole ?? 'send', left, right) : null
     const markerJoin = rawMarkerJoin?.status === 'ready' ? {
       ...rawMarkerJoin,
-      background: right,
+      background: config.markerBackground === 'previous' && continuousRail ? materials[index - 1] ?? right : right,
       drawing: { ...rawMarkerJoin.drawing, drawing: {
         fill: left, stroke: 'none' as const,
       } },
     } : rawMarkerJoin
-    return { ...ends, standalone: marker != null || endsNegativeSection, flatEnding, attachNext: attachNegative, separateAfter: detachedNegative, blueprint: marker ?? blueprint,
+    return { ...ends, inlineMarker: marker != null, standalone: marker != null || endsNegativeSection, flatEnding, attachNext: attachNegative, separateAfter: detachedNegative, blueprint: marker ?? blueprint,
       face: flatEnding ? null : marker ? markerJoin : face, conflict: marker ? null : conflict,
-      materialColor: materials[index], paintMaterial: marker == null,
-      internalMaterial: compoundNominal ? { fraction: 0.5, color: WORD_CLASS_VISUAL_PALETTE.nominalNoun, face: compoundFace! } : null,
+      materialColor: compoundNominal ? config.compound[0] : materials[index], materialBackground: continuousRail && marker ? (config.markerBackground === 'previous' ? materials[index - 1] ?? right : right) : materials[index], paintMaterial: marker == null || continuousRail,
+      internalMaterial: compoundNominal ? { fraction: compoundFraction!, color: config.compound[1], face: compoundFace! } : null,
       incomingJoin: previousMarker ? null : incomingConflict && incomingJoin ? { ...incomingJoin, status: 'unavailable' as const, reason: incomingConflict } : incomingJoin,
       leftFace: previousMarker && incoming ? planPatternPiece(library, { blueprintId: previousMarker.id, role: oppositeRole(previousMarkerRole ?? 'send') }, 'left', left) : leftFace,
       rightFace: flatEnding ? null : marker ? planPatternPiece(library, { blueprintId: marker.id, role: markerRole ?? 'send' }, 'right', left) : conflict && rightFace ? { ...rightFace, status: 'unavailable' as const, reason: conflict } : rightFace,

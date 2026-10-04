@@ -26,7 +26,7 @@ function savedState(sentences: readonly SavedSentence[], text: string): BusManif
 
 function PepehaCard({ heading, children }: { heading: ReactNode; children: ReactNode }) {
   return <div className="site-card level-pepeha-card">
-    <header className="site-card-cover level-pepeha-cover level-pepeha-card-heading">{heading}</header>
+    <header className="level-pepeha-card-heading">{heading}</header>
     <div className="level-pepeha-lines">{children}</div>
   </div>
 }
@@ -96,7 +96,7 @@ export function LevelReadingMaterial({ reading, catalog, sentences = NO_SAVED_SE
       {reading.sections.map(({ title, meaning, lines }, index) => <li key={title} id={`${reading.id}-section-${index + 1}`} tabIndex={-1}>
         <PepehaCard heading={<div className="level-pepeha-section-label">
           {reading.sections.length > 1 && <span className="level-pepeha-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>}
-          <div><h3 lang="mi">{title}</h3><p>{meaning}</p></div>
+          <div><h2 lang="mi">{title}</h2><p>{meaning}</p></div>
         </div>}>{lines.map(sentence)}</PepehaCard>
       </li>)}
     </ol>

@@ -1,7 +1,6 @@
 import { useRef, type ReactNode } from 'react'
-import { LEVEL_PRESENTATION } from '../lib/coursePresentation'
+import { LEVEL_PRESENTATION, LEVEL_ENTRY_GUIDANCE } from '../lib/coursePresentation'
 import { CURRICULUM_LEVELS, type CurriculumLevel } from '../lib/sentenceStructureLevels'
-import { MOE_CLASSES, MOE_COURSE_PRICE, MOE_COURSE_INCLUSIONS } from '../lib/moeOffer'
 import { contextualRoute, type LevelTab } from '../lib/websiteRoutes'
 import './LevelExplorer.css'
 
@@ -18,8 +17,6 @@ export default function LevelExplorer({ level, moe, tab, onRegister, children }:
   const tabs = useRef<(HTMLButtonElement | null)[]>([])
   const touch = useRef<{ x: number; y: number } | null>(null)
   const course = LEVEL_PRESENTATION[level]
-  const day = MOE_CLASSES.find(item => item.sessions.some(session => session.level === level))!
-  const session = day.sessions.find(item => item.level === level)!
   const levelHref = (next: number, selectedTab = tab) => contextualRoute(moe, `#levels/${next}?tab=${selectedTab}`)
   const changeTab = (next: LevelTab) => { window.location.assign(levelHref(level, next)) }
   const previous = level > 1 ? level - 1 : null
@@ -28,7 +25,7 @@ export default function LevelExplorer({ level, moe, tab, onRegister, children }:
     <div className="site-card level-intro">
     <header className="site-card-cover level-intro-cover">
     <div className="level-intro-utility">
-      <a className="level-return" href={moe ? `#moe?class=${level}` : '#level-finder'}>{moe ? 'Back to your class' : 'All levels'}</a>
+      <span className="level-cover-label"><span className="moe-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d={TABS[2].icon}/></svg></span>Level {level}</span>
     <nav className="level-carousel" aria-label="Browse course levels"
       onTouchStart={event => { const point = event.touches[0]; if (point) touch.current = { x: point.clientX, y: point.clientY } }}
       onTouchCancel={() => { touch.current = null }}
@@ -41,23 +38,26 @@ export default function LevelExplorer({ level, moe, tab, onRegister, children }:
         const destination = dx > 0 ? previous : next
         if (destination) window.location.assign(levelHref(destination))
       }}>
-      {previous ? <a href={levelHref(previous)} className="level-carousel-step" aria-label={`Previous level, Level ${previous}`}>Previous</a> : null}
+      {previous ? <a href={levelHref(previous)} className="level-carousel-step" aria-label={`Previous level, Level ${previous}`}><span aria-hidden="true">←</span> Previous</a> : null}
       <select aria-label="Choose level" value={level} onChange={event => window.location.assign(levelHref(Number(event.target.value)))}>
         {CURRICULUM_LEVELS.map(item => <option key={item} value={item}>Level {item} of 6</option>)}
       </select>
-      {next ? <a href={levelHref(next)} className="level-carousel-step" aria-label={`Next level, Level ${next}`}>Next</a> : null}
+      {next ? <a href={levelHref(next)} className="level-carousel-step" aria-label={`Next level, Level ${next}`}>Next <span aria-hidden="true">→</span></a> : null}
     </nav>
     </div>
     <div className="level-intro-main">
-      <div className="level-explorer-heading"><h1 id="level-explorer-title" tabIndex={-1}>{course.title}</h1>
-        <ul className="level-intro-skills" aria-label="Skills in this level">{course.skills.map(skill => <li key={skill.label}><strong>{skill.label}</strong><span>{skill.pattern}</span></li>)}</ul>
-        <button type="button" className="level-register" onClick={onRegister}>Register interest</button>
-      </div>
-      <div className="level-class-bar">
-        {moe ? <div><strong>{day.day} · {session.time}</strong><span>Starts {day.startDate} 2026</span><p className="level-course-price"><strong>{MOE_COURSE_PRICE}</strong><span>Same price for every course.</span><span>{MOE_COURSE_INCLUSIONS}</span></p></div> : <div><strong>10 weeks · One hour weekly</strong><span>Register to discuss class times</span></div>}
-      </div>
+      <div className="level-explorer-heading"><h1 id="level-explorer-title" tabIndex={-1}>{course.title}</h1></div>
+
     </div>
+    <div className="level-fit">
+      <div className="level-fit-entry"><h2>Before this level</h2><p>{LEVEL_ENTRY_GUIDANCE[level]}</p></div>
+      <div className="level-fit-learning"><h2>In this level</h2><ul>{course.skills.map(skill => <li key={skill.label}><strong>{skill.label}</strong><span>{skill.pattern}</span></li>)}</ul></div>
+    </div>
+    <p className="level-reading-guidance">{level === 1 ? 'Use the reading below to see what you will learn. You do not need to understand it yet.' : 'Use the reading below to check your fit. Earlier language should feel familiar; the new structures are what you will learn here.'}</p>
+    <div className="level-intro-actions"><button type="button" className="level-register" onClick={onRegister}>Register interest</button><a className="level-return" href={moe ? `#moe?class=${level}` : '#level-finder'}>Compare levels</a></div>
     </header>
+    </div>
+    <div className="site-card level-content-card">
     <div className="level-tabs" role="tablist" aria-label="Explore this level">{TABS.map((item, index) => <button key={item.id} ref={node => { tabs.current[index] = node }}
       type="button" role="tab" id={`level-tab-${item.id}`} aria-selected={tab === item.id} aria-controls="level-tab-panel" tabIndex={tab === item.id ? 0 : -1}
       onClick={() => changeTab(item.id)} onKeyDown={event => {
@@ -65,7 +65,7 @@ export default function LevelExplorer({ level, moe, tab, onRegister, children }:
         if (destination === null) return
         event.preventDefault(); tabs.current[destination]?.focus(); changeTab(TABS[destination]!.id)
       }}><span className="moe-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={item.icon}/></svg></span><span>{item.label}</span></button>)}</div>
-    </div>
     <div id="level-tab-panel" role="tabpanel" aria-labelledby={`level-tab-${tab}`} tabIndex={0} className="level-tab-panel">{children}</div>
+    </div>
   </section>
 }

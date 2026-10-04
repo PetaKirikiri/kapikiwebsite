@@ -10,7 +10,7 @@ import {
   type LearnedWordCondition,
   type WordConditionShape,
 } from '../busManifestContract'
-import { applyPatternToCondition, effectivePatternFor, effectiveRightRoleFor, patternFacesMate, type PatternRule } from '../connectorPresentation/patterns'
+import { applyPatternToCondition, effectiveRightRoleFor, patternFacesMate, patternRuleFor, type PatternRule } from '../connectorPresentation/patterns'
 import { connectorBlueprintFor } from '../connectorPresentation/blueprints'
 
 export type RecursionPathGuest = {
@@ -110,9 +110,11 @@ function conditionKey(value: RecursionPathCandidate): string {
 }
 
 function shapeMismatches(required: WordConditionShape, actual: WordConditionShape): ShapeKey[] {
+  // blockType records the source block’s literal starting word. It remains
+  // visible provenance, not a lexical constraint on reusable grammar.
   const scalarKeys = ['ours', 'family', 'teAka', 'dot', 'leftRail', 'rightRail',
     'leftConnectorEnd', 'leftConnectorFamily', 'rightConnectorEnd',
-    'rightConnectorFamily', 'blockColor', 'blockType'] as const
+    'rightConnectorFamily', 'blockColor'] as const
   const mismatches: ShapeKey[] = scalarKeys.filter((key) => (
     required[key] != null && required[key] !== actual[key]
   ))
@@ -205,10 +207,14 @@ function compatibility(input: {
   if (outgoing !== 'off') {
     const left = input.direction === 'right' ? input.previous.local : input.current.local
     const right = input.direction === 'right' ? input.current.local : input.previous.local
-    const leftRule = effectivePatternFor(left.ours, left.family, input.patternRules)
-    const rightRule = effectivePatternFor(right.ours, right.family, input.patternRules)
+    // Built-in outward arms describe a material, not two independently fixed
+    // adjoining faces. The shared boundary supplies their complement. Only an
+    // explicitly configured pair can introduce an additional face conflict;
+    // learned shape and rail compatibility above still apply in every case.
+    const leftRule = patternRuleFor(left.ours, left.family, input.patternRules)
+    const rightRule = patternRuleFor(right.ours, right.family, input.patternRules)
     const blueprint = leftRule?.right.blueprintId ?? connectorBlueprintFor(left.ours, left.family)?.id
-    if ((leftRule || rightRule) && blueprint && rightRule
+    if (leftRule && blueprint && rightRule
       && (left.rightConnectorEnd !== 'send' && left.rightConnectorEnd !== 'accept'
         || !patternFacesMate({ blueprintId: blueprint, role: left.rightConnectorEnd as 'send' | 'accept' }, rightRule.left))) {
       return { rail: null, diagnostic: { mismatchedFields: ['rightConnectorEnd', 'leftConnectorEnd'],

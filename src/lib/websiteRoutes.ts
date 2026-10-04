@@ -10,7 +10,8 @@ export function normaliseWebsiteHash(hash: string) {
   const aliases: Record<string, string> = {
     '#methodology': '#level-finder', '#teacher': '#about',
     '#app-showcase': '#benefits/app', '#live-classes': '#benefits/live-classes',
-    '#moe/benefits/levels': '#moe/levels', '#benefits/levels': '#level-finder',
+    '#moe/levels': '#moe?timetable', '#moe/level-finder': '#moe?timetable',
+    '#moe/benefits/levels': '#moe?timetable', '#benefits/levels': '#level-finder',
     '#classroom-2d': '#classroom',
     '#moe/benefits/course-length': '#moe', '#benefits/course-length': '#level-finder',
     '#moe/benefits/recorded-lessons': '#moe', '#benefits/recorded-lessons': '#level-finder',
@@ -35,7 +36,7 @@ export function websiteRoute(hash: string) {
   const feature = /^#benefits\/([a-z-]+)$/.exec(surface)
   const benefit = feature ? findMoeBenefit(feature[1]!) : undefined
   const overview = surface === '#levels' || surface === '#level-finder'
-  const shared = ['#about', '#competency', '#practice', '#join', '#account']
+  const shared = ['#about', '#competency', '#practice', '#join', '#account', '#my-learning', '#lessons']
   const known = level || benefit || overview || shared.includes(surface) || (moe ? surface === '#moe' : ['#website-top', '#training', '#training-admin', '#classroom', '#classroom-3d', '#live-class', '#guess-who', '#kitchen'].includes(surface))
   const params = new URLSearchParams(query)
   const section = params.get('section')
@@ -50,5 +51,5 @@ export function websiteRoute(hash: string) {
 }
 export function contextualRoute(moe: boolean, path: string) {
   if (!moe) return path
-  return path === '#level-finder' ? '#moe/levels' : `#moe/${path.slice(1)}`
+  return path === '#level-finder' ? '#moe?timetable' : `#moe/${path.slice(1)}`
 }

@@ -48,10 +48,10 @@ export default function LevelCourseOverview({ sentences, onSelect }: {
             <span id={`course-level-${level}`} className="level-course-label">Level {level}</span>
             <span className="level-course-sequence" aria-hidden="true">{CURRICULUM_LEVELS.map(step => <i key={step} className={step <= level ? 'is-filled' : undefined} />)}</span>
           </div>
-          <h2 className="site-card-title level-course-capability">{capability}</h2>
+          <h2 className="site-card-title level-course-capability">{title}</h2>
+          <p className="level-course-outcome">{capability}</p>
         </div>
         <div className="level-course-body">
-          <h3>{title}</h3>
           <ul className="level-course-topics-list">{topics.map((topic, index) => <li key={topic}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d={TOPIC_ICONS[LEVEL_ICONS[level][index]]} /></svg>
             <span>{topic}</span>

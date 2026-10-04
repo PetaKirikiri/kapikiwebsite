@@ -1,3 +1,5 @@
+import type { PresentationProfileId } from '../lib/connectorPresentation/colorInterpretation'
+import { phraseMeaningSegments } from '../lib/connectorPresentation/translation'
 import type { WordSupportTarget } from '../lib/connectorPresentation/wordSupport'
 import { useWordSupport } from './useWordSupport'
 import { sentenceMeasurementFrame } from '../lib/connectorPresentation/browserMeasurements'
@@ -24,7 +26,7 @@ import {
   type SavedBusManifest,
 } from '../lib/busManifestTeam/reviewDeskGateway'
 import { compileConnectorLibrary } from '../lib/connectorPresentation/blueprints'
-import { presentSentence } from '../lib/connectorPresentation/engine'
+import { requestRails } from '../lib/connectorPresentation/engine'
 import structureNotes from '../lib/connectorPresentation/structureNotes.json'
 import './SentenceStructureNotes.css'
 import './PosTextAnnotations.css'
@@ -36,7 +38,7 @@ import type {
 import SavedConnectorCheckpoint from './SavedConnectorCheckpoint'
 import { useDesignSpaceCollection } from './useDesignSpaceCollection'
 import { useConnectorPatterns } from '../hooks/useConnectorPatterns'
-import { CONNECTOR_RAIL_LAYOUT, planRailSpan, type RailSpan } from '../lib/connectorPresentation/layout'
+import { CONNECTOR_RAIL_LAYOUT, type RailSpan } from '../lib/connectorPresentation/layout'
 
 const TEST_PASSAGE_SEARCH_STORAGE_KEY = 'connectors.testPassageSearch.v1'
 const APPROVED_PASSAGES_STORAGE_KEY = 'connectors.approvedSentenceStructures.v1'
@@ -99,7 +101,9 @@ type PosPickerCategory = NonNullable<
 >[number]
 
 export type BusManifestReviewViewProps = {
+  readonly renderWordKnowledge?: (paragraphIndex: number, tokenIndex: number) => ReactNode
   readonly continuousRail?: boolean
+  readonly colorProfile?: PresentationProfileId
   readonly onWordExplain?: (target: WordSupportTarget) => void
   readonly presentation?: 'connectors' | 'pos-annotations'
   readonly highlightedTokenIndex?: number
@@ -131,6 +135,7 @@ export type BusManifestReviewViewProps = {
   }[]
   readonly posPickerHierarchy?: PosPickerHierarchy
   readonly readOnly?: boolean
+  readonly showPhraseMeanings?: boolean
   readonly continuousParagraph?: boolean
   readonly renderPassageSupplement?: (index: number, materials: readonly (string | undefined)[], joins: readonly boolean[]) => ReactNode
   readonly guestPatternCategoryMatches?: readonly GuestPatternCategoryMatch[]
@@ -232,6 +237,7 @@ function PosPicker({
   onClose,
   selectedCategoryCodes,
   onCategoryToggle,
+  wordKnowledge,
 }: {
   readonly catalog: ReviewDeskPosCatalog
   readonly hierarchy?: PosPickerHierarchy
@@ -240,6 +246,7 @@ function PosPicker({
   readonly onClose: () => void
   readonly selectedCategoryCodes: ReadonlySet<string>
   readonly onCategoryToggle?: (categoryCode: string, selected: boolean) => Promise<void>
+  readonly wordKnowledge?: ReactNode
 }) {
   const compactInitialFamilyRef = useRef<HTMLButtonElement>(null)
   const selected = posTypeByCode(catalog, selectedPosCode)
@@ -315,7 +322,7 @@ function PosPicker({
           aria-modal="true"
           aria-label="Choose POS"
           data-testid="compact-pos-picker"
-          className="flex max-h-[calc(100vh-2rem)] w-full max-w-md flex-col overflow-hidden rounded-2xl border border-slate-300 bg-slate-950 shadow-2xl"
+          className={`flex max-h-[calc(100vh-2rem)] w-full ${wordKnowledge ? 'max-w-2xl reader-knowledge-picker' : 'max-w-md'} flex-col overflow-hidden rounded-2xl border border-slate-300 bg-slate-950 shadow-2xl`}
           onMouseDown={(event) => event.stopPropagation()}
           onKeyDown={(event) => {
             if (event.key !== 'Escape') return
@@ -379,6 +386,7 @@ function PosPicker({
             </div>
           </div>
 
+          {wordKnowledge ? <div className="reader-knowledge-scroll">{wordKnowledge}</div> : null}
           <div
             data-testid="compact-pos-picker-rooms"
             className="flex flex-wrap gap-1.5 overflow-y-auto bg-slate-950 p-2"
@@ -447,6 +455,7 @@ function PosPicker({
           className="overflow-y-auto"
           data-testid="pos-picker-four-tier-directory"
         >
+          {wordKnowledge}
           <section
             data-testid="pos-picker-tier-1"
             aria-labelledby="pos-picker-tier-1-heading"
@@ -688,8 +697,10 @@ const KORU_STORY_HEIGHT_PX = CONNECTOR_RAIL_LAYOUT.storyHeight
 const KORU_STORY_CONNECTION_WIDTH_PX = CONNECTOR_RAIL_LAYOUT.connectionWidth
 const KORU_STORY_END_WIDTH_PX = CONNECTOR_RAIL_LAYOUT.connectionWidth
 export default function BusManifestReviewView({
+  renderWordKnowledge,
   onWordExplain,
-  continuousRail = false,
+  continuousRail = true,
+  colorProfile,
   highlightedTokenIndex,
   presentation = 'connectors',
   presentationStates,
@@ -711,6 +722,7 @@ export default function BusManifestReviewView({
   passageGroups,
   posPickerHierarchy,
   readOnly = false,
+  showPhraseMeanings = false,
   continuousParagraph = false,
   renderPassageSupplement,
   guestPatternCategoryMatches = [],
@@ -806,11 +818,11 @@ export default function BusManifestReviewView({
           if (left == null || right == null) continue
           const leftRect = frame.local(left.getBoundingClientRect())
           const rightRect = frame.local(right.getBoundingClientRect())
-          next.set(`${paragraphIndex}:${index}`, planRailSpan(
+          next.set(`${paragraphIndex}:${index}`, requestRails({ kind: 'span', args: [
             { left: leftRect.left, top: leftRect.top, textWidth: nextWordEnds.get(`${paragraphIndex}:${index}`) ?? 0 },
             { left: rightRect.left, top: rightRect.top, textWidth: nextWordEnds.get(`${paragraphIndex}:${index + 1}`) ?? 0 },
             contentLeft, contentRight,
-          ))
+          ] }))
         }
       })
       setRailVisuals((previous) => JSON.stringify([...previous]) === JSON.stringify([...next]) ? previous : next)
@@ -1037,13 +1049,15 @@ export default function BusManifestReviewView({
           const checkInControl = automaticCheckIns?.find((control) =>
             control.passageIndex === paragraphIndex,
           ) ?? null
-          const sentencePlan = presentSentence({
-            continuousRail: readOnly && continuousRail,
+          const sentencePlan = requestRails({ kind: 'sentence',
+            continuousRail, colorProfile,
             text: tokens.map(token => token.text).join(' '), state: visibleState,
             families: familyByPosCode, library: connectorLibrary, rules: patternSettings.rules,
             textWidths: tokens.map((_, index) => wordEnds.get(`${paragraphIndex}:${index}`) ?? 0),
           })
           const connectorTopology = sentencePlan.words.map(word => word.presentation)
+          const meanings = showPhraseMeanings && readOnly && presentation === 'connectors'
+            ? phraseMeaningSegments(tokens.map(token => token.text).join(' '), sentencePlan.groups, connectorTopology.map(word => word.materialColor)) : null
           const structureNote = showStructureNotes && address != null
             ? (structureNotes as Record<string, readonly string[]>)[String(address.structureId)]
             : undefined
@@ -1138,7 +1152,11 @@ export default function BusManifestReviewView({
                 ) : null}
               </span> : null}
 
-              {tokens.map((token, tokenIndex) => {
+              {(readOnly && presentation !== 'pos-annotations' ? sentencePlan.groups : [tokens.map((_, index) => index)]).map((group, groupIndex) => <span key={groupIndex}
+                data-connector-phrase={readOnly && presentation !== 'pos-annotations' ? '' : undefined}
+                style={readOnly && presentation !== 'pos-annotations' ? { display: 'inline-block', maxWidth: '100%', verticalAlign: 'top' } : { display: 'contents' }}>
+              {group.map((tokenIndex) => {
+                const token = tokens[tokenIndex]!
                 const savedToken = visibleState?.tokens[tokenIndex]
                 const acceptedPosCode = savedToken?.acceptedPosCode ?? null
                 const support = sentencePlan.words[tokenIndex]!.support
@@ -1247,7 +1265,7 @@ export default function BusManifestReviewView({
                           height: KORU_STORY_HEIGHT_PX,
                           left: wordLayout.blockLeft,
                           width: blockWidth,
-                          backgroundColor: topology.materialColor,
+                          backgroundColor: topology.materialBackground,
                         }} />
                     ) : null}
                     {topology?.internalMaterial ? <>
@@ -1425,6 +1443,11 @@ export default function BusManifestReviewView({
                   </span>
                 )
               })}
+              {meanings?.[groupIndex]?.length ? <span className="connector-phrase-meaning" lang="en">{meanings[groupIndex]!.map((segment, segmentIndex) => <Fragment key={segmentIndex}>
+                {segmentIndex > 0 ? ' ' : null}{segment.parts.map((piece, pieceIndex) => <span key={pieceIndex} className={piece.color ? 'connector-meaning-color' : undefined}
+                  style={piece.color ? { '--meaning-color': piece.color } as CSSProperties : undefined}>{piece.text}</span>)}
+              </Fragment>)}</span> : null}
+              </span>)}
               {continuousParagraph ? (
                 <span aria-hidden="true">
                   {/[.!?…]$/u.test(tokens[tokens.length - 1]?.text ?? '') ? '' : '.'}{' '}
@@ -1458,6 +1481,7 @@ export default function BusManifestReviewView({
         passageAddresses[editingGuest.paragraphIndex],
       ) != null) ? (
         <PosPicker
+          wordKnowledge={renderWordKnowledge?.(editingGuest.paragraphIndex, editingGuest.tokenIndex)}
           catalog={posCatalog}
           hierarchy={posPickerHierarchy}
           selectedPosCode={

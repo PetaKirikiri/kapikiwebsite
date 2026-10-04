@@ -27,13 +27,15 @@ export function planWordLayout(
   hasNextWord = true,
   rightEnd?: 'send' | 'accept' | 'cap' | null,
   rightRail?: 'green' | 'yellow' | 'off' | null,
-  presentation?: { standalone?: boolean; attachNext?: boolean; separateAfter?: boolean; flatEnding?: boolean; face?: unknown; incomingJoin?: unknown },
+  presentation?: { inlineMarker?: boolean; standalone?: boolean; attachNext?: boolean; separateAfter?: boolean; flatEnding?: boolean; face?: unknown; incomingJoin?: unknown },
   continuousRail = false,
 ) {
   // Faces are centred on shared word boundaries and may extend into both
   // neighbouring materials. Do not make a short word reserve a complete face:
   // that detached the visible connector from words such as `i`.
-  const minimumWidth = presentation?.standalone ? connectionWidth
+  const inlineMarker = continuousRail && presentation?.inlineMarker === true
+  const minimumWidth = inlineMarker ? CONNECTOR_RAIL_LAYOUT.minimumStemWidth
+    : presentation?.standalone ? connectionWidth
     : presentation?.face && presentation?.incomingJoin ? connectionWidth + CONNECTOR_RAIL_LAYOUT.minimumStemWidth
     : CONNECTOR_RAIL_LAYOUT.minimumStemWidth
   const textWidth = Number.isFinite(measuredTextWidth) ? Math.max(0, measuredTextWidth) : 0
@@ -55,14 +57,14 @@ export function planWordLayout(
   // A fixed-width participant face must end exactly at the noun-side edge of
   // its word cell. Centring it leaves a visible hole after wider markers such
   // as `Mā`, even though the two cells themselves have no margin.
-  const connectorCenter = presentation?.standalone
+  const connectorCenter = inlineMarker ? slotWidth / 2 : presentation?.standalone
     ? Math.max(connectionWidth / 2, slotWidth - connectionWidth / 2)
     : slotWidth
   const leftConnectorCenter = 0
   const blockLeft = 0
   // Material ownership changes at the shared anchor, underneath the complete
   // saved join. Neither material can leak beyond its side of the join frame.
-  const blockWidth = connectorCenter - blockLeft
+  const blockWidth = inlineMarker ? slotWidth : connectorCenter - blockLeft
   return {
     minimumWidth, slotWidth, blockWidth, blockLeft,
     textPadding: CONNECTOR_RAIL_LAYOUT.textGap / 2,

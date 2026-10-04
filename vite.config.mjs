@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => {
         server.middlewares.use(liveApi(env.CONNECTORS_API_URL || 'http://127.0.0.1:5176'))
       },
     }],
-    build: { outDir: '../dist', emptyOutDir: true, rollupOptions: { input: { main: resolve('website-preview/index.html'), admin: resolve('website-preview/admin.html'), octoberIntakeV1: resolve('website-preview/october-intake-v1.html'), octoberIntakeV2: resolve('website-preview/october-intake-v2.html') } } },
+    build: { outDir: '../dist', emptyOutDir: true, rollupOptions: { input: { main: resolve('website-preview/index.html'), admin: resolve('website-preview/admin.html'), octoberIntakeV1: resolve('website-preview/october-intake-v1.html'), octoberIntakeV2: resolve('website-preview/october-intake-v2.html'), storyReview: resolve('website-preview/story-review.html') } } },
     server: { port: 5180, strictPort: true, fs: { allow: ['..'] } },
   }
 })

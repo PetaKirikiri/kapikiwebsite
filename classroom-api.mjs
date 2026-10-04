@@ -1,12 +1,16 @@
+import { analyseSentence } from './server/courseSentence.mjs'
 import pg from 'pg'
+import { checkLessonAnswer, recogniseChatAnswer } from './src/lib/lessons/chatAnswer.ts'
 import { wordsDatabaseConnection } from './words-database.mjs'
-import {createKitchen,joinKitchen,advanceKitchen,commandKitchen} from './src/lib/kitchen/engine.mjs'
+import { createKitchen, joinKitchen, advanceKitchen, commandKitchen } from './src/lib/kitchen/engine.mjs'
 import { randomBytes, createHash } from 'node:crypto'
 let pool
 function database() {
  if (!pool) {
   pool = new pg.Pool({ ...wordsDatabaseConnection(), max:3 })
   pool.on('error',()=>{})
+  // Checked-out clients can emit socket errors between queries as well as reject queries.
+  pool.on('connect',client=>client.on('error',()=>{}))
  }
  return pool
 }
@@ -38,14 +42,14 @@ export async function classroomApi(req,res) {
    const recent=await db.query("select count(*)::int as n from classroom_live_member m join classroom_live_room r on r.id=m.room_id where m.token_hash=$1 and m.seat=0 and r.created_at>now()-interval '24 hours'",[hash])
    if(recent.rows[0].n>=10)throw bad('Use an existing class for today.',429)
    id=randomBytes(12).toString('hex')
-   client=await db.connect();await client.query('begin')
+   client=await db.connect();await client.query('begin');await client.query("set local idle_in_transaction_session_timeout='10s'; set local lock_timeout='5s'; set local statement_timeout='10s'")
    await client.query('insert into classroom_live_room(id) values($1)',[id])
    await client.query("insert into classroom_live_member(room_id,token_hash,seat,name,x,y,look,color) values($1,$2,0,$3,400,255,'male',$4)",[id,hash,name,colors[0]])
    await client.query('commit');client.release();client=null
   }
   if(!/^[a-f0-9]{24}$/.test(id??''))throw bad('This class link is not valid.',404)
   client=await db.connect()
-  await client.query('begin')
+  await client.query('begin');await client.query("set local idle_in_transaction_session_timeout='10s'; set local lock_timeout='5s'; set local statement_timeout='10s'")
   const room=(await client.query('select * from classroom_live_room where id=$1 for update',[id])).rows[0]
   if(!room)throw bad('Class not found.',404)
   if(room.closed||new Date(room.expires_at)<new Date())throw bad('This class has ended.',410)
@@ -84,6 +88,21 @@ export async function classroomApi(req,res) {
   } else if(action==='chat') {
    if(typeof body.text!=='string'||!body.text.trim()||body.text.length>1000||! /^[a-f0-9-]{36}$/.test(body.id??''))throw bad('Enter a message.')
    await client.query('insert into classroom_live_message(id,room_id,seat,text) values($1,$2,$3,$4) on conflict(id) do nothing',[body.id,id,member.seat,body.text.trim()])
+  } else if(action==='lesson-chat'||action==='lesson-hand') {
+   if(typeof body.lessonKey!=='string'||! /^[1-6]:(?:[1-9]|10)$/.test(body.lessonKey))throw bad('Choose a lesson.')
+   const chats={...(room.state.lessonChats??{})}
+   const activity=chats[body.lessonKey]??{messages:[],hands:{}}
+   if(action==='lesson-hand') {
+    if(typeof body.raised!=='boolean')throw bad('Choose a hand status.')
+    activity.hands={...activity.hands,[member.seat]:body.raised}
+   } else {
+    if(typeof body.text!=='string'||!body.text.trim()||body.text.length>1000||!['answer','chat','auto'].includes(body.mode))throw bad('Enter a message.')
+    const feedback=body.lessonKey==='1:1' ? (body.mode==='auto' ? recogniseChatAnswer('level-1-lesson-1-father',body.text) : body.mode==='answer' ? checkLessonAnswer('level-1-lesson-1-father',body.text) : null) : null
+    activity.messages=[...activity.messages,{seat:member.seat,senderName:member.name,text:body.text.trim(),feedback}].slice(-100)
+   }
+   chats[body.lessonKey]=activity
+   room.state={...room.state,lessonChats:chats}
+   await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
   } else if(action==='mark') {
    if(!Number.isInteger(body.index)||body.index<0||body.index>2||typeof body.marked!=='boolean')throw bad('Invalid area.')
    const marks=member.marks.filter(n=>n!==body.index);if(body.marked)marks.push(body.index)
@@ -113,7 +132,7 @@ export async function classroomApi(req,res) {
    await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
   } else if(action==='surface') {
    if(member.seat!==0)throw bad('Only the teacher can change the activity.',403)
-   if(!['room','whiteboard'].includes(body.surface))throw bad('Unknown activity.')
+   if(!['room','whiteboard','kitchen'].includes(body.surface))throw bad('Unknown activity.')
    room.state={...room.state,surface:body.surface}
    await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
   } else if(action==='whiteboard') {
@@ -123,12 +142,28 @@ export async function classroomApi(req,res) {
    let blocks=[...board.blocks]
    const validId=value=>typeof value==='string'&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(value)
    const validPosition=(x,y)=>Number.isFinite(x)&&Number.isFinite(y)&&x>=0&&x<=780&&y>=0&&y<=500
-   if(body.op==='add') {
+   if(body.op==='example') {
+    if(!Number.isSafeInteger(body.structureId)||body.structureId<1)throw bad('Choose a saved sentence.')
+    const example=(await client.query('select s.structure_id,s.text_mi,f.state from public.sentence_structure s join public.floor_plan f using(structure_id) where s.structure_id=$1',[body.structureId])).rows[0]
+    if(!example)throw bad('Saved sentence not found.',404)
+    const posTypes=(await client.query('select code as "posCode",group_code as "groupCode" from public.pos_type')).rows
+    board.example={structureId:Number(example.structure_id),textMi:example.text_mi,state:example.state,posTypes}
+    delete board.analysis
+    blocks=[]
+   } else if(body.op==='add') {
     const block=body.block
-    if(!block||!validId(block.id)||!['predicate','subject'].includes(block.kind)||!validPosition(block.x,block.y))throw bad('Invalid block.')
+    if(!block||!validId(block.id)||!['predicate','subject','name','determiner'].includes(block.kind)||!validPosition(block.x,block.y))throw bad('Invalid block.')
     if(blocks.length>=32)throw bad('The whiteboard is full.')
     if(blocks.some(b=>b.id===block.id))throw bad('This block already exists.',409)
-    blocks.push({id:block.id,kind:block.kind,x:block.x,y:block.y})
+    let exampleFields={}
+    if(block.structureId!==undefined) {
+     if(!Number.isSafeInteger(block.structureId)||!Number.isSafeInteger(block.tokenIndex))throw bad('Invalid sentence example.')
+     const example=(await client.query('select state from public.floor_plan where structure_id=$1',[block.structureId])).rows[0]
+     const token=example?.state?.tokens?.[block.tokenIndex]
+     if(!token || block.structureId !== board.example?.structureId)throw bad('Shape does not match this saved example.')
+     exampleFields={structureId:block.structureId,tokenIndex:block.tokenIndex}
+    }
+    blocks.push({id:block.id,kind:block.kind,x:block.x,y:block.y,...exampleFields})
    } else if(body.op==='move'||body.op==='delete') {
     if(!validId(body.blockId)||!blocks.some(b=>b.id===body.blockId))throw bad('Block not found.',404)
     if(body.op==='move') {
@@ -145,34 +180,34 @@ export async function classroomApi(req,res) {
      if(typeof body.text!=='string'||body.text.length>60)throw bad('Use one word, up to 60 characters.')
      const text=body.text.normalize('NFC').trim()
      if(text&&!/^[\p{L}\p{M}’'‐-]+$/u.test(text))throw bad('Use one word in each shape.')
-     const word=text.toLocaleLowerCase('mi-NZ')
-     const learned=word?(await client.query('select conditions from public.learned_maori_word where word=$1',[word])).rows[0]:null
-     let possibilities=[],source=''
-     if(learned) {
-      const codes=[...new Set(learned.conditions.map(c=>c.local?.ours).filter(Boolean))]
-      possibilities=(await client.query('select code,group_code from public.pos_type where code=any($1::text[])',[codes])).rows
-      source='learned'
-     } else if(word) {
-      possibilities=(await client.query(`select distinct p.code,p.group_code from public.lexeme l
-       join public.dictionary_entry e on e.lexeme_id=l.lexeme_id and e.source_code='te_aka'
-       join public.dictionary_sense s on s.entry_id=e.entry_id
-       join public.dictionary_pos_mapping m on m.label_code=s.pos_label_code
-       join public.pos_type p on p.code=m.pos_code
-       where l.language_code='mi' and (lower(l.lemma)=$1 or exists(select 1 from public.lexeme_alias a where a.lexeme_id=l.lexeme_id and lower(a.alias)=$1))`,[word])).rows
-      source='dictionary'
-     }
-     const match=possibilities.find(p=>block.kind==='predicate'?['nominal_predicate','nominal_marker'].includes(p.code):p.group_code==='noun')
-     // A teacher may explicitly demonstrate an unlearned usage on this board.
-     // This never confirms a Floor or creates learned vocabulary.
-     const confirmed=body.confirm===true&&Boolean(word)
-     const posCode=match?.code??(confirmed?(block.kind==='predicate'?'nominal_predicate':'noun'):null)
-     blocks=blocks.map(b=>b.id===block.id?{...b,text,posCode,matchSource:match?source:confirmed?'teacher':null,
-      matchStatus:!word?'empty':posCode?'matched':possibilities.length?'mismatch':'unknown',
-      growthId:posCode?randomBytes(12).toString('hex'):null,grownAt:posCode?Date.now():null}:b)
+     const example = board.example
+     const tokenIndex = block.tokenIndex
+     if (!example?.state?.tokens?.[tokenIndex]) throw bad('Choose a sentence example first.')
+     // The shape is an exercise target. New words are analysed in the complete
+     // sentence by the same engine as the reader, never by a local POS lookup.
+     const tokens = example.state.tokens.map(token => {
+      const placed = blocks.find(item => item.tokenIndex === token.tokenIndex && item.text)
+      return token.tokenIndex === tokenIndex ? (text || token.surfaceText) : (placed?.text || token.surfaceText)
+     })
+     const textMi = tokens.join(' ')
+     await client.query("set local idle_in_transaction_session_timeout='60s'")
+     const analysis = (await analyseSentence(textMi)).floor.state
+     board.analysis={textMi,state:analysis}
+     blocks=blocks.map(b=> {
+      const value=b.id===block.id?text:(b.text??'')
+      const expected=example.state.tokens[b.tokenIndex]?.acceptedPosCode
+      const proposed=analysis.tokens[b.tokenIndex]?.acceptedPosCode??null
+      const matched=Boolean(value && proposed && proposed===expected)
+      return {...b,text:value,posCode:matched?proposed:null,matchSource:matched?'sentence-engine':null,
+       matchStatus:!value?'empty':matched?'matched':proposed?'mismatch':'unknown',
+       growthId:matched?(b.id===block.id?randomBytes(12).toString('hex'):b.growthId):null,
+       grownAt:matched?(b.id===block.id?Date.now():b.grownAt):null}
+     })
+
     }
    } else if(body.op==='clear')blocks=[]
    else throw bad('Unknown whiteboard action.')
-   room.state={...room.state,whiteboard:{revision:board.revision+1,blocks}}
+   room.state={...room.state,whiteboard:{...board,revision:board.revision+1,blocks}}
    await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
   } else if(action==='control') {
    if(member.seat!==0)throw bad('Only the teacher can change the activity.',403)

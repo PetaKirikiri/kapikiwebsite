@@ -1,0 +1,647 @@
+[
+  {
+    "structureId": 1,
+    "textMi": "Ko Charlie te manu",
+    "label": "Ko",
+    "purpose": "Naming",
+    "indices": [
+      0
+    ],
+    "slot": "noun"
+  },
+  {
+    "structureId": 2,
+    "textMi": "He kākāpō te manu",
+    "label": "He",
+    "purpose": "Describing",
+    "indices": [
+      0
+    ],
+    "following": [
+      {
+        "kind": "Noun",
+        "example": "kākāpō",
+        "source": {
+          "structureId": 2,
+          "textMi": "He kākāpō te manu",
+          "indices": [
+            1
+          ]
+        }
+      },
+      {
+        "kind": "Describing word",
+        "example": "nui",
+        "source": {
+          "structureId": 19,
+          "textMi": "He nui ake te manu i te kākano",
+          "indices": [
+            1
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "structureId": 3,
+    "textMi": "Nō Wellington te manu",
+    "label": "Nō",
+    "purpose": "Where from",
+    "indices": [
+      0
+    ],
+    "slot": "noun"
+  },
+  {
+    "structureId": 4,
+    "textMi": "Kei te ngahere te manu",
+    "label": "Kei",
+    "purpose": "Location",
+    "indices": [
+      0
+    ],
+    "slot": "noun"
+  },
+  {
+    "structureId": 5,
+    "textMi": "Kei runga te manu i te kākano",
+    "label": "Kei",
+    "purpose": "Location",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 6,
+    "textMi": "E rua ngā manu",
+    "label": "E",
+    "purpose": "Counting things",
+    "indices": [
+      0
+    ],
+    "following": [
+      {
+        "kind": "Number",
+        "example": "rua",
+        "source": {
+          "structureId": 6,
+          "textMi": "E rua ngā manu",
+          "indices": [
+            1
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "structureId": 7,
+    "textMi": "Tokorua ngā tāngata",
+    "label": "Toko-",
+    "purpose": "Counting people",
+    "indices": [
+      0
+    ],
+    "following": [
+      {
+        "kind": "Number joined to toko-",
+        "example": "rua",
+        "source": {
+          "structureId": 6,
+          "textMi": "E rua ngā manu",
+          "indices": [
+            1
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "structureId": 10,
+    "textMi": "Ehara te manu i te kākapō",
+    "label": "Ehara",
+    "purpose": "Negative statement",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 11,
+    "textMi": "Nā te manu te kākano",
+    "label": "Nā",
+    "purpose": "Ownership",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 12,
+    "textMi": "Nō te manu te whare",
+    "label": "Nō",
+    "purpose": "Ownership",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 13,
+    "textMi": "Mā te manu te kākano",
+    "label": "Mā",
+    "purpose": "Intended for",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 14,
+    "textMi": "Mō te manu te whare",
+    "label": "Mō",
+    "purpose": "Intended for",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 15,
+    "textMi": "Ehara Nā te manu te kākano",
+    "label": "Ehara Nā",
+    "purpose": "Negative ownership",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 16,
+    "textMi": "Ehara Nō te manu te whare",
+    "label": "Ehara Nō",
+    "purpose": "Negative ownership",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 17,
+    "textMi": "Ehara Mā te manu te kākano",
+    "label": "Ehara Mā",
+    "purpose": "Negative ownership",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 18,
+    "textMi": "Ehara Mō te manu te whare",
+    "label": "Ehara Mō",
+    "purpose": "Negative ownership",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 19,
+    "textMi": "He nui ake te manu i te kākano",
+    "label": "He",
+    "purpose": "Describing",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 20,
+    "textMi": "I whai te manu whero i te manu kākāriki",
+    "label": "I",
+    "purpose": "Past action",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 21,
+    "textMi": "Kua whai te manu whero i te manu kākāriki",
+    "label": "Kua",
+    "purpose": "Completed action",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 22,
+    "textMi": "Kei te whai te manu whero i te manu kākāriki",
+    "label": "Kei te",
+    "purpose": "Ongoing action",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 23,
+    "textMi": "E whai ana te manu whero i te manu kākāriki",
+    "label": "E … ana",
+    "purpose": "Ongoing action",
+    "indices": [
+      0,
+      2
+    ]
+  },
+  {
+    "structureId": 24,
+    "textMi": "Ka whai te manu whero i te manu kākāriki",
+    "label": "Ka",
+    "purpose": "Future action",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 25,
+    "textMi": "Me whai te manu whero i te manu kākāriki",
+    "label": "Me",
+    "purpose": "Should",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 26,
+    "textMi": "Hei whai te manu whero i te manu kākāriki",
+    "label": "Hei",
+    "purpose": "Intended action",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 27,
+    "textMi": "Whai ai te manu whero i te manu kākāriki",
+    "label": "… ai",
+    "purpose": "Habitual action",
+    "indices": [
+      1
+    ]
+  },
+  {
+    "structureId": 28,
+    "textMi": "Kāore te manu whero i whai i te manu kākāriki",
+    "label": "Kāore … i",
+    "purpose": "Negative past",
+    "indices": [
+      0,
+      4
+    ]
+  },
+  {
+    "structureId": 29,
+    "textMi": "Kāore te manu whero i te whai i te manu kākāriki",
+    "label": "Kāore … i te",
+    "purpose": "Negative ongoing",
+    "indices": [
+      0,
+      4,
+      5
+    ]
+  },
+  {
+    "structureId": 30,
+    "textMi": "Kāore te manu whero e whai i te manu kākāriki",
+    "label": "Kāore … e",
+    "purpose": "Negative future",
+    "indices": [
+      0,
+      4
+    ]
+  },
+  {
+    "structureId": 31,
+    "textMi": "Kāore anō te manu whero kia whai i te manu kākāriki",
+    "label": "Kāore anō … kia",
+    "purpose": "Not yet",
+    "indices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "structureId": 32,
+    "textMi": "Nā te manu whero te manu kākāriki i whai",
+    "label": "Nā … i",
+    "purpose": "Who did it",
+    "indices": [
+      0,
+      7
+    ]
+  },
+  {
+    "structureId": 33,
+    "textMi": "Nā te manu whero i rere ki te manu kākāriki",
+    "label": "Nā … i",
+    "purpose": "Who did it",
+    "indices": [
+      0,
+      4
+    ]
+  },
+  {
+    "structureId": 34,
+    "textMi": "Mā te manu whero te manu kākāriki e whai",
+    "label": "Mā … e",
+    "purpose": "Who will do it",
+    "indices": [
+      0,
+      7
+    ]
+  },
+  {
+    "structureId": 35,
+    "textMi": "Mā te manu whero e rere ki te manu kākāriki",
+    "label": "Mā … e",
+    "purpose": "Who will do it",
+    "indices": [
+      0,
+      4
+    ]
+  },
+  {
+    "structureId": 36,
+    "textMi": "Ehara Nā te manu whero te manu kākāriki i whai",
+    "label": "Ehara Nā … i",
+    "purpose": "Negative actor statement",
+    "indices": [
+      0,
+      1,
+      8
+    ]
+  },
+  {
+    "structureId": 37,
+    "textMi": "Ehara Nā te manu whero i rere ki te manu kākāriki",
+    "label": "Ehara Nā … i",
+    "purpose": "Negative actor statement",
+    "indices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "structureId": 38,
+    "textMi": "Ehara Mā te manu whero te manu kākāriki e whai",
+    "label": "Ehara Mā … e",
+    "purpose": "Negative actor statement",
+    "indices": [
+      0,
+      1,
+      8
+    ]
+  },
+  {
+    "structureId": 39,
+    "textMi": "Ehara Mā te manu whero e rere ki te manu kākāriki",
+    "label": "Ehara Mā … e",
+    "purpose": "Negative actor statement",
+    "indices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "structureId": 40,
+    "textMi": "Ka taea e te manu whero te manu kākāriki te whai",
+    "label": "Ka taea",
+    "purpose": "Ability",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 41,
+    "textMi": "Ka taea e te manu whero te rere ki te manu kākāriki",
+    "label": "Ka taea",
+    "purpose": "Ability",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 42,
+    "textMi": "Kāore e taea e te manu whero te manu kākāriki te whai",
+    "label": "Kāore e taea",
+    "purpose": "Inability",
+    "indices": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "structureId": 43,
+    "textMi": "Kāore e taea e te manu whero te rere ki te manu kākāriki",
+    "label": "Kāore e taea",
+    "purpose": "Inability",
+    "indices": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "structureId": 44,
+    "textMi": "He aha te manu whero i whai ai i te manu kākāriki?",
+    "label": "He aha",
+    "purpose": "Why",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 45,
+    "textMi": "He aha te manu whero i te whai ai i te manu kākāriki?",
+    "label": "He aha",
+    "purpose": "Why",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 46,
+    "textMi": "He aha te manu whero e whai ai i te manu kākāriki?",
+    "label": "He aha",
+    "purpose": "Why",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 47,
+    "textMi": "He aha te manu whero i kore ai i whai i te manu kākāriki?",
+    "label": "He aha",
+    "purpose": "Why",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 48,
+    "textMi": "He aha te manu whero i kore ai i te whai i te manu kākāriki?",
+    "label": "He aha",
+    "purpose": "Why",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 49,
+    "textMi": "He aha te manu whero i kore ai e whai i te manu kākāriki?",
+    "label": "He aha",
+    "purpose": "Why",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 50,
+    "textMi": "Nōnahea te manu whero i whai ai i te manu kākāriki?",
+    "label": "Nōnahea",
+    "purpose": "When in the past",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 51,
+    "textMi": "Āhea te manu whero e whai ai i te manu kākāriki?",
+    "label": "Āhea",
+    "purpose": "When in the future",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 52,
+    "textMi": "Mēnā Ka whai te manu whero i te manu kākāriki…",
+    "label": "Mēnā · Ka",
+    "purpose": "If · future",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 53,
+    "textMi": "Mehemea Ka whai te manu whero i te manu kākāriki…",
+    "label": "Mehemea · Ka",
+    "purpose": "If · future",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 54,
+    "textMi": "Ki te whai te manu whero i te manu kākāriki",
+    "label": "Ki te",
+    "purpose": "If",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 55,
+    "textMi": "I whaia te manu kākāriki e te manu whero",
+    "label": "I",
+    "purpose": "Past action",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 56,
+    "textMi": "Kua hora ngā kākano i te manu",
+    "label": "Kua",
+    "purpose": "Completed action",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 58,
+    "textMi": "E rere ki te manu kākāriki",
+    "label": "E",
+    "purpose": "Instruction",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 59,
+    "textMi": "Kaua e whai i te manu kākāriki",
+    "label": "Kaua e",
+    "purpose": "Do not",
+    "indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "structureId": 60,
+    "textMi": "Kāti te whai i te manu kākāriki",
+    "label": "Kāti",
+    "purpose": "Stop",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 61,
+    "textMi": "Kia tere tō mahi",
+    "label": "Kia",
+    "purpose": "Desired outcome",
+    "indices": [
+      0
+    ]
+  },
+  {
+    "structureId": 62,
+    "textMi": "Kotahi te manu",
+    "label": "Kotahi",
+    "purpose": "One thing",
+    "indices": [
+      0
+    ],
+    "sectionComplete": true
+  },
+  {
+    "structureId": 63,
+    "textMi": "Kāorekau ngā manu",
+    "label": "Kāorekau",
+    "purpose": "No things",
+    "indices": [
+      0
+    ],
+    "sectionComplete": true
+  },
+  {
+    "structureId": 64,
+    "textMi": "Mēnā Ka whai te manu whero i te manu kākāriki",
+    "label": "Mēnā · Ka",
+    "purpose": "If · future",
+    "indices": [
+      0,
+      1
+    ]
+  }
+]

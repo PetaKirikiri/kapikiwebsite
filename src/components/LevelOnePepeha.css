@@ -54,3 +54,8 @@
 
 .level-reading-language { display: flex; flex-wrap: wrap; gap: 8px 18px; padding: 16px 0; font-size: 13px; color: var(--site-muted); }
 .level-reading-language a { color: var(--ka-green); text-underline-offset: 3px; }
+
+.level-pepeha-card-heading { background: #edf1e9; border-bottom: 1px solid var(--ka-card-line); }
+.level-pepeha-section-label h2 { margin: 0; color: var(--ka-green); font: 600 17px/1.3 var(--ka-body, sans-serif); }
+.level-pepeha-section-label p { color: var(--site-muted); }
+.level-pepeha-number { color: var(--ka-green); background: var(--ka-card-paper); border-color: var(--ka-card-line); }

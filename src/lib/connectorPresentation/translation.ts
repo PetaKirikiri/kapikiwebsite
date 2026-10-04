@@ -35,3 +35,15 @@ export function translatedSegments(text: string, materials: readonly (string | u
       color }
   })
 }
+
+/** Phrase glosses follow the catalog's explicit source addresses, in English order.
+ * Unaligned English stays in the full translation instead of being guessed.
+ */
+export function phraseMeaningSegments(text: string, groups: readonly (readonly number[])[], materials: readonly (string | undefined)[] = []) {
+  const segments = translatedSegments(text, materials)
+  return groups.map(group => segments?.filter(segment => segment.sourceIndex != null && group.includes(segment.sourceIndex)) ?? [])
+}
+
+export function phraseMeanings(text: string, groups: readonly (readonly number[])[]) {
+  return phraseMeaningSegments(text, groups).map(segments => segments.map(segment => segment.text).join(' ') || null)
+}

@@ -11,9 +11,8 @@ const COURSE_LINKS = [null, '#benefits/live-classes', '#benefits/app'] as const
 
 export default function CourseFormat({ linked = true }: { linked?: boolean }) {
   return <section className="course-format site-card" aria-labelledby="course-format-heading">
-    <header className="course-format-cover site-card-cover">
+    <header className="course-format-cover">
       <h2 id="course-format-heading" className="site-card-title">How the courses run</h2>
-      <p className="site-benefit-intro">Make room for your reo in a busy working week, with regular classes and practice that fits around you.</p>
     </header>
     <dl className="course-format-facts">
       {COURSE_FORMAT.map(({ title, detail, icon }, index) => <div key={title} className="course-format-fact">
