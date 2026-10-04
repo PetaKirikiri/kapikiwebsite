@@ -13,14 +13,11 @@
 .signup-admin :focus-visible { outline: 3px solid #b78b41; outline-offset: 3px; }
 .signup-admin input { width: 100%; background: white; color: #213b35; border: 1px solid #b8c8bc; border-radius: 7px; padding: 12px; font: inherit; }
 .signup-admin label { display: grid; gap: 8px; font-size: 14px; font-weight: 600; }
-.signup-admin-counts { display: grid; grid-template-columns: repeat(7,1fr); padding: 24px; gap: 8px; border-bottom: 1px solid #d8ddd5; }
+.signup-admin-counts { display: grid; grid-template-columns: repeat(7,1fr); padding: 20px 24px; margin-bottom: 24px; gap: 8px; border-bottom: 1px solid #d8ddd5; }
 .signup-admin-counts button { display: grid; gap: 6px; padding: 14px 6px; border-color: transparent; text-align: center; }
 .signup-admin-counts button[aria-pressed=true] { background: #e8eee4; border-color: #bccbbb; }
 .signup-admin-counts strong { font: 400 30px/1.1 var(--ka-heading); }
 .signup-admin-counts span { font-size: 13px; }
-.signup-admin-toolbar { display: flex; align-items: end; gap: 16px; justify-content: space-between; padding: 24px 32px 12px; }
-.signup-admin-toolbar label { width: min(100%,380px); }
-.signup-admin-results { margin: 0 32px 24px; font-size: 13px; color: #5d6c63; }
 .signup-admin-class { margin: 0 32px 32px; }
 .signup-admin-class > header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
 .signup-admin-class h2 span { font: 600 13px Arial, sans-serif; margin-left: 8px; padding: 4px 8px; border-radius: 12px; background: #e8eee4; vertical-align: middle; }
@@ -33,12 +30,12 @@
 .signup-admin td a { color: #214b3d; text-underline-offset: 3px; }
 .signup-admin time { white-space: nowrap; }
 .signup-admin small { display: block; color: #8a5b27; font-weight: 400; }
-.signup-admin-notice, .signup-admin-footnote { margin: 24px 32px; color: #5d6c63; line-height: 1.5; }
-.signup-admin-footnote { font-size: 13px; }
+.signup-admin-notice { margin: 24px 32px; color: #5d6c63; line-height: 1.5; }
 .signup-admin-error { margin: 0 32px 24px; background: #fff0ec; color: #863d2a; padding: 16px; border-radius: 7px; }
 @media(max-width:700px) { .signup-admin { padding: 20px 12px; }.signup-admin-cover { padding: 24px; }.signup-admin h1 { font-size: 34px; }.signup-admin-counts { grid-template-columns: repeat(4,1fr); padding: 16px; }.signup-admin-toolbar { padding: 24px 20px 12px; }.signup-admin-class { margin: 0 20px 28px; }.signup-admin-results { margin-left: 20px; }.signup-admin-heading { align-items: end; } }
 
 .signup-admin-views { display: flex; gap: 8px; padding: 24px 32px 0; }
+.signup-admin-refresh { margin-left: auto; }
 .signup-admin-views button[aria-pressed=true] { background: #214b3d; border-color: #214b3d; color: #f1f3eb; }
 .signup-admin .signup-admin-row-action { padding: 8px 12px; font-size: 13px; white-space: nowrap; }
 

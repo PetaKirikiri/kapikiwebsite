@@ -71,27 +71,26 @@ export default function SignupAdmin() {
       <div className="signup-admin-views" aria-label="Signup status">
         <button aria-pressed={!removed} disabled={busy} onClick={() => { setRemoved(false); setNotice('') }}>Signups</button>
         <button aria-pressed={removed} disabled={busy} onClick={() => { setRemoved(true); setNotice('') }}>Removed</button>
+        <button className="signup-admin-refresh" onClick={() => setRefresh(value => value + 1)} disabled={loading || busy}>Refresh</button>
       </div>
       {notice && <p className="signup-admin-notice" role="status">{notice}</p>}
-      <SignupRoster rows={loading ? [] : rows} loading={loading || busy} loadedAt={loading ? null : loadedAt} removed={removed} onChange={changeRegistration} onMove={moveRegistration} onRefresh={() => setRefresh(value => value + 1)} />
+      <SignupRoster rows={loading ? [] : rows} loading={loading || busy} loadedAt={loading ? null : loadedAt} removed={removed} onChange={changeRegistration} onMove={moveRegistration} />
       {error && <p className="signup-admin-error" role="alert">{error}</p>}
     </section>
   </main>
 }
 
-export function SignupRoster({ rows, loading, loadedAt, onRefresh, removed = false, onChange, onMove }: { rows: Registration[]; loading: boolean; loadedAt: Date | null; onRefresh: () => void; removed?: boolean; onChange?: (row: Registration) => void; onMove?: (row: Registration, level: number) => void }) {
-  const [search, setSearch] = useState('')
+export function SignupRoster({ rows, loading, loadedAt, removed = false, onChange, onMove }: { rows: Registration[]; loading: boolean; loadedAt: Date | null; removed?: boolean; onChange?: (row: Registration) => void; onMove?: (row: Registration, level: number) => void }) {
   const [level, setLevel] = useState(0)
-  const filtered = useMemo(() => rows.filter(row => (!level || row.selected_level === level) && `${row.name} ${row.email} ${row.department_group || ''}`.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase())), [rows, level, search])
+  const filtered = useMemo(() => rows.filter(row => !level || row.selected_level === level), [rows, level])
   const duplicateEmails = useMemo(() => { const counts = new Map<string, number>(); rows.forEach(row => counts.set(row.email.toLowerCase(), (counts.get(row.email.toLowerCase()) || 0) + 1)); return counts }, [rows])
   return <>
         <div className="signup-admin-counts" aria-label="Filter registrations by class">
-          <button aria-pressed={level === 0} onClick={() => setLevel(0)}><strong>{loadedAt ? rows.length : '—'}</strong><span>{removed ? 'All removed' : 'All signups'}</span></button>
+          <button aria-pressed={level === 0} onClick={() => setLevel(0)}><span>All levels</span></button>
           {classes.map(item => <button key={item.level} aria-pressed={level === item.level} onClick={() => setLevel(item.level)}><strong>{loadedAt ? rows.filter(row => row.selected_level === item.level).length : '—'}</strong><span>{item.title}</span></button>)}
         </div>
-        <div className="signup-admin-toolbar"><label>Search signups<input type="search" placeholder="Name, email or group" value={search} onChange={event => setSearch(event.target.value)} /></label><button onClick={onRefresh} disabled={loading}>{loading ? 'Refreshing…' : 'Refresh'}</button></div>
-        <div className="signup-admin-results" aria-live="polite">{loading ? 'Loading registrations…' : loadedAt ? `${filtered.length} ${filtered.length === 1 ? 'signup' : 'signups'} · Updated ${loadedAt.toLocaleTimeString('en-NZ', { hour: 'numeric', minute: '2-digit' })}` : ''}</div>
-        {loadedAt && !filtered.length ? <p className="signup-admin-notice">{search ? 'No signups match your search.' : removed ? 'No removed signups for this class.' : 'No signups for this class yet.'}</p> : classes.filter(item => !level || item.level === level).map(item => {
+        {loading && <p className="signup-admin-notice" role="status">Loading…</p>}
+        {loadedAt && !filtered.length ? <p className="signup-admin-notice">{removed ? 'No removed signups.' : 'No signups yet.'}</p> : classes.filter(item => !level || item.level === level).map(item => {
           const people = filtered.filter(row => row.selected_level === item.level)
           return !people.length ? null : <section key={item.level} className="signup-admin-class" aria-labelledby={`signup-class-${item.level}`}>
             <header><h2 id={`signup-class-${item.level}`}>{item.title} <span>{people.length}</span></h2><p>{item.day} · {item.time} · NZ time</p></header>
@@ -102,7 +101,6 @@ export function SignupRoster({ rows, loading, loadedAt, onRefresh, removed = fal
             </tr>)}</tbody></table></div>
           </section>
         })}
-        {loadedAt && <p className="signup-admin-footnote">Registrations of interest. Class places are not yet confirmed.</p>}
   </>
 }
 
