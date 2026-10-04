@@ -1,8 +1,10 @@
 .signup-admin { max-width: 1120px; margin: 0 auto; padding: 28px 24px 48px; color: #213b35; font-family: Arial, Helvetica, sans-serif; }
 .signup-admin * { box-sizing: border-box; }
-.signup-admin-page-header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
-.signup-admin-page-header a { color: inherit; font-weight: 700; text-decoration: none; }
-.signup-admin h1 { margin: 0; font: 400 26px/1.2 var(--ka-heading); }
+.signup-admin-back { display: inline-block; margin-bottom: 20px; color: inherit; text-underline-offset: 4px; }
+.signup-admin-page-header { padding: 32px; margin-bottom: 24px; }
+.signup-admin-page-header img { display: block; width: 200px; height: auto; margin-bottom: 24px; }
+.signup-admin-page-header p { margin: 10px 0 0; }
+.signup-admin h1 { margin: 0; font: 400 42px/1.15 var(--ka-heading); }
 .signup-admin-levels { display: grid; gap: 24px; }
 .signup-admin-level-header { display: flex; align-items: center; gap: 18px; padding: 24px; }
 .signup-admin-level-icon { width: 40px; height: 40px; flex: 0 0 40px; }
@@ -24,8 +26,8 @@
 .signup-admin-error { color: #863d2a; }
 @media(max-width:700px) {
   .signup-admin { padding: 20px 12px; }
-  .signup-admin-page-header { align-items: center; }
-  .signup-admin h1 { font-size: 22px; }
+  .signup-admin-page-header { padding: 24px; }
+  .signup-admin h1 { font-size: 34px; }
   .signup-admin-level-header { padding: 20px 16px; gap: 12px; }
   .signup-admin h2 { font-size: 25px; }
   .signup-admin-level-icon { width: 32px; height: 32px; flex-basis: 32px; }

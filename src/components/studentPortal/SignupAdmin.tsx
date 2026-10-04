@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { MOE_CLASSES } from '../../lib/moeOffer'
 import MoeBenefitIcon from '../MoeBenefitIcon'
+import ministryLogo from '../../assets/ministry-of-education-logo-white.svg'
 import '../SiteIdentity.css'
 import './SignupAdmin.css'
 
@@ -23,7 +24,12 @@ export default function SignupAdmin() {
     return () => controller.abort()
   }, [])
   return <main className="signup-admin">
-    <header className="signup-admin-page-header"><a href="/#moe">Ka Piki</a><h1>October 2026 classes</h1></header>
+    <a className="signup-admin-back" href="/#moe">← MOE classes</a>
+    <header className="site-card site-card-cover signup-admin-page-header">
+      <img src={ministryLogo} width="200" height="58" alt="Ministry of Education" />
+      <h1>Class signups</h1>
+      <p>October 2026 intake</p>
+    </header>
     {loading ? <p role="status">Loading…</p> : error ? <p className="signup-admin-error" role="alert">{error}</p> : <SignupRoster rows={rows} />}
   </main>
 }
