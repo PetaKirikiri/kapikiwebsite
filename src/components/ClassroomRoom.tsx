@@ -8,6 +8,7 @@ import ClassroomDifferences from './ClassroomDifferences'
 import LoungeSprite from './LoungeSprite'
 import type { WebsitePreviewData } from './WebsiteView'
 import './ClassroomRoom.css'
+import JitsiClassCall from './JitsiClassCall'
 
 const COLORS = ['#398aa6', '#ba657f', '#608b48', '#bc8744']
 // Presentation role for this local classroom preview, not an account permission.
@@ -298,7 +299,7 @@ export default function ClassroomRoom({ data, error }: { data?: WebsitePreviewDa
       <div className="classroom-chat-heading"><h2>Chat</h2><span className="classroom-preview-label" title="Local preview — messages are visible on this device only" aria-label="Local preview. Messages are visible on this device only.">Preview</span><button className="classroom-camera-toggle" aria-label="Camera" title="Camera area" aria-expanded={cameraOpen} aria-controls="classroom-camera-area" onClick={() => setCameraOpen(open => !open)}>
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><rect x="3" y="6" width="12" height="12" rx="2" /><path d="m15 10 6-3v10l-6-3z" /></svg>
       </button></div>
-      {cameraOpen && <section id="classroom-camera-area" className="classroom-camera-area" aria-label="Optional camera area"><span className="classroom-camera-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="6" width="12" height="12" rx="2" /><path d="m15 10 6-3v10l-6-3z" /></svg></span><strong>Camera space</strong><span>Video isn’t connected yet.</span></section>}
+      {cameraOpen && <div id="classroom-camera-area"><JitsiClassCall /></div>}
       <div className="classroom-chat-log" ref={chatLog} role="log" aria-label="Messages" aria-live="polite" aria-relevant="additions">
         {messages.map(message => <div className="classroom-message" key={message.id}><span className="classroom-avatar" style={{ background: appearances[message.player].color }}>{playerInitial(message.player)}</span><div><strong>{playerName(message.player)}</strong><p>{message.text}</p></div></div>)}
       </div>

@@ -3,6 +3,7 @@ import { errorMessage, studentClient } from '../../lib/studentPortal/client'
 import { lessonClient, lessonRpc, previewSteps, safeResource } from '../../lib/lessons/client'
 import type { LessonPlan, LessonSession, LessonStep } from '../../lib/lessons/client'
 import './LessonRoom.css'
+import JitsiClassCall from '../JitsiClassCall'
 
 export function LessonScreen({ step }: { step: LessonStep }) {
  return <section className="lesson-screen" aria-live="polite"><span className="lesson-kind">{step.kind.replace('_', ' ')}{step.duration_minutes ? ` · ${step.duration_minutes} min` : ''}</span><h2>{step.title}</h2>{step.prompt_mi && <p lang="mi" className="lesson-prompt">{step.prompt_mi}</p>}{step.prompt_en && <p>{step.prompt_en}</p>}<div className="lesson-items">{step.items.map(item => {
@@ -84,6 +85,7 @@ export default function LessonRoom() {
  const controls = preview || room?.is_teacher
  return <main className="lesson-page"><header className="lesson-heading"><a href="#my-learning">← My learning</a><span>{preview ? 'Preview' : room ? room.status === 'ended' ? 'Class ended' : error ? 'Reconnecting…' : 'Live class' : 'Lessons'}</span></header>
  {error && <p className="lesson-error" role="alert">{error}</p>}
+ {room?.status !== 'ended' && <JitsiClassCall key={room?.id ?? 'test'} roomId={room?.id} />}
  {editing ? <LessonEditor plan={editing} onClose={() => setEditing(null)} /> : step ? <>
  <div className="lesson-title"><div><small>Level {preview ? 1 : room?.level} · Lesson {preview ? 1 : room?.lesson_number}</small><h1>{preview ? 'Pepeha' : room?.title}</h1></div>{room?.join_code && <div className="lesson-code"><small>Class code</small><strong>{room.join_code}</strong></div>}</div>
  <LessonScreen step={step} />

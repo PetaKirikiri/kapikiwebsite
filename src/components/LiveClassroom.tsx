@@ -4,6 +4,7 @@ import LoungeSprite from './LoungeSprite'
 import ClassWhiteboard, { type BoardState } from './ClassWhiteboard'
 import './ClassroomRoom.css'
 import './LiveClassroom.css'
+import JitsiClassCall from './JitsiClassCall'
 import './LiveHouse.css'
 
 type Member = { seat: number; name: string; x: number; y: number; movement: number; look: 'male' | 'female'; color: string; lastSeen: string; eliminated: number[]; guess: number | null; correct: boolean | null }
@@ -143,6 +144,7 @@ export default function LiveClassroom() {
       <div className="classroom-top-actions">{joined && <>{boardMode && <><button aria-label="Toggle class chat" aria-pressed={showChat} onClick={() => setShowChat(!showChat)}>Chat</button><button aria-label={fullscreen ? 'Exit full screen' : 'Full screen'} title={fullscreen ? 'Exit full screen' : 'Full screen'} onClick={() => void toggleFullscreen()}>⛶</button></>}<button onClick={() => void share()}>{copied ? 'Copied' : 'Copy class link'}</button><span>{me?.name}</span></>}</div>
     </header>
     {error && <p className="live-error" role="alert">{error}</p>}
+    {joined && <JitsiClassCall key={id} roomId={id} />}
     {ended ? <section className="live-join"><h1>Class ended</h1><a href="#website-top">Back to Ka Piki</a></section> : !joined ? <form className="live-join" onSubmit={event => { event.preventDefault(); void act(id ? 'join' : 'create', { name }) }}>
       <h1>{id ? 'Join class' : 'Start a class'}</h1>
       <label>Your name<input autoComplete="given-name" maxLength={60} required value={name} onChange={event => setName(event.target.value)} /></label>
