@@ -37,7 +37,6 @@ export default function SignupAdmin() {
           ['/#moe/benefits/capability-reference', 'Capabilities', 'Your Capabilities'],
           ['/#moe/about', 'Story', 'Our Story'],
           ['/#moe/my-learning', 'Learning', 'My Learning'],
-          ['/#moe/lessons?level=1&lesson=1', 'Classroom', 'Classroom'],
         ].map(([href, label, name]) => <a key={href} href={href} aria-label={name} className="site-nav-item"><span className="site-nav-anchor">{label}</span></a>)}
       </nav>
     </header>

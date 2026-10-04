@@ -243,7 +243,6 @@ function WebsiteContent({
             ['#competency', 'Capabilities', 'Your'],
             ['#about', 'Story', 'Our'],
             ['#my-learning', 'Learning', 'My'],
-            ...(moeRoute ? [['#lessons?level=1&lesson=1', 'Classroom', '']] : []),
           ].map(([href, label, prefix]) => {
             const learnerCapabilities = intakeVersion === 2 && href === '#competency'
             const active = (learnerCapabilities ? route.benefit?.id === 'capability-reference' : surface === href) || (href === '#level-finder' && (route.overview || !!route.level || route.target === 'moe-timetable'))
