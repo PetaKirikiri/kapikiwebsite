@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { loadCallDisplayName } from '../lib/studentPortal/callIdentity'
 import './JitsiClassCall.css'
 
 type JitsiApi = { dispose: () => void; addListener: (event: string, callback: () => void) => void }
@@ -30,7 +31,7 @@ export function testCallId() {
   return id
 }
 
-export default function JitsiClassCall({ roomId }: { roomId?: string }) {
+export default function JitsiClassCall({ roomId, renderTrigger }: { roomId?: string; renderTrigger?: (open: () => void) => ReactNode }) {
   const [call, setCall] = useState<string | null>(null)
   const [status, setStatus] = useState('')
   const [error, setError] = useState('')
@@ -41,12 +42,17 @@ export default function JitsiClassCall({ roomId }: { roomId?: string }) {
     let cancelled = false
     let api: JitsiApi | undefined
     const timeout = window.setTimeout(() => { if (!cancelled) setError('Jitsi is taking too long. Close and retry, or open Jitsi directly.') }, 30000)
-    void loadJitsi().then(API => {
+    void Promise.all([loadJitsi(), loadCallDisplayName()]).then(([API, displayName]) => {
       if (cancelled || !host.current) return
       api = new API('meet.jit.si', {
         roomName: call, parentNode: host.current, width: '100%', height: '100%',
-        configOverwrite: { startWithAudioMuted: true, startWithVideoMuted: true, prejoinConfig: { enabled: true }, disableDeepLinking: true },
-        onload: () => { if (!cancelled) { clearTimeout(timeout); setStatus('Ready to join'); setError('') } },
+        userInfo: { displayName },
+        configOverwrite: {
+          startWithAudioMuted: false, startWithVideoMuted: false,
+          prejoinConfig: { enabled: false }, disableDeepLinking: true,
+          toolbarButtons: ['microphone', 'camera', 'desktop', 'tileview', 'settings', 'hangup'],
+        },
+        onload: () => { if (!cancelled) { clearTimeout(timeout); setStatus('Connecting…'); setError('') } },
       })
       api.addListener('videoConferenceJoined', () => { if (!cancelled) { setStatus('Connected'); setError('') } })
       api.addListener('readyToClose', () => { if (!cancelled) setCall(null) })
@@ -57,16 +63,20 @@ export default function JitsiClassCall({ roomId }: { roomId?: string }) {
   }, [call])
   function open() {
     setError(''); setCopied(false); setStatus('Connecting…')
-    setCall(`KaPikiTest-${roomId ? encodeURIComponent(roomId) : testCallId()}`)
+    try {
+      setCall(`KaPikiTest-${roomId ? encodeURIComponent(roomId) : testCallId()}`)
+    } catch (cause) {
+      setStatus('')
+      setError(cause instanceof Error ? `Could not open the call: ${cause.message}` : 'Could not open the call. Try again.')
+    }
   }
   async function copy() {
     try { await navigator.clipboard.writeText(window.location.href); setCopied(true) }
     catch { setError('Copy this page’s address to share the test call.') }
   }
-  return <section className="jitsi-class-call" aria-label="Class cameras and microphones">
-    <header><strong>Cameras &amp; mic <small>Jitsi test</small></strong><div>{call ? <><button onClick={() => void copy()}>{copied ? 'Copied' : 'Copy call link'}</button><button onClick={() => setCall(null)}>Close call</button></> : <button onClick={open}>Open cameras &amp; mic</button>}</div></header>
-    {!call && <p>Hosted by Jitsi. The host may need to sign in. Share the test link only with people you invite.</p>}
+  return <>{renderTrigger?.(open)}<section hidden={Boolean(renderTrigger && !call && !error)} className="jitsi-class-call" aria-label="Class cameras and microphones">
+    <header><strong>Cameras &amp; mic</strong><div>{call ? <><button onClick={() => void copy()}>{copied ? 'Copied' : 'Copy call link'}</button><button onClick={() => setCall(null)}>Close call</button></> : <button onClick={open}>Open cameras &amp; mic</button>}</div></header>
     {call && <><span className="jitsi-call-status" role="status">{status}</span><div ref={host} className="jitsi-call-frame" /><a href={`https://meet.jit.si/${call}#config.startWithAudioMuted=true&config.startWithVideoMuted=true`} target="_blank" rel="noopener noreferrer">Open in Jitsi ↗</a></>}
     {error && <p role="alert">{error}</p>}
-  </section>
+  </section></>
 }

@@ -18,3 +18,8 @@
 .lesson-call-presence{padding:4px 12px;justify-content:flex-start}
 .lesson-call-presence .lesson-camera-tile{height:auto;width:auto;min-width:50px;padding:4px 8px;border-radius:4px}
 .lesson-call-presence .is-empty{display:none}
+
+.jitsi-class-call[hidden]{display:none}
+.lesson-camera-strip button.lesson-camera-tile{cursor:pointer}
+.lesson-camera-strip button.lesson-camera-tile:hover{border-color:#527b64;background:#d5e4cf}
+.lesson-camera-strip button.lesson-camera-tile:focus-visible{outline:2px solid #527b64;outline-offset:2px}
