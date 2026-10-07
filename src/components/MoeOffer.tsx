@@ -1,3 +1,4 @@
+import ForestScene from './livingWorld/ForestScene'
 import { CoursePreviewExample } from './CourseSkillExample'
 import type { WebsitePreviewData } from './WebsiteView'
 import type { CurriculumLevel } from '../lib/sentenceStructureLevels'
@@ -32,6 +33,7 @@ export default function MoeOffer({ onRegister, content, courseData }: { courseDa
   return <main className="moe-offer" aria-labelledby="moe-heading">
     <header className="moe-intro site-card">
       <div className="moe-intro-cover site-card-cover">
+        <ForestScene />
         <div className="moe-audience">{content?.audience !== '' && <span>{content?.audience ?? 'For staff at'}</span>}<img className="moe-ministry-logo" src={ministryLogo} width={200} height={58} alt="Te Tāhuhu o te Mātauranga | Ministry of Education" /></div>
         <div className="moe-intro-main">
           <div className="moe-intro-copy">

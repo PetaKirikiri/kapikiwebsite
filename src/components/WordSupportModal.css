@@ -1,3 +1,5 @@
+@import "./ClayTokens.css";
+
 .word-support { box-sizing: border-box; width: min(760px, calc(100vw - 32px)); max-height: min(860px, calc(100dvh - 40px)); margin: auto; padding: 0; overflow: auto; border: 1px solid #dbe3df; border-radius: 18px; background: #fff; color: #243e3d; box-shadow: 0 24px 90px #092b3333; font: 16px/1.55 system-ui, sans-serif; }
 .word-support::backdrop { background: #142f3d66; backdrop-filter: blur(4px); }
 .word-support-header { position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 25px 32px 22px; background: #f7faf8; border-top: 6px solid var(--support-color); border-bottom: 1px solid #e3eae5; }
@@ -64,3 +66,29 @@ button.word-support-text { appearance: none; background: none; border: 0; paddin
 .word-support-unanalysed { font-size: 18px; line-height: 1.8; }
 .word-support-visual > small { display: block; margin-top: 8px; color: #7a8982; }
 .word-support-teaching[open] > p:first-of-type { margin-top: 14px; }
+
+/* The portalled word dialog uses the same clay material as the classroom. */
+.word-support{border:0;border-radius:32px;padding:12px;background:var(--soft-blue);color:var(--soft-ink);box-shadow:var(--soft-panel),12px 24px 60px #244a6230}
+.word-support::backdrop{background:#244a623d;backdrop-filter:blur(5px)}
+.word-support-header{margin:0;padding:24px;border:0;border-radius:24px;background:var(--soft-blue);box-shadow:var(--soft-raised);gap:18px}
+.word-support h2{font-family:Georgia,serif;color:var(--soft-ink)}
+.word-support-content{padding:10px 18px 20px}
+.word-support section{border-bottom:0;padding:20px 0 8px}
+.word-support h3,.word-support-role,.word-support-sense-label{color:#526f80}
+.word-support-close,.word-support-related button,.word-support-tabs button,.word-support-pronunciation button{border:0;border-radius:16px;background:var(--soft-cream);color:var(--soft-ink);box-shadow:var(--soft-small)}
+.word-support-close{flex-shrink:0;width:44px;height:44px;border-radius:16px}
+.word-support-tabs{gap:12px;margin:14px 0 20px}
+.word-support-tabs button{padding:9px 16px}
+.word-support .word-support-tabs button[aria-pressed=true]{background:var(--soft-accent);color:white;border:0;box-shadow:var(--soft-raised)}
+.word-support button:hover{filter:brightness(.98)}
+.word-support button:active{box-shadow:var(--soft-pressed)}
+.word-support button:focus-visible,.word-support-trigger:focus-visible{outline:3px solid var(--soft-accent,#197aa7);outline-offset:3px}
+.word-support-senses{padding:0;list-style:none;display:grid;gap:16px}
+.word-support-senses>li,.word-support-senses>li:last-child{background:var(--soft-cream);border:0;border-radius:20px;padding:18px 20px;margin:0;box-shadow:var(--soft-raised)}
+.word-support-sense-label{font-size:13px;margin-bottom:8px}
+.word-support-related{gap:14px;padding:6px 0}
+.word-support-related button{padding:12px 16px}
+.word-support-visual{border:0;border-radius:20px;background:var(--soft-cream);box-shadow:var(--soft-raised);--connector-cap-background:#fff}
+@media(max-width:540px){.word-support{padding:8px;border-radius:26px}.word-support-header{padding:18px;border-radius:20px}.word-support-content{padding:10px 10px 18px}.word-support-senses>li,.word-support-senses>li:last-child{padding:16px}}
+.lesson-workspace .word-support-text{display:inline;padding:0;margin:0;border:0;border-radius:3px;background:transparent;box-shadow:none;color:inherit;font:inherit;letter-spacing:inherit;cursor:help;text-align:inherit}
+.lesson-workspace .word-support-text:hover{background:#c9e3dc;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px}

@@ -20,7 +20,14 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "three": "^0.186.0",
-    "zod": "^3.24.0"
+    "zod": "^3.24.0",
+    "@tiptap/extension-collaboration": "^3.31.4",
+    "@tiptap/extension-table": "^3.31.4",
+    "@tiptap/pm": "^3.31.4",
+    "@tiptap/react": "^3.31.4",
+    "@tiptap/starter-kit": "^3.31.4",
+    "@tiptap/y-tiptap": "^3.0.9",
+    "yjs": "^13.6.33"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",

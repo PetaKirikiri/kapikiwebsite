@@ -1,0 +1,53 @@
+/* A short welcome slide. Detailed vocabulary and activities live in their stages. */
+.lesson-overview {container:lesson-overview / inline-size}
+.lesson-overview-body {
+ display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;
+ gap:clamp(28px,5cqi,64px);padding:28px 30px 24px;
+ color:var(--sky-ink,#294e66);
+}
+.lesson-overview-body h2 {
+ margin:0 0 14px;font:600 12px/1.4 'Avenir Next','Trebuchet MS',sans-serif;
+ color:var(--sky-muted,#546c7b);
+}
+.lesson-preview-path {display:grid;gap:4px;list-style:none;margin:0;padding:0}
+.lesson-preview-path li {margin:0;padding:0}
+.lesson-preview-path button {
+ display:flex;align-items:center;gap:14px;min-height:52px;width:100%;padding:5px 8px;
+ border:0;border-radius:12px;background:transparent;box-shadow:none;text-align:left;
+ color:inherit;font:600 clamp(17px,2.3cqi,21px)/1.3 'Avenir Next','Trebuchet MS',sans-serif;
+ cursor:pointer;transition:background .18s;
+}
+.lesson-preview-symbol {display:grid;place-items:center;flex:0 0 38px;width:38px;height:40px}
+.lesson-preview-symbol .lesson-emblem {width:36px;height:36px;overflow:visible}
+.lesson-preview-path button:hover {background:color-mix(in srgb,var(--stage-accent) 7%,transparent)}
+.lesson-preview-path button:focus-visible {outline:2px solid var(--stage-accent);outline-offset:3px}
+.lesson-takeaway {min-width:0;padding:4px 0 4px 30px;border-left:2px solid #abc99770}
+.lesson-takeaway p {
+ max-width:17ch;margin:0;font:500 clamp(22px,3cqi,30px)/1.35 'Avenir Next','Trebuchet MS',sans-serif;
+ text-wrap:balance;letter-spacing:-.02em;
+}
+.lesson-takeaway strong {color:#477347;font-weight:600}
+.lesson-overview-footer {
+ display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 30px;padding:16px 0 12px;
+ border-top:1px solid #54766915;color:var(--sky-muted,#546c7b);font:400 12px/1.5 'Avenir Next','Trebuchet MS',sans-serif;
+}
+.lesson-overview-footer p {margin:0}
+.lesson-overview-footer button {flex-shrink:0;border:0;border-radius:6px;padding:5px 0;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.lesson-overview-footer button:hover {color:var(--sky-ink,#294e66);text-decoration:underline;text-underline-offset:4px}
+.lesson-overview-footer button:focus-visible {outline:2px solid #477347;outline-offset:4px}
+@media(max-height:700px) and (min-width:651px) {
+ .lesson-overview-body {padding-block:16px 18px}
+ .lesson-overview-body h2 {margin-bottom:8px}
+ .lesson-preview-path button {min-height:44px}
+ .lesson-overview-footer {padding-block:10px 8px}
+}
+@container lesson-overview (max-width:600px) {
+ .lesson-overview-body {gap:22px;padding:22px 18px;grid-template-columns:1fr}
+ .lesson-preview-path {gap:0}
+ .lesson-preview-path button {min-height:46px}
+ .lesson-takeaway {padding-left:16px}
+ .lesson-takeaway h2 {margin-bottom:8px}
+ .lesson-takeaway p {max-width:24ch;font-size:23px}
+ .lesson-overview-footer {margin-inline:18px;flex-wrap:wrap;gap:4px;padding-top:12px}
+}
+@media(prefers-reduced-motion:reduce) {.lesson-preview-path button {transition:none}}

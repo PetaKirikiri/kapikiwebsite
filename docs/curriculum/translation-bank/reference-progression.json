@@ -1,0 +1,656 @@
+{
+  "scope": "Core personal pronouns; articles, demonstrative, indefinite, interrogative and possessive determiners. Not every dialectal or literary variant.",
+  "targetLevel": 4,
+  "groups": [
+    {
+      "level": 1,
+      "lesson": 2,
+      "title": "Pepeha language",
+      "forms": [
+        "tōku"
+      ],
+      "pairs": []
+    },
+    {
+      "level": 1,
+      "lesson": 3,
+      "title": "Pepeha language",
+      "forms": [
+        "au",
+        "ahau",
+        "koe",
+        "ia",
+        "tōu",
+        "tōna"
+      ],
+      "pairs": []
+    },
+    {
+      "level": 1,
+      "lesson": 4,
+      "title": "Pepeha language",
+      "forms": [
+        "ngā"
+      ],
+      "pairs": []
+    },
+    {
+      "level": 1,
+      "lesson": 5,
+      "title": "Pepeha language",
+      "forms": [
+        "te"
+      ],
+      "pairs": []
+    },
+    {
+      "level": 1,
+      "lesson": 7,
+      "title": "Pepeha language",
+      "forms": [
+        "tāku",
+        "tāu",
+        "tāna"
+      ],
+      "pairs": []
+    },
+    {
+      "level": 1,
+      "lesson": 8,
+      "title": "Pepeha language",
+      "forms": [
+        "he",
+        "āku"
+      ],
+      "pairs": []
+    },
+    {
+      "level": 2,
+      "lesson": 2,
+      "title": "This and these",
+      "forms": [
+        "tēnei",
+        "ēnei"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te kura tēnei whare.",
+          "en": "This house is at the school."
+        },
+        {
+          "mi": "Kei te kura ēnei whare.",
+          "en": "These houses are at the school."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 2,
+      "title": "Determiners",
+      "forms": [
+        "tēnā",
+        "ēnā"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te kura tēnā kurī.",
+          "en": "That dog near you is at the school."
+        },
+        {
+          "mi": "Kei te kura ēnā kurī.",
+          "en": "Those dogs near you are at the school."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 3,
+      "title": "Personal pronouns",
+      "forms": [
+        "tāua",
+        "māua"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te kura tāua.",
+          "en": "You and I are at the school."
+        },
+        {
+          "mi": "Kei te kura māua.",
+          "en": "We two (not you) are at the school."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 5,
+      "title": "Determiners",
+      "forms": [
+        "tērā",
+        "ērā"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te kura tērā kurī.",
+          "en": "That dog over there is at the school."
+        },
+        {
+          "mi": "Kei te kura ērā kurī.",
+          "en": "Those dogs over there are at the school."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 6,
+      "title": "Personal pronouns",
+      "forms": [
+        "kōrua",
+        "rāua"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te kura kōrua.",
+          "en": "You two are at the school."
+        },
+        {
+          "mi": "Kei te kura rāua.",
+          "en": "Those two are at the school."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 7,
+      "title": "Neutral your",
+      "forms": [
+        "tō",
+        "ō"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te kura tō kurī.",
+          "en": "Your dog is at the school."
+        },
+        {
+          "mi": "Kei te kura ō kurī.",
+          "en": "Your dogs are at the school."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 8,
+      "title": "Personal pronouns",
+      "forms": [
+        "tātou",
+        "mātou"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te kura tātou.",
+          "en": "We (three or more, including you) are at the school."
+        },
+        {
+          "mi": "Kei te kura mātou.",
+          "en": "We (three or more, not you) are at the school."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 9,
+      "title": "Personal pronouns",
+      "forms": [
+        "koutou",
+        "rātou"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te kura koutou.",
+          "en": "You (three or more) are at the school."
+        },
+        {
+          "mi": "Kei te kura rātou.",
+          "en": "They (three or more) are at the school."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 10,
+      "title": "Determiners",
+      "forms": [
+        "tētahi",
+        "ētahi"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te kura tētahi kurī.",
+          "en": "A particular dog is at the school."
+        },
+        {
+          "mi": "Kei te kura ētahi kurī.",
+          "en": "Some dogs are at the school."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 10,
+      "title": "What",
+      "forms": [
+        "aha"
+      ],
+      "pairs": [
+        {
+          "mi": "He aha tēnei?",
+          "en": "What is this?"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "lesson": 1,
+      "title": "A/O possessive determiners",
+      "forms": [
+        "tāku",
+        "tōku"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tāku kurī.",
+          "en": "My dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tōku whare.",
+          "en": "My house is at the marae."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "lesson": 2,
+      "title": "A/O possessive determiners",
+      "forms": [
+        "tāu",
+        "tōu"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tāu kurī.",
+          "en": "Your dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tōu whare.",
+          "en": "Your house is at the marae."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "lesson": 3,
+      "title": "A/O possessive determiners",
+      "forms": [
+        "tāna",
+        "tōna"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tāna kurī.",
+          "en": "Her dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tōna whare.",
+          "en": "Her house is at the marae."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "lesson": 5,
+      "title": "A/O possessive determiners",
+      "forms": [
+        "āku",
+        "ōku"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae āku kurī.",
+          "en": "My dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ōku whare.",
+          "en": "My houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "lesson": 6,
+      "title": "A/O possessive determiners",
+      "forms": [
+        "āu",
+        "ōu"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae āu kurī.",
+          "en": "Your dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ōu whare.",
+          "en": "Your houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "lesson": 7,
+      "title": "A/O possessive determiners",
+      "forms": [
+        "āna",
+        "ōna"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae āna kurī.",
+          "en": "Her dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ōna whare.",
+          "en": "Her houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "lesson": 8,
+      "title": "Which one and which ones",
+      "forms": [
+        "tēhea",
+        "ēhea"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te kura tēhea kurī?",
+          "en": "Which dog is at the school?"
+        },
+        {
+          "mi": "Kei te kura ēhea kurī?",
+          "en": "Which dogs are at the school?"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 1,
+      "title": "Shared possession",
+      "forms": [
+        "tā tāua",
+        "tō tāua",
+        "ā tāua",
+        "ō tāua"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā tāua kurī.",
+          "en": "Our (you and me) dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tō tāua whare.",
+          "en": "Our (you and me) house is at the marae."
+        },
+        {
+          "mi": "Kei te marae ā tāua kurī.",
+          "en": "Our (you and me) dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ō tāua whare.",
+          "en": "Our (you and me) houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 2,
+      "title": "Shared possession",
+      "forms": [
+        "tā māua",
+        "tō māua",
+        "ā māua",
+        "ō māua"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā māua kurī.",
+          "en": "Our (two people, not you) dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tō māua whare.",
+          "en": "Our (two people, not you) house is at the marae."
+        },
+        {
+          "mi": "Kei te marae ā māua kurī.",
+          "en": "Our (two people, not you) dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ō māua whare.",
+          "en": "Our (two people, not you) houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 3,
+      "title": "Shared possession",
+      "forms": [
+        "tā kōrua",
+        "tō kōrua",
+        "ā kōrua",
+        "ō kōrua"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā kōrua kurī.",
+          "en": "Your (two people) dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tō kōrua whare.",
+          "en": "Your (two people) house is at the marae."
+        },
+        {
+          "mi": "Kei te marae ā kōrua kurī.",
+          "en": "Your (two people) dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ō kōrua whare.",
+          "en": "Your (two people) houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 4,
+      "title": "Shared possession",
+      "forms": [
+        "tā rāua",
+        "tō rāua",
+        "ā rāua",
+        "ō rāua"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā rāua kurī.",
+          "en": "Their (two people) dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tō rāua whare.",
+          "en": "Their (two people) house is at the marae."
+        },
+        {
+          "mi": "Kei te marae ā rāua kurī.",
+          "en": "Their (two people) dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ō rāua whare.",
+          "en": "Their (two people) houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 5,
+      "title": "Shared possession",
+      "forms": [
+        "tā tātou",
+        "tō tātou",
+        "ā tātou",
+        "ō tātou"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā tātou kurī.",
+          "en": "Our (three or more, including you) dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tō tātou whare.",
+          "en": "Our (three or more, including you) house is at the marae."
+        },
+        {
+          "mi": "Kei te marae ā tātou kurī.",
+          "en": "Our (three or more, including you) dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ō tātou whare.",
+          "en": "Our (three or more, including you) houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 6,
+      "title": "Shared possession",
+      "forms": [
+        "tā mātou",
+        "tō mātou",
+        "ā mātou",
+        "ō mātou"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā mātou kurī.",
+          "en": "Our (three or more, not you) dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tō mātou whare.",
+          "en": "Our (three or more, not you) house is at the marae."
+        },
+        {
+          "mi": "Kei te marae ā mātou kurī.",
+          "en": "Our (three or more, not you) dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ō mātou whare.",
+          "en": "Our (three or more, not you) houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 7,
+      "title": "Shared possession",
+      "forms": [
+        "tā koutou",
+        "tō koutou",
+        "ā koutou",
+        "ō koutou"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā koutou kurī.",
+          "en": "Your (three or more) dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tō koutou whare.",
+          "en": "Your (three or more) house is at the marae."
+        },
+        {
+          "mi": "Kei te marae ā koutou kurī.",
+          "en": "Your (three or more) dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ō koutou whare.",
+          "en": "Your (three or more) houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 8,
+      "title": "Shared possession",
+      "forms": [
+        "tā rātou",
+        "tō rātou",
+        "ā rātou",
+        "ō rātou"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā rātou kurī.",
+          "en": "Their (three or more) dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tō rātou whare.",
+          "en": "Their (three or more) house is at the marae."
+        },
+        {
+          "mi": "Kei te marae ā rātou kurī.",
+          "en": "Their (three or more) dogs are at the marae."
+        },
+        {
+          "mi": "Kei te marae ō rātou whare.",
+          "en": "Their (three or more) houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 4,
+      "title": "Neutral possessives",
+      "forms": [
+        "taku",
+        "aku",
+        "tana",
+        "ana"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae taku whare.",
+          "en": "My house is at the marae."
+        },
+        {
+          "mi": "Kei te marae aku whare.",
+          "en": "My houses are at the marae."
+        },
+        {
+          "mi": "Kei te marae tana whare.",
+          "en": "Her house is at the marae."
+        },
+        {
+          "mi": "Kei te marae ana whare.",
+          "en": "Her houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "lesson": 10,
+      "title": "Who",
+      "forms": [
+        "wai"
+      ],
+      "pairs": []
+    }
+  ]
+}

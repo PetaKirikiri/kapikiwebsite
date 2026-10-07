@@ -149,8 +149,10 @@ export function connectedDistances(alpha: Uint8ClampedArray, width: number, heig
  * field. The artwork is never split or redrawn. Earliest coverage wins where
  * the saved spiral overlaps itself. Pixel-centre tests avoid blended ID dust.
  */
-function rememberTrack(path: string, offset: number, face: number, width: number,
-  gates: Float64Array) {
+export function rememberTrack(path: string, offset: number, face: number, width: number,
+  gates: Float64Array, arrivals?: Float64Array) {
+  const route = new Float64Array(gates.length).fill(Infinity)
+  const lateralArrival = new Float64Array(gates.length)
   const points = [...path.split('Z')[0].matchAll(/[ML]\s*([+-]?[\d.]+)\s+([+-]?[\d.]+)/g)]
     .map(m => [offset + Number(m[1]) * face / 96, Number(m[2]) * face / 96] as const)
   const n = points.length / 2
@@ -161,8 +163,8 @@ function rememberTrack(path: string, offset: number, face: number, width: number
   const triangle = (a: Point, b: Point, c: Point, arrival: number,
     stemStart: Point, stemEnd: Point) => {
     if (Math.abs(cross(a,b,c[0],c[1])) < 1e-8) return
-    const minX = Math.max(offset, Math.floor(Math.min(a[0],b[0],c[0])))
-    const maxX = Math.min(offset+face-1, Math.ceil(Math.max(a[0],b[0],c[0])))
+    const minX = Math.max(0, Math.ceil(offset - .5), Math.floor(Math.min(a[0],b[0],c[0])))
+    const maxX = Math.min(width-1, Math.ceil(offset+face-.5)-1, Math.ceil(Math.max(a[0],b[0],c[0])))
     const minY = Math.max(0, Math.floor(Math.min(a[1],b[1],c[1])))
     const maxY = Math.min(face-1, Math.ceil(Math.max(a[1],b[1],c[1])))
     for(let y=minY;y<=maxY;y++) for(let x=minX;x<=maxX;x++) {
@@ -177,7 +179,10 @@ function rememberTrack(path: string, offset: number, face: number, width: number
         const t=lengthSquared ? Math.max(0,Math.min(1,
           ((x+.5-stemStart[0])*dx+(y+.5-stemStart[1])*dy)/lengthSquared)) : 0
         const lateral=Math.hypot(x+.5-stemStart[0]-t*dx,y+.5-stemStart[1]-t*dy)
-        gates[index]=Math.min(gates[index],arrival+lateral*2)
+        if (arrival < route[index]) {
+          route[index] = arrival
+          lateralArrival[index] = lateral*2
+        }
       }
     }
   }
@@ -192,6 +197,21 @@ function rememberTrack(path: string, offset: number, face: number, width: number
     const stemEnd: Point=[(c[0]+d[0])/2,(c[1]+d[1])/2]
     triangle(a,b,c,travel*3,stemStart,stemEnd)
     triangle(b,d,c,travel*3,stemStart,stemEnd)
+  }
+  // A receiving curl is entered at its tip; an outgoing curl is entered only
+  // after growth crosses the body. Anchor the saved route to that actual first
+  // arrival, not to the beginning of the word's clock.
+  let entry = -1
+  if (arrivals) for (let i=0;i<route.length;i++) {
+    if (Number.isFinite(route[i]) && Number.isFinite(arrivals[i])
+      && (entry < 0 || arrivals[i] < arrivals[entry])) entry = i
+  }
+  for (let i=0;i<route.length;i++) {
+    if (!Number.isFinite(route[i])) continue
+    const arrival = entry < 0 ? route[i] + lateralArrival[i]
+      : arrivals![entry] + Math.abs(route[i]-route[entry])
+        + Math.max(0,lateralArrival[i]-lateralArrival[entry])
+    gates[i] = Math.min(gates[i],arrival)
   }
 }
 

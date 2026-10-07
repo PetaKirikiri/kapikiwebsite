@@ -4,7 +4,7 @@ const possessionSource = 'https://kupu.maori.nz/possession/t-possession'
 export const PRONOUN_PROGRESSION = [
   { level: 1, words: ['au', 'ahau', 'koe', 'ia'] },
   { level: 2, words: ['māua', 'tāua', 'kōrua', 'rāua'] },
-  { level: 3, words: ['mātou', 'tātou', 'koutou', 'rātou'] },
+  { level: 2, words: ['mātou', 'tātou', 'koutou', 'rātou'] },
 ] as const
 
 export const PRONOUN_EXAMPLES: Record<string, readonly [string, string]> = {

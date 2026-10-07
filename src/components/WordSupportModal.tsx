@@ -26,6 +26,7 @@ function Pronunciation({ url, word }: { url: string; word: string }) {
 
 export default function WordSupportModal({ target, onClose, onNavigate }: { target: WordSupportTarget; onClose: () => void; onNavigate: (target: WordSupportTarget) => void }) {
   const dialog = useRef<HTMLDialogElement>(null)
+  const openedAt = useRef(performance.now())
   const [data, setData] = useState<WordSupportData | null>(null)
   const [error, setError] = useState('')
   const [retry, setRetry] = useState(0)
@@ -37,8 +38,14 @@ export default function WordSupportModal({ target, onClose, onNavigate }: { targ
   }, [])
   useEffect(() => {
     const controller = new AbortController()
-    void loadWordSupport(target, controller.signal).then(setData).catch(e => { if (!controller.signal.aborted) setError(e.message) })
-    return () => controller.abort()
+    setData(null)
+    setError('')
+    const timeout = setTimeout(() => {
+      controller.abort()
+      setError('Word help is taking too long. Try again.')
+    }, 15000)
+    void loadWordSupport(target, controller.signal).then(setData).catch(e => { if (!controller.signal.aborted) setError(e.message) }).finally(() => clearTimeout(timeout))
+    return () => { clearTimeout(timeout); controller.abort() }
   }, [target, retry])
   const context = data?.examples.find(example => example.mi === target.sentence)
   const examples = data?.examples.filter(example => example.mi !== target.sentence) ?? []
@@ -48,7 +55,7 @@ export default function WordSupportModal({ target, onClose, onNavigate }: { targ
   const senses = data?.teAka.senses.filter(sense => senseFilter == null || sense.labelCode === senseFilter) ?? []
   const otherTypes = [...new Map(data?.types.filter(type => type.code !== target.posCode).map(type => [type.code, type]) ?? []).values()]
   return createPortal(<dialog ref={dialog} className="word-support" aria-labelledby="word-support-title" style={{ '--support-color': target.color ?? '#295f5c' } as CSSProperties}
-    onCancel={onClose} onClose={onClose} onClick={event => { event.stopPropagation(); if (event.target === event.currentTarget) { const r = event.currentTarget.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) onClose() } }}
+    onCancel={onClose} onClose={onClose} onClick={event => { event.stopPropagation(); if (event.target === event.currentTarget && performance.now() - openedAt.current > 750) { const r = event.currentTarget.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) onClose() } }}
     onKeyDown={event => event.stopPropagation()} onPointerDown={event => event.stopPropagation()} onPointerUp={event => event.stopPropagation()}>
     <header className="word-support-header"><div><h2 id="word-support-title" lang="mi">{target.word}</h2>
       {data?.role && <span className="word-support-role">{data.role.label}{data.role.family && data.role.family.toLowerCase() !== data.role.label.toLowerCase() ? ` · ${data.role.family.toLowerCase()}` : ''}</span>}

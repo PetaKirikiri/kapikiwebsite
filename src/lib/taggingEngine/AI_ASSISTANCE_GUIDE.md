@@ -138,6 +138,28 @@ match; it contributes no score and is never stored as learned knowledge.
 
 ### New and experienced words
 
+`readWordReference` in `server/busManifestTeam/wordReferenceReader.ts` is the
+read-only reference projection for a normalized word. It points to the existing
+lexeme, alias, Te Aka entry, sense, example, approved POS mapping, source category,
+and learned-word owners using their exact table keys. It returns source content
+alongside those addresses without persisting another word record or teaching.
+The local `/__word_reference` POST door and `scripts/read-word-reference.ts`
+use that same reader. Dictionary senses retain their own examples and mappings;
+word-wide source categories are explicitly separate from sense-specific facts.
+An absent local dictionary entry does not establish absence from Te Aka online.
+Its content fingerprint detects changes to the read projection, not confidence,
+confirmation, or a saved learning revision. Floor provenance remains addresses
+only: this lookup never reads Floor answers or creates an inference pathway.
+`readWordReferences` provides the same projection for all distinct passage words
+in one frozen read transaction. Audio, aliases, synonyms and passive forms retain
+their source addresses. Prior `lexeme_pos_capability` associations are exposed
+only as `legacy_unreviewed` references with `eligibleForAutomaticTagging: false`;
+they never enter the dictionary possibilities or confirmed Guest conditions.
+Staging copies are pointers only, not an alternative learned-word owner.
+The agent can inspect Passage 1 through
+`node --import tsx scripts/read-word-reference.ts --passage-one`; this reads the
+reader's source text, not its draft tags, and writes no knowledge.
+
 A word with no confirmed Guest Record knowledge receives source evidence only
 from Te Aka. Te Aka labels may map to several possible Ours rooms. Those are
 possibilities, never confirmed capabilities.
@@ -159,11 +181,18 @@ An experienced word receives all confirmed knowledge from its Guest Record.
 Te Aka remains visible source evidence and may supply a reading not yet
 confirmed by our system, but it never masquerades as confirmed Ours knowledge.
 
+User-facing names are `Broad POS` (formerly `Family`) and `Specific POS`
+(formerly `Ours`). Both are our grammatical classifications at different
+levels of detail and can apply to the same word. Existing physical keys such
+as `family` and `ours` retain their names; technical references below use those
+legacy terms. `Te Aka` remains external evidence, and `Categories` remain
+semantic information alongside POS for relationship matching.
+
 The four levels are distinct:
 
-1. `Family` is broad grammatical possibility.
+1. `Broad POS` is broad grammatical possibility.
 2. `Te Aka` is external source evidence.
-3. `Ours` is the detailed grammatical capability used by the engine, including
+3. `Specific POS` is the detailed grammatical capability used by the engine, including
    distinctions such as transitive and intransitive verb.
 4. `Categories` are zero-or-more semantic compatibility facts, never POS.
 
@@ -196,7 +225,7 @@ available for matching. The observed value must never be presented as the
 whole neighbour condition.
 
 Investigation and System Tag render an origin potential's seven base fields in
-this order: `Ours`, `Family`, `Te Aka`, `Categories`, `Dot`, `Left rail`,
+this order: `Specific POS`, `Broad POS`, `Te Aka`, `Categories`, `Dot`, `Left rail`,
 `Right rail`, with each exact physical key visible. A left or right condition
 must instead show all twelve of its physical fields separately: the observed
 Ours value, all four neighbour-potential arrays, both neighbour rail arrays,
@@ -463,6 +492,45 @@ knowledge owner exists.
 
 ## Connectors workspace and presentation engine
 
+All production hosts ask `requestRails` in `connectorPresentation/engine.ts`.
+Its explicit request kinds cover sentences, curriculum specimens, catalogue
+legends, navigation decoration, pattern-editor previews, material animation,
+and measured wrapping spans. Internal helpers remain implementation details;
+components may not import their interpretation functions. Decorative/specimen
+requests never create accepted word evidence. `presentSentence` is the shared
+implementation beneath that boundary. New text uses the read-only sentence
+service; the whiteboard must not perform its own POS/capability lookup. Its
+exercise target is separate from the engine's returned analysis. Build checks
+scan all UI source imports and discover engine consumers automatically.
+
+### Germination API contract
+
+Production germination has one public entrypoint:
+`requestRails({ kind: 'germination', sentence })`. The input is the engine's
+sentence plan (`words` and connected `groups`). It returns section canvas sizes
+and `frame(elapsedMs, reducedMotion, empty)` with painted images, word reveal
+fractions, and completion. A standalone whiteboard piece supplies one group.
+
+Germination starts at the bottom corner of a section’s first material. Each
+material follows the longitudinal order of its saved ribbon edges; retained
+path walls alone are insufficient because broad curls can fill across their
+width prematurely. Ribbon arrival is engine-owned traversal metadata and never
+alters the saved visible silhouette. Each material must
+finish before its receiver starts at the deepest reachable mating tip. Preserve
+material boundaries during playback; merging their alpha masks lets growth
+cut across the join. Text wipe follows paint arrival. Traversal speed belongs
+to the engine. A disconnected next section starts at its own bottom corner. It never means simultaneous independent word
+fills, a generic radial fill, an opacity fade, or a replacement timed text wipe.
+
+The engine owns origins, tracks, timing, section order, reveal, and reduced
+motion. Hosts only measure text, provide elapsed time, paint returned images,
+and apply returned reveal fractions. They must not import growth helpers or
+construct a second animation sequence. Missing geometry must fail visibly;
+there is no generic-growth fallback. Raster material composition is static and
+private. The retired `material`, `animation`, and `section-playback` request
+names must not be reintroduced as parallel production animation routes.
+The runtime boundary build check rejects direct growth-helper imports.
+
 `connectorPresentation/engine.ts` exposes the framework-independent
 `presentSentence` contract: text, optional accepted state, catalog families,
 approved shape library, shared rules and measured text widths produce the same
@@ -586,12 +654,20 @@ target, victim, agent and doer markers, light lavender-purple for accepted
 negatives and their postposed predicate particle, cool cornflower blue for other
 grammatical relation markers, muted rose for nominal markers and nominal predicates,
 deep forest green for determiners and light green for ordinary common nouns.
-Accepted Location Markers use the same muted rose as the nominal leads; a following
-ordinary determiner/noun phrase keeps its normal forest/light-green materials.
-Proper names use the same soft pink as nominally attached common nouns. A common noun immediately attached to a Nominal
-Marker or Nominal Predicate uses a distinct soft-blush nominal-noun material
-instead of any green or purple noun material. This makes the complete nominal
-construction belong to the rose family. The comparison particle `ake` uses the
+Presentation exposes a higher-level noun slot with pronoun, proper-name, and
+noun-phrase forms. It groups accepted components using saved connector boundaries;
+unresolved or incomplete groups remain unresolved. This transient presentation
+hierarchy is not learned knowledge and never changes POS, Floor, or Guest Records.
+An attached noun slot inherits its non-verbal section's rose palette, including
+its determiners and modifiers. Component shapes retain their saved identities;
+marker/body/modifier tones distinguish their construction within that palette.
+A closed section does not recolour the next noun slot. Verbal sections use blue
+marker/body tones, including accepted stative verbs in that section.
+Specimen alternatives are projected in the destination marker context using the
+same engine, never recoloured in a component or copied from a source subject slot.
+The engine returns noun slots and sections alongside its word plans. The shared
+section palette is swappable independently of the saved connector artwork.
+The comparison particle `ake` uses the
 same dark muted rose as its nominal comparison lead, even though its accepted
 POS remains unchanged. Purple
 is reserved exclusively for accepted negatives and their associated postposed
@@ -639,6 +715,10 @@ change the outgoing cell anchor.
 The incoming face shares the preceding outgoing anchor rather than painting a duplicate.
 These invariants apply in review and continuous reading. A wrapped row
 repeats the same assembled incoming join at its start, never a different drawing.
+The engine also exposes contiguous word groups from its existing `joinsNext`
+layout. Read-only sentences prefer wrapping between these groups; a group wider
+than its container may still wrap internally, using the same continuation faces.
+Grouping never changes saved rails, connector endings, tokens, or POS.
 Browser adapters remeasure on container resize and font loading; they must not
 add page-specific word margins, connector padding, or rewrite sentence tokens.
 Sentence Structures groups accepted passages by whether any accepted token
@@ -1099,6 +1179,12 @@ that same coloured block: `kei` for a `Kei runga` block and `te` for a
 `te manu` block. Neither value describes a left or right neighbouring block. The
 only left/right coloured paths are that shape's `leftRail` and `rightRail`;
 fields such as `leftBlock`, `rightBlock`, or `neighbourBlock` are forbidden.
+The literal starting-word `blockType` remains diagnostic provenance, not an
+equality constraint during relationship matching. Equivalent grammatical
+blocks may begin with different words (for example, `tō` and `tōku`). The
+engine still compares POS, Family, Te Aka labels, Categories, dots, rails,
+connector topology, and block colour; it must not add a word-specific override.
+
 `leftConnectorEnd` and `rightConnectorEnd` are the exact abstract topology at
 those two sides. `leftConnectorFamily` and `rightConnectorFamily` identify the
 exact accepted POS Family whose connector design owns that side. They are not

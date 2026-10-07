@@ -1,0 +1,6020 @@
+{
+  "title": "1000 frequent words of Māori",
+  "url": "https://kauwhatareo-live-storagestac-assetstorages3bucket-1w7r7v9dv6o7k.s3.ap-southeast-2.amazonaws.com/public/Uploads/files/PDFs/985a047ae4/1000-frequent-words-of-Maori-in-alphabetical-order.pdf",
+  "corpus": "Māori Texts for Children",
+  "note": "Asterisk denotes the source's top 360 band. No numeric ranks supplied. Exact normalized headword matching only; frequency does not apply to every sense.",
+  "entries": {
+    "a": {
+      "starred": true,
+      "pages": [
+        1
+      ]
+    },
+    "ā": {
+      "starred": true,
+      "pages": [
+        1
+      ]
+    },
+    "āe": {
+      "starred": true,
+      "pages": [
+        1
+      ]
+    },
+    "aha": {
+      "starred": true,
+      "pages": [
+        1
+      ]
+    },
+    "ahakoa": {
+      "starred": true,
+      "pages": [
+        1
+      ]
+    },
+    "ahatia": {
+      "starred": false,
+      "pages": [
+        1
+      ]
+    },
+    "ahau": {
+      "starred": true,
+      "pages": [
+        1
+      ]
+    },
+    "āhei": {
+      "starred": false,
+      "pages": [
+        1
+      ]
+    },
+    "ahi": {
+      "starred": true,
+      "pages": [
+        1
+      ]
+    },
+    "ahiahi": {
+      "starred": false,
+      "pages": [
+        1
+      ]
+    },
+    "aho": {
+      "starred": false,
+      "pages": [
+        1
+      ]
+    },
+    "ahu": {
+      "starred": false,
+      "pages": [
+        1
+      ]
+    },
+    "āhua": {
+      "starred": true,
+      "pages": [
+        1
+      ]
+    },
+    "āhuatanga": {
+      "starred": true,
+      "pages": [
+        1
+      ]
+    },
+    "ai": {
+      "starred": true,
+      "pages": [
+        1
+      ]
+    },
+    "aihikirīmi": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "aituā": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "ākau": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "ake": {
+      "starred": true,
+      "pages": [
+        2
+      ]
+    },
+    "ako": {
+      "starred": true,
+      "pages": [
+        2
+      ]
+    },
+    "ākonga": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "akoranga": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "aku": {
+      "starred": true,
+      "pages": [
+        2
+      ]
+    },
+    "āku": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "ākuanei": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "ana": {
+      "starred": true,
+      "pages": [
+        2
+      ]
+    },
+    "anā": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "āna": {
+      "starred": true,
+      "pages": [
+        2
+      ]
+    },
+    "anake": {
+      "starred": true,
+      "pages": [
+        2
+      ]
+    },
+    "anei": {
+      "starred": true,
+      "pages": [
+        2
+      ]
+    },
+    "anga": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "anō": {
+      "starred": true,
+      "pages": [
+        2
+      ]
+    },
+    "ao": {
+      "starred": true,
+      "pages": [
+        2
+      ]
+    },
+    "aorangi": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "āpōpō": {
+      "starred": false,
+      "pages": [
+        2
+      ]
+    },
+    "āporo": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "ara": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "arā": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "ārahi": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "ārai": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "ariki": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "aro": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "aroha": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "ata": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "āta": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "ātaahua": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "atawhai": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "ātea": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "atu": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "atua": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "au": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "āu": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "aua": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "auahi": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "auau": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "auē": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "awa": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "āwangawanga": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "awatea": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "awhi": {
+      "starred": false,
+      "pages": [
+        3
+      ]
+    },
+    "āwhina": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "e": {
+      "starred": true,
+      "pages": [
+        3
+      ]
+    },
+    "ehara": {
+      "starred": true,
+      "pages": [
+        4
+      ]
+    },
+    "eke": {
+      "starred": true,
+      "pages": [
+        4
+      ]
+    },
+    "ēnā": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "ēnei": {
+      "starred": true,
+      "pages": [
+        4
+      ]
+    },
+    "engari": {
+      "starred": true,
+      "pages": [
+        4
+      ]
+    },
+    "ērā": {
+      "starred": true,
+      "pages": [
+        4
+      ]
+    },
+    "ētahi": {
+      "starred": true,
+      "pages": [
+        4
+      ]
+    },
+    "ētehi": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "ha": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "hā": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "haere": {
+      "starred": true,
+      "pages": [
+        4
+      ]
+    },
+    "hāereere": {
+      "starred": true,
+      "pages": [
+        4
+      ]
+    },
+    "haerenga": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "hai": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "haina": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "haka": {
+      "starred": true,
+      "pages": [
+        4
+      ]
+    },
+    "hākari": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "haki": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "hākinakina": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "hāmama": {
+      "starred": false,
+      "pages": [
+        4
+      ]
+    },
+    "hanga": {
+      "starred": true,
+      "pages": [
+        5
+      ]
+    },
+    "hāngai": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hangaia": {
+      "starred": true,
+      "pages": [
+        5
+      ]
+    },
+    "hangarau": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hāngi": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hao": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hāora": {
+      "starred": true,
+      "pages": [
+        5
+      ]
+    },
+    "hāparangi": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hapū": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hara": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "harakeke": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "haramai (haere mai)": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hararei": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hari": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "haria": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "harikoa": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "haruru": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hau": {
+      "starred": true,
+      "pages": [
+        5
+      ]
+    },
+    "haunga": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hāunga": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hauora": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "haurua": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hāwhe": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "he": {
+      "starred": true,
+      "pages": [
+        5
+      ]
+    },
+    "hē": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "hea": {
+      "starred": true,
+      "pages": [
+        5
+      ]
+    },
+    "hei": {
+      "starred": true,
+      "pages": [
+        5
+      ]
+    },
+    "heihei": {
+      "starred": false,
+      "pages": [
+        5
+      ]
+    },
+    "heke": {
+      "starred": true,
+      "pages": [
+        6
+      ]
+    },
+    "hekenga": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hēki": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hemo": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hēoi": {
+      "starred": true,
+      "pages": [
+        6
+      ]
+    },
+    "here": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "herea": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hī": {
+      "starred": true,
+      "pages": [
+        6
+      ]
+    },
+    "hia": {
+      "starred": true,
+      "pages": [
+        6
+      ]
+    },
+    "hiahia": {
+      "starred": true,
+      "pages": [
+        6
+      ]
+    },
+    "hika": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hiki": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hiko": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hīkoi": {
+      "starred": true,
+      "pages": [
+        6
+      ]
+    },
+    "hine": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hinengaro": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hinga": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hinu": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hipi": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hoa": {
+      "starred": true,
+      "pages": [
+        6
+      ]
+    },
+    "hoariri": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hoatu": {
+      "starred": true,
+      "pages": [
+        6
+      ]
+    },
+    "hoe": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hōhā": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hōhonu": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hōia": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hōiho": {
+      "starred": false,
+      "pages": [
+        6
+      ]
+    },
+    "hoki": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "hokinga": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "hoko": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "hokohoko": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "hokona": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "hōmai": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "hono": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "hopu": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "horo": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "horoi": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "hou": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "hū": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "hua": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "huakina": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "huarahi": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "hui": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "huia": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "huka": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "huna": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "hunga": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "huri": {
+      "starred": true,
+      "pages": [
+        7
+      ]
+    },
+    "hurihuri": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "huritau": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "huruhuru": {
+      "starred": false,
+      "pages": [
+        7
+      ]
+    },
+    "i": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "i nāianei": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "ia": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "iho": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "ihu": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "ika": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "ina": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "inā": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "ine": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "ingoa": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "inu": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "ipu": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "ira": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "irirangi": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "iti": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "iwa": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "iwi": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "ka": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "kā": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "kaha": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "kāhore": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "kahu": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "kahurangi": {
+      "starred": false,
+      "pages": [
+        8
+      ]
+    },
+    "kai": {
+      "starred": true,
+      "pages": [
+        8
+      ]
+    },
+    "kaiako": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kaikōrero": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kaimahi": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kaimoana": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kainga": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kāinga": {
+      "starred": true,
+      "pages": [
+        9
+      ]
+    },
+    "kaipuke": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kaipūtaiao": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kaitā": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kaitākaro": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kaitiaki": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kaituhi": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kaiwhakahaere": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kākahu": {
+      "starred": true,
+      "pages": [
+        9
+      ]
+    },
+    "kākano": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kakara": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kākāriki": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kakau": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kake": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kakī": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kamo": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kānga": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kanikani": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kano": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kanohi": {
+      "starred": true,
+      "pages": [
+        9
+      ]
+    },
+    "kāo": {
+      "starred": false,
+      "pages": [
+        9
+      ]
+    },
+    "kāore": {
+      "starred": true,
+      "pages": [
+        10
+      ]
+    },
+    "kapa": {
+      "starred": true,
+      "pages": [
+        10
+      ]
+    },
+    "kāpata": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kāpene": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kapi": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kāpia": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kapu": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kapua": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kara": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "karāhe": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "karaka": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "karakia": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "karanga": {
+      "starred": true,
+      "pages": [
+        10
+      ]
+    },
+    "karani": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kararehe": {
+      "starred": true,
+      "pages": [
+        10
+      ]
+    },
+    "kare": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kāre": {
+      "starred": true,
+      "pages": [
+        10
+      ]
+    },
+    "karere": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kāreti": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kāri": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "karu": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kata": {
+      "starred": true,
+      "pages": [
+        10
+      ]
+    },
+    "kātahi": {
+      "starred": true,
+      "pages": [
+        10
+      ]
+    },
+    "katakata": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "kāti": {
+      "starred": false,
+      "pages": [
+        10
+      ]
+    },
+    "katoa": {
+      "starred": true,
+      "pages": [
+        10
+      ]
+    },
+    "kau": {
+      "starred": true,
+      "pages": [
+        10
+      ]
+    },
+    "kaua": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "kauaka": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kauhoe": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kaukau": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kaumātua": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kaupapa": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "kaute": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kauwhata": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kāwana": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kāwanatanga": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kawe": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "kawea": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kawenga": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kāwhe": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kē": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "kēhua": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kei": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "keke": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kekeno": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kēmu": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "kete": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "ki": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "kī": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "kia": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "kīhai": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kīia": {
+      "starred": true,
+      "pages": [
+        11
+      ]
+    },
+    "kiia": {
+      "starred": false,
+      "pages": [
+        11
+      ]
+    },
+    "kimi": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "kimihia": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kino": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "kiore": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kiri": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "kirikiri": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kiromita": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kite": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "kitea": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "kitenga": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kiwi": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "ko": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "kō": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "koa": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "koe": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "koha": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kōhanga": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "kōhatu": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kohi": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kohikohi": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kōhua": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "koi": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "koia": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "koina": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "koinei": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "kōiwi": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kōkā": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "kōkiri": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "konā": {
+      "starred": false,
+      "pages": [
+        12
+      ]
+    },
+    "konei": {
+      "starred": true,
+      "pages": [
+        12
+      ]
+    },
+    "kongakonga": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kōpae": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kore": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kōrere": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kōrero": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kōrerorero": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kōrerotia": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "koro": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "koroua": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kōrua": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kotahi": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kōtiro": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kōtuku": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "koutou": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kōwhai": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kua": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kuhu": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kui": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kuia": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kuini": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kukume": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kūmara": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kūpenga": {
+      "starred": false,
+      "pages": [
+        13
+      ]
+    },
+    "kupu": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kura": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "kurī": {
+      "starred": true,
+      "pages": [
+        13
+      ]
+    },
+    "mā": {
+      "starred": true,
+      "pages": [
+        13,
+        14
+      ]
+    },
+    "maha": {
+      "starred": true,
+      "pages": [
+        14
+      ]
+    },
+    "mahana": {
+      "starred": true,
+      "pages": [
+        14
+      ]
+    },
+    "māhanga": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "mahara": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "māharahara mahara": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "māhau": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "mahere": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "mahi": {
+      "starred": true,
+      "pages": [
+        14
+      ]
+    },
+    "mahia": {
+      "starred": true,
+      "pages": [
+        14
+      ]
+    },
+    "mahue": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "māhunga": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "mai": {
+      "starred": true,
+      "pages": [
+        14
+      ]
+    },
+    "māia": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "makariri": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "makawe": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "makere": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "māku": {
+      "starred": true,
+      "pages": [
+        14
+      ]
+    },
+    "mākū": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "māmā": {
+      "starred": true,
+      "pages": [
+        14
+      ]
+    },
+    "mamae": {
+      "starred": false,
+      "pages": [
+        14
+      ]
+    },
+    "mana": {
+      "starred": true,
+      "pages": [
+        14
+      ]
+    },
+    "māna": {
+      "starred": true,
+      "pages": [
+        14
+      ]
+    },
+    "manaaki": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "manawa": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "manga": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "mano": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "manu": {
+      "starred": true,
+      "pages": [
+        15
+      ]
+    },
+    "manuhiri": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "māori": {
+      "starred": true,
+      "pages": [
+        15
+      ]
+    },
+    "māra": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "marae": {
+      "starred": true,
+      "pages": [
+        15
+      ]
+    },
+    "marama": {
+      "starred": true,
+      "pages": [
+        15
+      ]
+    },
+    "mārama": {
+      "starred": true,
+      "pages": [
+        15
+      ]
+    },
+    "maramara": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "marangai": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "mārika": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "maringi": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "mārō": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "maroke": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "mata": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "mātaki": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "mātakitaki": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "mataku": {
+      "starred": true,
+      "pages": [
+        15
+      ]
+    },
+    "mātao": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "matapihi": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "matau": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "mātau": {
+      "starred": true,
+      "pages": [
+        15
+      ]
+    },
+    "mātauranga": {
+      "starred": true,
+      "pages": [
+        15
+      ]
+    },
+    "mate": {
+      "starred": true,
+      "pages": [
+        15
+      ]
+    },
+    "matekai": {
+      "starred": false,
+      "pages": [
+        15
+      ]
+    },
+    "matimati": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "mātou": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "matū": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "matua": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "mātua": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "mau": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "māu": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "māua": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "mauī": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "maumahara": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "maunga": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "mauri": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "mauria": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "me": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "mea": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "meatia": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "mehemea": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "mēnā": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "meneti": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "mere": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "mīere": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "mīharo": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "mihi": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "mīhini": {
+      "starred": true,
+      "pages": [
+        16
+      ]
+    },
+    "miraka": {
+      "starred": false,
+      "pages": [
+        16
+      ]
+    },
+    "miriona": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "miro": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "mita": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "mīti": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "mō": {
+      "starred": true,
+      "pages": [
+        17
+      ]
+    },
+    "moana": {
+      "starred": true,
+      "pages": [
+        17
+      ]
+    },
+    "moe": {
+      "starred": true,
+      "pages": [
+        17
+      ]
+    },
+    "moemoeā": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "moenga": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "mōhio": {
+      "starred": true,
+      "pages": [
+        17
+      ]
+    },
+    "mōhiotanga": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "mōhiotia": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "moka": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "mōkai": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "mokemoke": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "moko": {
+      "starred": true,
+      "pages": [
+        17
+      ]
+    },
+    "mokomoko": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "mokopuna": {
+      "starred": true,
+      "pages": [
+        17
+      ]
+    },
+    "mōku": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "momo": {
+      "starred": true,
+      "pages": [
+        17
+      ]
+    },
+    "mōna": {
+      "starred": false,
+      "pages": [
+        17
+      ]
+    },
+    "moni": {
+      "starred": true,
+      "pages": [
+        17
+      ]
+    },
+    "motokā": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "motu": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "motuhake": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "moutere": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "mua": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "mura": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "muri": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "mutu": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "mutunga": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "nā": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "nāianei": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "nāku": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "nama": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "nāna": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "nanakia": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "nau": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "nāwai": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "nē": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "nei": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "neke": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "nekeneke": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "ngā": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "ngahere": {
+      "starred": true,
+      "pages": [
+        18
+      ]
+    },
+    "ngākau": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "ngārara": {
+      "starred": false,
+      "pages": [
+        18
+      ]
+    },
+    "ngaro": {
+      "starred": true,
+      "pages": [
+        19
+      ]
+    },
+    "ngaru": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "ngata": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "ngātahi": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "ngāti": {
+      "starred": true,
+      "pages": [
+        19
+      ]
+    },
+    "ngau": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "ngaungau": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "ngāwari": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "ngenge": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "ngeru": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "ngunguru": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "ngutu": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "niho": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "nō": {
+      "starred": true,
+      "pages": [
+        19
+      ]
+    },
+    "noa": {
+      "starred": true,
+      "pages": [
+        19
+      ]
+    },
+    "noho": {
+      "starred": true,
+      "pages": [
+        19
+      ]
+    },
+    "noke": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "nōku": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "nōna": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "nui": {
+      "starred": true,
+      "pages": [
+        19
+      ]
+    },
+    "nuinga": {
+      "starred": true,
+      "pages": [
+        19
+      ]
+    },
+    "nuku": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "nunui": {
+      "starred": false,
+      "pages": [
+        19
+      ]
+    },
+    "o": {
+      "starred": true,
+      "pages": [
+        19
+      ]
+    },
+    "ō": {
+      "starred": true,
+      "pages": [
+        20
+      ]
+    },
+    "oho": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "ohorere": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "ōku": {
+      "starred": true,
+      "pages": [
+        20
+      ]
+    },
+    "oma": {
+      "starred": true,
+      "pages": [
+        20
+      ]
+    },
+    "ōna": {
+      "starred": true,
+      "pages": [
+        20
+      ]
+    },
+    "one": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "oneone": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "ono": {
+      "starred": true,
+      "pages": [
+        20
+      ]
+    },
+    "ope": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "ora": {
+      "starred": true,
+      "pages": [
+        20
+      ]
+    },
+    "oranga": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "oreore": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "ōrite": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "otaota": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "oti": {
+      "starred": true,
+      "pages": [
+        20
+      ]
+    },
+    "otirā": {
+      "starred": true,
+      "pages": [
+        20
+      ]
+    },
+    "ōu": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "pā": {
+      "starred": true,
+      "pages": [
+        20
+      ]
+    },
+    "pae": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "paepae": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "pahi": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "pāhi": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "pahū": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "pai": {
+      "starred": true,
+      "pages": [
+        20
+      ]
+    },
+    "painga": {
+      "starred": false,
+      "pages": [
+        20
+      ]
+    },
+    "paipa": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pakanga": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pakari": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pakaru": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pākehā": {
+      "starred": true,
+      "pages": [
+        21
+      ]
+    },
+    "pakeke": {
+      "starred": true,
+      "pages": [
+        21
+      ]
+    },
+    "pākete": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "paki": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pakipaki": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pakitara": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pakiwaitara": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "paku": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pakupaku": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pāmu": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pana": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "panana": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "panga": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pāngarau": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pango": {
+      "starred": true,
+      "pages": [
+        21
+      ]
+    },
+    "pani": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pānui": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "paoro": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "papa": {
+      "starred": true,
+      "pages": [
+        21
+      ]
+    },
+    "pāpā": {
+      "starred": true,
+      "pages": [
+        21
+      ]
+    },
+    "parakuihi": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "parāoa": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "parauri": {
+      "starred": false,
+      "pages": [
+        21
+      ]
+    },
+    "pare": {
+      "starred": false,
+      "pages": [
+        21,
+        22
+      ]
+    },
+    "pari": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "parirau": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "paru": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "paruparu": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pata": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pātai": {
+      "starred": true,
+      "pages": [
+        22
+      ]
+    },
+    "pātata": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pātene": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pātiki": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pātītī": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "patu": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "patua": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pau": {
+      "starred": true,
+      "pages": [
+        22
+      ]
+    },
+    "pāua": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pea": {
+      "starred": true,
+      "pages": [
+        22
+      ]
+    },
+    "pēhea": {
+      "starred": true,
+      "pages": [
+        22
+      ]
+    },
+    "peita": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "peka": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pēkana": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pekapeka": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "peke": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pēke": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pēnā": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pene": {
+      "starred": false,
+      "pages": [
+        22
+      ]
+    },
+    "pēnei": {
+      "starred": true,
+      "pages": [
+        22
+      ]
+    },
+    "pepa": {
+      "starred": true,
+      "pages": [
+        22
+      ]
+    },
+    "pēpi": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pērā": {
+      "starred": true,
+      "pages": [
+        23
+      ]
+    },
+    "pere": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pēwhea": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pī": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "piki": {
+      "starred": true,
+      "pages": [
+        23
+      ]
+    },
+    "pikitia": {
+      "starred": true,
+      "pages": [
+        23
+      ]
+    },
+    "pīpī": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pīrangi": {
+      "starred": true,
+      "pages": [
+        23
+      ]
+    },
+    "pirau": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "piri": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pirihimana": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "piriti": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "piro": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pito": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "piupiu": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pō": {
+      "starred": true,
+      "pages": [
+        23
+      ]
+    },
+    "poaka": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pōhatu": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pōhēhē": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "poi": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "poka": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pono": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "poraka": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "poro": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pōro": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "porohita": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "porowhita": {
+      "starred": false,
+      "pages": [
+        23
+      ]
+    },
+    "pōtae": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "poti": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "poto": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pou": {
+      "starred": true,
+      "pages": [
+        24
+      ]
+    },
+    "pouaka": {
+      "starred": true,
+      "pages": [
+        24
+      ]
+    },
+    "pouaka whakaata": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pounamu": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pōuri": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pū": {
+      "starred": true,
+      "pages": [
+        24
+      ]
+    },
+    "puare": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "puehu": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "puhi": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pūkaha": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pukapuka": {
+      "starred": true,
+      "pages": [
+        24
+      ]
+    },
+    "puke": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pūkenga": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "puku": {
+      "starred": true,
+      "pages": [
+        24
+      ]
+    },
+    "pūmau": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "puna": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pūngāwerewere": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "punua": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "puoro": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pupū": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pupuhi": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pupuri": {
+      "starred": true,
+      "pages": [
+        24
+      ]
+    },
+    "pūrākau": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "purapura": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "purei": {
+      "starred": false,
+      "pages": [
+        24
+      ]
+    },
+    "pūrere": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "pūrerehua": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "puru": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "purua": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "puta": {
+      "starred": true,
+      "pages": [
+        25
+      ]
+    },
+    "pūtaiao": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "pūtake": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "putanga": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "pūtea": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "putiputi": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "putu": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "rā": {
+      "starred": true,
+      "pages": [
+        25
+      ]
+    },
+    "rahi": {
+      "starred": true,
+      "pages": [
+        25
+      ]
+    },
+    "rākau": {
+      "starred": true,
+      "pages": [
+        25
+      ]
+    },
+    "raki": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "rama": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "rānei": {
+      "starred": true,
+      "pages": [
+        25
+      ]
+    },
+    "rangatahi": {
+      "starred": true,
+      "pages": [
+        25
+      ]
+    },
+    "rangatira": {
+      "starred": true,
+      "pages": [
+        25
+      ]
+    },
+    "rangi": {
+      "starred": true,
+      "pages": [
+        25
+      ]
+    },
+    "rango": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "rangona": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "rapa": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "rapu": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "rārangi": {
+      "starred": true,
+      "pages": [
+        25
+      ]
+    },
+    "raro": {
+      "starred": true,
+      "pages": [
+        25
+      ]
+    },
+    "raru": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "raruraru": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "rata": {
+      "starred": false,
+      "pages": [
+        25
+      ]
+    },
+    "rātou": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "rau": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "rāua": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "rawa": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "rawe": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "rāwhiti": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "rēhia": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "reira": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "reka": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "rekareka": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "reo": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "rere": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "rerekē": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "rerenga": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "rererangi": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "reri": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "reta": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "reti": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "retireti": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "rima": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "ringa": {
+      "starred": true,
+      "pages": [
+        26
+      ]
+    },
+    "ringaringa": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "rino": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "rīpene": {
+      "starred": false,
+      "pages": [
+        26
+      ]
+    },
+    "riri": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "riro": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "rita": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "rite": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "rīwai": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "rō": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "roa": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "roanga": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "rohe": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "roimata": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "rongo": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "rongoā": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "rongonui": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "rōpū": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "rori": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "rorohiko": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "roto": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "rua": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "ruku": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "rūma": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "runga": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "tā": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "tae": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "taea": {
+      "starred": true,
+      "pages": [
+        27
+      ]
+    },
+    "taenga": {
+      "starred": false,
+      "pages": [
+        27
+      ]
+    },
+    "taha": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "tāhau": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "tahi": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "tāhuhu": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "tahuri": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "tai": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "tāia": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "taiapa": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "taihoa": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "taitama": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "taka": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "tākaro": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "take": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "taki": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "takiwā": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "takoto": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "taku": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "tāku": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "tākuta": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "tama": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "tamāhine": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "tamaiti": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "tamariki": {
+      "starred": true,
+      "pages": [
+        28
+      ]
+    },
+    "tamatāne": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "tame": {
+      "starred": false,
+      "pages": [
+        28
+      ]
+    },
+    "tana": {
+      "starred": true,
+      "pages": [
+        29
+      ]
+    },
+    "tāna": {
+      "starred": true,
+      "pages": [
+        29
+      ]
+    },
+    "tāne": {
+      "starred": true,
+      "pages": [
+        29
+      ]
+    },
+    "tangata": {
+      "starred": true,
+      "pages": [
+        29
+      ]
+    },
+    "tāngata": {
+      "starred": true,
+      "pages": [
+        29
+      ]
+    },
+    "tangi": {
+      "starred": true,
+      "pages": [
+        29
+      ]
+    },
+    "tango": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tangohia": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "taniwha": {
+      "starred": true,
+      "pages": [
+        29
+      ]
+    },
+    "tao": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tāone": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "taonga": {
+      "starred": true,
+      "pages": [
+        29
+      ]
+    },
+    "tapa": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tapahi": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tapahia": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tāpiri": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tapu": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "taputapu": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tapuwae": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tāra": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "taraiwa": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "taraka": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tarau": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tari": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "taringa": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "taro": {
+      "starred": false,
+      "pages": [
+        29
+      ]
+    },
+    "tata": {
+      "starred": true,
+      "pages": [
+        29
+      ]
+    },
+    "tātahi": {
+      "starred": false,
+      "pages": [
+        30
+      ]
+    },
+    "tātai": {
+      "starred": false,
+      "pages": [
+        30
+      ]
+    },
+    "tatari": {
+      "starred": true,
+      "pages": [
+        30
+      ]
+    },
+    "tatau": {
+      "starred": true,
+      "pages": [
+        30
+      ]
+    },
+    "tātou": {
+      "starred": true,
+      "pages": [
+        30
+      ]
+    },
+    "tau": {
+      "starred": true,
+      "pages": [
+        30
+      ]
+    },
+    "tāu": {
+      "starred": false,
+      "pages": [
+        30
+      ]
+    },
+    "taua": {
+      "starred": true,
+      "pages": [
+        30
+      ]
+    },
+    "tāua": {
+      "starred": true,
+      "pages": [
+        30
+      ]
+    },
+    "tauhou": {
+      "starred": false,
+      "pages": [
+        30
+      ]
+    },
+    "tauira": {
+      "starred": true,
+      "pages": [
+        30
+      ]
+    },
+    "taumaha": {
+      "starred": false,
+      "pages": [
+        30
+      ]
+    },
+    "taumata": {
+      "starred": false,
+      "pages": [
+        30
+      ]
+    },
+    "taunga": {
+      "starred": false,
+      "pages": [
+        30
+      ]
+    },
+    "taupoki": {
+      "starred": false,
+      "pages": [
+        30
+      ]
+    },
+    "taura": {
+      "starred": false,
+      "pages": [
+        30
+      ]
+    },
+    "tautoko": {
+      "starred": false,
+      "pages": [
+        30
+      ]
+    },
+    "tawhiti": {
+      "starred": true,
+      "pages": [
+        30
+      ]
+    },
+    "tawhito": {
+      "starred": false,
+      "pages": [
+        31
+      ]
+    },
+    "te": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tēhea": {
+      "starred": false,
+      "pages": [
+        31
+      ]
+    },
+    "teina": {
+      "starred": false,
+      "pages": [
+        31
+      ]
+    },
+    "teitei": {
+      "starred": false,
+      "pages": [
+        31
+      ]
+    },
+    "tekau": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tēnā": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tēnei": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tēpu": {
+      "starred": false,
+      "pages": [
+        31
+      ]
+    },
+    "tērā": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tere": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tētahi": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tētehi": {
+      "starred": false,
+      "pages": [
+        31
+      ]
+    },
+    "tī": {
+      "starred": false,
+      "pages": [
+        31
+      ]
+    },
+    "tiaki": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tihi": {
+      "starred": false,
+      "pages": [
+        31
+      ]
+    },
+    "tika": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tikanga": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tiki": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tīkina": {
+      "starred": false,
+      "pages": [
+        31
+      ]
+    },
+    "tīma": {
+      "starred": true,
+      "pages": [
+        31
+      ]
+    },
+    "tīmata": {
+      "starred": true,
+      "pages": [
+        32
+      ]
+    },
+    "tīmatanga": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tina": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tinana": {
+      "starred": true,
+      "pages": [
+        32
+      ]
+    },
+    "tini": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tīni": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tinihanga": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tino": {
+      "starred": true,
+      "pages": [
+        32
+      ]
+    },
+    "tipu": {
+      "starred": true,
+      "pages": [
+        32
+      ]
+    },
+    "tipua": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tipuna": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tīpuna": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tira": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tiriti": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tiro": {
+      "starred": true,
+      "pages": [
+        32
+      ]
+    },
+    "tirohanga": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tirohia": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "tirotiro": {
+      "starred": false,
+      "pages": [
+        32
+      ]
+    },
+    "titiro": {
+      "starred": true,
+      "pages": [
+        32
+      ]
+    },
+    "tō": {
+      "starred": true,
+      "pages": [
+        32
+      ]
+    },
+    "toa": {
+      "starred": true,
+      "pages": [
+        32,
+        33
+      ]
+    },
+    "toe": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "toenga": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tohorā": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tohu": {
+      "starred": true,
+      "pages": [
+        33
+      ]
+    },
+    "tohua": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tohunga": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tohutohu": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "toi": {
+      "starred": true,
+      "pages": [
+        33
+      ]
+    },
+    "toka": {
+      "starred": true,
+      "pages": [
+        33
+      ]
+    },
+    "tōkena": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tokomaha": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tokorua": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tokotoru": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tōku": {
+      "starred": true,
+      "pages": [
+        33
+      ]
+    },
+    "tomo": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tōna": {
+      "starred": true,
+      "pages": [
+        33
+      ]
+    },
+    "tonga": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tono": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tonoa": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "tonu": {
+      "starred": true,
+      "pages": [
+        33
+      ]
+    },
+    "tonutia": {
+      "starred": false,
+      "pages": [
+        33
+      ]
+    },
+    "toro": {
+      "starred": false,
+      "pages": [
+        33,
+        34
+      ]
+    },
+    "toroa": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "toru": {
+      "starred": true,
+      "pages": [
+        34
+      ]
+    },
+    "tote": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tōtika": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "toto": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tōu": {
+      "starred": true,
+      "pages": [
+        34
+      ]
+    },
+    "tū": {
+      "starred": true,
+      "pages": [
+        34
+      ]
+    },
+    "tua": {
+      "starred": true,
+      "pages": [
+        34
+      ]
+    },
+    "tuahine": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tuakana": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tuanui": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tuarā": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tuarua": {
+      "starred": true,
+      "pages": [
+        34
+      ]
+    },
+    "tuatahi": {
+      "starred": true,
+      "pages": [
+        34
+      ]
+    },
+    "tuatoru": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tuawhā": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tuhi": {
+      "starred": true,
+      "pages": [
+        34
+      ]
+    },
+    "tuhia": {
+      "starred": true,
+      "pages": [
+        34
+      ]
+    },
+    "tuhinga": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tuhituhi": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tuhituhinga": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tuki": {
+      "starred": false,
+      "pages": [
+        34
+      ]
+    },
+    "tuku": {
+      "starred": true,
+      "pages": [
+        34,
+        35
+      ]
+    },
+    "tukua": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tukuna": {
+      "starred": true,
+      "pages": [
+        35
+      ]
+    },
+    "tukutuku": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tūmanako": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tumeke": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tuna": {
+      "starred": true,
+      "pages": [
+        35
+      ]
+    },
+    "tungāne": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tunu": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tūpato": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tupu": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tūpuna": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tūranga": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "ture": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tūrehu": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "turituri": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tūru": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tūtaki": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tutuki": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "tūturu": {
+      "starred": true,
+      "pages": [
+        35
+      ]
+    },
+    "ū": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "ua": {
+      "starred": false,
+      "pages": [
+        35
+      ]
+    },
+    "uaua": {
+      "starred": true,
+      "pages": [
+        35,
+        36
+      ]
+    },
+    "uhi": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "uhia": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "ui": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "uira": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "uku": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "umere": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "upoko": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "uri": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "uru": {
+      "starred": true,
+      "pages": [
+        36
+      ]
+    },
+    "uta": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "utu": {
+      "starred": true,
+      "pages": [
+        36
+      ]
+    },
+    "uwha": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "wā": {
+      "starred": true,
+      "pages": [
+        36
+      ]
+    },
+    "waea": {
+      "starred": true,
+      "pages": [
+        36
+      ]
+    },
+    "waenga": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "waenganui": {
+      "starred": true,
+      "pages": [
+        36
+      ]
+    },
+    "waewae": {
+      "starred": true,
+      "pages": [
+        36
+      ]
+    },
+    "waha": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "wāhanga": {
+      "starred": true,
+      "pages": [
+        36
+      ]
+    },
+    "wāhi": {
+      "starred": true,
+      "pages": [
+        36
+      ]
+    },
+    "wahie": {
+      "starred": false,
+      "pages": [
+        36
+      ]
+    },
+    "wahine": {
+      "starred": true,
+      "pages": [
+        37
+      ]
+    },
+    "wāhine": {
+      "starred": true,
+      "pages": [
+        37
+      ]
+    },
+    "waho": {
+      "starred": true,
+      "pages": [
+        37
+      ]
+    },
+    "wai?": {
+      "starred": true,
+      "pages": [
+        37
+      ]
+    },
+    "wai": {
+      "starred": true,
+      "pages": [
+        37
+      ]
+    },
+    "waiariki": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "waiata": {
+      "starred": true,
+      "pages": [
+        37
+      ]
+    },
+    "waihanga": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "waiho": {
+      "starred": true,
+      "pages": [
+        37
+      ]
+    },
+    "waimarie": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "wairua": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "waka": {
+      "starred": true,
+      "pages": [
+        37
+      ]
+    },
+    "wānanga": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "wao": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "wareware": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "waru": {
+      "starred": true,
+      "pages": [
+        37
+      ]
+    },
+    "wātea": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "wawata": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "wawe": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "wehe": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "wehenga": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "wehi": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "weka": {
+      "starred": false,
+      "pages": [
+        37
+      ]
+    },
+    "wera": {
+      "starred": true,
+      "pages": [
+        37
+      ]
+    },
+    "wero": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whā": {
+      "starred": true,
+      "pages": [
+        38
+      ]
+    },
+    "whaea": {
+      "starred": true,
+      "pages": [
+        38
+      ]
+    },
+    "whai": {
+      "starred": true,
+      "pages": [
+        38
+      ]
+    },
+    "whāia": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whāinga": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whāiti": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakaae": {
+      "starred": true,
+      "pages": [
+        38
+      ]
+    },
+    "whakaahua": {
+      "starred": true,
+      "pages": [
+        38
+      ]
+    },
+    "whakaari": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakaaro": {
+      "starred": true,
+      "pages": [
+        38
+      ]
+    },
+    "whakaata": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakaatu": {
+      "starred": true,
+      "pages": [
+        38
+      ]
+    },
+    "whakaaturanga": {
+      "starred": true,
+      "pages": [
+        38
+      ]
+    },
+    "whakahaere": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakahau": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakaheke": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakahīhī": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakahirahira": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakahoki": {
+      "starred": true,
+      "pages": [
+        38
+      ]
+    },
+    "whakahokia": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakairo": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakakī": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakamā": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakamahi": {
+      "starred": false,
+      "pages": [
+        38
+      ]
+    },
+    "whakamahia": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakamāori": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakamārama": {
+      "starred": true,
+      "pages": [
+        39
+      ]
+    },
+    "whakamātau": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakamātautau": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakamau": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakamaua": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakamīharo": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakamua": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakamuri": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakamutunga": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakangā": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakangahau": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakanui": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakaora": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakapae": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakapai": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakapaipai": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakapakari": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakapapa": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakapiri": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakapono": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakaputa": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakararo": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakarite": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakaritea": {
+      "starred": false,
+      "pages": [
+        39
+      ]
+    },
+    "whakarongo": {
+      "starred": true,
+      "pages": [
+        39
+      ]
+    },
+    "whakarunga": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakatā": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakataetae": {
+      "starred": true,
+      "pages": [
+        40
+      ]
+    },
+    "whakatakoto": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakatata": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakatau": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakatika": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakatikatika": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakatipu": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakatoi": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakatū": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakatūpato": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakatūria": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakauru": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whakautu": {
+      "starred": true,
+      "pages": [
+        40
+      ]
+    },
+    "whakawhiti": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whāki": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whānau": {
+      "starred": true,
+      "pages": [
+        40
+      ]
+    },
+    "whanaunga": {
+      "starred": true,
+      "pages": [
+        40
+      ]
+    },
+    "whanga": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whāngai": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whānui": {
+      "starred": true,
+      "pages": [
+        40
+      ]
+    },
+    "whara": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whārangi": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whare": {
+      "starred": true,
+      "pages": [
+        40
+      ]
+    },
+    "wharekura": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whāriki": {
+      "starred": false,
+      "pages": [
+        40
+      ]
+    },
+    "whatu": {
+      "starred": true,
+      "pages": [
+        40
+      ]
+    },
+    "whāwhā": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "whawhai": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "whea": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "whenua": {
+      "starred": true,
+      "pages": [
+        41
+      ]
+    },
+    "whero": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "whetū": {
+      "starred": true,
+      "pages": [
+        41
+      ]
+    },
+    "whiti": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "whitu": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "whiu": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "whiua": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "whiwhi": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "whutupōro": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "wiki": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "wīra": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    },
+    "wiriwiri": {
+      "starred": false,
+      "pages": [
+        41
+      ]
+    }
+  }
+}

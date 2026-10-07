@@ -54,7 +54,7 @@ export const LEVEL_ONE_CONTENT = {
       ],
     },
     {
-      title: 'Mahi', focus: 'Corporate and public-sector roles for Ministry of Education and government teams.',
+      title: 'Mahi — optional personalisation', focus: 'Choose only the role relevant to your own introduction; these are not required vocabulary.',
       sources: [
         { label: 'Public-sector job titles', url: 'https://www.desc.govt.nz/assets/Uploads/DocumentLibrary/OIA-2023-4882_Use-of-te-Reo-Maori-.pdf' },
         { label: 'Fire and Emergency NZ', url: 'https://portal.fireandemergency.nz/national-teams/kaupapa-maori-and-cultural-communities/te-reo-maori/job-titles-in-te-reo-maori/' },

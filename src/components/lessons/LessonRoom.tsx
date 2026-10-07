@@ -1,3 +1,4 @@
+import SupportedText from '../SupportedText'
 import { useEffect, useState } from 'react'
 import { errorMessage, studentClient } from '../../lib/studentPortal/client'
 import { lessonClient, lessonRpc, previewSteps, safeResource } from '../../lib/lessons/client'
@@ -6,10 +7,10 @@ import './LessonRoom.css'
 import JitsiClassCall from '../JitsiClassCall'
 
 export function LessonScreen({ step }: { step: LessonStep }) {
- return <section className="lesson-screen" aria-live="polite"><span className="lesson-kind">{step.kind.replace('_', ' ')}{step.duration_minutes ? ` · ${step.duration_minutes} min` : ''}</span><h2>{step.title}</h2>{step.prompt_mi && <p lang="mi" className="lesson-prompt">{step.prompt_mi}</p>}{step.prompt_en && <p>{step.prompt_en}</p>}<div className="lesson-items">{step.items.map(item => {
+ return <section className="lesson-screen" aria-live="polite"><span className="lesson-kind">{step.kind.replace('_', ' ')}{step.duration_minutes ? ` · ${step.duration_minutes} min` : ''}</span><h2>{step.title}</h2>{step.prompt_mi && <p lang="mi" className="lesson-prompt"><SupportedText text={step.prompt_mi} /></p>}{step.prompt_en && <p>{step.prompt_en}</p>}<div className="lesson-items">{step.items.map(item => {
  const url = safeResource(item.resource_url)
  return <article key={item.id} className={`lesson-item lesson-item-${item.kind}`}>
- {item.text_mi && <p lang="mi">{item.text_mi}</p>}{item.text_en && <p className="lesson-meaning">{item.text_en}</p>}
+ {item.text_mi && <p lang="mi"><SupportedText text={item.text_mi} /></p>}{item.text_en && <p className="lesson-meaning">{item.text_en}</p>}
  {url && item.kind === 'image' && <img src={url} alt={item.alt_text} />}
  {url && item.kind === 'audio' && <audio controls src={url} aria-label={item.alt_text || item.text_mi || 'Lesson audio'} />}
  {url && item.kind === 'video' && <video controls src={url} aria-label={item.alt_text || 'Lesson video'} />}

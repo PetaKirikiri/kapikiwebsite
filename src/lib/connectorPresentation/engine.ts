@@ -1,3 +1,6 @@
+import { floorLightPlan } from './floorLight'
+import { compileSectionPlayback } from './sectionPlayback'
+import { sentenceWordGlosses } from './wordGlosses'
 import { sentenceSlots, nounSlotCatalog } from './phraseSlots'
 import { navigationPlan, patternPlan, catalogPlan, type NavigationRequest, type PatternRequest } from './hostPlans'
 import { posLegend } from './posLegend'
@@ -9,7 +12,7 @@ import { busManifestSheetSchema, type BusManifestSheet } from '../busManifestCon
 import { CONNECTOR_BLUEPRINTS, type ConnectorLibrary } from './blueprints'
 import { effectivePatternFor, oppositeRole, type PatternRule } from './patterns'
 import { planConnectorFace, planPatternPiece, projectSentenceConnectors } from './presentation'
-import { compileSentenceMaterial, type SentenceWordPlan } from './sentenceMaterialGrowth'
+
 import { CONNECTOR_RAIL_LAYOUT, planWordLayout, planRailSpan } from './layout'
 
 /** Labels for the existing sentence-building exercise; never tagging evidence. */
@@ -39,19 +42,24 @@ export function presentSentence(input: {
   continuousRail?: boolean
   colorProfile?: PresentationProfileId
   textWidths?: readonly number[]
+  displayMode?: 'maori' | 'english-above'
+  measureEnglish?: (text: string) => number
 }) {
   const state = busManifestSheetSchema.parse(input.state ?? unresolvedSentence(input.text))
   const words = unresolvedSentence(input.text).tokens
   if (state.tokens.length !== words.length || state.tokens.some((token, i) => token.surfaceText !== words[i]?.surfaceText)) {
     throw new Error('Sentence text and tagging state do not match.')
   }
+  const displayMode = input.displayMode ?? 'maori'
+  const glosses = displayMode === 'english-above' ? sentenceWordGlosses(input.text, words.length) : null
   const plans = projectSentenceConnectors(state.tokens, input.families, input.library, input.rules, input.continuousRail, input.colorProfile)
   const renderedWords = plans.map((presentation, index) => ({
     text: state.tokens[index]!.surfaceText,
+    gloss: glosses ? { text: glosses[index], language: 'en' as const, placement: 'above-maori' as const } : null,
     presentation,
     exerciseRole: exerciseRole(state.tokens[index]!.acceptedPosCode),
     support: wordSupportTarget(state.tokens[index]!.surfaceText, state.tokens[index]!.acceptedPosCode, { sentence: input.text, state, tokenIndex: index, color: presentation.materialColor }),
-    layout: planWordLayout(input.textWidths?.[index] ?? 0, index < words.length - 1,
+    layout: planWordLayout(Math.max(input.textWidths?.[index] ?? 0, glosses ? input.measureEnglish?.(glosses[index]) ?? 0 : 0), index < words.length - 1,
       presentation.rightConnectorEnd, state.tokens[index]!.rightRail, presentation, input.continuousRail),
   }))
   // A short TAM between a noun section and its verb cannot hold two full
@@ -83,7 +91,7 @@ export function presentSentence(input: {
   const ready = renderedWords.length > 0 && renderedWords.every(word => word.presentation.materialColor
     && word.presentation.face?.status !== 'unavailable' && word.presentation.incomingJoin?.status !== 'unavailable'
     && word.presentation.internalMaterial?.face.status !== 'unavailable' && !word.presentation.conflict)
-  return { version: 1 as const, state, ...sentenceSlots(state.tokens, input.families), words: renderedWords.map(word => ({ ...word,
+  return { version: 1 as const, displayMode, glossStatus: displayMode === 'maori' ? 'off' as const : glosses ? 'available' as const : 'unavailable' as const, state, ...sentenceSlots(state.tokens, input.families), words: renderedWords.map(word => ({ ...word,
     canvasStyle: { width: word.layout.slotWidth + CONNECTOR_RAIL_LAYOUT.connectionWidth, marginLeft: -CONNECTOR_RAIL_LAYOUT.connectionWidth / 2 },
   })), groups, ready }
 }
@@ -137,10 +145,10 @@ export async function presentText(
 type SentenceRequest = { kind: 'sentence' } & Parameters<typeof presentSentence>[0]
 type SpecimenRequest = { kind: 'specimen'; after?: BusManifestSheet['tokens']; indices: readonly number[]; label: string; withText?: boolean; state?: Pick<BusManifestSheet, 'tokens'> | null } & Omit<Parameters<typeof presentSentence>[0], 'state'>
 type LegendRequest = { kind: 'legend'; args: Parameters<typeof posLegend> }
-type MaterialRequest = { kind: 'material'; word: SentenceWordPlan }
 type SpanRequest = { kind: 'span'; args: Parameters<typeof planRailSpan> }
 type NounCatalogRequest = { kind: 'noun-catalog'; sources: Parameters<typeof nounSlotCatalog>[0]; families: ReadonlyMap<string, string> }
-type RailRequest = NounCatalogRequest | MaterialRequest | SpanRequest | SentenceRequest | SpecimenRequest | LegendRequest | ({ kind: 'navigation' } & NavigationRequest) | ({ kind: 'pattern' } & PatternRequest) | { kind: 'catalog'; library: ConnectorLibrary }
+type GerminationRequest = { kind: 'germination'; sentence: Pick<ReturnType<typeof presentSentence>, 'words' | 'groups'> }
+type RailRequest = { kind: 'floor-light' } | GerminationRequest | NounCatalogRequest |  SpanRequest | SentenceRequest | SpecimenRequest | LegendRequest | ({ kind: 'navigation' } & NavigationRequest) | ({ kind: 'pattern' } & PatternRequest) | { kind: 'catalog'; library: ConnectorLibrary }
 function specimenPlan(input: SpecimenRequest) {
   const source = presentSentence({ ...input, state: input.state ? { ...input.state, schemaVersion: 9 } : null })
   // A contextual catalogue specimen is a view over accepted fragments, not
@@ -163,10 +171,12 @@ function specimenPlan(input: SpecimenRequest) {
       internalMaterial: prefixOnly ? undefined : presentation.internalMaterial }]
   })
 }
+export type RailSpecimenWord = ReturnType<typeof specimenPlan>[number]
 /** The only host-facing rail request boundary. Hosts supply data/measurements;
  * interpretation, specimen selection, artwork and readiness stay here. */
+export function requestRails(input: { kind: 'floor-light' }): ReturnType<typeof floorLightPlan>
+export function requestRails(input: GerminationRequest): ReturnType<typeof compileSectionPlayback>
 export function requestRails(input: NounCatalogRequest): ReturnType<typeof nounSlotCatalog>
-export function requestRails(input: MaterialRequest): ReturnType<typeof compileSentenceMaterial>
 export function requestRails(input: SpanRequest): ReturnType<typeof planRailSpan>
 export function requestRails(input: SentenceRequest): ReturnType<typeof presentSentence>
 export function requestRails(input: SpecimenRequest): ReturnType<typeof specimenPlan>
@@ -176,8 +186,9 @@ export function requestRails(input: { kind: 'pattern' } & PatternRequest): Retur
 export function requestRails(input: { kind: 'catalog'; library: ConnectorLibrary }): ReturnType<typeof catalogPlan>
 export function requestRails(input: RailRequest) {
   switch (input.kind) {
+    case 'floor-light': return floorLightPlan()
+    case 'germination': return compileSectionPlayback(input.sentence)
     case 'noun-catalog': return nounSlotCatalog(input.sources, input.families)
-    case 'material': return compileSentenceMaterial(input.word)
     case 'span': return planRailSpan(...input.args)
     case 'sentence': return presentSentence(input)
     case 'specimen': return specimenPlan(input)

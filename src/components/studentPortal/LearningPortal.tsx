@@ -1,5 +1,6 @@
-import { KakapoCompanion } from '../livingWorld/LivingWorld'
+import { useCompanionReaction } from '../livingWorld/companionContext'
 import ForestScene from '../livingWorld/ForestScene'
+import ClayIcon from '../livingWorld/ClayIcon'
 import LessonResourceIcon from './LessonResourceIcon'
 import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
@@ -19,21 +20,16 @@ import './PortalHome.css'
 import './PortalIdentity.css'
 import { moeLessonSchedule } from '../../lib/moeOffer'
 
-const learningTabIcons = {
-  lessons: 'M4 4h6l2 2 2-2h6v16h-6l-2 2-2-2H4ZM12 6v16',
-  practice: 'm15 5 4 4M4 20l4-1L20 7a2.8 2.8 0 0 0-4-4L4 15Z',
-  vocabulary: 'M5 3h14v18H5ZM8 7h8M8 11h8M8 15h5',
-  structures: 'M3 4h7v6H3ZM14 14h7v6h-7ZM6.5 10v7H14',
-} as const
-
 type LearningContent = { renderContent?: (level: CurriculumLevel, tab: 'practice' | 'vocabulary' | 'structures' | 'stories') => ReactNode }
 export function LearningDashboard({ data, renderContent, account }: { data: LearningData; name?: string; account?: ReactNode } & LearningContent) {
+  const react = useCompanionReaction()
   const [section, setSection] = useState<'lessons' | 'practice' | 'vocabulary' | 'structures'>('lessons')
   const [openNotes, setOpenNotes] = useState<number | null>(null)
   const [attendanceIntent, setAttendanceIntent] = useState<string[]>(() => {
     try { const saved: unknown = JSON.parse(sessionStorage.getItem('ka-piki:attendance-intent') ?? '[]'); return Array.isArray(saved) ? saved.filter((item): item is string => typeof item === 'string') : [] } catch { return [] }
   })
   function toggleAttendance(key: string) {
+    if (!attendanceIntent.includes(key)) react('celebrate')
     setAttendanceIntent(current => {
       const next = current.includes(key) ? current.filter(item => item !== key) : [...current, key]
       try { sessionStorage.setItem('ka-piki:attendance-intent', JSON.stringify(next)) } catch { /* Keep the control usable when storage is unavailable. */ }
@@ -49,11 +45,11 @@ export function LearningDashboard({ data, renderContent, account }: { data: Lear
   const lessonLink = `${prefix === '#' ? '#' : `${prefix}/`}lessons`
   return <div className="student-learning-shell">
     <nav className="learning-stable-tabs" aria-label="My Learning">
-      {([['lessons', 'Lessons'], ['practice', 'Practice'], ['vocabulary', 'Words'], ['structures', 'Sentence structures']] as const).map(([id, label]) => <button key={id} type="button" aria-pressed={section === id} onClick={() => setSection(id)}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={learningTabIcons[id]} /></svg><span>{label}</span></button>)}
+      {([['lessons', 'Lessons'], ['practice', 'Practice'], ['vocabulary', 'Words'], ['structures', 'Sentence structures']] as const).map(([id, label]) => <button key={id} type="button" aria-pressed={section === id} onClick={() => { setSection(id); react('look-left') }}><ClayIcon kind={id}/><span>{label}</span></button>)}
       {account}
     </nav>
     <section className="learning-course-home">
-    <header className="learning-page-heading site-card site-card-cover"><ForestScene /><div className="ka-heading-copy"><p><span className="learning-level-badge">Level {level}</span><span>{title}</span></p><h1>{section === 'lessons' ? 'Lessons' : section === 'practice' ? 'Practice' : section === 'vocabulary' ? 'Words' : 'Sentence structures'}</h1></div><KakapoCompanion className="ka-page-companion" /></header>
+    <header className="learning-page-heading site-card site-card-cover"><ForestScene /><div className="ka-heading-copy"><p><span className="learning-level-badge">Level {level}</span><span>{title}</span></p><h1>{section === 'lessons' ? 'Lessons' : section === 'practice' ? 'Practice' : section === 'vocabulary' ? 'Words' : 'Sentence structures'}</h1></div></header>
     <section hidden={section !== 'lessons'} aria-label="Lessons"><div className="learning-course-lessons site-card">
       {Array.from({ length: 10 }, (_, index) => index + 1).map(number => {
         const lesson = data.lessons?.find(item => item.level === level && item.lessonNumber === number)
@@ -68,7 +64,7 @@ export function LearningDashboard({ data, renderContent, account }: { data: Lear
         const video = meetingLink(lesson?.videoUrl)
         const training = lesson?.trainingUrl?.startsWith('#') ? lesson.trainingUrl : meetingLink(lesson?.trainingUrl)
         const notes = lesson?.notes ?? []
-        return <article className="learning-lesson-row" key={number}>
+        return <article className="learning-lesson-row" key={number} onPointerEnter={() => react(number % 2 ? 'look-left' : 'look-right')} onFocusCapture={() => react(number % 2 ? 'look-left' : 'look-right')}>
           <div className="learning-lesson-main">
             <a className="learning-lesson-open" href={`${lessonLink}?level=${level}&lesson=${number}`}><span className="learning-lesson-number" aria-hidden="true">{String(number).padStart(2, '0')}</span><span className="learning-lesson-copy"><span className="learning-lesson-label">Lesson {number}</span><span className="learning-lesson-schedule">{dateLabel ? <><time dateTime={schedule!.startsAt}>{dateLabel}</time><span>{timeLabel}</span></> : 'Date & time to be confirmed'}</span></span></a>
             <div className="learning-lesson-actions" aria-label={`Lesson ${number} resources`}>

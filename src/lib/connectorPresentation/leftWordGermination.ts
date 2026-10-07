@@ -5,8 +5,8 @@ import { germinatePlate } from './plateGermination'
  * through the receiver from its open body. Never use a screen coordinate or
  * seed an arbitrary extremity of the rectangular frame. */
 export function connectionSeed(mask: Uint8ClampedArray, width: number, height: number,
-  contact: Uint8Array) {
-  const fromBody=germinatePlate(mask,width,height,{x:0,y:(height-1)/2})
+  contact: Uint8Array, bodyOrigin = {x:0,y:(height-1)/2}) {
+  const fromBody=germinatePlate(mask,width,height,bodyOrigin)
   let seed=-1,best=-1
   contact.forEach((touches,i)=>{
     if(touches&&mask[i*4+3]&&fromBody.distances[i]>best){best=fromBody.distances[i];seed=i}

@@ -203,3 +203,21 @@
 .level-big-word-complete { font-size: 12px; color: var(--ka-muted, #64736c); }
 
 @media (min-width: 541px) { .level-noun-tree .level-big-word-following { grid-template-columns: repeat(var(--noun-branches, 3), minmax(0, 1fr)); } }
+
+.level-vocabulary-category-filters { display: flex; align-items: end; flex-wrap: wrap; gap: 12px 18px; padding: 16px 20px; }
+.level-vocabulary-category-filters label { display: grid; gap: 5px; color: var(--ka-green); font-size: 13px; font-weight: 600; }
+.level-vocabulary-category-filters select { min-height: 40px; max-width: 100%; border: 1px solid var(--ka-card-line); border-radius: 12px; padding: 8px 12px; font: inherit; color: var(--ka-green); background: #f3faff; box-shadow: inset 1px 2px 3px #ffffff, 0 2px 3px #315c711a; }
+.level-vocabulary-category-filters a, .level-vocabulary-category-filters>button { font-size: 12px; color: var(--ka-green); text-decoration: underline; padding-block: 10px; }
+.level-vocabulary-ao { min-width: 120px; }
+.level-vocabulary-ao small { display: block; margin-top: 6px; font-size: 12px; }
+.level-vocabulary-ao-badge { display: inline-grid; place-items: center; min-width: 30px; height: 30px; border-radius: 10px; color: #244a62; box-shadow: inset 1px 2px 3px #ffffffa0, 0 2px 3px #315c7120; }
+.level-vocabulary-ao-badge.is-a { background: #fff0bd; }
+.level-vocabulary-ao-badge.is-o { background: #d6efff; }
+
+.level-vocabulary .level-vocabulary-word-table { min-width: 1100px; }
+.level-vocabulary-word-table th:nth-child(n) { width: 10%; }
+.level-vocabulary-word-table th:nth-child(1) { width: 14%; overflow-wrap: normal; }
+.level-vocabulary-word-table th:nth-child(2), .level-vocabulary-word-table th:nth-child(4) { width: 17%; }
+.level-vocabulary-word-table th:nth-child(5) { width: 12%; }
+.level-vocabulary-number small { display: block; margin-top: 6px; font-size: 12px; }
+.level-vocabulary-number-badge { display: inline-block; padding: 4px 8px; border-radius: 8px; background: #eaf4d7; color: #315740; font-size: 12px; box-shadow: inset 1px 1px 2px #ffffffa0, 0 2px 3px #315c7115; }

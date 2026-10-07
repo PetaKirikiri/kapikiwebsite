@@ -7,13 +7,19 @@ import { platePaintArrival } from './platePaintArrival'
  * exactly as it does in the approved anchor fronds. */
 export function germinateAlongSavedTrack(alpha:Uint8ClampedArray,width:number,height:number,seed:number,
   path:string,scale:number,minX:number,minY:number) {
+  return germinateSavedTracks(alpha,width,height,seed,[{path,scale,minX,minY}])
+}
+
+export function germinateSavedTracks(alpha:Uint8ClampedArray,width:number,height:number,seed:number,
+  tracks:readonly {path:string;scale:number;minX:number;minY:number}[]) {
+  const wallCanvas=document.createElement('canvas');wallCanvas.width=width;wallCanvas.height=height
+  const wall=wallCanvas.getContext('2d')!
+  wall.strokeStyle='#000';wall.lineWidth=1.8;wall.lineCap='round';wall.lineJoin='round'
+  for (const {path,scale,minX,minY} of tracks) {
   const points=[...path.split('Z')[0].matchAll(/[ML]\s*([+-]?[\d.]+)[ ,]+([+-]?[\d.]+)/g)]
     .map(m=>[Number(m[1])*scale-minX,Number(m[2])*scale-minY] as const)
   const half=points.length/2
   if(!Number.isInteger(half)||half<4)throw new Error('The saved marker pipe edges are unavailable.')
-  const wallCanvas=document.createElement('canvas');wallCanvas.width=width;wallCanvas.height=height
-  const wall=wallCanvas.getContext('2d')!
-  wall.strokeStyle='#000';wall.lineWidth=1.8;wall.lineCap='round';wall.lineJoin='round'
   const edge=points.slice(0,half).reverse()
   const filled=([x,y]:readonly[number,number])=>{
     const xx=Math.floor(x),yy=Math.floor(y)
@@ -34,6 +40,7 @@ export function germinateAlongSavedTrack(alpha:Uint8ClampedArray,width:number,he
     retained.push(p);travel.push(length)
   }
   wall.beginPath();retained.forEach(([x,y],i)=>i?wall.lineTo(x,y):wall.moveTo(x,y));wall.stroke()
+  }
   const walls=wall.getImageData(0,0,width,height).data
   const liquid=new Uint8ClampedArray(alpha)
   for(let i=0;i<width*height;i++)liquid[i*4+3]=alpha[i*4+3]>=128&&walls[i*4+3]<64?255:0

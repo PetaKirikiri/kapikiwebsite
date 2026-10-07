@@ -38,6 +38,7 @@ function BoardWord({ block, teacher, busy, focus, onChange, onExplain }: { onExp
   </div>
 }
 export default function ClassWhiteboard({ board, teacher, pending, onChange }: Props) {
+  const [completedGrowth, setCompletedGrowth] = useState<ReadonlySet<string>>(() => new Set())
   const wordSupport=useWordSupport()
   const { collection, error: shapeError } = useDesignSpaceCollection({ production: true })
   const { rules } = useConnectorPatterns()
@@ -169,7 +170,7 @@ export default function ClassWhiteboard({ board, teacher, pending, onChange }: P
             if (event.key === 'Delete' || event.key === 'Backspace') { event.preventDefault(); void save({ op: 'delete', blockId: block.id }); setSelected(null) }
             if (event.key === 'Enter') { event.preventDefault(); setFocusWord(block.id) }
           }} onClick={event => { if(!teacher)explainBlock(block);else if (event.detail === 0) setSelected(block.id) }}>
-          <WhiteboardShape plan={planFor(block)} filled={Boolean(block.posCode)} growthId={block.growthId} grownAt={block.grownAt}/>
+          <WhiteboardShape plan={planFor(block)} filled={Boolean(block.posCode)} growthId={block.growthId} grownAt={block.grownAt} onComplete={() => { if (block.growthId) setCompletedGrowth(current => current.has(block.growthId!) ? current : new Set([...current, block.growthId!])) }}/>
         </button>
         <BoardWord onExplain={()=>explainBlock(block)} block={block} teacher={teacher} busy={busy} focus={focusWord === block.id} onChange={onChange}/>
       </article>)}
@@ -178,7 +179,7 @@ export default function ClassWhiteboard({ board, teacher, pending, onChange }: P
         const next = blocks.find(item => indexFor(item) === indexFor(block) + 1)
         if (!plan?.layout.joinsNext || !plan.presentation.face || !next?.posCode || !block.posCode
           || Math.abs(next.x - block.x - widthFor(block)) > .1 || next.y !== block.y
-          || [block, next].some(item => Date.now() - (item.grownAt ?? 0) < 2600)) return null
+          || [block, next].some(item => item.growthId && !completedGrowth.has(item.growthId))) return null
         return <span key={`join-${block.id}`} className="board-shared-join" style={{ left: `calc(${next.x / WIDTH * 100}% - ${CONNECTOR_RAIL_LAYOUT.connectionWidth / 2 * displayScale}px)`, top: `calc(${block.y / HEIGHT * 100}% + 6px)` }}>
           <SavedConnectorCheckpoint plan={plan.presentation.face} displayHeight={CONNECTOR_RAIL_LAYOUT.storyHeight * displayScale}/>
         </span>

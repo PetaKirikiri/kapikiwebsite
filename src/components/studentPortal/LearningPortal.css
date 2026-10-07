@@ -2,8 +2,6 @@
 .learning-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px}.learning-heading h1{font-size:28px;font-weight:500;margin:0}.learning-heading>span{font-size:14px;color:#62746d}
 
 /* Dedicated learner workspace */
-.site-shell:has(.portal-shell) .site-header{display:none}
-section:has(> .site-header):has(.portal-shell)>.site-header{display:none}
 .learning-portal:has(.portal-shell){max-width:none;padding:0;background:#f3f5f1;min-height:100vh}
 .portal-shell{display:grid;grid-template-columns:220px minmax(0,1fr);min-height:100vh;font-family:inherit}
 .portal-sidebar{background:#173d37;color:#f0f5eb;padding:34px 20px;display:flex;flex-direction:column;gap:42px}

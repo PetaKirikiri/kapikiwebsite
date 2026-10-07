@@ -20,21 +20,15 @@ export type ReadingMaterialContent = {
 // Sentences remain individually addressable for the existing course reading renderer.
 export const LEVEL_READING_MATERIAL = {
   2: {
-    id: "bread", title: "Te parāoa",
-    sections: [{ title: "Te parāoa", meaning: "The bread", paragraphStarts: [0,3,7,10], lines: [
-      ["Ko Hana te whaea.", "Hana is the mother.", undefined, {"structures":[1]}],
-      ["Ko Maia te tamāhine.", "Maia is the daughter.", undefined, {"structures":[1]}],
-      ["Nō Rotorua rāua.", "They are both from Rotorua.", undefined, {"structures":[3]}],
-      ["I hoko rāua i te parāoa inanahi.", "They bought bread yesterday.", undefined, {"structures":[20],"language":["yesterday"]}],
-      ["He parāoa iti tēnei.", "It is a small loaf of bread.", undefined, {"structures":[2]}],
-      ["Ka hoki rāua ki te kāinga.", "Then they went home.", undefined, {"structures":[24]}],
-      ["Ka kai a Maia i te parāoa i te ahiahi.", "Maia ate the bread that afternoon.", undefined, {"structures":[24]}],
-      ["Kei te kāinga a Hana ināianei.", "Hana is at home now.", undefined, {"structures":[4],"language":["now"]}],
-      ["Me kai ia i te parakuihi.", "She needs to have breakfast.", undefined, {"structures":[25]}],
-      ["Kāorekau te parāoa.", "There is no bread.", undefined, {"structures":[63]}],
-      ["Kei te kai ia i ngā hēki.", "She is eating eggs.", undefined, {"structures":[22]}],
-      ["Kei te inu ia i te kawhe.", "She is drinking coffee.", undefined, {"structures":[22]}],
-      ["Ka hoko rāua i te parāoa nui āpōpō.", "They will buy a big loaf of bread tomorrow.", undefined, {"structures":[24],"language":["tomorrow"]}],
+    id: "kai", title: "Te kai",
+    sections: [{ title: "Te kai", meaning: "The food", paragraphStarts: [0,3,5], lines: [
+      ["Ko Hana tōku whaea.", "Hana is my mother.", undefined, {"structures": [1]}],
+      ["I kai ahau i te kai.", "I ate the food.", undefined, {"structures": [20]}],
+      ["Kua kai a Hana.", "Hana has eaten.", undefined, {"structures": [21]}],
+      ["Kei te moe ia.", "She is sleeping.", undefined, {"structures": [22]}],
+      ["E titiro ana ahau ki te kai.", "I am looking at the food.", undefined, {"structures": [23]}],
+      ["Ka kai ahau i te kai.", "I will eat the food.", undefined, {"structures": [24]}],
+      ["Me titiro ahau ki a Hana.", "I should look at Hana.", undefined, {"structures": [25]}],
     ] }],
   },
   3: {
@@ -80,6 +74,8 @@ export const LEVEL_READING_MATERIAL = {
   5: {
     id: "box", title: "Te pouaka",
     sections: [{ title: "Te pouaka", meaning: "The heavy box", paragraphStarts: [0,3,6,9], lines: [
+      ["He nui ake te pouaka i te pēke.", "The box is bigger than the bag.", undefined, {"structures":[19]}],
+      ["Pānui ai ahau i ngā pukapuka ia rā.", "I read the books every day.", undefined, {"structures":[27]}],
       ["He kaiako tōku tungāne.", "My brother is a teacher.", undefined, {"structures":[2]}],
       ["Ko Hemi tōna ingoa.", "His name is Hemi.", undefined, {"structures":[1]}],
       ["I whakarite ahau i āku pukapuka mō āna ākonga inanahi.", "I got my books ready for his students yesterday.", undefined, {"structures":[20],"language":["yesterday"]}],
@@ -116,6 +112,9 @@ export const LEVEL_READING_MATERIAL = {
       ["Ka pātai ahau ki te kuia.", "I asked the woman.", undefined, {"structures":[24]}],
       ["Nōna te pēke.", "The bag was hers.", undefined, {"structures":[12]}],
       ["Ka hoatu ahau i tōna pēke ki te kuia.", "I gave her bag back to her.", undefined, {"structures":[24]}],
+      ["He aha koe i hoatu ai i te pēke ki te kuia?", "Why did you give the bag to the elderly woman?", undefined, {"structures":[44]}],
+      ["Nōnahea koe i kite ai i te pēke?", "When did you see the bag?", undefined, {"structures":[50]}],
+      ["Āhea koe e hoko ai i te pahikara?", "When will you buy the bicycle?", undefined, {"structures":[51]}],
       ["Ka haere tonu mātou ki te mahi.", "We continued on to work.", undefined, {"structures":[24]}],
       ["Ka hīkoi anō mātou āpōpō.", "We will walk again tomorrow.", undefined, {"structures":[24],"language":["tomorrow"]}],
     ] }],

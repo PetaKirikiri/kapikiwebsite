@@ -1436,7 +1436,7 @@ export default function BusManifestReviewView({
                     {readOnly ? <>
                       <button type="button" tabIndex={-1} aria-hidden="true" className="word-support-trigger absolute z-30 border-0 bg-transparent p-0" aria-label={`Explain ${token.text} shape`} onClick={explainWord}
                         style={{ top: RAIL_CENTER_OFFSET_PX - KORU_STORY_HEIGHT_PX / 2, left: wordLayout.blockLeft, width: blockWidth, height: KORU_STORY_HEIGHT_PX }} />
-                      <button type="button" data-word-text aria-current={highlightedTokenIndex === tokenIndex ? 'true' : undefined} className="word-support-text word-support-trigger" aria-label={`Explain ${token.text}`} onClick={explainWord} style={{ '--word-ink': topology?.materialColor } as CSSProperties}>{token.text}</button>
+                      <button type="button" data-word-text aria-current={highlightedTokenIndex === tokenIndex ? 'true' : undefined} className="word-support-text word-support-trigger" aria-label={`Explain ${token.text}`} {...wordSupport.hover(support, onWordExplain ?? wordSupport.open)} onClick={explainWord} style={{ '--word-ink': topology?.materialColor } as CSSProperties}>{token.text}</button>
                     </> : <span data-word-text style={{ '--word-ink': topology?.materialColor } as CSSProperties} className={label == null ? 'text-slate-800' : 'text-slate-900'}>
                       {token.text}
                     </span>}

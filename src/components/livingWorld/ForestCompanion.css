@@ -1,0 +1,21 @@
+.ka-companion-home { display: block; }
+.ka-companion-home .ka-companion-animated { width: 100%; height: 100%; }
+.ka-companion-animated .ka-companion-greeting { left: auto; right: 86%; }
+.ka-companion-sprite { position: relative; display: block; width: 100%; height: 100%; background-size: 300% 200%; background-repeat: no-repeat; filter: drop-shadow(0 5px 5px #08132888); }
+.ka-sprite-preload { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.ka-companion.ka-companion-animated.is-docked { position: fixed; z-index: 40; right: 10px; bottom: 10px; width: 116px; height: 116px; pointer-events: none; }
+.ka-companion-animated.is-docked .ka-companion-greeting { display: none; }
+.ka-companion-animated.is-docked .ka-companion-sprite { filter: drop-shadow(0 6px 9px #041d2066); }
+@media(max-width:650px) { .ka-companion.ka-companion-animated.is-docked { width: 88px; height: 88px; right: 3px; bottom: 3px; } }
+
+.ka-guardian-aura { position: absolute; inset: 5% -3% 0; border-radius: 50%; background: radial-gradient(ellipse at 50% 50%, #718df34a, #277f9930 40%, transparent 68%); opacity: .7; animation: ka-guardian-glow 8s ease-in-out infinite; pointer-events: none; transition: opacity .6s; }
+.ka-companion[data-pose=unfurl] .ka-guardian-aura { opacity: 1; background: radial-gradient(ellipse at 50% 55%, #74d9ce77, #7976df4d 35%, transparent 68%); }
+.ka-guardian-embers { position: absolute; inset: 0; pointer-events: none; }
+.ka-guardian-embers i { position: absolute; left: 25%; top: 81%; width: 3px; height: 3px; border-radius: 50%; background: #f6d995; box-shadow: 0 0 8px 2px #edd28566; animation: ka-guardian-ember 6s ease-in-out infinite; opacity: 0; }
+.ka-guardian-embers i:nth-child(2) { left: 76%; top: 72%; background: #91ebea; box-shadow: 0 0 8px 2px #6caede66; animation-delay: -2s; }
+.ka-guardian-embers i:nth-child(3) { left: 63%; top: 42%; animation-delay: -4s; }
+.ka-companion[data-motion=paused] :is(.ka-guardian-aura,.ka-guardian-embers i) { animation: none; }
+.ka-companion[data-motion=paused] .ka-guardian-embers { display: none; }
+@keyframes ka-guardian-glow { 0%,100% { transform: scale(.93); } 50% { transform: scale(1.07); } }
+@keyframes ka-guardian-ember { 0%,100% { opacity: 0; transform: translate(0,0); } 30% { opacity: .8; } 65% { opacity: .5; transform: translate(10px,-20px); } 90% { opacity: 0; transform: translate(-3px,-38px); } }
+@media(prefers-reduced-motion:reduce) { .ka-guardian-aura,.ka-guardian-embers i { animation: none; } .ka-guardian-aura { transition: none; } .ka-guardian-embers { display: none; } }

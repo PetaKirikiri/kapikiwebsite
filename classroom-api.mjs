@@ -1,9 +1,11 @@
+import { bigWordQuestions } from './src/lib/lessons/bigWordQuestions.ts'
 import { analyseSentence } from './server/courseSentence.mjs'
 import pg from 'pg'
 import { checkLessonAnswer, recogniseChatAnswer } from './src/lib/lessons/chatAnswer.ts'
 import { wordsDatabaseConnection } from './words-database.mjs'
 import { createKitchen, joinKitchen, advanceKitchen, commandKitchen } from './src/lib/kitchen/engine.mjs'
 import { randomBytes, createHash } from 'node:crypto'
+import { lessonWhiteboardRequest } from './server/lessonWhiteboard.mjs'
 let pool
 function database() {
  if (!pool) {
@@ -27,13 +29,25 @@ export async function classroomApi(req,res) {
   let body={}
   if(req.method==='POST') {
    if(!(req.headers['content-type']??'').startsWith('application/json')) throw bad('JSON required.',415)
-   let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>5000)throw bad('Request too large.',413)}
+   let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>2_800_000)throw bad('Request too large.',413)}
    try {body=JSON.parse(raw)}catch{throw bad('Invalid request.')}
   }
   let token=(req.headers.cookie??'').match(/(?:^|;\s*)kp_classroom=([a-f0-9]{64})(?:;|$)/)?.[1]
   if(!token){token=randomBytes(32).toString('hex');res.setHeader('Set-Cookie',`kp_classroom=${token}; HttpOnly; SameSite=Lax; Path=/; Max-Age=604800${/^(localhost|127\.0\.0\.1)(:|$)/.test(req.headers.host??'')?'':'; Secure'}`)}
   const hash=createHash('sha256').update(token).digest('hex')
   const action=req.method==='GET'?'poll':body.action
+  let accountId
+  if(action==='lesson-identity') {
+   const bearer=req.headers.authorization
+   if(!bearer?.startsWith('Bearer '))throw bad('Sign in to link your profile.',401)
+   const authUrl=process.env.VITE_STUDENT_SUPABASE_URL
+   const authKey=process.env.VITE_STUDENT_SUPABASE_PUBLISHABLE_KEY
+   if(!authUrl||!authKey)throw bad('Account connection unavailable.',503)
+   const response=await fetch(`${authUrl}/auth/v1/user`,{headers:{apikey:authKey,Authorization:bearer},signal:AbortSignal.timeout(5000)})
+   if(!response.ok)throw bad('Sign in again to link your profile.',401)
+   accountId=(await response.json()).id
+   if(!accountId)throw bad('Sign in again.',401)
+  }
   let id=body.room??url.searchParams.get('room')
   const db=database()
   if(action==='create') {
@@ -43,24 +57,25 @@ export async function classroomApi(req,res) {
    if(recent.rows[0].n>=10)throw bad('Use an existing class for today.',429)
    id=randomBytes(12).toString('hex')
    client=await db.connect();await client.query('begin');await client.query("set local idle_in_transaction_session_timeout='10s'; set local lock_timeout='5s'; set local statement_timeout='10s'")
-   await client.query('insert into classroom_live_room(id) values($1)',[id])
+   await client.query("insert into classroom_live_room(id,state) values($1,$2::jsonb)",[id,JSON.stringify({exercise:'guess-who',round:0,completed:0,statement:null,reset:0,...(body.kind==='lesson'?{kind:'lesson'}:{})})])
    await client.query("insert into classroom_live_member(room_id,token_hash,seat,name,x,y,look,color) values($1,$2,0,$3,400,255,'male',$4)",[id,hash,name,colors[0]])
    await client.query('commit');client.release();client=null
   }
   if(!/^[a-f0-9]{24}$/.test(id??''))throw bad('This class link is not valid.',404)
+  if(action==='lesson-board') return json(200,await lessonWhiteboardRequest(db,id,hash,body))
   client=await db.connect()
   await client.query('begin');await client.query("set local idle_in_transaction_session_timeout='10s'; set local lock_timeout='5s'; set local statement_timeout='10s'")
   const room=(await client.query('select * from classroom_live_room where id=$1 for update',[id])).rows[0]
   if(!room)throw bad('Class not found.',404)
-  if(room.closed||new Date(room.expires_at)<new Date())throw bad('This class has ended.',410)
+  if(room.closed||(room.state.kind!=='lesson'&&new Date(room.expires_at)<new Date()))throw bad('This class has ended.',410)
   let member=(await client.query('select * from classroom_live_member where room_id=$1 and token_hash=$2',[id,hash])).rows[0]
   if(!member && action==='join') {
    const name=typeof body.name==='string'?body.name.trim():''
    if(!name||name.length>60)throw bad('Enter your name.')
    const used=(await client.query('select seat from classroom_live_member where room_id=$1',[id])).rows.map(m=>m.seat)
-   const seat=[1,2,3].find(s=>!used.includes(s))
+   const seat=Array.from({length:room.state.kind==='lesson'?31:3},(_,i)=>i+1).find(s=>!used.includes(s))
    if(seat===undefined)throw bad('This class is full.',409)
-   member=(await client.query('insert into classroom_live_member(room_id,token_hash,seat,name,x,y,color) values($1,$2,$3,$4,$5,$6,$7) returning *',[id,hash,seat,name,...starts[seat],colors[seat]])).rows[0]
+   member=(await client.query('insert into classroom_live_member(room_id,token_hash,seat,name,x,y,color) values($1,$2,$3,$4,$5,$6,$7) returning *',[id,hash,seat,name,...starts[seat%starts.length],colors[seat%colors.length]])).rows[0]
   }
   if(!member) {
    if(action!=='poll')throw bad('Join the class first.',403)
@@ -68,7 +83,10 @@ export async function classroomApi(req,res) {
   }
   await client.query('update classroom_live_member set last_seen=now() where room_id=$1 and token_hash=$2',[id,hash])
   if(['target','eliminate','guess','reveal','new-round'].includes(action)&&body.round!==room.state.round)throw bad('The round has changed. Try again.',409)
-  if(action==='kitchen') {
+  if(action==='lesson-identity') {
+   room.state.lessonAccounts={...room.state.lessonAccounts,[member.seat]:accountId}
+   await client.query('update classroom_live_room set state=$2::jsonb where id=$1',[id,JSON.stringify(room.state)])
+  } else if(action==='kitchen') {
    const now=Date.now()
    if(body.op==='reset'&&member.seat!==0)throw bad('Only the host can reset the kitchen.',403)
    if(!room.state.kitchen||body.op==='reset') {
@@ -97,8 +115,9 @@ export async function classroomApi(req,res) {
     activity.hands={...activity.hands,[member.seat]:body.raised}
    } else {
     if(typeof body.text!=='string'||!body.text.trim()||body.text.length>1000||!['answer','chat','auto'].includes(body.mode))throw bad('Enter a message.')
-    const feedback=body.lessonKey==='1:1' ? (body.mode==='auto' ? recogniseChatAnswer('level-1-lesson-1-father',body.text) : body.mode==='answer' ? checkLessonAnswer('level-1-lesson-1-father',body.text) : null) : null
-    activity.messages=[...activity.messages,{seat:member.seat,senderName:member.name,text:body.text.trim(),feedback}].slice(-100)
+    const feedback=body.lessonKey==='1:1' && (body.questionIndex??0)<4 ? (body.mode==='auto' ? recogniseChatAnswer('level-1-lesson-1-big-words',body.text) : body.mode==='answer' ? checkLessonAnswer('level-1-lesson-1-big-words',body.text) : null) : null
+    if(body.questionIndex!==undefined&&(!Number.isInteger(body.questionIndex)||body.questionIndex<0||!bigWordQuestions.some(question=>question.id===body.questionIndex)))throw bad('Choose a question.')
+    activity.messages=[...activity.messages,{questionIndex:body.questionIndex??0,seat:member.seat,senderName:member.name,text:body.text.trim(),feedback}].slice(-100)
    }
    chats[body.lessonKey]=activity
    room.state={...room.state,lessonChats:chats}
@@ -232,6 +251,9 @@ export async function classroomApi(req,res) {
   await client.query('commit')
   const visibleState={...room.state,chosen:room.state.target!==undefined&&room.state.target!==null}
   if(member.seat!==0&&!room.state.revealed)delete visibleState.target
+  for(const person of members)person.userId=room.state.lessonAccounts?.[person.seat]
+  delete visibleState.lessonAccounts
+  delete visibleState.lessonBoards
   const visibleMembers=members.map(m=>member.seat===0||m.seat===member.seat||room.state.revealed?m:{...m,eliminated:[],guess:null,correct:null})
   json(200,{room:id,joined:true,seat:member.seat,serverNow:Date.now(),state:visibleState,members:visibleMembers,messages})
  }catch(error){if(client)await client.query('rollback').catch(()=>{});if(!error.status)console.error('[classroom]',error.message);json(error.status??500,{error:error.status?error.message:'Classroom connection failed. Reconnecting…'})}

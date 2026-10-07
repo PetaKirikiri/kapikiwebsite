@@ -11,7 +11,7 @@ export const LEVEL_ONE_PHRASES = [
   { text: 'Tēnā koutou katoa', english: 'Greetings to three or more people', functionType: 'Greeting', category: 'Conversation', sourceUrl: greetingsSource },
   { text: 'Ka kite anō', english: 'See you again', functionType: 'Farewell', category: 'Conversation', sourceUrl: farewellsSource },
   { text: 'Mā te wā', english: 'Until next time', functionType: 'Farewell', category: 'Conversation', sourceUrl: farewellsSource },
-  ...LEVEL_ONE_CONTENT.vocabulary.flatMap(group => group.words.filter(word => word.label.includes(' ')).map(word => ({
+  ...LEVEL_ONE_CONTENT.vocabulary.filter(group => !group.title.includes('optional')).flatMap(group => group.words.filter(word => word.label.includes(' ')).map(word => ({
     text: word.label, english: word.meaning, functionType: 'Job title', category: group.title,
   }))),
 ]

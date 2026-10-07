@@ -118,7 +118,7 @@
     },
     {
       "id": "reference-9",
-      "level": 5,
+      "level": 4,
       "title": "Possessives: more than one possession",
       "structureFocus": "Cumulative reference in taught sentence frames",
       "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
@@ -134,7 +134,7 @@
     },
     {
       "id": "reference-10",
-      "level": 6,
+      "level": 4,
       "title": "Possessives: shared ownership",
       "structureFocus": "Cumulative reference in taught sentence frames",
       "rationale": "Introduce this contrast here and reuse it in later levels. Editorial teaching allocation, not an engine rule.",
@@ -218,10 +218,8 @@
         "rākau",
         "roa",
         "iti",
-        "pukapuka",
         "pepa",
         "poto",
-        "pene",
         "kākano",
         "pai"
       ]
@@ -265,10 +263,7 @@
         "mahi",
         "ākonga",
         "kaiako",
-        "kaimahi",
-        "kaiwhakahaere",
-        "kaitātari",
-        "kaitohutohu"
+        "kaimahi"
       ]
     },
     {
@@ -685,6 +680,160 @@
         "whakarerekē",
         "whanaketanga"
       ]
+    },
+    {
+      "id": "reference-completion-1",
+      "level": 1,
+      "title": "Pronouns and determiners",
+      "structureFocus": "Reference within familiar full sentences",
+      "rationale": "Core reference forms by the end of Level 4.",
+      "wordKeys": [
+        "te",
+        "he",
+        "au",
+        "ahau",
+        "koe",
+        "ia",
+        "ngā",
+        "tāku",
+        "tōku",
+        "wai"
+      ]
+    },
+    {
+      "id": "reference-completion-2",
+      "level": 2,
+      "title": "Pronouns and determiners",
+      "structureFocus": "Reference within familiar full sentences",
+      "rationale": "Core reference forms by the end of Level 4.",
+      "wordKeys": [
+        "tēnā",
+        "ēnā",
+        "tāua",
+        "māua",
+        "tērā",
+        "ērā",
+        "kōrua",
+        "rāua",
+        "tō",
+        "ō",
+        "tātou",
+        "mātou",
+        "koutou",
+        "rātou",
+        "tētahi",
+        "ētahi",
+        "aha"
+      ]
+    },
+    {
+      "id": "reference-completion-3",
+      "level": 3,
+      "title": "Pronouns and determiners",
+      "structureFocus": "Reference within familiar full sentences",
+      "rationale": "Core reference forms by the end of Level 4.",
+      "wordKeys": [
+        "tāu",
+        "tōu",
+        "tāna",
+        "tōna",
+        "āku",
+        "ōku",
+        "āu",
+        "ōu",
+        "āna",
+        "ōna",
+        "tēhea",
+        "ēhea"
+      ]
+    },
+    {
+      "id": "reference-completion-4",
+      "level": 4,
+      "title": "Pronouns and determiners",
+      "structureFocus": "Reference within familiar full sentences",
+      "rationale": "Core reference forms by the end of Level 4.",
+      "wordKeys": []
+    },
+    {
+      "id": "outcome-reference-1",
+      "level": 1,
+      "title": "Reference for the level outcome",
+      "structureFocus": "Full sentences",
+      "rationale": "Outcome-aligned reference progression.",
+      "wordKeys": [
+        "tōku",
+        "au",
+        "ahau",
+        "koe",
+        "ia",
+        "tōu",
+        "tōna",
+        "ngā",
+        "te",
+        "tāku",
+        "tāu",
+        "tāna",
+        "he",
+        "āku",
+        "wai"
+      ]
+    },
+    {
+      "id": "outcome-reference-2",
+      "level": 2,
+      "title": "Reference for the level outcome",
+      "structureFocus": "Full sentences",
+      "rationale": "Outcome-aligned reference progression.",
+      "wordKeys": [
+        "tēnei",
+        "ēnei",
+        "tēnā",
+        "ēnā",
+        "tāua",
+        "māua",
+        "tērā",
+        "ērā",
+        "kōrua",
+        "rāua",
+        "tō",
+        "ō",
+        "tātou",
+        "mātou",
+        "koutou",
+        "rātou",
+        "tētahi",
+        "ētahi",
+        "aha",
+        "taku",
+        "aku",
+        "tana",
+        "ana"
+      ]
+    },
+    {
+      "id": "outcome-reference-3",
+      "level": 3,
+      "title": "Reference for the level outcome",
+      "structureFocus": "Full sentences",
+      "rationale": "Outcome-aligned reference progression.",
+      "wordKeys": [
+        "ōku",
+        "āu",
+        "ōu",
+        "āna",
+        "ōna",
+        "tēhea",
+        "ēhea"
+      ]
+    },
+    {
+      "id": "outcome-reference-4",
+      "level": 4,
+      "title": "Reference for the level outcome",
+      "structureFocus": "Full sentences",
+      "rationale": "Outcome-aligned reference progression.",
+      "wordKeys": []
     }
   ],
   "vocabulary": [
@@ -719,7 +868,8 @@
         6
       ],
       "groupIds": [
-        "reference-5"
+        "reference-5",
+        "outcome-reference-2"
       ],
       "frequencyRank": 32,
       "lexemeId": "1931",
@@ -739,7 +889,8 @@
         6
       ],
       "groupIds": [
-        "reference-5"
+        "reference-5",
+        "outcome-reference-2"
       ],
       "frequencyRank": 69,
       "lexemeId": "2422",
@@ -751,14 +902,17 @@
     {
       "key": "tēnā",
       "word": "tēnā",
-      "firstProposedLevel": 3,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
         4,
         5,
         6
       ],
       "groupIds": [
-        "reference-6"
+        "reference-6",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 73,
       "lexemeId": "1932",
@@ -770,14 +924,17 @@
     {
       "key": "ēnā",
       "word": "ēnā",
-      "firstProposedLevel": 3,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
         4,
         5,
         6
       ],
       "groupIds": [
-        "reference-6"
+        "reference-6",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 836,
       "lexemeId": "2424",
@@ -789,14 +946,17 @@
     {
       "key": "tērā",
       "word": "tērā",
-      "firstProposedLevel": 3,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
         4,
         5,
         6
       ],
       "groupIds": [
-        "reference-6"
+        "reference-6",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": null,
       "lexemeId": null,
@@ -808,14 +968,17 @@
     {
       "key": "ērā",
       "word": "ērā",
-      "firstProposedLevel": 3,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
         4,
         5,
         6
       ],
       "groupIds": [
-        "reference-6"
+        "reference-6",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 182,
       "lexemeId": "2425",
@@ -827,13 +990,17 @@
     {
       "key": "tētahi",
       "word": "tētahi",
-      "firstProposedLevel": 4,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
+        4,
         5,
         6
       ],
       "groupIds": [
-        "reference-7"
+        "reference-7",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 24,
       "lexemeId": "1939",
@@ -845,13 +1012,17 @@
     {
       "key": "ētahi",
       "word": "ētahi",
-      "firstProposedLevel": 4,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
+        4,
         5,
         6
       ],
       "groupIds": [
-        "reference-7"
+        "reference-7",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": null,
       "lexemeId": null,
@@ -863,12 +1034,18 @@
     {
       "key": "āku",
       "word": "āku",
-      "firstProposedLevel": 5,
+      "firstProposedLevel": 1,
       "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
         6
       ],
       "groupIds": [
-        "reference-9"
+        "reference-9",
+        "reference-completion-3",
+        "outcome-reference-1"
       ],
       "frequencyRank": 541,
       "lexemeId": "2396",
@@ -880,8 +1057,11 @@
     {
       "key": "tā",
       "word": "tā",
-      "firstProposedLevel": 6,
-      "revisitLevels": [],
+      "firstProposedLevel": 4,
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "reference-10"
       ],
@@ -895,8 +1075,11 @@
     {
       "key": "ā",
       "word": "ā",
-      "firstProposedLevel": 6,
-      "revisitLevels": [],
+      "firstProposedLevel": 4,
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "reference-10"
       ],
@@ -910,10 +1093,17 @@
     {
       "key": "ō",
       "word": "ō",
-      "firstProposedLevel": 6,
-      "revisitLevels": [],
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "reference-10"
+        "reference-10",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 50,
       "lexemeId": "2428",
@@ -934,7 +1124,9 @@
         6
       ],
       "groupIds": [
-        "reference-4"
+        "reference-4",
+        "reference-completion-1",
+        "outcome-reference-1"
       ],
       "frequencyRank": 1,
       "lexemeId": "1708",
@@ -955,7 +1147,9 @@
         6
       ],
       "groupIds": [
-        "reference-4"
+        "reference-4",
+        "reference-completion-1",
+        "outcome-reference-1"
       ],
       "frequencyRank": 9,
       "lexemeId": "158",
@@ -968,7 +1162,13 @@
       "key": "ko",
       "word": "ko",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -991,7 +1191,9 @@
         6
       ],
       "groupIds": [
-        "reference-1"
+        "reference-1",
+        "reference-completion-1",
+        "outcome-reference-1"
       ],
       "frequencyRank": 15,
       "lexemeId": "346",
@@ -1012,7 +1214,9 @@
         6
       ],
       "groupIds": [
-        "reference-1"
+        "reference-1",
+        "reference-completion-1",
+        "outcome-reference-1"
       ],
       "frequencyRank": 33,
       "lexemeId": "544",
@@ -1024,14 +1228,17 @@
     {
       "key": "rātou",
       "word": "rātou",
-      "firstProposedLevel": 3,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
         4,
         5,
         6
       ],
       "groupIds": [
-        "reference-3"
+        "reference-3",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 35,
       "lexemeId": "1555",
@@ -1052,7 +1259,9 @@
         6
       ],
       "groupIds": [
-        "reference-1"
+        "reference-1",
+        "reference-completion-1",
+        "outcome-reference-1"
       ],
       "frequencyRank": 36,
       "lexemeId": "67",
@@ -1065,7 +1274,13 @@
       "key": "whanaunga",
       "word": "whanaunga",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1088,7 +1303,9 @@
         6
       ],
       "groupIds": [
-        "reference-1"
+        "reference-1",
+        "reference-completion-1",
+        "outcome-reference-1"
       ],
       "frequencyRank": 43,
       "lexemeId": "5",
@@ -1100,14 +1317,17 @@
     {
       "key": "tātou",
       "word": "tātou",
-      "firstProposedLevel": 3,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
         4,
         5,
         6
       ],
       "groupIds": [
-        "reference-3"
+        "reference-3",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 53,
       "lexemeId": "1915",
@@ -1120,7 +1340,13 @@
       "key": "tamariki",
       "word": "tamariki",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1135,7 +1361,13 @@
       "key": "tangata",
       "word": "tangata",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1149,14 +1381,17 @@
     {
       "key": "koutou",
       "word": "koutou",
-      "firstProposedLevel": 3,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
         4,
         5,
         6
       ],
       "groupIds": [
-        "reference-3"
+        "reference-3",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 77,
       "lexemeId": "604",
@@ -1176,7 +1411,9 @@
         6
       ],
       "groupIds": [
-        "reference-2"
+        "reference-2",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 93,
       "lexemeId": "945",
@@ -1189,7 +1426,13 @@
       "key": "pāpā",
       "word": "pāpā",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1204,7 +1447,13 @@
       "key": "whānau",
       "word": "whānau",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1219,7 +1468,13 @@
       "key": "ingoa",
       "word": "ingoa",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1234,7 +1489,13 @@
       "key": "tāngata",
       "word": "tāngata",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1249,7 +1510,13 @@
       "key": "tama",
       "word": "tama",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1264,7 +1531,13 @@
       "key": "matua",
       "word": "matua",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1279,7 +1552,13 @@
       "key": "kuia",
       "word": "kuia",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1301,7 +1580,9 @@
         6
       ],
       "groupIds": [
-        "reference-2"
+        "reference-2",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 207,
       "lexemeId": "708",
@@ -1321,7 +1602,9 @@
         6
       ],
       "groupIds": [
-        "reference-2"
+        "reference-2",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": 217,
       "lexemeId": "1919",
@@ -1334,7 +1617,13 @@
       "key": "whaea",
       "word": "whaea",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1349,7 +1638,13 @@
       "key": "mātua",
       "word": "mātua",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1364,7 +1659,13 @@
       "key": "koroua",
       "word": "koroua",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1379,7 +1680,13 @@
       "key": "tamaiti",
       "word": "tamaiti",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1394,7 +1701,13 @@
       "key": "mokopuna",
       "word": "mokopuna",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1409,7 +1722,13 @@
       "key": "tuakana",
       "word": "tuakana",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1424,7 +1743,13 @@
       "key": "tūpuna",
       "word": "tūpuna",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1439,7 +1764,13 @@
       "key": "tungāne",
       "word": "tungāne",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1454,7 +1785,13 @@
       "key": "teina",
       "word": "teina",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1469,7 +1806,13 @@
       "key": "tuahine",
       "word": "tuahine",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1484,7 +1827,13 @@
       "key": "whakapapa",
       "word": "whakapapa",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1499,7 +1848,13 @@
       "key": "tamāhine",
       "word": "tamāhine",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1513,14 +1868,17 @@
     {
       "key": "mātou",
       "word": "mātou",
-      "firstProposedLevel": 3,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
         4,
         5,
         6
       ],
       "groupIds": [
-        "reference-3"
+        "reference-3",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": null,
       "lexemeId": "942",
@@ -1541,7 +1899,9 @@
         6
       ],
       "groupIds": [
-        "reference-4"
+        "reference-4",
+        "reference-completion-1",
+        "outcome-reference-1"
       ],
       "frequencyRank": null,
       "lexemeId": "1024",
@@ -1561,7 +1921,9 @@
         6
       ],
       "groupIds": [
-        "reference-2"
+        "reference-2",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": null,
       "lexemeId": "1556",
@@ -1574,7 +1936,13 @@
       "key": "tuākana",
       "word": "tuākana",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-1"
       ],
@@ -1589,7 +1957,13 @@
       "key": "kei",
       "word": "kei",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1605,7 +1979,11 @@
       "word": "roto",
       "firstProposedLevel": 1,
       "revisitLevels": [
-        2
+        2,
+        3,
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L1-2",
@@ -1622,7 +2000,13 @@
       "key": "reira",
       "word": "reira",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1638,7 +2022,11 @@
       "word": "whare",
       "firstProposedLevel": 1,
       "revisitLevels": [
-        4
+        2,
+        3,
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L1-2",
@@ -1655,7 +2043,13 @@
       "key": "kura",
       "word": "kura",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1670,7 +2064,13 @@
       "key": "wāhi",
       "word": "wāhi",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1686,7 +2086,11 @@
       "word": "waka",
       "firstProposedLevel": 1,
       "revisitLevels": [
-        4
+        2,
+        3,
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L1-2",
@@ -1703,7 +2107,13 @@
       "key": "iwi",
       "word": "iwi",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1719,7 +2129,11 @@
       "word": "whenua",
       "firstProposedLevel": 1,
       "revisitLevels": [
-        4
+        2,
+        3,
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L1-2",
@@ -1736,7 +2150,13 @@
       "key": "kāinga",
       "word": "kāinga",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1751,7 +2171,13 @@
       "key": "moana",
       "word": "moana",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1766,7 +2192,13 @@
       "key": "awa",
       "word": "awa",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1781,7 +2213,13 @@
       "key": "hea",
       "word": "hea",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1796,7 +2234,13 @@
       "key": "maunga",
       "word": "maunga",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1811,7 +2255,13 @@
       "key": "marae",
       "word": "marae",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1826,7 +2276,13 @@
       "key": "rohe",
       "word": "rohe",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1841,7 +2297,13 @@
       "key": "hapū",
       "word": "hapū",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1856,7 +2318,13 @@
       "key": "tari",
       "word": "tari",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -1872,7 +2340,11 @@
       "word": "nō",
       "firstProposedLevel": 1,
       "revisitLevels": [
-        4
+        2,
+        3,
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L1-2",
@@ -1889,7 +2361,10 @@
       "key": "mā",
       "word": "mā",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -1904,7 +2379,13 @@
       "key": "nui",
       "word": "nui",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-3"
       ],
@@ -1919,7 +2400,13 @@
       "key": "rākau",
       "word": "rākau",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-3"
       ],
@@ -1934,7 +2421,13 @@
       "key": "roa",
       "word": "roa",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-3"
       ],
@@ -1949,7 +2442,12 @@
       "key": "ika",
       "word": "ika",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -1964,7 +2462,13 @@
       "key": "iti",
       "word": "iti",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-3"
       ],
@@ -1978,12 +2482,12 @@
     {
       "key": "pukapuka",
       "word": "pukapuka",
-      "firstProposedLevel": 1,
+      "firstProposedLevel": 4,
       "revisitLevels": [
-        4
+        5,
+        6
       ],
       "groupIds": [
-        "L1-3",
         "L4-3"
       ],
       "frequencyRank": 178,
@@ -1997,7 +2501,13 @@
       "key": "pepa",
       "word": "pepa",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-3"
       ],
@@ -2012,7 +2522,13 @@
       "key": "poto",
       "word": "poto",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-3"
       ],
@@ -2026,11 +2542,9 @@
     {
       "key": "pene",
       "word": "pene",
-      "firstProposedLevel": 1,
+      "firstProposedLevel": null,
       "revisitLevels": [],
-      "groupIds": [
-        "L1-3"
-      ],
+      "groupIds": [],
       "frequencyRank": 576,
       "lexemeId": "1201",
       "dictionarySenseCount": 0,
@@ -2042,7 +2556,13 @@
       "key": "kākano",
       "word": "kākano",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-3"
       ],
@@ -2058,7 +2578,11 @@
       "word": "pai",
       "firstProposedLevel": 1,
       "revisitLevels": [
-        5
+        2,
+        3,
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L1-3",
@@ -2075,7 +2599,13 @@
       "key": "rua",
       "word": "rua",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2090,7 +2620,13 @@
       "key": "tekau",
       "word": "tekau",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2105,7 +2641,13 @@
       "key": "kotahi",
       "word": "kotahi",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2120,7 +2662,13 @@
       "key": "toru",
       "word": "toru",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2135,7 +2683,13 @@
       "key": "rau",
       "word": "rau",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2150,7 +2704,13 @@
       "key": "tahi",
       "word": "tahi",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2165,7 +2725,13 @@
       "key": "maha",
       "word": "maha",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2180,7 +2746,13 @@
       "key": "rima",
       "word": "rima",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2195,7 +2767,13 @@
       "key": "whā",
       "word": "whā",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2210,7 +2788,13 @@
       "key": "ono",
       "word": "ono",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2225,7 +2809,13 @@
       "key": "waru",
       "word": "waru",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2240,7 +2830,13 @@
       "key": "iwa",
       "word": "iwa",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2255,7 +2851,13 @@
       "key": "tokorua",
       "word": "tokorua",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2270,7 +2872,13 @@
       "key": "mano",
       "word": "mano",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2285,7 +2893,13 @@
       "key": "whitu",
       "word": "whitu",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2300,7 +2914,13 @@
       "key": "tokomaha",
       "word": "tokomaha",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2315,7 +2935,13 @@
       "key": "tokotoru",
       "word": "tokotoru",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2330,7 +2956,13 @@
       "key": "kāorekau",
       "word": "kāorekau",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4"
       ],
@@ -2346,7 +2978,11 @@
       "word": "mahi",
       "firstProposedLevel": 1,
       "revisitLevels": [
-        2
+        2,
+        3,
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L1-5",
@@ -2363,7 +2999,13 @@
       "key": "ākonga",
       "word": "ākonga",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-5"
       ],
@@ -2378,7 +3020,13 @@
       "key": "kaiako",
       "word": "kaiako",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-5"
       ],
@@ -2393,7 +3041,13 @@
       "key": "kaimahi",
       "word": "kaimahi",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-5"
       ],
@@ -2407,11 +3061,9 @@
     {
       "key": "kaiwhakahaere",
       "word": "kaiwhakahaere",
-      "firstProposedLevel": 1,
+      "firstProposedLevel": null,
       "revisitLevels": [],
-      "groupIds": [
-        "L1-5"
-      ],
+      "groupIds": [],
       "frequencyRank": 625,
       "lexemeId": "410",
       "dictionarySenseCount": 0,
@@ -2422,11 +3074,9 @@
     {
       "key": "kaitātari",
       "word": "kaitātari",
-      "firstProposedLevel": 1,
+      "firstProposedLevel": null,
       "revisitLevels": [],
-      "groupIds": [
-        "L1-5"
-      ],
+      "groupIds": [],
       "frequencyRank": null,
       "lexemeId": null,
       "dictionarySenseCount": 0,
@@ -2437,11 +3087,9 @@
     {
       "key": "kaitohutohu",
       "word": "kaitohutohu",
-      "firstProposedLevel": 1,
+      "firstProposedLevel": null,
       "revisitLevels": [],
-      "groupIds": [
-        "L1-5"
-      ],
+      "groupIds": [],
       "frequencyRank": null,
       "lexemeId": null,
       "dictionarySenseCount": 0,
@@ -2454,7 +3102,11 @@
       "word": "e",
       "firstProposedLevel": 1,
       "revisitLevels": [
-        2
+        2,
+        3,
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L1-4",
@@ -2471,7 +3123,13 @@
       "key": "ngahere",
       "word": "ngahere",
       "firstProposedLevel": 1,
-      "revisitLevels": [],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-2"
       ],
@@ -2486,7 +3144,12 @@
       "key": "i",
       "word": "i",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2501,7 +3164,12 @@
       "key": "ki",
       "word": "ki",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2516,7 +3184,12 @@
       "key": "ka",
       "word": "ka",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2531,9 +3204,15 @@
       "key": "ana",
       "word": "ana",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L2-1"
+        "L2-1",
+        "outcome-reference-2"
       ],
       "frequencyRank": 11,
       "lexemeId": "27",
@@ -2546,7 +3225,12 @@
       "key": "me",
       "word": "me",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2561,7 +3245,12 @@
       "key": "kua",
       "word": "kua",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2576,7 +3265,12 @@
       "key": "haere",
       "word": "haere",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2591,7 +3285,12 @@
       "key": "hoki",
       "word": "hoki",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2607,6 +3306,9 @@
       "word": "kōrero",
       "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
+        4,
+        5,
         6
       ],
       "groupIds": [
@@ -2624,7 +3326,12 @@
       "key": "noho",
       "word": "noho",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2639,7 +3346,12 @@
       "key": "kite",
       "word": "kite",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2654,7 +3366,12 @@
       "key": "tū",
       "word": "tū",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2669,7 +3386,12 @@
       "key": "titiro",
       "word": "titiro",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2684,7 +3406,12 @@
       "key": "rere",
       "word": "rere",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2699,7 +3426,12 @@
       "key": "tīmata",
       "word": "tīmata",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2714,7 +3446,12 @@
       "key": "waiata",
       "word": "waiata",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2729,7 +3466,12 @@
       "key": "tākaro",
       "word": "tākaro",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2744,7 +3486,12 @@
       "key": "hanga",
       "word": "hanga",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2759,7 +3506,12 @@
       "key": "mutu",
       "word": "mutu",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2774,7 +3526,12 @@
       "key": "moe",
       "word": "moe",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2789,7 +3546,12 @@
       "key": "karanga",
       "word": "karanga",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2804,7 +3566,12 @@
       "key": "oma",
       "word": "oma",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2819,7 +3586,12 @@
       "key": "tuhi",
       "word": "tuhi",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2834,7 +3606,12 @@
       "key": "ako",
       "word": "ako",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2849,7 +3626,12 @@
       "key": "kata",
       "word": "kata",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2864,7 +3646,12 @@
       "key": "whakarongo",
       "word": "whakarongo",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2879,7 +3666,12 @@
       "key": "hoko",
       "word": "hoko",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2894,7 +3686,12 @@
       "key": "hīkoi",
       "word": "hīkoi",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2909,7 +3706,12 @@
       "key": "pānui",
       "word": "pānui",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2924,7 +3726,12 @@
       "key": "kanikani",
       "word": "kanikani",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2939,7 +3746,12 @@
       "key": "kaukau",
       "word": "kaukau",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2954,7 +3766,12 @@
       "key": "inu",
       "word": "inu",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -2970,7 +3787,10 @@
       "word": "kai",
       "firstProposedLevel": 2,
       "revisitLevels": [
-        4
+        3,
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L2-1",
@@ -2987,7 +3807,12 @@
       "key": "miraka",
       "word": "miraka",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3002,7 +3827,12 @@
       "key": "hēki",
       "word": "hēki",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3017,7 +3847,12 @@
       "key": "parāoa",
       "word": "parāoa",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3032,7 +3867,12 @@
       "key": "tina",
       "word": "tina",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3047,7 +3887,12 @@
       "key": "heihei",
       "word": "heihei",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3062,7 +3907,12 @@
       "key": "mīti",
       "word": "mīti",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3077,7 +3927,12 @@
       "key": "parakuihi",
       "word": "parakuihi",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3092,7 +3947,12 @@
       "key": "āporo",
       "word": "āporo",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3107,7 +3967,12 @@
       "key": "kūmara",
       "word": "kūmara",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3122,7 +3987,12 @@
       "key": "huawhenua",
       "word": "huawhenua",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3137,7 +4007,12 @@
       "key": "kaihapa",
       "word": "kaihapa",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3152,7 +4027,12 @@
       "key": "kawhe",
       "word": "kawhe",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3167,7 +4047,12 @@
       "key": "raihi",
       "word": "raihi",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-2"
       ],
@@ -3181,10 +4066,18 @@
     {
       "key": "wai",
       "word": "wai",
-      "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "firstProposedLevel": 1,
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L2-2"
+        "L2-2",
+        "reference-completion-1",
+        "outcome-reference-1"
       ],
       "frequencyRank": null,
       "lexemeId": "2063",
@@ -3197,7 +4090,12 @@
       "key": "atu",
       "word": "atu",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3212,7 +4110,12 @@
       "key": "mai",
       "word": "mai",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3227,7 +4130,12 @@
       "key": "rā",
       "word": "rā",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3242,7 +4150,12 @@
       "key": "taha",
       "word": "taha",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3257,7 +4170,12 @@
       "key": "muri",
       "word": "muri",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3272,7 +4190,12 @@
       "key": "mua",
       "word": "mua",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3287,7 +4210,12 @@
       "key": "raro",
       "word": "raro",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3302,7 +4230,12 @@
       "key": "pō",
       "word": "pō",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3317,7 +4250,12 @@
       "key": "tata",
       "word": "tata",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3332,7 +4270,12 @@
       "key": "waho",
       "word": "waho",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3347,7 +4290,12 @@
       "key": "marama",
       "word": "marama",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3362,7 +4310,12 @@
       "key": "ata",
       "word": "ata",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3377,7 +4330,12 @@
       "key": "waenganui",
       "word": "waenganui",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3392,7 +4350,12 @@
       "key": "tawhiti",
       "word": "tawhiti",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3407,7 +4370,12 @@
       "key": "wiki",
       "word": "wiki",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3422,7 +4390,12 @@
       "key": "ahiahi",
       "word": "ahiahi",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3437,7 +4410,12 @@
       "key": "āpōpō",
       "word": "āpōpō",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3452,7 +4430,12 @@
       "key": "ināianei",
       "word": "ināianei",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3467,7 +4450,12 @@
       "key": "inanahi",
       "word": "inanahi",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3482,7 +4470,12 @@
       "key": "runga",
       "word": "runga",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3497,7 +4490,12 @@
       "key": "tau",
       "word": "tau",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-3"
       ],
@@ -3512,7 +4510,12 @@
       "key": "whai",
       "word": "whai",
       "firstProposedLevel": 2,
-      "revisitLevels": [],
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L2-1"
       ],
@@ -3527,7 +4530,11 @@
       "key": "kia",
       "word": "kia",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3542,7 +4549,11 @@
       "key": "anō",
       "word": "anō",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3557,7 +4568,13 @@
       "key": "kore",
       "word": "kore",
       "firstProposedLevel": 1,
-      "revisitLevels": [2, 3, 4, 5, 6],
+      "revisitLevels": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L1-4",
         "L3-1"
@@ -3573,7 +4590,11 @@
       "key": "mōhio",
       "word": "mōhio",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3588,7 +4609,11 @@
       "key": "kāore",
       "word": "kāore",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3603,7 +4628,11 @@
       "key": "tika",
       "word": "tika",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3618,7 +4647,11 @@
       "key": "pātai",
       "word": "pātai",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3633,7 +4666,11 @@
       "key": "rongo",
       "word": "rongo",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3648,7 +4685,11 @@
       "key": "hiahia",
       "word": "hiahia",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3663,7 +4704,11 @@
       "key": "whakautu",
       "word": "whakautu",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3678,7 +4723,11 @@
       "key": "āe",
       "word": "āe",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3693,7 +4742,11 @@
       "key": "āwhina",
       "word": "āwhina",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3708,7 +4761,11 @@
       "key": "ehara",
       "word": "ehara",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3723,7 +4780,11 @@
       "key": "pīrangi",
       "word": "pīrangi",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3738,7 +4799,11 @@
       "key": "mataku",
       "word": "mataku",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3753,7 +4818,11 @@
       "key": "mārama",
       "word": "mārama",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3768,7 +4837,11 @@
       "key": "hē",
       "word": "hē",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3783,7 +4856,11 @@
       "key": "raruraru",
       "word": "raruraru",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3798,7 +4875,11 @@
       "key": "mamae",
       "word": "mamae",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3813,7 +4894,11 @@
       "key": "kāo",
       "word": "kāo",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3828,7 +4913,11 @@
       "key": "matekai",
       "word": "matekai",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3843,7 +4932,11 @@
       "key": "ngenge",
       "word": "ngenge",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3858,7 +4951,11 @@
       "key": "hiainu",
       "word": "hiainu",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3873,7 +4970,11 @@
       "key": "māuiui",
       "word": "māuiui",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-1"
       ],
@@ -3888,7 +4989,11 @@
       "key": "tere",
       "word": "tere",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -3903,7 +5008,11 @@
       "key": "āta",
       "word": "āta",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -3918,7 +5027,11 @@
       "key": "kaua",
       "word": "kaua",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -3933,7 +5046,11 @@
       "key": "tuku",
       "word": "tuku",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -3948,7 +5065,11 @@
       "key": "tiaki",
       "word": "tiaki",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -3963,7 +5084,11 @@
       "key": "tatari",
       "word": "tatari",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -3978,7 +5103,11 @@
       "key": "tiki",
       "word": "tiki",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -3994,7 +5123,9 @@
       "word": "hoatu",
       "firstProposedLevel": 3,
       "revisitLevels": [
-        5
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L3-2",
@@ -4011,7 +5142,11 @@
       "key": "horoi",
       "word": "horoi",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4026,7 +5161,11 @@
       "key": "kawe",
       "word": "kawe",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4041,7 +5180,11 @@
       "key": "pupuri",
       "word": "pupuri",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4056,7 +5199,11 @@
       "key": "kāti",
       "word": "kāti",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4071,7 +5218,11 @@
       "key": "tango",
       "word": "tango",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4086,7 +5237,11 @@
       "key": "tūpato",
       "word": "tūpato",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4102,7 +5257,9 @@
       "word": "whakarite",
       "firstProposedLevel": 3,
       "revisitLevels": [
-        4
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L3-2",
@@ -4119,7 +5276,11 @@
       "key": "whakatā",
       "word": "whakatā",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4134,7 +5295,11 @@
       "key": "whakatika",
       "word": "whakatika",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4149,7 +5314,11 @@
       "key": "hōmai",
       "word": "hōmai",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4164,7 +5333,11 @@
       "key": "tapahi",
       "word": "tapahi",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4179,7 +5352,11 @@
       "key": "kati",
       "word": "kati",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4194,7 +5371,11 @@
       "key": "whakatuwhera",
       "word": "whakatuwhera",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-2"
       ],
@@ -4209,7 +5390,11 @@
       "key": "ringa",
       "word": "ringa",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4224,7 +5409,11 @@
       "key": "kākahu",
       "word": "kākahu",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4239,7 +5428,11 @@
       "key": "pouaka",
       "word": "pouaka",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4254,7 +5447,11 @@
       "key": "waewae",
       "word": "waewae",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4269,7 +5466,11 @@
       "key": "waea",
       "word": "waea",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4284,7 +5485,11 @@
       "key": "kanohi",
       "word": "kanohi",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4299,7 +5504,11 @@
       "key": "hū",
       "word": "hū",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4314,7 +5523,11 @@
       "key": "upoko",
       "word": "upoko",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4329,7 +5542,11 @@
       "key": "waha",
       "word": "waha",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4344,7 +5561,11 @@
       "key": "karu",
       "word": "karu",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4359,7 +5580,11 @@
       "key": "taputapu",
       "word": "taputapu",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4374,7 +5599,11 @@
       "key": "pēke",
       "word": "pēke",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4389,7 +5618,11 @@
       "key": "pōtae",
       "word": "pōtae",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4404,7 +5637,11 @@
       "key": "taringa",
       "word": "taringa",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4419,7 +5656,11 @@
       "key": "rorohiko",
       "word": "rorohiko",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4434,7 +5675,11 @@
       "key": "tēpu",
       "word": "tēpu",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4449,7 +5694,11 @@
       "key": "tūru",
       "word": "tūru",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4464,7 +5713,11 @@
       "key": "ipu",
       "word": "ipu",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4479,7 +5732,11 @@
       "key": "kūaha",
       "word": "kūaha",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4494,7 +5751,11 @@
       "key": "maripi",
       "word": "maripi",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4509,7 +5770,11 @@
       "key": "pereti",
       "word": "pereti",
       "firstProposedLevel": 3,
-      "revisitLevels": [],
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
       "groupIds": [
         "L3-3"
       ],
@@ -4525,7 +5790,9 @@
       "word": "whāia",
       "firstProposedLevel": 3,
       "revisitLevels": [
-        5
+        4,
+        5,
+        6
       ],
       "groupIds": [
         "L3-2",
@@ -4541,15 +5808,18 @@
     {
       "key": "tō",
       "word": "tō",
-      "firstProposedLevel": 3,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
         4,
         5,
         6
       ],
       "groupIds": [
+        "reference-10",
         "L3-2",
-        "reference-10"
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": null,
       "lexemeId": null,
@@ -4562,7 +5832,10 @@
       "key": "nā",
       "word": "nā",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -4577,7 +5850,10 @@
       "key": "mō",
       "word": "mō",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -4591,12 +5867,16 @@
     {
       "key": "ōna",
       "word": "ōna",
-      "firstProposedLevel": 5,
+      "firstProposedLevel": 3,
       "revisitLevels": [
+        4,
+        5,
         6
       ],
       "groupIds": [
-        "reference-9"
+        "reference-9",
+        "reference-completion-3",
+        "outcome-reference-3"
       ],
       "frequencyRank": 66,
       "lexemeId": "2438",
@@ -4608,13 +5888,18 @@
     {
       "key": "tōku",
       "word": "tōku",
-      "firstProposedLevel": 4,
+      "firstProposedLevel": 1,
       "revisitLevels": [
+        2,
+        3,
+        4,
         5,
         6
       ],
       "groupIds": [
-        "reference-8"
+        "reference-8",
+        "reference-completion-1",
+        "outcome-reference-1"
       ],
       "frequencyRank": 71,
       "lexemeId": "1975",
@@ -4626,12 +5911,16 @@
     {
       "key": "ōku",
       "word": "ōku",
-      "firstProposedLevel": 5,
+      "firstProposedLevel": 3,
       "revisitLevels": [
+        4,
+        5,
         6
       ],
       "groupIds": [
-        "reference-9"
+        "reference-9",
+        "reference-completion-3",
+        "outcome-reference-3"
       ],
       "frequencyRank": 161,
       "lexemeId": "2437",
@@ -4643,13 +5932,18 @@
     {
       "key": "tāna",
       "word": "tāna",
-      "firstProposedLevel": 4,
+      "firstProposedLevel": 1,
       "revisitLevels": [
+        2,
+        3,
+        4,
         5,
         6
       ],
       "groupIds": [
-        "reference-8"
+        "reference-8",
+        "reference-completion-3",
+        "outcome-reference-1"
       ],
       "frequencyRank": 162,
       "lexemeId": "1889",
@@ -4661,12 +5955,16 @@
     {
       "key": "aku",
       "word": "aku",
-      "firstProposedLevel": 5,
+      "firstProposedLevel": 2,
       "revisitLevels": [
+        3,
+        4,
+        5,
         6
       ],
       "groupIds": [
-        "reference-9"
+        "reference-9",
+        "outcome-reference-2"
       ],
       "frequencyRank": 204,
       "lexemeId": "24",
@@ -4678,12 +5976,16 @@
     {
       "key": "āna",
       "word": "āna",
-      "firstProposedLevel": 5,
+      "firstProposedLevel": 3,
       "revisitLevels": [
+        4,
+        5,
         6
       ],
       "groupIds": [
-        "reference-9"
+        "reference-9",
+        "reference-completion-3",
+        "outcome-reference-3"
       ],
       "frequencyRank": 223,
       "lexemeId": "2399",
@@ -4696,7 +5998,10 @@
       "key": "māku",
       "word": "māku",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -4710,13 +6015,18 @@
     {
       "key": "tōu",
       "word": "tōu",
-      "firstProposedLevel": 4,
+      "firstProposedLevel": 1,
       "revisitLevels": [
+        2,
+        3,
+        4,
         5,
         6
       ],
       "groupIds": [
-        "reference-8"
+        "reference-8",
+        "reference-completion-3",
+        "outcome-reference-1"
       ],
       "frequencyRank": 257,
       "lexemeId": "1985",
@@ -4728,13 +6038,18 @@
     {
       "key": "tāku",
       "word": "tāku",
-      "firstProposedLevel": 4,
+      "firstProposedLevel": 1,
       "revisitLevels": [
+        2,
+        3,
+        4,
         5,
         6
       ],
       "groupIds": [
-        "reference-8"
+        "reference-8",
+        "reference-completion-1",
+        "outcome-reference-1"
       ],
       "frequencyRank": 259,
       "lexemeId": "1882",
@@ -4747,7 +6062,10 @@
       "key": "nāna",
       "word": "nāna",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -4762,7 +6080,10 @@
       "key": "māna",
       "word": "māna",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -4776,13 +6097,18 @@
     {
       "key": "tāu",
       "word": "tāu",
-      "firstProposedLevel": 4,
+      "firstProposedLevel": 1,
       "revisitLevels": [
+        2,
+        3,
+        4,
         5,
         6
       ],
       "groupIds": [
-        "reference-8"
+        "reference-8",
+        "reference-completion-3",
+        "outcome-reference-1"
       ],
       "frequencyRank": 356,
       "lexemeId": "1918",
@@ -4794,12 +6120,16 @@
     {
       "key": "ōu",
       "word": "ōu",
-      "firstProposedLevel": 5,
+      "firstProposedLevel": 3,
       "revisitLevels": [
+        4,
+        5,
         6
       ],
       "groupIds": [
-        "reference-9"
+        "reference-9",
+        "reference-completion-3",
+        "outcome-reference-3"
       ],
       "frequencyRank": 403,
       "lexemeId": "2441",
@@ -4811,12 +6141,16 @@
     {
       "key": "āu",
       "word": "āu",
-      "firstProposedLevel": 5,
+      "firstProposedLevel": 3,
       "revisitLevels": [
+        4,
+        5,
         6
       ],
       "groupIds": [
-        "reference-9"
+        "reference-9",
+        "reference-completion-3",
+        "outcome-reference-3"
       ],
       "frequencyRank": 446,
       "lexemeId": "2413",
@@ -4829,7 +6163,10 @@
       "key": "mōna",
       "word": "mōna",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -4844,7 +6181,10 @@
       "key": "nāku",
       "word": "nāku",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -4859,7 +6199,10 @@
       "key": "mōku",
       "word": "mōku",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -4874,7 +6217,10 @@
       "key": "nōku",
       "word": "nōku",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -4889,7 +6235,10 @@
       "key": "nōna",
       "word": "nōna",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-1"
       ],
@@ -4903,13 +6252,18 @@
     {
       "key": "tōna",
       "word": "tōna",
-      "firstProposedLevel": 4,
+      "firstProposedLevel": 1,
       "revisitLevels": [
+        2,
+        3,
+        4,
         5,
         6
       ],
       "groupIds": [
-        "reference-8"
+        "reference-8",
+        "reference-completion-3",
+        "outcome-reference-1"
       ],
       "frequencyRank": null,
       "lexemeId": "1977",
@@ -4922,7 +6276,10 @@
       "key": "kaupapa",
       "word": "kaupapa",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -4937,7 +6294,10 @@
       "key": "rangatira",
       "word": "rangatira",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -4952,7 +6312,10 @@
       "key": "rōpū",
       "word": "rōpū",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -4967,7 +6330,10 @@
       "key": "mana",
       "word": "mana",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -4982,7 +6348,10 @@
       "key": "hui",
       "word": "hui",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -4997,7 +6366,10 @@
       "key": "moni",
       "word": "moni",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5012,7 +6384,10 @@
       "key": "whakaae",
       "word": "whakaae",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5027,7 +6402,10 @@
       "key": "utu",
       "word": "utu",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5042,7 +6420,10 @@
       "key": "whakahaere",
       "word": "whakahaere",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5057,7 +6438,10 @@
       "key": "tohutohu",
       "word": "tohutohu",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5072,7 +6456,10 @@
       "key": "tautoko",
       "word": "tautoko",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5087,7 +6474,10 @@
       "key": "ture",
       "word": "ture",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5102,7 +6492,10 @@
       "key": "kaitiaki",
       "word": "kaitiaki",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5117,7 +6510,10 @@
       "key": "tono",
       "word": "tono",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5132,7 +6528,10 @@
       "key": "mahere",
       "word": "mahere",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5147,7 +6546,10 @@
       "key": "ārahi",
       "word": "ārahi",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5162,7 +6564,10 @@
       "key": "whāinga",
       "word": "whāinga",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5177,7 +6582,10 @@
       "key": "kawenga",
       "word": "kawenga",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5192,7 +6600,10 @@
       "key": "pūtea",
       "word": "pūtea",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5207,7 +6618,10 @@
       "key": "ratonga",
       "word": "ratonga",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-2"
       ],
@@ -5222,7 +6636,10 @@
       "key": "taonga",
       "word": "taonga",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-3"
       ],
@@ -5237,7 +6654,10 @@
       "key": "motokā",
       "word": "motokā",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-3"
       ],
@@ -5252,7 +6672,10 @@
       "key": "mīhini",
       "word": "mīhini",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-3"
       ],
@@ -5267,7 +6690,10 @@
       "key": "kēmu",
       "word": "kēmu",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-3"
       ],
@@ -5282,7 +6708,10 @@
       "key": "māra",
       "word": "māra",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-3"
       ],
@@ -5297,7 +6726,10 @@
       "key": "pahi",
       "word": "pahi",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-3"
       ],
@@ -5312,7 +6744,10 @@
       "key": "rongoā",
       "word": "rongoā",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-3"
       ],
@@ -5327,7 +6762,10 @@
       "key": "pahikara",
       "word": "pahikara",
       "firstProposedLevel": 4,
-      "revisitLevels": [],
+      "revisitLevels": [
+        5,
+        6
+      ],
       "groupIds": [
         "L4-3"
       ],
@@ -5342,7 +6780,9 @@
       "key": "ake",
       "word": "ake",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1",
         "L5-2"
@@ -5358,7 +6798,9 @@
       "key": "tino",
       "word": "tino",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5373,7 +6815,9 @@
       "key": "noa",
       "word": "noa",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5388,7 +6832,9 @@
       "key": "rawa",
       "word": "rawa",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5403,7 +6849,9 @@
       "key": "māmā",
       "word": "māmā",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5418,7 +6866,9 @@
       "key": "kaha",
       "word": "kaha",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5433,7 +6883,9 @@
       "key": "rerekē",
       "word": "rerekē",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5448,7 +6900,9 @@
       "key": "wera",
       "word": "wera",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5463,7 +6917,9 @@
       "key": "ātaahua",
       "word": "ātaahua",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5478,7 +6934,9 @@
       "key": "mahana",
       "word": "mahana",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5493,7 +6951,9 @@
       "key": "rawe",
       "word": "rawe",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5508,7 +6968,9 @@
       "key": "whānui",
       "word": "whānui",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5523,7 +6985,9 @@
       "key": "uaua",
       "word": "uaua",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5538,7 +7002,9 @@
       "key": "taumaha",
       "word": "taumaha",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5553,7 +7019,9 @@
       "key": "ngāwari",
       "word": "ngāwari",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5568,7 +7036,9 @@
       "key": "teitei",
       "word": "teitei",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5583,7 +7053,9 @@
       "key": "ōrite",
       "word": "ōrite",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5598,7 +7070,9 @@
       "key": "makariri",
       "word": "makariri",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5613,7 +7087,9 @@
       "key": "maroke",
       "word": "maroke",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5628,7 +7104,9 @@
       "key": "whāiti",
       "word": "whāiti",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5643,7 +7121,9 @@
       "key": "mātao",
       "word": "mātao",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5658,7 +7138,9 @@
       "key": "mākū",
       "word": "mākū",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5673,7 +7155,9 @@
       "key": "hōhonu",
       "word": "hōhonu",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-1"
       ],
@@ -5688,7 +7172,9 @@
       "key": "tonu",
       "word": "tonu",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5703,7 +7189,9 @@
       "key": "ai",
       "word": "ai",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5718,7 +7206,9 @@
       "key": "taea",
       "word": "taea",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5733,7 +7223,9 @@
       "key": "anake",
       "word": "anake",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5748,7 +7240,9 @@
       "key": "whakamātau",
       "word": "whakamātau",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5763,7 +7257,9 @@
       "key": "pakari",
       "word": "pakari",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5778,7 +7274,9 @@
       "key": "māia",
       "word": "māia",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5793,7 +7291,9 @@
       "key": "pūkenga",
       "word": "pūkenga",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5808,7 +7308,9 @@
       "key": "whakamātautau",
       "word": "whakamātautau",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5823,7 +7325,9 @@
       "key": "auau",
       "word": "auau",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5839,7 +7343,9 @@
       "key": "katoa",
       "word": "katoa",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5854,7 +7360,9 @@
       "key": "whakaharatau",
       "word": "whakaharatau",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -5869,7 +7377,9 @@
       "key": "kitea",
       "word": "kitea",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -5884,7 +7394,9 @@
       "key": "tuhia",
       "word": "tuhia",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -5899,7 +7411,9 @@
       "key": "hangaia",
       "word": "hangaia",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -5914,7 +7428,9 @@
       "key": "tukuna",
       "word": "tukuna",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -5929,7 +7445,9 @@
       "key": "tangohia",
       "word": "tangohia",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -5944,7 +7462,9 @@
       "key": "tukua",
       "word": "tukua",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -5959,7 +7479,9 @@
       "key": "kawea",
       "word": "kawea",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -5974,7 +7496,9 @@
       "key": "horoia",
       "word": "horoia",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -5989,7 +7513,9 @@
       "key": "kīia",
       "word": "kīia",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -6004,7 +7530,9 @@
       "key": "whakatuwheratia",
       "word": "whakatuwheratia",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -6019,7 +7547,9 @@
       "key": "hei",
       "word": "hei",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-2"
       ],
@@ -6034,7 +7564,9 @@
       "key": "hora",
       "word": "hora",
       "firstProposedLevel": 5,
-      "revisitLevels": [],
+      "revisitLevels": [
+        6
+      ],
       "groupIds": [
         "L5-3"
       ],
@@ -6153,10 +7685,17 @@
     {
       "key": "aha",
       "word": "aha",
-      "firstProposedLevel": 6,
-      "revisitLevels": [],
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
       "groupIds": [
-        "L6-1"
+        "L6-1",
+        "reference-completion-2",
+        "outcome-reference-2"
       ],
       "frequencyRank": null,
       "lexemeId": "2",
@@ -6644,6 +8183,86 @@
       "status": "draft-needs-sense-and-form-review",
       "selectedSenseId": null,
       "countsTowardApprovedTarget": false
+    },
+    {
+      "key": "taku",
+      "word": "taku",
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false,
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "outcome-reference-2"
+      ]
+    },
+    {
+      "key": "tana",
+      "word": "tana",
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false,
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "firstProposedLevel": 2,
+      "revisitLevels": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "outcome-reference-2"
+      ]
+    },
+    {
+      "key": "tēhea",
+      "word": "tēhea",
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false,
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "reference-completion-3",
+        "outcome-reference-3"
+      ]
+    },
+    {
+      "key": "ēhea",
+      "word": "ēhea",
+      "status": "draft-needs-sense-and-form-review",
+      "selectedSenseId": null,
+      "countsTowardApprovedTarget": false,
+      "frequencyRank": null,
+      "lexemeId": null,
+      "dictionarySenseCount": 0,
+      "firstProposedLevel": 3,
+      "revisitLevels": [
+        4,
+        5,
+        6
+      ],
+      "groupIds": [
+        "reference-completion-3",
+        "outcome-reference-3"
+      ]
     }
   ],
   "constructionExpressions": [
@@ -6990,7 +8609,6 @@
     "kāri",
     "rino",
     "whakawhiti",
-    "tēhea",
     "tētehi",
     "hākinakina",
     "mahue",

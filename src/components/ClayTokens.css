@@ -1,0 +1,18 @@
+/* Shared matte clay, lit from the upper left. Also available to portalled dialogs. */
+.soft-clay, .word-support {
+  --soft-cream: #fffefa;
+  --soft-blue: #e1f5ff;
+  --soft-leaf: #e7f7c5;
+  --soft-sun: #fff0bd;
+  --soft-accent: #197aa7;
+  --soft-accent-light: #c9edff;
+  --soft-ink: #244a62;
+  --soft-raised: inset 2px 3px 5px #ffffffb0, inset -2px -3px 5px #5288ac12,
+    0 2px 2px #3b71911c, 2px 5px 7px #3b71911f, 5px 10px 15px #3b71910c;
+  --soft-panel: inset 3px 4px 7px #ffffffa0, inset -3px -4px 7px #5288ac10,
+    0 2px 3px #3b719118, 3px 7px 12px #3b71911c, 7px 14px 22px #3b71910c;
+  --soft-small: inset 1px 2px 3px #ffffffb0, inset -1px -2px 3px #5288ac12,
+    0 1px 2px #3b71911c, 1px 3px 4px #3b71911c;
+  --soft-pressed: inset 2px 3px 5px #ffffff60, inset -2px -2px 5px #5288ac12,
+    0 1px 2px #3b71911c, 1px 2px 3px #3b719114;
+}

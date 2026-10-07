@@ -1,0 +1,10 @@
+.ka-twilight-cursor{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:100;contain:strict}
+@media(pointer:fine){
+ .lesson-workspace.classroom-identity{cursor:url('../../assets/cursors/ka-piki.svg') 3 2,default}
+ .lesson-workspace.classroom-identity :is(button:not(:disabled),a,summary){cursor:url('../../assets/cursors/ka-piki-select.svg') 3 2,pointer}
+ .lesson-workspace.classroom-identity :is(input,textarea,[contenteditable=true]){cursor:text}
+}
+@media(prefers-reduced-motion:reduce),(pointer:coarse){.ka-twilight-cursor{display:none}}
+.ka-twilight-feather{position:fixed;left:0;top:0;width:32px;height:32px;z-index:101;pointer-events:none;opacity:0;transform-origin:3px 2px;filter:drop-shadow(0 1px 1px #071b3655);will-change:transform}
+@media(pointer:fine){.lesson-workspace.classroom-identity.has-twilight-pointer,.lesson-workspace.classroom-identity.has-twilight-pointer :is(button:not(:disabled),a,summary){cursor:none}}
+@media(prefers-reduced-motion:reduce),(pointer:coarse){.ka-twilight-feather{display:none}}

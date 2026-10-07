@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { germinatePlate } from '../lib/connectorPresentation/plateGermination'
+import { requestRails } from '../lib/connectorPresentation/engine'
 
 // A floor-light material, not a grammatical connector or a new rākau shape.
 export default function PuzzleFloorGlow({ active }: { active: boolean }) {
@@ -7,12 +7,7 @@ export default function PuzzleFloorGlow({ active }: { active: boolean }) {
   useEffect(() => {
     const context = canvas.current?.getContext('2d')
     if (!context) return
-    const width = 240, height = 180
-    const plate = new Uint8ClampedArray(width * height * 4)
-    for (let y=0;y<height;y++) for(let x=0;x<width;x++) {
-      if (((x-120)/95)**2+((y-133)/28)**2 <= 1) plate[(y*width+x)*4+3]=255
-    }
-    const growth = germinatePlate(plate,width,height,{x:120,y:133})
+    const { width, height, plate, growth } = requestRails({ kind: 'floor-light' })
     const start = performance.now()
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches
     let frame = 0

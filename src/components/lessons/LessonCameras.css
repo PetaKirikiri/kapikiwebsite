@@ -1,0 +1,38 @@
+/* The camera row reserves video space even before anyone turns a camera on. */
+.lesson-workspace.classroom-identity .lesson-jitsi-panel {flex-shrink:0;overflow:hidden}
+.lesson-workspace.classroom-identity .lesson-camera-strip {overflow:visible}
+.lesson-camera-gallery {
+ display:flex;gap:12px;width:max-content;max-width:100%;min-width:0;margin-inline:auto;
+ overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;
+ scrollbar-width:thin;padding:4px;box-sizing:border-box;
+}
+.lesson-workspace.classroom-identity .lesson-camera-gallery .lesson-camera-tile {
+ --lesson-camera-height:clamp(90px,8.4375vw,117px);
+ display:flex;flex:0 0 auto;width:auto;min-width:0;height:var(--lesson-camera-height);aspect-ratio:4/3;
+ flex-direction:column;justify-content:center;align-items:center;gap:0;padding:0;
+ overflow:hidden;scroll-snap-align:start;
+}
+.lesson-workspace.classroom-identity .lesson-camera-gallery .lesson-camera-tile>svg {
+ width:28px;height:28px;margin-bottom:16px;opacity:.65;
+}
+.lesson-workspace.classroom-identity .lesson-camera-gallery .lesson-camera-tile>span {
+ position:absolute;bottom:8px;left:9px;max-width:calc(100% - 18px);box-sizing:border-box;
+ padding:3px 7px;border-radius:5px;background:#f8fbf5cc;color:#365767;
+ font:500 12px/1.3 'Avenir Next','Trebuchet MS',sans-serif;
+}
+.lesson-workspace.classroom-identity .lesson-camera-gallery .lesson-camera-tile.is-hand-raised {
+ outline:2px solid #bd9044;outline-offset:-2px;
+}
+.lesson-camera-tile>video {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+.lesson-camera-preview-label {position:absolute;top:6px;left:7px;padding:2px 5px;border-radius:4px;background:#183740b8;color:white;font:500 10px/1.4 'Avenir Next',sans-serif}
+.lesson-camera-stop {position:absolute;bottom:7px;right:7px;display:grid;place-items:center;width:24px;height:24px;border-radius:5px;background:#183740b8;color:white}
+.lesson-camera-stop svg {width:16px;height:16px}
+.lesson-workspace.classroom-identity .lesson-camera-gallery button.lesson-camera-tile {cursor:pointer}
+.lesson-workspace.classroom-identity .lesson-camera-gallery button.lesson-camera-tile:focus-visible {outline:2px solid #294e66;outline-offset:2px}
+.lesson-workspace.classroom-identity .lesson-camera-gallery .lesson-camera-tile.has-video>span {max-width:calc(100% - 50px)}
+.lesson-camera-error {margin:0;padding:0 14px 8px;color:#783e24;font:12px/1.4 'Avenir Next',sans-serif}
+@media(max-width:650px) {
+ .lesson-camera-gallery {gap:8px}
+ .lesson-workspace.classroom-identity .lesson-camera-gallery .lesson-camera-tile {--lesson-camera-height:76.5px}
+ .lesson-workspace.classroom-identity .lesson-camera-gallery .lesson-camera-tile>svg {width:24px;height:24px}
+}

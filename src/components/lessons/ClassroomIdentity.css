@@ -1,0 +1,74 @@
+/* Classroom hierarchy: quiet tools, ordered lesson navigation, one teaching surface. */
+.lesson-workspace.classroom-identity{--class-ink:#214b3d;--class-paper:#f5f4ec;--class-line:#d4dace;--class-accent:#b79b58}
+.lesson-workspace.classroom-identity .lesson-workspace-classroom{background:var(--class-paper)}
+.lesson-workspace.classroom-identity .lesson-camera-strip{position:relative;justify-content:center;align-items:center;padding:6px 80px 6px 44px;background:#193d33;border-color:#34584b;gap:6px}
+.lesson-workspace.classroom-identity .lesson-camera-tile{flex-direction:row;gap:7px;height:38px;width:104px;border:1px solid #ffffff24;border-radius:5px;background:#315749;color:#f0f3e6}
+.lesson-workspace.classroom-identity .lesson-camera-tile.is-empty{background:#ffffff06;color:#b9cbbf;border-color:#ffffff12}
+.lesson-workspace.classroom-identity .lesson-camera-tile:hover{background:#436b56;border-color:#c6b376}
+.lesson-workspace.classroom-identity .lesson-camera-tile.is-hand-raised{background:#675629;color:#fff4cf;border-color:#c6b376}
+.lesson-workspace.classroom-identity .lesson-chat-toggle{position:absolute;right:12px;display:flex;align-items:center;gap:7px;padding:7px 9px;border:1px solid #ffffff35;border-radius:5px;background:transparent;color:#e9efdf;cursor:pointer;font:12px Arial,sans-serif}
+.lesson-workspace.classroom-identity .lesson-chat-toggle[aria-expanded=true]{background:#ffffff13}
+.lesson-workspace.classroom-identity .lesson-workspace-classroom>.lesson-sidebar-toggle{top:10px;color:#e9efdf}
+.lesson-workspace.classroom-identity .lesson-workspace-surface{grid-template-columns:minmax(0,1fr) clamp(220px,22vw,290px)}
+.lesson-workspace.classroom-identity.is-chat-collapsed .lesson-workspace-surface{grid-template-columns:minmax(0,1fr)}
+.lesson-workspace.classroom-identity .lesson-chat-panel{display:flex;min-height:0;min-width:0}
+.lesson-workspace.classroom-identity .lesson-chat-panel[hidden]{display:none}
+.lesson-workspace.classroom-identity .lesson-workspace-chat{width:100%;margin:0;border:0;border-left:1px solid var(--class-line);border-radius:0;padding:16px;background:#eef0e7;box-sizing:border-box}
+.lesson-workspace.classroom-identity .lesson-workspace-chat .lesson-chat-section-title{margin:0 0 16px;padding:8px 0 16px;background:transparent;color:var(--class-ink);border-bottom:1px solid #cdd6c7;font-size:14px}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs){display:grid;grid-template-columns:repeat(6,minmax(0,1fr));padding:0 16px;gap:0;min-height:66px;background:var(--class-paper);border-bottom:1px solid var(--class-line)}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs)>button{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 6px;border:0;border-radius:0;background:transparent;color:#657269;box-shadow:none;font-size:12px}
+.lesson-workspace.classroom-identity .lesson-stage-number{font:12px Georgia,serif;color:#879487;border:1px solid #c7d0c1;border-radius:50%;width:25px;height:25px;display:grid;place-items:center;flex-shrink:0}
+.lesson-workspace.classroom-identity .lesson-stage-label{text-align:left;white-space:nowrap}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs)>button[aria-selected=true]{color:var(--class-ink);box-shadow:inset 0 -3px var(--class-ink)}
+.lesson-workspace.classroom-identity .lesson-section-tabs>button[aria-selected=true] .lesson-stage-number{background:var(--class-ink);color:#f2edcf;border-color:var(--class-ink)}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs)>button:hover{background:#e6eadf}
+.lesson-workspace.classroom-identity .lesson-stage-frame{background:var(--class-paper)}
+.lesson-workspace.classroom-identity .lesson-overview,.lesson-workspace.classroom-identity .lesson-teaching-card,.lesson-workspace.classroom-identity .lesson-big-words-list{margin:18px;border-radius:8px;border:1px solid var(--class-line);box-shadow:0 3px 12px #234b3e06;background:#fdfcf7}
+.lesson-workspace.classroom-identity .lesson-overview .lesson-overview-header{padding:24px 28px;min-height:0;border-bottom:3px solid var(--class-accent)}
+.lesson-workspace.classroom-identity .lesson-overview h1{font-size:clamp(26px,2.8vw,42px);line-height:1.12;max-width:calc(100% - 110px)}
+.lesson-workspace.classroom-identity .ka-overview-companion{width:auto;height:100%;aspect-ratio:1;right:22px;bottom:0}
+.lesson-workspace.classroom-identity .lesson-overview-sections{grid-template-columns:1.15fr 1fr;padding:22px 26px;gap:30px}
+.lesson-workspace.classroom-identity .lesson-overview-sections section.lesson-overview-purpose,.lesson-workspace.classroom-identity .lesson-overview-sections section.lesson-overview-goal{padding:0;border:0;border-radius:0;background:transparent}
+.lesson-workspace.classroom-identity .lesson-overview-sections h2{font-size:15px;line-height:1.45;margin-bottom:16px}
+.lesson-workspace.classroom-identity .lesson-overview-flow{list-style:none;counter-reset:lesson-flow;padding:0}
+.lesson-workspace.classroom-identity .lesson-overview-flow li{counter-increment:lesson-flow;position:relative;padding:0;margin:0;border-top:1px solid #dde2d6}
+.lesson-workspace.classroom-identity .lesson-overview-flow li:last-child{border-bottom:1px solid #dde2d6}
+.lesson-workspace.classroom-identity .lesson-overview-flow button{position:relative;width:100%;padding:12px 22px 12px 36px;text-decoration:none;font-size:13px;line-height:1.35}
+.lesson-workspace.classroom-identity .lesson-overview-flow button:before{content:counter(lesson-flow,decimal-leading-zero);position:absolute;left:0;top:14px;color:#7c8d7c;font:12px Georgia,serif}
+.lesson-workspace.classroom-identity .lesson-overview-flow button span{color:#687669;font-size:12px;font-weight:400;margin-top:3px}
+.lesson-workspace.classroom-identity .lesson-overview-flow button i{position:absolute;right:2px;top:18px;font-style:normal;color:#758875}
+.lesson-workspace.classroom-identity .lesson-overview-flow button:hover{background:#ecf0e5}
+.lesson-workspace.classroom-identity .lesson-overview-goal{border-left:1px solid #d7dece!important;padding-left:26px!important}
+.lesson-workspace.classroom-identity .lesson-overview-outcomes{list-style:none;padding:0;font-size:14px;line-height:1.5}
+.lesson-workspace.classroom-identity .lesson-overview-outcomes li{position:relative;padding:0 0 0 18px;margin:0 0 18px}
+.lesson-workspace.classroom-identity .lesson-overview-outcomes li:before{content:'';position:absolute;left:0;top:7px;width:6px;height:6px;border:1px solid #93a282;transform:rotate(45deg)}
+.lesson-workspace.classroom-identity .lesson-overview-goal .lesson-overview-outcomes+p{font-size:12px;color:#76806f;border-color:#d7dece}
+.lesson-workspace.classroom-identity .lesson-teaching-card{padding:26px}
+.lesson-workspace.classroom-identity .lesson-teaching-eyebrow{color:#697d61;font-size:11px;letter-spacing:.06em}
+.lesson-workspace.classroom-identity .lesson-word-showcase{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.lesson-workspace.classroom-identity .lesson-word-showcase>div,.lesson-workspace.classroom-identity .lesson-word-showcase>button{background:#f0f0e5;border:1px solid #d9decc;border-radius:6px;padding:20px 14px}
+.lesson-workspace.classroom-identity .lesson-vibe-examples{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;padding:0;border:1px solid #ccd5c3;background:#ccd5c3;border-radius:6px;overflow:hidden}
+.lesson-workspace.classroom-identity .lesson-vibe-examples p{padding:20px 16px;margin:0;background:#edf1e5;font-size:17px;line-height:1.6}
+.lesson-workspace.classroom-identity .lesson-vibe-examples strong{color:#214b3d;border-bottom:2px solid #b79b58}
+.lesson-workspace.classroom-identity .lesson-course-path{border-radius:6px;background:#264e40}
+.lesson-workspace.classroom-identity button:focus-visible{outline:2px solid #b79b58;outline-offset:-2px}
+@media(max-width:1000px){.lesson-workspace.classroom-identity .lesson-stage-number{display:none}.lesson-workspace.classroom-identity .lesson-overview-sections{gap:18px;padding:18px}.lesson-workspace.classroom-identity .lesson-overview-goal{padding-left:18px!important}.lesson-workspace.classroom-identity .lesson-word-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-height:740px){.lesson-workspace.classroom-identity .lesson-overview .lesson-overview-header{padding:16px 22px}.lesson-workspace.classroom-identity .lesson-overview-sections{padding:16px 20px;gap:22px}.lesson-workspace.classroom-identity .lesson-overview-flow button{padding-top:9px;padding-bottom:9px}.lesson-workspace.classroom-identity .lesson-overview-outcomes li{margin-bottom:12px}.lesson-workspace.classroom-identity .lesson-overview,.lesson-workspace.classroom-identity .lesson-teaching-card{margin:12px}.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs){min-height:54px}}
+@media(max-width:650px){.lesson-workspace.classroom-identity .lesson-workspace-surface{position:relative;flex:1;display:flex;min-height:0}.lesson-workspace.classroom-identity .lesson-workspace-canvas{flex:1;min-height:0}.lesson-workspace.classroom-identity .lesson-chat-panel{position:absolute;inset:0 0 0 auto;width:min(290px,90%);z-index:5;box-shadow:-8px 0 24px #193d3320}.lesson-workspace.classroom-identity .lesson-workspace-chat{max-height:none;min-height:0}.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs){padding:0 4px;overflow:auto;grid-template-columns:repeat(6,minmax(70px,1fr))}.lesson-workspace.classroom-identity .lesson-overview-sections{grid-template-columns:1fr}.lesson-workspace.classroom-identity .lesson-overview-goal{border-left:0!important;padding-left:0!important}.lesson-workspace.classroom-identity .lesson-vibe-examples{grid-template-columns:1fr}.lesson-workspace.classroom-identity .lesson-camera-tile{width:70px;font-size:10px}}
+
+/* Interaction belongs to the lesson, not just its illustrated surroundings. */
+.lesson-vibe-explorer{margin:22px 0;border:1px solid #cbd5c3;border-radius:8px;background:#edf1e5;overflow:hidden}
+.lesson-vibe-switches{display:flex;gap:8px;padding:14px 18px;border-bottom:1px solid #d3ddca}
+.lesson-vibe-switches button{padding:9px 20px;border:1px solid #b8c6ad;border-radius:6px;background:transparent;color:#365640;font:600 15px Arial,sans-serif;cursor:pointer;transition:background .18s,color .18s,transform .18s}
+.lesson-vibe-switches button[aria-pressed=true]{background:#214b3d;color:#fff0ce;border-color:#214b3d;box-shadow:inset 0 -2px #c9ae66}
+.lesson-workspace.classroom-identity .lesson-vibe-sentence{padding:24px;margin:0;font:400 clamp(22px,2.7vw,36px)/1.6 Georgia,serif;color:#214b3d}
+.lesson-vibe-sentence strong{display:inline-block;min-width:3.4em;text-align:center;color:#214b3d;border-bottom:3px solid #b79b58;background:#dde6cd;border-radius:4px 4px 0 0;animation:lesson-word-arrive .28s ease-out}
+.lesson-workspace.classroom-identity .lesson-word-showcase>button{transition:transform .18s,background .18s,box-shadow .18s,border-color .18s;position:relative}
+.lesson-workspace.classroom-identity .lesson-word-showcase>button[aria-pressed=true]{background:#e2e9d5;border-color:#55774b;box-shadow:inset 0 -3px #b79b58,0 4px 12px #214b3d16}
+.lesson-word-purpose{display:block;margin-top:12px;font:400 13px/1.4 Arial,sans-serif;color:#50634a;animation:lesson-word-arrive .22s ease-out}
+.lesson-workspace.classroom-identity .lesson-stage-content> :not([hidden]){animation:lesson-panel-arrive .26s ease-out}
+.lesson-workspace.classroom-identity .lesson-overview-flow button{transition:background .18s,transform .18s}
+@media(hover:hover){.lesson-workspace.classroom-identity .lesson-overview-flow button:hover{transform:translateX(4px)}.lesson-workspace.classroom-identity .lesson-word-showcase>button:hover{transform:translateY(-3px);box-shadow:0 6px 14px #214b3d14}.lesson-vibe-switches button:hover{transform:translateY(-2px)}}
+@keyframes lesson-word-arrive{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes lesson-panel-arrive{from{opacity:.5;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.lesson-workspace.classroom-identity .lesson-stage-content> :not([hidden]),.lesson-vibe-sentence strong,.lesson-word-purpose{animation:none}.lesson-workspace.classroom-identity .lesson-overview-flow button,.lesson-workspace.classroom-identity .lesson-word-showcase>button,.lesson-vibe-switches button{transition:none;transform:none!important}}

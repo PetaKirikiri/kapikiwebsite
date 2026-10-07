@@ -1,0 +1,338 @@
+@import "../ClayTokens.css";
+
+/* Classroom material system. All layers share upper-left light and matte colour.
+   Keep this scope above legacy classroom themes; engine-owned rail art is untouched. */
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay {
+  --clay-lift: var(--soft-raised);
+  --clay-panel: var(--soft-panel);
+  --clay-selected: var(--soft-raised);
+  --class-ink: var(--soft-ink);
+  --class-paper: var(--soft-cream);
+  padding: 0; gap: 12px; background: #fbfdff; color: var(--soft-ink);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay.is-sidebar-collapsed { padding: 0; gap: 0; }
+.ka-living-world.ka-sky-world .soft-clay :is(button,a,summary,input) {
+  -webkit-tap-highlight-color: transparent;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-workspace-sidebar,.lesson-workspace-classroom) {
+  background: var(--soft-blue); border: 0; border-radius: 32px;
+  box-shadow: var(--soft-panel); padding: 18px; overflow: hidden;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-classroom { padding: 14px; background: #fbfdff; border-radius: 0; box-shadow: none; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-sidebar-brand-row { gap: 10px; margin-bottom: 22px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-brand {
+  border-radius: 18px; padding: 10px 8px; background: var(--soft-cream); box-shadow: var(--soft-small);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar summary {
+  margin: 12px 3px; padding: 12px; border: 0; border-radius: 17px;
+  background: var(--soft-accent-light); box-shadow: var(--soft-small);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar details>div { gap: 12px; padding: 4px 4px 10px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar details a {
+  padding: 12px 16px; margin: 0; border: 0; border-radius: 18px;
+  background: var(--soft-cream); box-shadow: var(--soft-small); color: var(--soft-ink);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar details a[aria-current=page] {
+  background: var(--soft-accent-light); color: var(--soft-ink); box-shadow: var(--soft-raised); transform: none;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-workspace-back,.lesson-sidebar-toggle,.lesson-chat-toggle) {
+  background: var(--soft-cream); border: 0; border-radius: 17px;
+  box-shadow: var(--soft-raised); color: var(--soft-ink);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-sidebar-toggle { min-width: 32px; min-height: 34px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-back { margin: 14px 3px 5px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-jitsi-panel {
+  margin: 0 0 18px; padding: 4px; border: 0; border-radius: 26px;
+  background: var(--soft-blue); box-shadow: var(--soft-raised);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-strip {
+  padding: 10px 88px 10px 40px; background: none; border: 0; box-shadow: none;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery { padding: 4px 7px 10px; gap: 16px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-camera-tile,.lesson-camera-tile.is-empty) {
+  background: #ffffff; border: 0; border-radius: 22px; box-shadow: var(--soft-raised);
+  color: var(--soft-ink);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery .lesson-camera-tile>svg {
+  opacity: 1; background: var(--soft-blue); padding: 9px; border-radius: 15px;
+  width: 24px; height: 24px; box-shadow: var(--soft-small); margin-bottom: 15px;
+  stroke-width: 2; color: #3c7b9d; box-sizing: content-box;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery .lesson-camera-tile>span {
+  background: var(--soft-cream); border-radius: 9px; padding: 4px 9px; box-shadow: var(--soft-small);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-tile.is-hand-raised { background: var(--soft-sun); }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-toggle { padding: 10px 12px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-toggle[aria-expanded=true] { background: var(--soft-accent-light); color: #155b80; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-surface { padding: 0; gap: 12px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-panel { padding: 0 0 4px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-canvas {
+  border: 0; border-radius: 26px; background: transparent; box-shadow: none; overflow: visible;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs) {
+  flex-shrink: 0; margin: 0 0 18px; padding: 12px 12px 15px; gap: 12px;
+  border: 0; border-radius: 25px; background: var(--soft-blue); box-shadow: var(--soft-raised);
+  grid-template-columns: repeat(var(--lesson-tab-count, 6),minmax(0,1fr)); overflow-x: auto;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs)>button {
+  border: 0; border-radius: 18px; padding: 10px 8px; min-height: 58px;
+  gap: 7px; background: var(--soft-cream); box-shadow: var(--soft-raised);
+  color: var(--soft-ink); font-weight: 600; transform: none;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs)>button[aria-selected=true] {
+  background: var(--soft-accent-light); color: var(--soft-ink); box-shadow: var(--soft-raised); transform: none;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs .lesson-stage-number,
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs>button[aria-selected=true] .lesson-stage-number {
+  display: grid; width: 32px; height: 32px; flex: 0 0 32px; border: 0;
+  background: none; padding: 0; box-shadow: none; transform: none;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-emblem { width: 100%; height: 100%; filter: none; transform: none; overflow: visible; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-wrap-time { display: none; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-stage-frame,.lesson-stage-world) {
+  background: transparent; border: 0; padding: 0; scrollbar-color: #91b7c8 #d2e7ee;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-stage-frame {
+  padding: 3px 5px 12px; align-items: flex-start; container: lesson-stage / size;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-stage-content { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-overview,.lesson-teaching-card,.lesson-big-words-list) {
+  background: var(--soft-cream); border: 0; border-radius: 28px;
+  box-shadow: var(--soft-panel); margin: 0 0 12px; padding: 24px; color: var(--soft-ink);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview:not([hidden]) { padding: 12px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview .lesson-overview-header {
+  min-height: 105px; margin: 0; padding: 18px 24px; border: 0; border-radius: 22px; box-shadow: var(--soft-raised);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-body {
+  padding: 22px 18px; gap: 28px; align-items: center; align-content: center; flex: 0 0 auto;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-path { gap: 18px; grid-template-rows: repeat(3,minmax(90px,1fr)); }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-path button {
+  border: 0; border-radius: 23px; padding: 20px; min-height: 90px;
+  background: var(--stage-light,var(--soft-blue));
+  box-shadow: var(--soft-raised); font-size: clamp(18px,2.35cqi,29px); gap: 20px;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-symbol {
+  width: 56px; height: 56px; flex: 0 0 56px; border-radius: 18px; padding: 8px; box-sizing: border-box;
+  background: color-mix(in srgb,var(--stage-bright) 45%,#ffffff); box-shadow: var(--soft-small);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-takeaway {
+  border: 0; border-radius: 25px; padding: 28px; background: var(--soft-leaf); box-shadow: var(--soft-raised);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-takeaway p { font-size: clamp(25px,3.2cqi,42px); }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-body h2 { color: #466271; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-footer {
+  border: 0; gap: 14px; margin: 8px 18px 0; padding: 12px 0 10px;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-footer p {
+  border-radius: 13px; background: transparent; padding: 9px 12px; box-shadow: none;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-footer button {
+  border: 0; border-radius: 14px; background: var(--soft-sun); padding: 12px 14px; box-shadow: var(--soft-small); text-decoration: none;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-chat {
+  background: #ffffff; border: 0; border-radius: 27px; padding: 12px;
+  margin: 3px 3px 8px 0; box-shadow: var(--soft-panel); color: var(--soft-ink);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-section-title {
+  background: var(--soft-blue); border: 0; border-radius: 16px; box-shadow: var(--soft-small); padding: 10px 12px; margin: 0 0 8px;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-section-title::before { box-shadow: inset 1px 1px 2px #ffffff80,1px 2px 2px #38505a40; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-messages { padding: 4px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-chat-prompt,.lesson-chat-answer,.lesson-answer-hint,.lesson-chat-feedback) {
+  border: 0; border-radius: 17px; padding: 8px 10px; margin: 8px 0;
+  background: #e4f7dd; box-shadow: var(--soft-small); color: var(--soft-ink);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-prompt { background: var(--soft-cream); }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-input-controls {
+  display: flex; align-items: center; gap: 8px;
+  border: 0; border-radius: 23px; padding: 8px; background: var(--soft-blue); box-shadow: var(--soft-raised);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-tools { border: 0; padding: 0; margin: 0; flex: 0 0 auto; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-tools button {
+  border-radius: 13px; width: 40px; height: 40px; background: var(--soft-sun); box-shadow: var(--soft-small);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-tools button[aria-pressed=true] { background: #ffe4a8; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-chat input {
+  background: #ffffff; border: 0; border-radius: 14px; padding: 10px;
+  box-shadow: var(--soft-small); color: var(--soft-ink); min-width: 0;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-compose { gap: 8px; flex: 1; min-width: 0; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-compose input { height: 40px; font-size: 14px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-input-area { margin-top: 8px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-chat-input-area>input { box-sizing: border-box; width: 100%; height: 38px; margin-bottom: 8px; font-size: 14px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-compose button {
+  border: 0; border-radius: 14px; width: 40px; min-width: 40px; height: 40px; padding: 0; background: var(--soft-accent); color: #ffffff; box-shadow: var(--soft-small);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-word-showcase>button,.lesson-vibe-switches button,.lesson-exercise-tabs button,.lesson-question-navigation button,.lesson-breakout-actions button,.lesson-breakout-blank) {
+  border: 0; border-radius: 17px; background: var(--soft-cream); color: var(--soft-ink); box-shadow: var(--soft-raised);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-vibe-explorer,.lesson-exercise-tabs,.lesson-course-path,.lesson-breakout-line) {
+  border: 0; border-radius: 23px; background: var(--soft-blue); box-shadow: var(--soft-raised); padding: 20px; margin-block: 20px;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-word-showcase { gap: 18px; padding: 8px 3px 16px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-word-showcase>button { min-height: 90px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-word-showcase>button,.lesson-vibe-switches button)[aria-pressed=true],
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-exercise-tabs button[aria-selected=true] {
+  background: var(--soft-accent-light); box-shadow: var(--soft-raised); color: var(--soft-ink);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-vibe-switches { padding: 0 0 10px; gap: 14px; border: 0; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-vibe-switches button { min-height: 42px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-vibe-sentence strong {
+  display: inline-block; padding: 3px 12px; border: 0; border-radius: 12px;
+  background: var(--soft-cream); box-shadow: var(--soft-small); margin-inline: 3px;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-course-path { background: var(--soft-blue); }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-breakout-line { background: var(--soft-blue); }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-breakout-blank { padding: 7px 12px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-question-status button,.lesson-question-replay,.lesson-breakout-actions a) {
+  display: inline-block; padding: 9px 13px; border: 0; border-radius: 13px;
+  background: var(--soft-cream); color: var(--soft-ink); box-shadow: var(--soft-small); text-decoration: none;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-question-status,.lesson-camera-error) {
+  background: var(--soft-sun); padding: 12px 14px; border: 0; border-radius: 15px;
+  box-shadow: var(--soft-small); color: #67583e;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-question-navigation { border: 0; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(button,a,summary,input):focus-visible { outline: 3px solid #36748a; outline-offset: 4px; }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(button,a,summary) { transition: transform .14s ease,box-shadow .14s ease,background-color .14s ease; }
+@media(hover:hover) {
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-preview-path button,.lesson-section-tabs>button,.lesson-word-showcase>button,.lesson-workspace-sidebar a,.lesson-workspace-sidebar summary,.lesson-chat-toggle):hover {
+    transform: translateY(-2px); box-shadow: var(--soft-panel);
+  }
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay button:active:not(:disabled) { transform: translateY(1px); box-shadow: var(--soft-pressed); }
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay button:disabled { opacity: .65; }
+.ka-living-world.ka-sky-world:has(.soft-clay) .ka-motion-toggle {
+  background: #ffffff; border: 0; box-shadow: inset 2px 2px 4px #fff9,inset -2px -3px 5px #5288ac12,1px 3px 5px #3b719124;
+}
+@media(max-width:1100px) {
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay { padding: 0; gap: 12px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-classroom { padding: 10px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs) { gap: 10px; padding: 10px 10px 14px; }
+}
+@media(min-width:651px) and (max-width:1400px) {
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs) { gap: 8px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs)>button { gap: 4px; padding-inline: 5px; font-size: 11px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs .lesson-stage-number,
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs>button[aria-selected=true] .lesson-stage-number { width: 28px; height: 28px; flex-basis: 28px; }
+}
+@media(max-width:650px) {
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs) { grid-template-columns: repeat(var(--lesson-tab-count, 6),minmax(116px,1fr)); }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar { padding: 18px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-classroom { padding: 8px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-jitsi-panel { margin-bottom: 14px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-strip { padding-left: 34px; padding-right: 76px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery { gap: 12px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery .lesson-camera-tile>svg { width: 20px; height: 20px; padding: 6px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview:not([hidden]) { padding: 8px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-body { padding: 16px 12px; grid-template-columns: 1fr; gap: 22px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-path { grid-template-rows: repeat(3,minmax(80px,auto)); gap: 15px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-path button { padding: 16px; min-height: 80px; font-size: 19px; gap: 14px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-symbol { width: 48px; height: 48px; flex-basis: 48px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-takeaway { padding: 22px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-footer { margin: 0 12px; padding-bottom: 14px; align-items: flex-start; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-chat { margin: 5px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(button,a,summary) { transition: none; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(button,a,summary):hover { transform: none; }
+}
+
+/* Fit the classroom to its viewport before applying the stage's modest scale adjustment. */
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery .lesson-camera-tile {
+  --lesson-camera-height: clamp(68px,10vh,108px);
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview .lesson-overview-header {
+  min-height: 88px; padding: 14px 22px;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-body {
+  padding: 18px; gap: 24px;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-path {
+  grid-template-rows: repeat(3,minmax(64px,auto)); gap: 14px;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-path button {
+  min-height: 64px; padding: 14px 18px;
+}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-footer {
+  margin-top: 0; padding-top: 4px;
+}
+@container lesson-stage (max-height:560px) {
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-overview,.lesson-teaching-card,.lesson-big-words-list) { padding: 16px; margin-bottom: 6px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview:not([hidden]) { padding: 10px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview .lesson-overview-header { min-height: 76px; padding: 12px 18px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview .lesson-overview-header h1 { font-size: 28px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-body { padding: 14px; gap: 20px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-body h2 { margin-bottom: 10px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-path { gap: 12px; grid-template-rows: repeat(3,minmax(56px,auto)); }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-path button { min-height: 56px; padding: 12px 16px; gap: 14px; font-size: clamp(18px,2.3cqi,26px); }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-symbol { width: 44px; height: 44px; flex-basis: 44px; padding: 6px; border-radius: 14px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-takeaway { padding: 22px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-takeaway p { font-size: clamp(24px,3cqi,36px); }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-footer { margin-inline: 14px; padding-bottom: 6px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-footer button { padding: 9px 12px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay :is(.lesson-vibe-explorer,.lesson-course-path,.lesson-breakout-line) { padding: 16px; margin-block: 12px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-teaching-card h1 { margin-bottom: 12px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-teaching-card .lesson-vibe-sentence { padding-block: 12px; }
+}
+@media(max-height:760px) {
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay { padding: 0; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-classroom { padding: 10px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-jitsi-panel { margin-bottom: 12px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-strip { padding-block: 5px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery { padding-block: 3px 7px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs) { margin-bottom: 12px; padding-block: 8px 11px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs)>button { min-height: 44px; padding-block: 6px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-sidebar-brand-row { margin-bottom: 12px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar details>div { gap: 8px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar details a { padding-block: 8px; }
+}
+@media(max-width:650px) {
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs) { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; padding: 8px 8px 11px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs)>button { min-height: 36px; padding: 4px; gap: 3px; font-size: 11px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs .lesson-stage-number,
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs>button[aria-selected=true] .lesson-stage-number { width: 22px; height: 22px; flex-basis: 22px; }
+}
+@media(max-width:650px) and (max-height:700px) {
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery .lesson-camera-tile { --lesson-camera-height: 58px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery .lesson-camera-tile>svg { width: 16px; height: 16px; padding: 4px; margin-bottom: 13px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery .lesson-camera-tile>span { bottom: 4px; padding: 2px 7px; font-size: 10px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-body { gap: 8px; padding: 8px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview .lesson-overview-header { min-height: 60px; padding: 8px 14px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview .lesson-overview-header h1 { font-size: 23px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview .lesson-overview-header .lesson-overview-number { margin-bottom: 4px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-body h2 { margin-bottom: 6px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-path { grid-template-rows: repeat(3,minmax(42px,auto)); gap: 6px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-path button { min-height: 42px; padding: 7px 12px; font-size: 18px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-preview-symbol { width: 34px; height: 34px; flex-basis: 34px; padding: 4px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-takeaway { padding: 10px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-takeaway p { font-size: 22px; max-width: none; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-takeaway h2 { margin-bottom: 5px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-footer { gap: 6px; margin-inline: 10px; font-size: 11px; padding-block: 0 4px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-footer :is(p,button) { padding: 6px 8px; }
+}
+
+/* Reserve classroom space for conversation; material depth stays on each surface. */
+@media(min-width:1001px) {
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay { --lesson-sidebar-width: 176px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar { padding: 12px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-brand { font-size: 22px; padding-inline: 6px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-brand .site-kapiki-logo { font-size: inherit; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-sidebar-brand-row { gap: 6px; margin-bottom: 12px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar summary { margin-block: 8px; padding: 10px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar details>div { gap: 8px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-workspace-sidebar details a { padding: 8px 12px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay:not(.is-chat-collapsed) .lesson-workspace-surface { grid-template-columns: minmax(0,1fr) clamp(280px,26vw,350px); }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-jitsi-panel { margin-bottom: 10px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-strip { padding-block: 3px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-camera-gallery { gap: 12px; padding-block: 3px 7px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs) { gap: 8px; padding: 8px 10px 11px; margin-bottom: 10px; }
+  .ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-section-tabs:not(.lesson-exercise-tabs)>button { min-height: 44px; padding-block: 6px; }
+}
+
+/* Stretch the welcome panel through the space left after the camera and tabs. */
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview:not([hidden]) {flex:1;display:flex;flex-direction:column;margin-bottom:0;box-sizing:border-box}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-body {flex:1}
+.ka-living-world.ka-sky-world .lesson-workspace.classroom-identity.soft-clay .lesson-overview-footer {flex-shrink:0}

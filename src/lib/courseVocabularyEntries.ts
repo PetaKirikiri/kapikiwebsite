@@ -13,6 +13,7 @@ export type CourseVocabularyEntry = {
   text: string
   english: string
   components: string[]
+  topics?: string[]
   functionType?: string
   category?: string
   example?: readonly [string, string]
@@ -23,7 +24,7 @@ export type CourseVocabularyEntry = {
 export function courseVocabularyEntries(level: CurriculumLevel): CourseVocabularyEntry[] {
   const entries: CourseVocabularyEntry[] = courseVocabulary(level).map(word => ({
     id: `word:${word.key}`, key: word.key, kind: 'word', text: word.word,
-    english: word.english, components: [word.word], ...pronounSupport(word.key),
+    english: word.english, components: [word.word], topics: word.topics, ...pronounSupport(word.key),
   }))
   for (const item of courseReadingLanguage(level)) {
     const word = entries.find(entry => entry.text === item.text)
@@ -37,7 +38,7 @@ export function courseVocabularyEntries(level: CurriculumLevel): CourseVocabular
     }
   }
   entries.push(...courseKiwaha(level).map(item => ({ ...item, kind: 'kiwaha' as const, id: `kiwaha:${item.id}` })))
-  if (level === 6) entries.push(...SHARED_POSSESSIVES)
+  if (level === 4) entries.push(...SHARED_POSSESSIVES)
   if (level === 1) entries.push(...LEVEL_ONE_PHRASES.map(item => ({
     ...item, id: `phrase:${item.text}`,
     kind: (item.functionType === 'Job title' ? 'word' : ['Greeting', 'Farewell'].includes(item.functionType) ? 'kiwaha' : 'phrase') as VocabularyEntryKind,

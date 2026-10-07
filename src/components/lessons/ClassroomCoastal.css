@@ -1,0 +1,84 @@
+/* Shared classroom materials: pale woven surfaces, coastal ink, restrained pattern. */
+.lesson-workspace.classroom-identity{--class-ink:#254c5b;--class-paper:#eef4f1;--class-muted:#567581;--class-accent:#387f88;--class-deep:#dce9eb;--class-line:#789da540;color:#254c5b;background:#dce9eb}
+.lesson-workspace.classroom-identity .lesson-workspace-sidebar{background:linear-gradient(160deg,#d8e9e8,#c6dce1 60%,#d5dce9);color:#254c5b;border-color:#96b6be;box-shadow:inset -1px 0 #ffffff80}
+.lesson-workspace.classroom-identity .lesson-workspace-sidebar:before{background:#477986;mask:var(--ka-taniko-pattern) center top/360px 216px repeat;filter:none;opacity:.22!important}
+.lesson-workspace.classroom-identity .lesson-workspace-sidebar :is(summary,a,.lesson-workspace-brand){color:#254c5b}
+.lesson-workspace.classroom-identity .lesson-workspace-sidebar details a[aria-current=page]{background:#f4f8f4;color:#245761;border-color:#83acb3;box-shadow:inset 3px 0 #387f88,0 2px 3px #456b7515;transform:none}
+.lesson-workspace.classroom-identity .lesson-stage-world{background:radial-gradient(ellipse at 20% 0,#f5faf5,transparent 70%),linear-gradient(120deg,#d6e7e7,#dce2ef)}
+.lesson-workspace.classroom-identity .lesson-camera-strip{background:#dce8ea;border-color:#b7cdd1}
+.lesson-workspace.classroom-identity .lesson-camera-tile,
+.lesson-workspace.classroom-identity .lesson-camera-tile.is-empty{background:#edf4f3;color:#456773;border-color:#b7cdd1;box-shadow:none}
+.lesson-workspace.classroom-identity :is(.lesson-chat-toggle,.lesson-workspace-classroom>.lesson-sidebar-toggle){color:#365e70;border-color:#99b8c2}
+.lesson-workspace.classroom-identity .lesson-chat-toggle[aria-expanded=true]{background:#d0e3e6;color:#284f60}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs){background:#e8efec;border-color:#b2c9cb;box-shadow:none}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs)>button{color:#476573;background:#f4f7f2;border-color:#c0d2d2;border-radius:4px;box-shadow:inset 0 1px white}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs)>button[aria-selected=true]{color:#254c5b;background:#d2e6e6;border-color:#8cb5bb;box-shadow:inset 0 -2px #387f88}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs)>button:hover{background:#e0ece9}
+.lesson-workspace.classroom-identity :is(.lesson-overview,.lesson-teaching-card,.lesson-big-words-list){border-radius:8px;border-color:#adc8cb;background:repeating-linear-gradient(0deg,#75959203 0 1px,transparent 1px 4px),linear-gradient(120deg,#f6f9f2,#eaf3f2 65%,#e7ecf4);box-shadow:inset 0 1px white,0 3px 0 #b5cbce,0 9px 20px #45687915}
+.lesson-workspace.classroom-identity .lesson-overview-content{background:transparent}
+.lesson-workspace.classroom-identity .lesson-overview .lesson-overview-header{border-bottom:4px solid #8ebdbf;box-shadow:none}
+.lesson-workspace.classroom-identity .lesson-overview-header:after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:4px;background:var(--ka-taniko-pattern) center/120px 72px;opacity:.6;pointer-events:none}
+.lesson-workspace.classroom-identity .lesson-word-showcase>button{border-radius:6px;background:linear-gradient(135deg,#fffef9,#e3f0f0);border-color:#bdd1d0;box-shadow:inset 0 1px white,0 3px 0 #b0c8cc,0 5px 8px #45687915}
+.lesson-workspace.classroom-identity .lesson-word-showcase>button[aria-pressed=true]{box-shadow:inset 3px 0 #387f88,0 3px 0 #a1bdc2;border-color:#57949c}
+.lesson-workspace.classroom-identity .lesson-workspace-chat{background:linear-gradient(150deg,#e8f1ed,#dce8ee);color:#365965;border-color:#b2c8cf;box-shadow:inset 1px 0 #ffffff80}
+.lesson-workspace.classroom-identity .lesson-workspace-chat .lesson-chat-section-title{color:#2e5964;border-color:#a5c0c6}
+.lesson-workspace.classroom-identity .lesson-chat-input-controls{background:#f7faf6;border-color:#aec8cd;box-shadow:inset 0 1px 3px #45687910;border-radius:6px}
+.lesson-workspace.classroom-identity .lesson-workspace-chat input{color:#2e5263}
+.lesson-workspace.classroom-identity .lesson-workspace-chat input::placeholder{color:#69848f}
+.lesson-workspace.classroom-identity .lesson-workspace-chat button{color:#367683}
+.lesson-workspace.classroom-identity .lesson-chat-prompt{background:#f6f8f1;color:#31545e;border-color:#c3d4d0}
+.lesson-workspace.classroom-identity .lesson-chat-answer{background:#cee4e5;color:#31545e}
+.lesson-workspace.classroom-identity .lesson-workspace-chat small{color:#597984}
+
+/* Coloured teaching identities on the existing light coastal surfaces. */
+.lesson-workspace.classroom-identity .lesson-section-tabs .lesson-stage-number,
+.lesson-workspace.classroom-identity .lesson-section-tabs>button[aria-selected=true] .lesson-stage-number {
+  width:26px;height:26px;flex-basis:26px;
+}
+.lesson-workspace.classroom-identity .lesson-section-tabs .lesson-emblem {width:100%;height:100%;}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs)>button {
+  gap:8px;min-height:40px;
+  background:linear-gradient(180deg,#ffffffb3,color-mix(in srgb,var(--stage-accent) 7%,#f7faf4));
+  border-color:color-mix(in srgb,var(--stage-accent) 27%,#e4eeea);
+}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs)>button[aria-selected=true] {
+  color:#254c5b;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--stage-accent) 12%,#fff),color-mix(in srgb,var(--stage-accent) 21%,#f7faf4));
+  border-color:color-mix(in srgb,var(--stage-accent) 65%,#e4eeea);
+  box-shadow:inset 0 -3px var(--stage-accent),inset 0 1px #ffffffb3;
+}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs)>button:hover {
+  background:color-mix(in srgb,var(--stage-accent) 13%,#f7faf4);
+}
+.lesson-workspace.classroom-identity .lesson-teaching-card {
+  border-top:3px solid var(--stage-accent);
+}
+.lesson-workspace.classroom-identity .lesson-teaching-eyebrow {
+  color:var(--stage-accent);
+}
+.lesson-workspace.classroom-identity .lesson-workspace-chat .lesson-chat-section-title {
+  border-bottom-color:color-mix(in srgb,var(--stage-accent) 45%,#dce9eb);
+  box-shadow:0 2px 0 -1px color-mix(in srgb,var(--stage-accent) 15%,transparent);
+}
+.lesson-workspace.classroom-identity .lesson-workspace-chat .lesson-chat-section-title:before {
+  content:'';display:inline-block;width:7px;height:7px;margin-right:8px;
+  border-radius:50%;background:var(--stage-accent);vertical-align:middle;
+}
+.lesson-workspace.classroom-identity .lesson-workspace-sidebar details a[aria-current=page] {
+  background:linear-gradient(105deg,#cae7df,#eef7ee);border-color:#74aaa0;
+  box-shadow:inset 3px 0 #2d8074,0 2px 3px #456b7515;
+}
+@media(max-width:560px) {
+  .lesson-workspace.classroom-identity .lesson-section-tabs .lesson-stage-number,
+  .lesson-workspace.classroom-identity .lesson-section-tabs>button[aria-selected=true] .lesson-stage-number {width:24px;height:24px;flex-basis:24px;}
+}
+
+/* Keep the shared tāniko visible in the open classroom space, beneath the cards. */
+.lesson-workspace.classroom-identity .lesson-stage-world::before{
+ content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background:#477986;opacity:.18;
+ mask:var(--ka-taniko-pattern) center top/360px 216px repeat;
+}
+.lesson-workspace.classroom-identity .lesson-exercise-tabs{background:#eaf2f0;border-radius:6px}
+.lesson-workspace.classroom-identity .lesson-exercise-tabs button{color:#456773}
+.lesson-workspace.classroom-identity .lesson-exercise-tabs button[aria-selected=true]{color:#fff}

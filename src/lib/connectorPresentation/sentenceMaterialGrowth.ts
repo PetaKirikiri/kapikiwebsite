@@ -1,8 +1,6 @@
 import type { presentSentence } from './engine'
 import { CONNECTOR_RAIL_LAYOUT } from './layout'
 import type { ConnectorFacePlan } from './presentation'
-import { germinatePlate } from './plateGermination'
-import { platePaintArrival } from './platePaintArrival'
 
 export type SentenceWordPlan = ReturnType<typeof presentSentence>['words'][number]
 
@@ -43,37 +41,5 @@ export function compileSentenceMaterial(word: SentenceWordPlan) {
   paint(p.face, layout.connectorCenter)
   if (p.internalMaterial) paint(p.internalMaterial.face, layout.blockWidth * p.internalMaterial.fraction)
   const artwork = ctx.getImageData(0, 0, width, height)
-  const mask = new Uint8ClampedArray(artwork.data)
-  for (let i = 3; i < mask.length; i += 4) mask[i] = mask[i] > 0 ? 255 : 0
-  // Source rasterisation can leave isolated antialias pixels along a saved
-  // curl. Only connected solid material drives growth; the existing paint
-  // arrival pass restores those exact edge pixels without new growth seeds.
-  const seen = new Uint8Array(width * height)
-  let main: number[] = []
-  for (let start = 0; start < seen.length; start++) {
-    if (seen[start] || !mask[start * 4 + 3]) continue
-    const cells = [start]; seen[start] = 1
-    for (let head = 0; head < cells.length; head++) {
-      const at = cells[head], x = at % width, y = Math.floor(at / width)
-      for (const [dx, dy] of [[-1, 0], [1, 0], [0, -1], [0, 1]]) {
-        const xx = x + dx, yy = y + dy, next = yy * width + xx
-        if (xx < 0 || xx >= width || yy < 0 || yy >= height || seen[next] || !mask[next * 4 + 3]) continue
-        seen[next] = 1; cells.push(next)
-      }
-    }
-    if (cells.length > main.length) main = cells
-  }
-  for (let i = 3; i < mask.length; i += 4) mask[i] = 0
-  for (const i of main) mask[i * 4 + 3] = 255
-  const flow = germinatePlate(mask, width, height, { x: (face / 2 + layout.slotWidth / 2) * scale, y: height - 1 })
-  const paintTime = platePaintArrival(artwork.data, width, height, flow.distances)
-  return { width, height, color, slotWidth: layout.slotWidth, overhang: face / 2,
-    frame(progress: number) {
-      const output = new ImageData(new Uint8ClampedArray(artwork.data), width, height)
-      if (progress >= 1) return output
-      const reached = Math.max(0, progress) * (paintTime.maximum + 2)
-      for (let i = 0; i < width * height; i++) output.data[i * 4 + 3] *= Math.max(0, Math.min(1, (reached - paintTime.distances[i]) / 2))
-      return output
-    },
-  }
+  return { width, height, color, slotWidth: layout.slotWidth, overhang: face / 2, artwork }
 }

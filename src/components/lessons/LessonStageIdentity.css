@@ -1,0 +1,40 @@
+/* Long, shallow navigation tabs with small shared emblems. */
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs) { grid-template-columns: repeat(var(--lesson-tab-count, 6), minmax(125px, 1fr)); gap: 6px; padding: 4px 12px; }
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs) > button {
+  width: 100%; flex-direction: row; gap: 7px; padding: 7px 12px; min-height: 36px; font-size: 12px;
+  border: 1px solid #9dbdce30; background: linear-gradient(180deg, #abc9dc12, #abc9dc06); box-shadow: inset 0 1px #d8eeff0d;
+}
+.lesson-workspace.classroom-identity .lesson-stage-number {
+  display: grid; width: 16px; height: 16px; flex: 0 0 16px;
+  background: none; border: 0; border-radius: 0; box-shadow: none; transform: none;
+}
+.lesson-workspace.classroom-identity .lesson-emblem { display: block; width: 100%; height: 100%; filter: none; transform: none; }
+.lesson-workspace.classroom-identity .lesson-section-tabs > button:hover .lesson-emblem,
+.lesson-workspace.classroom-identity .lesson-section-tabs > button[aria-selected="true"] .lesson-emblem { transform: none; }
+.lesson-workspace.classroom-identity .lesson-section-tabs > button[aria-selected="true"] .lesson-stage-number { background: none; border: 0; box-shadow: none; }
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs) > button[aria-selected="true"] {
+  background: color-mix(in srgb, var(--stage-accent) 12%, #16283c);
+  border-color: color-mix(in srgb, var(--stage-accent) 60%, transparent);
+  box-shadow: inset 0 -2px var(--stage-accent), 0 3px 8px #07132144; color: #fff;
+}
+.lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs) > button:hover { background: color-mix(in srgb, var(--stage-accent) 9%, #16283c); }
+.lesson-workspace.classroom-identity .lesson-section-tabs > button:focus-visible,
+.lesson-workspace.classroom-identity .lesson-agenda-steps button:focus-visible { outline: 2px solid var(--stage-accent); outline-offset: 2px; }
+.lesson-workspace.classroom-identity .lesson-agenda-steps button { padding-left: 64px; }
+.lesson-workspace.classroom-identity .lesson-agenda-steps button::before { content: none; }
+.lesson-workspace.classroom-identity .lesson-agenda-steps button > .lesson-overview-emblem {
+  position: absolute; left: 7px; top: 12px; width: 44px; height: 44px; margin: 0;
+}
+@media (max-width: 1000px) {
+  .lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs) > button { flex-direction: row; gap: 3px; padding: 6px; font-size: 11px; }
+  .lesson-workspace.classroom-identity .lesson-stage-number { width: 16px; height: 16px; flex-basis: 16px; }
+  .lesson-workspace.classroom-identity .lesson-stage-label { text-align: center; }
+}
+@media (max-width: 560px) {
+  .lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs) { grid-template-columns: repeat(var(--lesson-tab-count, 6), minmax(125px, 1fr)); gap: 4px; padding: 4px; }
+  .lesson-workspace.classroom-identity .lesson-section-tabs:not(.lesson-exercise-tabs) > button { padding: 4px 2px; min-width: 0; font-size: 10px; }
+  .lesson-workspace.classroom-identity .lesson-stage-number { width: 16px; height: 16px; flex-basis: 16px; }
+  .lesson-workspace.classroom-identity .lesson-stage-label { white-space: nowrap; }
+}
+
+.lesson-workspace.classroom-identity .lesson-section-tabs .lesson-wrap-time { display: inline; margin: 0 0 0 5px; font-size: 10px; }
