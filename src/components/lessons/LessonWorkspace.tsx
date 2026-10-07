@@ -248,7 +248,7 @@ export default function LessonWorkspace() {
     <section className="lesson-workspace-classroom" aria-label={title}>
       {!sidebarOpen && <button className="lesson-sidebar-toggle" type="button" aria-label={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'} title={sidebarOpen ? 'Hide lessons' : 'Show lessons'} aria-expanded={sidebarOpen} aria-controls="lesson-navigation" onClick={() => setSidebarOpen(open => !open)}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/><path d={sidebarOpen ? 'm16 9-3 3 3 3' : 'm13 9 3 3-3 3'}/></svg></button>}
 
-      <div className="lesson-jitsi-panel"><LessonCameras people={people}>
+      <div className="lesson-jitsi-panel"><LessonCameras key={roomParam ?? "local"} people={people} roomId={roomParam}>
         <button type="button" className="lesson-chat-toggle" aria-expanded={chatOpen} aria-controls="class-chat-panel" onClick={() => setChatOpen(open => !open)}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M4 4h16v12H9l-5 4V4Z"/><path d="M8 8h8M8 12h5"/></svg>Chat</button>
       </LessonCameras></div>
       <div className="lesson-workspace-surface">

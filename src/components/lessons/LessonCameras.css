@@ -23,7 +23,7 @@
 .lesson-workspace.classroom-identity .lesson-camera-gallery .lesson-camera-tile.is-hand-raised {
  outline:2px solid #bd9044;outline-offset:-2px;
 }
-.lesson-camera-tile>video {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+.lesson-camera-tile>video {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:none}
 .lesson-camera-preview-label {position:absolute;top:6px;left:7px;padding:2px 5px;border-radius:4px;background:#183740b8;color:white;font:500 10px/1.4 'Avenir Next',sans-serif}
 .lesson-camera-stop {position:absolute;bottom:7px;right:7px;display:grid;place-items:center;width:24px;height:24px;border-radius:5px;background:#183740b8;color:white}
 .lesson-camera-stop svg {width:16px;height:16px}
@@ -36,3 +36,6 @@
  .lesson-workspace.classroom-identity .lesson-camera-gallery .lesson-camera-tile {--lesson-camera-height:76.5px}
  .lesson-workspace.classroom-identity .lesson-camera-gallery .lesson-camera-tile>svg {width:24px;height:24px}
 }
+
+.lesson-camera-tile>video[data-local="true"] {transform:scaleX(-1)}
+.lesson-call-controls {display:flex;gap:8px;align-items:center;flex-shrink:0}

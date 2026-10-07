@@ -6,6 +6,7 @@ import { wordsDatabaseConnection } from './words-database.mjs'
 import { createKitchen, joinKitchen, advanceKitchen, commandKitchen } from './src/lib/kitchen/engine.mjs'
 import { randomBytes, createHash } from 'node:crypto'
 import { lessonWhiteboardRequest } from './server/lessonWhiteboard.mjs'
+import { lessonMediaRequest } from './server/lessonMedia.mjs'
 let pool
 function database() {
  if (!pool) {
@@ -63,6 +64,7 @@ export async function classroomApi(req,res) {
   }
   if(!/^[a-f0-9]{24}$/.test(id??''))throw bad('This class link is not valid.',404)
   if(action==='lesson-board') return json(200,await lessonWhiteboardRequest(db,id,hash,body))
+  if(action==='lesson-media') return json(200,await lessonMediaRequest(db,id,hash,body))
   client=await db.connect()
   await client.query('begin');await client.query("set local idle_in_transaction_session_timeout='10s'; set local lock_timeout='5s'; set local statement_timeout='10s'")
   const room=(await client.query('select * from classroom_live_room where id=$1 for update',[id])).rows[0]
