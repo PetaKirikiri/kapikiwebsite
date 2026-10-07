@@ -30,6 +30,7 @@
     },
     "api/classroom.js": {
       "maxDuration": 30,
+      "includeFiles": "src/lib/{lessons/bigWordQuestions.ts,lessons/chatAnswer.ts,busManifestContract.ts}",
       "regions": [
         "syd1"
       ]
