@@ -6,15 +6,15 @@ export const MOE_COURSE_PRICE = `${MOE_COURSE_PRICE_AMOUNT} per student`
 export const MOE_COURSE_INCLUSIONS = '10 hours of live online classes: one hour weekly for 10 weeks, plus access to the app.'
 
 export const MOE_CLASSES = [
-  { day: 'Monday', firstDate: '2026-10-12', startDate: '12 October', sessions: [
+  { day: 'Monday', firstDate: '2026-10-19', startDate: '19 October', sessions: [
     { level: 1, time: '1pm – 2pm', startHour: 13, title: 'Level 1', description: 'Introduce yourself and describe your world.' },
     { level: 2, time: '2pm – 3pm', startHour: 14, title: 'Level 2', description: 'Talk about what happens and when.' },
   ] },
-  { day: 'Tuesday', firstDate: '2026-10-13', startDate: '13 October', sessions: [
+  { day: 'Tuesday', firstDate: '2026-10-20', startDate: '20 October', sessions: [
     { level: 3, time: '1pm – 2pm', startHour: 13, title: 'Level 3', description: 'Express your needs and give instructions.' },
     { level: 4, time: '2pm – 3pm', startHour: 14, title: 'Level 4', description: 'Explain belonging, purpose and responsibility.' },
   ] },
-  { day: 'Wednesday', firstDate: '2026-10-14', startDate: '14 October', sessions: [
+  { day: 'Wednesday', firstDate: '2026-10-21', startDate: '21 October', sessions: [
     { level: 6, time: '1pm – 2pm', startHour: 13, title: 'Kōrero Club', description: 'Put your reo into conversation.' },
     { level: 5, time: '2pm – 3pm', startHour: 14, title: 'Level 5', description: 'Compare ideas and express what is possible.' },
   ] },

@@ -42,7 +42,7 @@ export default function MoeOffer({ onRegister, content, courseData }: { courseDa
             <a className="moe-offer-jump" href={content?.action?.href ?? '#moe?timetable'}>Find your level <span aria-hidden="true">→</span></a>
           </div>
           <div className="moe-intake-details" aria-label="Course dates, cost and commitment">
-            <p><span>Starts</span><strong><time dateTime="2026-10-12">12 October 2026</time></strong></p>
+            <p><span>Starts</span><strong><time dateTime={MOE_CLASSES[0].firstDate}>{MOE_CLASSES[0].startDate} 2026</time></strong></p>
             <p><span>Every course</span><strong>{MOE_COURSE_PRICE}</strong></p>
             <p><strong>1 hour weekly · 10 weeks</strong><span>10 hours live online, plus app access</span></p>
           </div>
