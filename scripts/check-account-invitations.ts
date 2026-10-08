@@ -64,6 +64,12 @@ try {
       } catch (error) { await db.query('rollback'); throw error }
       await db.query(`insert into public.kp_account_invitations(user_id,email,interest_ids,token_digest,token_type,created_at,expires_at,exchange_count,last_exchange_at)
         values($1,$2,$3,$4,'setup',now()-interval '2 years',null,30,now()-interval '1 day')`, [user.id, email, interestIds, createHash('sha256').update(token).digest('hex')])
+      // Reserve only this disposable fixture's notification as suppressed before setup.
+      // The real completion trigger then cannot queue a mail for this test account.
+      await db.query(`insert into public.kp_account_setup_notifications
+        (invitation_id,user_id,student_name,student_email,department_group,selected_level,completed_at,status,gmail_message_id)
+        select id,user_id,'Isolated account setup check',email,'QA',3,now(),'sent','test-suppressed'
+        from public.kp_account_invitations where user_id=$1`, [user.id])
       const exchange = (value: string) => exchangeAccountInvitation(value, new URL('/api/account-invitation', site).href)
       stage = `${scenario}: invitation identity and level validation`
       await assert.rejects(exchange(randomBytes(32).toString('hex')))

@@ -131,3 +131,23 @@ it('does not change a password if invitation exchange fails',async()=>{
   await expect(saveAccountInvitation(client,token,values,exchange)).rejects.toThrow('Please try again shortly.')
   expect(updateUser).not.toHaveBeenCalled()
 })
+
+it('asks for the owner notification only after completion, without sending password or student details',async()=>{
+  const request=vi.fn().mockResolvedValue({ok:true})
+  vi.stubGlobal('fetch',request)
+  Object.assign(client.auth,{getSession:vi.fn().mockResolvedValue({data:{session:{access_token:'session-only'}}})})
+  try {
+    await saveAccountInvitation(client,token,values)
+    await vi.waitFor(()=>expect(request).toHaveBeenCalledTimes(1))
+    expect(request.mock.calls[0][0]).toBe('/api/account-setup-notification')
+    expect(request.mock.calls[0][1].headers.Authorization).toBe('Bearer session-only')
+    expect(request.mock.calls[0][1].body).toBeUndefined()
+    expect(JSON.stringify(request.mock.calls)).not.toContain(values.password)
+  } finally {vi.unstubAllGlobals();delete (client.auth as unknown as Record<string,unknown>).getSession}
+})
+it('does not fail the completed setup when notification delivery is unavailable',async()=>{
+  vi.stubGlobal('fetch',vi.fn().mockRejectedValue(new Error('Offline')))
+  Object.assign(client.auth,{getSession:vi.fn().mockResolvedValue({data:{session:{access_token:'session-only'}}})})
+  try {await expect(saveAccountInvitation(client,token,values)).resolves.toBeUndefined()}
+  finally {vi.unstubAllGlobals();delete (client.auth as unknown as Record<string,unknown>).getSession}
+})

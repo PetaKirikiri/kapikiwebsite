@@ -40,3 +40,20 @@ not accept recipients, content, or arbitrary signup IDs from callers.
 If access is revoked or the refresh token expires, run the owner connection
 again and update the sensitive production environment values. Do not remove
 the previous Google client secret until all clients using it have been checked.
+
+## Account setup completion
+
+Migration `student-portal/011_account_setup_notifications.sql` queues one owner-only
+notification atomically when an invitation first completes. It snapshots the student's
+name, email, department/group, confirmed level and completion time. No password or
+setup link is stored in the notification. Existing completed invitations are not backfilled.
+
+The signed-in browser requests delivery through `/api/account-setup-notification` after
+saving; identity is verified server-side and only that user's already-queued event can
+be processed. Recipients and content cannot be supplied by the caller. Existing owner
+Gmail credentials are reused. The existing daily recovery worker also drains pending
+setup notifications; uncertain deliveries are never automatically resent.
+
+This covers completion of the personal setup form, not every later password reset or
+unrelated profile edit. Inspect `kp_account_setup_notifications` for delivery receipts
+or `owner_authorization_unavailable`. A mail failure never fails the account save.

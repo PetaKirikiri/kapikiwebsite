@@ -27,10 +27,22 @@ async function invitationIsComplete(client: SupabaseClient, token: string): Prom
   } catch { return false }
 }
 
+async function notifySetupComplete(client: SupabaseClient) {
+  try {
+    const { data } = await client.auth.getSession()
+    if (!data.session?.access_token) return
+    await fetch('/api/account-setup-notification', {
+      method: 'POST', keepalive: true, headers: { Authorization: `Bearer ${data.session.access_token}` },
+      signal: AbortSignal.timeout(15000),
+    })
+  } catch { /* The saved database notification remains queued for the recovery worker. */ }
+}
+
 async function refreshSavedAccount(client: SupabaseClient) {
   // Completion has already been confirmed by the server. A refresh failure must
   // not misreport the saved password/details as a failed submission.
   try { await client.auth.refreshSession() } catch { /* The next sign-in refreshes the profile. */ }
+  void notifySetupComplete(client)
 }
 
 export async function saveAccountInvitation(client: SupabaseClient, token: string, values: AccountSetupDetails & { password: string }, exchange = exchangeAccountInvitation) {

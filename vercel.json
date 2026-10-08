@@ -58,6 +58,12 @@
       "regions": [
         "syd1"
       ]
+    },
+    "api/account-setup-notification.js": {
+      "maxDuration": 30,
+      "regions": [
+        "syd1"
+      ]
     }
   },
   "rewrites": [
