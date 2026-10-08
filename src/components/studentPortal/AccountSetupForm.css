@@ -29,8 +29,8 @@
 .account-setup-columns legend { padding: 0; margin-bottom: 10px; font-size: 16px; font-weight: 650; }
 .account-setup-form label { display: block; margin: 8px 0 5px; font-size: 13px; font-weight: 600; }
 .account-setup-form legend + label { margin-top: 0; }
-.account-setup-form input:not([type=radio]) { display: block; width: 100%; min-height: 42px; border: 1px solid #b9cbbd; border-radius: 6px; padding: 9px 11px; font: inherit; font-size: 14px; color: #213b35; background: #fff; }
-.account-setup-form input[readonly] { background: #f4f6f2; color: #526459; }
+.account-setup-form input:not([type=radio]), .account-setup-form textarea { display: block; width: 100%; min-height: 42px; border: 1px solid #b9cbbd; border-radius: 6px; padding: 9px 11px; font: inherit; font-size: 14px; color: #213b35; background: #fff; }
+.account-setup-form textarea[readonly] { resize: none; overflow-wrap: anywhere; background: #f4f6f2; color: #526459; }
 .account-setup-form input.account-setup-missing:not([type=radio]) { border-color: #bd4941; background: #fff7f6; }
 .account-setup-form .account-setup-department-label { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .account-setup-department-label small { color: #a52e28; background: #fce9e7; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 650; }
@@ -39,7 +39,7 @@
 .account-setup-form button { border: 1px solid #214b3d; border-radius: 6px; background: #214b3d; color: #fff; padding: 12px 22px; min-height: 46px; font: inherit; font-weight: 600; cursor: pointer; }
 .account-setup-form button:disabled { cursor: default; }
 .account-setup-form button:hover:enabled { background: #183c30; }
-.account-setup-form :is(input,button):focus-visible { outline: 3px solid #4d805e; outline-offset: 3px; }
+.account-setup-form :is(input,textarea,button):focus-visible { outline: 3px solid #4d805e; outline-offset: 3px; }
 .account-setup-error { color: #9a3927; margin: 18px 0 0; }
 @media(max-width: 620px) {
   .account-setup-page { padding: 16px 14px 24px; }
@@ -48,6 +48,9 @@
   .account-setup-class > strong { padding-right: 12px; white-space: nowrap; }
   .account-level-options { grid-auto-columns: 84%; }
   .account-setup-columns { grid-template-columns: 1fr; gap: 26px; }
-  .account-setup-columns fieldset + fieldset { padding: 22px 0 0; border-left: 0; border-top: 1px solid #e2e7de; }
+  .account-setup-columns fieldset + fieldset { padding: 0; border: 0; }
   .account-setup-form footer button { width: 100%; }
 }
+
+.account-setup-form input::placeholder { color: #77827b; opacity: 1; font-size: 14px; }
+@media(max-width: 620px) { .account-setup-form input:not([type=radio]), .account-setup-form textarea { font-size: 16px; } }

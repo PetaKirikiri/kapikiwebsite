@@ -76,19 +76,19 @@ export default function AccountSetupForm({ details, onSave }: Props) {
           <fieldset disabled={busy}>
             <legend>Your details</legend>
             <label htmlFor="account-setup-name">Full name</label>
-            <input id="account-setup-name" name="name" autoComplete="name" defaultValue={details.name} required maxLength={160} />
+            <input id="account-setup-name" name="name" autoComplete="name" defaultValue={details.name} placeholder="Please enter your full name" required maxLength={160} />
             <label htmlFor="account-setup-email">Email</label>
-            <input id="account-setup-email" name="email" type="email" autoComplete="username" value={details.email} readOnly />
+            <textarea id="account-setup-email" name="email" autoComplete="username" value={details.email} rows={Math.max(1, Math.ceil(details.email.length / 32))} readOnly />
             <label htmlFor="account-setup-department" className="account-setup-department-label">Department / group{!department.trim() && <small>Required</small>}</label>
-            <input id="account-setup-department" name="department_group" value={department} onChange={event => setDepartment(event.target.value)} required maxLength={160} className={!department.trim() ? 'account-setup-missing' : ''} />
+            <input id="account-setup-department" name="department_group" placeholder="Please enter your department / group" value={department} onChange={event => setDepartment(event.target.value)} required maxLength={160} className={!department.trim() ? 'account-setup-missing' : ''} />
           </fieldset>
           <fieldset disabled={busy}>
             <legend>Set your password</legend>
             <label htmlFor="account-setup-password">Password</label>
-            <input id="account-setup-password" name="password" type="password" autoComplete="new-password" required minLength={8} aria-describedby="account-setup-password-help" />
+            <input id="account-setup-password" name="password" placeholder="Please enter a password" type="password" autoComplete="new-password" required minLength={8} aria-describedby="account-setup-password-help" />
             <small id="account-setup-password-help">At least 8 characters</small>
             <label htmlFor="account-setup-confirm">Confirm password</label>
-            <input id="account-setup-confirm" name="confirmPassword" type="password" autoComplete="new-password" required minLength={8} />
+            <input id="account-setup-confirm" name="confirmPassword" placeholder="Please re-enter your password" type="password" autoComplete="new-password" required minLength={8} />
           </fieldset>
         </div>
         {error && <p className="account-setup-error" role="alert">{error}</p>}
