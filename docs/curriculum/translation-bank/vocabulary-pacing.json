@@ -5851,6 +5851,18 @@
           "english": "experience",
           "type": "Noun",
           "status": "introduced"
+        },
+        {
+          "word": "inā",
+          "english": "recently (in inā tata nei)",
+          "type": "Grammar word",
+          "status": "introduced"
+        },
+        {
+          "word": "tata",
+          "english": "recent (in inā tata nei)",
+          "type": "Grammar word",
+          "status": "introduced"
         }
       ],
       "rationale": "Retain the existing grammar backbone. Select a compact set from the existing inventory by useful task, semantic coherence, current/prior prerequisites, total load and later retrieval. Broader candidates remain optional rather than padding the introduction.",
@@ -6977,6 +6989,27 @@
       "english": "again",
       "type": "Verb modifier",
       "lesson": 30,
+      "status": "introduced"
+    },
+    {
+      "word": "i tērā wiki",
+      "english": "last week",
+      "type": "Time expression",
+      "lesson": 30,
+      "status": "introduced"
+    },
+    {
+      "word": "ā tērā wiki",
+      "english": "next week",
+      "type": "Time expression",
+      "lesson": 30,
+      "status": "introduced"
+    },
+    {
+      "word": "inā tata nei",
+      "english": "just recently",
+      "type": "Time expression",
+      "lesson": 53,
       "status": "introduced"
     }
   ],

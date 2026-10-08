@@ -36586,8 +36586,8 @@
           "retrievalWords": []
         },
         {
-          "mi": "Kei te marae ōku whare. Kei waenganui i te whare te kurī.",
-          "en": "My houses are at the marae. The dog is in the middle of the house.",
+          "mi": "Kei te marae ōku whare. Kei waenganui i te whare te kurī. I haere ahau i tērā wiki.",
+          "en": "My houses are at the marae. The dog is in the middle of the house. I went last week.",
           "direction": "en-mi",
           "kind": "transfer",
           "reviewFrom": null,
@@ -36596,7 +36596,7 @@
           "answer": "",
           "options": [],
           "acceptedAnswers": [
-            "Kei te marae ōku whare. Kei waenganui i te whare te kurī."
+            "Kei te marae ōku whare. Kei waenganui i te whare te kurī. I haere ahau i tērā wiki."
           ],
           "choiceLabel": "Choose the Big Word",
           "context": "",
@@ -36611,8 +36611,8 @@
           "retrievalWords": []
         },
         {
-          "mi": "Kei te marae ōku whare. Kei waenganui i te whare te kurī.",
-          "en": "My houses are at the marae. The dog is in the middle of the house.",
+          "mi": "Kei te marae ōku whare. Kei waenganui i te whare te kurī. I haere ahau i tērā wiki.",
+          "en": "My houses are at the marae. The dog is in the middle of the house. I went last week.",
           "direction": "mi-en",
           "kind": "transfer",
           "reviewFrom": null,
@@ -36621,7 +36621,7 @@
           "answer": "",
           "options": [],
           "acceptedAnswers": [
-            "My houses are at the marae. The dog is in the middle of the house."
+            "My houses are at the marae. The dog is in the middle of the house. I went last week."
           ],
           "choiceLabel": "Choose the Big Word",
           "context": "",
@@ -37038,8 +37038,8 @@
           "retrievalWords": []
         },
         {
-          "mi": "E kai ana koe i te kūmara. I moe ahau inapō. Me titiro ake koe.",
-          "en": "You are eating the sweet potato. I slept last night. You should look up.",
+          "mi": "E kai ana koe i te kūmara. I moe ahau inapō. Me titiro ake koe. Ka haere ahau ā tērā wiki.",
+          "en": "You are eating the sweet potato. I slept last night. You should look up. I will go next week.",
           "direction": "en-mi",
           "kind": "transfer",
           "reviewFrom": "L2-06",
@@ -37048,7 +37048,7 @@
           "answer": "",
           "options": [],
           "acceptedAnswers": [
-            "E kai ana koe i te kūmara. I moe ahau inapō. Me titiro ake koe."
+            "E kai ana koe i te kūmara. I moe ahau inapō. Me titiro ake koe. Ka haere ahau ā tērā wiki."
           ],
           "choiceLabel": "Choose the Big Word",
           "context": "",
@@ -37063,8 +37063,8 @@
           "retrievalWords": []
         },
         {
-          "mi": "E kai ana koe i te kūmara. I moe ahau inapō. Me titiro ake koe.",
-          "en": "You are eating the sweet potato. I slept last night. You should look up.",
+          "mi": "E kai ana koe i te kūmara. I moe ahau inapō. Me titiro ake koe. Ka haere ahau ā tērā wiki.",
+          "en": "You are eating the sweet potato. I slept last night. You should look up. I will go next week.",
           "direction": "mi-en",
           "kind": "transfer",
           "reviewFrom": "L2-06",
@@ -37073,7 +37073,7 @@
           "answer": "",
           "options": [],
           "acceptedAnswers": [
-            "You are eating the sweet potato. I slept last night. You should look up."
+            "You are eating the sweet potato. I slept last night. You should look up. I will go next week."
           ],
           "choiceLabel": "Choose the Big Word",
           "context": "",
@@ -43587,8 +43587,8 @@
         },
         {
           "id": "L4-05-v1-4e2182236a98",
-          "mi": "Nāku te pukapuka nui. He huarahi tēnei. Ka kai koe ākuanei. Me titiro ake koe. Ko Hemi me Hana ēnei.",
-          "en": "The big book is mine. This is a path. You will eat soon. You should look up. These are Hemi and Hana.",
+          "mi": "Nāku te pukapuka nui. He huarahi tēnei. Ka kai koe ākuanei. Me titiro ake koe. Ko Hemi me Hana ēnei. I kai koe i tērā wiki.",
+          "en": "The big book is mine. This is a path. You will eat soon. You should look up. These are Hemi and Hana. You ate last week.",
           "direction": "en-mi",
           "answer": "",
           "options": [],
@@ -43610,15 +43610,15 @@
           "kind": "transfer",
           "reviewFrom": null,
           "acceptedAnswers": [
-            "Nāku te pukapuka nui. He huarahi tēnei. Ka kai koe ākuanei. Me titiro ake koe. Ko Hemi me Hana ēnei."
+            "Nāku te pukapuka nui. He huarahi tēnei. Ka kai koe ākuanei. Me titiro ake koe. Ko Hemi me Hana ēnei. I kai koe i tērā wiki."
           ],
           "retrievalFrom": "L3-10",
           "retrievalWords": []
         },
         {
           "id": "L4-05-v1-ffe926c92726",
-          "mi": "Nāku te pukapuka nui. He huarahi tēnei. Ka kai koe ākuanei. Me titiro ake koe. Ko Hemi me Hana ēnei.",
-          "en": "The big book is mine. This is a path. You will eat soon. You should look up. These are Hemi and Hana.",
+          "mi": "Nāku te pukapuka nui. He huarahi tēnei. Ka kai koe ākuanei. Me titiro ake koe. Ko Hemi me Hana ēnei. I kai koe i tērā wiki.",
+          "en": "The big book is mine. This is a path. You will eat soon. You should look up. These are Hemi and Hana. You ate last week.",
           "direction": "mi-en",
           "answer": "",
           "options": [],
@@ -43640,15 +43640,15 @@
           "kind": "transfer",
           "reviewFrom": null,
           "acceptedAnswers": [
-            "The big book is mine. This is a path. You will eat soon. You should look up. These are Hemi and Hana."
+            "The big book is mine. This is a path. You will eat soon. You should look up. These are Hemi and Hana. You ate last week."
           ],
           "retrievalFrom": "L3-10",
           "retrievalWords": []
         },
         {
           "id": "L4-05-v1-13a5b5583af2",
-          "mi": "Nāku te pukapuka iti. He rori tēnei. I kai koe inapō. Me haere atu koe. Ka haere ahau āpōpō i te ata.",
-          "en": "The small book is mine. This is a road. You ate last night. You should go away from me. I will go tomorrow morning.",
+          "mi": "Nāku te pukapuka iti. He rori tēnei. I kai koe inapō. Me haere atu koe. Ka haere ahau āpōpō i te ata. Ka tīmata koe ā tērā wiki.",
+          "en": "The small book is mine. This is a road. You ate last night. You should go away from me. I will go tomorrow morning. You will start next week.",
           "direction": "en-mi",
           "answer": "",
           "options": [],
@@ -43670,15 +43670,15 @@
           "kind": "transfer",
           "reviewFrom": null,
           "acceptedAnswers": [
-            "Nāku te pukapuka iti. He rori tēnei. I kai koe inapō. Me haere atu koe. Ka haere ahau āpōpō i te ata."
+            "Nāku te pukapuka iti. He rori tēnei. I kai koe inapō. Me haere atu koe. Ka haere ahau āpōpō i te ata. Ka tīmata koe ā tērā wiki."
           ],
           "retrievalFrom": "L3-10",
           "retrievalWords": []
         },
         {
           "id": "L4-05-v1-7a37583fab84",
-          "mi": "Nāku te pukapuka iti. He rori tēnei. I kai koe inapō. Me haere atu koe. Ka haere ahau āpōpō i te ata.",
-          "en": "The small book is mine. This is a road. You ate last night. You should go away from me. I will go tomorrow morning.",
+          "mi": "Nāku te pukapuka iti. He rori tēnei. I kai koe inapō. Me haere atu koe. Ka haere ahau āpōpō i te ata. Ka tīmata koe ā tērā wiki.",
+          "en": "The small book is mine. This is a road. You ate last night. You should go away from me. I will go tomorrow morning. You will start next week.",
           "direction": "mi-en",
           "answer": "",
           "options": [],
@@ -43700,7 +43700,7 @@
           "kind": "transfer",
           "reviewFrom": null,
           "acceptedAnswers": [
-            "The small book is mine. This is a road. You ate last night. You should go away from me. I will go tomorrow morning."
+            "The small book is mine. This is a road. You ate last night. You should go away from me. I will go tomorrow morning. You will start next week."
           ],
           "retrievalFrom": "L3-10",
           "retrievalWords": []
@@ -53440,8 +53440,8 @@
         },
         {
           "id": "L5-03-v1-59eb02c53633",
-          "mi": "He tātahi tēnei. Kei muri i te whare te tamaiti. Me titiro iho koe. Ko Hemi me Hana ēnei.",
-          "en": "This is a beach. The child is behind the house. You should look down. These are Hemi and Hana.",
+          "mi": "He tātahi tēnei. Kei muri i te whare te tamaiti. Me titiro iho koe. Ko Hemi me Hana ēnei. Ka hoki ia ā tērā wiki.",
+          "en": "This is a beach. The child is behind the house. You should look down. These are Hemi and Hana. She will return next week.",
           "direction": "en-mi",
           "answer": "",
           "options": [],
@@ -53463,15 +53463,15 @@
           "kind": "transfer",
           "reviewFrom": null,
           "acceptedAnswers": [
-            "He tātahi tēnei. Kei muri i te whare te tamaiti. Me titiro iho koe. Ko Hemi me Hana ēnei."
+            "He tātahi tēnei. Kei muri i te whare te tamaiti. Me titiro iho koe. Ko Hemi me Hana ēnei. Ka hoki ia ā tērā wiki."
           ],
           "retrievalFrom": "L3-10",
           "retrievalWords": []
         },
         {
           "id": "L5-03-v1-6434fbc65af2",
-          "mi": "He tātahi tēnei. Kei muri i te whare te tamaiti. Me titiro iho koe. Ko Hemi me Hana ēnei.",
-          "en": "This is a beach. The child is behind the house. You should look down. These are Hemi and Hana.",
+          "mi": "He tātahi tēnei. Kei muri i te whare te tamaiti. Me titiro iho koe. Ko Hemi me Hana ēnei. Ka hoki ia ā tērā wiki.",
+          "en": "This is a beach. The child is behind the house. You should look down. These are Hemi and Hana. She will return next week.",
           "direction": "mi-en",
           "answer": "",
           "options": [],
@@ -53493,15 +53493,15 @@
           "kind": "transfer",
           "reviewFrom": null,
           "acceptedAnswers": [
-            "This is a beach. The child is behind the house. You should look down. These are Hemi and Hana."
+            "This is a beach. The child is behind the house. You should look down. These are Hemi and Hana. She will return next week."
           ],
           "retrievalFrom": "L3-10",
           "retrievalWords": []
         },
         {
           "id": "L5-03-v1-a3bdc8f892eb",
-          "mi": "Kei te ua. He pāmu tēnei. Kei waenganui i te whare te tamaiti. Ka moe ahau ā te pō.",
-          "en": "It is raining. This is a farm. The child is in the middle of the house. I will sleep tonight.",
+          "mi": "Kei te ua. He pāmu tēnei. Kei waenganui i te whare te tamaiti. Ka moe ahau ā te pō. I hoki ia i tērā wiki.",
+          "en": "It is raining. This is a farm. The child is in the middle of the house. I will sleep tonight. She returned last week.",
           "direction": "en-mi",
           "answer": "",
           "options": [],
@@ -53523,15 +53523,15 @@
           "kind": "transfer",
           "reviewFrom": null,
           "acceptedAnswers": [
-            "Kei te ua. He pāmu tēnei. Kei waenganui i te whare te tamaiti. Ka moe ahau ā te pō."
+            "Kei te ua. He pāmu tēnei. Kei waenganui i te whare te tamaiti. Ka moe ahau ā te pō. I hoki ia i tērā wiki."
           ],
           "retrievalFrom": "L3-10",
           "retrievalWords": []
         },
         {
           "id": "L5-03-v1-a61af2d0f4a9",
-          "mi": "Kei te ua. He pāmu tēnei. Kei waenganui i te whare te tamaiti. Ka moe ahau ā te pō.",
-          "en": "It is raining. This is a farm. The child is in the middle of the house. I will sleep tonight.",
+          "mi": "Kei te ua. He pāmu tēnei. Kei waenganui i te whare te tamaiti. Ka moe ahau ā te pō. I hoki ia i tērā wiki.",
+          "en": "It is raining. This is a farm. The child is in the middle of the house. I will sleep tonight. She returned last week.",
           "direction": "mi-en",
           "answer": "",
           "options": [],
@@ -53553,7 +53553,7 @@
           "kind": "transfer",
           "reviewFrom": null,
           "acceptedAnswers": [
-            "It is raining. This is a farm. The child is in the middle of the house. I will sleep tonight."
+            "It is raining. This is a farm. The child is in the middle of the house. I will sleep tonight. She returned last week."
           ],
           "retrievalFrom": "L3-10",
           "retrievalWords": []
@@ -64627,7 +64627,9 @@
       "status": "Revised draft · teacher review",
       "progressionNote": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
       "newForms": [
+        "inā",
         "kōwhiringa",
+        "tata",
         "wheako"
       ],
       "focusExamples": [
@@ -65727,8 +65729,8 @@
         },
         {
           "id": "L6-03-v1-7b439ae77bed",
-          "mi": "He kōwhiringa tēnei. He wheako tēnei.",
-          "en": "This is a choice. This is an experience.",
+          "mi": "He kōwhiringa tēnei. He wheako tēnei. I hoki ahau inā tata nei.",
+          "en": "This is a choice. This is an experience. I returned just recently.",
           "direction": "en-mi",
           "answer": "",
           "options": [],
@@ -65736,18 +65738,18 @@
           "context": "",
           "reviewClauses": [],
           "stage": "Build on it",
-          "kind": "focus",
+          "kind": "transfer",
           "reviewFrom": null,
           "acceptedAnswers": [
-            "He kōwhiringa tēnei. He wheako tēnei."
+            "He kōwhiringa tēnei. He wheako tēnei. I hoki ahau inā tata nei."
           ],
           "retrievalFrom": null,
           "retrievalWords": []
         },
         {
           "id": "L6-03-v1-dcce6b8cc168",
-          "mi": "He kōwhiringa tēnei. He wheako tēnei.",
-          "en": "This is a choice. This is an experience.",
+          "mi": "He kōwhiringa tēnei. He wheako tēnei. I hoki ahau inā tata nei.",
+          "en": "This is a choice. This is an experience. I returned just recently.",
           "direction": "mi-en",
           "answer": "",
           "options": [],
@@ -65755,10 +65757,10 @@
           "context": "",
           "reviewClauses": [],
           "stage": "Build on it",
-          "kind": "focus",
+          "kind": "transfer",
           "reviewFrom": null,
           "acceptedAnswers": [
-            "This is a choice. This is an experience."
+            "This is a choice. This is an experience. I returned just recently."
           ],
           "retrievalFrom": null,
           "retrievalWords": []
@@ -72677,17 +72679,17 @@
           ]
         },
         {
-          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako.",
-          "en": "If you see the kiwi, you will ask the teacher.",
+          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako. I moe koe inā tata nei.",
+          "en": "If you see the kiwi, you will ask the teacher. You slept just recently.",
           "direction": "en-mi",
-          "kind": "focus",
+          "kind": "transfer",
           "reviewFrom": null,
           "stage": "Build on it",
           "id": "L6-09-23",
           "answer": "",
           "options": [],
           "acceptedAnswers": [
-            "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako."
+            "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako. I moe koe inā tata nei."
           ],
           "choiceLabel": "Choose the Big Word",
           "context": "",
@@ -72698,21 +72700,21 @@
               "from": "L6-07"
             }
           ],
-          "retrievalFrom": null,
+          "retrievalFrom": "L6-03",
           "retrievalWords": []
         },
         {
-          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako.",
-          "en": "If you see the kiwi, you will ask the teacher.",
+          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako. I moe koe inā tata nei.",
+          "en": "If you see the kiwi, you will ask the teacher. You slept just recently.",
           "direction": "mi-en",
-          "kind": "focus",
+          "kind": "transfer",
           "reviewFrom": null,
           "stage": "Build on it",
           "id": "L6-09-35",
           "answer": "",
           "options": [],
           "acceptedAnswers": [
-            "If you see the kiwi, you will ask the teacher."
+            "If you see the kiwi, you will ask the teacher. You slept just recently."
           ],
           "choiceLabel": "Choose the Big Word",
           "context": "",
@@ -72723,7 +72725,7 @@
               "from": "L6-07"
             }
           ],
-          "retrievalFrom": null,
+          "retrievalFrom": "L6-03",
           "retrievalWords": []
         }
       ],
@@ -73898,17 +73900,17 @@
           ]
         },
         {
-          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako.",
-          "en": "If you see the kiwi, you will ask the teacher.",
+          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako. I kōrero ia inā tata nei.",
+          "en": "If you see the kiwi, you will ask the teacher. She spoke just recently.",
           "direction": "en-mi",
-          "kind": "review",
+          "kind": "transfer",
           "reviewFrom": "L6-09",
           "stage": "Build on it",
           "id": "L6-10-26",
           "answer": "",
           "options": [],
           "acceptedAnswers": [
-            "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako."
+            "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako. I kōrero ia inā tata nei."
           ],
           "choiceLabel": "Choose the Big Word",
           "context": "",
@@ -73919,21 +73921,21 @@
               "from": "L6-07"
             }
           ],
-          "retrievalFrom": null,
+          "retrievalFrom": "L6-03",
           "retrievalWords": []
         },
         {
-          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako.",
-          "en": "If you see the kiwi, you will ask the teacher.",
+          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako. I kōrero ia inā tata nei.",
+          "en": "If you see the kiwi, you will ask the teacher. She spoke just recently.",
           "direction": "mi-en",
-          "kind": "review",
+          "kind": "transfer",
           "reviewFrom": "L6-09",
           "stage": "Build on it",
           "id": "L6-10-40",
           "answer": "",
           "options": [],
           "acceptedAnswers": [
-            "If you see the kiwi, you will ask the teacher."
+            "If you see the kiwi, you will ask the teacher. She spoke just recently."
           ],
           "choiceLabel": "Choose the Big Word",
           "context": "",
@@ -73944,7 +73946,7 @@
               "from": "L6-07"
             }
           ],
-          "retrievalFrom": null,
+          "retrievalFrom": "L6-03",
           "retrievalWords": []
         },
         {
@@ -75146,8 +75148,8 @@
         ],
         "pairs": [
           {
-            "mi": "Nāku te pukapuka nui. He huarahi tēnei. Ka kai koe ākuanei. Me titiro ake koe. Ko Hemi me Hana ēnei.",
-            "en": "The big book is mine. This is a path. You will eat soon. You should look up. These are Hemi and Hana."
+            "mi": "Nāku te pukapuka nui. He huarahi tēnei. Ka kai koe ākuanei. Me titiro ake koe. Ko Hemi me Hana ēnei. I kai koe i tērā wiki.",
+            "en": "The big book is mine. This is a path. You will eat soon. You should look up. These are Hemi and Hana. You ate last week."
           },
           {
             "mi": "Ka hoki ahau ki te kāinga. Ko te huarahi tēnei.",
@@ -75171,8 +75173,8 @@
         ],
         "pairs": [
           {
-            "mi": "Nāku te pukapuka iti. He rori tēnei. I kai koe inapō. Me haere atu koe. Ka haere ahau āpōpō i te ata.",
-            "en": "The small book is mine. This is a road. You ate last night. You should go away from me. I will go tomorrow morning."
+            "mi": "Nāku te pukapuka iti. He rori tēnei. I kai koe inapō. Me haere atu koe. Ka haere ahau āpōpō i te ata. Ka tīmata koe ā tērā wiki.",
+            "en": "The small book is mine. This is a road. You ate last night. You should go away from me. I will go tomorrow morning. You will start next week."
           },
           {
             "mi": "Ka tango ahau i tāku pukapuka. Ko te rori tēnei.",
@@ -78521,8 +78523,8 @@
         ],
         "pairs": [
           {
-            "mi": "He tātahi tēnei. Kei muri i te whare te tamaiti. Me titiro iho koe. Ko Hemi me Hana ēnei.",
-            "en": "This is a beach. The child is behind the house. You should look down. These are Hemi and Hana."
+            "mi": "He tātahi tēnei. Kei muri i te whare te tamaiti. Me titiro iho koe. Ko Hemi me Hana ēnei. Ka hoki ia ā tērā wiki.",
+            "en": "This is a beach. The child is behind the house. You should look down. These are Hemi and Hana. She will return next week."
           },
           {
             "mi": "Ko te tātahi tēnei.",
@@ -78621,8 +78623,8 @@
         ],
         "pairs": [
           {
-            "mi": "Kei te ua. He pāmu tēnei. Kei waenganui i te whare te tamaiti. Ka moe ahau ā te pō.",
-            "en": "It is raining. This is a farm. The child is in the middle of the house. I will sleep tonight."
+            "mi": "Kei te ua. He pāmu tēnei. Kei waenganui i te whare te tamaiti. Ka moe ahau ā te pō. I hoki ia i tērā wiki.",
+            "en": "It is raining. This is a farm. The child is in the middle of the house. I will sleep tonight. She returned last week."
           },
           {
             "mi": "Ko te pāmu tēnei.",
@@ -79971,8 +79973,8 @@
         ],
         "pairs": [
           {
-            "mi": "He kōwhiringa tēnei. He wheako tēnei.",
-            "en": "This is a choice. This is an experience."
+            "mi": "He kōwhiringa tēnei. He wheako tēnei. I hoki ahau inā tata nei.",
+            "en": "This is a choice. This is an experience. I returned just recently."
           },
           {
             "mi": "Ki te pakaru te pouaka, ka whakatika ahau i te pouaka. Ko te kōwhiringa tēnei. Ko te wheako tēnei.",
@@ -79996,8 +79998,8 @@
         ],
         "pairs": [
           {
-            "mi": "He kōwhiringa tēnei. He wheako tēnei.",
-            "en": "This is a choice. This is an experience."
+            "mi": "He kōwhiringa tēnei. He wheako tēnei. I hoki ahau inā tata nei.",
+            "en": "This is a choice. This is an experience. I returned just recently."
           },
           {
             "mi": "Ki te pakaru te pouaka, ka whakatika ahau i te pouaka. Ko te kōwhiringa tēnei. Ko te wheako tēnei.",
@@ -81103,6 +81105,81 @@
             "en": "You should speak again."
           }
         ]
+      },
+      {
+        "word": "i tērā wiki",
+        "english": "last week",
+        "type": "Time expression",
+        "introductionLesson": 30,
+        "retrievalLessons": [
+          35,
+          43
+        ],
+        "pairs": [
+          {
+            "mi": "I haere ahau i tērā wiki.",
+            "en": "I went last week."
+          },
+          {
+            "mi": "I kai koe i tērā wiki.",
+            "en": "You ate last week."
+          },
+          {
+            "mi": "I hoki ia i tērā wiki.",
+            "en": "She returned last week."
+          }
+        ],
+        "sourceUrl": "https://kupu.maori.nz/kupu/i-t%C4%93r%C4%81-%28wiki-tau%29"
+      },
+      {
+        "word": "ā tērā wiki",
+        "english": "next week",
+        "type": "Time expression",
+        "introductionLesson": 30,
+        "retrievalLessons": [
+          35,
+          43
+        ],
+        "pairs": [
+          {
+            "mi": "Ka haere ahau ā tērā wiki.",
+            "en": "I will go next week."
+          },
+          {
+            "mi": "Ka tīmata koe ā tērā wiki.",
+            "en": "You will start next week."
+          },
+          {
+            "mi": "Ka hoki ia ā tērā wiki.",
+            "en": "She will return next week."
+          }
+        ],
+        "sourceUrl": "https://www.grammar.maori.nz/209/Last-week,-last-month,-last-year/t%C4%93r%C4%81"
+      },
+      {
+        "word": "inā tata nei",
+        "english": "just recently",
+        "type": "Time expression",
+        "introductionLesson": 53,
+        "retrievalLessons": [
+          59,
+          60
+        ],
+        "pairs": [
+          {
+            "mi": "I hoki ahau inā tata nei.",
+            "en": "I returned just recently."
+          },
+          {
+            "mi": "I moe koe inā tata nei.",
+            "en": "You slept just recently."
+          },
+          {
+            "mi": "I kōrero ia inā tata nei.",
+            "en": "She spoke just recently."
+          }
+        ],
+        "sourceUrl": "https://maoridictionary.co.nz/search?keywords=in%C4%81"
       }
     ],
     "supportIntroductions": {
@@ -81122,7 +81199,9 @@
       "muri": 30,
       "nei": 30,
       "waenganui": 30,
-      "ākuanei": 30
+      "ākuanei": 30,
+      "inā": 53,
+      "tata": 53
     }
   }
 }

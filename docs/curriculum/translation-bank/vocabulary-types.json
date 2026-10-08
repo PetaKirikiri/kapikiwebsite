@@ -1012,7 +1012,9 @@
       "type": "Position word"
     },
     "tata": {
-      "type": "Position word"
+      "type": "Grammar word",
+      "english": "recent (in inā tata nei)",
+      "courseUse": "Component of the taught recently expression; not a separate spatial lesson."
     },
     "waho": {
       "type": "Position word"
@@ -2293,6 +2295,27 @@
     "anō · again": {
       "type": "Verb modifier",
       "english": "again"
+    },
+    "i tērā wiki": {
+      "type": "Time expression",
+      "english": "last week"
+    },
+    "ā tērā wiki": {
+      "type": "Time expression",
+      "english": "next week"
+    },
+    "inā tata nei": {
+      "type": "Time expression",
+      "english": "just recently"
+    },
+    "tata · near; close": {
+      "type": "Position word",
+      "english": "near; close"
+    },
+    "inā": {
+      "type": "Grammar word",
+      "english": "recently (in inā tata nei)",
+      "courseUse": "Component of the taught recently expression; not a separate spatial lesson."
     }
   },
   "verbGrouping": {
