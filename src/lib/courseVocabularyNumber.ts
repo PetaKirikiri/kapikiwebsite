@@ -18,6 +18,11 @@ const sameForm = new Set(('whaea pāpā kuia koroua tama tamāhine mokopuna tung
 
 export function numberGuide(entry: CourseVocabularyEntry): NumberGuide | undefined {
   if (entry.kind !== 'word') return undefined
+  if(entry.courseType==='Determiner'&&/^(?:t?[āō])(?: |ku$|u$|na$)/.test(entry.text))return {
+    kind:/^t[āō]/.test(entry.text)?'singular':'plural',
+    note:/^t[āō]/.test(entry.text)?'One possessed thing':'Two or more possessed things',
+    source:'https://kupu.maori.nz/possession/t-possession',
+  }
   const pronouns = PRONOUN_PROGRESSION.find(group => (group.words as readonly string[]).includes(entry.text))
   if (pronouns) return {
     kind: ['au','ahau','koe','ia'].includes(entry.text) ? 'singular' : ['māua','tāua','kōrua','rāua'].includes(entry.text) ? 'dual' : 'plural',

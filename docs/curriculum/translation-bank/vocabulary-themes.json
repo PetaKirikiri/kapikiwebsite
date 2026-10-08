@@ -127,13 +127,7 @@
     {
       "lesson": 5,
       "theme": "Whakapapa and relationships",
-      "words": [
-        {
-          "word": "tūpuna",
-          "english": "ancestors",
-          "type": "Noun"
-        }
-      ],
+      "words": [],
       "pairs": []
     },
     {
@@ -968,8 +962,8 @@
       ],
       "pairs": [
         {
-          "mi": "He maha ngā tamariki.",
-          "en": "There are many children."
+          "mi": "He maha.",
+          "en": "There are many."
         }
       ],
       "alignmentPass": "2026-10-08-coursewide",
@@ -3169,8 +3163,8 @@
       "words": [],
       "pairs": [
         {
-          "mi": "He maha ngā tamariki.",
-          "en": "There are many children."
+          "mi": "He maha.",
+          "en": "There are many."
         }
       ],
       "alignmentPass": "2026-10-08-coursewide-retrieval",
@@ -3183,8 +3177,8 @@
       "words": [],
       "pairs": [
         {
-          "mi": "He maha ngā tamariki.",
-          "en": "There are many children."
+          "mi": "He maha.",
+          "en": "There are many."
         }
       ],
       "alignmentPass": "2026-10-08-coursewide-retrieval",
@@ -4557,6 +4551,27 @@
       ],
       "alignmentPass": "2026-10-08-smoothed-retrieval",
       "sourceLesson": 24
+    },
+    {
+      "lesson": 14,
+      "theme": "Ancestors after plural articles",
+      "words": [
+        {
+          "word": "tūpuna",
+          "english": "ancestors",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Nō Rotorua ngā tūpuna.",
+          "en": "The ancestors are from Rotorua."
+        }
+      ],
+      "reviewLessons": [
+        16,
+        20
+      ]
     }
   ]
 }

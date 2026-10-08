@@ -15,10 +15,10 @@ export function cumulativeCounts(words: TimelineWord[]) {
 }
 
 // Count vocabulary spellings once across taught senses; names are not vocabulary gains.
-export function lessonWordTotals(words: (TimelineWord & {type:string})[]) {
+export function lessonWordTotals(words: (TimelineWord & {type:string;grammaticalForm?:boolean})[]) {
  const first=new Map<string,number>()
  for(const word of words){
-  if(word.firstLesson===null||word.type==='Name')continue
+  if(word.firstLesson===null||word.type==='Name'||word.grammaticalForm)continue
   const key=word.word.split(' · ')[0].normalize('NFC').toLowerCase()
   first.set(key,Math.min(first.get(key)??61,word.firstLesson))
  }

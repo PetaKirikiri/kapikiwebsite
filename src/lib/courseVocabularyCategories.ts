@@ -25,6 +25,11 @@ const groups: readonly [string, string][] = [
 ]
 
 export function courseCategories(entry: CourseVocabularyEntry): string[] {
+  if(entry.courseType==='Determiner')return ['Determiners']
+  if(entry.courseType==='Time expression')return ['Time expressions']
+  if(entry.courseType==='Verb modifier')return ['Verb modifiers']
+  if(entry.courseType==='Conjunction')return ['Conjunctions']
+  if(entry.courseType==='Position word')return ['Position words']
   if (isJob(entry)) return ['Jobs']
   if (vocabularyNumberValue(entry.text) !== undefined) return ['Numbers']
   const matched = groups.filter(([, words]) => words.split(' ').includes(entry.text)).map(([label]) => label)
@@ -51,6 +56,9 @@ const possessionGroups: readonly [PossessionGuide['category'], string, string][]
 export function possessionGuide(entry: CourseVocabularyEntry): PossessionGuide | undefined {
   // Avoid assigning a noun's guidance to a different reading, e.g. kai = eat.
   if (entry.kind !== 'word') return undefined
+  if(entry.courseType==='Determiner'&&/^(?:t?[āō])(?: |ku$|u$|na$)/.test(entry.text))return {
+    category:/^t?ā/.test(entry.text)?'A':'O',context:'Possession category',
+  }
   if (entry.text === 'kai' && entry.english.startsWith('food')) return { category: 'A', context: 'Food for you' }
   const found = possessionGroups.find(([, , words]) => words.split(' ').includes(entry.text))
   return found ? { category: found[0], context: found[1] } : undefined

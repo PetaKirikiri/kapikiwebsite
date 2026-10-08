@@ -30,7 +30,7 @@ it('preserves grammar targets and original vocabulary dates, and introduces only
  const first=new Map<string,number>()
  bank.sheets.forEach((s,i)=>s.questions.filter(q=>q.direction!=='structure-choice').forEach(q=>words(q.mi).forEach(w=>{if(!first.has(w))first.set(w,i+1)})))
  for(const [word,week]of Object.entries(bank.expansion.retainedVocabularyIntroductions))expect(first.get(word),word).toBe(week)
- const allowed=new Set([...Object.keys(bank.expansion.retainedVocabularyIntroductions),...bank.expansion.targets.map(t=>t.word)])
+ const allowed=new Set([...Object.keys(bank.expansion.retainedVocabularyIntroductions),...bank.expansion.targets.map(t=>t.word),...Object.keys(bank.functionalCoverage.supportIntroductions)])
  for(const word of first.keys())expect(allowed.has(word),word).toBe(true)
 })
 it('keeps clause retrieval grounded in an earlier retained exercise in the same direction',()=>{

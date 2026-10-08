@@ -7,20 +7,20 @@
       "pattern": "Ko … tōku ingoa",
       "pairs": [
         {
-          "mi": "Ko Hemi tōku ingoa.",
-          "en": "My name is Hemi."
+          "mi": "Ko Hemi te ingoa.",
+          "en": "The name is Hemi."
         },
         {
-          "mi": "Ko Mere tōku ingoa.",
-          "en": "My name is Mere."
+          "mi": "Ko Mere te ingoa.",
+          "en": "The name is Mere."
         },
         {
-          "mi": "Ko Hana tōku ingoa.",
-          "en": "My name is Hana."
+          "mi": "Ko Hana te ingoa.",
+          "en": "The name is Hana."
         },
         {
-          "mi": "Ko Pita tōku ingoa.",
-          "en": "My name is Pita."
+          "mi": "Ko Pita te ingoa.",
+          "en": "The name is Pita."
         }
       ]
     },
@@ -128,8 +128,8 @@
           "en": "The tribe is from Tauranga."
         },
         {
-          "mi": "Nō Rotorua ngā tūpuna.",
-          "en": "The ancestors are from Rotorua."
+          "mi": "Ko te whakapapa tēnei.",
+          "en": "This is the ancestry."
         }
       ]
     },
@@ -209,16 +209,16 @@
           "en": "I have one child."
         },
         {
-          "mi": "Tokorua ngā tamariki.",
-          "en": "There are two children."
+          "mi": "Tokorua.",
+          "en": "There are two people."
         },
         {
-          "mi": "Kāorekau āku tamariki.",
-          "en": "I have no children."
+          "mi": "Kāorekau tāku tamaiti.",
+          "en": "I have no child."
         },
         {
-          "mi": "E rua ngā whare.",
-          "en": "There are two houses."
+          "mi": "E rua.",
+          "en": "There are two."
         }
       ]
     },
@@ -259,8 +259,8 @@
       "pattern": "Ko · Nō · He · Kei",
       "pairs": [
         {
-          "mi": "Ko Hemi tōku ingoa.",
-          "en": "My name is Hemi."
+          "mi": "Ko Hemi te ingoa.",
+          "en": "The name is Hemi."
         },
         {
           "mi": "Ko Ngongotahā tōku maunga.",

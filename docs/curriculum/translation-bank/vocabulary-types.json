@@ -1001,10 +1001,12 @@
       "type": "Position word"
     },
     "muri": {
-      "type": "Position word"
+      "type": "Position word",
+      "english": "behind"
     },
     "mua": {
-      "type": "Position word"
+      "type": "Position word",
+      "english": "in front"
     },
     "raro": {
       "type": "Position word"
@@ -1016,7 +1018,8 @@
       "type": "Position word"
     },
     "waenganui": {
-      "type": "Position word"
+      "type": "Position word",
+      "english": "in the middle"
     },
     "tawhiti": {
       "type": "Position word"
@@ -1028,37 +1031,46 @@
       "type": "Number"
     },
     "tekau": {
-      "type": "Number"
+      "type": "Number",
+      "english": "ten"
     },
     "toru": {
-      "type": "Number"
+      "type": "Number",
+      "english": "three"
     },
     "rau": {
       "type": "Number"
     },
     "tahi": {
-      "type": "Number"
+      "type": "Number",
+      "english": "one"
     },
     "rima": {
-      "type": "Number"
+      "type": "Number",
+      "english": "five"
     },
     "whā": {
-      "type": "Number"
+      "type": "Number",
+      "english": "four"
     },
     "ono": {
-      "type": "Number"
+      "type": "Number",
+      "english": "six"
     },
     "waru": {
-      "type": "Number"
+      "type": "Number",
+      "english": "eight"
     },
     "iwa": {
-      "type": "Number"
+      "type": "Number",
+      "english": "nine"
     },
     "mano": {
       "type": "Number"
     },
     "whitu": {
-      "type": "Number"
+      "type": "Number",
+      "english": "seven"
     },
     "ko": {
       "type": "Grammar word"
@@ -1073,10 +1085,12 @@
       "type": "Grammar word"
     },
     "kotahi": {
-      "type": "Grammar word"
+      "type": "Number",
+      "english": "one"
     },
     "tokorua": {
-      "type": "Grammar word"
+      "type": "Number",
+      "english": "two people"
     },
     "tokotoru": {
       "type": "Grammar word"
@@ -1109,19 +1123,23 @@
       "type": "Grammar word"
     },
     "atu": {
-      "type": "Grammar word"
+      "type": "Verb modifier",
+      "english": "away from the speaker"
     },
     "mai": {
-      "type": "Grammar word"
+      "type": "Verb modifier",
+      "english": "towards the speaker"
     },
     "kia": {
       "type": "Grammar word"
     },
     "anō": {
-      "type": "Grammar word"
+      "type": "Verb modifier",
+      "english": "yet (Kāore anō … kia); again; also"
     },
     "kore": {
-      "type": "Grammar word"
+      "type": "Number",
+      "english": "zero"
     },
     "kāore": {
       "type": "Grammar word"
@@ -1190,7 +1208,8 @@
       "type": "Grammar word"
     },
     "ake": {
-      "type": "Grammar word"
+      "type": "Verb modifier",
+      "english": "upwards"
     },
     "tino": {
       "type": "Grammar word"
@@ -1247,7 +1266,8 @@
       "type": "Grammar word"
     },
     "mēnā": {
-      "type": "Grammar word"
+      "type": "Conjunction",
+      "english": "if"
     },
     "tūmanako": {
       "type": "Grammar word"
@@ -1256,7 +1276,8 @@
       "type": "Grammar word"
     },
     "engari": {
-      "type": "Grammar word"
+      "type": "Conjunction",
+      "english": "but"
     },
     "heoi": {
       "type": "Grammar word"
@@ -2228,6 +2249,50 @@
     "whakaritenga": {
       "type": "Noun",
       "english": "arrangement"
+    },
+    "inapō": {
+      "type": "Time expression",
+      "english": "last night"
+    },
+    "ākuanei": {
+      "type": "Time expression",
+      "english": "soon"
+    },
+    "iho": {
+      "type": "Verb modifier",
+      "english": "downwards"
+    },
+    "i te ata nei": {
+      "type": "Time expression",
+      "english": "this morning"
+    },
+    "ā te pō": {
+      "type": "Time expression",
+      "english": "tonight"
+    },
+    "āpōpō i te ata": {
+      "type": "Time expression",
+      "english": "tomorrow morning"
+    },
+    "ā muri ake nei": {
+      "type": "Time expression",
+      "english": "later"
+    },
+    "me · and": {
+      "type": "Conjunction",
+      "english": "and"
+    },
+    "nei": {
+      "type": "Grammar word",
+      "english": "near the speaker; this (in constructions)"
+    },
+    "ā · and then": {
+      "type": "Conjunction",
+      "english": "and then"
+    },
+    "anō · again": {
+      "type": "Verb modifier",
+      "english": "again"
     }
   },
   "verbGrouping": {

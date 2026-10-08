@@ -27,7 +27,8 @@ it('actually practises every new thematic sentence in both translation direction
 it('keeps landscape, kinship groups and family generations in separate lessons',()=>{
  const groups=[
   {lesson:4,words:['maunga','awa','roto']},
-  {lesson:5,words:['whānau','hapū','iwi','tūpuna']},
+  {lesson:5,words:['whānau','hapū','iwi']},
+  {lesson:14,words:['tūpuna']},
   {lesson:6,words:['māmā · mum','pāpā','whaea','matua','kuia','koroua']},
  ]
  for(const group of groups)for(const word of group.words){
@@ -53,4 +54,23 @@ it('shows clean Māori labels without merging separate meanings or duplicating l
  expect(new Set(mama.map(row=>row.word)).size).toBe(2)
  expect(rows.filter(row=>row.displayWord==='roto'&&row.type==='Noun')).toHaveLength(1)
  expect(rows.every(row=>!row.displayWord.includes(' · '))).toBe(true)
+})
+
+it('shows all taught possessive determiners as whole units without lexical credits',()=>{
+ const owners=['tāua','māua','kōrua','rāua','tātou','mātou','koutou','rātou']
+ const forms=owners.flatMap(owner=>['tā','tō','ā','ō'].map(prefix=>`${prefix} ${owner}`))
+ for(const word of forms){const row=rows.find(r=>r.word===word)!;expect(row).toMatchObject({type:'Determiner',grammaticalForm:true});expect(row.firstLesson).toBeGreaterThan(10)
+  expect(bank.sheets[row.firstLesson!-1].questions.some(q=>q.mi.includes(`${word} `))).toBe(true)
+ }
+ for(const word of ['tāku','tōku','tāu','tōu','tāna','tōna','āku','ōku','āu','ōu','āna','ōna'])expect(rows.find(r=>r.word===word)?.type).toBe('Determiner')
+ expect(rows.filter(r=>r.grammaticalForm&&r.type==='Determiner')).toHaveLength(32)
+})
+it('teaches te before possessives and defers plural determiners beyond Level 1',()=>{
+ expect(rows.find(r=>r.word==='te')?.firstLesson).toBe(2)
+ expect(rows.find(r=>r.word==='tōku')?.firstLesson).toBe(3)
+ const plural=/(?<![\p{L}])(?:ngā|āku|ōku|āu|ōu|āna|ōna|aku|ana|ēnei|ēnā|ērā|ētahi|ēhea)(?![\p{L}])/u
+ for(const sheet of bank.sheets.slice(0,10))for(const q of sheet.questions)expect(plural.test(q.mi.toLowerCase()),q.mi).toBe(false)
+ expect(rows.find(r=>r.word==='ngā')?.firstLesson).toBe(12)
+ expect(rows.find(r=>r.word==='āku')?.firstLesson).toBe(25)
+ for(const word of ['kotahi','rua','tokorua'])expect(rows.find(r=>r.word===word)).toMatchObject({type:'Number',firstLesson:8})
 })

@@ -7,9 +7,14 @@
       "lesson": 2,
       "title": "Pepeha language",
       "forms": [
-        "tōku"
+        "te"
       ],
-      "pairs": []
+      "pairs": [
+        {
+          "mi": "Ko Hana te ingoa.",
+          "en": "The name is Hana."
+        }
+      ]
     },
     {
       "level": 1,
@@ -35,13 +40,18 @@
       "pairs": []
     },
     {
-      "level": 1,
-      "lesson": 6,
+      "level": 2,
+      "lesson": 2,
       "title": "Pepeha language",
       "forms": [
         "ngā"
       ],
-      "pairs": []
+      "pairs": [
+        {
+          "mi": "E rua ngā whare.",
+          "en": "There are two houses."
+        }
+      ]
     },
     {
       "level": 1,
@@ -59,8 +69,7 @@
       "lesson": 8,
       "title": "Pepeha language",
       "forms": [
-        "he",
-        "āku"
+        "he"
       ],
       "pairs": []
     },
@@ -737,6 +746,34 @@
         {
           "mi": "Kei te marae ō rātou whare.",
           "en": "Their (three or more) houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "lesson": 3,
+      "title": "Singular possession",
+      "forms": [
+        "tōku"
+      ],
+      "pairs": [
+        {
+          "mi": "Ko Hana tōku ingoa.",
+          "en": "My name is Hana."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "lesson": 5,
+      "title": "Plural possession",
+      "forms": [
+        "āku"
+      ],
+      "pairs": [
+        {
+          "mi": "Kāorekau āku tamariki.",
+          "en": "I have no children."
         }
       ]
     }

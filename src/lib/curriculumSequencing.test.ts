@@ -18,7 +18,7 @@ it('introduces useful contrasts together without inflating their later introduct
 
 it('retrieves every new first-pass theme sentence twice in both directions with earlier provenance', () => {
   const introductions = themes.groups.filter(g => 'reviewLessons' in g && !('alignmentPass' in g))
-  expect(introductions).toHaveLength(6)
+  expect(introductions).toHaveLength(7)
   for (const group of introductions) {
     const reviews = (group as typeof group & { reviewLessons: number[] }).reviewLessons
     expect(reviews).toHaveLength(2)

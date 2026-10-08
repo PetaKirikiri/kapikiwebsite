@@ -86,6 +86,8 @@ export default function LevelVocabulary({ level, catalog, sentences }: { level: 
     if (kind === 'word' && aoFilter && (possessionGuide(entry)?.category ?? 'none') !== aoFilter) return false
     if (kind === 'word' && numberFilter && (numberGuide(entry)?.kind ?? 'none') !== numberFilter) return false
     if (posFilter === 'browse:numbers') return vocabularyNumberValue(entry.text) !== undefined
+    if (posFilter === 'browse:determiners') return entry.courseType === 'Determiner'
+    if(posFilter.startsWith('course:'))return entry.courseType===posFilter.slice(7)
     if (posFilter) {
       const [field, ...rest] = posFilter.split(':')
       const code = rest.join(':')
@@ -100,9 +102,12 @@ export default function LevelVocabulary({ level, catalog, sentences }: { level: 
   const clearFilters = () => { setPosFilter(''); setCategoryFilter(''); setAoFilter(''); setNumberFilter('') }
   const wordTypes = (posGroups.find(group => group.prefix === 'teAka')?.options ?? []).filter(type => level !== 1 || LEVEL_ONE_WORD_TYPES.includes(type.label.toLowerCase()))
     .sort((a, b) => level === 1 ? LEVEL_ONE_WORD_TYPES.indexOf(a.label.toLowerCase()) - LEVEL_ONE_WORD_TYPES.indexOf(b.label.toLowerCase()) : a.label.localeCompare(b.label))
+  if(scoped.some(entry=>entry.courseType==='Determiner')&&!wordTypes.some(type=>type.label.toLowerCase()==='determiner'))wordTypes.push({code:'course-determiner',label:'Determiner'})
+  if(scoped.some(entry=>vocabularyNumberValue(entry.text)!==undefined)&&!wordTypes.some(type=>type.label.toLowerCase()==='numeral'))wordTypes.push({code:'course-number',label:'Numeral'})
+  for(const type of ['Time expression','Verb modifier','Conjunction','Position word'])if(scoped.some(entry=>entry.courseType===type)&&!wordTypes.some(item=>item.label.toLowerCase()===type.toLowerCase()))wordTypes.push({code:`course:${type}`,label:type})
   const typePrefix = expressionOnly ? 'function:' : 'teAka:'
   const typeOptions = expressionOnly ? posGroups[0].options : wordTypes
-  const typeTabs = [{ code: '', label: expressionOnly ? 'All' : 'All words', legendCode: '' }, ...typeOptions.map(type => ({ code: !expressionOnly && type.label.toLowerCase() === 'numeral' ? 'browse:numbers' : `${typePrefix}${type.code}`, label: pluralWordType(type.label), legendCode: expressionOnly ? '' : type.code }))]
+  const typeTabs = [{ code: '', label: expressionOnly ? 'All' : 'All words', legendCode: '' }, ...typeOptions.map(type => ({ code: !expressionOnly && type.label.toLowerCase() === 'numeral' ? 'browse:numbers' : !expressionOnly && type.label.toLowerCase()==='determiner'?'browse:determiners':!expressionOnly&&type.code.startsWith('course:')?type.code:`${typePrefix}${type.code}`, label: pluralWordType(type.label), legendCode: expressionOnly ? '' : type.code }))]
   const firstBigWord = sentences && courseBigWords(sentences, level)[0]?.examples[0]
   const bigWordSymbol = firstBigWord && sentences ? bigWordPosCodes(firstBigWord, sentences)[0] : undefined
   const kindOptions: readonly (readonly ['big' | 'word' | 'phrase' | 'optional', string])[] = [ ['big', 'Big words'], ['word', 'Words'], ['phrase', 'Phrases'], ...(optional.length ? [['optional', 'Optional roles'] as const] : []) ]
@@ -178,7 +183,7 @@ export default function LevelVocabulary({ level, catalog, sentences }: { level: 
         {expressionOnly ? <th scope="col">Type</th> : <><th scope="col" title="Recorded POS labels across the word’s Te Aka readings">Te Aka POS</th><th scope="col">Broad POS</th><th scope="col">Specific POS</th></>}</tr></thead>
       <tbody>{visible.map(item => <tr key={item.id} data-entry-kind={item.kind}>
         <th scope="row"><span lang="mi" id={item.id === entries.find(entry => entry.id.startsWith('kiwaha:'))?.id ? 'level-kiwaha-title' : item.id === entries.find(entry => entry.example)?.id ? 'level-reading-language-title' : undefined}>{item.text}</span>
-
+        {item.introducedLesson&&<small>Week {item.introducedLesson}</small>}
         </th>
         <td className="level-vocabulary-meaning">{item.english}</td>
         <td data-label="Category">{item.kind === 'word' ? <Categories course={courseCategories(item)} value={posByWord.get(item.key!)?.categories} failed={failed === level} /> : item.category ?? '—'}</td>
@@ -237,7 +242,7 @@ function Categories({ course, value, failed }: { course: string[]; value?: Vocab
 }
 
 function pluralWordType(label: string): string {
-  const plurals: Record<string, string> = { greeting: 'Greetings', farewell: 'Farewells', 'sentence starter': 'Sentence starters', 'time adverbial': 'Time adverbials', noun: 'Nouns', pronoun: 'Pronouns', determiner: 'Determiners', particle: 'Particles', verb: 'Verbs', adjective: 'Adjectives', adverb: 'Adverbs', preposition: 'Prepositions', conjunction: 'Conjunctions', interjection: 'Interjections', numeral: 'Numbers', modifier: 'Modifiers', stative: 'Statives', 'personal noun': 'Names', 'simple noun': 'Simple nouns', location: 'Locations' }
+  const plurals: Record<string, string> = { greeting: 'Greetings', farewell: 'Farewells', 'sentence starter': 'Sentence starters', 'time adverbial': 'Time adverbials', 'time expression':'Time expressions', 'verb modifier':'Verb modifiers', 'position word':'Position words', noun: 'Nouns', pronoun: 'Pronouns', determiner: 'Determiners', particle: 'Particles', verb: 'Verbs', adjective: 'Adjectives', adverb: 'Adverbs', preposition: 'Prepositions', conjunction: 'Conjunctions', interjection: 'Interjections', numeral: 'Numbers', modifier: 'Modifiers', stative: 'Statives', 'personal noun': 'Names', 'simple noun': 'Simple nouns', location: 'Locations' }
   return plurals[label.toLowerCase()] ?? label
 }
 

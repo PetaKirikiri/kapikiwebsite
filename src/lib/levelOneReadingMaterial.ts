@@ -13,8 +13,8 @@ export const LEVEL_ONE_READING_SECTIONS = [
     ['Ko Rotorua te roto.', 'Rotorua is the lake.', undefined, { structures: [1] }],
     ['Nō Rotorua ahau.', 'I am from Rotorua.', undefined, { structures: [3] }],
   ] },
-  { title: 'Tūpuna', meaning: 'Ancestors', lines: [
-    ['Nō Rotorua ngā tūpuna.', 'The ancestors are from Rotorua.', undefined, { structures: [3] }],
+  { title: 'Whakapapa', meaning: 'Ancestry', lines: [
+    ['Ko te whakapapa tēnei.', 'This is the ancestry.', undefined, { structures: [3] }],
   ] },
   { title: 'Mātua', meaning: 'Parents', lines: [
     ['Ko Mere te whaea.', 'Mere is the mother.', undefined, { structures: [1] }],

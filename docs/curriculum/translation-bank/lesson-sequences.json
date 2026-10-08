@@ -23,29 +23,29 @@
     ],
     "anchors": [
       {
-        "mi": "Ko Hana tōku ingoa.",
-        "en": "My name is Hana.",
+        "mi": "Ko Hana te ingoa.",
+        "en": "The name is Hana.",
         "frame": "Ko"
       },
       {
-        "mi": "Ko Hemi tōku ingoa.",
-        "en": "My name is Hemi.",
+        "mi": "Ko Hemi te ingoa.",
+        "en": "The name is Hemi.",
         "frame": "Ko"
       },
       {
-        "mi": "Ko Pita tōku ingoa.",
-        "en": "My name is Pita.",
+        "mi": "Ko Pita te ingoa.",
+        "en": "The name is Pita.",
         "frame": "Ko"
       },
       {
-        "mi": "Ko Mere tōku ingoa.",
-        "en": "My name is Mere.",
+        "mi": "Ko Mere te ingoa.",
+        "en": "The name is Mere.",
         "frame": "Ko"
       }
     ],
     "recognition": [
       {
-        "en": "My name is Hana.",
+        "en": "The name is Hana.",
         "mi": "",
         "answer": "Ko",
         "acceptedAnswers": [
@@ -65,7 +65,7 @@
         "context": ""
       },
       {
-        "en": "My name is Hemi.",
+        "en": "The name is Hemi.",
         "mi": "",
         "answer": "Ko",
         "acceptedAnswers": [
@@ -85,7 +85,7 @@
         "context": ""
       },
       {
-        "en": "My name is Pita.",
+        "en": "The name is Pita.",
         "mi": "",
         "answer": "Ko",
         "acceptedAnswers": [
@@ -105,7 +105,7 @@
         "context": ""
       },
       {
-        "en": "My name is Mere.",
+        "en": "The name is Mere.",
         "mi": "",
         "answer": "Ko",
         "acceptedAnswers": [
@@ -820,8 +820,8 @@
         "frame": "Ko"
       },
       {
-        "mi": "Ko Mere tōku ingoa.",
-        "en": "My name is Mere.",
+        "mi": "Ko Mere te ingoa.",
+        "en": "The name is Mere.",
         "frame": "Ko"
       },
       {
@@ -857,7 +857,7 @@
         "context": ""
       },
       {
-        "en": "My name is Mere.",
+        "en": "The name is Mere.",
         "mi": "",
         "answer": "Ko",
         "acceptedAnswers": [
@@ -975,13 +975,13 @@
         "frame": "He"
       },
       {
-        "mi": "E rua ngā whare.",
-        "en": "There are two houses.",
+        "mi": "E rua.",
+        "en": "There are two.",
         "frame": "E"
       },
       {
-        "mi": "Tokorua ngā tamariki.",
-        "en": "There are two children.",
+        "mi": "Tokorua.",
+        "en": "There are two people.",
         "frame": "Toko-"
       },
       {
@@ -990,8 +990,8 @@
         "frame": "Kotahi"
       },
       {
-        "mi": "Kāorekau āku tamariki.",
-        "en": "I have no children.",
+        "mi": "Kāorekau tāku tamaiti.",
+        "en": "I have no child.",
         "frame": "Kāorekau"
       }
     ],
@@ -1017,7 +1017,7 @@
         "context": ""
       },
       {
-        "en": "There are two children.",
+        "en": "There are two people.",
         "mi": "",
         "answer": "Toko-",
         "acceptedAnswers": [
@@ -1037,7 +1037,7 @@
         "context": ""
       },
       {
-        "en": "I have no children.",
+        "en": "I have no child.",
         "mi": "",
         "answer": "Kāorekau",
         "acceptedAnswers": [
@@ -1077,7 +1077,7 @@
         "context": ""
       },
       {
-        "en": "There are two houses.",
+        "en": "There are two.",
         "mi": "",
         "answer": "E",
         "acceptedAnswers": [
@@ -1316,8 +1316,8 @@
         "frame": "Kei"
       },
       {
-        "mi": "Ko Hemi tōku ingoa.",
-        "en": "My name is Hemi.",
+        "mi": "Ko Hemi te ingoa.",
+        "en": "The name is Hemi.",
         "frame": "Ko"
       },
       {
@@ -1368,7 +1368,7 @@
         "context": ""
       },
       {
-        "en": "My name is Hemi.",
+        "en": "The name is Hemi.",
         "mi": "",
         "answer": "Ko",
         "acceptedAnswers": [

@@ -28,7 +28,7 @@
       "level": 1,
       "lesson": 2,
       "theme": "Names and identity",
-      "goal": "Ko … tōku ingoa",
+      "goal": "Ko … te ingoa",
       "newWords": [
         {
           "word": "ingoa",
@@ -50,7 +50,7 @@
       "optionalWords": [],
       "newForms": [
         "ko",
-        "tōku"
+        "te"
       ],
       "personalisationNames": [
         "hana",
@@ -66,7 +66,7 @@
       "level": 1,
       "lesson": 3,
       "theme": "Who I am and where I am from",
-      "goal": "Ko · Nō",
+      "goal": "Singular identity and possession",
       "newWords": [],
       "rationale": "Keep this lesson focused on who i am and where i am from using the existing lesson vocabulary.",
       "reviews": [
@@ -85,7 +85,8 @@
         "koe",
         "nō",
         "tōna",
-        "tōu"
+        "tōu",
+        "tōku"
       ],
       "personalisationNames": [
         "rotorua"
@@ -132,9 +133,7 @@
       "admission": "Proposed set: useful within this communicative theme; verify senses and supply full-sentence practice before marking introduced.",
       "prerequisite": "Use this lesson’s already-scheduled grammar and earlier vocabulary. New structure introduction lessons remain recognition/revision only.",
       "optionalWords": [],
-      "newForms": [
-        "te"
-      ],
+      "newForms": [],
       "personalisationNames": [
         "ngongotahā",
         "taupō",
@@ -161,13 +160,6 @@
         {
           "word": "iwi",
           "english": "tribe; people",
-          "type": "Noun",
-          "status": "introduced-in-draft-exercises",
-          "existingExerciseLesson": 5
-        },
-        {
-          "word": "tūpuna",
-          "english": "ancestors; grandparents",
           "type": "Noun",
           "status": "introduced-in-draft-exercises",
           "existingExerciseLesson": 5
@@ -226,9 +218,7 @@
       "admission": "Proposed set: useful within this communicative theme; verify senses and supply full-sentence practice before marking introduced.",
       "prerequisite": "Use this lesson’s already-scheduled grammar and earlier vocabulary. New structure introduction lessons remain recognition/revision only.",
       "optionalWords": [],
-      "newForms": [
-        "ngā"
-      ],
+      "newForms": [],
       "personalisationNames": [],
       "coverageStatus": "Teacher validation required for expanded examples.",
       "newSenses": []
@@ -505,8 +495,7 @@
         "kotahi",
         "kāorekau",
         "rua",
-        "tokorua",
-        "āku"
+        "tokorua"
       ],
       "personalisationNames": [],
       "coverageStatus": "Teacher validation required for expanded examples.",
@@ -611,7 +600,68 @@
       "lesson": 10,
       "theme": "Give your pepeha",
       "goal": "Ko · Nō · He · Kei",
-      "newWords": [],
+      "newWords": [
+        {
+          "word": "kore",
+          "english": "zero",
+          "type": "Number",
+          "status": "introduced"
+        },
+        {
+          "word": "tahi",
+          "english": "one",
+          "type": "Number",
+          "status": "introduced"
+        },
+        {
+          "word": "toru",
+          "english": "three",
+          "type": "Number",
+          "status": "introduced"
+        },
+        {
+          "word": "whā",
+          "english": "four",
+          "type": "Number",
+          "status": "introduced"
+        },
+        {
+          "word": "rima",
+          "english": "five",
+          "type": "Number",
+          "status": "introduced"
+        },
+        {
+          "word": "ono",
+          "english": "six",
+          "type": "Number",
+          "status": "introduced"
+        },
+        {
+          "word": "whitu",
+          "english": "seven",
+          "type": "Number",
+          "status": "introduced"
+        },
+        {
+          "word": "waru",
+          "english": "eight",
+          "type": "Number",
+          "status": "introduced"
+        },
+        {
+          "word": "iwa",
+          "english": "nine",
+          "type": "Number",
+          "status": "introduced"
+        },
+        {
+          "word": "tekau",
+          "english": "ten",
+          "type": "Number",
+          "status": "introduced"
+        }
+      ],
       "rationale": "Keep this lesson focused on give your pepeha using the existing lesson vocabulary.",
       "reviews": [
         12,
@@ -747,7 +797,8 @@
         "tēnei",
         "tēnā",
         "ēnei",
-        "ēnā"
+        "ēnā",
+        "ngā"
       ],
       "personalisationNames": [],
       "coverageStatus": "Teacher validation required for expanded examples.",
@@ -922,6 +973,13 @@
           "english": "embrace",
           "type": "Transitive verb",
           "status": "introduced"
+        },
+        {
+          "word": "tūpuna",
+          "english": "ancestors; grandparents",
+          "type": "Noun",
+          "status": "introduced-in-draft-exercises",
+          "existingExerciseLesson": 5
         }
       ],
       "rationale": "Retain the existing grammar backbone. Select a compact set from the existing inventory by useful task, semantic coherence, current/prior prerequisites, total load and later retrieval. Broader candidates remain optional rather than padding the introduction.",
@@ -947,7 +1005,8 @@
         "ana",
         "ki",
         "taku",
-        "tana"
+        "tana",
+        "tūpuna"
       ],
       "personalisationNames": [],
       "coverageStatus": "Teacher validation required for expanded examples.",
@@ -2176,7 +2235,8 @@
       ],
       "newForms": [
         "tokotoru",
-        "ōku"
+        "ōku",
+        "āku"
       ],
       "personalisationNames": [
         "maia"
@@ -2667,7 +2727,62 @@
       "lesson": 10,
       "theme": "Classroom response consolidation",
       "goal": "Practise Kāore … i in classroom response consolidation.",
-      "newWords": [],
+      "newWords": [
+        {
+          "word": "mua",
+          "english": "in front",
+          "type": "Position word",
+          "status": "introduced"
+        },
+        {
+          "word": "muri",
+          "english": "behind",
+          "type": "Position word",
+          "status": "introduced"
+        },
+        {
+          "word": "waenganui",
+          "english": "in the middle",
+          "type": "Position word",
+          "status": "introduced"
+        },
+        {
+          "word": "inapō",
+          "english": "last night",
+          "type": "Time expression",
+          "status": "introduced"
+        },
+        {
+          "word": "ākuanei",
+          "english": "soon",
+          "type": "Time expression",
+          "status": "introduced"
+        },
+        {
+          "word": "mai",
+          "english": "towards the speaker",
+          "type": "Verb modifier",
+          "status": "introduced"
+        },
+        {
+          "word": "atu",
+          "english": "away from the speaker",
+          "type": "Verb modifier",
+          "status": "introduced"
+        },
+        {
+          "word": "iho",
+          "english": "downwards",
+          "type": "Verb modifier",
+          "status": "introduced"
+        },
+        {
+          "word": "ake",
+          "english": "upwards",
+          "type": "Verb modifier",
+          "status": "introduced"
+        }
+      ],
       "rationale": "Retain the existing grammar backbone. Select a compact set from the existing inventory by useful task, semantic coherence, current/prior prerequisites, total load and later retrieval. Broader candidates remain optional rather than padding the introduction.",
       "reviews": [
         32,
@@ -2738,7 +2853,10 @@
           "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
         }
       ],
-      "newForms": [],
+      "newForms": [
+        "engari",
+        "engari"
+      ],
       "personalisationNames": [],
       "coverageStatus": "Teacher validation required for expanded examples.",
       "newSenses": []
@@ -6810,6 +6928,55 @@
       "english": "white; clean",
       "type": "Describing word",
       "lesson": 9,
+      "status": "introduced"
+    },
+    {
+      "word": "i te ata nei",
+      "english": "this morning",
+      "type": "Time expression",
+      "lesson": 30,
+      "status": "introduced"
+    },
+    {
+      "word": "ā te pō",
+      "english": "tonight",
+      "type": "Time expression",
+      "lesson": 30,
+      "status": "introduced"
+    },
+    {
+      "word": "āpōpō i te ata",
+      "english": "tomorrow morning",
+      "type": "Time expression",
+      "lesson": 30,
+      "status": "introduced"
+    },
+    {
+      "word": "ā muri ake nei",
+      "english": "later",
+      "type": "Time expression",
+      "lesson": 42,
+      "status": "introduced"
+    },
+    {
+      "word": "me",
+      "english": "and",
+      "type": "Conjunction",
+      "lesson": 30,
+      "status": "introduced"
+    },
+    {
+      "word": "ā",
+      "english": "and then",
+      "type": "Conjunction",
+      "lesson": 30,
+      "status": "introduced"
+    },
+    {
+      "word": "anō",
+      "english": "again",
+      "type": "Verb modifier",
+      "lesson": 30,
       "status": "introduced"
     }
   ],

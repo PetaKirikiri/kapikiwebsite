@@ -2,6 +2,8 @@ import pacing from '../../docs/curriculum/translation-bank/vocabulary-pacing.jso
 import themes from '../../docs/curriculum/translation-bank/vocabulary-themes.json'
 import catalogue from '../../docs/curriculum/translation-bank/vocabulary-types.json'
 import { vocabularyTimeline } from './vocabularyTimeline'
+import references from '../../docs/curriculum/translation-bank/reference-progression.json'
+import { SHARED_POSSESSIVES } from './courseReferenceLanguage'
 
 // Editorial course senses only. No dictionary-wide POS inference or engine writes.
 export function courseVocabularyTimeline(sheets:{newForms:string[]}[],entries:{text:string;english:string}[]){
@@ -48,8 +50,19 @@ export function courseVocabularyTimeline(sheets:{newForms:string[]}[],entries:{t
   if(entry){row.type=entry.type;row.english=entry.english??row.english}
   if(row.type==='Name')row.english='Name'
  }
+ const possessiveForms=new Set(SHARED_POSSESSIVES.map(item=>item.text))
+ for(const item of SHARED_POSSESSIVES){
+  const groups=references.groups.filter(group=>group.pairs.some(pair=>pair.mi.includes(`${item.text} `)))
+  const firstLesson=Math.min(...groups.map(group=>(group.level-1)*10+group.lesson))
+  if(Number.isFinite(firstLesson)){
+   const existing=rows.find(row=>row.word===item.text)
+   const form={word:item.text,english:item.english,type:'Determiner',firstLesson,status:'introduced'}
+   if(existing)Object.assign(existing,form);else rows.push(form)
+  }
+ }
  return rows.map(row=>({
   ...row,
+  grammaticalForm:possessiveForms.has(row.word)||row.word.split(' · ')[0].includes(' '),
   displayWord:row.word.split(' · ')[0],
   teachingOrder:teachingSets.findIndex(item=>item.word===row.word.split(' · ')[0]&&item.english===row.english),
  }))
