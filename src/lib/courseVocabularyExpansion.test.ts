@@ -4,9 +4,9 @@ import pacing from '../../docs/curriculum/translation-bank/vocabulary-pacing.jso
 import sequences from '../../docs/curriculum/translation-bank/lesson-sequences.json'
 import {courseVocabularyTimeline} from './courseVocabularyTimeline'
 const words=(s:string)=>s.normalize('NFC').toLowerCase().match(/[\p{L}]+/gu)??[]
-it('actually teaches all 209 additions and retrieves each in two distinct later weeks, both ways',()=>{
+it('actually teaches all selected additions and reordered vocabulary and retrieves each in two distinct later weeks, both ways',()=>{
  const targets=bank.expansion.targets
- expect(targets).toHaveLength(209)
+ expect(targets).toHaveLength(242)
  expect(targets.filter(t=>t.type==='Noun')).toHaveLength(157)
  for(const t of targets){
   expect(new Set(t.retrievalLessons).size,t.word).toBe(2)

@@ -6,10 +6,16 @@ P=ROOT/'docs/curriculum/translation-bank'
 def read(name): return json.loads((P/name).read_text())
 def tokens(text): return re.findall(r'[^\W\d_]+',text.lower())
 bank=read('sheets.json'); pacing=read('vocabulary-pacing.json'); sequences=read('lesson-sequences.json'); themes=read('vocabulary-themes.json'); allocations=read('teaching-allocations.json'); course=read('course-pacing.json'); catalogue=read('vocabulary-types.json')
-if bank.get('expansion',{}).get('version')==1:
+if bank.get('expansion',{}).get('version')==2:
  print(json.dumps({'alreadyPrepared':True,'targets':len(bank['expansion']['targets'])}));sys.exit(0)
 rows=json.loads(subprocess.check_output(['node','--import','tsx','--input-type=module','-e',"import b from './docs/curriculum/translation-bank/sheets.json' with{type:'json'};import{courseVocabularyTimeline}from'./src/lib/courseVocabularyTimeline.ts';console.log(JSON.stringify(courseVocabularyTimeline(b.sheets,[])))"],cwd=ROOT,text=True))
 inventory={r['displayWord']:r for r in rows if r['firstLesson'] is None}
+reordered_existing={'hīkoi'}
+for r in rows:
+ if r['displayWord'] in reordered_existing:inventory[r['displayWord']]={**r,'english':'walk'}
+for lesson in pacing['lessons']:lesson['newWords']=[w for w in lesson['newWords'] if w['word'] not in reordered_existing]
+for word,en in {'whero':'red','kākāriki':'green','pango':'black','mā':'white; clean','kōwhai':'yellow','parauri':'brown','haumaru':'safe','kawa':'bitter; sour; unpleasant-tasting'}.items():inventory[word]={'type':'Describing word','english':en}
+
 # Everyday breadth, selected by purpose. No specialist verb is generated for a noun.
 noun_groups=[
 ('Family and relationships',[8,9,12,14],'whakapapa hoa pēpi manuhiri kaumātua rangatahi'),
@@ -30,15 +36,15 @@ kī|say|said|said|saying|i te ingoa|the name|13
 whakaatu|show|showed|shown|showing|i te pukapuka|the book|18
 whakamahi|use|used|used|using|i te pukapuka|the book|18
 whāngai|feed|fed|fed|feeding|i te tamaiti|the child|16
-whakamau|put on|put on|put on|putting on|i te kākahu|the clothing|27
-whakatakoto|put down|put down|put down|putting down|i te ipu|the container|37
+whakamau|put on|put on|put on|putting on|i te pōtae|the hat|18
+whakatakoto|put down|put down|put down|putting down|i te kapu|the cup|18
 tiki|fetch|fetched|fetched|fetching|i te pukapuka|the book|19
 kohi|collect|collected|collected|collecting|i te kai|the food|16
 whakakī|fill|filled|filled|filling|i te ipu|the container|37
 tapahi|cut|cut|cut|cutting|i te parāoa|the bread|17
 pana|push|pushed|pushed|pushing|i te kūaha|the door|25
-kukume|pull|pulled|pulled|pulling|i te tūru|the chair|30
-hiki|lift|lifted|lifted|lifting|i te pēke|the bag|25
+kukume|pull|pulled|pulled|pulling|i te kūaha|the door|25
+hiki|lift|lifted|lifted|lifting|i te kapu|the cup|18
 maka|throw|threw|thrown|throwing|i te pōro|the ball|20
 hopu|catch|caught|caught|catching|i te pōro|the ball|20
 neke|move|moved|moved|moving|||24
@@ -78,7 +84,41 @@ for word,english,week,nouns in [
  quality_data[word]=(week,pairs)
 for word,english in [('wawe','early'),('tōmuri','late')]: quality_data[word]=(42,[(f'I tae {word} ahau.',f'I arrived {english}.'),(f'I tae {word} koe.',f'You arrived {english}.'),(f'I tae {word} a Hana.',f'Hana arrived {english}.')])
 for word,english in [('rerekē','different'),('ōrite','the same')]: quality_data[word]=(42,[(f'He {word} ngā whare.',f'The houses are {english}.'),(f'He {word} ngā kupu.',f'The words are {english}.'),(f'He {word} ngā kākahu.',f'The clothes are {english}.')])
-assert sum(len(g[2].split()) for g in noun_groups)==157 and len(quality_data)==22
+
+# The second pass adds distinct everyday functions, ordered before abstract work.
+verb_data += """
+hīkoi|walk|walked|walked|walking|||15
+tīmata|start|started|started|starting|||12
+whakatā|rest|rested|rested|resting|||12
+huri|turn|turned|turned|turning|||12
+awhi|hug|hugged|hugged|hugging|i te pēpi|the baby|14
+uru|enter|entered|entered|entering|ki te whare|the house|14
+puta|go out|went out|gone out|going out|i te whare|of the house|14
+peke|jump|jumped|jumped|jumping|||16
+takoto|lie down|lay down|lain down|lying down|||16
+rongo|hear|heard|heard|hearing|i te manu|the bird|18
+whakahoki|return|returned|returned|returning|i te pukapuka|the book|20
+hono|connect|connected|connected|connecting|i ngā taura|the ropes|25
+wehe|separate|separated|separated|separating|i ngā kākahu|the clothes|27
+tāpiri|add|added|added|adding|i te huka|the sugar|28
+ine|measure|measured|measured|measuring|i te rūma|the room|28
+ārahi|guide|guided|guided|guiding|i te tamaiti|the child|30
+whakatau|decide|decided|decided|deciding|||32"""
+# Each pair uses a compatible object, and deliberate contrasts are taught together.
+for word,en in [('whero','red'),('kākāriki','green'),('mā','white'),('pango','black'),('kōwhai','yellow'),('parauri','brown')]:
+ week=9 if word in {'whero','kākāriki','mā'} else 16
+ quality_data[word]=(week,[(f'He pōtae {word} tēnei.',f'This is a {en} hat.'),(f'He hāte {word} tēnei.',f'This is a {en} shirt.'),(f'He kete {word} tēnei.',f'This is a {en} basket.')])
+quality_data['mā']=(9,[('He pōtae mā tēnei.','This is a white hat.'),('He hāte mā tēnei.','This is a white shirt.'),('He rūma mā tēnei.','This is a clean room.')])
+for word,en in [('mataku','afraid'),('mokemoke','lonely'),('reri','ready'),('ora','well')]:
+ quality_data[word]=(22,[(f'Kei te {word} ahau.',f'I am {en}.'),(f'Kei te {word} te pēpi.',f'The baby is {en}.'),(f'Kei te {word} te tamaiti.',f'The child is {en}.')])
+quality_data['haumaru']=(24,[('He whare haumaru tēnei.','This is a safe house.'),('He kāinga haumaru tēnei.','This is a safe home.'),('He rūma haumaru tēnei.','This is a safe room.')])
+quality_data['maoa']=(17,[('He kai maoa tēnei.','This is cooked food.'),('He kūmara maoa tēnei.','This is a cooked kūmara.'),('He rīwai maoa tēnei.','This is a cooked potato.')])
+quality_data['mata']=(17,[('He ika mata tēnei.','This is a raw fish.'),('He mīti mata tēnei.','This is raw meat.'),('He kāreti mata tēnei.','This is a raw carrot.')])
+quality_data['māene']=(33,[('He tēpu māene tēnei.','This is a smooth table.'),('He papa māene tēnei.','This is a smooth board.'),('He pakitara māene tēnei.','This is a smooth wall.')])
+quality_data['taratara']=(33,[('He tēpu taratara tēnei.','This is a rough table.'),('He papa taratara tēnei.','This is a rough board.'),('He pakitara taratara tēnei.','This is a rough wall.')])
+quality_data['kawa']=(19,[('He kawa te kawhe.','The coffee is bitter.'),('He kawa te āporo.','The apple is sour.'),('He kawa te kai.','The food tastes unpleasant.')])
+
+assert sum(len(g[2].split()) for g in noun_groups)==157 and len(quality_data)==38
 base_first={}; original_sources={}; protected=[{} for _ in range(60)]
 for index,(sheet,sequence) in enumerate(zip(bank['sheets'],sequences)):
  for pair in sequence['anchors']: protected[index][(pair['mi'],pair['en'])]='Simple sentences'
@@ -115,6 +155,9 @@ for pair in reading:
  legacy[week][(pair['mi'],pair['en'])]='Build on it'
 for week,pairs in enumerate(legacy):
  for key,stage in pairs.items():protected[week].setdefault(key,stage)
+for week,pairs in enumerate(protected):
+ for key,stage in pairs.items():
+  if stage!='Simple sentences':legacy[week].setdefault(key,stage)
 # A short two-sentence translation may practise an existing reference example alongside
 # one new lexical sentence. Both clauses retain their original meaning and grammar.
 # This preserves reference teaching within the fixed fifty attempts, without fake counts.
@@ -122,7 +165,9 @@ bundled=[set() for _ in range(60)]
 # New lexical support is explicit, not an unseen template token.
 support={'tēnei':('Pronoun','this',5),'mō':('Grammar word','about; for',32)}
 base_first['tēnei']=5
-base_first.setdefault('mō',32)
+base_first['mō']=32
+protected[31][('Mō te whānau tēnei.','This is for the family.')]='Build on it'
+legacy[31][('Mō te whānau tēnei.','This is for the family.')]='Build on it'
 noncontent={i+1 for i,l in enumerate(pacing['lessons']) if l['consolidation']}|{1,2,3,4}
 capacity=[(50-sum(q['direction']=='structure-choice' for q in s['questions']))//2 for s in bank['sheets']]
 for i,pairs in enumerate(protected):
@@ -133,19 +178,19 @@ for i,pairs in enumerate(protected):
 reserved=[dict(x) for x in protected];added=[[] for _ in range(60)];targets=[]
 load=[sum(r['firstLesson']==i+1 for r in rows) for i in range(60)]
 # Bound all timeline introductions, including existing support words, names and grammatical items.
-def free(week,new=False):
- return (len(reserved[week-1])<capacity[week-1] or new and any(k not in bundled[week-1] and reserved[week-1].get(k)!='Simple sentences' for k in legacy[week-1])) and (not new or week not in noncontent and load[week-1]<15 and len(added[week-1])+len(pacing['lessons'][week-1]['newWords'])<10-(1 if week in {5,32} else 0))
-def known(pair,week,own):return all(w==own or base_first.get(w,999)<=week for w in tokens(pair[0]))
-def schedule(word,category,pairs,preferred):
+def free(week,new=False,pair=None):
+ return (pair in reserved[week-1] or len(reserved[week-1])<capacity[week-1] or new and any(k not in bundled[week-1] and reserved[week-1].get(k)!='Simple sentences' for k in legacy[week-1])) and (not new or week not in noncontent and load[week-1]<15 and len(added[week-1])+len(pacing['lessons'][week-1]['newWords'])<10-(1 if week in {5,32} else 0))
+def known(pair,week,own):return all(w in globals().get('cohort_for',{}).get(own,[own]) or base_first.get(w,999)<=week for w in tokens(pair[0]))
+def schedule(word,category,pairs,preferred,forced=None):
  assert word in inventory,word
  info=inventory[word]
- starts=list(dict.fromkeys(preferred+[w for w in range(min(preferred),55) if w not in preferred]+list(range(8,min(preferred)))))
+ starts=[forced] if forced is not None else list(dict.fromkeys(preferred+[w for w in range(min(preferred),55) if w not in preferred]+list(range(8,min(preferred)))))
  for first in starts:
-  if first>54 or not free(first,True) or not known(pairs[0],first,word):continue
+  if first>54 or not free(first,True,pairs[0]) or not known(pairs[0],first,word):continue
   pairs=list(pairs)
-  clause=next((k for k in legacy[first-1] if k in reserved[first-1] and k not in bundled[first-1] and reserved[first-1][k]!='Simple sentences' and known(k,first,word)),None)
-  if len(reserved[first-1])>=capacity[first-1] and not clause:continue
-  if clause and len(reserved[first-1])>=capacity[first-1]:
+  clause=next((k for k in sorted(legacy[first-1],key=lambda k:len(tokens(k[0]))) if k in reserved[first-1] and k not in bundled[first-1] and reserved[first-1][k]!='Simple sentences' and known(k,first,word)),None)
+  if len(reserved[first-1])>=capacity[first-1] and pairs[0] not in reserved[first-1] and not clause:continue
+  if clause and pairs[0] not in reserved[first-1] and len(reserved[first-1])>=capacity[first-1]:
    reserved[first-1].pop(clause);bundled[first-1].add(clause)
    pairs[0]=(clause[0]+' '+pairs[0][0],clause[1]+' '+pairs[0][1])
   reserved[first-1][pairs[0]]='Build on it'
@@ -181,10 +226,12 @@ for category,weeks,words in noun_groups:
   if category=='Family and relationships':preferred=[5,6,7,9,12]
   if word in {'hukapapa','āniwaniwa'}:preferred=[47,48,49,52]
   if word in {'kōwhiringa','wheako'}:preferred=[49,48,47,46]
+  if word=='maripi':preferred=[17,18,19,25]
+  if word in {'hōhipera','wharekai','wharehākinakina','wharetaonga','wharekarakia','poti'}:preferred=[20,25,26,32,33,34,35,36,38,39]
   if word in 'kāpata whāriki kete pereti maripi hāte pōtae tarau tōkena'.split():preferred=[9,8,12]+preferred
-  if word in {'kāpata','whāriki'}:
+  if word in {'kāpata','whāriki','pōtae','kete','pereti','pōro'}:
    first,second=second,first
-   preferred=[6,7,8,9]
+   preferred=[7,6,8,9] if word in {'kete','pereti','pōro'} else [6,7,8,9]
   # Abstract retrieval needs an explicitly taught speaking verb; reserve its intro first below.
   requests.append((word,category,[first,second,third],preferred))
 for line in verb_data.splitlines():
@@ -194,16 +241,43 @@ for line in verb_data.splitlines():
  pairs=[(f'Kei te {word} ahau{tail}.',f'I am {ing}{obj}.'),(f'I {word} koe{tail}.',f'You {past}{obj}.'),(f'Ka {word} ia{tail}.',f'She will {base}{obj}.')]
  requests.append((word,'Reusable actions',pairs,[start]))
 for word,(start,pairs) in quality_data.items():requests.append((word,'Qualities and feelings',pairs,[start]))
+progression_priority=set('hīkoi tīmata whakatā huri awhi uru puta peke takoto rongo whakahoki hono wehe tāpiri ine ārahi whakatau whero kākāriki mā pango kōwhai parauri maoa mata mataku mokemoke reri ora haumaru māene taratara kawa'.split())
+cohorts=[['whero','kākāriki','mā'],['pango','kōwhai','parauri'],['uru','puta'],['maoa','mata'],['māene','taratara'],['hīkoi','peke'],['pana','kukume'],['hapori','ture'],['whāinga','whakaritenga'],['kōwhiringa','wheako']]
+cohort_for={w:g for g in cohorts for w in g}
+shared_contrasts={
+ ('hīkoi','peke'):[('Kei te hīkoi ahau. Kei te peke te tamaiti.','I am walking. The child is jumping.'),('I hīkoi te whānau. I peke te tamaiti.','The family walked. The child jumped.'),('Ka hīkoi ahau. Ka peke koe.','I will walk. You will jump.')],
+ ('pana','kukume'):[('Kei te pana ahau i te kūaha. Kei te kukume koe i te kūaha.','I am pushing the door. You are pulling the door.'),('I pana ahau i te kūaha. I kukume koe i te kūaha.','I pushed the door. You pulled the door.'),('Ka pana ahau i te kūaha. Ka kukume koe i te kūaha.','I will push the door. You will pull the door.')],
+ ('hapori','ture'):[('He ture tēnei mō te hapori.','This is a law for the community.'),('Ko te ture tēnei mō te hapori.','This is the law for the community.'),('Kei te kōrero ahau mō te ture mō te hapori.','I am talking about the law for the community.')],
+ ('whāinga','whakaritenga'):[('He whāinga tēnei. He whakaritenga tēnei.','This is a goal. This is an arrangement.'),('Ko te whāinga tēnei. Ko te whakaritenga tēnei.','This is the goal. This is the arrangement.'),('Kei te kōrero ahau mō te whāinga me te whakaritenga.','I am talking about the goal and the arrangement.')],
+ ('kōwhiringa','wheako'):[('He kōwhiringa tēnei. He wheako tēnei.','This is a choice. This is an experience.'),('Ko te kōwhiringa tēnei. Ko te wheako tēnei.','This is the choice. This is the experience.'),('Kei te kōrero ahau mō te kōwhiringa me te wheako.','I am talking about the choice and the experience.')],
+ ('uru','puta'):[('Kei te uru ahau ki te whare. Kei te puta koe i te whare.','I am entering the house. You are going out of the house.'),('I uru te pēpi ki te rūma. I puta te tamaiti i te rūma.','The baby entered the room. The child went out of the room.'),('Ka uru ahau ki te kāinga. Ka puta koe i te kāinga.','I will enter the home. You will go out of the home.')],
+ ('maoa','mata'):[('He kai maoa tēnei. He ika mata tēnei.','This is cooked food. This is a raw fish.'),('He kūmara maoa tēnei. He mīti mata tēnei.','This is a cooked kūmara. This is raw meat.'),('He rīwai maoa tēnei. He kāreti mata tēnei.','This is a cooked potato. This is a raw carrot.')],
+ ('māene','taratara'):[('He tēpu māene tēnei. He whāriki taratara tēnei.','This is a smooth table. This is a rough mat.'),('He papa māene tēnei. He taura taratara tēnei.','This is a smooth board. This is a rough rope.'),('He pakitara māene tēnei. He kete taratara tēnei.','This is a smooth wall. This is a rough basket.')]
+}
+shared_for={w:g for g in shared_contrasts for w in g}
+requests=[(w,c,shared_contrasts.get(shared_for.get(w),pairs),preferred) for w,c,pairs,preferred in requests]
 pending={r[0]:r for r in requests}
 def place(word,chain=()):
  if word not in pending:return
  if word in chain:raise ValueError(f'Circular lexical prerequisite: {word}')
- request=pending[word]
- for pair in request[2]:
-  for prerequisite in tokens(pair[0]):
-   if prerequisite!=word and prerequisite not in base_first and prerequisite in pending:place(prerequisite,chain+(word,))
- schedule(*request);pending.pop(word)
-for request in sorted(requests,key=lambda r:min(r[3][0],54)):
+ group=[w for w in cohort_for.get(word,[word]) if w in pending]
+ for w in group:
+  for pair in pending[w][2]:
+   for prerequisite in tokens(pair[0]):
+    if prerequisite not in group and prerequisite not in base_first and prerequisite in pending:place(prerequisite,chain+tuple(group))
+ if len(group)==1:
+  schedule(*pending[word]);pending.pop(word);return
+ preferred=pending[word][3]
+ for week in dict.fromkeys(preferred+list(range(min(preferred),55))):
+  support_load=1 if week in {5,32} else 0
+  if week in noncontent or len(pacing['lessons'][week-1]['newWords'])+len(added[week-1])+len(group)+support_load>10 or load[week-1]+len(group)>15:continue
+  if not all(known(pending[w][2][0],week,w) for w in group):continue
+  available=capacity[week-1]-len(reserved[week-1])+sum(k in reserved[week-1] and k not in bundled[week-1] and reserved[week-1][k]!='Simple sentences' and known(k,week,word) for k in legacy[week-1])
+  if available<(1 if tuple(group) in shared_contrasts else len(group)):continue
+  for w in group:schedule(*pending[w],forced=week);pending.pop(w)
+  return
+ raise ValueError(f'No joint introduction capacity: {group}')
+for request in sorted(requests,key=lambda r:(min(r[3][0],54),0 if r[0] in progression_priority else 1)):
  place(request[0])
 # Joint capacitated matching: reserve two distinct later weeks per target.
 # A first revisit is at least two weeks later; a second is at least six weeks later.
@@ -215,19 +289,22 @@ def edge(a,b,cap):
  forward=[b,len(edges[b]),cap];backward=[a,len(edges[a]),0];edges[a].append(forward);edges[b].append(backward);return forward
 source=node();sink=node();week_nodes={w:node() for w in range(1,61)}
 for w,n in week_nodes.items():edge(n,sink,capacity[w-1]-len(reserved[w-1])+sum(k in reserved[w-1] and k not in bundled[w-1] and reserved[w-1][k]!='Simple sentences' for k in legacy[w-1]))
-word_week={};jobs=[]
+word_week={};jobs=[];job_groups={}
 for item in targets:
  first=item['introductionLesson']
  for index in [1,2]:
-  pair=item['pairs'][index];key=(pair['mi'],pair['en']);job=node();edge(source,job,1);options=[]
-  start=first+(2 if index==1 else 6);end=60
-  for w in range(start,end+1):
-   if not known(key,w,item['word']):continue
-   address=(item['word'],w)
-   if address not in word_week:
-    group=node();word_week[address]=group;edge(group,week_nodes[w],1)
-   options.append((w,edge(job,word_week[address],1)))
-  jobs.append((item,index,key,options))
+  pair=item['pairs'][index];key=(pair['mi'],pair['en'])
+  job_groups.setdefault((first,index,key),[]).append(item)
+for (first,index,key),items in job_groups.items():
+ job=node();edge(source,job,1);options=[];owners=tuple(sorted(item['word'] for item in items))
+ start=first+(2 if index==1 else 6)
+ for w in range(start,61):
+  if not all(known(key,w,item['word']) for item in items):continue
+  address=(owners,w)
+  if address not in word_week:
+   group=node();word_week[address]=group;edge(group,week_nodes[w],1)
+  options.append((w,edge(job,word_week[address],1)))
+ jobs.append((items,index,key,options))
 flow=0
 while True:
  distance=[-1]*len(edges);distance[source]=0;queue=deque([source])
@@ -246,16 +323,18 @@ while True:
   return 0
  while send(source):flow+=1
 if flow!=len(jobs):
- print([(item['word'],item['introductionLesson'],index,[w for w,e in options]) for item,index,key,options in jobs if not any(e[2]==0 for w,e in options)])
+ print('LOADS',[(i+1,len(pacing['lessons'][i]['newWords'])+len(added[i])) for i in range(60)])
+ print([([item['word'] for item in items],items[0]['introductionLesson'],index,[w for w,e in options]) for items,index,key,options in jobs if not any(e[2]==0 for w,e in options)])
  raise ValueError(f'Retrieval matching: {flow}/{len(jobs)} placements; {sum(capacity)-sum(map(len,reserved))} available pair slots.')
-for item,index,key,options in jobs:
+for items,index,key,options in jobs:
  week=next(w for w,e in options if e[2]==0)
- while len(item['retrievalLessons'])<index:item['retrievalLessons'].append(None)
- item['retrievalLessons'][index-1]=week
  if len(reserved[week-1])>=capacity[week-1]:
-  clause=next(k for k in legacy[week-1] if k in reserved[week-1] and k not in bundled[week-1] and reserved[week-1][k]!='Simple sentences')
+  clause=next(k for k in sorted(legacy[week-1],key=lambda k:len(tokens(k[0]))) if k in reserved[week-1] and k not in bundled[week-1] and reserved[week-1][k]!='Simple sentences')
   reserved[week-1].pop(clause);bundled[week-1].add(clause)
   key=(clause[0]+' '+key[0],clause[1]+' '+key[1])
+ for item in items:
+  while len(item['retrievalLessons'])<index:item['retrievalLessons'].append(None)
+  item['retrievalLessons'][index-1]=week
   item['pairs'][index]={'mi':key[0],'en':key[1]}
  reserved[week-1][key]='Revisit'
 # First encounters and grammar anchors stay protected; redundant legacy pair copies are replaced by the lexical retrieval contract.
@@ -264,7 +343,9 @@ for item,index,key,options in jobs:
 for item in targets:
  for week,pair in [(item['introductionLesson'],item['pairs'][0]),*zip(item['retrievalLessons'],item['pairs'][1:])]:
   if not known((pair['mi'],pair['en']),week,item['word']):raise ValueError(f'Unintroduced prerequisite: {item["word"]} at {week}')
-lookup={(p['mi'],p['en']):(t,0 if i==0 else i) for t in targets for i,p in enumerate(t['pairs'])}
+lookup={}
+for t in targets:
+ for i,p in enumerate(t['pairs']):lookup.setdefault((p['mi'],p['en']),[]).append((t,i))
 previous={};clause_sources={};prepared=copy.deepcopy(bank)
 for index,sheet in enumerate(prepared['sheets']):
  week=index+1;old=bank['sheets'][index];choices=[copy.deepcopy(q) for q in old['questions'] if q['direction']=='structure-choice'];pairs=dict(reserved[index])
@@ -285,13 +366,13 @@ for index,sheet in enumerate(prepared['sheets']):
  if len(pairs)!=capacity[index]:raise ValueError(f'Question capacity {week}: {len(pairs)}/{capacity[index]}')
  qs=[]
  for pair,stage in pairs.items():
-  clean=(pair[0].strip(),pair[1].strip());target=lookup.get(clean); prior=previous.get(clean)
+  clean=(pair[0].strip(),pair[1].strip());matches=lookup.get(clean,[]);target=matches[0] if matches else None; prior=previous.get(clean)
   for direction in ['en-mi','mi-en']:
    matching=next((q for q in old['questions'] if (q['mi'],q['en'])==clean and q['direction']==direction and q['id'] not in {x['id'] for x in qs}),None)
    q=copy.deepcopy(matching) if matching else {'id':f'{sheet["id"]}-v1-{hashlib.sha256((pair[0]+pair[1]+direction).encode()).hexdigest()[:12]}','mi':clean[0],'en':clean[1],'direction':direction,'answer':'','options':[],'choiceLabel':'Choose the Big Word','context':''}
    q['reviewClauses']=[{'mi':mi,'en':en,'from':source} for (mi,en),source in clause_sources.items() if mi in clean[0] and en in clean[1]]
    q.update(stage=stage,kind='review' if prior else 'focus',reviewFrom=prior,acceptedAnswers=[clean[0] if direction=='en-mi' else clean[1]],retrievalFrom=None,retrievalWords=[])
-   if target and target[1]>0:q.update(kind='transfer',reviewFrom=None,retrievalFrom=prepared['sheets'][target[0]['introductionLesson']-1]['id'],retrievalWords=[target[0]['word']])
+   if target and target[1]>0:q.update(kind='transfer',reviewFrom=None,retrievalFrom=prepared['sheets'][target[0]['introductionLesson']-1]['id'],retrievalWords=[t['word'] for t,i in matches])
    qs.append(q)
  qs.sort(key=lambda q:['Recognise','Simple sentences','Revisit','Build on it'].index(q['stage']))
  sheet['questions']=choices+qs
@@ -306,7 +387,10 @@ for group in themes['groups']:
  sheet=prepared['sheets'][group['lesson']-1]
  group['pairs']=[p for p in group['pairs'] if any(p['mi'] in q['mi'] and p['en'] in q['en'] and q['direction']=='en-mi' for q in sheet['questions'])]
 selected={t['word'] for t in targets}
-for item in targets:catalogue['words'][item['word']]={'type':item['type'],'english':item['english']}
+for item in targets:
+ label='mā · white; clean' if item['word']=='mā' else item['word']
+ catalogue['words'][label]={'type':item['type'],'english':item['english']}
+ if item['word']=='mā':pacing['senseIntroductions'].append({'word':'mā','english':'white; clean','type':'Describing word','lesson':item['introductionLesson'],'status':'introduced'})
 for lesson,items in zip(pacing['lessons'],added):
  lesson['optionalWords']=[w for w in lesson['optionalWords'] if w['word'] not in selected]
  lesson['newWords'] += [{'word':t['word'],'english':t['english'],'type':t['type'],'status':'introduced'} for t in items]
@@ -320,7 +404,7 @@ for intro in course['introductions']:
  sheet=prepared['sheets'][(intro['level']-1)*10+intro['lesson']-1]
  anchors={(p['mi'],p['en']) for p in intro['pairs']}
  intro['extensionPairs']=[{'mi':q['mi'],'en':q['en']} for q in sheet['questions'] if q['direction']=='en-mi' and q['kind']=='focus' and (q['mi'],q['en']) not in anchors]
-prepared['expansion']={'version':1,'targets':targets,'retainedGrammarTargets':[s['pattern'] for s in bank['sheets']],'retainedVocabularyIntroductions':{w:n for w,n in base_first.items() if w not in selected},'bundledPairs':sum(map(len,bundled)),'exerciseQuota':50,'retrievalDefinition':'Two later translations in both directions with distinct sentences; no mastery claim.'}
+prepared['expansion']={'version':2,'targets':targets,'retainedGrammarTargets':[s['pattern'] for s in bank['sheets']],'retainedVocabularyIntroductions':{w:n for w,n in base_first.items() if w not in selected},'bundledPairs':sum(map(len,bundled)),'progressionGroups':cohorts,'incidentalReferenceConcepts':['whero','kākāriki'],'reorderedExistingWords':sorted(reordered_existing),'exerciseQuota':50,'retrievalDefinition':'Two later translations in both directions with distinct sentences; no mastery claim.'}
 # Core word credit must match its actual first exercise, including support words.
 actual_first={}
 for week,s in enumerate(prepared['sheets'],1):
@@ -333,7 +417,7 @@ for word,(kind,en,week) in support.items():
  for l in pacing['lessons']:l['newWords']=[w for w in l['newWords'] if w['word']!=word]
  pacing['lessons'][actual_first[word]-1]['newWords'].append({'word':word,'english':en,'type':kind,'status':'introduced'})
 result={'sheets.json':prepared,'vocabulary-pacing.json':pacing,'vocabulary-types.json':catalogue,'vocabulary-themes.json':themes,'teaching-allocations.json':allocations,'course-pacing.json':course}
-summary={'lessons':60,'exercises':3000,'addedNouns':sum(t['type']=='Noun' for t in targets),'addedActions':30,'addedQualities':22,'maxNewCoreWords':max(len(l['newWords']) for l in pacing['lessons']),'maxReservedPairs':max(map(len,reserved))}
+summary={'lessons':60,'exercises':3000,'addedNouns':sum(t['type']=='Noun' for t in targets),'addedActions':46,'addedQualities':38,'maxNewCoreWords':max(len(l['newWords']) for l in pacing['lessons']),'maxReservedPairs':max(map(len,reserved))}
 if '--apply' in sys.argv:
  snapshot=ROOT/'.local/curriculum-backups'/f'source-before-expansion-{int(time.time())}'
  snapshot.mkdir(parents=True,mode=0o700)

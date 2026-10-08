@@ -475,7 +475,8 @@
       "type": "Intransitive verb"
     },
     "tīmata": {
-      "type": "Intransitive verb"
+      "type": "Intransitive verb",
+      "english": "begin; start"
     },
     "waiata": {
       "type": "Transitive verb",
@@ -517,7 +518,8 @@
       "type": "Transitive verb"
     },
     "hīkoi": {
-      "type": "Intransitive verb"
+      "type": "Intransitive verb",
+      "english": "walk"
     },
     "pānui": {
       "type": "Transitive verb"
@@ -543,7 +545,8 @@
       "courseUse": "The course construction asks someone with ki, e.g. Ka pātai ahau ki te kuia."
     },
     "rongo": {
-      "type": "Experience verb"
+      "type": "Experience verb",
+      "english": "hear; feel"
     },
     "hiahia": {
       "type": "Experience verb"
@@ -595,7 +598,8 @@
       "type": "Transitive verb"
     },
     "whakatā": {
-      "type": "Intransitive verb"
+      "type": "Intransitive verb",
+      "english": "rest; take a break"
     },
     "whakatika": {
       "type": "Transitive verb",
@@ -644,7 +648,8 @@
       "english": "request; ask; apply"
     },
     "ārahi": {
-      "type": "Transitive verb"
+      "type": "Transitive verb",
+      "english": "guide; lead"
     },
     "whakamātau": {
       "type": "Transitive verb"
@@ -879,7 +884,8 @@
       "english": "correct; right"
     },
     "mataku": {
-      "type": "Stative verb"
+      "type": "Stative verb",
+      "english": "afraid; frightened"
     },
     "mārama": {
       "type": "Experience verb",
@@ -1331,7 +1337,8 @@
       "type": "Transitive verb"
     },
     "awhi": {
-      "type": "Transitive verb"
+      "type": "Transitive verb",
+      "english": "embrace"
     },
     "manaaki": {
       "type": "Transitive verb"
@@ -1360,16 +1367,20 @@
       "type": "Transitive verb"
     },
     "hono": {
-      "type": "Transitive verb"
+      "type": "Transitive verb",
+      "english": "connect"
     },
     "wehe": {
-      "type": "Transitive verb"
+      "type": "Transitive verb",
+      "english": "separate"
     },
     "whakatau": {
-      "type": "Transitive verb"
+      "type": "Transitive verb",
+      "english": "decide"
     },
     "whakahoki": {
-      "type": "Transitive verb"
+      "type": "Transitive verb",
+      "english": "return something"
     },
     "whakapiri": {
       "type": "Transitive verb"
@@ -1393,7 +1404,8 @@
       "type": "Transitive verb"
     },
     "tāpiri": {
-      "type": "Transitive verb"
+      "type": "Transitive verb",
+      "english": "add"
     },
     "whakaiti": {
       "type": "Transitive verb"
@@ -1480,7 +1492,8 @@
       "type": "Transitive verb"
     },
     "ine": {
-      "type": "Transitive verb"
+      "type": "Transitive verb",
+      "english": "measure"
     },
     "oho": {
       "type": "Intransitive verb"
@@ -1492,14 +1505,16 @@
       "type": "Intransitive verb"
     },
     "huri": {
-      "type": "Intransitive verb"
+      "type": "Intransitive verb",
+      "english": "turn"
     },
     "neke": {
       "type": "Intransitive verb",
       "english": "move"
     },
     "peke": {
-      "type": "Intransitive verb"
+      "type": "Intransitive verb",
+      "english": "jump"
     },
     "whakangā": {
       "type": "Intransitive verb"
@@ -1539,16 +1554,19 @@
       "courseUse": "Selected course use is be freezing cold, not freeze an object."
     },
     "takoto": {
-      "type": "Intransitive verb"
+      "type": "Intransitive verb",
+      "english": "lie down"
     },
     "eke": {
       "type": "Intransitive verb"
     },
     "puta": {
-      "type": "Intransitive verb"
+      "type": "Intransitive verb",
+      "english": "go out"
     },
     "uru": {
-      "type": "Intransitive verb"
+      "type": "Intransitive verb",
+      "english": "enter"
     },
     "purei": {
       "type": "Intransitive verb"
@@ -1575,7 +1593,8 @@
       "type": "Stative verb"
     },
     "reri": {
-      "type": "Stative verb"
+      "type": "Stative verb",
+      "english": "ready"
     },
     "whara": {
       "type": "Stative verb"
@@ -1670,6 +1689,26 @@
       "type": "Noun",
       "english": "basket"
     },
+    "pōro": {
+      "type": "Noun",
+      "english": "ball"
+    },
+    "hāte": {
+      "type": "Noun",
+      "english": "shirt"
+    },
+    "whero": {
+      "type": "Describing word",
+      "english": "red"
+    },
+    "kākāriki": {
+      "type": "Describing word",
+      "english": "green"
+    },
+    "mā · white; clean": {
+      "type": "Describing word",
+      "english": "white; clean"
+    },
     "tarau": {
       "type": "Noun",
       "english": "trousers"
@@ -1677,10 +1716,6 @@
     "tōkena": {
       "type": "Noun",
       "english": "socks"
-    },
-    "hāte": {
-      "type": "Noun",
-      "english": "shirt"
     },
     "mīere": {
       "type": "Noun",
@@ -1746,6 +1781,18 @@
       "type": "Noun",
       "english": "bridge"
     },
+    "pango": {
+      "type": "Describing word",
+      "english": "black"
+    },
+    "kōwhai": {
+      "type": "Describing word",
+      "english": "yellow"
+    },
+    "parauri": {
+      "type": "Describing word",
+      "english": "brown"
+    },
     "hinu": {
       "type": "Noun",
       "english": "oil"
@@ -1757,6 +1804,14 @@
     "aihikirīmi": {
       "type": "Noun",
       "english": "ice cream"
+    },
+    "maoa": {
+      "type": "Describing word",
+      "english": "cooked"
+    },
+    "mata": {
+      "type": "Describing word",
+      "english": "raw"
     },
     "kōhua": {
       "type": "Noun",
@@ -1782,6 +1837,10 @@
       "type": "Noun",
       "english": "page"
     },
+    "kawa": {
+      "type": "Describing word",
+      "english": "bitter; sour; unpleasant-tasting"
+    },
     "kaimoana": {
       "type": "Noun",
       "english": "seafood"
@@ -1805,10 +1864,6 @@
     "tuhinga": {
       "type": "Noun",
       "english": "writing"
-    },
-    "pōro": {
-      "type": "Noun",
-      "english": "ball"
     },
     "tīma": {
       "type": "Noun",
@@ -1834,9 +1889,41 @@
       "type": "Noun",
       "english": "insect"
     },
+    "hōhipera": {
+      "type": "Noun",
+      "english": "hospital"
+    },
+    "wharekai": {
+      "type": "Noun",
+      "english": "dining room"
+    },
+    "wharehākinakina": {
+      "type": "Noun",
+      "english": "gymnasium"
+    },
+    "wharetaonga": {
+      "type": "Noun",
+      "english": "museum"
+    },
+    "wharekarakia": {
+      "type": "Noun",
+      "english": "church"
+    },
+    "poti": {
+      "type": "Noun",
+      "english": "boat"
+    },
     "hāora": {
       "type": "Noun",
       "english": "hour"
+    },
+    "mokemoke": {
+      "type": "Describing word",
+      "english": "lonely"
+    },
+    "ora": {
+      "type": "Describing word",
+      "english": "well"
     },
     "meneti": {
       "type": "Noun",
@@ -1862,6 +1949,10 @@
       "type": "Noun",
       "english": "wind"
     },
+    "haumaru": {
+      "type": "Describing word",
+      "english": "safe"
+    },
     "riri": {
       "type": "Describing word",
       "english": "angry"
@@ -1869,6 +1960,10 @@
     "āwangawanga": {
       "type": "Describing word",
       "english": "worried"
+    },
+    "taura": {
+      "type": "Noun",
+      "english": "rope"
     },
     "rama": {
       "type": "Noun",
@@ -1881,10 +1976,6 @@
     "pūhiko": {
       "type": "Noun",
       "english": "battery"
-    },
-    "taura": {
-      "type": "Noun",
-      "english": "rope"
     },
     "peita": {
       "type": "Noun",
@@ -1949,6 +2040,14 @@
     "pakitara": {
       "type": "Noun",
       "english": "wall"
+    },
+    "māene": {
+      "type": "Describing word",
+      "english": "smooth"
+    },
+    "taratara": {
+      "type": "Describing word",
+      "english": "rough"
     },
     "tuanui": {
       "type": "Noun",
@@ -2129,30 +2228,6 @@
     "whakaritenga": {
       "type": "Noun",
       "english": "arrangement"
-    },
-    "hōhipera": {
-      "type": "Noun",
-      "english": "hospital"
-    },
-    "wharekai": {
-      "type": "Noun",
-      "english": "dining room"
-    },
-    "wharehākinakina": {
-      "type": "Noun",
-      "english": "gymnasium"
-    },
-    "wharetaonga": {
-      "type": "Noun",
-      "english": "museum"
-    },
-    "wharekarakia": {
-      "type": "Noun",
-      "english": "church"
-    },
-    "poti": {
-      "type": "Noun",
-      "english": "boat"
     }
   },
   "verbGrouping": {

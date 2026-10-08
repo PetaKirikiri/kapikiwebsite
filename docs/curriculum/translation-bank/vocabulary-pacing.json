@@ -237,7 +237,7 @@
       "id": "L1-06",
       "level": 1,
       "lesson": 6,
-      "theme": "Parents / Grandparents and grandchildren / Family and relationships, Home and household",
+      "theme": "Parents / Grandparents and grandchildren / Family and relationships, Home and household, Clothes and body care",
       "goal": "Practise Ko in grandchildren and relatives. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -299,6 +299,12 @@
           "english": "mat",
           "type": "Noun",
           "status": "introduced"
+        },
+        {
+          "word": "pōtae",
+          "english": "hat",
+          "type": "Noun",
+          "status": "introduced"
         }
       ],
       "rationale": "Retain the existing grammar backbone. Select a compact set from the existing inventory by useful task, semantic coherence, current/prior prerequisites, total load and later retrieval. Broader candidates remain optional rather than padding the introduction.",
@@ -320,8 +326,8 @@
       "id": "L1-07",
       "level": 1,
       "lesson": 7,
-      "theme": "Children and sibling relationships / Identifying children alongside family relationships",
-      "goal": "Ko · tāku · tāu · tāna",
+      "theme": "Children and sibling relationships / Identifying children alongside family relationships / Home and household, Hobbies and events",
+      "goal": "Ko · tāku · tāu · tāna Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
           "word": "kōtiro",
@@ -371,6 +377,24 @@
           "type": "Noun",
           "status": "introduced-in-draft-exercises",
           "existingExerciseLesson": 7
+        },
+        {
+          "word": "kete",
+          "english": "basket",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "pereti",
+          "english": "plate",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "pōro",
+          "english": "ball",
+          "type": "Noun",
+          "status": "introduced"
         }
       ],
       "rationale": "Keep this lesson focused on siblings and children using the existing lesson vocabulary.",
@@ -399,7 +423,7 @@
       "id": "L1-08",
       "level": 1,
       "lesson": 8,
-      "theme": "Home and house / Children / Home / Counting familiar people / Clothes and body care",
+      "theme": "Home and house / Children / Home / Counting familiar people / Home and household, Clothes and body care",
       "goal": "Practise He, E, Toko-, Kotahi, Kāorekau in counting familiar people. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -452,14 +476,14 @@
           "existingExerciseLesson": 8
         },
         {
-          "word": "tarau",
-          "english": "trousers",
+          "word": "maripi",
+          "english": "knife",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "tōkena",
-          "english": "socks",
+          "word": "tarau",
+          "english": "trousers",
           "type": "Noun",
           "status": "introduced"
         }
@@ -492,7 +516,7 @@
       "id": "L1-09",
       "level": 1,
       "lesson": 9,
-      "theme": "Grandchildren and relatives / Home rooms and resting places / Home and household, Clothes and body care",
+      "theme": "Grandchildren and relatives / Home rooms and resting places / Clothes and body care, Qualities and feelings",
       "goal": "Practise Kei, He in home rooms and resting places. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -538,27 +562,27 @@
           "existingExerciseLesson": 9
         },
         {
-          "word": "kete",
-          "english": "basket",
+          "word": "hāte",
+          "english": "shirt",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "pereti",
-          "english": "plate",
-          "type": "Noun",
+          "word": "whero",
+          "english": "red",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "maripi",
-          "english": "knife",
-          "type": "Noun",
+          "word": "kākāriki",
+          "english": "green",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "pōtae",
-          "english": "hat",
-          "type": "Noun",
+          "word": "mā",
+          "english": "white; clean",
+          "type": "Describing word",
           "status": "introduced"
         }
       ],
@@ -631,7 +655,7 @@
       "id": "L2-02",
       "level": 2,
       "lesson": 2,
-      "theme": "Drinking and waking in the present / Reusable actions, Clothes and body care, Time and weather",
+      "theme": "Drinking and waking in the present / Reusable actions, Clothes and body care",
       "goal": "Practise Kei te in sitting and standing now. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -683,21 +707,21 @@
           "status": "introduced"
         },
         {
-          "word": "hāte",
-          "english": "shirt",
+          "word": "tōkena",
+          "english": "socks",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "ata",
-          "english": "morning",
-          "type": "Noun",
+          "word": "tīmata",
+          "english": "begin; start",
+          "type": "Intransitive verb",
           "status": "introduced"
         },
         {
-          "word": "pō",
-          "english": "night",
-          "type": "Noun",
+          "word": "whakatā",
+          "english": "rest; take a break",
+          "type": "Intransitive verb",
           "status": "introduced"
         }
       ],
@@ -712,29 +736,8 @@
       "prerequisite": "Use this lesson’s already-scheduled grammar and earlier vocabulary. New structure introduction lessons remain recognition/revision only.",
       "optionalWords": [
         {
-          "word": "takoto",
-          "english": "lie down",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null
-        },
-        {
           "word": "eke",
           "english": "get on",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null
-        },
-        {
-          "word": "puta",
-          "english": "go out",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null
-        },
-        {
-          "word": "uru",
-          "english": "enter",
           "type": "Verb",
           "status": "proposed",
           "existingExerciseLesson": null
@@ -754,7 +757,7 @@
       "id": "L2-03",
       "level": 2,
       "lesson": 3,
-      "theme": "Breakfast in the past / Food and drink, Reusable actions",
+      "theme": "Breakfast in the past / Reusable actions, Food and drink",
       "goal": "I · kai / kite + i Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -793,6 +796,12 @@
           "existingExerciseLesson": 13
         },
         {
+          "word": "huri",
+          "english": "turn",
+          "type": "Intransitive verb",
+          "status": "introduced"
+        },
+        {
           "word": "mīere",
           "english": "honey",
           "type": "Noun",
@@ -814,12 +823,6 @@
           "word": "pata",
           "english": "butter",
           "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "kī",
-          "english": "say",
-          "type": "Transitive verb",
           "status": "introduced"
         }
       ],
@@ -856,7 +859,7 @@
       "id": "L2-04",
       "level": 2,
       "lesson": 4,
-      "theme": "Drinks with i and ki / Wanting a drink with ki / Food and drink",
+      "theme": "Drinks with i and ki / Wanting a drink with ki / Reusable actions",
       "goal": "Practise Kei te, I in wanting a drink with ki. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -909,15 +912,15 @@
           "existingExerciseLesson": 14
         },
         {
-          "word": "tote",
-          "english": "salt",
-          "type": "Noun",
+          "word": "kī",
+          "english": "say",
+          "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "huka",
-          "english": "sugar",
-          "type": "Noun",
+          "word": "awhi",
+          "english": "embrace",
+          "type": "Transitive verb",
           "status": "introduced"
         }
       ],
@@ -964,7 +967,7 @@
       "id": "L2-05",
       "level": 2,
       "lesson": 5,
-      "theme": "Familiar animals / Returning and arriving / Animals, Places and transport",
+      "theme": "Familiar animals / Returning and arriving / Reusable actions, Animals",
       "goal": "Practise Kua in returning and arriving. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -1003,32 +1006,32 @@
           "existingExerciseLesson": 15
         },
         {
+          "word": "uru",
+          "english": "enter",
+          "type": "Intransitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "puta",
+          "english": "go out",
+          "type": "Intransitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "hīkoi",
+          "english": "walk",
+          "type": "Intransitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "peke",
+          "english": "jump",
+          "type": "Intransitive verb",
+          "status": "introduced"
+        },
+        {
           "word": "hōiho",
           "english": "horse",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "kararehe",
-          "english": "animal",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "poaka",
-          "english": "pig",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "hipi",
-          "english": "sheep",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "motu",
-          "english": "island",
           "type": "Noun",
           "status": "introduced"
         }
@@ -1127,6 +1130,18 @@
           "existingExerciseLesson": 16
         },
         {
+          "word": "tote",
+          "english": "salt",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "huka",
+          "english": "sugar",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
           "word": "kānga",
           "english": "corn",
           "type": "Noun",
@@ -1135,18 +1150,6 @@
         {
           "word": "kāreti",
           "english": "carrot",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "hinu",
-          "english": "oil",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "keke",
-          "english": "cake",
           "type": "Noun",
           "status": "introduced"
         }
@@ -1182,7 +1185,7 @@
       "id": "L2-07",
       "level": 2,
       "lesson": 7,
-      "theme": "Time with familiar TAMs / A familiar household job tomorrow / Food and drink, Reusable actions, Home and household",
+      "theme": "Time with familiar TAMs / A familiar household job tomorrow / Reusable actions, Qualities and feelings, Food and drink",
       "goal": "Practise Ka in a familiar household job tomorrow. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -1214,38 +1217,38 @@
           "existingExerciseLesson": 17
         },
         {
-          "word": "aihikirīmi",
-          "english": "ice cream",
+          "word": "takoto",
+          "english": "lie down",
+          "type": "Intransitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "pango",
+          "english": "black",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "kōwhai",
+          "english": "yellow",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "parauri",
+          "english": "brown",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "hinu",
+          "english": "oil",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "parakuihi",
-          "english": "breakfast",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "whāngai",
-          "english": "feed",
-          "type": "Transitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "kohi",
-          "english": "collect",
-          "type": "Transitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "kōhua",
-          "english": "cooking pot",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "karāhe",
-          "english": "glass",
+          "word": "keke",
+          "english": "cake",
           "type": "Noun",
           "status": "introduced"
         }
@@ -1282,22 +1285,6 @@
           "existingExerciseLesson": null
         },
         {
-          "word": "tīmata",
-          "english": "begin; start",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "huri",
-          "english": "turn",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
           "word": "wahie",
           "english": "firewood",
           "type": "Noun",
@@ -1319,7 +1306,7 @@
       "id": "L2-08",
       "level": 2,
       "lesson": 8,
-      "theme": "Asking and answering in class / Reading and writing in class / Reusable actions, Qualities and feelings, Classroom and office",
+      "theme": "Asking and answering in class / Reading and writing in class / Reusable actions, Qualities and feelings, Food and drink",
       "goal": "Practise Me in asking and answering in class. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -1358,32 +1345,32 @@
           "existingExerciseLesson": 18
         },
         {
-          "word": "tapahi",
-          "english": "cut",
+          "word": "whāngai",
+          "english": "feed",
           "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "reka",
-          "english": "delicious",
+          "word": "kohi",
+          "english": "collect",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "maoa",
+          "english": "cooked",
           "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "rorohiko",
-          "english": "computer",
-          "type": "Noun",
+          "word": "mata",
+          "english": "raw",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "reo",
-          "english": "language",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "kupu",
-          "english": "word",
+          "word": "raihi",
+          "english": "rice",
           "type": "Noun",
           "status": "introduced"
         }
@@ -1411,7 +1398,7 @@
       "id": "L2-09",
       "level": 2,
       "lesson": 9,
-      "theme": "Playing with familiar time patterns / Giving and listening in class / Food and drink, Classroom and office",
+      "theme": "Playing with familiar time patterns / Giving and listening in class / Food and drink",
       "goal": "Practise I, Kua, Kei te, E … ana, Ka, Me in playing with familiar time patterns. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -1450,14 +1437,14 @@
           "existingExerciseLesson": 19
         },
         {
-          "word": "tina",
-          "english": "lunch",
+          "word": "aihikirīmi",
+          "english": "ice cream",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "kaihapa",
-          "english": "supper; evening meal",
+          "word": "parakuihi",
+          "english": "breakfast",
           "type": "Noun",
           "status": "introduced"
         },
@@ -1468,14 +1455,14 @@
           "status": "introduced"
         },
         {
-          "word": "raihi",
-          "english": "rice",
+          "word": "tina",
+          "english": "lunch",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "whārangi",
-          "english": "page",
+          "word": "kaihapa",
+          "english": "supper; evening meal",
           "type": "Noun",
           "status": "introduced"
         }
@@ -1512,14 +1499,6 @@
           "status": "proposed",
           "existingExerciseLesson": null,
           "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "peke",
-          "english": "jump",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
         }
       ],
       "newForms": [
@@ -1534,7 +1513,7 @@
       "id": "L2-10",
       "level": 2,
       "lesson": 10,
-      "theme": "Activities and ordinary weather / Time and weather, Reusable actions, Food and drink",
+      "theme": "Activities and ordinary weather / Time and weather, Animals",
       "goal": "Practise I, Kua, Kei te, E … ana, Ka, Me in activities and ordinary weather. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -1573,32 +1552,32 @@
           "existingExerciseLesson": 20
         },
         {
+          "word": "ata",
+          "english": "morning",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "pō",
+          "english": "night",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
           "word": "wiki",
           "english": "week",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "ako",
-          "english": "learn; teach",
-          "type": "Transitive verb",
+          "word": "kararehe",
+          "english": "animal",
+          "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "whakaatu",
-          "english": "show",
-          "type": "Transitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "whakamahi",
-          "english": "use",
-          "type": "Transitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "huawhenua",
-          "english": "vegetables",
+          "word": "poaka",
+          "english": "pig",
           "type": "Noun",
           "status": "introduced"
         }
@@ -1677,7 +1656,7 @@
       "id": "L3-02",
       "level": 3,
       "lesson": 2,
-      "theme": "Everyday wellbeing negatives / Food and drink, Reusable actions, Animals",
+      "theme": "Everyday wellbeing negatives / Reusable actions, Qualities and feelings",
       "goal": "Practise Ehara … i te …, Kāore … i, Kāore … i te in everyday wellbeing negatives. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -1709,39 +1688,39 @@
           "existingExerciseLesson": 22
         },
         {
-          "word": "kaimoana",
-          "english": "seafood",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "hāngi",
-          "english": "earth-oven meal",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "pēkana",
-          "english": "bacon",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "tiki",
-          "english": "fetch; get",
+          "word": "tapahi",
+          "english": "cut",
           "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "mihi",
-          "english": "greet",
-          "type": "Intransitive verb",
+          "word": "reka",
+          "english": "delicious",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "mōkai",
-          "english": "pet",
-          "type": "Noun",
+          "word": "rongo",
+          "english": "hear; feel",
+          "type": "Experience verb",
+          "status": "introduced"
+        },
+        {
+          "word": "whakaatu",
+          "english": "show",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "whakamahi",
+          "english": "use",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "whakamau",
+          "english": "put on",
+          "type": "Transitive verb",
           "status": "introduced"
         }
       ],
@@ -1755,13 +1734,6 @@
       "admission": "Proposed set: useful within this communicative theme; verify senses and supply full-sentence practice before marking introduced.",
       "prerequisite": "Use this lesson’s already-scheduled grammar and earlier vocabulary. New structure introduction lessons remain recognition/revision only.",
       "optionalWords": [
-        {
-          "word": "mokemoke",
-          "english": "lonely",
-          "type": "Describing word",
-          "status": "proposed",
-          "existingExerciseLesson": null
-        },
         {
           "word": "harikoa",
           "english": "joyful",
@@ -1784,14 +1756,6 @@
           "existingExerciseLesson": null
         },
         {
-          "word": "mataku",
-          "english": "afraid; frightened",
-          "type": "Describing word",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
           "word": "hōhā",
           "english": "fed up",
           "type": "Describing word",
@@ -1812,7 +1776,7 @@
       "id": "L3-03",
       "level": 3,
       "lesson": 3,
-      "theme": "Understanding and remembering / Recognising missing belongings / Animals, Time and weather",
+      "theme": "Understanding and remembering / Recognising missing belongings / Reusable actions, Qualities and feelings, Food and drink",
       "goal": "Practise Kāore … e, Kāore anō … kia in understanding and remembering. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -1858,26 +1822,26 @@
           "existingExerciseLesson": 23
         },
         {
-          "word": "ngārara",
-          "english": "insect",
-          "type": "Noun",
+          "word": "whakatakoto",
+          "english": "put down",
+          "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "tau",
-          "english": "year",
-          "type": "Noun",
+          "word": "hiki",
+          "english": "lift",
+          "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "hāora",
-          "english": "hour",
-          "type": "Noun",
+          "word": "kawa",
+          "english": "bitter; sour; unpleasant-tasting",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "meneti",
-          "english": "minute",
+          "word": "huawhenua",
+          "english": "vegetables",
           "type": "Noun",
           "status": "introduced"
         }
@@ -1898,14 +1862,6 @@
           "type": "Verb",
           "status": "proposed",
           "existingExerciseLesson": null
-        },
-        {
-          "word": "rongo",
-          "english": "hear; feel",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
         },
         {
           "word": "āe",
@@ -1940,14 +1896,6 @@
           "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
         },
         {
-          "word": "reri",
-          "english": "ready",
-          "type": "Describing word",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
           "word": "wātea",
           "english": "free",
           "type": "Describing word",
@@ -1976,7 +1924,7 @@
       "id": "L3-04",
       "level": 3,
       "lesson": 4,
-      "theme": "Strength contrast with familiar descriptions / Waiting helping and caring / Looking up and down / Health and ordinary problems, Reusable actions",
+      "theme": "Strength contrast with familiar descriptions / Waiting helping and caring / Looking up and down / Food and drink",
       "goal": "Practise E …!, Kaua e, Kāti te, Kia in waiting helping and caring. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -2029,21 +1977,21 @@
           "existingExerciseLesson": 24
         },
         {
-          "word": "tākuta",
-          "english": "doctor",
+          "word": "kaimoana",
+          "english": "seafood",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "rongoā",
-          "english": "medicine; remedy",
+          "word": "hāngi",
+          "english": "earth-oven meal",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "tangi",
-          "english": "cry",
-          "type": "Intransitive verb",
+          "word": "pēkana",
+          "english": "bacon",
+          "type": "Noun",
           "status": "introduced"
         }
       ],
@@ -2080,14 +2028,6 @@
           "selectionNote": "Recognise this useful alternative after practising hiahia; do not count two wanting alternatives as a required first productive set."
         },
         {
-          "word": "awhi",
-          "english": "embrace",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
           "word": "manaaki",
           "english": "care for",
           "type": "Verb",
@@ -2116,7 +2056,7 @@
       "id": "L3-05",
       "level": 3,
       "lesson": 5,
-      "theme": "Unfinished household tasks and a missing phone / Qualities and feelings, Health and ordinary problems, Reusable actions",
+      "theme": "Unfinished household tasks and a missing phone / Home and household, Reusable actions",
       "goal": "Practise Kāore anō … kia in unfinished household tasks and a missing phone. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -2162,26 +2102,26 @@
           "existingExerciseLesson": 25
         },
         {
-          "word": "koa",
-          "english": "happy",
-          "type": "Describing word",
-          "status": "introduced"
-        },
-        {
-          "word": "pōuri",
-          "english": "sad",
-          "type": "Describing word",
-          "status": "introduced"
-        },
-        {
-          "word": "raruraru",
-          "english": "problem; difficulty",
+          "word": "kōhua",
+          "english": "cooking pot",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "neke",
-          "english": "move",
+          "word": "karāhe",
+          "english": "glass",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "tiki",
+          "english": "fetch; get",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "mihi",
+          "english": "greet",
           "type": "Intransitive verb",
           "status": "introduced"
         }
@@ -2248,7 +2188,7 @@
       "id": "L3-06",
       "level": 3,
       "lesson": 6,
-      "theme": "Classroom actions / Giving listening and making in class / Classroom and office, Qualities and feelings",
+      "theme": "Classroom actions / Giving listening and making in class / Classroom and office, Reusable actions",
       "goal": "Practise E …! in giving listening and making in class. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -2287,33 +2227,33 @@
           "existingExerciseLesson": 26
         },
         {
-          "word": "rārangi",
-          "english": "line",
+          "word": "rorohiko",
+          "english": "computer",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "pikitia",
-          "english": "picture",
+          "word": "reo",
+          "english": "language",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "tuhinga",
-          "english": "writing",
+          "word": "kupu",
+          "english": "word",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "riri",
-          "english": "angry",
-          "type": "Describing word",
+          "word": "whārangi",
+          "english": "page",
+          "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "āwangawanga",
-          "english": "worried",
-          "type": "Describing word",
+          "word": "ako",
+          "english": "learn; teach",
+          "type": "Transitive verb",
           "status": "introduced"
         }
       ],
@@ -2347,13 +2287,6 @@
           "type": "Verb",
           "status": "proposed",
           "existingExerciseLesson": null
-        },
-        {
-          "word": "ine",
-          "english": "measure",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null
         }
       ],
       "newForms": [
@@ -2368,7 +2301,7 @@
       "id": "L3-07",
       "level": 3,
       "lesson": 7,
-      "theme": "Clothing and looking after belongings / Reusable actions, Qualities and feelings",
+      "theme": "Clothing and looking after belongings / Reusable actions, Animals",
       "goal": "Practise Kaua e in clothing and looking after belongings. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -2407,33 +2340,33 @@
           "existingExerciseLesson": 27
         },
         {
-          "word": "pana",
-          "english": "push",
+          "word": "whakahoki",
+          "english": "return something",
           "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "hiki",
-          "english": "lift",
-          "type": "Transitive verb",
+          "word": "kau",
+          "english": "cow",
+          "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "whakapai",
-          "english": "improve; tidy",
-          "type": "Transitive verb",
+          "word": "tuna",
+          "english": "eel",
+          "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "tono",
-          "english": "request; ask; apply",
-          "type": "Transitive verb",
+          "word": "mōkai",
+          "english": "pet",
+          "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "atawhai",
-          "english": "kind",
-          "type": "Describing word",
+          "word": "ngārara",
+          "english": "insect",
+          "type": "Noun",
           "status": "introduced"
         }
       ],
@@ -2481,7 +2414,7 @@
       "id": "L3-08",
       "level": 3,
       "lesson": 8,
-      "theme": "Classroom positions / Stopping routines and body care / Qualities and feelings, Clothes and body care, Reusable actions",
+      "theme": "Classroom positions / Stopping routines and body care / Reusable actions, Qualities and feelings",
       "goal": "Practise Kāti te in stopping routines and body care. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -2527,27 +2460,27 @@
           "existingExerciseLesson": 28
         },
         {
-          "word": "tika",
-          "english": "correct; right",
-          "type": "Describing word",
-          "status": "introduced"
-        },
-        {
-          "word": "hē",
-          "english": "wrong; incorrect",
-          "type": "Describing word",
-          "status": "introduced"
-        },
-        {
-          "word": "panekoti",
-          "english": "skirt",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "whakamau",
-          "english": "put on",
+          "word": "maka",
+          "english": "throw",
           "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "hopu",
+          "english": "catch",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "mataku",
+          "english": "afraid; frightened",
+          "type": "Stative verb",
+          "status": "introduced"
+        },
+        {
+          "word": "mokemoke",
+          "english": "lonely",
+          "type": "Describing word",
           "status": "introduced"
         }
       ],
@@ -2598,7 +2531,7 @@
       "id": "L3-09",
       "level": 3,
       "lesson": 9,
-      "theme": "Fast and slow with familiar descriptions / Health and ordinary problems, Qualities and feelings, Clothes and body care",
+      "theme": "Fast and slow with familiar descriptions / Qualities and feelings, Health and ordinary problems, Reusable actions",
       "goal": "Kia Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -2630,39 +2563,39 @@
           "existingExerciseLesson": 29
         },
         {
-          "word": "hauora",
-          "english": "health; wellbeing",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "paru",
-          "english": "dirty",
+          "word": "reri",
+          "english": "ready",
           "type": "Stative verb",
           "status": "introduced"
         },
         {
-          "word": "koti",
-          "english": "coat",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "kikorangi",
-          "english": "blue",
+          "word": "ora",
+          "english": "well",
           "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "waiporoporo",
-          "english": "purple",
-          "type": "Describing word",
+          "word": "tākuta",
+          "english": "doctor",
+          "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "putu",
-          "english": "boots",
+          "word": "rongoā",
+          "english": "medicine; remedy",
           "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "tangi",
+          "english": "cry",
+          "type": "Intransitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "koa",
+          "english": "happy",
+          "type": "Describing word",
           "status": "introduced"
         }
       ],
@@ -2702,14 +2635,6 @@
           "word": "āta",
           "english": "carefully; deliberately",
           "type": "Grammar word",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "whakatā",
-          "english": "rest; take a break",
-          "type": "Verb",
           "status": "proposed",
           "existingExerciseLesson": null,
           "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
@@ -2844,61 +2769,67 @@
       "id": "L4-02",
       "level": 4,
       "lesson": 2,
-      "theme": "Transport and personal equipment / Classroom and office, Reusable actions",
+      "theme": "Transport and personal equipment / Classroom and office, Places and transport",
       "goal": "Nā · Nō · Mā · Mō Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
-          "word": "peita",
-          "english": "paint",
+          "word": "rārangi",
+          "english": "line",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "kāpia",
-          "english": "glue",
+          "word": "pikitia",
+          "english": "picture",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "reta",
-          "english": "letter",
+          "word": "tuhinga",
+          "english": "writing",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "whakamaroke",
-          "english": "dry something",
-          "type": "Transitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "kukume",
-          "english": "pull",
-          "type": "Transitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "karere",
-          "english": "message",
+          "word": "hōhipera",
+          "english": "hospital",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "papa",
-          "english": "board",
+          "word": "wharekai",
+          "english": "dining room",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "kāri",
-          "english": "card",
+          "word": "wharehākinakina",
+          "english": "gymnasium",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "tari",
-          "english": "office; department",
+          "word": "wharetaonga",
+          "english": "museum",
           "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "wharekarakia",
+          "english": "church",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "poti",
+          "english": "boat",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "mō",
+          "english": "about; for",
+          "type": "Grammar word",
           "status": "introduced"
         }
       ],
@@ -2987,25 +2918,49 @@
       "id": "L4-03",
       "level": 4,
       "lesson": 3,
-      "theme": "Containers and household resources / Home and household, Qualities and feelings",
+      "theme": "Containers and household resources / Qualities and feelings, Health and ordinary problems, Reusable actions, Home and household",
       "goal": "Nā … i Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
-          "word": "rama",
-          "english": "lamp",
+          "word": "pōuri",
+          "english": "sad",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "haumaru",
+          "english": "safe",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "raruraru",
+          "english": "problem; difficulty",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "pouakawhakaata",
-          "english": "television",
+          "word": "hauora",
+          "english": "health; wellbeing",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "pūhiko",
-          "english": "battery",
-          "type": "Noun",
+          "word": "neke",
+          "english": "move",
+          "type": "Intransitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "riri",
+          "english": "angry",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "āwangawanga",
+          "english": "worried",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
@@ -3015,39 +2970,15 @@
           "status": "introduced"
         },
         {
-          "word": "taputapu",
-          "english": "equipment; tools",
+          "word": "hono",
+          "english": "connect",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "rama",
+          "english": "lamp",
           "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "hou",
-          "english": "new",
-          "type": "Describing word",
-          "status": "introduced"
-        },
-        {
-          "word": "tawhito",
-          "english": "old",
-          "type": "Describing word",
-          "status": "introduced"
-        },
-        {
-          "word": "pakitara",
-          "english": "wall",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "tuanui",
-          "english": "roof",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "putua",
-          "english": "empty",
-          "type": "Describing word",
           "status": "introduced"
         }
       ],
@@ -3142,67 +3073,67 @@
       "id": "L4-04",
       "level": 4,
       "lesson": 4,
-      "theme": "Home and garden / Qualities and feelings, Home and household, Animals, Places and transport",
+      "theme": "Home and garden / Home and household, Reusable actions, Qualities and feelings",
       "goal": "Mā … e Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
-          "word": "kikī",
-          "english": "full",
-          "type": "Stative verb",
-          "status": "introduced"
-        },
-        {
-          "word": "taiapa",
-          "english": "fence",
+          "word": "pouakawhakaata",
+          "english": "television",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "māra",
-          "english": "garden",
+          "word": "pana",
+          "english": "push",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "kukume",
+          "english": "pull",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "whakapai",
+          "english": "improve; tidy",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "pūhiko",
+          "english": "battery",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "kākano",
-          "english": "seed",
+          "word": "taputapu",
+          "english": "equipment; tools",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "putiputi",
-          "english": "flower",
-          "type": "Noun",
+          "word": "tono",
+          "english": "request; ask; apply",
+          "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "pūrerehua",
-          "english": "butterfly",
-          "type": "Noun",
+          "word": "atawhai",
+          "english": "kind",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "tohorā",
-          "english": "whale",
-          "type": "Noun",
+          "word": "tika",
+          "english": "correct; right",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "kekeno",
-          "english": "seal",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "hōhipera",
-          "english": "hospital",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "wharekai",
-          "english": "dining room",
-          "type": "Noun",
+          "word": "hē",
+          "english": "wrong; incorrect",
+          "type": "Describing word",
           "status": "introduced"
         }
       ],
@@ -3268,7 +3199,7 @@
       "id": "L4-05",
       "level": 4,
       "lesson": 5,
-      "theme": "Size and length of belongings / Places and transport, Animals",
+      "theme": "Size and length of belongings / Animals, Places and transport",
       "goal": "Mōku · mōu · mōna Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -3307,6 +3238,18 @@
           "existingExerciseLesson": 35
         },
         {
+          "word": "hipi",
+          "english": "sheep",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "motu",
+          "english": "island",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
           "word": "huarahi",
           "english": "path",
           "type": "Noun",
@@ -3321,18 +3264,6 @@
         {
           "word": "piriti",
           "english": "bridge",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "kau",
-          "english": "cow",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "tuna",
-          "english": "eel",
           "type": "Noun",
           "status": "introduced"
         }
@@ -3433,7 +3364,7 @@
       "id": "L4-06",
       "level": 4,
       "lesson": 6,
-      "theme": "People working together / Places and transport, Classroom and office",
+      "theme": "People working together / Classroom and office, Reusable actions, Qualities and feelings",
       "goal": "Ehara nā … · ehara nō … Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -3451,51 +3382,51 @@
           "existingExerciseLesson": 36
         },
         {
-          "word": "tāone",
-          "english": "town",
+          "word": "peita",
+          "english": "paint",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "tiriti",
-          "english": "street",
+          "word": "kāpia",
+          "english": "glue",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "tātahi",
-          "english": "beach",
+          "word": "reta",
+          "english": "letter",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "rōpū",
-          "english": "group",
-          "type": "Noun",
+          "word": "wehe",
+          "english": "separate",
+          "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "kaupapa",
-          "english": "purpose; topic; project",
-          "type": "Noun",
+          "word": "paru",
+          "english": "dirty",
+          "type": "Stative verb",
           "status": "introduced"
         },
         {
-          "word": "mahere",
-          "english": "plan; map",
-          "type": "Noun",
+          "word": "kikorangi",
+          "english": "blue",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "pāmu",
-          "english": "farm",
-          "type": "Noun",
+          "word": "waiporoporo",
+          "english": "purple",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "motokā",
-          "english": "car",
-          "type": "Noun",
+          "word": "tāpiri",
+          "english": "add",
+          "type": "Transitive verb",
           "status": "introduced"
         }
       ],
@@ -3587,6 +3518,30 @@
       "goal": "Ehara mā … · ehara mō … Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
+          "word": "panekoti",
+          "english": "skirt",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "koti",
+          "english": "coat",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "ine",
+          "english": "measure",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "putu",
+          "english": "boots",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
           "word": "upoko",
           "english": "head",
           "type": "Noun",
@@ -3596,6 +3551,12 @@
           "word": "kanohi",
           "english": "face",
           "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "whakamaroke",
+          "english": "dry something",
+          "type": "Transitive verb",
           "status": "introduced"
         },
         {
@@ -3613,36 +3574,6 @@
         {
           "word": "waha",
           "english": "mouth",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "ihu",
-          "english": "nose",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "tautoko",
-          "english": "support",
-          "type": "Transitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "niho",
-          "english": "teeth",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "kakī",
-          "english": "neck",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "tuarā",
-          "english": "back",
           "type": "Noun",
           "status": "introduced"
         }
@@ -3704,30 +3635,6 @@
           "status": "proposed",
           "existingExerciseLesson": null,
           "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "hono",
-          "english": "connect",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "wehe",
-          "english": "separate",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "whakatau",
-          "english": "decide",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
         }
       ],
       "newForms": [
@@ -3741,15 +3648,9 @@
       "id": "L4-08",
       "level": 4,
       "lesson": 8,
-      "theme": "Money and measurements / Hobbies and events, Reusable actions, Places and transport",
+      "theme": "Money and measurements / Hobbies and events, Reusable actions, Qualities and feelings",
       "goal": "Nā … i Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
-        {
-          "word": "pōro",
-          "english": "ball",
-          "type": "Noun",
-          "status": "introduced"
-        },
         {
           "word": "tīma",
           "english": "team",
@@ -3763,45 +3664,51 @@
           "status": "introduced"
         },
         {
-          "word": "maka",
-          "english": "throw",
+          "word": "ārahi",
+          "english": "guide; lead",
           "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "hopu",
-          "english": "catch",
+          "word": "whakatau",
+          "english": "decide",
           "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "taraka",
-          "english": "truck",
-          "type": "Noun",
+          "word": "hou",
+          "english": "new",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "kōwhiri",
-          "english": "choose; select",
-          "type": "Transitive verb",
+          "word": "tawhito",
+          "english": "old",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "hākinakina",
-          "english": "sport",
-          "type": "Noun",
+          "word": "māene",
+          "english": "smooth",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "whutupōro",
-          "english": "rugby",
-          "type": "Noun",
+          "word": "taratara",
+          "english": "rough",
+          "type": "Describing word",
           "status": "introduced"
         },
         {
-          "word": "kēmu",
-          "english": "game",
-          "type": "Noun",
+          "word": "putua",
+          "english": "empty",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "kikī",
+          "english": "full",
+          "type": "Stative verb",
           "status": "introduced"
         }
       ],
@@ -3897,66 +3804,66 @@
       "id": "L4-09",
       "level": 4,
       "lesson": 9,
-      "theme": "Organising and returning resources / Places and transport, Reusable actions, Home and household",
+      "theme": "Organising and returning resources / Home and household, Animals, Places and transport",
       "goal": "Mā … e Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
-          "word": "rererangi",
-          "english": "aeroplane",
+          "word": "pakitara",
+          "english": "wall",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "whenua",
-          "english": "land",
+          "word": "tuanui",
+          "english": "roof",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "ngahere",
-          "english": "forest; bush",
+          "word": "taiapa",
+          "english": "fence",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "utu",
-          "english": "pay; repay",
-          "type": "Transitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "harakeke",
-          "english": "flax",
+          "word": "māra",
+          "english": "garden",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "ahi",
-          "english": "fire",
+          "word": "kākano",
+          "english": "seed",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "oneone",
-          "english": "soil",
+          "word": "putiputi",
+          "english": "flower",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "wāhi",
-          "english": "place; location",
+          "word": "pūrerehua",
+          "english": "butterfly",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "rohe",
-          "english": "area; district; boundary",
+          "word": "tohorā",
+          "english": "whale",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "wharepukapuka",
-          "english": "library",
+          "word": "kekeno",
+          "english": "seal",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "tāone",
+          "english": "town",
           "type": "Noun",
           "status": "introduced"
         }
@@ -3980,24 +3887,8 @@
           "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
         },
         {
-          "word": "ārahi",
-          "english": "guide; lead",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
           "word": "whakahaere",
           "english": "manage; organise",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "whakahoki",
-          "english": "return something",
           "type": "Verb",
           "status": "proposed",
           "existingExerciseLesson": null,
@@ -4054,14 +3945,6 @@
         {
           "word": "whāki",
           "english": "reveal",
-          "type": "Verb",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "tāpiri",
-          "english": "add",
           "type": "Verb",
           "status": "proposed",
           "existingExerciseLesson": null,
@@ -4201,7 +4084,7 @@
       "id": "L5-02",
       "level": 5,
       "lesson": 2,
-      "theme": "Dimensions and comparison / Time and weather, Reusable actions, Qualities and feelings",
+      "theme": "Dimensions and comparison / Time and weather",
       "goal": "Practise He … ake … i, … ai in dimensions and comparison. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -4233,6 +4116,24 @@
           "existingExerciseLesson": 42
         },
         {
+          "word": "tau",
+          "english": "year",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "hāora",
+          "english": "hour",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "meneti",
+          "english": "minute",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
           "word": "karaka",
           "english": "clock",
           "type": "Noun",
@@ -4248,24 +4149,6 @@
           "word": "marama",
           "english": "month; moon",
           "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "whakaae",
-          "english": "agree; consent",
-          "type": "Intransitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "whakaaro",
-          "english": "think; consider",
-          "type": "Intransitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "wawe",
-          "english": "early",
-          "type": "Describing word",
           "status": "introduced"
         }
       ],
@@ -4378,7 +4261,7 @@
       "id": "L5-03",
       "level": 5,
       "lesson": 3,
-      "theme": "Ability and familiar material qualities / Reusable actions, Qualities and feelings, Hobbies and events",
+      "theme": "Ability and familiar material qualities / Places and transport, Reusable actions",
       "goal": "Practise Ka taea / Kāore e taea in ability and familiar material qualities. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -4410,39 +4293,39 @@
           "existingExerciseLesson": 43
         },
         {
-          "word": "whakatakoto",
-          "english": "put down",
-          "type": "Transitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "whakakī",
-          "english": "fill",
-          "type": "Transitive verb",
-          "status": "introduced"
-        },
-        {
-          "word": "tōmuri",
-          "english": "late",
-          "type": "Describing word",
-          "status": "introduced"
-        },
-        {
-          "word": "rerekē",
-          "english": "different",
-          "type": "Describing word",
-          "status": "introduced"
-        },
-        {
-          "word": "ōrite",
-          "english": "equal; the same",
-          "type": "Describing word",
-          "status": "introduced"
-        },
-        {
-          "word": "hararei",
-          "english": "holiday",
+          "word": "tiriti",
+          "english": "street",
           "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "tātahi",
+          "english": "beach",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "pāmu",
+          "english": "farm",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "motokā",
+          "english": "car",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "taraka",
+          "english": "truck",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "tautoko",
+          "english": "support",
+          "type": "Transitive verb",
           "status": "introduced"
         }
       ],
@@ -4500,7 +4383,7 @@
       "id": "L5-04",
       "level": 5,
       "lesson": 4,
-      "theme": "Passive actions and object states / Clothes and body care, Qualities and feelings",
+      "theme": "Passive actions and object states / Clothes and body care, Reusable actions, Places and transport",
       "goal": "Practise Passive: … e … in passive actions and object states. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -4518,51 +4401,51 @@
           "existingExerciseLesson": 44
         },
         {
+          "word": "ihu",
+          "english": "nose",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "niho",
+          "english": "teeth",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "kakī",
+          "english": "neck",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "tuarā",
+          "english": "back",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
           "word": "puku",
           "english": "stomach",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "mārō",
-          "english": "hard",
-          "type": "Describing word",
+          "word": "whakakī",
+          "english": "fill",
+          "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "ngohengohe",
-          "english": "soft",
-          "type": "Describing word",
+          "word": "kōwhiri",
+          "english": "choose; select",
+          "type": "Transitive verb",
           "status": "introduced"
         },
         {
-          "word": "makawe",
-          "english": "hair",
+          "word": "rererangi",
+          "english": "aeroplane",
           "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "kiri",
-          "english": "skin",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "matimati",
-          "english": "finger",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "tinana",
-          "english": "body",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "mahana",
-          "english": "warm",
-          "type": "Stative verb",
           "status": "introduced"
         }
       ],
@@ -4607,22 +4490,6 @@
           "status": "proposed",
           "existingExerciseLesson": null,
           "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "māene",
-          "english": "smooth",
-          "type": "Describing word",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "taratara",
-          "english": "rough",
-          "type": "Describing word",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
         }
       ],
       "newForms": [
@@ -4636,7 +4503,7 @@
       "id": "L5-05",
       "level": 5,
       "lesson": 5,
-      "theme": "Easy and difficult tasks / Hobbies and events, Places and transport",
+      "theme": "Easy and difficult tasks / Hobbies and events, Places and transport, Reusable actions, Home and household",
       "goal": "Practise Ka taea / Kāore e taea in easy and difficult tasks. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -4654,50 +4521,50 @@
           "existingExerciseLesson": 45
         },
         {
-          "word": "akoranga",
-          "english": "lesson",
+          "word": "hākinakina",
+          "english": "sport",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "whakataetae",
-          "english": "competition",
+          "word": "whutupōro",
+          "english": "rugby",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "puoro",
-          "english": "music",
+          "word": "kēmu",
+          "english": "game",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "poi",
-          "english": "poi",
+          "word": "whenua",
+          "english": "land",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "wharehākinakina",
-          "english": "gymnasium",
+          "word": "ngahere",
+          "english": "forest; bush",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "wharetaonga",
-          "english": "museum",
+          "word": "utu",
+          "english": "pay; repay",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "harakeke",
+          "english": "flax",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "wharekarakia",
-          "english": "church",
-          "type": "Noun",
-          "status": "introduced"
-        },
-        {
-          "word": "poti",
-          "english": "boat",
+          "word": "ahi",
+          "english": "fire",
           "type": "Noun",
           "status": "introduced"
         }
@@ -4819,7 +4686,7 @@
       "id": "L5-06",
       "level": 5,
       "lesson": 6,
-      "theme": "Practising a familiar activity / Classroom and office, Reusable actions",
+      "theme": "Practising a familiar activity / Classroom and office",
       "goal": "Practise Ka taea / Kāore e taea in practising a familiar activity. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -4844,33 +4711,45 @@
           "existingExerciseLesson": 46
         },
         {
-          "word": "koha",
-          "english": "gift",
+          "word": "karere",
+          "english": "message",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "pūtea",
-          "english": "funds; funding; budget",
+          "word": "papa",
+          "english": "board",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "ipurangi",
-          "english": "internet",
+          "word": "kāri",
+          "english": "card",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "whakamārama",
-          "english": "explain; clarify",
-          "type": "Transitive verb",
+          "word": "tari",
+          "english": "office; department",
+          "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "mō",
-          "english": "about; for",
-          "type": "Grammar word",
+          "word": "rōpū",
+          "english": "group",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "kaupapa",
+          "english": "purpose; topic; project",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "mahere",
+          "english": "plan; map",
+          "type": "Noun",
           "status": "introduced"
         }
       ],
@@ -5004,7 +4883,7 @@
       "id": "L5-07",
       "level": 5,
       "lesson": 7,
-      "theme": "Carrying light and heavy objects / Time and weather",
+      "theme": "Carrying light and heavy objects / Home and household, Places and transport, Reusable actions, Qualities and feelings",
       "goal": "Passive · I Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -5022,15 +4901,51 @@
           "existingExerciseLesson": 47
         },
         {
-          "word": "hukapapa",
-          "english": "ice",
+          "word": "oneone",
+          "english": "soil",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "āniwaniwa",
-          "english": "rainbow",
+          "word": "wāhi",
+          "english": "place; location",
           "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "rohe",
+          "english": "area; district; boundary",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "wharepukapuka",
+          "english": "library",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "whakaae",
+          "english": "agree; consent",
+          "type": "Intransitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "whakaaro",
+          "english": "think; consider",
+          "type": "Intransitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "wawe",
+          "english": "early",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "tōmuri",
+          "english": "late",
+          "type": "Describing word",
           "status": "introduced"
         }
       ],
@@ -5162,7 +5077,7 @@
       "id": "L5-08",
       "level": 5,
       "lesson": 8,
-      "theme": "Seeing shared performances / Hobbies and events, Reusable actions",
+      "theme": "Seeing shared performances / Qualities and feelings, Hobbies and events, Clothes and body care",
       "goal": "Practise Passive: … e … in seeing shared performances. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -5180,21 +5095,51 @@
           "existingExerciseLesson": 48
         },
         {
-          "word": "toi",
-          "english": "art",
+          "word": "rerekē",
+          "english": "different",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "ōrite",
+          "english": "equal; the same",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "hararei",
+          "english": "holiday",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "huritau",
-          "english": "anniversary",
+          "word": "akoranga",
+          "english": "lesson",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "whakanui",
-          "english": "celebrate; honour",
-          "type": "Transitive verb",
+          "word": "mārō",
+          "english": "hard",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "ngohengohe",
+          "english": "soft",
+          "type": "Describing word",
+          "status": "introduced"
+        },
+        {
+          "word": "makawe",
+          "english": "hair",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "kiri",
+          "english": "skin",
+          "type": "Noun",
           "status": "introduced"
         }
       ],
@@ -5268,7 +5213,7 @@
       "id": "L5-09",
       "level": 5,
       "lesson": 9,
-      "theme": "Passives of known making writing and washing actions / Community and everyday decisions",
+      "theme": "Passives of known making writing and washing actions / Community and everyday decisions, Clothes and body care, Qualities and feelings, Hobbies and events, Classroom and office",
       "goal": "Practise Passive: … e … in passives of known making writing and washing actions. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
@@ -5284,26 +5229,50 @@
           "status": "introduced"
         },
         {
-          "word": "hapori",
-          "english": "community",
+          "word": "matimati",
+          "english": "finger",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "ture",
-          "english": "law; rule",
+          "word": "tinana",
+          "english": "body",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "kōwhiringa",
-          "english": "choice",
+          "word": "mahana",
+          "english": "warm",
+          "type": "Stative verb",
+          "status": "introduced"
+        },
+        {
+          "word": "whakataetae",
+          "english": "competition",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "wheako",
-          "english": "experience",
+          "word": "puoro",
+          "english": "music",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "poi",
+          "english": "poi",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "koha",
+          "english": "gift",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "pūtea",
+          "english": "funds; funding; budget",
           "type": "Noun",
           "status": "introduced"
         }
@@ -5511,14 +5480,6 @@
           "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
         },
         {
-          "word": "ora",
-          "english": "well",
-          "type": "Describing word",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
           "word": "mate",
           "english": "dead",
           "type": "Describing word",
@@ -5529,22 +5490,6 @@
         {
           "word": "mīharo",
           "english": "amazing",
-          "type": "Describing word",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "maoa",
-          "english": "cooked",
-          "type": "Describing word",
-          "status": "proposed",
-          "existingExerciseLesson": null,
-          "selectionNote": "Retained candidate; no scheduled exercise introduction or mastery claim."
-        },
-        {
-          "word": "mata",
-          "english": "raw",
           "type": "Describing word",
           "status": "proposed",
           "existingExerciseLesson": null,
@@ -5598,18 +5543,60 @@
       "id": "L6-02",
       "level": 6,
       "lesson": 2,
-      "theme": "Why and when in familiar life / Community and everyday decisions",
+      "theme": "Why and when in familiar life / Classroom and office, Reusable actions, Time and weather, Hobbies and events, Community and everyday decisions",
       "goal": "Practise He aha … ai, Nōnahea, Āhea in why and when in familiar life. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
       "newWords": [
         {
-          "word": "whāinga",
-          "english": "goal; objective",
+          "word": "ipurangi",
+          "english": "internet",
           "type": "Noun",
           "status": "introduced"
         },
         {
-          "word": "whakaritenga",
-          "english": "arrangement",
+          "word": "whakamārama",
+          "english": "explain; clarify",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "hukapapa",
+          "english": "ice",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "āniwaniwa",
+          "english": "rainbow",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "toi",
+          "english": "art",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "huritau",
+          "english": "anniversary",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "whakanui",
+          "english": "celebrate; honour",
+          "type": "Transitive verb",
+          "status": "introduced"
+        },
+        {
+          "word": "hapori",
+          "english": "community",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "ture",
+          "english": "law; rule",
           "type": "Noun",
           "status": "introduced"
         }
@@ -5732,9 +5719,22 @@
       "id": "L6-03",
       "level": 6,
       "lesson": 3,
-      "theme": "Plans using familiar actions",
-      "goal": "Practise Ki te / Mēnā / Mehemea in plans using familiar actions.",
-      "newWords": [],
+      "theme": "Plans using familiar actions / Community and everyday decisions",
+      "goal": "Practise Ki te / Mēnā / Mehemea in plans using familiar actions. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
+      "newWords": [
+        {
+          "word": "kōwhiringa",
+          "english": "choice",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "wheako",
+          "english": "experience",
+          "type": "Noun",
+          "status": "introduced"
+        }
+      ],
       "rationale": "Retain the existing grammar backbone. Select a compact set from the existing inventory by useful task, semantic coherence, current/prior prerequisites, total load and later retrieval. Broader candidates remain optional rather than padding the introduction.",
       "reviews": [
         54,
@@ -5853,9 +5853,22 @@
       "id": "L6-04",
       "level": 6,
       "lesson": 4,
-      "theme": "Alternative conditional frames",
-      "goal": "Practise Ki te / Mēnā / Mehemea, He aha … ai in alternative conditional frames.",
-      "newWords": [],
+      "theme": "Alternative conditional frames / Community and everyday decisions",
+      "goal": "Practise Ki te / Mēnā / Mehemea, He aha … ai in alternative conditional frames. Practise the added everyday vocabulary in familiar frames and retrieve it later.",
+      "newWords": [
+        {
+          "word": "whāinga",
+          "english": "goal; objective",
+          "type": "Noun",
+          "status": "introduced"
+        },
+        {
+          "word": "whakaritenga",
+          "english": "arrangement",
+          "type": "Noun",
+          "status": "introduced"
+        }
+      ],
       "rationale": "Retain the existing grammar backbone. Select a compact set from the existing inventory by useful task, semantic coherence, current/prior prerequisites, total load and later retrieval. Broader candidates remain optional rather than padding the introduction.",
       "reviews": [
         55,
@@ -6113,13 +6126,6 @@
           "word": "hoko",
           "english": "buy; sell",
           "type": "Transitive verb",
-          "status": "introduced-in-draft-exercises",
-          "existingExerciseLesson": 56
-        },
-        {
-          "word": "hīkoi",
-          "english": "walk",
-          "type": "Intransitive verb",
           "status": "introduced-in-draft-exercises",
           "existingExerciseLesson": 56
         },
@@ -6797,6 +6803,13 @@
       "lesson": 53,
       "earlierMeaning": "sit",
       "countingCategory": "new sense; not new spelling",
+      "status": "introduced"
+    },
+    {
+      "word": "mā",
+      "english": "white; clean",
+      "type": "Describing word",
+      "lesson": 9,
       "status": "introduced"
     }
   ],

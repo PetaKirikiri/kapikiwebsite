@@ -205,28 +205,28 @@
           "en": "Hana is not a woman."
         },
         {
-          "mi": "Kei te inu ia. He kaimoana tēnei.",
-          "en": "She is drinking. This is seafood."
+          "mi": "Kua hoki ahau. Kei te tapahi ahau i te parāoa.",
+          "en": "I have returned. I am cutting the bread."
         },
         {
-          "mi": "Kei te oho ia. He hāngi tēnei.",
-          "en": "She is waking up. This is an earth-oven meal."
+          "mi": "Kei te inu ia. He reka te kai.",
+          "en": "She is drinking. The food is delicious."
         },
         {
-          "mi": "E noho ana ia. He pēkana tēnei.",
-          "en": "She is sitting. This is bacon."
+          "mi": "Kei te oho ia. Kei te rongo ahau i te manu.",
+          "en": "She is waking up. I am hearing the bird."
         },
         {
-          "mi": "E tū ana koe. Kei te tiki ahau i te pukapuka.",
-          "en": "You are standing. I am fetching the book."
+          "mi": "E noho ana ia. Kei te whakaatu ahau i te pukapuka.",
+          "en": "She is sitting. I am showing the book."
         },
         {
-          "mi": "Kua hoki ahau. Kei te mihi ahau.",
-          "en": "I have returned. I am greeting."
+          "mi": "E tū ana koe. Kei te whakamahi ahau i te pukapuka.",
+          "en": "You are standing. I am using the book."
         },
         {
-          "mi": "Kua tae ahau ki te kāinga. He mōkai tēnei.",
-          "en": "I have arrived home. This is a pet."
+          "mi": "Kei te kura koutou. Kei te whakamau ahau i te pōtae.",
+          "en": "You (three or more) are at the school. I am putting on the hat."
         }
       ],
       "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
@@ -256,14 +256,6 @@
           "en": "I have not slept yet."
         },
         {
-          "mi": "Kāore ahau e wareware.",
-          "en": "I will not forget."
-        },
-        {
-          "mi": "Kāore anō ahau kia mahara.",
-          "en": "I have not remembered yet."
-        },
-        {
           "mi": "Kāore ahau i kite i te pēke.",
           "en": "I did not see the bag."
         },
@@ -272,20 +264,20 @@
           "en": "I have not seen the phone yet."
         },
         {
-          "mi": "I kai ahau i te parāoa. He ngārara tēnei.",
-          "en": "I ate the bread. This is an insect."
+          "mi": "Kei te tākaro ahau. Kei te whakatakoto ahau i te kapu.",
+          "en": "I am playing. I am putting down the cup."
         },
         {
-          "mi": "I kai koe i te āporo. He tau tēnei.",
-          "en": "You ate the apple. This is a year."
+          "mi": "Kāore ahau e mōhio. Kei te hiki ahau i te kapu.",
+          "en": "I do not know. I am lifting the cup."
         },
         {
-          "mi": "I kai ia i te hēki. He hāora tēnei.",
-          "en": "She ate the egg. This is an hour."
+          "mi": "Kāore ahau e wareware. He kawa te kawhe.",
+          "en": "I will not forget. The coffee is bitter."
         },
         {
-          "mi": "I inu ahau i te miraka. He meneti tēnei.",
-          "en": "I drank the milk. This is a minute."
+          "mi": "Kāore anō ahau kia mārama. He huawhenua tēnei.",
+          "en": "I have not understood yet. This is a vegetable."
         }
       ],
       "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
@@ -324,24 +316,16 @@
       "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required.",
       "extensionPairs": [
         {
-          "mi": "E titiro ki raro!",
-          "en": "Look down!"
+          "mi": "E tatari! He kaimoana tēnei.",
+          "en": "Wait! This is seafood."
         },
         {
-          "mi": "E titiro ki runga!",
-          "en": "Look up!"
+          "mi": "He kaha ahau. He hāngi tēnei.",
+          "en": "I am strong. This is an earth-oven meal."
         },
         {
-          "mi": "Kei te inu ahau i te kawhe. He tākuta tēnei.",
-          "en": "I am drinking the coffee. This is a doctor."
-        },
-        {
-          "mi": "I inu koe i te tī. He rongoā tēnei.",
-          "en": "You drank the tea. This is a medicine."
-        },
-        {
-          "mi": "Kei te titiro ahau ki te kapu. Kei te tangi ahau.",
-          "en": "I am looking at the cup. I am crying."
+          "mi": "He ngoikore ahau. He pēkana tēnei.",
+          "en": "I am weak. This is bacon."
         }
       ]
     },
@@ -370,40 +354,44 @@
       ],
       "extensionPairs": [
         {
-          "mi": "Me pātai koe ki te kaiako. He peita tēnei.",
-          "en": "You should ask the teacher. This is paint."
+          "mi": "Me pātai koe ki te kaiako. Me whakautu koe.",
+          "en": "You should ask the teacher. You should answer."
         },
         {
-          "mi": "Me whakautu koe. He kāpia tēnei.",
-          "en": "You should answer. This is glue."
+          "mi": "E tatari! He rārangi tēnei.",
+          "en": "Wait! This is a line."
         },
         {
-          "mi": "E tatari! He reta tēnei.",
-          "en": "Wait! This is a letter."
+          "mi": "Kei te kura tātou. He pikitia tēnei.",
+          "en": "We (three or more, including you) are at the school. This is a picture."
         },
         {
-          "mi": "E tiaki i te tamaiti! Kei te whakamaroke ahau i te kākahu.",
-          "en": "Look after the child! I am drying the clothing."
+          "mi": "E titiro ki runga! He tuhinga tēnei.",
+          "en": "Look up! This is a piece of writing."
         },
         {
-          "mi": "E āwhina i te tamaiti! Kei te kukume ahau i te tūru.",
-          "en": "Help the child! I am pulling the chair."
+          "mi": "E titiro ki raro! He hōhipera tēnei.",
+          "en": "Look down! This is a hospital."
         },
         {
-          "mi": "Kei te kura tēhea kurī? He karere tēnei.",
-          "en": "Which dog is at the school? This is a message."
+          "mi": "Mō te whānau tēnei. He wharekai tēnei.",
+          "en": "This is for the family. This is a dining room."
         },
         {
-          "mi": "Kei te marae tāna kurī. He papa tēnei.",
-          "en": "Her dog is at the marae. This is a board."
+          "mi": "E tiaki i te tamaiti! He wharehākinakina tēnei.",
+          "en": "Look after the child! This is a gymnasium."
         },
         {
-          "mi": "Kei te marae āna kurī. He kāri tēnei.",
-          "en": "Her dogs are at the marae. This is a card."
+          "mi": "E āwhina i te tamaiti! He wharetaonga tēnei.",
+          "en": "Help the child! This is a museum."
         },
         {
-          "mi": "Kei te marae tōu whare. He tari tēnei.",
-          "en": "Your house is at the marae. This is an office."
+          "mi": "Kei te kura tēhea kurī? He wharekarakia tēnei.",
+          "en": "Which dog is at the school? This is a church."
+        },
+        {
+          "mi": "Kei te marae tāna kurī. He poti tēnei.",
+          "en": "Her dog is at the marae. This is a boat."
         }
       ]
     },
@@ -432,44 +420,48 @@
           "en": "The food does not belong to you."
         },
         {
-          "mi": "Kāore ahau i te matekai. He rama tēnei.",
-          "en": "I am not hungry. This is a lamp."
+          "mi": "Kāti te horoi i ngā waewae!",
+          "en": "Stop washing the feet!"
         },
         {
-          "mi": "Kāore ahau i te hiainu. He pouakawhakaata tēnei.",
-          "en": "I am not thirsty. This is a television."
+          "mi": "Kei te kura mātou. Kei te pōuri ahau.",
+          "en": "We (three or more, not you) are at the school. I am sad."
         },
         {
-          "mi": "Kāore ahau i te ngenge. He pūhiko tēnei.",
-          "en": "I am not tired. This is a battery."
+          "mi": "Kāore ahau i te matekai. He whare haumaru tēnei.",
+          "en": "I am not hungry. This is a safe house."
         },
         {
-          "mi": "Kāore ahau i te māuiui. He taura tēnei.",
-          "en": "I am not unwell. This is a rope."
+          "mi": "Kāore ahau i te hiainu. He raruraru tēnei.",
+          "en": "I am not thirsty. This is a problem."
         },
         {
-          "mi": "Kāti te horoi i ngā ringa! He taputapu tēnei.",
-          "en": "Stop washing the hands! This is equipment."
+          "mi": "Kāore ahau i te ngenge. He pai tōku hauora.",
+          "en": "I am not tired. My health is good."
         },
         {
-          "mi": "Kāti te horoi i ngā waewae! He pukapuka hou tēnei.",
-          "en": "Stop washing the feet! This is a new book."
+          "mi": "Kāore ahau i te māuiui. Kei te neke ahau.",
+          "en": "I am not unwell. I am moving."
         },
         {
-          "mi": "Kei te mamae tōku ringa. He pukapuka tawhito tēnei.",
-          "en": "My hand hurts. This is an old book."
+          "mi": "Kei te mamae tōku ringa. Kei te riri ahau.",
+          "en": "My hand hurts. I am angry."
         },
         {
-          "mi": "Kei te kura ēhea kurī? He pakitara tēnei.",
-          "en": "Which dogs are at the school? This is a wall."
+          "mi": "Kei te kura ēhea kurī? Kei te āwangawanga ahau.",
+          "en": "Which dogs are at the school? I am worried."
         },
         {
-          "mi": "Kei te marae tōna whare. He tuanui tēnei.",
-          "en": "Her house is at the marae. This is a roof."
+          "mi": "Kei te marae tōna whare. He taura tēnei.",
+          "en": "Her house is at the marae. This is a rope."
         },
         {
-          "mi": "Kei te marae ōna whare. He kapu putua tēnei.",
-          "en": "Her houses are at the marae. This is an empty cup."
+          "mi": "Kei te marae ōna whare. Kei te hono ahau i ngā taura.",
+          "en": "Her houses are at the marae. I am connecting the ropes."
+        },
+        {
+          "mi": "Kei te marae āu kurī. He rama tēnei.",
+          "en": "Your dogs are at the marae. This is a lamp."
         }
       ]
     },
@@ -498,44 +490,44 @@
           "en": "The food is not for you."
         },
         {
-          "mi": "He kapu kikī tēnei.",
-          "en": "This is a full cup."
+          "mi": "He pouakawhakaata tēnei.",
+          "en": "This is a television."
         },
         {
-          "mi": "He kaha ahau. He taiapa tēnei.",
-          "en": "I am strong. This is a fence."
+          "mi": "He kaha ahau. Kei te pana ahau i te kūaha. Kei te kukume koe i te kūaha.",
+          "en": "I am strong. I am pushing the door. You are pulling the door."
         },
         {
-          "mi": "He ngoikore ahau. He māra tēnei.",
-          "en": "I am weak. This is a garden."
+          "mi": "He ngoikore ahau. Kei te pana ahau i te kūaha. Kei te kukume koe i te kūaha.",
+          "en": "I am weak. I am pushing the door. You are pulling the door."
         },
         {
-          "mi": "He tere te kurī. He kākano tēnei.",
-          "en": "The dog is fast. This is a seed."
+          "mi": "He aha tēnei? Kei te whakapai ahau i te rūma.",
+          "en": "What is this? I am tidying the room."
         },
         {
-          "mi": "He pōturi te kurī. He putiputi tēnei.",
-          "en": "The dog is slow. This is a flower."
+          "mi": "He tere te kurī. He pūhiko tēnei.",
+          "en": "The dog is fast. This is a battery."
         },
         {
-          "mi": "Kāore ahau i te matekai. He pūrerehua tēnei.",
-          "en": "I am not hungry. This is a butterfly."
+          "mi": "He pōturi te kurī. He taputapu tēnei.",
+          "en": "The dog is slow. This is equipment."
         },
         {
-          "mi": "Kāore ahau i te hiainu. He tohorā tēnei.",
-          "en": "I am not thirsty. This is a whale."
+          "mi": "Kāore ahau i te matekai. Kei te tono ahau i te pukapuka.",
+          "en": "I am not hungry. I am requesting the book."
         },
         {
-          "mi": "Kāore ahau i te ngenge. He kekeno tēnei.",
-          "en": "I am not tired. This is a seal."
+          "mi": "Kāore ahau i te hiainu. He kaiako atawhai ia.",
+          "en": "I am not thirsty. She is a kind teacher."
         },
         {
-          "mi": "Kāore ahau i te māuiui. He hōhipera tēnei.",
-          "en": "I am not unwell. This is a hospital."
+          "mi": "Kāore ahau i te ngenge. He tika tēnei.",
+          "en": "I am not tired. This is correct."
         },
         {
-          "mi": "Kei te marae āku kurī. He wharekai tēnei.",
-          "en": "My dogs are at the marae. This is a dining room."
+          "mi": "Kāore ahau i te māuiui. He hē tēnei.",
+          "en": "I am not unwell. This is incorrect."
         }
       ]
     },
@@ -564,28 +556,28 @@
           "en": "The house is bigger than the school."
         },
         {
-          "mi": "He karaka tēnei.",
-          "en": "This is a clock."
+          "mi": "He tau tēnei.",
+          "en": "This is a year."
         },
         {
-          "mi": "He hau tēnei.",
-          "en": "This is a wind."
+          "mi": "He hāora tēnei.",
+          "en": "This is an hour."
         },
         {
-          "mi": "He marama tēnei.",
-          "en": "This is a month."
+          "mi": "He meneti tēnei.",
+          "en": "This is a minute."
         },
         {
-          "mi": "Kei te ua. Kei te whakaae ahau.",
-          "en": "It is raining. I am agreeing."
+          "mi": "Kei te ua. He karaka tēnei.",
+          "en": "It is raining. This is a clock."
         },
         {
-          "mi": "Ka ua āpōpō. Kei te whakaaro ahau ki te whānau.",
-          "en": "It will rain tomorrow. I am thinking about the family."
+          "mi": "Ka ua āpōpō. He hau tēnei.",
+          "en": "It will rain tomorrow. This is a wind."
         },
         {
-          "mi": "I kite ahau i te kapua. I tae wawe ahau.",
-          "en": "I saw the cloud. I arrived early."
+          "mi": "I waiata ahau. He marama tēnei.",
+          "en": "I sang. This is a month."
         }
       ],
       "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
@@ -615,28 +607,28 @@
           "en": "I cannot sleep."
         },
         {
-          "mi": "Kei te whakatakoto ahau i te ipu.",
-          "en": "I am putting down the container."
+          "mi": "He tiriti tēnei.",
+          "en": "This is a street."
         },
         {
-          "mi": "Kei te whakakī ahau i te ipu.",
-          "en": "I am filling the container."
+          "mi": "He tātahi tēnei.",
+          "en": "This is a beach."
         },
         {
-          "mi": "Kei te ua. I tae tōmuri ahau.",
-          "en": "It is raining. I arrived late."
+          "mi": "Kei te ua. He pāmu tēnei.",
+          "en": "It is raining. This is a farm."
         },
         {
-          "mi": "Ka ua āpōpō. He rerekē ngā whare.",
-          "en": "It will rain tomorrow. The houses are different."
+          "mi": "Ka ua āpōpō. He motokā tēnei.",
+          "en": "It will rain tomorrow. This is a car."
         },
         {
-          "mi": "I kite ahau i te kapua. He ōrite ngā whare.",
-          "en": "I saw the cloud. The houses are the same."
+          "mi": "I waiata ahau. He taraka tēnei.",
+          "en": "I sang. This is a truck."
         },
         {
-          "mi": "I waiata ahau. He hararei tēnei.",
-          "en": "I sang. This is a holiday."
+          "mi": "I kaukau ahau. Kei te tautoko ahau i te whānau.",
+          "en": "I swam. I am supporting the family."
         }
       ],
       "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
@@ -666,36 +658,36 @@
           "en": "The food was eaten by Hana."
         },
         {
-          "mi": "He puku tēnei.",
-          "en": "This is a stomach."
+          "mi": "He ihu tēnei.",
+          "en": "This is a nose."
         },
         {
-          "mi": "He parāoa mārō tēnei.",
-          "en": "This is hard bread."
+          "mi": "He niho tēnei.",
+          "en": "This is a tooth."
         },
         {
-          "mi": "E tatari! He parāoa ngohengohe tēnei.",
-          "en": "Wait! This is soft bread."
+          "mi": "E tatari! He kakī tēnei.",
+          "en": "Wait! This is a neck."
         },
         {
-          "mi": "E tiaki i te tamaiti! He makawe tēnei.",
-          "en": "Look after the child! This is hair."
+          "mi": "Hōmai te pene! He tuarā tēnei.",
+          "en": "Give me the pen! This is a back."
         },
         {
-          "mi": "E āwhina i te tamaiti! He kiri tēnei.",
-          "en": "Help the child! This is skin."
+          "mi": "Kua ngaro te waea. He puku tēnei.",
+          "en": "The phone is missing. This is a stomach."
         },
         {
-          "mi": "Kāore anō ahau kia kati i te kūaha. He matimati tēnei.",
-          "en": "I have not closed the door yet. This is a finger."
+          "mi": "He mākū te kākahu. Kei te whakakī ahau i te ipu.",
+          "en": "The clothing is wet. I am filling the container."
         },
         {
-          "mi": "Kāore anō ahau kia whakatuwhera i te matapihi. He tinana tēnei.",
-          "en": "I have not opened the window yet. This is a body."
+          "mi": "He maroke te kākahu. Kei te kōwhiri ahau i te kākahu.",
+          "en": "The clothing is dry. I am choosing the clothing."
         },
         {
-          "mi": "Kāore anō ahau kia horoi i te rūma. He kai mahana tēnei.",
-          "en": "I have not cleaned the room yet. This is warm food."
+          "mi": "E tiaki i te tamaiti! He rererangi tēnei.",
+          "en": "Look after the child! This is an aeroplane."
         }
       ],
       "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
@@ -725,12 +717,36 @@
       ],
       "extensionPairs": [
         {
-          "mi": "He whāinga tēnei.",
-          "en": "This is a goal."
+          "mi": "He ipurangi tēnei.",
+          "en": "This is an internet connection."
         },
         {
-          "mi": "He whakaritenga tēnei.",
-          "en": "This is an arrangement."
+          "mi": "Kei te whakamārama ahau i te kupu.",
+          "en": "I am explaining the word."
+        },
+        {
+          "mi": "He hukapapa tēnei.",
+          "en": "This is ice."
+        },
+        {
+          "mi": "He āniwaniwa tēnei.",
+          "en": "This is a rainbow."
+        },
+        {
+          "mi": "He toi tēnei.",
+          "en": "This is art."
+        },
+        {
+          "mi": "He huritau tēnei.",
+          "en": "This is an anniversary."
+        },
+        {
+          "mi": "Kei te whakanui ahau i te huritau.",
+          "en": "I am celebrating the anniversary."
+        },
+        {
+          "mi": "He ture tēnei mō te hapori.",
+          "en": "This is a law for the community."
         }
       ],
       "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
@@ -758,6 +774,10 @@
         {
           "mi": "Ki te oma koe, ka moe ahau.",
           "en": "If you run, I will sleep."
+        },
+        {
+          "mi": "He kōwhiringa tēnei. He wheako tēnei.",
+          "en": "This is a choice. This is an experience."
         }
       ],
       "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
@@ -785,6 +805,10 @@
         {
           "mi": "Mēnā ka moe koe, ka oma ahau.",
           "en": "If you sleep, I will run."
+        },
+        {
+          "mi": "He whāinga tēnei. He whakaritenga tēnei.",
+          "en": "This is a goal. This is an arrangement."
         }
       ],
       "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."

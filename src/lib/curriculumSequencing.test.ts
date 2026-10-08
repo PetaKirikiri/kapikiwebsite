@@ -71,7 +71,7 @@ it('fits the feasible coursewide examples and retrieval into fixed-size sheets',
 it('caps expanded core load while preserving existing lexical introduction dates',()=>{
  const loads=pacing.lessons.map(l=>l.newWords.length)
  expect(Math.max(...loads)).toBeLessThanOrEqual(10)
- expect(bank.expansion.targets).toHaveLength(209)
+ expect(bank.expansion.targets).toHaveLength(242)
  for(const [week,words] of [[15,['kurī','ngeru','manu']],[16,['noho','tū']],[18,['pānui','tuhi','pukapuka']],[19,['hoatu','hōmai','whakarongo','pene']],[23,['waea','pēke']],[24,['runga','raro']]] as const){
   for(const word of words)expect(allocations.findIndex(a=>a.translationVocabulary.includes(word)),word).toBe(week-1)
  }
