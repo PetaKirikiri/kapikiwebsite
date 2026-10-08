@@ -29,6 +29,7 @@ it('shows all actually taught foundational cardinal forms through Numbers',async
   await act(async()=>[...host.querySelectorAll<HTMLButtonElement>('.level-vocabulary-kind button')].find(b=>b.textContent?.startsWith('Words'))!.click())
   await act(async()=>[...host.querySelectorAll<HTMLButtonElement>('[role=tab]')].find(b=>b.textContent==='Numbers')!.click())
   const words=[...host.querySelectorAll('tbody th [lang]')].map(x=>x.textContent)
+  expect(host.textContent).not.toContain('Plural: ngā')
   for(const word of ['kore','tahi','kotahi','rua','tokorua','toru','whā','rima','ono','whitu','waru','iwa','tekau'])expect(words).toContain(word)
  }finally{await act(async()=>root.unmount())}
 })

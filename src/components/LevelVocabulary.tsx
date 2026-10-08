@@ -188,7 +188,7 @@ export default function LevelVocabulary({ level, catalog, sentences }: { level: 
         <td className="level-vocabulary-meaning">{item.english}</td>
         <td data-label="Category">{item.kind === 'word' ? <Categories course={courseCategories(item)} value={posByWord.get(item.key!)?.categories} failed={failed === level} /> : item.category ?? '—'}</td>
         {!expressionOnly && <td data-label="Singular / plural" className="level-vocabulary-number">{(() => {
-          const guide = numberGuide(item)
+          const guide = numberGuide(item,level)
           return guide ? <><span className="level-vocabulary-number-badge">{NUMBER_LABELS[guide.kind]}</span><small>{guide.note}</small></> : <span aria-label="No number guidance yet">—</span>
         })()}</td>}
         {!expressionOnly && <td data-label="A/O" className="level-vocabulary-ao">{(() => {

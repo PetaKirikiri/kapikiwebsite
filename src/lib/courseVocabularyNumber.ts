@@ -16,7 +16,7 @@ const sameForm = new Set(('whaea pāpā kuia koroua tama tamāhine mokopuna tung
   + 'ringa waewae kanohi upoko waha karu taringa kākahu hū pōtae '
   + 'waea rorohiko mīhini pepa pouaka taputapu pēke tēpu tūru ipu kūaha maripi pereti pukapuka kēmu').split(' '))
 
-export function numberGuide(entry: CourseVocabularyEntry): NumberGuide | undefined {
+export function numberGuide(entry: CourseVocabularyEntry, level?: number): NumberGuide | undefined {
   if (entry.kind !== 'word') return undefined
   if(entry.courseType==='Determiner'&&/^(?:t?[āō])(?: |ku$|u$|na$)/.test(entry.text))return {
     kind:/^t[āō]/.test(entry.text)?'singular':'plural',
@@ -36,11 +36,11 @@ export function numberGuide(entry: CourseVocabularyEntry): NumberGuide | undefin
     source: NUMBER_SOURCE,
   }
   if (entry.text === 'te' || entry.text === 'ngā') return {
-    kind: entry.text === 'te' ? 'singular' : 'plural', note: entry.text === 'te' ? 'Plural: ngā' : 'Singular: te', source: NUMBER_SOURCE,
+    kind: entry.text === 'te' ? 'singular' : 'plural', note: level===1?'One thing':entry.text === 'te' ? 'Plural: ngā' : 'Singular: te', source: NUMBER_SOURCE,
   }
   if (entry.text === 'he') return { kind: 'both', note: 'A / some', source: NUMBER_SOURCE }
   if (isJob(entry) || sameForm.has(entry.text)) return {
-    kind: 'both', note: `te ${entry.text} / ngā ${entry.text}`, source: NUMBER_SOURCE,
+    kind: 'both', note: level===1?`te ${entry.text}`:`te ${entry.text} / ngā ${entry.text}`, source: NUMBER_SOURCE,
   }
   return undefined
 }
