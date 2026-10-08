@@ -14,6 +14,7 @@ export default function SignupAdmin() {
   const [rows, setRows] = useState<Registration[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const studentTotal = new Set(rows.map(row => row.email.trim().toLowerCase())).size
   useEffect(() => {
     const controller = new AbortController()
     void fetch('/__signup_admin', { cache: 'no-store', signal: controller.signal })
@@ -44,8 +45,12 @@ export default function SignupAdmin() {
     <a className="signup-admin-back" href="/#moe">← MOE classes</a>
     <header className="site-card site-card-cover signup-admin-page-header">
       <img src={ministryLogo} width="200" height="58" alt="Ministry of Education" />
-      <h1>Class signups</h1>
-      <p>October 2026 intake</p>
+      <div className="signup-admin-heading">
+        <div><h1>Class signups</h1><p>October 2026 intake</p></div>
+        <div className="signup-admin-student-count" role="status" aria-label={loading ? 'Loading total students' : error ? 'Total students unavailable' : `${studentTotal} total students`}>
+          <strong>{loading || error ? '—' : studentTotal}</strong><span>Total students</span>
+        </div>
+      </div>
     </header>
     {loading ? <p role="status">Loading…</p> : error ? <p className="signup-admin-error" role="alert">{error}</p> : <SignupRoster rows={rows} />}
     </main>

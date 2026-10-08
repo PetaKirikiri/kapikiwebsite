@@ -3,6 +3,7 @@
 .signup-admin-back { display: inline-block; margin-bottom: 20px; color: inherit; text-underline-offset: 4px; }
 .signup-admin-page-header { padding: 32px; margin-bottom: 24px; }
 .signup-admin-page-header img { display: block; width: 200px; height: auto; margin-bottom: 24px; }
+.signup-admin-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .signup-admin-page-header p { margin: 10px 0 0; }
 .signup-admin h1 { margin: 0; font: 400 42px/1.15 var(--ka-heading); }
 .signup-admin-levels { display: grid; gap: 24px; }
