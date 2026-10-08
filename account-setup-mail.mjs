@@ -2,6 +2,7 @@ import { ownerAccessToken, OWNER_EMAIL } from './signup-mail.mjs'
 
 export function setupNotificationMessage(event) {
   if (!/^[a-f0-9-]{36}$/i.test(event.invitation_id)) throw new Error('Invalid invitation identifier')
+  if (event.owner_preview) return ownerPreviewMessage(event)
   const completed = new Date(event.completed_at).toLocaleString('en-NZ', { timeZone: 'Pacific/Auckland', timeZoneName: 'short' })
   const text = ['Kia ora Peta,', '', 'A student has set their password and saved their details.', '',
     `Name: ${event.student_name}`, `Email: ${event.student_email}`,
@@ -12,6 +13,24 @@ export function setupNotificationMessage(event) {
     `Message-ID: <account-setup-${event.invitation_id}@kapiki.co.nz>`,
     'MIME-Version: 1.0', 'Content-Type: text/plain; charset=utf-8',
     'Content-Transfer-Encoding: base64', '', Buffer.from(text).toString('base64'),
+  ].join('\r\n')).toString('base64url')
+}
+
+// Preview payloads can only be inserted by trusted server/database tooling.
+// The destination remains the fixed owner address, regardless of payload fields.
+function ownerPreviewMessage(event) {
+  const { subject, text, html } = event.owner_preview
+  if (![subject, text, html].every(value => typeof value === 'string' && value.length > 0)) throw new Error('Invalid preview')
+  const boundary = `kapiki-preview-${event.invitation_id}`
+  const encodedSubject = Buffer.from(`[TEST] ${subject}`).toString('base64')
+  return Buffer.from([
+    `From: Ka Piki <${OWNER_EMAIL}>`, `To: ${OWNER_EMAIL}`, `Reply-To: ${OWNER_EMAIL}`,
+    `Subject: =?UTF-8?B?${encodedSubject}?=`,
+    `Message-ID: <account-preview-${event.invitation_id}@kapiki.co.nz>`,
+    'MIME-Version: 1.0', `Content-Type: multipart/alternative; boundary="${boundary}"`, '',
+    `--${boundary}`, 'Content-Type: text/plain; charset=utf-8', 'Content-Transfer-Encoding: base64', '',
+    Buffer.from(text).toString('base64'), `--${boundary}`, 'Content-Type: text/html; charset=utf-8',
+    'Content-Transfer-Encoding: base64', '', Buffer.from(html).toString('base64'), `--${boundary}--`,
   ].join('\r\n')).toString('base64url')
 }
 

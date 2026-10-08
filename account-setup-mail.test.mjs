@@ -23,3 +23,12 @@ test('already claimed or sent notifications are not resent',async()=>{const h=ha
 test('missing authorization leaves message pending without claim or send',async()=>{const h=harness({tokenFails:true});assert.equal((await deliverSetupNotification(h.query,id,h.options)).status,'pending');assert.ok(h.calls.some(([sql])=>sql.includes("owner_authorization_unavailable")));assert.equal(h.sends,0)})
 test('explicit Gmail rejection remains pending',async()=>{const h=harness({code:429});assert.equal((await deliverSetupNotification(h.query,id,h.options)).status,'pending');assert.equal(h.sends,1)})
 test('ambiguous Gmail errors block automatic retries',async()=>{for(const opts of [{code:500},{throws:true}]){const h=harness(opts);assert.equal((await deliverSetupNotification(h.query,id,h.options)).status,'uncertain');assert.equal(h.sends,1)}})
+
+test('owner preview preserves student HTML and plain text but cannot override recipient or inject headers',()=>{
+ const preview={subject:'A subject\r\nBcc: attacker@example.com',text:'Student message',html:'<p>Student <strong>message</strong></p>',to:'attacker@example.com'}
+ const raw=Buffer.from(setupNotificationMessage({...signup,owner_preview:preview}),'base64url').toString()
+ const headers=raw.split('\r\n\r\n')[0]
+ assert.ok(headers.includes(`To: ${OWNER_EMAIL}`));assert.ok(!headers.includes('Bcc:'))
+ assert.ok(raw.includes(Buffer.from(preview.html).toString('base64')))
+ assert.ok(raw.includes(Buffer.from(preview.text).toString('base64')))
+})
