@@ -1,7 +1,7 @@
 import { studentClient } from '../studentPortal/client'
 export type LessonItem = { id: string; position: number; kind: string; text_mi: string; text_en: string; resource_url: string | null; alt_text: string; reveal_only: boolean }
 export type LessonStep = { id: string; position: number; kind: string; title: string; prompt_mi: string; prompt_en: string; duration_minutes: number | null; items: LessonItem[] }
-export type LessonPlan = { id: string; level: number; lesson_number: number; title: string; status: string; outcomes: string[] }
+export type LessonPlan = { id: string; level: number; lesson_number: number; title: string; status: string; outcomes: string[]; curriculum_payload?: unknown }
 export type LessonSession = { id: string; title: string; level: number; lesson_number: number; outcomes: string[]; step: LessonStep; current_step: number; step_count: number; revealed: boolean; revision: number; status: string; is_teacher: boolean; join_code: string | null }
 export function lessonClient() {
  if (!studentClient) throw new Error('Lesson access is temporarily unavailable.')

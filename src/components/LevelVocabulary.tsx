@@ -7,7 +7,8 @@ import { vocabularyNumberValue } from '../lib/vocabularyNumberOrder'
 import { AO_SOURCE, courseCategories, possessionGuide } from '../lib/courseVocabularyCategories'
 import { NUMBER_LABELS, numberGuide } from '../lib/courseVocabularyNumber'
 import { type ReactNode, useEffect, useMemo, useState } from 'react'
-import { courseVocabularyEntries, optionalPersonalisationEntries, type VocabularyEntryKind } from '../lib/courseVocabularyEntries'
+import type { VocabularyEntryKind } from '../lib/courseVocabularyEntries'
+import { useCourseCurriculum } from '../lib/courseCurriculum'
 import type { CurriculumLevel } from '../lib/sentenceStructureLevels'
 import { fetchVocabularyPos, type VocabularyPos } from '../lib/vocabularyPos'
 import type { BusManifestPosCatalog } from '../lib/busManifestContract'
@@ -50,8 +51,9 @@ export default function LevelVocabulary({ level, catalog, sentences }: { level: 
   const [aoFilter, setAoFilter] = useState('')
   const [numberFilter, setNumberFilter] = useState('')
   useEffect(() => { setCategoryFilter(''); setAoFilter(''); setNumberFilter('') }, [level])
-  const entries = useMemo(() => courseVocabularyEntries(level), [level])
-  const optional = useMemo(() => optionalPersonalisationEntries(level), [level])
+  const { data: curriculum, error: curriculumError } = useCourseCurriculum()
+  const entries = useMemo(() => curriculum?.lessons.filter(lesson => lesson.level === level).flatMap(lesson => lesson.entries) ?? [], [curriculum, level])
+  const optional = useMemo(() => curriculum?.lessons.filter(lesson => lesson.level === level).flatMap(lesson => lesson.optionalEntries) ?? [], [curriculum, level])
   const words = useMemo(() => entries.filter(entry => entry.kind === 'word'), [entries])
   const [metadata, setMetadata] = useState<{ level: number; words: VocabularyPos[] } | null>(null)
   const [failed, setFailed] = useState<number | null>(null)
@@ -106,7 +108,10 @@ export default function LevelVocabulary({ level, catalog, sentences }: { level: 
   const kindOptions: readonly (readonly ['big' | 'word' | 'phrase' | 'optional', string])[] = [ ['big', 'Big words'], ['word', 'Words'], ['phrase', 'Phrases'], ...(optional.length ? [['optional', 'Optional roles'] as const] : []) ]
 
   return <section className="site-card level-vocabulary" aria-label={`Level ${level} vocabulary`}>
+    {curriculumError && <p role="alert">{curriculumError}</p>}
+    {!curriculum && !curriculumError && <p role="status">Loading vocabulary…</p>}
     <div className="level-vocabulary-tools">
+    <a href="/vocabulary-timeline.html">60-lesson view</a>
     <div className="level-vocabulary-kind" role="group" aria-label="Vocabulary kind">
       {kindOptions.map(([value, label]) => <button type="button" key={value} aria-pressed={kind === value}
         onClick={() => { setKind(value); clearFilters() }}>

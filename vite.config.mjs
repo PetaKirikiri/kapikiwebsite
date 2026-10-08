@@ -15,6 +15,9 @@ export default defineConfig(({ mode }) => {
       name: 'read-only-course-api',
       configureServer(server) {
         Object.assign(process.env, env)
+        for (const route of ['__course_curriculum', '__course_lesson', '__course_answer']) server.middlewares.use('/' + route, (req, res) => {
+          const url = new URL(req.url, 'http://local'); url.searchParams.set('route', route); req.url = url.pathname + url.search; void trainingApi(req, res)
+        })
         server.middlewares.use('/__word_support', (req, res) => {
           const url = new URL(req.url, 'http://local')
           url.searchParams.set('route', '__word_support')
@@ -25,7 +28,7 @@ export default defineConfig(({ mode }) => {
         server.middlewares.use(liveApi(env.CONNECTORS_API_URL || 'http://127.0.0.1:5176'))
       },
     }],
-    build: { outDir: '../dist', emptyOutDir: true, rollupOptions: { input: { main: resolve('website-preview/index.html'), admin: resolve('website-preview/admin.html'), octoberIntakeV1: resolve('website-preview/october-intake-v1.html'), octoberIntakeV2: resolve('website-preview/october-intake-v2.html'), storyReview: resolve('website-preview/story-review.html'), curriculumReview: resolve('website-preview/curriculum-review.html'), translationSheets: resolve('website-preview/translation-sheets.html') } } },
+    build: { outDir: '../dist', emptyOutDir: true, rollupOptions: { input: { main: resolve('website-preview/index.html'), admin: resolve('website-preview/admin.html'), octoberIntakeV1: resolve('website-preview/october-intake-v1.html'), octoberIntakeV2: resolve('website-preview/october-intake-v2.html'), storyReview: resolve('website-preview/story-review.html'), curriculumReview: resolve('website-preview/curriculum-review.html'), translationSheets: resolve('website-preview/translation-sheets.html'), vocabularyTimeline: resolve('website-preview/vocabulary-timeline.html') } } },
     server: { port: 5180, strictPort: true, fs: { allow: ['..'] } },
   }
 })

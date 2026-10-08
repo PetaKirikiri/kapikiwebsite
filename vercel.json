@@ -56,6 +56,18 @@
   },
   "rewrites": [
     {
+      "source": "/__course_curriculum",
+      "destination": "/api/training?route=__course_curriculum"
+    },
+    {
+      "source": "/__course_lesson",
+      "destination": "/api/training?route=__course_lesson"
+    },
+    {
+      "source": "/__course_answer",
+      "destination": "/api/training?route=__course_answer"
+    },
+    {
       "source": "/__analytics",
       "destination": "/api/analytics"
     },

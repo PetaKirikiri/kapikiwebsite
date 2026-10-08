@@ -1,3 +1,4 @@
+import { readCourseCurriculum, readCourseLesson, checkCourseAnswer } from './server/courseCurriculum.mjs'
 import { readWordSupport, readVocabularyPos } from './wordSupport.mjs'
 import { nextTrainingQuestion, trainingCoverage, structureCoverage } from './trainingCoverage.mjs'
 import pg from 'pg'
@@ -15,6 +16,20 @@ export async function trainingApi(req,res) {
   const host=req.headers.host; const origin=req.headers.origin
   if (origin && new URL(origin).host!==host || req.headers['sec-fetch-site']==='cross-site') return json(403,{error:'Open this action from the app.'})
   const db=database()
+  if (route === '__course_curriculum' && req.method === 'GET') return json(200, await readCourseCurriculum(db))
+  if (route === '__course_lesson' && req.method === 'GET') {
+   const level=Number(url.searchParams.get('level')),lesson=Number(url.searchParams.get('lesson'))
+   if (!Number.isInteger(level)||level<1||level>6||!Number.isInteger(lesson)||lesson<1||lesson>10) return json(400,{error:'Choose a lesson.'})
+   return json(200,await readCourseLesson(db,req.headers.authorization,level,lesson))
+  }
+  if (route === '__course_answer' && req.method === 'POST') {
+   let raw=req.body == null ? '' : typeof req.body === 'string' ? req.body : JSON.stringify(req.body)
+   if(req.body == null)for await(const chunk of req){raw+=chunk;if(raw.length>4000)return json(400,{error:'Answer too long.'})}
+   if(raw.length>4000)return json(400,{error:'Answer too long.'})
+   const body=JSON.parse(raw)
+   if (!Number.isInteger(body.level)||body.level<1||body.level>6||!Number.isInteger(body.lesson)||body.lesson<1||body.lesson>10||typeof body.questionId!=='string'||typeof body.answer!=='string') return json(400,{error:'Choose a question.'})
+   return json(200,await checkCourseAnswer(db,req.headers.authorization,body.level,body.lesson,body.questionId,body.answer))
+  }
   if(route==='__word_support') {
    if(req.method!=='GET')return json(405,{error:'Read only.'})
    if(url.searchParams.has('words')) {
@@ -113,5 +128,5 @@ export async function trainingApi(req,res) {
    if(saved.rowCount)await client.query('update public.training_profile set position=$2 where token_hash=$1',[hash,body.position])
    await client.query('commit');return json(200,{saved:true,questionId:await nextTrainingQuestion(db,hash)})
   }catch(e){await client.query('rollback');throw e}finally{client.release()}
- }catch(error){console.error('[training]',error.message);json(500,{error:'Database request failed. Please try again.'})}
+ }catch(error){console.error('[training]',error.message);json(error.status || 500,{error:error.status ? error.message : 'Database request failed. Please try again.'})}
 }

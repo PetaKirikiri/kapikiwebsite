@@ -1,16 +1,15 @@
 import { useWordSupport } from '../useWordSupport'
-import { wordSupportTarget } from '../../lib/connectorPresentation/wordSupport'
 import SupportedText from '../SupportedText'
 import TwilightCursor from '../livingWorld/TwilightCursor'
 import ForestScene from '../livingWorld/ForestScene'
 import { LessonStages, LessonStagePanel, LessonWrapUp } from './LessonStages'
 import LessonEmblem, { stageIdentityStyle } from './LessonEmblem'
 import { moeLessonSchedule } from '../../lib/moeOffer'
-import { bigWordQuestions, bigWordQuestionGroups } from '../../lib/lessons/bigWordQuestions'
 import { savePepehaAnswer } from '../../lib/studentPortal/pepeha'
 import { studentClient } from '../../lib/studentPortal/client'
 import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
-import LessonQuestion from './LessonQuestion'
+import CourseLessonExercises from './CourseLessonExercises'
+import LessonAccountGate from './LessonAccountGate'
 import LessonBigWords from './LessonBigWords'
 import LessonWarmUp, { type WarmUpPosition } from './LessonWarmUp'
 import { lessonWarmUp, warmUpQuestion } from '../../lib/lessons/warmUp'
@@ -142,7 +141,7 @@ function LessonChat({ lessonKey, prompts, questionIndex, onPeople }: { lessonKey
     const answer = draft.trim()
     if (!answer || (!room?.joined && !localName.trim()) || pending || (roomId && !room?.joined)) return
     if (room?.joined) {
-      if (!await act('lesson-chat', { text: answer, mode: 'auto', questionIndex })) return
+      if (!await act('lesson-chat', { text: answer, mode: prompts?.length ? 'auto' : 'message', questionIndex })) return
     } else {
     const feedback = prompts?.length && questionIndex < 4 ? recogniseChatAnswer('level-1-lesson-1-big-words', answer) : null
     setMessages(previous => [...previous, { text: answer, questionIndex, senderName: localName.trim(), feedback }].slice(-100))
@@ -183,6 +182,9 @@ function LessonChat({ lessonKey, prompts, questionIndex, onPeople }: { lessonKey
 }
 
 export default function LessonWorkspace() {
+  return <LessonAccountGate><SignedInLessonWorkspace /></LessonAccountGate>
+}
+function SignedInLessonWorkspace() {
   const [boardOpen, setBoardOpen] = useState(() => new URLSearchParams(window.location.hash.split('?')[1]).get('board') === '1')
   const [boardVisited, setBoardVisited] = useState(boardOpen)
   const [presentationVisited, setPresentationVisited] = useState(!boardOpen)
@@ -202,24 +204,13 @@ export default function LessonWorkspace() {
   const lesson = lessons.includes(requestedLesson) ? requestedLesson : 1
   const roomParam = params.get('room')
   const title = `Level ${level} Lesson ${lesson}`
-  const section = level === 1 && lesson === 1 ? { title: 'Big words', prompts: bigWordQuestions } : null
+  const section = level === 1 && lesson === 1 ? { title: 'Big words' } : null
   const [sectionSelection, setSectionSelection] = useState({ lesson: '', index: 0 })
   const lessonKey = `${level}:${lesson}`
   const warmUpPlan = lessonWarmUp(level, lesson)
   const [warmUpSelection, setWarmUpSelection] = useState<{ lesson: string; position: WarmUpPosition }>({ lesson: '', position: { phase: 'recall', index: 0 } })
   const warmUpPosition = warmUpSelection.lesson === lessonKey ? warmUpSelection.position : { phase: 'recall' as const, index: 0 }
   const warmUpPrompt = warmUpQuestion(warmUpPlan.phases[warmUpPosition.phase][warmUpPosition.index])
-  const [exercise, setExercise] = useState<{ lesson: string; group: string; revealed: number[] }>({ lesson: '', group: 'Ko', revealed: [0] })
-  const exerciseGroup = exercise.lesson === lessonKey ? exercise.group : 'Ko'
-  const revealed = exercise.lesson === lessonKey ? exercise.revealed : [0]
-  const groupQuestions = bigWordQuestions.filter(question => question.group === exerciseGroup)
-  const visibleQuestions = groupQuestions.filter(question => revealed.includes(question.id))
-  const questionIndex = visibleQuestions.at(-1)?.id ?? groupQuestions[0].id
-  const nextQuestion = groupQuestions.find(question => !revealed.includes(question.id))
-  const selectExerciseGroup = (group: string) => {
-    const first = bigWordQuestions.find(question => question.group === group)!
-    setExercise({ lesson: lessonKey, group, revealed: [...new Set([...revealed, first.id])] })
-  }
   const activeSection = sectionSelection.lesson === lessonKey ? sectionSelection.index : 0
   const schedule = moeLessonSchedule(level, lesson)
   const wrapUpTime = schedule ? new Date(new Date(schedule.endsAt).getTime() - 5 * 60_000).toLocaleTimeString('en-NZ', { hour: 'numeric', minute: '2-digit', timeZone: schedule.timezone }) : undefined
@@ -257,6 +248,7 @@ export default function LessonWorkspace() {
           {boardVisited && <div className="lesson-whiteboard-host" hidden={!boardOpen}><LessonWhiteboard key={`${lessonKey}:${roomParam ?? 'local'}`} lessonKey={lessonKey} roomId={roomParam} name={people.find(person => person.local)?.name ?? ''} onRoomReady={openSharedBoard} /></div>}
           {presentationVisited && <div className="lesson-presentation-host" hidden={boardOpen}>
           <LessonStagePanel active={activeSection}>
+            {activeSection === 3 && <CourseLessonExercises key={lessonKey} level={level} lesson={lesson} />}
             <div className="lesson-overview" hidden={activeSection !== 0}>
               <header className="lesson-overview-header">
                 <ForestScene />
@@ -293,19 +285,11 @@ export default function LessonWorkspace() {
             </section>}
             <div hidden={activeSection !== 1}><LessonWarmUp plan={warmUpPlan} position={warmUpPosition} active={activeSection === 1} onChange={position => setWarmUpSelection({ lesson: lessonKey, position })} onFinish={() => selectSection(2)} onOpenChat={() => setChatOpen(true)} /></div>
             {section && <div hidden={activeSection !== 4}><LessonBreakout /></div>}
-            {section && <div hidden={activeSection !== 3}>
-              <div className="lesson-section-tabs lesson-exercise-tabs" role="tablist" aria-label="Big word questions">{bigWordQuestionGroups.map(group => <button {...wordHelp.hover(wordSupportTarget(group, null))} key={group} role="tab" id={`exercise-tab-${group}`} aria-selected={exerciseGroup === group} aria-controls="exercise-questions" onClick={() => selectExerciseGroup(group)}>{group}</button>)}</div>
-              <div id="exercise-questions" role="tabpanel" aria-labelledby={`exercise-tab-${exerciseGroup}`} className="lesson-big-words-list">
-                {section.prompts.map(prompt => <div key={`${lessonKey}:${prompt.id}`} hidden={prompt.group !== exerciseGroup || !revealed.includes(prompt.id)}><LessonQuestion text={prompt.text} active={activeSection === 3 && prompt.group === exerciseGroup && revealed.includes(prompt.id)} /></div>)}
-                {nextQuestion && <div className="lesson-question-navigation"><button aria-label="Next question" onClick={() => setExercise({ lesson: lessonKey, group: exerciseGroup, revealed: [...revealed, nextQuestion.id] })}>Next question ↓</button></div>}
-              </div>
-            </div>}
-
             {activeSection === 5 && <LessonWrapUp />}
           </LessonStagePanel>
           </div>}
         </div>
-        <div id="class-chat-panel" className="lesson-chat-panel" hidden={!chatOpen}><LessonChat onPeople={setPeople} key={`${level}:${lesson}`} lessonKey={`${level}:${lesson}`} questionIndex={activeSection === 1 && warmUpPrompt ? warmUpPrompt.id : questionIndex} prompts={activeSection === 1 && warmUpPrompt ? [warmUpPrompt] : activeSection === 3 ? bigWordQuestions.filter(question => revealed.includes(question.id)) : undefined} /></div>
+        <div id="class-chat-panel" className="lesson-chat-panel" hidden={!chatOpen}><LessonChat onPeople={setPeople} key={`${level}:${lesson}`} lessonKey={`${level}:${lesson}`} questionIndex={activeSection === 1 && warmUpPrompt ? warmUpPrompt.id : 0} prompts={activeSection === 1 && warmUpPrompt ? [warmUpPrompt] : undefined} /></div>
       </div>
     </section>
   </main>
