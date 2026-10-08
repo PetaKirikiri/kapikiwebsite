@@ -4,7 +4,7 @@ import {useCourseCurriculum} from '../src/lib/courseCurriculum'
 import {COURSE_VERB_TYPES,isCourseVerbType} from '../src/lib/courseVocabularyTypes'
 import {lessonWordTotals} from '../src/lib/vocabularyTimeline'
 import './vocabulary-timeline.css'
-import {familyLabels,wordFamily,progressionWords} from './vocabulary-timeline-view'
+import {familyLabels,wordFamily,progressionWords,displayWordLabel} from './vocabulary-timeline-view'
 const levels=[1,2,3,4,5,6] as const
 const reasons=['Too early','Too late','Too difficult','Not useful here','Doesn’t fit the topic','Prerequisites missing','Wrong word type']
 type Review={word:string;lesson:number;reasons:string[];note:string;targetLesson:number|null}
@@ -28,7 +28,7 @@ function App(){
 
  const [selectedTypes,setSelectedTypes]=useState<string[]>([])
  const types=[...new Set(words.map(w=>w.type))].filter(type=>!isCourseVerbType(type)).sort()
- const visible=progressionWords(words,selectedTypes,pacing.lessons)
+ const visible=progressionWords(words,selectedTypes,pacing.lessons).map(w=>({...w,displayWord:displayWordLabel(w)}))
  return <main><header><a href="/translation-sheets.html">← Sheets</a><strong>KA PIKI</strong><h1>Vocabulary progression</h1></header>
  <section className="toolbar" aria-label="Vocabulary filters">
  <div className="pos-buttons" aria-label="Word type">{['all',...types,...COURSE_VERB_TYPES].map(t=><button key={t} aria-pressed={t==='all'?!selectedTypes.length:selectedTypes.includes(t)} onClick={()=>setSelectedTypes(current=>t==='all'?[]:current.includes(t)?current.filter(type=>type!==t):[...current,t])}>{t==='all'?'All':t==='Noun'?'Nouns':t}</button>)}</div>
@@ -40,7 +40,7 @@ function App(){
  </>
  {reviewError&&!editing&&<p role="alert">{reviewError}</p>}
  {editing&&<div className="review-backdrop"><dialog ref={node=>{if(node&&!node.open)node.showModal()}} onCancel={e=>{e.preventDefault();if(!saving)setEditing(null)}} aria-labelledby="review-title" onKeyDown={e=>{if(e.key==='Escape'&&!saving)setEditing(null)}}><form onSubmit={e=>{e.preventDefault();void saveReview()}}>
- <h2 id="review-title">{editing.word.split(' · ')[0]} · Level {Math.ceil(editing.lesson/10)}, lesson {(editing.lesson-1)%10+1}</h2>
+ <h2 id="review-title">{displayWordLabel(words.find(w=>w.word===editing.word)??{word:editing.word,type:''})} · Level {Math.ceil(editing.lesson/10)}, lesson {(editing.lesson-1)%10+1}</h2>
  <div className="review-reasons">{reasons.map(reason=><label key={reason}><input type="checkbox" checked={editing.reasons.includes(reason)} onChange={e=>setEditing({...editing,reasons:e.target.checked?[...editing.reasons,reason]:editing.reasons.filter(r=>r!==reason)})}/>{reason}</label>)}</div>
  <label>Move to (optional)<select value={editing.targetLesson??''} onChange={e=>setEditing({...editing,targetLesson:e.target.value?Number(e.target.value):null})}><option value="">Decide during review</option>{columns.map(n=><option key={n} value={n}>Level {Math.ceil(n/10)} · Lesson {(n-1)%10+1}</option>)}</select></label>
  <label>Note (optional)<textarea maxLength={2000} value={editing.note} onChange={e=>setEditing({...editing,note:e.target.value})}/></label>

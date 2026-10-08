@@ -38,3 +38,8 @@ export function progressionWords<T extends Word>(words:T[],types:string[],lesson
   return aa[0]-bb[0]||aa[1]-bb[1]||aa[2]-bb[2]||a.word.localeCompare(b.word,'mi')
  })
 }
+
+export function displayWordLabel(w:{word:string;type:string;displayWord?:string}){
+ const label=w.displayWord??w.word.split(' · ')[0]
+ return w.type==='Name'?label.replace(/^\p{L}/u,letter=>letter.toLocaleUpperCase('mi')):label
+}
