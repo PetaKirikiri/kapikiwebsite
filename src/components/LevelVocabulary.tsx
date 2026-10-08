@@ -61,7 +61,7 @@ export default function LevelVocabulary({ level, catalog, sentences }: { level: 
   useEffect(() => {
     const controller = new AbortController()
     setFailed(null)
-    void fetchVocabularyPos([...new Set(words.map(word => word.key!))], controller.signal).then(result => {
+    void fetchVocabularyPos([...new Set(words.flatMap(word => word.key ? [word.key] : []))], controller.signal).then(result => {
       if (!controller.signal.aborted) setMetadata({ level, words: result })
     }).catch(() => { if (!controller.signal.aborted) setFailed(level) })
     return () => controller.abort()
