@@ -32,13 +32,14 @@ begin
   if not found then return null; end if;
   if not exists (select 1 from auth.users where id=invitation.user_id and lower(btrim(email))=invitation.email) then return null; end if;
   select * into registration from public.kp_course_interest
-    where id = any(invitation.interest_ids) and lower(btrim(email)) = invitation.email
+    where id = any(invitation.interest_ids) and lower(btrim(email)) = invitation.email and removed_at is null
     order by created_at desc, id desc limit 1;
   if not found then return null; end if;
   select array_agg(distinct selected_level order by selected_level) into levels from public.kp_course_interest
-    where id = any(invitation.interest_ids) and lower(btrim(email)) = invitation.email;
+    where id = any(invitation.interest_ids) and lower(btrim(email)) = invitation.email and removed_at is null;
   select department_group into department from public.kp_course_interest
     where id = any(invitation.interest_ids) and lower(btrim(email)) = invitation.email
+      and removed_at is null
       and nullif(btrim(department_group), '') is not null order by created_at desc, id desc limit 1;
   return jsonb_build_object('userId',invitation.user_id, 'tokenType',invitation.token_type,
     'name',registration.name, 'email',invitation.email, 'selectedLevel',registration.selected_level,
@@ -67,11 +68,12 @@ begin
   end if;
   select * into registration from public.kp_course_interest
     where id = any(invitation.interest_ids) and lower(btrim(email)) = invitation.email and selected_level=chosen_level
+      and removed_at is null
     order by created_at desc, id desc limit 1;
   if not found then raise exception 'Please choose one of your registered levels.'; end if;
 
   update public.kp_course_interest i set name=btrim(student_name), department_group=btrim(kp_complete_account_invitation.department_group)
-    where i.id=any(invitation.interest_ids) and lower(btrim(i.email))=invitation.email;
+    where i.id=any(invitation.interest_ids) and lower(btrim(i.email))=invitation.email and i.removed_at is null;
   insert into public.kp_profiles(user_id,name,selected_level)
     values(invitation.user_id,btrim(student_name),chosen_level)
     on conflict(user_id) do update set name=excluded.name,selected_level=excluded.selected_level,updated_at=now();
@@ -95,7 +97,7 @@ language sql stable security definer set search_path = '' as $$
   )
   select i.id,i.selected_level,i.created_at from public.kp_course_interest i
     join auth.users u on u.id=auth.uid()
-  where u.email_confirmed_at is not null and lower(btrim(i.email))=lower(btrim(u.email))
+  where u.email_confirmed_at is not null and lower(btrim(i.email))=lower(btrim(u.email)) and i.removed_at is null
     and not exists(select 1 from confirmed c where i.id=any(c.interest_ids) and i.id<>c.selected_interest_id)
   order by i.created_at desc;
 $$;
