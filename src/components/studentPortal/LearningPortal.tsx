@@ -4,8 +4,8 @@ import ClayIcon from '../livingWorld/ClayIcon'
 import LessonResourceIcon from './LessonResourceIcon'
 import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
-import type { User } from '@supabase/supabase-js'
 import { studentClient } from '../../lib/studentPortal/client'
+import { useVerifiedStudentUser } from '../../lib/studentPortal/useVerifiedStudentUser'
 import LearningSignIn from './LearningSignIn'
 import PasswordSetup, { needsPasswordSetup } from './PasswordSetup'
 import { loadLearning, meetingLink } from '../../lib/studentPortal/learning'
@@ -86,20 +86,12 @@ export default function LearningPortal({ renderContent }: LearningContent) {
   if (import.meta.env.DEV) return <main className="learning-portal"><LearningDashboard renderContent={renderContent} data={{ records: [], training: [], interests: [], assessments: [], lessons: [] }} /></main>
   return <AuthenticatedLearningPortal renderContent={renderContent} />
 }
-function AuthenticatedLearningPortal({ renderContent }: LearningContent) {
-  const [user, setUser] = useState<User | null>(null)
-  const [checking, setChecking] = useState(true)
+export function AuthenticatedLearningPortal({ renderContent }: LearningContent) {
   const [data, setData] = useState<LearningData | null>(null)
   const [error, setError] = useState('')
   const [profile, setProfile] = useState(false)
   const [revision, setRevision] = useState(0)
-  useEffect(() => {
-    if (!studentClient) { setChecking(false); return }
-    let active = true
-    void studentClient.auth.getSession().then(({ data, error }) => { if (active) { setUser(data.session?.user ?? null); setChecking(false); if (error) setError(error.message) } })
-    const { data: listener } = studentClient.auth.onAuthStateChange((_event, session) => { setUser(session?.user ?? null); setData(null); setProfile(false); setError(''); setChecking(false) })
-    return () => { active = false; listener.subscription.unsubscribe() }
-  }, [])
+  const { user, setUser, checking, error: authError } = useVerifiedStudentUser(() => { setData(null); setProfile(false); setError('') })
   useEffect(() => {
     if (!user || needsPasswordSetup(user)) return
     let active = true
@@ -110,6 +102,6 @@ function AuthenticatedLearningPortal({ renderContent }: LearningContent) {
   async function signOut() { const result = await studentClient!.auth.signOut(); if (result.error) setError(result.error.message) }
   return <main className="learning-portal">
     {checking ? <p role="status">Opening your portal…</p> : !user ? <LearningSignIn /> : needsPasswordSetup(user) ? <PasswordSetup user={user} onComplete={setUser} onSignOut={() => void signOut()} /> : <>{profile ? <section className="student-portal learning-profile"><button onClick={() => setProfile(false)}>← My learning</button><StudentWorkspace user={user} level={1} departmentCode="" onSignOut={signOut} /></section> : data ? <LearningDashboard account={<details className="learning-account-menu"><summary aria-label="Account"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 22v-2a8 8 0 0 1 16 0v2"/></svg></summary><div><span>{user.email}</span><button onClick={() => setProfile(true)}>My profile</button><button onClick={() => void signOut()}>Sign out</button></div></details>} renderContent={renderContent} data={data} name={String(user.user_metadata.name ?? '').split(' ')[0]} /> : !error && <p role="status">Loading your learning record…</p>}</>}
-    {error && <p className="portal-error" role="alert">{error} {user && <button onClick={() => setRevision(value => value + 1)}>Try again</button>}</p>}
+    {(error || authError) && <p className="portal-error" role="alert">{error || authError} {user && <button onClick={() => setRevision(value => value + 1)}>Try again</button>}</p>}
   </main>
 }

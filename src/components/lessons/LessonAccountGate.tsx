@@ -1,24 +1,14 @@
 import { useEffect, useState, type ReactNode } from 'react'
-import type { User } from '@supabase/supabase-js'
 import { studentClient } from '../../lib/studentPortal/client'
+import { useVerifiedStudentUser } from '../../lib/studentPortal/useVerifiedStudentUser'
 import LearningSignIn from '../studentPortal/LearningSignIn'
 import PasswordSetup, { needsPasswordSetup } from '../studentPortal/PasswordSetup'
 
 export default function LessonAccountGate({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null)
-  const [checking, setChecking] = useState(Boolean(studentClient))
   const [profileId, setProfileId] = useState('')
   const [error, setError] = useState('')
   const [retry, setRetry] = useState(0)
-  useEffect(() => {
-    if (!studentClient) return
-    let active = true
-    void studentClient.auth.getSession().then(({ data }) => { if (active) { setUser(data.session?.user ?? null); setChecking(false) } })
-    const { data } = studentClient.auth.onAuthStateChange((_event, session) => {
-      if (active) { setUser(session?.user ?? null); setChecking(false); setError('') }
-    })
-    return () => { active = false; data.subscription.unsubscribe() }
-  }, [])
+  const { user, setUser, checking, error: authError } = useVerifiedStudentUser(() => { setProfileId(''); setError('') })
   const userId = user?.id
   useEffect(() => {
     if (!userId || !studentClient) return
@@ -32,7 +22,7 @@ export default function LessonAccountGate({ children }: { children: ReactNode })
     return () => { active = false }
   }, [userId, retry])
   if (checking) return <p role="status">Signing in…</p>
-  if (!user) return <LearningSignIn />
+  if (!user) return <><LearningSignIn />{authError && <p role="alert">{authError}</p>}</>
   if (needsPasswordSetup(user)) return <PasswordSetup user={user} onComplete={setUser} onSignOut={() => { void studentClient?.auth.signOut() }} />
   if (error) return <section className="learning-login site-card"><p role="alert">{error}</p><a href="#my-learning">My profile</a><button onClick={() => { setError(''); setProfileId(''); setRetry(n => n + 1) }}>Retry</button><button onClick={() => void studentClient?.auth.signOut()}>Sign out</button></section>
   if (profileId !== user.id) return <p role="status">Loading your profile…</p>

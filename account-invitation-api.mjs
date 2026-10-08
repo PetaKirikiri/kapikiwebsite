@@ -45,8 +45,11 @@ export function createAccountInvitationHandler({ query, generateLink, allowedOri
       if (!invitation) return json(400, { error: 'This setup link is no longer available.' })
       const claim = await query(`update public.kp_account_invitations set exchange_count=exchange_count+1,last_exchange_at=now()
         where id=$1 and (expires_at is null or expires_at>now()) and revoked_at is null and completed_at is null
-          and exchange_count<30 and (last_exchange_at is null or last_exchange_at<now()-interval '10 seconds') returning id`, [invitation.id])
-      if (!claim.rows.length) return json(429, { error: 'Please wait a moment, then try again.' })
+          and (last_exchange_at is null or last_exchange_at<now()-interval '10 seconds') returning id`, [invitation.id])
+      if (!claim.rows.length) {
+        res.setHeader('Retry-After', '10')
+        return json(429, { error: 'Please wait a moment, then try again.' })
+      }
       // This generates a credential only; it never sends an email.
       const generated = await generateLink({ type: 'magiclink', email: invitation.email })
       const data = generated.data

@@ -86,3 +86,31 @@ it('does not consume a personal link twice on a double submission', async () => 
   expect(onSave).toHaveBeenCalledTimes(1)
   await act(async () => finish())
 })
+it('does not submit mismatched passwords and preserves the entered details', async () => {
+  await render({ ...details, registeredLevels: [2] })
+  host.querySelector<HTMLInputElement>('[name=password]')!.value = 'test-only-password'
+  host.querySelector<HTMLInputElement>('[name=confirmPassword]')!.value = 'different-test-password'
+  await act(async () => host.querySelector('form')!.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true })))
+  expect(onSave).not.toHaveBeenCalled()
+  expect(host.querySelector('[role=alert]')!.textContent).toBe('Your passwords don’t match.')
+  expect(host.querySelector<HTMLInputElement>('[name=name]')!.value).toBe('Learner')
+})
+it('keeps required native validation and the recipient email locked', async () => {
+  await render({ ...details, registeredLevels: [2], departmentGroup: '' })
+  expect(host.querySelector<HTMLInputElement>('[name=email]')!.readOnly).toBe(true)
+  expect(host.querySelector<HTMLInputElement>('[name=department_group]')!.validity.valueMissing).toBe(true)
+  expect(host.querySelector<HTMLInputElement>('[name=password]')!.required).toBe(true)
+  expect(host.querySelector<HTMLInputElement>('[name=password]')!.minLength).toBe(8)
+  expect(host.querySelector('form')!.checkValidity()).toBe(false)
+})
+it('shows server errors and lets the learner retry without resetting their choice', async () => {
+  onSave.mockRejectedValueOnce(new Error('Please try again shortly.'))
+  await render()
+  await click('[type=radio][value="3"]')
+  await submit()
+  expect(host.querySelector('[role=alert]')!.textContent).toBe('Please try again shortly.')
+  expect(host.querySelector<HTMLButtonElement>('button[type=submit]')!.disabled).toBe(false)
+  await submit()
+  expect(onSave).toHaveBeenCalledTimes(2)
+  expect(onSave).toHaveBeenLastCalledWith(expect.objectContaining({ selectedLevel: 3 }))
+})

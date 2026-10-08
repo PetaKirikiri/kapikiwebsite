@@ -63,6 +63,58 @@ it('reports a partial save honestly and does not mark it complete locally',async
   await expect(saveAccountInvitation(client,token,values)).rejects.toThrow('Your password is saved, but your details could not be saved')
   expect(refreshSession).not.toHaveBeenCalled()
 })
+it('finishes a partial-save retry when Auth confirms the same password is already saved',async()=>{
+  let completionAttempts=0
+  rpc.mockImplementation(async name=>name==='kp_account_invitation_details'
+    ?{data:invitation,error:null}
+    :name==='kp_complete_account_invitation'?{data:null,error:++completionAttempts===1?{message:'Unavailable'}:null}
+    :{data:false,error:null})
+  await expect(saveAccountInvitation(client,token,values)).rejects.toThrow('Your password is saved')
+  getUser.mockResolvedValue({data:{user},error:null})
+  updateUser.mockResolvedValue({data:{user:null},error:{code:'same_password',message:'New password should be different from the old password.'}})
+  await expect(saveAccountInvitation(client,token,values)).resolves.toBeUndefined()
+  expect(completionAttempts).toBe(2)
+  expect(verifyOtp).toHaveBeenCalledTimes(1)
+  expect(refreshSession).toHaveBeenCalledTimes(1)
+})
+it('does not ignore an unclassified password failure with similar wording',async()=>{
+  updateUser.mockResolvedValue({error:new Error('same_password: unexpected provider failure')})
+  await expect(saveAccountInvitation(client,token,values)).rejects.toThrow('unexpected provider failure')
+  expect(rpc).not.toHaveBeenCalledWith('kp_complete_account_invitation',expect.anything())
+})
+it('recovers when completion committed but the response was lost',async()=>{
+  rpc.mockImplementation(async name=>name==='kp_account_invitation_details'?{data:invitation,error:null}
+    :name==='kp_complete_account_invitation'?{data:null,error:{message:'Connection lost'}}
+    :{data:true,error:null})
+  await expect(saveAccountInvitation(client,token,values)).resolves.toBeUndefined()
+  expect(updateUser).toHaveBeenCalledTimes(1)
+  expect(rpc).toHaveBeenLastCalledWith('kp_account_invitation_completed',{setup_token:token})
+  expect(refreshSession).toHaveBeenCalledTimes(1)
+})
+it('checks the saved result when the completion request throws a network error',async()=>{
+  rpc.mockImplementation(async name=>{
+    if(name==='kp_complete_account_invitation') throw new Error('Connection lost')
+    return {data:name==='kp_account_invitation_details'?invitation:true,error:null}
+  })
+  await expect(saveAccountInvitation(client,token,values)).resolves.toBeUndefined()
+  expect(refreshSession).toHaveBeenCalledTimes(1)
+})
+it('recognizes an already completed owner invitation without changing details or password again',async()=>{
+  rpc.mockImplementation(async name=>({data:name==='kp_account_invitation_completed'?true:null,error:null}))
+  await expect(saveAccountInvitation(client,token,values)).resolves.toBeUndefined()
+  expect(updateUser).not.toHaveBeenCalled();expect(verifyOtp).not.toHaveBeenCalled()
+  expect(rpc).not.toHaveBeenCalledWith('kp_complete_account_invitation',expect.anything())
+  expect(refreshSession).toHaveBeenCalledTimes(1)
+})
+it.each([{data:false,error:null},{data:null,error:{message:'Permission denied'}}])('does not accept completion without an owner-confirmed result: %o',async result=>{
+  rpc.mockImplementation(async name=>name==='kp_account_invitation_completed'?result:{data:null,error:null})
+  await expect(saveAccountInvitation(client,token,values)).rejects.toThrow(INVALID_SETUP_LINK)
+  expect(updateUser).not.toHaveBeenCalled();expect(refreshSession).not.toHaveBeenCalled()
+})
+it('keeps a confirmed save successful if refreshing the local session fails',async()=>{
+  refreshSession.mockRejectedValue(new Error('Connection lost'))
+  await expect(saveAccountInvitation(client,token,values)).resolves.toBeUndefined()
+})
 it('exchanges a long-lived invitation only when submitting, using the server-bound token',async()=>{
   rpc.mockImplementation(async name=>({data:name==='kp_account_invitation_details'?{...invitation,tokenType:'setup'}:null,error:null}))
   const exchange=vi.fn().mockResolvedValue({tokenHash:'fresh-provider-token',type:'magiclink'})

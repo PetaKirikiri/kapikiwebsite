@@ -37,6 +37,7 @@ it.each([
 ])('does not return a credential when invitation validation fails: %o', async (options, status) => {
   const f = await fixture(options); const response = await f.request({ token })
   expect(response.status).toBe(status); expect(await response.text()).not.toContain('short-lived-token')
+  if (options.claim === false) expect(response.headers.get('retry-after')).toBe('10')
   if (options.valid === false || options.claim === false) expect(f.generateLink).not.toHaveBeenCalled()
 })
 it('rejects GET, cross-site requests and oversized bodies before querying', async () => {

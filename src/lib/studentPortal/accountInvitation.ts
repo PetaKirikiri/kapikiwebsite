@@ -19,9 +19,29 @@ export async function exchangeAccountInvitation(token: string, endpoint = '/api/
   return data
 }
 
+async function invitationIsComplete(client: SupabaseClient, token: string): Promise<boolean> {
+  if (!/^[a-zA-Z0-9_-]{32,256}$/.test(token)) return false
+  try {
+    const result = await client.rpc('kp_account_invitation_completed', { setup_token: token })
+    return !result.error && result.data === true
+  } catch { return false }
+}
+
+async function refreshSavedAccount(client: SupabaseClient) {
+  // Completion has already been confirmed by the server. A refresh failure must
+  // not misreport the saved password/details as a failed submission.
+  try { await client.auth.refreshSession() } catch { /* The next sign-in refreshes the profile. */ }
+}
+
 export async function saveAccountInvitation(client: SupabaseClient, token: string, values: AccountSetupDetails & { password: string }, exchange = exchangeAccountInvitation) {
   // Refresh the server-owned identity/choices immediately before any Auth change.
-  const invitation = await loadAccountInvitation(client, token)
+  let invitation: AccountInvitation
+  try { invitation = await loadAccountInvitation(client, token) }
+  catch (error) {
+    if (!await invitationIsComplete(client, token)) throw error
+    await refreshSavedAccount(client)
+    return
+  }
   if (!invitation.registeredLevels?.includes(values.selectedLevel)) throw new Error('Please choose one of your registered levels.')
   if (!values.name.trim() || !values.departmentGroup.trim() || values.name.trim().length > 160 || values.departmentGroup.trim().length > 160) throw new Error('Please complete your name and department / group.')
   if (values.password.length < 8) throw new Error('Use at least 8 characters for your password.')
@@ -35,11 +55,13 @@ export async function saveAccountInvitation(client: SupabaseClient, token: strin
   }
   // Only Supabase Auth receives the password, never an application record/RPC.
   const updated = await client.auth.updateUser({ password: values.password })
-  if (updated.error) throw updated.error
+  // A retry can follow a successful password save and a failed details request.
+  // Auth's explicit same_password response confirms this password is already set.
+  if (updated.error && updated.error.code !== 'same_password') throw updated.error
   const saved = await client.rpc('kp_complete_account_invitation', {
     setup_token: token, student_name: values.name.trim(), department_group: values.departmentGroup.trim(), chosen_level: values.selectedLevel,
-  })
-  if (saved.error) throw new Error('Your password is saved, but your details could not be saved. Please try again.')
+  }).then(result => !result.error, () => false)
+  if (!saved && !await invitationIsComplete(client, token)) throw new Error('Your password is saved, but your details could not be saved. Please try again.')
   // Refresh the cached user after the database marks onboarding complete.
-  await client.auth.refreshSession()
+  await refreshSavedAccount(client)
 }
