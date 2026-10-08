@@ -18,10 +18,21 @@ import './StudentPortal.css'
 import './LearningPortal.css'
 import './PortalHome.css'
 import './PortalIdentity.css'
+import './CourseUpdateNotice.css'
 import { moeLessonSchedule } from '../../lib/moeOffer'
 
 type LearningContent = { renderContent?: (level: CurriculumLevel, tab: 'practice' | 'vocabulary' | 'structures' | 'stories') => ReactNode }
-export function LearningDashboard({ data, renderContent, account }: { data: LearningData; name?: string; account?: ReactNode } & LearningContent) {
+export function LearningDashboard({ account }: { data: LearningData; name?: string; account?: ReactNode } & LearningContent) {
+  return <section className="course-update-notice" aria-labelledby="course-update-heading">
+    <header><h1 id="course-update-heading">My learning</h1>{account}</header>
+    <div className="course-update-message">
+      <h2>Course content is being updated</h2>
+      <p>You’ll be emailed once your course is accessible.</p>
+    </div>
+  </section>
+}
+
+export function AvailableLearningDashboard({ data, renderContent, account }: { data: LearningData; name?: string; account?: ReactNode } & LearningContent) {
   const react = useCompanionReaction()
   const [section, setSection] = useState<'lessons' | 'practice' | 'vocabulary' | 'structures'>('lessons')
   const [openNotes, setOpenNotes] = useState<number | null>(null)
