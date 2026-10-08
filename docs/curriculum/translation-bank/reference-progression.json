@@ -30,16 +30,16 @@
       "lesson": 4,
       "title": "Pepeha language",
       "forms": [
-        "ngā"
+        "te"
       ],
       "pairs": []
     },
     {
       "level": 1,
-      "lesson": 5,
+      "lesson": 6,
       "title": "Pepeha language",
       "forms": [
-        "te"
+        "ngā"
       ],
       "pairs": []
     },
@@ -61,6 +61,15 @@
       "forms": [
         "he",
         "āku"
+      ],
+      "pairs": []
+    },
+    {
+      "level": 1,
+      "lesson": 10,
+      "title": "Who",
+      "forms": [
+        "wai"
       ],
       "pairs": []
     },
@@ -93,12 +102,12 @@
       ],
       "pairs": [
         {
-          "mi": "Kei te kura tēnā kurī.",
-          "en": "That dog near you is at the school."
+          "mi": "Kei te kura tēnā tamaiti.",
+          "en": "That child near you is at the school."
         },
         {
-          "mi": "Kei te kura ēnā kurī.",
-          "en": "Those dogs near you are at the school."
+          "mi": "Kei te kura ēnā tamariki.",
+          "en": "Those children near you are at the school."
         }
       ]
     },
@@ -118,6 +127,35 @@
         {
           "mi": "Kei te kura māua.",
           "en": "We two (not you) are at the school."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "lesson": 4,
+      "title": "Neutral possessives",
+      "forms": [
+        "taku",
+        "aku",
+        "tana",
+        "ana"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae taku whare.",
+          "en": "My house is at the marae."
+        },
+        {
+          "mi": "Kei te marae aku whare.",
+          "en": "My houses are at the marae."
+        },
+        {
+          "mi": "Kei te marae tana whare.",
+          "en": "Her house is at the marae."
+        },
+        {
+          "mi": "Kei te marae ana whare.",
+          "en": "Her houses are at the marae."
         }
       ]
     },
@@ -251,7 +289,7 @@
     },
     {
       "level": 3,
-      "lesson": 1,
+      "lesson": 5,
       "title": "A/O possessive determiners",
       "forms": [
         "tāku",
@@ -265,44 +303,6 @@
         {
           "mi": "Kei te marae tōku whare.",
           "en": "My house is at the marae."
-        }
-      ]
-    },
-    {
-      "level": 3,
-      "lesson": 2,
-      "title": "A/O possessive determiners",
-      "forms": [
-        "tāu",
-        "tōu"
-      ],
-      "pairs": [
-        {
-          "mi": "Kei te marae tāu kurī.",
-          "en": "Your dog is at the marae."
-        },
-        {
-          "mi": "Kei te marae tōu whare.",
-          "en": "Your house is at the marae."
-        }
-      ]
-    },
-    {
-      "level": 3,
-      "lesson": 3,
-      "title": "A/O possessive determiners",
-      "forms": [
-        "tāna",
-        "tōna"
-      ],
-      "pairs": [
-        {
-          "mi": "Kei te marae tāna kurī.",
-          "en": "Her dog is at the marae."
-        },
-        {
-          "mi": "Kei te marae tōna whare.",
-          "en": "Her house is at the marae."
         }
       ]
     },
@@ -330,6 +330,25 @@
       "lesson": 6,
       "title": "A/O possessive determiners",
       "forms": [
+        "tāu",
+        "tōu"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tāu kurī.",
+          "en": "Your dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tōu whare.",
+          "en": "Your house is at the marae."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "lesson": 6,
+      "title": "A/O possessive determiners",
+      "forms": [
         "āu",
         "ōu"
       ],
@@ -341,6 +360,25 @@
         {
           "mi": "Kei te marae ōu whare.",
           "en": "Your houses are at the marae."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "lesson": 7,
+      "title": "A/O possessive determiners",
+      "forms": [
+        "tāna",
+        "tōna"
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te marae tāna kurī.",
+          "en": "Her dog is at the marae."
+        },
+        {
+          "mi": "Kei te marae tōna whare.",
+          "en": "Her house is at the marae."
         }
       ]
     },
@@ -384,7 +422,7 @@
     },
     {
       "level": 4,
-      "lesson": 1,
+      "lesson": 5,
       "title": "Shared possession",
       "forms": [
         "tā tāua",
@@ -400,7 +438,18 @@
         {
           "mi": "Kei te marae tō tāua whare.",
           "en": "Our (you and me) house is at the marae."
-        },
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 5,
+      "title": "Shared possession",
+      "forms": [
+        "ā tāua",
+        "ō tāua"
+      ],
+      "pairs": [
         {
           "mi": "Kei te marae ā tāua kurī.",
           "en": "Our (you and me) dogs are at the marae."
@@ -413,7 +462,7 @@
     },
     {
       "level": 4,
-      "lesson": 2,
+      "lesson": 5,
       "title": "Shared possession",
       "forms": [
         "tā māua",
@@ -429,7 +478,18 @@
         {
           "mi": "Kei te marae tō māua whare.",
           "en": "Our (two people, not you) house is at the marae."
-        },
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 6,
+      "title": "Shared possession",
+      "forms": [
+        "ā māua",
+        "ō māua"
+      ],
+      "pairs": [
         {
           "mi": "Kei te marae ā māua kurī.",
           "en": "Our (two people, not you) dogs are at the marae."
@@ -442,7 +502,7 @@
     },
     {
       "level": 4,
-      "lesson": 3,
+      "lesson": 6,
       "title": "Shared possession",
       "forms": [
         "tā kōrua",
@@ -458,7 +518,18 @@
         {
           "mi": "Kei te marae tō kōrua whare.",
           "en": "Your (two people) house is at the marae."
-        },
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 6,
+      "title": "Shared possession",
+      "forms": [
+        "ā kōrua",
+        "ō kōrua"
+      ],
+      "pairs": [
         {
           "mi": "Kei te marae ā kōrua kurī.",
           "en": "Your (two people) dogs are at the marae."
@@ -471,7 +542,7 @@
     },
     {
       "level": 4,
-      "lesson": 4,
+      "lesson": 7,
       "title": "Shared possession",
       "forms": [
         "tā rāua",
@@ -487,7 +558,18 @@
         {
           "mi": "Kei te marae tō rāua whare.",
           "en": "Their (two people) house is at the marae."
-        },
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 7,
+      "title": "Shared possession",
+      "forms": [
+        "ā rāua",
+        "ō rāua"
+      ],
+      "pairs": [
         {
           "mi": "Kei te marae ā rāua kurī.",
           "en": "Their (two people) dogs are at the marae."
@@ -500,7 +582,7 @@
     },
     {
       "level": 4,
-      "lesson": 5,
+      "lesson": 7,
       "title": "Shared possession",
       "forms": [
         "tā tātou",
@@ -516,7 +598,18 @@
         {
           "mi": "Kei te marae tō tātou whare.",
           "en": "Our (three or more, including you) house is at the marae."
-        },
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 8,
+      "title": "Shared possession",
+      "forms": [
+        "ā tātou",
+        "ō tātou"
+      ],
+      "pairs": [
         {
           "mi": "Kei te marae ā tātou kurī.",
           "en": "Our (three or more, including you) dogs are at the marae."
@@ -529,7 +622,7 @@
     },
     {
       "level": 4,
-      "lesson": 6,
+      "lesson": 8,
       "title": "Shared possession",
       "forms": [
         "tā mātou",
@@ -545,7 +638,18 @@
         {
           "mi": "Kei te marae tō mātou whare.",
           "en": "Our (three or more, not you) house is at the marae."
-        },
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 8,
+      "title": "Shared possession",
+      "forms": [
+        "ā mātou",
+        "ō mātou"
+      ],
+      "pairs": [
         {
           "mi": "Kei te marae ā mātou kurī.",
           "en": "Our (three or more, not you) dogs are at the marae."
@@ -558,7 +662,7 @@
     },
     {
       "level": 4,
-      "lesson": 7,
+      "lesson": 8,
       "title": "Shared possession",
       "forms": [
         "tā koutou",
@@ -574,7 +678,18 @@
         {
           "mi": "Kei te marae tō koutou whare.",
           "en": "Your (three or more) house is at the marae."
-        },
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 9,
+      "title": "Shared possession",
+      "forms": [
+        "ā koutou",
+        "ō koutou"
+      ],
+      "pairs": [
         {
           "mi": "Kei te marae ā koutou kurī.",
           "en": "Your (three or more) dogs are at the marae."
@@ -587,7 +702,7 @@
     },
     {
       "level": 4,
-      "lesson": 8,
+      "lesson": 9,
       "title": "Shared possession",
       "forms": [
         "tā rātou",
@@ -603,7 +718,18 @@
         {
           "mi": "Kei te marae tō rātou whare.",
           "en": "Their (three or more) house is at the marae."
-        },
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 9,
+      "title": "Shared possession",
+      "forms": [
+        "ā rātou",
+        "ō rātou"
+      ],
+      "pairs": [
         {
           "mi": "Kei te marae ā rātou kurī.",
           "en": "Their (three or more) dogs are at the marae."
@@ -613,44 +739,6 @@
           "en": "Their (three or more) houses are at the marae."
         }
       ]
-    },
-    {
-      "level": 2,
-      "lesson": 4,
-      "title": "Neutral possessives",
-      "forms": [
-        "taku",
-        "aku",
-        "tana",
-        "ana"
-      ],
-      "pairs": [
-        {
-          "mi": "Kei te marae taku whare.",
-          "en": "My house is at the marae."
-        },
-        {
-          "mi": "Kei te marae aku whare.",
-          "en": "My houses are at the marae."
-        },
-        {
-          "mi": "Kei te marae tana whare.",
-          "en": "Her house is at the marae."
-        },
-        {
-          "mi": "Kei te marae ana whare.",
-          "en": "Her houses are at the marae."
-        }
-      ]
-    },
-    {
-      "level": 1,
-      "lesson": 10,
-      "title": "Who",
-      "forms": [
-        "wai"
-      ],
-      "pairs": []
     }
   ]
 }

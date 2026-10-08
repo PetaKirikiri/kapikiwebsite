@@ -1,0 +1,598 @@
+[
+  {
+    "level": 3,
+    "title": "Meet negatives and instructions",
+    "options": [
+      "Ehara … i te …",
+      "Kāore … i",
+      "Kāore … i te",
+      "Kāore … e",
+      "Kāore anō … kia",
+      "E …!",
+      "Kaua e",
+      "Kāti te",
+      "Kia"
+    ],
+    "questions": [
+      {
+        "en": "Mere is not a woman.",
+        "mi": "",
+        "answer": "Ehara … i te …",
+        "options": [
+          "Ehara … i te …",
+          "Kāore … i",
+          "Kāore … i te",
+          "Kāore … e",
+          "Kāore anō … kia",
+          "E …!",
+          "Kaua e",
+          "Kāti te",
+          "Kia"
+        ],
+        "acceptedAnswers": [
+          "Ehara … i te …"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "I did not eat.",
+        "mi": "",
+        "answer": "Kāore … i",
+        "options": [
+          "Ehara … i te …",
+          "Kāore … i",
+          "Kāore … i te",
+          "Kāore … e",
+          "Kāore anō … kia",
+          "E …!",
+          "Kaua e",
+          "Kāti te",
+          "Kia"
+        ],
+        "acceptedAnswers": [
+          "Kāore … i"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "I am not eating.",
+        "mi": "",
+        "answer": "Kāore … i te",
+        "options": [
+          "Ehara … i te …",
+          "Kāore … i",
+          "Kāore … i te",
+          "Kāore … e",
+          "Kāore anō … kia",
+          "E …!",
+          "Kaua e",
+          "Kāti te",
+          "Kia"
+        ],
+        "acceptedAnswers": [
+          "Kāore … i te"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "I will not eat.",
+        "mi": "",
+        "answer": "Kāore … e",
+        "options": [
+          "Ehara … i te …",
+          "Kāore … i",
+          "Kāore … i te",
+          "Kāore … e",
+          "Kāore anō … kia",
+          "E …!",
+          "Kaua e",
+          "Kāti te",
+          "Kia"
+        ],
+        "acceptedAnswers": [
+          "Kāore … e"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "I have not eaten yet.",
+        "mi": "",
+        "answer": "Kāore anō … kia",
+        "options": [
+          "Ehara … i te …",
+          "Kāore … i",
+          "Kāore … i te",
+          "Kāore … e",
+          "Kāore anō … kia",
+          "E …!",
+          "Kaua e",
+          "Kāti te",
+          "Kia"
+        ],
+        "acceptedAnswers": [
+          "Kāore anō … kia"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "Run!",
+        "mi": "",
+        "answer": "E …!",
+        "options": [
+          "Ehara … i te …",
+          "Kāore … i",
+          "Kāore … i te",
+          "Kāore … e",
+          "Kāore anō … kia",
+          "E …!",
+          "Kaua e",
+          "Kāti te",
+          "Kia"
+        ],
+        "acceptedAnswers": [
+          "E …!"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "Do not run!",
+        "mi": "",
+        "answer": "Kaua e",
+        "options": [
+          "Ehara … i te …",
+          "Kāore … i",
+          "Kāore … i te",
+          "Kāore … e",
+          "Kāore anō … kia",
+          "E …!",
+          "Kaua e",
+          "Kāti te",
+          "Kia"
+        ],
+        "acceptedAnswers": [
+          "Kaua e"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "Stop running!",
+        "mi": "",
+        "answer": "Kāti te",
+        "options": [
+          "Ehara … i te …",
+          "Kāore … i",
+          "Kāore … i te",
+          "Kāore … e",
+          "Kāore anō … kia",
+          "E …!",
+          "Kaua e",
+          "Kāti te",
+          "Kia"
+        ],
+        "acceptedAnswers": [
+          "Kāti te"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "Be strong!",
+        "mi": "",
+        "answer": "Kia",
+        "options": [
+          "Ehara … i te …",
+          "Kāore … i",
+          "Kāore … i te",
+          "Kāore … e",
+          "Kāore anō … kia",
+          "E …!",
+          "Kaua e",
+          "Kāti te",
+          "Kia"
+        ],
+        "acceptedAnswers": [
+          "Kia"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "title": "Meet ownership and emphasis",
+    "options": [
+      "Nā / Nō",
+      "Mā / Mō",
+      "Nā … i",
+      "Ehara nā / nō",
+      "Mā … e",
+      "Ehara mā / mō"
+    ],
+    "questions": [
+      {
+        "en": "The food belongs to me.",
+        "mi": "",
+        "answer": "Nā / Nō",
+        "options": [
+          "Nā / Nō",
+          "Mā / Mō",
+          "Nā … i",
+          "Ehara nā / nō",
+          "Mā … e",
+          "Ehara mā / mō"
+        ],
+        "acceptedAnswers": [
+          "Nā / Nō"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "The house belongs to me.",
+        "mi": "",
+        "answer": "Nā / Nō",
+        "options": [
+          "Nā / Nō",
+          "Mā / Mō",
+          "Nā … i",
+          "Ehara nā / nō",
+          "Mā … e",
+          "Ehara mā / mō"
+        ],
+        "acceptedAnswers": [
+          "Nā / Nō"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "The food is for you.",
+        "mi": "",
+        "answer": "Mā / Mō",
+        "options": [
+          "Nā / Nō",
+          "Mā / Mō",
+          "Nā … i",
+          "Ehara nā / nō",
+          "Mā … e",
+          "Ehara mā / mō"
+        ],
+        "acceptedAnswers": [
+          "Mā / Mō"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "The house is for you.",
+        "mi": "",
+        "answer": "Mā / Mō",
+        "options": [
+          "Nā / Nō",
+          "Mā / Mō",
+          "Nā … i",
+          "Ehara nā / nō",
+          "Mā … e",
+          "Ehara mā / mō"
+        ],
+        "acceptedAnswers": [
+          "Mā / Mō"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "It was I who ate the food.",
+        "mi": "",
+        "answer": "Nā … i",
+        "options": [
+          "Nā / Nō",
+          "Mā / Mō",
+          "Nā … i",
+          "Ehara nā / nō",
+          "Mā … e",
+          "Ehara mā / mō"
+        ],
+        "acceptedAnswers": [
+          "Nā … i"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "The food does not belong to me.",
+        "mi": "",
+        "answer": "Ehara nā / nō",
+        "options": [
+          "Nā / Nō",
+          "Mā / Mō",
+          "Nā … i",
+          "Ehara nā / nō",
+          "Mā … e",
+          "Ehara mā / mō"
+        ],
+        "acceptedAnswers": [
+          "Ehara nā / nō"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "It will be I who will eat the food.",
+        "mi": "",
+        "answer": "Mā … e",
+        "options": [
+          "Nā / Nō",
+          "Mā / Mō",
+          "Nā … i",
+          "Ehara nā / nō",
+          "Mā … e",
+          "Ehara mā / mō"
+        ],
+        "acceptedAnswers": [
+          "Mā … e"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "The food is not for me.",
+        "mi": "",
+        "answer": "Ehara mā / mō",
+        "options": [
+          "Nā / Nō",
+          "Mā / Mō",
+          "Nā … i",
+          "Ehara nā / nō",
+          "Mā … e",
+          "Ehara mā / mō"
+        ],
+        "acceptedAnswers": [
+          "Ehara mā / mō"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      }
+    ]
+  },
+  {
+    "level": 5,
+    "title": "Meet comparisons, habits, ability and passives",
+    "options": [
+      "He … ake … i",
+      "… ai",
+      "Ka taea / Kāore e taea",
+      "Passive: … e …"
+    ],
+    "questions": [
+      {
+        "en": "The school is bigger than the house.",
+        "mi": "",
+        "answer": "He … ake … i",
+        "options": [
+          "He … ake … i",
+          "… ai",
+          "Ka taea / Kāore e taea",
+          "Passive: … e …"
+        ],
+        "acceptedAnswers": [
+          "He … ake … i"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "I eat every day.",
+        "mi": "",
+        "answer": "… ai",
+        "options": [
+          "He … ake … i",
+          "… ai",
+          "Ka taea / Kāore e taea",
+          "Passive: … e …"
+        ],
+        "acceptedAnswers": [
+          "… ai"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "I can run.",
+        "mi": "",
+        "answer": "Ka taea / Kāore e taea",
+        "options": [
+          "He … ake … i",
+          "… ai",
+          "Ka taea / Kāore e taea",
+          "Passive: … e …"
+        ],
+        "acceptedAnswers": [
+          "Ka taea / Kāore e taea"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "I cannot run.",
+        "mi": "",
+        "answer": "Ka taea / Kāore e taea",
+        "options": [
+          "He … ake … i",
+          "… ai",
+          "Ka taea / Kāore e taea",
+          "Passive: … e …"
+        ],
+        "acceptedAnswers": [
+          "Ka taea / Kāore e taea"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "The food was eaten by Mere.",
+        "mi": "",
+        "answer": "Passive: … e …",
+        "options": [
+          "He … ake … i",
+          "… ai",
+          "Ka taea / Kāore e taea",
+          "Passive: … e …"
+        ],
+        "acceptedAnswers": [
+          "Passive: … e …"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "The food has been eaten by Mere.",
+        "mi": "",
+        "answer": "Passive: … e …",
+        "options": [
+          "He … ake … i",
+          "… ai",
+          "Ka taea / Kāore e taea",
+          "Passive: … e …"
+        ],
+        "acceptedAnswers": [
+          "Passive: … e …"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "The food will be eaten by Mere.",
+        "mi": "",
+        "answer": "Passive: … e …",
+        "options": [
+          "He … ake … i",
+          "… ai",
+          "Ka taea / Kāore e taea",
+          "Passive: … e …"
+        ],
+        "acceptedAnswers": [
+          "Passive: … e …"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      }
+    ]
+  },
+  {
+    "level": 6,
+    "title": "Meet questions and conditions",
+    "options": [
+      "He aha … ai",
+      "Nōnahea",
+      "Āhea",
+      "Ki te / Mēnā / Mehemea"
+    ],
+    "questions": [
+      {
+        "en": "Why did you eat?",
+        "mi": "",
+        "answer": "He aha … ai",
+        "options": [
+          "He aha … ai",
+          "Nōnahea",
+          "Āhea",
+          "Ki te / Mēnā / Mehemea"
+        ],
+        "acceptedAnswers": [
+          "He aha … ai"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "Why do you eat every day?",
+        "mi": "",
+        "answer": "He aha … ai",
+        "options": [
+          "He aha … ai",
+          "Nōnahea",
+          "Āhea",
+          "Ki te / Mēnā / Mehemea"
+        ],
+        "acceptedAnswers": [
+          "He aha … ai"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "When did you eat?",
+        "mi": "",
+        "answer": "Nōnahea",
+        "options": [
+          "He aha … ai",
+          "Nōnahea",
+          "Āhea",
+          "Ki te / Mēnā / Mehemea"
+        ],
+        "acceptedAnswers": [
+          "Nōnahea"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "When will you eat?",
+        "mi": "",
+        "answer": "Āhea",
+        "options": [
+          "He aha … ai",
+          "Nōnahea",
+          "Āhea",
+          "Ki te / Mēnā / Mehemea"
+        ],
+        "acceptedAnswers": [
+          "Āhea"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "If you run, I will run.",
+        "mi": "",
+        "answer": "Ki te / Mēnā / Mehemea",
+        "options": [
+          "He aha … ai",
+          "Nōnahea",
+          "Āhea",
+          "Ki te / Mēnā / Mehemea"
+        ],
+        "acceptedAnswers": [
+          "Ki te / Mēnā / Mehemea"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      },
+      {
+        "en": "Why did you not eat?",
+        "mi": "",
+        "answer": "He aha … ai",
+        "options": [
+          "He aha … ai",
+          "Nōnahea",
+          "Āhea",
+          "Ki te / Mēnā / Mehemea"
+        ],
+        "acceptedAnswers": [
+          "He aha … ai"
+        ],
+        "choiceLabel": "Choose the sentence pattern",
+        "context": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,1581 @@
+{
+  "scope": "Editorial course vocabulary only; never automatic tagging evidence",
+  "words": {
+    "whanaunga": {
+      "type": "Noun"
+    },
+    "tamariki": {
+      "type": "Noun"
+    },
+    "tangata": {
+      "type": "Noun"
+    },
+    "pāpā": {
+      "type": "Noun"
+    },
+    "whānau": {
+      "type": "Noun"
+    },
+    "ingoa": {
+      "type": "Noun"
+    },
+    "tāngata": {
+      "type": "Noun"
+    },
+    "tama": {
+      "type": "Noun"
+    },
+    "matua": {
+      "type": "Noun"
+    },
+    "kuia": {
+      "type": "Noun"
+    },
+    "whaea": {
+      "type": "Noun"
+    },
+    "mātua": {
+      "type": "Noun"
+    },
+    "koroua": {
+      "type": "Noun"
+    },
+    "tamaiti": {
+      "type": "Noun"
+    },
+    "mokopuna": {
+      "type": "Noun"
+    },
+    "tuakana": {
+      "type": "Noun"
+    },
+    "tūpuna": {
+      "type": "Noun"
+    },
+    "tungāne": {
+      "type": "Noun"
+    },
+    "teina": {
+      "type": "Noun"
+    },
+    "tuahine": {
+      "type": "Noun"
+    },
+    "whakapapa": {
+      "type": "Noun"
+    },
+    "tamāhine": {
+      "type": "Noun"
+    },
+    "tuākana": {
+      "type": "Noun"
+    },
+    "whare": {
+      "type": "Noun"
+    },
+    "kura": {
+      "type": "Noun"
+    },
+    "wāhi": {
+      "type": "Noun"
+    },
+    "waka": {
+      "type": "Noun"
+    },
+    "iwi": {
+      "type": "Noun"
+    },
+    "whenua": {
+      "type": "Noun"
+    },
+    "kāinga": {
+      "type": "Noun"
+    },
+    "moana": {
+      "type": "Noun"
+    },
+    "awa": {
+      "type": "Noun"
+    },
+    "maunga": {
+      "type": "Noun"
+    },
+    "marae": {
+      "type": "Noun"
+    },
+    "rohe": {
+      "type": "Noun"
+    },
+    "hapū": {
+      "type": "Noun"
+    },
+    "tari": {
+      "type": "Noun"
+    },
+    "ngahere": {
+      "type": "Noun"
+    },
+    "rākau": {
+      "type": "Noun"
+    },
+    "pepa": {
+      "type": "Noun"
+    },
+    "kākano": {
+      "type": "Noun"
+    },
+    "ākonga": {
+      "type": "Noun"
+    },
+    "kaiako": {
+      "type": "Noun"
+    },
+    "kaimahi": {
+      "type": "Noun"
+    },
+    "ika": {
+      "type": "Noun"
+    },
+    "miraka": {
+      "type": "Noun"
+    },
+    "hēki": {
+      "type": "Noun"
+    },
+    "parāoa": {
+      "type": "Noun"
+    },
+    "tina": {
+      "type": "Noun"
+    },
+    "heihei": {
+      "type": "Noun"
+    },
+    "mīti": {
+      "type": "Noun"
+    },
+    "parakuihi": {
+      "type": "Noun"
+    },
+    "āporo": {
+      "type": "Noun"
+    },
+    "kūmara": {
+      "type": "Noun"
+    },
+    "huawhenua": {
+      "type": "Noun"
+    },
+    "kaihapa": {
+      "type": "Noun"
+    },
+    "kawhe": {
+      "type": "Noun"
+    },
+    "raihi": {
+      "type": "Noun"
+    },
+    "wai": {
+      "type": "Grammar word",
+      "english": "who (in questions)"
+    },
+    "pō": {
+      "type": "Noun"
+    },
+    "marama": {
+      "type": "Noun"
+    },
+    "ata": {
+      "type": "Noun"
+    },
+    "wiki": {
+      "type": "Noun"
+    },
+    "ahiahi": {
+      "type": "Noun"
+    },
+    "tau": {
+      "type": "Noun"
+    },
+    "raruraru": {
+      "type": "Noun"
+    },
+    "ringa": {
+      "type": "Noun"
+    },
+    "kākahu": {
+      "type": "Noun"
+    },
+    "pouaka": {
+      "type": "Noun"
+    },
+    "waewae": {
+      "type": "Noun"
+    },
+    "waea": {
+      "type": "Noun"
+    },
+    "kanohi": {
+      "type": "Noun"
+    },
+    "hū": {
+      "type": "Noun"
+    },
+    "upoko": {
+      "type": "Noun"
+    },
+    "waha": {
+      "type": "Noun"
+    },
+    "karu": {
+      "type": "Noun"
+    },
+    "taputapu": {
+      "type": "Noun"
+    },
+    "pēke": {
+      "type": "Noun"
+    },
+    "pōtae": {
+      "type": "Noun"
+    },
+    "taringa": {
+      "type": "Noun"
+    },
+    "rorohiko": {
+      "type": "Noun"
+    },
+    "tēpu": {
+      "type": "Noun"
+    },
+    "tūru": {
+      "type": "Noun"
+    },
+    "ipu": {
+      "type": "Noun"
+    },
+    "kūaha": {
+      "type": "Noun"
+    },
+    "maripi": {
+      "type": "Noun"
+    },
+    "pereti": {
+      "type": "Noun"
+    },
+    "kaupapa": {
+      "type": "Noun"
+    },
+    "rangatira": {
+      "type": "Noun"
+    },
+    "rōpū": {
+      "type": "Noun"
+    },
+    "mana": {
+      "type": "Noun"
+    },
+    "hui": {
+      "type": "Noun"
+    },
+    "moni": {
+      "type": "Noun"
+    },
+    "kaitiaki": {
+      "type": "Noun"
+    },
+    "ture": {
+      "type": "Noun"
+    },
+    "mahere": {
+      "type": "Noun"
+    },
+    "whāinga": {
+      "type": "Noun"
+    },
+    "kawenga": {
+      "type": "Noun"
+    },
+    "pūtea": {
+      "type": "Noun"
+    },
+    "ratonga": {
+      "type": "Noun"
+    },
+    "taonga": {
+      "type": "Noun"
+    },
+    "pukapuka": {
+      "type": "Noun"
+    },
+    "motokā": {
+      "type": "Noun"
+    },
+    "mīhini": {
+      "type": "Noun"
+    },
+    "kēmu": {
+      "type": "Noun"
+    },
+    "māra": {
+      "type": "Noun"
+    },
+    "pahi": {
+      "type": "Noun"
+    },
+    "rongoā": {
+      "type": "Noun"
+    },
+    "pahikara": {
+      "type": "Noun"
+    },
+    "pūkenga": {
+      "type": "Noun"
+    },
+    "whakamātautau": {
+      "type": "Noun"
+    },
+    "take": {
+      "type": "Noun"
+    },
+    "pūtake": {
+      "type": "Noun"
+    },
+    "mōhiotanga": {
+      "type": "Noun"
+    },
+    "tikanga": {
+      "type": "Noun"
+    },
+    "āhuatanga": {
+      "type": "Noun"
+    },
+    "mātauranga": {
+      "type": "Noun"
+    },
+    "oranga": {
+      "type": "Noun"
+    },
+    "hangarau": {
+      "type": "Noun"
+    },
+    "kāwanatanga": {
+      "type": "Noun"
+    },
+    "hauora": {
+      "type": "Noun"
+    },
+    "pūrākau": {
+      "type": "Noun"
+    },
+    "pakiwaitara": {
+      "type": "Noun"
+    },
+    "hapori": {
+      "type": "Noun"
+    },
+    "hītori": {
+      "type": "Noun"
+    },
+    "taiao": {
+      "type": "Noun"
+    },
+    "whanaketanga": {
+      "type": "Noun"
+    },
+    "tāne": {
+      "type": "Noun"
+    },
+    "wahine": {
+      "type": "Noun"
+    },
+    "kōtiro": {
+      "type": "Noun"
+    },
+    "kurī": {
+      "type": "Noun"
+    },
+    "ngeru": {
+      "type": "Noun"
+    },
+    "manu": {
+      "type": "Noun"
+    },
+    "haere": {
+      "type": "Intransitive verb"
+    },
+    "hoki": {
+      "type": "Intransitive verb"
+    },
+    "mahi": {
+      "type": "Noun",
+      "english": "work; job",
+      "courseUse": "The existing exercise sentences teach work as a noun, e.g. te mahi."
+    },
+    "kōrero": {
+      "type": "Intransitive verb",
+      "english": "speak; talk",
+      "courseUse": "Selected course use is speak/talk, not tell a story with a direct object."
+    },
+    "noho": {
+      "type": "Intransitive verb"
+    },
+    "kite": {
+      "type": "Experience verb"
+    },
+    "tū": {
+      "type": "Intransitive verb"
+    },
+    "titiro": {
+      "type": "Intransitive verb"
+    },
+    "rere": {
+      "type": "Intransitive verb"
+    },
+    "tīmata": {
+      "type": "Intransitive verb"
+    },
+    "waiata": {
+      "type": "Transitive verb",
+      "english": "sing"
+    },
+    "tākaro": {
+      "type": "Intransitive verb"
+    },
+    "hanga": {
+      "type": "Transitive verb"
+    },
+    "mutu": {
+      "type": "Stative verb",
+      "english": "be finished"
+    },
+    "moe": {
+      "type": "Intransitive verb"
+    },
+    "karanga": {
+      "type": "Intransitive verb"
+    },
+    "oma": {
+      "type": "Intransitive verb"
+    },
+    "tuhi": {
+      "type": "Transitive verb"
+    },
+    "ako": {
+      "type": "Transitive verb"
+    },
+    "kata": {
+      "type": "Intransitive verb"
+    },
+    "whakarongo": {
+      "type": "Intransitive verb"
+    },
+    "hoko": {
+      "type": "Transitive verb"
+    },
+    "hīkoi": {
+      "type": "Intransitive verb"
+    },
+    "pānui": {
+      "type": "Transitive verb"
+    },
+    "kanikani": {
+      "type": "Intransitive verb"
+    },
+    "kaukau": {
+      "type": "Intransitive verb"
+    },
+    "inu": {
+      "type": "Transitive verb"
+    },
+    "whai": {
+      "type": "Transitive verb"
+    },
+    "mōhio": {
+      "type": "Experience verb"
+    },
+    "pātai": {
+      "type": "Intransitive verb",
+      "english": "ask; enquire",
+      "courseUse": "The course construction asks someone with ki, e.g. Ka pātai ahau ki te kuia."
+    },
+    "rongo": {
+      "type": "Experience verb"
+    },
+    "hiahia": {
+      "type": "Experience verb"
+    },
+    "whakautu": {
+      "type": "Transitive verb"
+    },
+    "āwhina": {
+      "type": "Transitive verb"
+    },
+    "pīrangi": {
+      "type": "Experience verb"
+    },
+    "tuku": {
+      "type": "Transitive verb"
+    },
+    "tiaki": {
+      "type": "Transitive verb"
+    },
+    "tatari": {
+      "type": "Intransitive verb"
+    },
+    "tiki": {
+      "type": "Transitive verb"
+    },
+    "hoatu": {
+      "type": "Transitive verb"
+    },
+    "hōmai": {
+      "type": "Transitive verb"
+    },
+    "homai": {
+      "type": "Transitive verb"
+    },
+    "horoi": {
+      "type": "Transitive verb"
+    },
+    "kawe": {
+      "type": "Transitive verb"
+    },
+    "pupuri": {
+      "type": "Transitive verb"
+    },
+    "tango": {
+      "type": "Transitive verb"
+    },
+    "whakarite": {
+      "type": "Transitive verb"
+    },
+    "whakatā": {
+      "type": "Intransitive verb"
+    },
+    "whakatika": {
+      "type": "Transitive verb",
+      "english": "correct; fix",
+      "courseUse": "Selected course use is correct/fix something, not the separate rise/stand up use."
+    },
+    "tapahi": {
+      "type": "Transitive verb"
+    },
+    "kati": {
+      "type": "Transitive verb"
+    },
+    "whakatuwhera": {
+      "type": "Transitive verb"
+    },
+    "whāia": {
+      "type": "Passive verb",
+      "english": "be followed; follow! (passive command)"
+    },
+    "tō": {
+      "type": "Determiner",
+      "courseUse": "The course entry is possessive your, not the separate drag reading."
+    },
+    "whakaae": {
+      "type": "Intransitive verb"
+    },
+    "utu": {
+      "type": "Transitive verb",
+      "english": "pay; repay"
+    },
+    "whakahaere": {
+      "type": "Transitive verb"
+    },
+    "tohutohu": {
+      "type": "Transitive verb",
+      "english": "advise; instruct"
+    },
+    "tautoko": {
+      "type": "Transitive verb"
+    },
+    "tono": {
+      "type": "Transitive verb"
+    },
+    "ārahi": {
+      "type": "Transitive verb"
+    },
+    "whakamātau": {
+      "type": "Transitive verb"
+    },
+    "whakaharatau": {
+      "type": "Transitive verb"
+    },
+    "whakaaro": {
+      "type": "Intransitive verb",
+      "english": "think; consider"
+    },
+    "whakamārama": {
+      "type": "Transitive verb"
+    },
+    "kōwhiri": {
+      "type": "Transitive verb"
+    },
+    "whakaaroaro": {
+      "type": "Intransitive verb"
+    },
+    "tutuki": {
+      "type": "Stative verb"
+    },
+    "whakanui": {
+      "type": "Transitive verb"
+    },
+    "whakapai": {
+      "type": "Transitive verb"
+    },
+    "angitu": {
+      "type": "Stative verb",
+      "english": "be successful"
+    },
+    "whakarerekē": {
+      "type": "Transitive verb"
+    },
+    "kitea": {
+      "type": "Passive verb"
+    },
+    "tuhia": {
+      "type": "Passive verb"
+    },
+    "hangaia": {
+      "type": "Passive verb"
+    },
+    "tukuna": {
+      "type": "Passive verb"
+    },
+    "tangohia": {
+      "type": "Passive verb"
+    },
+    "tukua": {
+      "type": "Passive verb"
+    },
+    "kawea": {
+      "type": "Passive verb"
+    },
+    "horoia": {
+      "type": "Passive verb"
+    },
+    "kīia": {
+      "type": "Passive verb"
+    },
+    "whakatuwheratia": {
+      "type": "Passive verb"
+    },
+    "hora": {
+      "type": "Stative verb",
+      "courseUse": "Selected course use is be spread out, not the unrelated go/flee dictionary entry."
+    },
+    "kainga": {
+      "type": "Passive verb",
+      "english": "be eaten"
+    },
+    "pānuitia": {
+      "type": "Passive verb",
+      "english": "be read"
+    },
+    "au": {
+      "type": "Pronoun"
+    },
+    "ahau": {
+      "type": "Pronoun"
+    },
+    "koe": {
+      "type": "Pronoun"
+    },
+    "ia": {
+      "type": "Pronoun"
+    },
+    "māua": {
+      "type": "Pronoun"
+    },
+    "tāua": {
+      "type": "Pronoun"
+    },
+    "kōrua": {
+      "type": "Pronoun"
+    },
+    "rāua": {
+      "type": "Pronoun"
+    },
+    "mātou": {
+      "type": "Pronoun"
+    },
+    "tātou": {
+      "type": "Pronoun"
+    },
+    "koutou": {
+      "type": "Pronoun"
+    },
+    "rātou": {
+      "type": "Pronoun"
+    },
+    "te": {
+      "type": "Determiner"
+    },
+    "ngā": {
+      "type": "Determiner"
+    },
+    "he": {
+      "type": "Determiner"
+    },
+    "tēnei": {
+      "type": "Determiner"
+    },
+    "ēnei": {
+      "type": "Determiner"
+    },
+    "tēnā": {
+      "type": "Determiner"
+    },
+    "ēnā": {
+      "type": "Determiner"
+    },
+    "tērā": {
+      "type": "Determiner"
+    },
+    "ērā": {
+      "type": "Determiner"
+    },
+    "tētahi": {
+      "type": "Determiner"
+    },
+    "ētahi": {
+      "type": "Determiner"
+    },
+    "tāku": {
+      "type": "Determiner"
+    },
+    "tōku": {
+      "type": "Determiner"
+    },
+    "tāu": {
+      "type": "Determiner"
+    },
+    "tōu": {
+      "type": "Determiner"
+    },
+    "tāna": {
+      "type": "Determiner"
+    },
+    "tōna": {
+      "type": "Determiner"
+    },
+    "āku": {
+      "type": "Determiner"
+    },
+    "ōku": {
+      "type": "Determiner"
+    },
+    "āu": {
+      "type": "Determiner"
+    },
+    "ōu": {
+      "type": "Determiner"
+    },
+    "āna": {
+      "type": "Determiner"
+    },
+    "ōna": {
+      "type": "Determiner"
+    },
+    "aku": {
+      "type": "Determiner"
+    },
+    "tā": {
+      "type": "Determiner"
+    },
+    "ā": {
+      "type": "Determiner"
+    },
+    "ō": {
+      "type": "Determiner"
+    },
+    "taku": {
+      "type": "Determiner"
+    },
+    "tana": {
+      "type": "Determiner"
+    },
+    "tēhea": {
+      "type": "Determiner"
+    },
+    "ēhea": {
+      "type": "Determiner"
+    },
+    "nui": {
+      "type": "Describing word"
+    },
+    "roa": {
+      "type": "Describing word"
+    },
+    "iti": {
+      "type": "Stative verb"
+    },
+    "poto": {
+      "type": "Describing word"
+    },
+    "pai": {
+      "type": "Describing word"
+    },
+    "maha": {
+      "type": "Stative verb"
+    },
+    "tika": {
+      "type": "Describing word"
+    },
+    "mataku": {
+      "type": "Stative verb"
+    },
+    "mārama": {
+      "type": "Experience verb",
+      "english": "understand; be clear"
+    },
+    "hē": {
+      "type": "Describing word"
+    },
+    "mamae": {
+      "type": "Stative verb"
+    },
+    "matekai": {
+      "type": "Stative verb"
+    },
+    "ngenge": {
+      "type": "Describing word"
+    },
+    "hiainu": {
+      "type": "Describing word"
+    },
+    "māuiui": {
+      "type": "Describing word"
+    },
+    "tere": {
+      "type": "Describing word"
+    },
+    "tūpato": {
+      "type": "Describing word"
+    },
+    "kaha": {
+      "type": "Describing word"
+    },
+    "rerekē": {
+      "type": "Describing word"
+    },
+    "wera": {
+      "type": "Stative verb"
+    },
+    "ātaahua": {
+      "type": "Stative verb"
+    },
+    "mahana": {
+      "type": "Stative verb"
+    },
+    "rawe": {
+      "type": "Describing word"
+    },
+    "whānui": {
+      "type": "Describing word"
+    },
+    "uaua": {
+      "type": "Describing word"
+    },
+    "taumaha": {
+      "type": "Describing word"
+    },
+    "ngāwari": {
+      "type": "Describing word"
+    },
+    "teitei": {
+      "type": "Describing word"
+    },
+    "ōrite": {
+      "type": "Describing word"
+    },
+    "makariri": {
+      "type": "Stative verb"
+    },
+    "maroke": {
+      "type": "Stative verb"
+    },
+    "whāiti": {
+      "type": "Describing word"
+    },
+    "mātao": {
+      "type": "Describing word"
+    },
+    "mākū": {
+      "type": "Describing word"
+    },
+    "hōhonu": {
+      "type": "Describing word"
+    },
+    "pakari": {
+      "type": "Describing word"
+    },
+    "māia": {
+      "type": "Describing word"
+    },
+    "auau": {
+      "type": "Describing word"
+    },
+    "pono": {
+      "type": "Describing word"
+    },
+    "inanahi": {
+      "type": "Time expression"
+    },
+    "ināianei": {
+      "type": "Time expression"
+    },
+    "āpōpō": {
+      "type": "Time expression"
+    },
+    "reira": {
+      "type": "Position word"
+    },
+    "taha": {
+      "type": "Position word"
+    },
+    "muri": {
+      "type": "Position word"
+    },
+    "mua": {
+      "type": "Position word"
+    },
+    "raro": {
+      "type": "Position word"
+    },
+    "tata": {
+      "type": "Position word"
+    },
+    "waho": {
+      "type": "Position word"
+    },
+    "waenganui": {
+      "type": "Position word"
+    },
+    "tawhiti": {
+      "type": "Position word"
+    },
+    "runga": {
+      "type": "Position word"
+    },
+    "rua": {
+      "type": "Number"
+    },
+    "tekau": {
+      "type": "Number"
+    },
+    "toru": {
+      "type": "Number"
+    },
+    "rau": {
+      "type": "Number"
+    },
+    "tahi": {
+      "type": "Number"
+    },
+    "rima": {
+      "type": "Number"
+    },
+    "whā": {
+      "type": "Number"
+    },
+    "ono": {
+      "type": "Number"
+    },
+    "waru": {
+      "type": "Number"
+    },
+    "iwa": {
+      "type": "Number"
+    },
+    "mano": {
+      "type": "Number"
+    },
+    "whitu": {
+      "type": "Number"
+    },
+    "ko": {
+      "type": "Grammar word"
+    },
+    "kei": {
+      "type": "Grammar word"
+    },
+    "nō": {
+      "type": "Grammar word"
+    },
+    "e": {
+      "type": "Grammar word"
+    },
+    "kotahi": {
+      "type": "Grammar word"
+    },
+    "tokorua": {
+      "type": "Grammar word"
+    },
+    "tokotoru": {
+      "type": "Grammar word"
+    },
+    "tokomaha": {
+      "type": "Grammar word"
+    },
+    "kāorekau": {
+      "type": "Grammar word"
+    },
+    "a": {
+      "type": "Grammar word"
+    },
+    "i": {
+      "type": "Grammar word"
+    },
+    "ki": {
+      "type": "Grammar word"
+    },
+    "ka": {
+      "type": "Grammar word"
+    },
+    "ana": {
+      "type": "Grammar word"
+    },
+    "me": {
+      "type": "Grammar word"
+    },
+    "kua": {
+      "type": "Grammar word"
+    },
+    "atu": {
+      "type": "Grammar word"
+    },
+    "mai": {
+      "type": "Grammar word"
+    },
+    "kia": {
+      "type": "Grammar word"
+    },
+    "anō": {
+      "type": "Grammar word"
+    },
+    "kore": {
+      "type": "Grammar word"
+    },
+    "kāore": {
+      "type": "Grammar word"
+    },
+    "ehara": {
+      "type": "Grammar word"
+    },
+    "āe": {
+      "type": "Grammar word"
+    },
+    "kāo": {
+      "type": "Grammar word"
+    },
+    "āta": {
+      "type": "Grammar word"
+    },
+    "kaua": {
+      "type": "Grammar word"
+    },
+    "kāti": {
+      "type": "Grammar word"
+    },
+    "nā": {
+      "type": "Grammar word"
+    },
+    "mō": {
+      "type": "Grammar word"
+    },
+    "mā": {
+      "type": "Grammar word"
+    },
+    "māku": {
+      "type": "Grammar word"
+    },
+    "nāna": {
+      "type": "Grammar word"
+    },
+    "māna": {
+      "type": "Grammar word"
+    },
+    "mōna": {
+      "type": "Grammar word"
+    },
+    "nāku": {
+      "type": "Grammar word"
+    },
+    "mōku": {
+      "type": "Grammar word"
+    },
+    "nōku": {
+      "type": "Grammar word"
+    },
+    "nōna": {
+      "type": "Grammar word"
+    },
+    "māu": {
+      "type": "Grammar word"
+    },
+    "mōu": {
+      "type": "Grammar word"
+    },
+    "nāu": {
+      "type": "Grammar word"
+    },
+    "nōu": {
+      "type": "Grammar word"
+    },
+    "ake": {
+      "type": "Grammar word"
+    },
+    "tino": {
+      "type": "Grammar word"
+    },
+    "noa": {
+      "type": "Grammar word"
+    },
+    "rawa": {
+      "type": "Grammar word"
+    },
+    "tonu": {
+      "type": "Grammar word"
+    },
+    "ai": {
+      "type": "Grammar word"
+    },
+    "taea": {
+      "type": "Grammar word"
+    },
+    "anake": {
+      "type": "Grammar word"
+    },
+    "katoa": {
+      "type": "Grammar word"
+    },
+    "hei": {
+      "type": "Grammar word"
+    },
+    "pēhea": {
+      "type": "Grammar word"
+    },
+    "pēwhea": {
+      "type": "Grammar word"
+    },
+    "aha": {
+      "type": "Grammar word"
+    },
+    "āhea": {
+      "type": "Grammar word"
+    },
+    "nōnahea": {
+      "type": "Grammar word"
+    },
+    "mea": {
+      "type": "Grammar word"
+    },
+    "pea": {
+      "type": "Grammar word"
+    },
+    "ahakoa": {
+      "type": "Grammar word"
+    },
+    "mehemea": {
+      "type": "Grammar word"
+    },
+    "mēnā": {
+      "type": "Grammar word"
+    },
+    "tūmanako": {
+      "type": "Grammar word"
+    },
+    "whakapae": {
+      "type": "Grammar word"
+    },
+    "engari": {
+      "type": "Grammar word"
+    },
+    "heoi": {
+      "type": "Grammar word"
+    },
+    "hea": {
+      "type": "Grammar word"
+    },
+    "rā": {
+      "type": "Grammar word"
+    },
+    "hana": {
+      "type": "Name"
+    },
+    "hemi": {
+      "type": "Name"
+    },
+    "mere": {
+      "type": "Name"
+    },
+    "pita": {
+      "type": "Name"
+    },
+    "rotorua": {
+      "type": "Name"
+    },
+    "taupō": {
+      "type": "Name"
+    },
+    "tauranga": {
+      "type": "Name"
+    },
+    "ngongotahā": {
+      "type": "Name"
+    },
+    "waikato": {
+      "type": "Name"
+    },
+    "pōneke": {
+      "type": "Name"
+    },
+    "aroha": {
+      "type": "Name"
+    },
+    "rangi": {
+      "type": "Name"
+    },
+    "maia": {
+      "type": "Name"
+    },
+    "kai": {
+      "type": "Transitive verb",
+      "english": "eat",
+      "courseUse": "The course verb entry is the eat reading. Food is a noun use, not a second filter membership."
+    },
+    "roto": {
+      "type": "Noun",
+      "english": "lake"
+    },
+    "tunu": {
+      "type": "Transitive verb"
+    },
+    "whāngai": {
+      "type": "Transitive verb"
+    },
+    "kī": {
+      "type": "Transitive verb",
+      "courseUse": "The course entry is say, not the stative be full reading."
+    },
+    "whakaatu": {
+      "type": "Transitive verb"
+    },
+    "kimi": {
+      "type": "Transitive verb"
+    },
+    "rapu": {
+      "type": "Transitive verb"
+    },
+    "awhi": {
+      "type": "Transitive verb"
+    },
+    "manaaki": {
+      "type": "Transitive verb"
+    },
+    "pana": {
+      "type": "Transitive verb"
+    },
+    "kukume": {
+      "type": "Transitive verb"
+    },
+    "hiki": {
+      "type": "Transitive verb"
+    },
+    "maka": {
+      "type": "Transitive verb"
+    },
+    "hopu": {
+      "type": "Transitive verb"
+    },
+    "huna": {
+      "type": "Transitive verb"
+    },
+    "hono": {
+      "type": "Transitive verb"
+    },
+    "wehe": {
+      "type": "Transitive verb"
+    },
+    "whakatau": {
+      "type": "Transitive verb"
+    },
+    "whakahoki": {
+      "type": "Transitive verb"
+    },
+    "whakapiri": {
+      "type": "Transitive verb"
+    },
+    "whakatū": {
+      "type": "Transitive verb"
+    },
+    "whakauru": {
+      "type": "Transitive verb"
+    },
+    "whakaputa": {
+      "type": "Transitive verb"
+    },
+    "waihanga": {
+      "type": "Transitive verb"
+    },
+    "whakapaipai": {
+      "type": "Transitive verb"
+    },
+    "whāki": {
+      "type": "Transitive verb"
+    },
+    "tāpiri": {
+      "type": "Transitive verb"
+    },
+    "whakaiti": {
+      "type": "Transitive verb"
+    },
+    "tirotiro": {
+      "type": "Transitive verb"
+    },
+    "whakapakari": {
+      "type": "Transitive verb"
+    },
+    "whiu": {
+      "type": "Transitive verb"
+    },
+    "tuki": {
+      "type": "Transitive verb"
+    },
+    "wero": {
+      "type": "Transitive verb"
+    },
+    "ngau": {
+      "type": "Transitive verb"
+    },
+    "ngaungau": {
+      "type": "Transitive verb"
+    },
+    "raranga": {
+      "type": "Transitive verb"
+    },
+    "whakaheke": {
+      "type": "Transitive verb"
+    },
+    "whatu": {
+      "type": "Transitive verb"
+    },
+    "tuitui": {
+      "type": "Transitive verb"
+    },
+    "whakapiko": {
+      "type": "Transitive verb"
+    },
+    "whakamaroke": {
+      "type": "Transitive verb"
+    },
+    "whakamāori": {
+      "type": "Transitive verb"
+    },
+    "whakahou": {
+      "type": "Transitive verb"
+    },
+    "kohi": {
+      "type": "Transitive verb"
+    },
+    "whakakī": {
+      "type": "Transitive verb"
+    },
+    "taupoki": {
+      "type": "Transitive verb"
+    },
+    "whakatipu": {
+      "type": "Transitive verb"
+    },
+    "whakatakoto": {
+      "type": "Transitive verb"
+    },
+    "whakamau": {
+      "type": "Transitive verb"
+    },
+    "whakamahi": {
+      "type": "Transitive verb"
+    },
+    "whakaora": {
+      "type": "Transitive verb"
+    },
+    "whakatūpato": {
+      "type": "Transitive verb"
+    },
+    "tātai": {
+      "type": "Transitive verb"
+    },
+    "ine": {
+      "type": "Transitive verb"
+    },
+    "oho": {
+      "type": "Intransitive verb"
+    },
+    "tae": {
+      "type": "Intransitive verb"
+    },
+    "whakawhiti": {
+      "type": "Intransitive verb"
+    },
+    "huri": {
+      "type": "Intransitive verb"
+    },
+    "neke": {
+      "type": "Intransitive verb"
+    },
+    "peke": {
+      "type": "Intransitive verb"
+    },
+    "whakangā": {
+      "type": "Intransitive verb"
+    },
+    "mihi": {
+      "type": "Intransitive verb"
+    },
+    "tangi": {
+      "type": "Intransitive verb"
+    },
+    "katakata": {
+      "type": "Intransitive verb"
+    },
+    "hāmama": {
+      "type": "Intransitive verb"
+    },
+    "kake": {
+      "type": "Intransitive verb"
+    },
+    "ruku": {
+      "type": "Intransitive verb"
+    },
+    "kauhoe": {
+      "type": "Intransitive verb"
+    },
+    "retireti": {
+      "type": "Intransitive verb"
+    },
+    "rewa": {
+      "type": "Intransitive verb"
+    },
+    "tio": {
+      "type": "Intransitive verb",
+      "english": "be freezing cold",
+      "courseUse": "Selected course use is be freezing cold, not freeze an object."
+    },
+    "takoto": {
+      "type": "Intransitive verb"
+    },
+    "eke": {
+      "type": "Intransitive verb"
+    },
+    "puta": {
+      "type": "Intransitive verb"
+    },
+    "uru": {
+      "type": "Intransitive verb"
+    },
+    "purei": {
+      "type": "Intransitive verb"
+    },
+    "whiwhi": {
+      "type": "Intransitive verb"
+    },
+    "piri": {
+      "type": "Intransitive verb"
+    },
+    "tomo": {
+      "type": "Intransitive verb"
+    },
+    "ngunguru": {
+      "type": "Intransitive verb"
+    },
+    "hāparangi": {
+      "type": "Intransitive verb"
+    },
+    "wiriwiri": {
+      "type": "Intransitive verb"
+    },
+    "hinga": {
+      "type": "Stative verb"
+    },
+    "reri": {
+      "type": "Stative verb"
+    },
+    "whara": {
+      "type": "Stative verb"
+    },
+    "pakaru": {
+      "type": "Stative verb"
+    },
+    "mate": {
+      "type": "Stative verb"
+    },
+    "ngaro": {
+      "type": "Stative verb"
+    },
+    "mahue": {
+      "type": "Stative verb"
+    },
+    "oti": {
+      "type": "Stative verb"
+    },
+    "pau": {
+      "type": "Stative verb"
+    },
+    "mahara": {
+      "type": "Experience verb"
+    },
+    "maumahara": {
+      "type": "Experience verb"
+    },
+    "wareware": {
+      "type": "Experience verb",
+      "english": "forget",
+      "courseUse": "Selected course use is the experiencer forgetting something, as in wareware au ki te ingoa; not the forgotten-patient stative construction."
+    },
+    "whakapono": {
+      "type": "Experience verb"
+    },
+    "hōhā": {
+      "type": "Stative verb"
+    },
+    "koi": {
+      "type": "Stative verb"
+    },
+    "paru": {
+      "type": "Stative verb"
+    },
+    "kikī": {
+      "type": "Stative verb"
+    },
+    "kiwikiwi": {
+      "type": "Stative verb"
+    },
+    "haunga": {
+      "type": "Stative verb"
+    },
+    "kakara": {
+      "type": "Stative verb"
+    },
+    "harikoa": {
+      "type": "Stative verb"
+    }
+  },
+  "verbGrouping": {
+    "scope": "One exclusive category for each selected course meaning/form. Other dictionary uses are not additional filter memberships. Editorial browsing only; never automatic tagging evidence.",
+    "sources": [
+      "https://kupu.maori.nz/verbs",
+      "https://kupu.maori.nz/verbs/transitive-verbs",
+      "https://kupu.maori.nz/verbs/intransitive-verbs",
+      "https://kupu.maori.nz/set/Experience-Verbs",
+      "https://kupu.maori.nz/set/Statives",
+      "https://maoridictionary.co.nz/search?keywords=experience",
+      "https://maoridictionary.co.nz/search?keywords=m%C4%81rama",
+      "https://maoridictionary.co.nz/word/253"
+    ],
+    "sourceNote": "Read-only Te Aka dictionary senses and examples were checked through readWordReferences. Subtypes are editorial selections for the taught use; a generic Te Aka verb label alone does not determine transitivity. Describing-word entries retain their modifier reading unless a specific verb reading is selected."
+  }
+}

@@ -7,7 +7,7 @@ import { vocabularyNumberValue } from '../lib/vocabularyNumberOrder'
 import { AO_SOURCE, courseCategories, possessionGuide } from '../lib/courseVocabularyCategories'
 import { NUMBER_LABELS, numberGuide } from '../lib/courseVocabularyNumber'
 import { type ReactNode, useEffect, useMemo, useState } from 'react'
-import { courseVocabularyEntries, type VocabularyEntryKind } from '../lib/courseVocabularyEntries'
+import { courseVocabularyEntries, optionalPersonalisationEntries, type VocabularyEntryKind } from '../lib/courseVocabularyEntries'
 import type { CurriculumLevel } from '../lib/sentenceStructureLevels'
 import { fetchVocabularyPos, type VocabularyPos } from '../lib/vocabularyPos'
 import type { BusManifestPosCatalog } from '../lib/busManifestContract'
@@ -44,13 +44,14 @@ export default function LevelVocabulary({ level, catalog, sentences }: { level: 
       {plan.face?.status === 'ready' ? <SavedConnectorCheckpoint plan={plan.face} displayHeight={18} /> : null}
     </span>
   }
-  const [kind, setKind] = useState<'big' | 'word' | 'phrase'>(() => typeof window !== 'undefined' && /section=(kiwaha|reading-language)/.test(window.location.hash) && (window.location.hash.includes('kiwaha') || level === 3) ? 'phrase' : 'big')
+  const [kind, setKind] = useState<'big' | 'word' | 'phrase' | 'optional'>(() => typeof window !== 'undefined' && /section=(kiwaha|reading-language)/.test(window.location.hash) && (window.location.hash.includes('kiwaha') || level === 3) ? 'phrase' : 'big')
   const [selectedType, setPosFilter] = useState('')
   const [categoryFilter, setCategoryFilter] = useState('')
   const [aoFilter, setAoFilter] = useState('')
   const [numberFilter, setNumberFilter] = useState('')
   useEffect(() => { setCategoryFilter(''); setAoFilter(''); setNumberFilter('') }, [level])
   const entries = useMemo(() => courseVocabularyEntries(level), [level])
+  const optional = useMemo(() => optionalPersonalisationEntries(level), [level])
   const words = useMemo(() => entries.filter(entry => entry.kind === 'word'), [entries])
   const [metadata, setMetadata] = useState<{ level: number; words: VocabularyPos[] } | null>(null)
   const [failed, setFailed] = useState<number | null>(null)
@@ -58,14 +59,14 @@ export default function LevelVocabulary({ level, catalog, sentences }: { level: 
   useEffect(() => {
     const controller = new AbortController()
     setFailed(null)
-    void fetchVocabularyPos(words.map(word => word.key!), controller.signal).then(result => {
+    void fetchVocabularyPos([...new Set(words.map(word => word.key!))], controller.signal).then(result => {
       if (!controller.signal.aborted) setMetadata({ level, words: result })
     }).catch(() => { if (!controller.signal.aborted) setFailed(level) })
     return () => controller.abort()
   }, [level, words, attempt])
   const posByWord = new Map((metadata?.level === level ? metadata.words : []).map(item => [item.word, item]))
-  const belongsToKind = (entry: typeof entries[number], value: VocabularyEntryKind | 'big') => value === 'big' ? false : value === 'word' ? entry.kind === 'word' : entry.kind === 'phrase' || entry.kind === 'kiwaha' || entry.functionType === 'Conjunction'
-  const scoped = entries.filter(entry => belongsToKind(entry, kind))
+  const belongsToKind = (entry: typeof entries[number], value: VocabularyEntryKind | 'big' | 'optional') => value === 'big' || value === 'optional' ? false : value === 'word' ? entry.kind === 'word' : entry.kind === 'phrase' || entry.kind === 'kiwaha' || entry.functionType === 'Conjunction'
+  const scoped = kind === 'optional' ? optional : entries.filter(entry => belongsToKind(entry, kind))
   const categoryOptions = [...new Set(scoped.flatMap(courseCategories))].sort((a, b) => a.localeCompare(b, 'mi'))
   const posGroups = [
     { label: 'Expression function', prefix: 'function', options: [...new Set(scoped.flatMap(entry => entry.functionType ? [entry.functionType] : []))].sort().map(label => ({ code: label, label })) },
@@ -102,14 +103,14 @@ export default function LevelVocabulary({ level, catalog, sentences }: { level: 
   const typeTabs = [{ code: '', label: expressionOnly ? 'All' : 'All words', legendCode: '' }, ...typeOptions.map(type => ({ code: !expressionOnly && type.label.toLowerCase() === 'numeral' ? 'browse:numbers' : `${typePrefix}${type.code}`, label: pluralWordType(type.label), legendCode: expressionOnly ? '' : type.code }))]
   const firstBigWord = sentences && courseBigWords(sentences, level)[0]?.examples[0]
   const bigWordSymbol = firstBigWord && sentences ? bigWordPosCodes(firstBigWord, sentences)[0] : undefined
-  const kindOptions = [ ['big', 'Big words'], ['word', 'Words'], ['phrase', 'Phrases'] ] as const
+  const kindOptions: readonly (readonly ['big' | 'word' | 'phrase' | 'optional', string])[] = [ ['big', 'Big words'], ['word', 'Words'], ['phrase', 'Phrases'], ...(optional.length ? [['optional', 'Optional roles'] as const] : []) ]
 
   return <section className="site-card level-vocabulary" aria-label={`Level ${level} vocabulary`}>
     <div className="level-vocabulary-tools">
     <div className="level-vocabulary-kind" role="group" aria-label="Vocabulary kind">
       {kindOptions.map(([value, label]) => <button type="button" key={value} aria-pressed={kind === value}
         onClick={() => { setKind(value); clearFilters() }}>
-        {value === 'big' ? (bigWordSymbol ? legend(bigWordSymbol, 'specific') : null) : <span className="moe-benefit-icon"><VocabularyKindIcon kind={value} /></span>}{label}{value !== 'big' && <span>{entries.filter(entry => belongsToKind(entry, value)).length}</span>}
+        {value === 'big' ? (bigWordSymbol ? legend(bigWordSymbol, 'specific') : null) : <span className="moe-benefit-icon"><VocabularyKindIcon kind={value === 'optional' ? 'phrase' : value} /></span>}{label}{value !== 'big' && <span>{value === 'optional' ? optional.length : entries.filter(entry => belongsToKind(entry, value)).length}</span>}
       </button>)}
     </div>
     </div>

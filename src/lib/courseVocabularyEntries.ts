@@ -1,3 +1,5 @@
+import { LEVEL_ONE_CONTENT } from './levelOneContent'
+import bank from '../../docs/curriculum/translation-bank/sheets.json'
 import { LEVEL_ONE_PHRASES } from './coursePhrases'
 import { courseVocabulary } from './courseVocabulary'
 import { courseKiwaha } from './courseKiwaha'
@@ -23,14 +25,14 @@ export type CourseVocabularyEntry = {
 // Curriculum browsing only. Whole-expression functions do not become word POS.
 export function courseVocabularyEntries(level: CurriculumLevel): CourseVocabularyEntry[] {
   const entries: CourseVocabularyEntry[] = courseVocabulary(level).map(word => ({
-    id: `word:${word.key}`, key: word.key, kind: 'word', text: word.word,
+    id: `word:${word.senseKey}`, key: word.key, kind: 'word', text: word.word,
     english: word.english, components: [word.word], topics: word.topics, ...pronounSupport(word.key),
   }))
   for (const item of courseReadingLanguage(level)) {
     const word = entries.find(entry => entry.text === item.text)
     const support = { functionType: item.functionType, example: item.example, sourceUrl: item.sourceUrl }
     if (word) Object.assign(word, support)
-    else {
+    else if (bank.sheets.some(sheet => sheet.level <= level && sheet.questions.some(q => q.direction !== 'structure-choice' && new RegExp(`(^|[^\\p{L}])${item.text}(?=$|[^\\p{L}])`,'iu').test(q.mi)))) {
       const components = item.text.split(/\s+/)
       entries.push({ id: `language:${item.id}`, kind: components.length > 1 ? 'phrase' : 'word',
         key: components.length === 1 ? item.text : undefined,
@@ -46,4 +48,14 @@ export function courseVocabularyEntries(level: CurriculumLevel): CourseVocabular
     components: item.text.split(/\s+/),
   })))
   return entries.sort((a, b) => a.text.localeCompare(b.text, 'mi'))
+}
+
+
+// Personalisation is a choice, never a required or already-taught word list.
+export function optionalPersonalisationEntries(level: CurriculumLevel): CourseVocabularyEntry[] {
+ if(level!==1)return []
+ return LEVEL_ONE_CONTENT.vocabulary.filter(group=>group.title.includes('optional')).flatMap(group=>group.words.map(word=>({
+  id:`optional:${word.label}`,kind:'phrase' as const,text:word.label,english:word.meaning,
+  components:word.label.split(/\s+/),functionType:'Job title',category:'Optional personalisation',
+ })))
 }

@@ -1,0 +1,873 @@
+{
+  "status": "outcome-aligned draft",
+  "levelOne": [
+    {
+      "lesson": 2,
+      "title": "Names and identity",
+      "pattern": "Ko … tōku ingoa",
+      "pairs": [
+        {
+          "mi": "Ko Hemi tōku ingoa.",
+          "en": "My name is Hemi."
+        },
+        {
+          "mi": "Ko Mere tōku ingoa.",
+          "en": "My name is Mere."
+        },
+        {
+          "mi": "Ko Hana tōku ingoa.",
+          "en": "My name is Hana."
+        },
+        {
+          "mi": "Ko Pita tōku ingoa.",
+          "en": "My name is Pita."
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "title": "I, you and another person",
+      "pattern": "ahau / au · koe · ia · tōu · tōna",
+      "pairs": [
+        {
+          "mi": "Ko Hemi ahau.",
+          "en": "I am Hemi."
+        },
+        {
+          "mi": "Ko Mere au.",
+          "en": "I am Mere."
+        },
+        {
+          "mi": "Ko Hana ia.",
+          "en": "She is Hana."
+        },
+        {
+          "mi": "Ko Pita koe.",
+          "en": "You are Pita."
+        },
+        {
+          "mi": "Ko Mere tōna ingoa.",
+          "en": "Her name is Mere."
+        },
+        {
+          "mi": "Ko Hemi tōu ingoa.",
+          "en": "Your name is Hemi."
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "title": "Mountains, rivers and lakes",
+      "pattern": "Ko · Nō · te · tōku",
+      "pairs": [
+        {
+          "mi": "Ko Ngongotahā te maunga.",
+          "en": "Ngongotahā is the mountain."
+        },
+        {
+          "mi": "Ko Rotorua te roto.",
+          "en": "Rotorua is the lake."
+        },
+        {
+          "mi": "Ko Ngongotahā tōku maunga.",
+          "en": "Ngongotahā is my mountain."
+        },
+        {
+          "mi": "Ko Waikato tōku awa.",
+          "en": "Waikato is my river."
+        },
+        {
+          "mi": "Ko Rotorua tōku roto.",
+          "en": "Rotorua is my lake."
+        },
+        {
+          "mi": "Nō Rotorua ahau.",
+          "en": "I am from Rotorua."
+        },
+        {
+          "mi": "Nō Rotorua au.",
+          "en": "I am from Rotorua."
+        },
+        {
+          "mi": "Nō Taupō koe.",
+          "en": "You are from Taupō."
+        },
+        {
+          "mi": "Nō Tauranga ia.",
+          "en": "She is from Tauranga."
+        }
+      ]
+    },
+    {
+      "lesson": 5,
+      "title": "Whānau, hapū and iwi",
+      "pattern": "Nō · te · tōku · tōu · tōna",
+      "pairs": [
+        {
+          "mi": "Nō Rotorua tōku whānau.",
+          "en": "My family is from Rotorua."
+        },
+        {
+          "mi": "Nō Rotorua te whānau.",
+          "en": "The family is from Rotorua."
+        },
+        {
+          "mi": "Nō Taupō tōu hapū.",
+          "en": "Your subtribe is from Taupō."
+        },
+        {
+          "mi": "Nō Taupō te hapū.",
+          "en": "The subtribe is from Taupō."
+        },
+        {
+          "mi": "Nō Tauranga tōna iwi.",
+          "en": "Her tribe is from Tauranga."
+        },
+        {
+          "mi": "Nō Tauranga te iwi.",
+          "en": "The tribe is from Tauranga."
+        },
+        {
+          "mi": "Nō Rotorua ngā tūpuna.",
+          "en": "The ancestors are from Rotorua."
+        }
+      ]
+    },
+    {
+      "lesson": 6,
+      "title": "Parents, grandparents and whakapapa",
+      "pattern": "Ko · tōku · tōu · tōna",
+      "pairs": [
+        {
+          "mi": "Ko Mere tōku whaea.",
+          "en": "Mere is my mother."
+        },
+        {
+          "mi": "Ko Hemi tōku matua.",
+          "en": "Hemi is my father."
+        },
+        {
+          "mi": "Ko Hemi tōku pāpā.",
+          "en": "Hemi is my dad."
+        },
+        {
+          "mi": "Ko Mere tōu whaea.",
+          "en": "Mere is your mother."
+        },
+        {
+          "mi": "Ko Hemi tōna pāpā.",
+          "en": "Hemi is her dad."
+        }
+      ]
+    },
+    {
+      "lesson": 7,
+      "title": "Siblings and children",
+      "pattern": "Ko · tāku · tāu · tāna",
+      "pairs": [
+        {
+          "mi": "Ko Hana tōku teina.",
+          "en": "Hana is my younger sibling of the same gender."
+        },
+        {
+          "mi": "Ko Rangi tāku tama.",
+          "en": "Rangi is my son."
+        },
+        {
+          "mi": "Ko Aroha tāku tamāhine.",
+          "en": "Aroha is my daughter."
+        },
+        {
+          "mi": "Ko Rangi tāu tama.",
+          "en": "Rangi is your son."
+        },
+        {
+          "mi": "Ko Aroha tāna tamāhine.",
+          "en": "Aroha is her daughter."
+        }
+      ]
+    },
+    {
+      "lesson": 8,
+      "title": "Describe and count your whānau",
+      "pattern": "He · toko- · kotahi · kāorekau · e",
+      "pairs": [
+        {
+          "mi": "He tamaiti a Hana.",
+          "en": "Hana is a child."
+        },
+        {
+          "mi": "He tāne a Hemi.",
+          "en": "Hemi is a man."
+        },
+        {
+          "mi": "He wahine a Mere.",
+          "en": "Mere is a woman."
+        },
+        {
+          "mi": "Kotahi tāku tamaiti.",
+          "en": "I have one child."
+        },
+        {
+          "mi": "Tokorua ngā tamariki.",
+          "en": "There are two children."
+        },
+        {
+          "mi": "Kāorekau āku tamariki.",
+          "en": "I have no children."
+        },
+        {
+          "mi": "E rua ngā whare.",
+          "en": "There are two houses."
+        }
+      ]
+    },
+    {
+      "lesson": 9,
+      "title": "My home and my role",
+      "pattern": "Kei · He",
+      "pairs": [
+        {
+          "mi": "Kei Pōneke tōku kāinga.",
+          "en": "My home is in Wellington."
+        },
+        {
+          "mi": "Kei Rotorua tōna kāinga.",
+          "en": "Her home is in Rotorua."
+        },
+        {
+          "mi": "Kei te kāinga ahau.",
+          "en": "I am at home."
+        },
+        {
+          "mi": "Kei te whare koe.",
+          "en": "You are at the house."
+        },
+        {
+          "mi": "He kaiako ahau.",
+          "en": "I am a teacher."
+        },
+        {
+          "mi": "He ākonga ahau.",
+          "en": "I am a student."
+        }
+      ]
+    },
+    {
+      "lesson": 10,
+      "title": "Give your pepeha",
+      "pattern": "Ko · Nō · He · Kei",
+      "pairs": [
+        {
+          "mi": "Ko Hemi tōku ingoa.",
+          "en": "My name is Hemi."
+        },
+        {
+          "mi": "Ko Ngongotahā tōku maunga.",
+          "en": "Ngongotahā is my mountain."
+        },
+        {
+          "mi": "Ko Rotorua tōku roto.",
+          "en": "Rotorua is my lake."
+        },
+        {
+          "mi": "Nō Rotorua ahau.",
+          "en": "I am from Rotorua."
+        },
+        {
+          "mi": "Ko Mere tōku whaea.",
+          "en": "Mere is my mother."
+        },
+        {
+          "mi": "Ko Hana tōku teina.",
+          "en": "Hana is my younger sibling of the same gender."
+        },
+        {
+          "mi": "Ko Aroha tāku tamāhine.",
+          "en": "Aroha is my daughter."
+        },
+        {
+          "mi": "He kaiako ahau.",
+          "en": "I am a teacher."
+        },
+        {
+          "mi": "Kei Pōneke tōku kāinga.",
+          "en": "My home is in Wellington."
+        },
+        {
+          "mi": "Ko wai koe?",
+          "en": "Who are you?"
+        }
+      ]
+    }
+  ],
+  "storyPractice": [
+    {
+      "level": 3,
+      "lesson": 5,
+      "story": "Te waea",
+      "mi": "He kaiako a Maia.",
+      "en": "Maia is a teacher."
+    },
+    {
+      "level": 3,
+      "lesson": 5,
+      "story": "Te waea",
+      "mi": "Tokotoru ngā ākonga.",
+      "en": "There are three students."
+    },
+    {
+      "level": 3,
+      "lesson": 6,
+      "story": "Te waea",
+      "mi": "Kei te kura rātou.",
+      "en": "They are at school."
+    },
+    {
+      "level": 3,
+      "lesson": 6,
+      "story": "Te waea",
+      "mi": "I mutu te mahi i te ahiahi.",
+      "en": "Work finished that afternoon."
+    },
+    {
+      "level": 3,
+      "lesson": 7,
+      "story": "Te waea",
+      "mi": "Me hoki a Maia ki te kāinga.",
+      "en": "Maia needed to go home."
+    },
+    {
+      "level": 3,
+      "lesson": 7,
+      "story": "Te waea",
+      "mi": "Kāore ia i kite i te waea.",
+      "en": "She could not find the phone."
+    },
+    {
+      "level": 3,
+      "lesson": 8,
+      "story": "Te waea",
+      "mi": "Ka karanga ia ki ngā ākonga, “Me titiro koutou ki raro i ērā tūru.”",
+      "en": "She called to the students, “Look under those chairs.”"
+    },
+    {
+      "level": 3,
+      "lesson": 8,
+      "story": "Te waea",
+      "mi": "Ka titiro rātou ki raro i ngā tūru.",
+      "en": "They looked under the chairs."
+    },
+    {
+      "level": 3,
+      "lesson": 5,
+      "story": "Te waea",
+      "mi": "Kāore rātou i kite i te waea.",
+      "en": "They did not find the phone."
+    },
+    {
+      "level": 3,
+      "lesson": 5,
+      "story": "Te waea",
+      "mi": "Kāore anō a Maia kia whakatuwhera i te pēke.",
+      "en": "Maia had not opened the bag yet."
+    },
+    {
+      "level": 3,
+      "lesson": 6,
+      "story": "Te waea",
+      "mi": "Ka whakatuwhera ia i te pēke.",
+      "en": "She opened the bag."
+    },
+    {
+      "level": 3,
+      "lesson": 6,
+      "story": "Te waea",
+      "mi": "Ka tango ia i ngā pukapuka.",
+      "en": "She took out the books."
+    },
+    {
+      "level": 3,
+      "lesson": 7,
+      "story": "Te waea",
+      "mi": "Ka kite ia i te waea i roto i te pēke.",
+      "en": "She found the phone inside the bag."
+    },
+    {
+      "level": 3,
+      "lesson": 7,
+      "story": "Te waea",
+      "mi": "Ka kata ngā ākonga.",
+      "en": "The students laughed."
+    },
+    {
+      "level": 3,
+      "lesson": 8,
+      "story": "Te waea",
+      "mi": "Ka hoki a Maia ki te kāinga.",
+      "en": "Maia went home."
+    },
+    {
+      "level": 4,
+      "lesson": 5,
+      "story": "Ngā pukapuka",
+      "mi": "Ko Hana tōku tuahine.",
+      "en": "Hana is my sister."
+    },
+    {
+      "level": 4,
+      "lesson": 5,
+      "story": "Ngā pukapuka",
+      "mi": "He ākonga ia.",
+      "en": "She is a student."
+    },
+    {
+      "level": 4,
+      "lesson": 6,
+      "story": "Ngā pukapuka",
+      "mi": "I haere ahau ki tōna whare inanahi.",
+      "en": "I went to her house yesterday."
+    },
+    {
+      "level": 4,
+      "lesson": 6,
+      "story": "Ngā pukapuka",
+      "mi": "Ka pānui māua i ētahi pukapuka.",
+      "en": "We read some books together."
+    },
+    {
+      "level": 4,
+      "lesson": 7,
+      "story": "Ngā pukapuka",
+      "mi": "Ka tango ahau i tētahi pukapuka nui.",
+      "en": "I picked up a big book."
+    },
+    {
+      "level": 4,
+      "lesson": 7,
+      "story": "Ngā pukapuka",
+      "mi": "Ka hoki ahau ki te kāinga.",
+      "en": "I went home."
+    },
+    {
+      "level": 4,
+      "lesson": 8,
+      "story": "Ngā pukapuka",
+      "mi": "Ka whakatuwhera ahau i te pukapuka.",
+      "en": "I opened the book."
+    },
+    {
+      "level": 4,
+      "lesson": 8,
+      "story": "Ngā pukapuka",
+      "mi": "Ko Hana te ingoa i roto.",
+      "en": "Hana was the name inside."
+    },
+    {
+      "level": 4,
+      "lesson": 8,
+      "story": "Ngā pukapuka",
+      "mi": "Nāna tōna ingoa i tuhi ki roto.",
+      "en": "She had written her name inside."
+    },
+    {
+      "level": 4,
+      "lesson": 5,
+      "story": "Ngā pukapuka",
+      "mi": "Nā tōku tuahine te pukapuka nui.",
+      "en": "The big book belongs to my sister."
+    },
+    {
+      "level": 4,
+      "lesson": 5,
+      "story": "Ngā pukapuka",
+      "mi": "Nāku te pukapuka iti.",
+      "en": "The small book is mine."
+    },
+    {
+      "level": 4,
+      "lesson": 6,
+      "story": "Ngā pukapuka",
+      "mi": "Ka kawe ahau i tāna pukapuka ki tōna whare.",
+      "en": "I took her book back to her house."
+    },
+    {
+      "level": 4,
+      "lesson": 6,
+      "story": "Ngā pukapuka",
+      "mi": "Kei runga tāku pukapuka i te tēpu.",
+      "en": "My book is on the table."
+    },
+    {
+      "level": 4,
+      "lesson": 7,
+      "story": "Ngā pukapuka",
+      "mi": "Ka tango ahau i tāku pukapuka.",
+      "en": "I picked up my book."
+    },
+    {
+      "level": 4,
+      "lesson": 7,
+      "story": "Ngā pukapuka",
+      "mi": "Ka pānui ahau i te ingoa, ā, ka hoki ahau ki te kāinga.",
+      "en": "I checked the name and then went home."
+    },
+    {
+      "level": 5,
+      "lesson": 5,
+      "story": "Te pouaka",
+      "mi": "He kaiako tōku tungāne.",
+      "en": "My brother is a teacher."
+    },
+    {
+      "level": 5,
+      "lesson": 5,
+      "story": "Te pouaka",
+      "mi": "Ko Hemi tōna ingoa.",
+      "en": "His name is Hemi."
+    },
+    {
+      "level": 5,
+      "lesson": 6,
+      "story": "Te pouaka",
+      "mi": "I whakarite ahau i āku pukapuka mō āna ākonga inanahi.",
+      "en": "I got my books ready for his students yesterday."
+    },
+    {
+      "level": 5,
+      "lesson": 6,
+      "story": "Te pouaka",
+      "mi": "Ka tuku ahau i ngā pukapuka ki roto i te pouaka.",
+      "en": "I put the books into the box."
+    },
+    {
+      "level": 5,
+      "lesson": 7,
+      "story": "Te pouaka",
+      "mi": "Ka whakamātau ahau ki te kawe i te pouaka.",
+      "en": "I tried to carry the box."
+    },
+    {
+      "level": 5,
+      "lesson": 6,
+      "story": "Te pouaka",
+      "mi": "Kāore e taea e au te pouaka nui te kawe.",
+      "en": "I could not carry the big box."
+    },
+    {
+      "level": 5,
+      "lesson": 7,
+      "story": "Te pouaka",
+      "mi": "He taumaha te pouaka.",
+      "en": "The box was heavy."
+    },
+    {
+      "level": 5,
+      "lesson": 8,
+      "story": "Te pouaka",
+      "mi": "Ka karanga ahau ki tōku tungāne.",
+      "en": "I called to my brother."
+    },
+    {
+      "level": 5,
+      "lesson": 8,
+      "story": "Te pouaka",
+      "mi": "Ka haere mai ia ki te āwhina.",
+      "en": "He came to help."
+    },
+    {
+      "level": 5,
+      "lesson": 5,
+      "story": "Te pouaka",
+      "mi": "Ka taea e māua te pouaka te kawe.",
+      "en": "Together, we could carry the box."
+    },
+    {
+      "level": 5,
+      "lesson": 7,
+      "story": "Te pouaka",
+      "mi": "Ka kawea te pouaka ki te waka e māua.",
+      "en": "We carried the box to the car."
+    },
+    {
+      "level": 5,
+      "lesson": 5,
+      "story": "Te pouaka",
+      "mi": "Ka haere māua ki te kura.",
+      "en": "We went to the school."
+    },
+    {
+      "level": 5,
+      "lesson": 6,
+      "story": "Te pouaka",
+      "mi": "Kei te pānui āna ākonga i ēnei pukapuka ināianei.",
+      "en": "His students are reading these books now."
+    },
+    {
+      "level": 6,
+      "lesson": 5,
+      "story": "Te pahikara",
+      "mi": "Tokotoru mātou.",
+      "en": "There were three of us."
+    },
+    {
+      "level": 6,
+      "lesson": 5,
+      "story": "Te pahikara",
+      "mi": "He kaimahi mātou.",
+      "en": "We are workmates."
+    },
+    {
+      "level": 6,
+      "lesson": 6,
+      "story": "Te pahikara",
+      "mi": "I hīkoi mātou ki te mahi inanahi.",
+      "en": "We walked to work yesterday."
+    },
+    {
+      "level": 6,
+      "lesson": 6,
+      "story": "Te pahikara",
+      "mi": "Ka kite ahau i tētahi pahikara i waho i te whare.",
+      "en": "I noticed a bicycle outside a building."
+    },
+    {
+      "level": 6,
+      "lesson": 7,
+      "story": "Te pahikara",
+      "mi": "I hiahia ahau ki te pahikara, engari kāore e taea e au te pahikara te hoko.",
+      "en": "I wanted the bicycle, but I could not buy it."
+    },
+    {
+      "level": 6,
+      "lesson": 7,
+      "story": "Te pahikara",
+      "mi": "Kāorekau āku moni.",
+      "en": "I had no money."
+    },
+    {
+      "level": 6,
+      "lesson": 8,
+      "story": "Te pahikara",
+      "mi": "Ka noho mātou ki tētahi tūru roa.",
+      "en": "We sat on a bench."
+    },
+    {
+      "level": 6,
+      "lesson": 8,
+      "story": "Te pahikara",
+      "mi": "Ka kite ahau i tētahi pēke i raro i te tūru.",
+      "en": "I noticed a bag under the bench."
+    },
+    {
+      "level": 6,
+      "lesson": 5,
+      "story": "Te pahikara",
+      "mi": "Ka whakatuwhera ahau i te pēke.",
+      "en": "I opened the bag."
+    },
+    {
+      "level": 6,
+      "lesson": 5,
+      "story": "Te pahikara",
+      "mi": "Ka kite mātou i ngā moni i roto.",
+      "en": "We saw the money inside."
+    },
+    {
+      "level": 6,
+      "lesson": 6,
+      "story": "Te pahikara",
+      "mi": "Mēnā ka pupuri au i ngā moni, ka taea e au te pahikara te hoko.",
+      "en": "If I kept the money, I could buy the bicycle."
+    },
+    {
+      "level": 6,
+      "lesson": 6,
+      "story": "Te pahikara",
+      "mi": "Ka titiro ahau ki te pahikara.",
+      "en": "I looked at the bicycle."
+    },
+    {
+      "level": 6,
+      "lesson": 7,
+      "story": "Te pahikara",
+      "mi": "Ka titiro ahau ki ngā moni.",
+      "en": "I looked at the money."
+    },
+    {
+      "level": 6,
+      "lesson": 7,
+      "story": "Te pahikara",
+      "mi": "Ehara ēnei i ā mātou moni.",
+      "en": "This was not our money."
+    },
+    {
+      "level": 6,
+      "lesson": 8,
+      "story": "Te pahikara",
+      "mi": "Ka hoki mai te kuia, ā, ka titiro ia ki raro i te tūru.",
+      "en": "An elderly woman returned and looked under the bench."
+    },
+    {
+      "level": 6,
+      "lesson": 8,
+      "story": "Te pahikara",
+      "mi": "Ka pātai ahau ki te kuia.",
+      "en": "I asked the woman."
+    },
+    {
+      "level": 6,
+      "lesson": 9,
+      "story": "Te pahikara",
+      "mi": "Nōna te pēke.",
+      "en": "The bag was hers."
+    },
+    {
+      "level": 6,
+      "lesson": 9,
+      "story": "Te pahikara",
+      "mi": "Ka hoatu ahau i tōna pēke ki te kuia.",
+      "en": "I gave her bag back to her."
+    },
+    {
+      "level": 6,
+      "lesson": 10,
+      "story": "Te pahikara",
+      "mi": "Ka haere tonu mātou ki te mahi.",
+      "en": "We continued on to work."
+    },
+    {
+      "level": 6,
+      "lesson": 10,
+      "story": "Te pahikara",
+      "mi": "Ka hīkoi anō mātou āpōpō.",
+      "en": "We will walk again tomorrow."
+    },
+    {
+      "level": 5,
+      "lesson": 5,
+      "story": "Te pouaka",
+      "mi": "He nui ake te pouaka i te pēke.",
+      "en": "The box is bigger than the bag."
+    },
+    {
+      "level": 5,
+      "lesson": 7,
+      "story": "Te pouaka",
+      "mi": "Pānui ai ahau i ngā pukapuka ia rā.",
+      "en": "I read the books every day."
+    },
+    {
+      "level": 6,
+      "lesson": 5,
+      "story": "Te pahikara",
+      "mi": "He aha koe i hoatu ai i te pēke ki te kuia?",
+      "en": "Why did you give the bag to the elderly woman?"
+    },
+    {
+      "level": 6,
+      "lesson": 5,
+      "story": "Te pahikara",
+      "mi": "Nōnahea koe i kite ai i te pēke?",
+      "en": "When did you see the bag?"
+    },
+    {
+      "level": 6,
+      "lesson": 6,
+      "story": "Te pahikara",
+      "mi": "Āhea koe e hoko ai i te pahikara?",
+      "en": "When will you buy the bicycle?"
+    },
+    {
+      "level": 2,
+      "lesson": 2,
+      "story": "Te kai",
+      "mi": "Ko Hana te whaea.",
+      "en": "Hana is the mother."
+    },
+    {
+      "level": 2,
+      "lesson": 3,
+      "story": "Te kai",
+      "mi": "I kai ahau i te kai.",
+      "en": "I ate the food."
+    },
+    {
+      "level": 2,
+      "lesson": 5,
+      "story": "Te kai",
+      "mi": "Kua kai a Hana.",
+      "en": "Hana has eaten."
+    },
+    {
+      "level": 2,
+      "lesson": 2,
+      "story": "Te kai",
+      "mi": "Kei te moe ia.",
+      "en": "She is sleeping."
+    },
+    {
+      "level": 2,
+      "lesson": 6,
+      "story": "Te kai",
+      "mi": "E titiro ana ahau ki te kai.",
+      "en": "I am looking at the food."
+    },
+    {
+      "level": 2,
+      "lesson": 7,
+      "story": "Te kai",
+      "mi": "Ka kai ahau i te kai.",
+      "en": "I will eat the food."
+    },
+    {
+      "level": 2,
+      "lesson": 8,
+      "story": "Te kai",
+      "mi": "Me titiro ahau ki a Hana.",
+      "en": "I should look at Hana."
+    },
+    {
+      "level": 1,
+      "lesson": 6,
+      "story": "Pepeha: simple reading identification",
+      "mi": "Ko Mere te whaea.",
+      "en": "Mere is the mother."
+    },
+    {
+      "level": 1,
+      "lesson": 6,
+      "story": "Pepeha: simple reading identification",
+      "mi": "Ko Hemi te matua.",
+      "en": "Hemi is the father."
+    },
+    {
+      "level": 1,
+      "lesson": 7,
+      "story": "Pepeha: simple reading identification",
+      "mi": "Ko Hana te teina.",
+      "en": "Hana is the younger sibling of the same gender."
+    },
+    {
+      "level": 1,
+      "lesson": 8,
+      "story": "Pepeha: simple reading identification",
+      "mi": "Ko Rangi te tama.",
+      "en": "Rangi is the son."
+    },
+    {
+      "level": 1,
+      "lesson": 8,
+      "story": "Pepeha: simple reading identification",
+      "mi": "Ko Aroha te tamāhine.",
+      "en": "Aroha is the daughter."
+    },
+    {
+      "level": 1,
+      "lesson": 9,
+      "story": "Pepeha: simple reading identification",
+      "mi": "Kei Pōneke ahau.",
+      "en": "I am in Wellington."
+    }
+  ]
+}

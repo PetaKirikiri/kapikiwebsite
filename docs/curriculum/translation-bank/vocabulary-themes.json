@@ -1,0 +1,4562 @@
+{
+  "status": "Editorial course plan; not tagging evidence",
+  "groups": [
+    {
+      "lesson": 1,
+      "theme": "Essential people for Big Word recognition",
+      "words": [
+        {
+          "word": "tāne",
+          "english": "man",
+          "type": "Noun"
+        },
+        {
+          "word": "wahine",
+          "english": "woman",
+          "type": "Noun"
+        }
+      ],
+      "pairs": []
+    },
+    {
+      "lesson": 4,
+      "theme": "Land and water",
+      "words": [
+        {
+          "word": "maunga",
+          "english": "mountain",
+          "type": "Noun"
+        },
+        {
+          "word": "awa",
+          "english": "river",
+          "type": "Noun"
+        },
+        {
+          "word": "roto",
+          "english": "lake",
+          "type": "Noun"
+        }
+      ],
+      "pairs": []
+    },
+    {
+      "lesson": 5,
+      "theme": "Whānau, hapū and iwi",
+      "words": [
+        {
+          "word": "whānau",
+          "english": "family; extended family",
+          "type": "Noun"
+        },
+        {
+          "word": "hapū",
+          "english": "kinship group; subtribe",
+          "type": "Noun"
+        },
+        {
+          "word": "iwi",
+          "english": "tribe; people",
+          "type": "Noun"
+        }
+      ],
+      "pairs": []
+    },
+    {
+      "lesson": 6,
+      "theme": "Parents",
+      "words": [
+        {
+          "word": "māmā",
+          "english": "mum",
+          "type": "Noun"
+        },
+        {
+          "word": "pāpā",
+          "english": "dad",
+          "type": "Noun"
+        },
+        {
+          "word": "whaea",
+          "english": "mother",
+          "type": "Noun"
+        },
+        {
+          "word": "matua",
+          "english": "father",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ko Mere tōku māmā.",
+          "en": "Mere is my mum."
+        },
+        {
+          "mi": "Ko Hemi tōku pāpā.",
+          "en": "Hemi is my dad."
+        }
+      ]
+    },
+    {
+      "lesson": 6,
+      "theme": "Grandparents and grandchildren",
+      "words": [
+        {
+          "word": "kuia",
+          "english": "grandmother",
+          "type": "Noun"
+        },
+        {
+          "word": "koroua",
+          "english": "grandfather",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ko Mere tōku kuia.",
+          "en": "Mere is my grandmother."
+        },
+        {
+          "mi": "Ko Hemi tōku koroua.",
+          "en": "Hemi is my grandfather."
+        }
+      ]
+    },
+    {
+      "lesson": 5,
+      "theme": "Whakapapa and relationships",
+      "words": [
+        {
+          "word": "tūpuna",
+          "english": "ancestors",
+          "type": "Noun"
+        }
+      ],
+      "pairs": []
+    },
+    {
+      "lesson": 7,
+      "theme": "Children and sibling relationships",
+      "words": [
+        {
+          "word": "tama",
+          "english": "boy; son",
+          "type": "Noun"
+        },
+        {
+          "word": "tamāhine",
+          "english": "daughter",
+          "type": "Noun"
+        },
+        {
+          "word": "tuakana",
+          "english": "older sibling of the same gender",
+          "type": "Noun"
+        },
+        {
+          "word": "teina",
+          "english": "younger sibling of the same gender",
+          "type": "Noun"
+        },
+        {
+          "word": "tuahine",
+          "english": "sister of a male",
+          "type": "Noun"
+        },
+        {
+          "word": "tungāne",
+          "english": "brother of a female",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ko Hemi tōku tuakana.",
+          "en": "Hemi is my older brother (I am male)."
+        },
+        {
+          "mi": "Ko Hana tōku tuahine.",
+          "en": "Hana is my sister (I am male)."
+        },
+        {
+          "mi": "Ko Hemi tōku tungāne.",
+          "en": "Hemi is my brother (I am female)."
+        }
+      ]
+    },
+    {
+      "lesson": 8,
+      "theme": "Describing familiar people",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He tāne a Hemi.",
+          "en": "Hemi is a man."
+        },
+        {
+          "mi": "He wahine a Mere.",
+          "en": "Mere is a woman."
+        },
+        {
+          "mi": "He tama a Pita.",
+          "en": "Pita is a boy."
+        },
+        {
+          "mi": "He kōtiro a Hana.",
+          "en": "Hana is a girl."
+        }
+      ]
+    },
+    {
+      "lesson": 8,
+      "theme": "Home and house",
+      "words": [
+        {
+          "word": "whare",
+          "english": "house",
+          "type": "Noun"
+        },
+        {
+          "word": "kāinga",
+          "english": "home",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ko Rotorua tōku kāinga.",
+          "en": "Rotorua is my home."
+        }
+      ]
+    },
+    {
+      "lesson": 8,
+      "theme": "Children",
+      "words": [
+        {
+          "word": "kōtiro",
+          "english": "girl",
+          "type": "Noun"
+        },
+        {
+          "word": "tamaiti",
+          "english": "child",
+          "type": "Noun"
+        },
+        {
+          "word": "tamariki",
+          "english": "children",
+          "type": "Noun"
+        }
+      ],
+      "pairs": []
+    },
+    {
+      "lesson": 8,
+      "theme": "Home",
+      "words": [
+        {
+          "word": "kāinga",
+          "english": "home",
+          "type": "Noun"
+        },
+        {
+          "word": "whare",
+          "english": "house",
+          "type": "Noun"
+        }
+      ],
+      "pairs": []
+    },
+    {
+      "lesson": 15,
+      "theme": "Familiar animals",
+      "words": [
+        {
+          "word": "kurī",
+          "english": "dog",
+          "type": "Noun"
+        },
+        {
+          "word": "ngeru",
+          "english": "cat",
+          "type": "Noun"
+        },
+        {
+          "word": "manu",
+          "english": "bird",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kua moe te kurī.",
+          "en": "The dog has slept."
+        },
+        {
+          "mi": "Kua moe te ngeru.",
+          "en": "The cat has slept."
+        },
+        {
+          "mi": "Kua moe te manu.",
+          "en": "The bird has slept."
+        }
+      ]
+    },
+    {
+      "lesson": 17,
+      "theme": "Time with familiar TAMs",
+      "words": [
+        {
+          "word": "inanahi",
+          "english": "yesterday",
+          "type": "Time expression"
+        },
+        {
+          "word": "ināianei",
+          "english": "now",
+          "type": "Time expression"
+        },
+        {
+          "word": "āpōpō",
+          "english": "tomorrow",
+          "type": "Time expression"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "I moe ahau inanahi.",
+          "en": "I slept yesterday."
+        },
+        {
+          "mi": "Kei te kai ahau ināianei.",
+          "en": "I am eating now."
+        },
+        {
+          "mi": "Ka oma ahau āpōpō.",
+          "en": "I will run tomorrow."
+        }
+      ]
+    },
+    {
+      "lesson": 26,
+      "theme": "Classroom actions",
+      "words": [
+        {
+          "word": "hoatu",
+          "english": "give away from the speaker",
+          "type": "Verb"
+        },
+        {
+          "word": "hōmai",
+          "english": "give towards the speaker",
+          "type": "Verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Hoatu te pukapuka ki a ia.",
+          "en": "Give the book to her."
+        },
+        {
+          "mi": "Hōmai te pukapuka ki ahau.",
+          "en": "Give the book to me."
+        }
+      ]
+    },
+    {
+      "lesson": 28,
+      "theme": "Classroom positions",
+      "words": [
+        {
+          "word": "runga",
+          "english": "above; on",
+          "type": "Position word"
+        },
+        {
+          "word": "raro",
+          "english": "below; under",
+          "type": "Position word"
+        },
+        {
+          "word": "roto",
+          "english": "inside",
+          "type": "Position word"
+        },
+        {
+          "word": "waho",
+          "english": "outside",
+          "type": "Position word"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kei runga te pukapuka i te tūru.",
+          "en": "The book is on the chair."
+        },
+        {
+          "mi": "Kei raro te pukapuka i te tūru.",
+          "en": "The book is under the chair."
+        },
+        {
+          "mi": "Kei roto te pukapuka i te pēke.",
+          "en": "The book is inside the bag."
+        },
+        {
+          "mi": "Kei waho te pukapuka i te pēke.",
+          "en": "The book is outside the bag."
+        }
+      ]
+    },
+    {
+      "lesson": 35,
+      "theme": "Size and length of belongings",
+      "words": [
+        {
+          "word": "nui",
+          "english": "big",
+          "type": "Describing word"
+        },
+        {
+          "word": "iti",
+          "english": "small",
+          "type": "Describing word"
+        },
+        {
+          "word": "roa",
+          "english": "long",
+          "type": "Describing word"
+        },
+        {
+          "word": "poto",
+          "english": "short",
+          "type": "Describing word"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Nāku te pukapuka nui.",
+          "en": "The big book is mine."
+        },
+        {
+          "mi": "Nāku te pukapuka iti.",
+          "en": "The small book is mine."
+        },
+        {
+          "mi": "Nāku te waka roa.",
+          "en": "The long canoe is mine."
+        },
+        {
+          "mi": "Nāku te waka poto.",
+          "en": "The short canoe is mine."
+        }
+      ]
+    },
+    {
+      "lesson": 47,
+      "theme": "Carrying light and heavy objects",
+      "words": [
+        {
+          "word": "taumaha",
+          "english": "heavy",
+          "type": "Describing word"
+        },
+        {
+          "word": "māmā",
+          "english": "light in weight",
+          "type": "Describing word"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "He taumaha te pouaka.",
+          "en": "The box is heavy."
+        },
+        {
+          "mi": "He māmā te pouaka.",
+          "en": "The box is light."
+        }
+      ]
+    },
+    {
+      "lesson": 7,
+      "theme": "Identifying children alongside family relationships",
+      "words": [
+        {
+          "word": "kōtiro",
+          "english": "girl",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ko Hana te kōtiro.",
+          "en": "Hana is the girl."
+        },
+        {
+          "mi": "Ko Pita te tama.",
+          "en": "Pita is the boy."
+        }
+      ],
+      "status": "Teacher-review wording; not linguistic approval",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged.",
+      "reviewLessons": [
+        9,
+        10
+      ]
+    },
+    {
+      "lesson": 12,
+      "theme": "Drinking and waking in the present",
+      "words": [
+        {
+          "word": "inu",
+          "english": "drink",
+          "type": "Transitive verb"
+        },
+        {
+          "word": "oho",
+          "english": "wake up",
+          "type": "Intransitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te inu ia.",
+          "en": "She is drinking."
+        },
+        {
+          "mi": "Kei te oho ia.",
+          "en": "She is waking up."
+        }
+      ],
+      "status": "Teacher-review wording; not linguistic approval",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged.",
+      "reviewLessons": [
+        17,
+        22
+      ]
+    },
+    {
+      "lesson": 13,
+      "theme": "Breakfast in the past",
+      "words": [
+        {
+          "word": "parāoa",
+          "english": "bread",
+          "type": "Noun"
+        },
+        {
+          "word": "āporo",
+          "english": "apple",
+          "type": "Noun"
+        },
+        {
+          "word": "hēki",
+          "english": "egg",
+          "type": "Noun"
+        },
+        {
+          "word": "miraka",
+          "english": "milk",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "I kai ahau i te parāoa.",
+          "en": "I ate the bread."
+        },
+        {
+          "mi": "I kai koe i te āporo.",
+          "en": "You ate the apple."
+        },
+        {
+          "mi": "I kai ia i te hēki.",
+          "en": "She ate the egg."
+        },
+        {
+          "mi": "I inu ahau i te miraka.",
+          "en": "I drank the milk."
+        }
+      ],
+      "status": "Teacher-review wording; not linguistic approval",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged.",
+      "reviewLessons": [
+        18,
+        23
+      ]
+    },
+    {
+      "lesson": 14,
+      "theme": "Drinks with i and ki",
+      "words": [
+        {
+          "word": "kawhe",
+          "english": "coffee",
+          "type": "Noun"
+        },
+        {
+          "word": "tī",
+          "english": "tea",
+          "type": "Noun"
+        },
+        {
+          "word": "kapu",
+          "english": "cup",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te inu ahau i te kawhe.",
+          "en": "I am drinking the coffee."
+        },
+        {
+          "mi": "I inu koe i te tī.",
+          "en": "You drank the tea."
+        },
+        {
+          "mi": "Kei te titiro ahau ki te kapu.",
+          "en": "I am looking at the cup."
+        }
+      ],
+      "status": "Teacher-review wording; not linguistic approval",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged.",
+      "reviewLessons": [
+        19,
+        24
+      ]
+    },
+    {
+      "lesson": 24,
+      "theme": "Strength contrast with familiar descriptions",
+      "words": [
+        {
+          "word": "kaha",
+          "english": "strong",
+          "type": "Describing word"
+        },
+        {
+          "word": "ngoikore",
+          "english": "weak",
+          "type": "Describing word"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "He kaha ahau.",
+          "en": "I am strong."
+        },
+        {
+          "mi": "He ngoikore ahau.",
+          "en": "I am weak."
+        }
+      ],
+      "status": "Teacher-review wording; not linguistic approval",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged.",
+      "reviewLessons": [
+        29,
+        34
+      ]
+    },
+    {
+      "lesson": 29,
+      "theme": "Fast and slow with familiar descriptions",
+      "words": [
+        {
+          "word": "tere",
+          "english": "fast",
+          "type": "Describing word"
+        },
+        {
+          "word": "pōturi",
+          "english": "slow",
+          "type": "Describing word"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "He tere te kurī.",
+          "en": "The dog is fast."
+        },
+        {
+          "mi": "He pōturi te kurī.",
+          "en": "The dog is slow."
+        }
+      ],
+      "status": "Teacher-review wording; not linguistic approval",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged.",
+      "reviewLessons": [
+        34,
+        39
+      ]
+    },
+    {
+      "lesson": 17,
+      "theme": "Retrieve drinking and waking in the present",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te inu ia.",
+          "en": "She is drinking."
+        },
+        {
+          "mi": "Kei te oho ia.",
+          "en": "She is waking up."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 22,
+      "theme": "Retrieve drinking and waking in the present",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te inu ia.",
+          "en": "She is drinking."
+        },
+        {
+          "mi": "Kei te oho ia.",
+          "en": "She is waking up."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 18,
+      "theme": "Retrieve breakfast in the past",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "I kai ahau i te parāoa.",
+          "en": "I ate the bread."
+        },
+        {
+          "mi": "I kai koe i te āporo.",
+          "en": "You ate the apple."
+        },
+        {
+          "mi": "I kai ia i te hēki.",
+          "en": "She ate the egg."
+        },
+        {
+          "mi": "I inu ahau i te miraka.",
+          "en": "I drank the milk."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 23,
+      "theme": "Retrieve breakfast in the past",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "I kai ahau i te parāoa.",
+          "en": "I ate the bread."
+        },
+        {
+          "mi": "I kai koe i te āporo.",
+          "en": "You ate the apple."
+        },
+        {
+          "mi": "I kai ia i te hēki.",
+          "en": "She ate the egg."
+        },
+        {
+          "mi": "I inu ahau i te miraka.",
+          "en": "I drank the milk."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 19,
+      "theme": "Retrieve drinks with i and ki",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te inu ahau i te kawhe.",
+          "en": "I am drinking the coffee."
+        },
+        {
+          "mi": "I inu koe i te tī.",
+          "en": "You drank the tea."
+        },
+        {
+          "mi": "Kei te titiro ahau ki te kapu.",
+          "en": "I am looking at the cup."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 24,
+      "theme": "Retrieve drinks with i and ki",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te inu ahau i te kawhe.",
+          "en": "I am drinking the coffee."
+        },
+        {
+          "mi": "I inu koe i te tī.",
+          "en": "You drank the tea."
+        },
+        {
+          "mi": "Kei te titiro ahau ki te kapu.",
+          "en": "I am looking at the cup."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 29,
+      "theme": "Retrieve strength contrast with familiar descriptions",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He kaha ahau.",
+          "en": "I am strong."
+        },
+        {
+          "mi": "He ngoikore ahau.",
+          "en": "I am weak."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 34,
+      "theme": "Retrieve strength contrast with familiar descriptions",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He kaha ahau.",
+          "en": "I am strong."
+        },
+        {
+          "mi": "He ngoikore ahau.",
+          "en": "I am weak."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 34,
+      "theme": "Retrieve fast and slow with familiar descriptions",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He tere te kurī.",
+          "en": "The dog is fast."
+        },
+        {
+          "mi": "He pōturi te kurī.",
+          "en": "The dog is slow."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 39,
+      "theme": "Retrieve fast and slow with familiar descriptions",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He tere te kurī.",
+          "en": "The dog is fast."
+        },
+        {
+          "mi": "He pōturi te kurī.",
+          "en": "The dog is slow."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 9,
+      "theme": "Retrieve identifying children alongside family relationships",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ko Hana te kōtiro.",
+          "en": "Hana is the girl."
+        },
+        {
+          "mi": "Ko Pita te tama.",
+          "en": "Pita is the boy."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 10,
+      "theme": "Retrieve identifying children alongside family relationships",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ko Hana te kōtiro.",
+          "en": "Hana is the girl."
+        },
+        {
+          "mi": "Ko Pita te tama.",
+          "en": "Pita is the boy."
+        }
+      ],
+      "status": "Earlier sentence retrieval; no new vocabulary or structure",
+      "selectionRationale": "Joint check of current structures, useful vocabulary, coherent groups, prerequisite load and later uses. Existing anchor structures remain unchanged."
+    },
+    {
+      "lesson": 9,
+      "theme": "Grandchildren and relatives",
+      "words": [
+        {
+          "word": "mokopuna",
+          "english": "grandchild",
+          "type": "Noun"
+        },
+        {
+          "word": "whanaunga",
+          "english": "relative",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ko Hana te mokopuna.",
+          "en": "Hana is the grandchild."
+        },
+        {
+          "mi": "Ko Hemi tōku whanaunga.",
+          "en": "Hemi is my relative."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        14,
+        16
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 8,
+      "theme": "Counting familiar people",
+      "words": [
+        {
+          "word": "maha",
+          "english": "many",
+          "type": "Stative verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "He maha ngā tamariki.",
+          "en": "There are many children."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        10,
+        20
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 9,
+      "theme": "Home rooms and resting places",
+      "words": [
+        {
+          "word": "rūma",
+          "english": "room",
+          "type": "Noun"
+        },
+        {
+          "word": "moenga",
+          "english": "bed",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te rūma koe.",
+          "en": "You are in the room."
+        },
+        {
+          "mi": "Kei te moenga ahau.",
+          "en": "I am in bed."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        12,
+        20
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 16,
+      "theme": "Sitting and standing now",
+      "words": [
+        {
+          "word": "noho",
+          "english": "sit",
+          "type": "Intransitive verb"
+        },
+        {
+          "word": "tū",
+          "english": "stand",
+          "type": "Intransitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "E noho ana ia.",
+          "en": "She is sitting."
+        },
+        {
+          "mi": "E tū ana koe.",
+          "en": "You are standing."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        22,
+        29
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 14,
+      "theme": "Wanting a drink with ki",
+      "words": [
+        {
+          "word": "hiahia",
+          "english": "want",
+          "type": "Experience verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te hiahia ahau ki te kawhe.",
+          "en": "I want the coffee."
+        },
+        {
+          "mi": "Kei te hiahia koe ki te tī.",
+          "en": "You want the tea."
+        },
+        {
+          "mi": "I inu ahau i te wai.",
+          "en": "I drank the water."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        23,
+        24
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 15,
+      "theme": "Returning and arriving",
+      "words": [
+        {
+          "word": "hoki",
+          "english": "return",
+          "type": "Intransitive verb"
+        },
+        {
+          "word": "tae",
+          "english": "arrive",
+          "type": "Intransitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kua hoki ahau.",
+          "en": "I have returned."
+        },
+        {
+          "mi": "Kua tae ahau ki te kāinga.",
+          "en": "I have arrived home."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        22,
+        24
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 16,
+      "theme": "Food preparation in progress",
+      "words": [
+        {
+          "word": "ika",
+          "english": "fish",
+          "type": "Noun"
+        },
+        {
+          "word": "kūmara",
+          "english": "sweet potato",
+          "type": "Noun"
+        },
+        {
+          "word": "tunu",
+          "english": "cook",
+          "type": "Transitive verb"
+        },
+        {
+          "word": "heihei",
+          "english": "chicken",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "E kai ana ahau i te ika.",
+          "en": "I am eating the fish."
+        },
+        {
+          "mi": "E kai ana koe i te kūmara.",
+          "en": "You are eating the sweet potato."
+        },
+        {
+          "mi": "E tunu ana ahau i te heihei.",
+          "en": "I am cooking the chicken."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        29,
+        30
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 17,
+      "theme": "A familiar household job tomorrow",
+      "words": [
+        {
+          "word": "horoi",
+          "english": "wash; clean",
+          "type": "Transitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ka horoi ahau i te kapu.",
+          "en": "I will wash the cup."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        23,
+        29
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 18,
+      "theme": "Asking and answering in class",
+      "words": [
+        {
+          "word": "pātai",
+          "english": "ask",
+          "type": "Intransitive verb"
+        },
+        {
+          "word": "whakautu",
+          "english": "answer",
+          "type": "Transitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Me pātai koe ki te kaiako.",
+          "en": "You should ask the teacher."
+        },
+        {
+          "mi": "Me whakautu koe.",
+          "en": "You should answer."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        30,
+        32
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 19,
+      "theme": "Playing with familiar time patterns",
+      "words": [
+        {
+          "word": "tākaro",
+          "english": "play",
+          "type": "Intransitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te tākaro ahau.",
+          "en": "I am playing."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        23,
+        29
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 20,
+      "theme": "Activities and ordinary weather",
+      "words": [
+        {
+          "word": "ua",
+          "english": "rain",
+          "type": "Noun"
+        },
+        {
+          "word": "kapua",
+          "english": "cloud",
+          "type": "Noun"
+        },
+        {
+          "word": "waiata",
+          "english": "sing",
+          "type": "Transitive verb"
+        },
+        {
+          "word": "kanikani",
+          "english": "dance",
+          "type": "Intransitive verb"
+        },
+        {
+          "word": "kaukau",
+          "english": "swim",
+          "type": "Intransitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kei te ua.",
+          "en": "It is raining."
+        },
+        {
+          "mi": "Ka ua āpōpō.",
+          "en": "It will rain tomorrow."
+        },
+        {
+          "mi": "I kite ahau i te kapua.",
+          "en": "I saw the cloud."
+        },
+        {
+          "mi": "I waiata ahau.",
+          "en": "I sang."
+        },
+        {
+          "mi": "Ka kanikani ahau āpōpō.",
+          "en": "I will dance tomorrow."
+        },
+        {
+          "mi": "I kaukau ahau.",
+          "en": "I swam."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        42,
+        43
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 22,
+      "theme": "Everyday wellbeing negatives",
+      "words": [
+        {
+          "word": "matekai",
+          "english": "hungry",
+          "type": "Stative verb"
+        },
+        {
+          "word": "hiainu",
+          "english": "thirsty",
+          "type": "Describing word"
+        },
+        {
+          "word": "ngenge",
+          "english": "tired",
+          "type": "Describing word"
+        },
+        {
+          "word": "māuiui",
+          "english": "unwell",
+          "type": "Describing word"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kāore ahau i te matekai.",
+          "en": "I am not hungry."
+        },
+        {
+          "mi": "Kāore ahau i te hiainu.",
+          "en": "I am not thirsty."
+        },
+        {
+          "mi": "Kāore ahau i te ngenge.",
+          "en": "I am not tired."
+        },
+        {
+          "mi": "Kāore ahau i te māuiui.",
+          "en": "I am not unwell."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        33,
+        34
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 23,
+      "theme": "Understanding and remembering",
+      "words": [
+        {
+          "word": "mōhio",
+          "english": "know",
+          "type": "Experience verb"
+        },
+        {
+          "word": "mārama",
+          "english": "understand",
+          "type": "Experience verb"
+        },
+        {
+          "word": "mahara",
+          "english": "remember",
+          "type": "Experience verb"
+        },
+        {
+          "word": "wareware",
+          "english": "forget",
+          "type": "Experience verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kāore ahau e mōhio.",
+          "en": "I do not know."
+        },
+        {
+          "mi": "Kāore anō ahau kia mārama.",
+          "en": "I have not understood yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia mahara.",
+          "en": "I have not remembered yet."
+        },
+        {
+          "mi": "Kāore ahau e wareware.",
+          "en": "I will not forget."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        42,
+        43
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 24,
+      "theme": "Waiting helping and caring",
+      "words": [
+        {
+          "word": "tatari",
+          "english": "wait",
+          "type": "Intransitive verb"
+        },
+        {
+          "word": "tiaki",
+          "english": "care for",
+          "type": "Transitive verb"
+        },
+        {
+          "word": "āwhina",
+          "english": "help",
+          "type": "Transitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "E tatari!",
+          "en": "Wait!"
+        },
+        {
+          "mi": "E tiaki i te tamaiti!",
+          "en": "Look after the child!"
+        },
+        {
+          "mi": "E āwhina i te tamaiti!",
+          "en": "Help the child!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        32,
+        44
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 25,
+      "theme": "Unfinished household tasks and a missing phone",
+      "words": [
+        {
+          "word": "kati",
+          "english": "close",
+          "type": "Transitive verb"
+        },
+        {
+          "word": "kūaha",
+          "english": "door",
+          "type": "Noun"
+        },
+        {
+          "word": "matapihi",
+          "english": "window",
+          "type": "Noun"
+        },
+        {
+          "word": "kimi",
+          "english": "look for",
+          "type": "Transitive verb"
+        },
+        {
+          "word": "ngaro",
+          "english": "missing",
+          "type": "Stative verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kāore anō ahau kia kati i te kūaha.",
+          "en": "I have not closed the door yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia whakatuwhera i te matapihi.",
+          "en": "I have not opened the window yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia horoi i te rūma.",
+          "en": "I have not cleaned the room yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia kimi i te waea.",
+          "en": "I have not looked for the phone yet."
+        },
+        {
+          "mi": "Kua ngaro te waea.",
+          "en": "The phone is missing."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        44,
+        45
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 26,
+      "theme": "Giving listening and making in class",
+      "words": [
+        {
+          "word": "pene",
+          "english": "pen",
+          "type": "Noun"
+        },
+        {
+          "word": "whakarongo",
+          "english": "listen",
+          "type": "Intransitive verb"
+        },
+        {
+          "word": "hanga",
+          "english": "make; build",
+          "type": "Transitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Hōmai te pene!",
+          "en": "Give me the pen!"
+        },
+        {
+          "mi": "E whakarongo ki te kaiako!",
+          "en": "Listen to the teacher!"
+        },
+        {
+          "mi": "E hanga i te whare!",
+          "en": "Build the house!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        44,
+        46
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 27,
+      "theme": "Clothing and looking after belongings",
+      "words": [
+        {
+          "word": "kākahu",
+          "english": "clothing",
+          "type": "Noun"
+        },
+        {
+          "word": "hū",
+          "english": "shoes",
+          "type": "Noun"
+        },
+        {
+          "word": "pakaru",
+          "english": "broken",
+          "type": "Stative verb"
+        },
+        {
+          "word": "whakatika",
+          "english": "fix",
+          "type": "Transitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kaua e tango i ngā kākahu!",
+          "en": "Do not remove the clothes!"
+        },
+        {
+          "mi": "Kaua e horoi i ngā hū!",
+          "en": "Do not wash the shoes!"
+        },
+        {
+          "mi": "Kua pakaru te waea.",
+          "en": "The phone is broken."
+        },
+        {
+          "mi": "E whakatika i te waea!",
+          "en": "Fix the phone!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        46,
+        47
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 28,
+      "theme": "Stopping routines and body care",
+      "words": [
+        {
+          "word": "ringa",
+          "english": "hand",
+          "type": "Noun"
+        },
+        {
+          "word": "waewae",
+          "english": "foot",
+          "type": "Noun"
+        },
+        {
+          "word": "mamae",
+          "english": "hurt",
+          "type": "Stative verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kāti te horoi i ngā ringa!",
+          "en": "Stop washing the hands!"
+        },
+        {
+          "mi": "Kāti te horoi i ngā waewae!",
+          "en": "Stop washing the feet!"
+        },
+        {
+          "mi": "Kei te mamae tōku ringa.",
+          "en": "My hand hurts."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        33,
+        48
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 30,
+      "theme": "Classroom response consolidation",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāore ahau i whakautu.",
+          "en": "I did not answer."
+        },
+        {
+          "mi": "Kāore ahau i pātai.",
+          "en": "I did not ask."
+        },
+        {
+          "mi": "Kāore ahau i whakarongo.",
+          "en": "I did not listen."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs."
+    },
+    {
+      "lesson": 42,
+      "theme": "Dimensions and comparison",
+      "words": [
+        {
+          "word": "whānui",
+          "english": "wide",
+          "type": "Describing word"
+        },
+        {
+          "word": "whāiti",
+          "english": "narrow",
+          "type": "Describing word"
+        },
+        {
+          "word": "teitei",
+          "english": "tall; high",
+          "type": "Describing word"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "He whānui ake te whare i te rūma.",
+          "en": "The house is wider than the room."
+        },
+        {
+          "mi": "He whāiti ake te rūma i te whare.",
+          "en": "The room is narrower than the house."
+        },
+        {
+          "mi": "He teitei ake te rākau i te whare.",
+          "en": "The tree is taller than the house."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        48,
+        52
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 43,
+      "theme": "Ability and familiar material qualities",
+      "words": [
+        {
+          "word": "wera",
+          "english": "hot",
+          "type": "Stative verb"
+        },
+        {
+          "word": "makariri",
+          "english": "cold",
+          "type": "Stative verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ka taea e au te ipu te horoi.",
+          "en": "I can wash the container."
+        },
+        {
+          "mi": "Kāore e taea e au te pouaka te kawe.",
+          "en": "I cannot carry the box."
+        },
+        {
+          "mi": "He wera ake te tī i te miraka.",
+          "en": "The tea is hotter than the milk."
+        },
+        {
+          "mi": "He makariri ake te miraka i te tī.",
+          "en": "The milk is colder than the tea."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        49,
+        53
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 44,
+      "theme": "Passive actions and object states",
+      "words": [
+        {
+          "word": "mākū",
+          "english": "wet",
+          "type": "Describing word"
+        },
+        {
+          "word": "maroke",
+          "english": "dry",
+          "type": "Stative verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "I kainga te parāoa e au.",
+          "en": "The bread was eaten by me."
+        },
+        {
+          "mi": "He mākū te kākahu.",
+          "en": "The clothing is wet."
+        },
+        {
+          "mi": "He maroke te kākahu.",
+          "en": "The clothing is dry."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        49,
+        54
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 45,
+      "theme": "Easy and difficult tasks",
+      "words": [
+        {
+          "word": "uaua",
+          "english": "difficult",
+          "type": "Describing word"
+        },
+        {
+          "word": "ngāwari",
+          "english": "easy",
+          "type": "Describing word"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ka taea e au te pukapuka te pānui.",
+          "en": "I can read the book."
+        },
+        {
+          "mi": "He uaua te mahi.",
+          "en": "The work is difficult."
+        },
+        {
+          "mi": "He ngāwari te mahi.",
+          "en": "The work is easy."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        50,
+        55
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 46,
+      "theme": "Practising a familiar activity",
+      "words": [
+        {
+          "word": "whakaharatau",
+          "english": "practise",
+          "type": "Transitive verb"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ka taea e au te waiata te whakaharatau.",
+          "en": "I can practise the song."
+        },
+        {
+          "mi": "Kāore e taea e au te waiata te whakaharatau.",
+          "en": "I cannot practise the song."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        49,
+        56
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 48,
+      "theme": "Seeing shared performances",
+      "words": [
+        {
+          "word": "whakaari",
+          "english": "performance",
+          "type": "Noun"
+        },
+        {
+          "word": "haka",
+          "english": "haka",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ka kitea te whakaari e ngā ākonga.",
+          "en": "The performance will be seen by the students."
+        },
+        {
+          "mi": "Ka kitea te haka e te kaiako.",
+          "en": "The haka will be seen by the teacher."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        50,
+        58
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 49,
+      "theme": "Passives of known making writing and washing actions",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka hangaia te pouaka e te kaiako.",
+          "en": "The box will be made by the teacher."
+        },
+        {
+          "mi": "I tuhia te ingoa e au.",
+          "en": "The name was written by me."
+        },
+        {
+          "mi": "Ka horoia ngā kākahu e au.",
+          "en": "The clothes will be washed by me."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs."
+    },
+    {
+      "lesson": 50,
+      "theme": "Comparison habits and ability consolidation",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He tere ake te kurī i te ngeru.",
+          "en": "The dog is faster than the cat."
+        },
+        {
+          "mi": "Kāore e taea e au te pouaka te kawe.",
+          "en": "I cannot carry the box."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs."
+    },
+    {
+      "lesson": 52,
+      "theme": "Why and when in familiar life",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He aha koe i inu ai i te kawhe?",
+          "en": "Why did you drink the coffee?"
+        },
+        {
+          "mi": "He aha koe i pātai ai ki te kaiako?",
+          "en": "Why did you ask the teacher?"
+        },
+        {
+          "mi": "Nōnahea koe i tākaro ai?",
+          "en": "When did you play?"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs."
+    },
+    {
+      "lesson": 53,
+      "theme": "Plans using familiar actions",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ki te haere koe ki te marae, ka haere ahau ki te marae.",
+          "en": "If you go to the marae, I will go to the marae."
+        },
+        {
+          "mi": "Ki te ua āpōpō, ka noho ahau ki te kāinga.",
+          "en": "If it rains tomorrow, I will stay at home."
+        },
+        {
+          "mi": "Ki te moe te tamaiti, ka pānui ahau i te pukapuka.",
+          "en": "If the child sleeps, I will read the book."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs."
+    },
+    {
+      "lesson": 54,
+      "theme": "Alternative conditional frames",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Mēnā ka ua, ka noho ahau ki te kāinga.",
+          "en": "If it rains, I will stay at home."
+        },
+        {
+          "mi": "Mehemea ka tākaro koe, ka tākaro ahau.",
+          "en": "If you play, I will play."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs."
+    },
+    {
+      "lesson": 55,
+      "theme": "When people gathered",
+      "words": [
+        {
+          "word": "hākari",
+          "english": "feast",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Nōnahea koe i haere ai ki te hui?",
+          "en": "When did you go to the gathering?"
+        },
+        {
+          "mi": "Nōnahea koe i haere ai ki te hākari?",
+          "en": "When did you go to the feast?"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        58,
+        60
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 56,
+      "theme": "When to read travel and play",
+      "words": [
+        {
+          "word": "pūrākau",
+          "english": "story; traditional narrative",
+          "type": "Noun"
+        },
+        {
+          "word": "pahi",
+          "english": "bus",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Āhea koe e pānui ai i te pūrākau?",
+          "en": "When will you read the story?"
+        },
+        {
+          "mi": "Āhea koe e haere ai ki te pahi?",
+          "en": "When will you go to the bus?"
+        },
+        {
+          "mi": "Āhea koe e tākaro ai?",
+          "en": "When will you play?"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        59,
+        60
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 57,
+      "theme": "Conditions in familiar outdoor situations",
+      "words": [
+        {
+          "word": "kiwi",
+          "english": "kiwi",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako.",
+          "en": "If you see the kiwi, you will ask the teacher."
+        },
+        {
+          "mi": "Ki te haere koe ki te moana, ka kaukau koe.",
+          "en": "If you go to the sea, you will swim."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs.",
+      "reviewLessons": [
+        59,
+        60
+      ],
+      "postCourseReviewRequired": false
+    },
+    {
+      "lesson": 58,
+      "theme": "Classroom and social interaction",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ki te pātai koe ki te kaiako, ka whakautu ia.",
+          "en": "If you ask the teacher, she will answer."
+        },
+        {
+          "mi": "Ki te hiahia koe ki te tī, ka hoatu ahau i te tī ki a koe.",
+          "en": "If you want the tea, I will give you the tea."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs."
+    },
+    {
+      "lesson": 59,
+      "theme": "Familiar problems and responses",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ki te pakaru te pouaka, ka whakatika ahau i te pouaka.",
+          "en": "If the box breaks, I will fix the box."
+        },
+        {
+          "mi": "Ki te ngaro te pukapuka, ka kimi ahau i te pukapuka.",
+          "en": "If the book is missing, I will look for the book."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs."
+    },
+    {
+      "lesson": 60,
+      "theme": "Whole course conversation and retrieval",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He aha koe i pātai ai ki te kaiako?",
+          "en": "Why did you ask the teacher?"
+        },
+        {
+          "mi": "Āhea koe e pānui ai i te pūrākau?",
+          "en": "When will you read the story?"
+        },
+        {
+          "mi": "Ki te hiahia koe ki te tī, ka hoatu ahau i te tī ki a koe.",
+          "en": "If you want the tea, I will give you the tea."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide",
+      "status": "Teacher-review draft; linguistic naturalness not independently certified",
+      "selectionRationale": "Joint check: actual current/prior structures, useful existing candidates, semantic grouping, total load and multiple later uses. Animal nouns use transferable actions, not animal-only verbs."
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ā koutou kurī.",
+          "en": "Your (three or more) dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 39
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ō koutou whare.",
+          "en": "Your (three or more) houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 39
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā rātou kurī.",
+          "en": "Their (three or more) dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 39
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tō rātou whare.",
+          "en": "Their (three or more) house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 39
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ā rātou kurī.",
+          "en": "Their (three or more) dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 39
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ō rātou whare.",
+          "en": "Their (three or more) houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 39
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ā tātou kurī.",
+          "en": "Our (three or more, including you) dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 38
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ō tātou whare.",
+          "en": "Our (three or more, including you) houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 38
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā mātou kurī.",
+          "en": "Our (three or more, not you) dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 38
+    },
+    {
+      "lesson": 39,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tō mātou whare.",
+          "en": "Our (three or more, not you) house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 38
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ā mātou kurī.",
+          "en": "Our (three or more, not you) dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 38
+    },
+    {
+      "lesson": 39,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ō mātou whare.",
+          "en": "Our (three or more, not you) houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 38
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā koutou kurī.",
+          "en": "Your (three or more) dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 38
+    },
+    {
+      "lesson": 39,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tō koutou whare.",
+          "en": "Your (three or more) house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 38
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā rāua kurī.",
+          "en": "Their (two people) dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 37
+    },
+    {
+      "lesson": 38,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tō rāua whare.",
+          "en": "Their (two people) house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 37
+    },
+    {
+      "lesson": 39,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ā rāua kurī.",
+          "en": "Their (two people) dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 37
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ō rāua whare.",
+          "en": "Their (two people) houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 37
+    },
+    {
+      "lesson": 38,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā tātou kurī.",
+          "en": "Our (three or more, including you) dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 37
+    },
+    {
+      "lesson": 39,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tō tātou whare.",
+          "en": "Our (three or more, including you) house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 37
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ā māua kurī.",
+          "en": "Our (two people, not you) dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 36
+    },
+    {
+      "lesson": 37,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ō māua whare.",
+          "en": "Our (two people, not you) houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 36
+    },
+    {
+      "lesson": 38,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā kōrua kurī.",
+          "en": "Your (two people) dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 36
+    },
+    {
+      "lesson": 39,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tō kōrua whare.",
+          "en": "Your (two people) house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 36
+    },
+    {
+      "lesson": 40,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ā kōrua kurī.",
+          "en": "Your (two people) dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 36
+    },
+    {
+      "lesson": 37,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ō kōrua whare.",
+          "en": "Your (two people) houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 36
+    },
+    {
+      "lesson": 36,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā tāua kurī.",
+          "en": "Our (you and me) dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 35
+    },
+    {
+      "lesson": 36,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tō tāua whare.",
+          "en": "Our (you and me) house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 35
+    },
+    {
+      "lesson": 36,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ā tāua kurī.",
+          "en": "Our (you and me) dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 35
+    },
+    {
+      "lesson": 36,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ō tāua whare.",
+          "en": "Our (you and me) houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 35
+    },
+    {
+      "lesson": 36,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tā māua kurī.",
+          "en": "Our (two people, not you) dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 35
+    },
+    {
+      "lesson": 36,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tō māua whare.",
+          "en": "Our (two people, not you) house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 35
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura tēhea kurī?",
+          "en": "Which dog is at the school?"
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 28
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura ēhea kurī?",
+          "en": "Which dogs are at the school?"
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 28
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tāna kurī.",
+          "en": "Her dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 27
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tōna whare.",
+          "en": "Her house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 27
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae āna kurī.",
+          "en": "Her dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 27
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ōna whare.",
+          "en": "Her houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 27
+    },
+    {
+      "lesson": 30,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tāu kurī.",
+          "en": "Your dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 26
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tōu whare.",
+          "en": "Your house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 26
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae āu kurī.",
+          "en": "Your dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 26
+    },
+    {
+      "lesson": 30,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ōu whare.",
+          "en": "Your houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 26
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tāku kurī.",
+          "en": "My dog is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 25
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tōku whare.",
+          "en": "My house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 25
+    },
+    {
+      "lesson": 34,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae āku kurī.",
+          "en": "My dogs are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 25
+    },
+    {
+      "lesson": 30,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ōku whare.",
+          "en": "My houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 25
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura tētahi kurī.",
+          "en": "A particular dog is at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 20
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura ētahi kurī.",
+          "en": "Some dogs are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 20
+    },
+    {
+      "lesson": 34,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He aha tēnei?",
+          "en": "What is this?"
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 20
+    },
+    {
+      "lesson": 22,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura koutou.",
+          "en": "You (three or more) are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 19
+    },
+    {
+      "lesson": 30,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura rātou.",
+          "en": "They (three or more) are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 19
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura tātou.",
+          "en": "We (three or more, including you) are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 18
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura mātou.",
+          "en": "We (three or more, not you) are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 18
+    },
+    {
+      "lesson": 34,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura tō kurī.",
+          "en": "Your dog is at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 17
+    },
+    {
+      "lesson": 22,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura ō kurī.",
+          "en": "Your dogs are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 17
+    },
+    {
+      "lesson": 29,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura kōrua.",
+          "en": "You two are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 16
+    },
+    {
+      "lesson": 30,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura rāua.",
+          "en": "Those two are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 16
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura tērā kurī.",
+          "en": "That dog over there is at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 15
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura ērā kurī.",
+          "en": "Those dogs over there are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 15
+    },
+    {
+      "lesson": 34,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae taku whare.",
+          "en": "My house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 14
+    },
+    {
+      "lesson": 22,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae aku whare.",
+          "en": "My houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 14
+    },
+    {
+      "lesson": 23,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae tana whare.",
+          "en": "Her house is at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 14
+    },
+    {
+      "lesson": 24,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te marae ana whare.",
+          "en": "Her houses are at the marae."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 14
+    },
+    {
+      "lesson": 29,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura tāua.",
+          "en": "You and I are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 13
+    },
+    {
+      "lesson": 30,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura māua.",
+          "en": "We two (not you) are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 13
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura tēnei whare.",
+          "en": "This house is at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 12
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura ēnei whare.",
+          "en": "These houses are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 12
+    },
+    {
+      "lesson": 34,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura tēnā tamaiti.",
+          "en": "That child near you is at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 12
+    },
+    {
+      "lesson": 22,
+      "theme": "Retrieve established reference forms",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te kura ēnā tamariki.",
+          "en": "Those children near you are at the school."
+        }
+      ],
+      "alignmentPass": "2026-10-08-reference-retrieval",
+      "status": "Earlier reference retrieval; no new form introduction",
+      "sourceLesson": 12
+    },
+    {
+      "lesson": 14,
+      "theme": "Retrieve grandchildren and relatives",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ko Hana te mokopuna.",
+          "en": "Hana is the grandchild."
+        },
+        {
+          "mi": "Ko Hemi tōku whanaunga.",
+          "en": "Hemi is my relative."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 9
+    },
+    {
+      "lesson": 16,
+      "theme": "Retrieve grandchildren and relatives",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ko Hana te mokopuna.",
+          "en": "Hana is the grandchild."
+        },
+        {
+          "mi": "Ko Hemi tōku whanaunga.",
+          "en": "Hemi is my relative."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 9
+    },
+    {
+      "lesson": 10,
+      "theme": "Retrieve counting familiar people",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He maha ngā tamariki.",
+          "en": "There are many children."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 8
+    },
+    {
+      "lesson": 20,
+      "theme": "Retrieve counting familiar people",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He maha ngā tamariki.",
+          "en": "There are many children."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 8
+    },
+    {
+      "lesson": 12,
+      "theme": "Retrieve home rooms and resting places",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te rūma koe.",
+          "en": "You are in the room."
+        },
+        {
+          "mi": "Kei te moenga ahau.",
+          "en": "I am in bed."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 9
+    },
+    {
+      "lesson": 20,
+      "theme": "Retrieve home rooms and resting places",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te rūma koe.",
+          "en": "You are in the room."
+        },
+        {
+          "mi": "Kei te moenga ahau.",
+          "en": "I am in bed."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 9
+    },
+    {
+      "lesson": 29,
+      "theme": "Retrieve sitting and standing now",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "E noho ana ia.",
+          "en": "She is sitting."
+        },
+        {
+          "mi": "E tū ana koe.",
+          "en": "You are standing."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 16
+    },
+    {
+      "lesson": 22,
+      "theme": "Retrieve sitting and standing now",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "E noho ana ia.",
+          "en": "She is sitting."
+        },
+        {
+          "mi": "E tū ana koe.",
+          "en": "You are standing."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 16
+    },
+    {
+      "lesson": 23,
+      "theme": "Retrieve wanting a drink with ki",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te hiahia ahau ki te kawhe.",
+          "en": "I want the coffee."
+        },
+        {
+          "mi": "Kei te hiahia koe ki te tī.",
+          "en": "You want the tea."
+        },
+        {
+          "mi": "I inu ahau i te wai.",
+          "en": "I drank the water."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 14
+    },
+    {
+      "lesson": 24,
+      "theme": "Retrieve wanting a drink with ki",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te hiahia ahau ki te kawhe.",
+          "en": "I want the coffee."
+        },
+        {
+          "mi": "Kei te hiahia koe ki te tī.",
+          "en": "You want the tea."
+        },
+        {
+          "mi": "I inu ahau i te wai.",
+          "en": "I drank the water."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 14
+    },
+    {
+      "lesson": 22,
+      "theme": "Retrieve returning and arriving",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kua hoki ahau.",
+          "en": "I have returned."
+        },
+        {
+          "mi": "Kua tae ahau ki te kāinga.",
+          "en": "I have arrived home."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 15
+    },
+    {
+      "lesson": 24,
+      "theme": "Retrieve returning and arriving",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kua hoki ahau.",
+          "en": "I have returned."
+        },
+        {
+          "mi": "Kua tae ahau ki te kāinga.",
+          "en": "I have arrived home."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 15
+    },
+    {
+      "lesson": 29,
+      "theme": "Retrieve food preparation in progress",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "E kai ana ahau i te ika.",
+          "en": "I am eating the fish."
+        },
+        {
+          "mi": "E kai ana koe i te kūmara.",
+          "en": "You are eating the sweet potato."
+        },
+        {
+          "mi": "E tunu ana ahau i te heihei.",
+          "en": "I am cooking the chicken."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 16
+    },
+    {
+      "lesson": 30,
+      "theme": "Retrieve food preparation in progress",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "E kai ana ahau i te ika.",
+          "en": "I am eating the fish."
+        },
+        {
+          "mi": "E kai ana koe i te kūmara.",
+          "en": "You are eating the sweet potato."
+        },
+        {
+          "mi": "E tunu ana ahau i te heihei.",
+          "en": "I am cooking the chicken."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 16
+    },
+    {
+      "lesson": 23,
+      "theme": "Retrieve a familiar household job tomorrow",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka horoi ahau i te kapu.",
+          "en": "I will wash the cup."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 17
+    },
+    {
+      "lesson": 29,
+      "theme": "Retrieve a familiar household job tomorrow",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka horoi ahau i te kapu.",
+          "en": "I will wash the cup."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 17
+    },
+    {
+      "lesson": 30,
+      "theme": "Retrieve asking and answering in class",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Me pātai koe ki te kaiako.",
+          "en": "You should ask the teacher."
+        },
+        {
+          "mi": "Me whakautu koe.",
+          "en": "You should answer."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 18
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve asking and answering in class",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Me pātai koe ki te kaiako.",
+          "en": "You should ask the teacher."
+        },
+        {
+          "mi": "Me whakautu koe.",
+          "en": "You should answer."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 18
+    },
+    {
+      "lesson": 23,
+      "theme": "Retrieve playing with familiar time patterns",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te tākaro ahau.",
+          "en": "I am playing."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 19
+    },
+    {
+      "lesson": 29,
+      "theme": "Retrieve playing with familiar time patterns",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te tākaro ahau.",
+          "en": "I am playing."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 19
+    },
+    {
+      "lesson": 42,
+      "theme": "Retrieve activities and ordinary weather",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te ua.",
+          "en": "It is raining."
+        },
+        {
+          "mi": "Ka ua āpōpō.",
+          "en": "It will rain tomorrow."
+        },
+        {
+          "mi": "I kite ahau i te kapua.",
+          "en": "I saw the cloud."
+        },
+        {
+          "mi": "I waiata ahau.",
+          "en": "I sang."
+        },
+        {
+          "mi": "Ka kanikani ahau āpōpō.",
+          "en": "I will dance tomorrow."
+        },
+        {
+          "mi": "I kaukau ahau.",
+          "en": "I swam."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 20
+    },
+    {
+      "lesson": 43,
+      "theme": "Retrieve activities and ordinary weather",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kei te ua.",
+          "en": "It is raining."
+        },
+        {
+          "mi": "Ka ua āpōpō.",
+          "en": "It will rain tomorrow."
+        },
+        {
+          "mi": "I kite ahau i te kapua.",
+          "en": "I saw the cloud."
+        },
+        {
+          "mi": "I waiata ahau.",
+          "en": "I sang."
+        },
+        {
+          "mi": "Ka kanikani ahau āpōpō.",
+          "en": "I will dance tomorrow."
+        },
+        {
+          "mi": "I kaukau ahau.",
+          "en": "I swam."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 20
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve everyday wellbeing negatives",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāore ahau i te matekai.",
+          "en": "I am not hungry."
+        },
+        {
+          "mi": "Kāore ahau i te hiainu.",
+          "en": "I am not thirsty."
+        },
+        {
+          "mi": "Kāore ahau i te ngenge.",
+          "en": "I am not tired."
+        },
+        {
+          "mi": "Kāore ahau i te māuiui.",
+          "en": "I am not unwell."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 22
+    },
+    {
+      "lesson": 34,
+      "theme": "Retrieve everyday wellbeing negatives",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāore ahau i te matekai.",
+          "en": "I am not hungry."
+        },
+        {
+          "mi": "Kāore ahau i te hiainu.",
+          "en": "I am not thirsty."
+        },
+        {
+          "mi": "Kāore ahau i te ngenge.",
+          "en": "I am not tired."
+        },
+        {
+          "mi": "Kāore ahau i te māuiui.",
+          "en": "I am not unwell."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 22
+    },
+    {
+      "lesson": 42,
+      "theme": "Retrieve understanding and remembering",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāore ahau e mōhio.",
+          "en": "I do not know."
+        },
+        {
+          "mi": "Kāore anō ahau kia mārama.",
+          "en": "I have not understood yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia mahara.",
+          "en": "I have not remembered yet."
+        },
+        {
+          "mi": "Kāore ahau e wareware.",
+          "en": "I will not forget."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 23
+    },
+    {
+      "lesson": 43,
+      "theme": "Retrieve understanding and remembering",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāore ahau e mōhio.",
+          "en": "I do not know."
+        },
+        {
+          "mi": "Kāore anō ahau kia mārama.",
+          "en": "I have not understood yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia mahara.",
+          "en": "I have not remembered yet."
+        },
+        {
+          "mi": "Kāore ahau e wareware.",
+          "en": "I will not forget."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 23
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve waiting helping and caring",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "E tatari!",
+          "en": "Wait!"
+        },
+        {
+          "mi": "E tiaki i te tamaiti!",
+          "en": "Look after the child!"
+        },
+        {
+          "mi": "E āwhina i te tamaiti!",
+          "en": "Help the child!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 24
+    },
+    {
+      "lesson": 44,
+      "theme": "Retrieve waiting helping and caring",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "E tatari!",
+          "en": "Wait!"
+        },
+        {
+          "mi": "E tiaki i te tamaiti!",
+          "en": "Look after the child!"
+        },
+        {
+          "mi": "E āwhina i te tamaiti!",
+          "en": "Help the child!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 24
+    },
+    {
+      "lesson": 44,
+      "theme": "Retrieve unfinished household tasks and a missing phone",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāore anō ahau kia kati i te kūaha.",
+          "en": "I have not closed the door yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia whakatuwhera i te matapihi.",
+          "en": "I have not opened the window yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia horoi i te rūma.",
+          "en": "I have not cleaned the room yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia kimi i te waea.",
+          "en": "I have not looked for the phone yet."
+        },
+        {
+          "mi": "Kua ngaro te waea.",
+          "en": "The phone is missing."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 25
+    },
+    {
+      "lesson": 45,
+      "theme": "Retrieve unfinished household tasks and a missing phone",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāore anō ahau kia kati i te kūaha.",
+          "en": "I have not closed the door yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia whakatuwhera i te matapihi.",
+          "en": "I have not opened the window yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia horoi i te rūma.",
+          "en": "I have not cleaned the room yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia kimi i te waea.",
+          "en": "I have not looked for the phone yet."
+        },
+        {
+          "mi": "Kua ngaro te waea.",
+          "en": "The phone is missing."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 25
+    },
+    {
+      "lesson": 44,
+      "theme": "Retrieve giving listening and making in class",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Hōmai te pene!",
+          "en": "Give me the pen!"
+        },
+        {
+          "mi": "E whakarongo ki te kaiako!",
+          "en": "Listen to the teacher!"
+        },
+        {
+          "mi": "E hanga i te whare!",
+          "en": "Build the house!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 26
+    },
+    {
+      "lesson": 46,
+      "theme": "Retrieve giving listening and making in class",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Hōmai te pene!",
+          "en": "Give me the pen!"
+        },
+        {
+          "mi": "E whakarongo ki te kaiako!",
+          "en": "Listen to the teacher!"
+        },
+        {
+          "mi": "E hanga i te whare!",
+          "en": "Build the house!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 26
+    },
+    {
+      "lesson": 46,
+      "theme": "Retrieve clothing and looking after belongings",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kaua e tango i ngā kākahu!",
+          "en": "Do not remove the clothes!"
+        },
+        {
+          "mi": "Kaua e horoi i ngā hū!",
+          "en": "Do not wash the shoes!"
+        },
+        {
+          "mi": "Kua pakaru te waea.",
+          "en": "The phone is broken."
+        },
+        {
+          "mi": "E whakatika i te waea!",
+          "en": "Fix the phone!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 27
+    },
+    {
+      "lesson": 47,
+      "theme": "Retrieve clothing and looking after belongings",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kaua e tango i ngā kākahu!",
+          "en": "Do not remove the clothes!"
+        },
+        {
+          "mi": "Kaua e horoi i ngā hū!",
+          "en": "Do not wash the shoes!"
+        },
+        {
+          "mi": "Kua pakaru te waea.",
+          "en": "The phone is broken."
+        },
+        {
+          "mi": "E whakatika i te waea!",
+          "en": "Fix the phone!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 27
+    },
+    {
+      "lesson": 33,
+      "theme": "Retrieve stopping routines and body care",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāti te horoi i ngā ringa!",
+          "en": "Stop washing the hands!"
+        },
+        {
+          "mi": "Kāti te horoi i ngā waewae!",
+          "en": "Stop washing the feet!"
+        },
+        {
+          "mi": "Kei te mamae tōku ringa.",
+          "en": "My hand hurts."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 28
+    },
+    {
+      "lesson": 48,
+      "theme": "Retrieve stopping routines and body care",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāti te horoi i ngā ringa!",
+          "en": "Stop washing the hands!"
+        },
+        {
+          "mi": "Kāti te horoi i ngā waewae!",
+          "en": "Stop washing the feet!"
+        },
+        {
+          "mi": "Kei te mamae tōku ringa.",
+          "en": "My hand hurts."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 28
+    },
+    {
+      "lesson": 48,
+      "theme": "Retrieve dimensions and comparison",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He whānui ake te whare i te rūma.",
+          "en": "The house is wider than the room."
+        },
+        {
+          "mi": "He whāiti ake te rūma i te whare.",
+          "en": "The room is narrower than the house."
+        },
+        {
+          "mi": "He teitei ake te rākau i te whare.",
+          "en": "The tree is taller than the house."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 42
+    },
+    {
+      "lesson": 52,
+      "theme": "Retrieve dimensions and comparison",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "He whānui ake te whare i te rūma.",
+          "en": "The house is wider than the room."
+        },
+        {
+          "mi": "He whāiti ake te rūma i te whare.",
+          "en": "The room is narrower than the house."
+        },
+        {
+          "mi": "He teitei ake te rākau i te whare.",
+          "en": "The tree is taller than the house."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 42
+    },
+    {
+      "lesson": 49,
+      "theme": "Retrieve ability and familiar material qualities",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka taea e au te ipu te horoi.",
+          "en": "I can wash the container."
+        },
+        {
+          "mi": "Kāore e taea e au te pouaka te kawe.",
+          "en": "I cannot carry the box."
+        },
+        {
+          "mi": "He wera ake te tī i te miraka.",
+          "en": "The tea is hotter than the milk."
+        },
+        {
+          "mi": "He makariri ake te miraka i te tī.",
+          "en": "The milk is colder than the tea."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 43
+    },
+    {
+      "lesson": 53,
+      "theme": "Retrieve ability and familiar material qualities",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka taea e au te ipu te horoi.",
+          "en": "I can wash the container."
+        },
+        {
+          "mi": "Kāore e taea e au te pouaka te kawe.",
+          "en": "I cannot carry the box."
+        },
+        {
+          "mi": "He wera ake te tī i te miraka.",
+          "en": "The tea is hotter than the milk."
+        },
+        {
+          "mi": "He makariri ake te miraka i te tī.",
+          "en": "The milk is colder than the tea."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 43
+    },
+    {
+      "lesson": 49,
+      "theme": "Retrieve passive actions and object states",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "I kainga te parāoa e au.",
+          "en": "The bread was eaten by me."
+        },
+        {
+          "mi": "He mākū te kākahu.",
+          "en": "The clothing is wet."
+        },
+        {
+          "mi": "He maroke te kākahu.",
+          "en": "The clothing is dry."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 44
+    },
+    {
+      "lesson": 54,
+      "theme": "Retrieve passive actions and object states",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "I kainga te parāoa e au.",
+          "en": "The bread was eaten by me."
+        },
+        {
+          "mi": "He mākū te kākahu.",
+          "en": "The clothing is wet."
+        },
+        {
+          "mi": "He maroke te kākahu.",
+          "en": "The clothing is dry."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 44
+    },
+    {
+      "lesson": 50,
+      "theme": "Retrieve easy and difficult tasks",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka taea e au te pukapuka te pānui.",
+          "en": "I can read the book."
+        },
+        {
+          "mi": "He uaua te mahi.",
+          "en": "The work is difficult."
+        },
+        {
+          "mi": "He ngāwari te mahi.",
+          "en": "The work is easy."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 45
+    },
+    {
+      "lesson": 55,
+      "theme": "Retrieve easy and difficult tasks",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka taea e au te pukapuka te pānui.",
+          "en": "I can read the book."
+        },
+        {
+          "mi": "He uaua te mahi.",
+          "en": "The work is difficult."
+        },
+        {
+          "mi": "He ngāwari te mahi.",
+          "en": "The work is easy."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 45
+    },
+    {
+      "lesson": 49,
+      "theme": "Retrieve practising a familiar activity",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka taea e au te waiata te whakaharatau.",
+          "en": "I can practise the song."
+        },
+        {
+          "mi": "Kāore e taea e au te waiata te whakaharatau.",
+          "en": "I cannot practise the song."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 46
+    },
+    {
+      "lesson": 56,
+      "theme": "Retrieve practising a familiar activity",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka taea e au te waiata te whakaharatau.",
+          "en": "I can practise the song."
+        },
+        {
+          "mi": "Kāore e taea e au te waiata te whakaharatau.",
+          "en": "I cannot practise the song."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 46
+    },
+    {
+      "lesson": 50,
+      "theme": "Retrieve seeing shared performances",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka kitea te whakaari e ngā ākonga.",
+          "en": "The performance will be seen by the students."
+        },
+        {
+          "mi": "Ka kitea te haka e te kaiako.",
+          "en": "The haka will be seen by the teacher."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 48
+    },
+    {
+      "lesson": 58,
+      "theme": "Retrieve seeing shared performances",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ka kitea te whakaari e ngā ākonga.",
+          "en": "The performance will be seen by the students."
+        },
+        {
+          "mi": "Ka kitea te haka e te kaiako.",
+          "en": "The haka will be seen by the teacher."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 48
+    },
+    {
+      "lesson": 58,
+      "theme": "Retrieve when people gathered",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Nōnahea koe i haere ai ki te hui?",
+          "en": "When did you go to the gathering?"
+        },
+        {
+          "mi": "Nōnahea koe i haere ai ki te hākari?",
+          "en": "When did you go to the feast?"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 55
+    },
+    {
+      "lesson": 60,
+      "theme": "Retrieve when people gathered",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Nōnahea koe i haere ai ki te hui?",
+          "en": "When did you go to the gathering?"
+        },
+        {
+          "mi": "Nōnahea koe i haere ai ki te hākari?",
+          "en": "When did you go to the feast?"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 55
+    },
+    {
+      "lesson": 59,
+      "theme": "Retrieve when to read travel and play",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Āhea koe e pānui ai i te pūrākau?",
+          "en": "When will you read the story?"
+        },
+        {
+          "mi": "Āhea koe e haere ai ki te pahi?",
+          "en": "When will you go to the bus?"
+        },
+        {
+          "mi": "Āhea koe e tākaro ai?",
+          "en": "When will you play?"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 56
+    },
+    {
+      "lesson": 60,
+      "theme": "Retrieve when to read travel and play",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Āhea koe e pānui ai i te pūrākau?",
+          "en": "When will you read the story?"
+        },
+        {
+          "mi": "Āhea koe e haere ai ki te pahi?",
+          "en": "When will you go to the bus?"
+        },
+        {
+          "mi": "Āhea koe e tākaro ai?",
+          "en": "When will you play?"
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 56
+    },
+    {
+      "lesson": 60,
+      "theme": "Retrieve conditions in familiar outdoor situations",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako.",
+          "en": "If you see the kiwi, you will ask the teacher."
+        },
+        {
+          "mi": "Ki te haere koe ki te moana, ka kaukau koe.",
+          "en": "If you go to the sea, you will swim."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 57
+    },
+    {
+      "lesson": 59,
+      "theme": "Retrieve conditions in familiar outdoor situations",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Ki te kite koe i te kiwi, ka pātai koe ki te kaiako.",
+          "en": "If you see the kiwi, you will ask the teacher."
+        },
+        {
+          "mi": "Ki te haere koe ki te moana, ka kaukau koe.",
+          "en": "If you go to the sea, you will swim."
+        }
+      ],
+      "alignmentPass": "2026-10-08-coursewide-retrieval",
+      "status": "Earlier sentence retrieval; no new vocabulary",
+      "sourceLesson": 57
+    },
+    {
+      "lesson": 18,
+      "theme": "Reading and writing in class",
+      "words": [
+        {
+          "word": "pānui",
+          "english": "read",
+          "type": "Transitive verb"
+        },
+        {
+          "word": "tuhi",
+          "english": "write",
+          "type": "Transitive verb"
+        },
+        {
+          "word": "pukapuka",
+          "english": "book",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Me pānui koe i te pukapuka.",
+          "en": "You should read the book."
+        },
+        {
+          "mi": "Me tuhi koe i tōu ingoa.",
+          "en": "You should write your name."
+        }
+      ],
+      "alignmentPass": "2026-10-08-load-smoothing",
+      "status": "Teacher-review draft; familiar/current grammatical frames",
+      "reviewLessons": [
+        22,
+        28
+      ]
+    },
+    {
+      "lesson": 19,
+      "theme": "Giving and listening in class",
+      "words": [
+        {
+          "word": "hoatu",
+          "english": "give (away from the speaker)",
+          "type": "Transitive verb"
+        },
+        {
+          "word": "hōmai",
+          "english": "give (towards the speaker)",
+          "type": "Transitive verb"
+        },
+        {
+          "word": "whakarongo",
+          "english": "listen",
+          "type": "Intransitive verb"
+        },
+        {
+          "word": "pene",
+          "english": "pen",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Me hoatu koe i te pukapuka ki te kaiako.",
+          "en": "You should give the book to the teacher."
+        },
+        {
+          "mi": "Me hōmai koe i te pene ki a au.",
+          "en": "You should give the pen to me."
+        },
+        {
+          "mi": "Me whakarongo koe ki te kaiako.",
+          "en": "You should listen to the teacher."
+        }
+      ],
+      "alignmentPass": "2026-10-08-load-smoothing",
+      "status": "Teacher-review draft; familiar/current grammatical frames",
+      "reviewLessons": [
+        25,
+        26
+      ]
+    },
+    {
+      "lesson": 23,
+      "theme": "Recognising missing belongings",
+      "words": [
+        {
+          "word": "waea",
+          "english": "phone; wire",
+          "type": "Noun"
+        },
+        {
+          "word": "pēke",
+          "english": "bag",
+          "type": "Noun"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "Kāore anō ahau kia kite i te waea.",
+          "en": "I have not seen the phone yet."
+        },
+        {
+          "mi": "Kāore ahau i kite i te pēke.",
+          "en": "I did not see the bag."
+        }
+      ],
+      "alignmentPass": "2026-10-08-load-smoothing",
+      "status": "Teacher-review draft; familiar/current grammatical frames",
+      "reviewLessons": [
+        30,
+        34
+      ]
+    },
+    {
+      "lesson": 24,
+      "theme": "Looking up and down",
+      "words": [
+        {
+          "word": "runga",
+          "english": "above; on top",
+          "type": "Position word"
+        },
+        {
+          "word": "raro",
+          "english": "below; underneath",
+          "type": "Position word"
+        }
+      ],
+      "pairs": [
+        {
+          "mi": "E titiro ki runga!",
+          "en": "Look up!"
+        },
+        {
+          "mi": "E titiro ki raro!",
+          "en": "Look down!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-load-smoothing",
+      "status": "Teacher-review draft; familiar/current grammatical frames",
+      "reviewLessons": [
+        32,
+        35
+      ]
+    },
+    {
+      "lesson": 22,
+      "theme": "Retrieve reading and writing in class",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Me pānui koe i te pukapuka.",
+          "en": "You should read the book."
+        },
+        {
+          "mi": "Me tuhi koe i tōu ingoa.",
+          "en": "You should write your name."
+        }
+      ],
+      "alignmentPass": "2026-10-08-smoothed-retrieval",
+      "sourceLesson": 18
+    },
+    {
+      "lesson": 28,
+      "theme": "Retrieve reading and writing in class",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Me pānui koe i te pukapuka.",
+          "en": "You should read the book."
+        },
+        {
+          "mi": "Me tuhi koe i tōu ingoa.",
+          "en": "You should write your name."
+        }
+      ],
+      "alignmentPass": "2026-10-08-smoothed-retrieval",
+      "sourceLesson": 18
+    },
+    {
+      "lesson": 25,
+      "theme": "Retrieve giving and listening in class",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Me hoatu koe i te pukapuka ki te kaiako.",
+          "en": "You should give the book to the teacher."
+        },
+        {
+          "mi": "Me hōmai koe i te pene ki a au.",
+          "en": "You should give the pen to me."
+        },
+        {
+          "mi": "Me whakarongo koe ki te kaiako.",
+          "en": "You should listen to the teacher."
+        }
+      ],
+      "alignmentPass": "2026-10-08-smoothed-retrieval",
+      "sourceLesson": 19
+    },
+    {
+      "lesson": 26,
+      "theme": "Retrieve giving and listening in class",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Me hoatu koe i te pukapuka ki te kaiako.",
+          "en": "You should give the book to the teacher."
+        },
+        {
+          "mi": "Me hōmai koe i te pene ki a au.",
+          "en": "You should give the pen to me."
+        },
+        {
+          "mi": "Me whakarongo koe ki te kaiako.",
+          "en": "You should listen to the teacher."
+        }
+      ],
+      "alignmentPass": "2026-10-08-smoothed-retrieval",
+      "sourceLesson": 19
+    },
+    {
+      "lesson": 30,
+      "theme": "Retrieve recognising missing belongings",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāore anō ahau kia kite i te waea.",
+          "en": "I have not seen the phone yet."
+        },
+        {
+          "mi": "Kāore ahau i kite i te pēke.",
+          "en": "I did not see the bag."
+        }
+      ],
+      "alignmentPass": "2026-10-08-smoothed-retrieval",
+      "sourceLesson": 23
+    },
+    {
+      "lesson": 34,
+      "theme": "Retrieve recognising missing belongings",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "Kāore anō ahau kia kite i te waea.",
+          "en": "I have not seen the phone yet."
+        },
+        {
+          "mi": "Kāore ahau i kite i te pēke.",
+          "en": "I did not see the bag."
+        }
+      ],
+      "alignmentPass": "2026-10-08-smoothed-retrieval",
+      "sourceLesson": 23
+    },
+    {
+      "lesson": 32,
+      "theme": "Retrieve looking up and down",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "E titiro ki runga!",
+          "en": "Look up!"
+        },
+        {
+          "mi": "E titiro ki raro!",
+          "en": "Look down!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-smoothed-retrieval",
+      "sourceLesson": 24
+    },
+    {
+      "lesson": 35,
+      "theme": "Retrieve looking up and down",
+      "words": [],
+      "pairs": [
+        {
+          "mi": "E titiro ki runga!",
+          "en": "Look up!"
+        },
+        {
+          "mi": "E titiro ki raro!",
+          "en": "Look down!"
+        }
+      ],
+      "alignmentPass": "2026-10-08-smoothed-retrieval",
+      "sourceLesson": 24
+    }
+  ]
+}

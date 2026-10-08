@@ -1,0 +1,1298 @@
+[
+  {
+    "id": "L1-01",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [],
+    "recognitionStructures": [
+      "Ko",
+      "Nō",
+      "He",
+      "Kei",
+      "E",
+      "Toko-",
+      "Kotahi",
+      "Kāorekau"
+    ]
+  },
+  {
+    "id": "L1-02",
+    "status": "draft",
+    "translationVocabulary": [
+      "hana",
+      "hemi",
+      "ingoa",
+      "ko",
+      "mere",
+      "pita",
+      "tōku"
+    ],
+    "translationFrames": [
+      "Ko … tōku ingoa"
+    ],
+    "recognitionStructures": [
+      "Ko",
+      "Nō",
+      "He",
+      "Kei",
+      "E",
+      "Toko-",
+      "Kotahi",
+      "Kāorekau"
+    ]
+  },
+  {
+    "id": "L1-03",
+    "status": "draft",
+    "translationVocabulary": [
+      "ahau",
+      "au",
+      "ia",
+      "koe",
+      "nō",
+      "rotorua",
+      "tōna",
+      "tōu"
+    ],
+    "translationFrames": [
+      "Ko · Nō"
+    ],
+    "recognitionStructures": [
+      "Ko",
+      "Nō",
+      "He",
+      "Kei",
+      "E",
+      "Toko-",
+      "Kotahi",
+      "Kāorekau"
+    ]
+  },
+  {
+    "id": "L1-04",
+    "status": "draft",
+    "translationVocabulary": [
+      "awa",
+      "maunga",
+      "ngongotahā",
+      "roto",
+      "taupō",
+      "tauranga",
+      "te",
+      "waikato"
+    ],
+    "translationFrames": [
+      "Ko · Nō · te · tōku"
+    ],
+    "recognitionStructures": [
+      "Ko",
+      "Nō",
+      "He",
+      "Kei",
+      "E",
+      "Toko-",
+      "Kotahi",
+      "Kāorekau"
+    ]
+  },
+  {
+    "id": "L1-05",
+    "status": "draft",
+    "translationVocabulary": [
+      "hapū",
+      "iwi",
+      "ngā",
+      "tūpuna",
+      "whānau"
+    ],
+    "translationFrames": [
+      "Nō · te · tōku · tōu · tōna"
+    ],
+    "recognitionStructures": [
+      "Ko",
+      "Nō",
+      "He",
+      "Kei",
+      "E",
+      "Toko-",
+      "Kotahi",
+      "Kāorekau"
+    ]
+  },
+  {
+    "id": "L1-06",
+    "status": "draft",
+    "translationVocabulary": [
+      "koroua",
+      "kuia",
+      "matua",
+      "māmā",
+      "pāpā",
+      "whaea"
+    ],
+    "translationFrames": [
+      "Ko · tōku · tōu · tōna"
+    ],
+    "recognitionStructures": [
+      "Ko",
+      "Nō",
+      "He",
+      "Kei",
+      "E",
+      "Toko-",
+      "Kotahi",
+      "Kāorekau"
+    ]
+  },
+  {
+    "id": "L1-07",
+    "status": "draft",
+    "translationVocabulary": [
+      "aroha",
+      "kōtiro",
+      "rangi",
+      "tama",
+      "tamāhine",
+      "teina",
+      "tuahine",
+      "tuakana",
+      "tungāne",
+      "tāku",
+      "tāna",
+      "tāu"
+    ],
+    "translationFrames": [
+      "Ko · tāku · tāu · tāna"
+    ],
+    "recognitionStructures": [
+      "Ko",
+      "Nō",
+      "He",
+      "Kei",
+      "E",
+      "Toko-",
+      "Kotahi",
+      "Kāorekau"
+    ]
+  },
+  {
+    "id": "L1-08",
+    "status": "draft",
+    "translationVocabulary": [
+      "a",
+      "e",
+      "he",
+      "kotahi",
+      "kāinga",
+      "kāorekau",
+      "maha",
+      "rua",
+      "tamaiti",
+      "tamariki",
+      "tokorua",
+      "tāne",
+      "wahine",
+      "whare",
+      "āku"
+    ],
+    "translationFrames": [
+      "He · toko- · kotahi · kāorekau · e"
+    ],
+    "recognitionStructures": [
+      "He",
+      "E",
+      "Toko-",
+      "Kotahi",
+      "Kāorekau",
+      "Ko",
+      "Nō",
+      "Kei"
+    ]
+  },
+  {
+    "id": "L1-09",
+    "status": "draft",
+    "translationVocabulary": [
+      "kaiako",
+      "kei",
+      "moenga",
+      "mokopuna",
+      "pōneke",
+      "rūma",
+      "whanaunga",
+      "ākonga"
+    ],
+    "translationFrames": [
+      "Kei · He"
+    ],
+    "recognitionStructures": [
+      "Kei",
+      "He",
+      "Ko",
+      "Nō",
+      "E",
+      "Toko-",
+      "Kotahi",
+      "Kāorekau"
+    ]
+  },
+  {
+    "id": "L1-10",
+    "status": "draft",
+    "translationVocabulary": [
+      "wai"
+    ],
+    "translationFrames": [
+      "Ko · Nō · He · Kei"
+    ],
+    "recognitionStructures": [
+      "Ko",
+      "Nō",
+      "He",
+      "Kei",
+      "E",
+      "Toko-",
+      "Kotahi",
+      "Kāorekau"
+    ]
+  },
+  {
+    "id": "L2-01",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [],
+    "recognitionStructures": [
+      "I",
+      "Kua",
+      "Kei te",
+      "E … ana",
+      "Ka",
+      "Me"
+    ]
+  },
+  {
+    "id": "L2-02",
+    "status": "draft",
+    "translationVocabulary": [
+      "inu",
+      "kai",
+      "kura",
+      "moe",
+      "oho",
+      "oma",
+      "tēnei",
+      "tēnā",
+      "ēnei",
+      "ēnā"
+    ],
+    "translationFrames": [
+      "Kei te"
+    ],
+    "recognitionStructures": [
+      "Kei te",
+      "I",
+      "Kua",
+      "E … ana",
+      "Ka",
+      "Me"
+    ]
+  },
+  {
+    "id": "L2-03",
+    "status": "draft",
+    "translationVocabulary": [
+      "hēki",
+      "i",
+      "kite",
+      "miraka",
+      "māua",
+      "parāoa",
+      "tāua",
+      "āporo"
+    ],
+    "translationFrames": [
+      "I · kai / kite + i"
+    ],
+    "recognitionStructures": [
+      "I",
+      "Kua",
+      "Kei te",
+      "E … ana",
+      "Ka",
+      "Me"
+    ]
+  },
+  {
+    "id": "L2-04",
+    "status": "draft",
+    "translationVocabulary": [
+      "aku",
+      "ana",
+      "haere",
+      "hiahia",
+      "kapu",
+      "kawhe",
+      "ki",
+      "marae",
+      "taku",
+      "tana",
+      "titiro",
+      "tī"
+    ],
+    "translationFrames": [
+      "kai / kite + i · titiro / haere + ki"
+    ],
+    "recognitionStructures": [
+      "i",
+      "ki",
+      "Kei te",
+      "I",
+      "Kua",
+      "E … ana",
+      "Ka",
+      "Me"
+    ]
+  },
+  {
+    "id": "L2-05",
+    "status": "draft",
+    "translationVocabulary": [
+      "hoki",
+      "kua",
+      "kurī",
+      "manu",
+      "ngeru",
+      "tae",
+      "tērā",
+      "ērā"
+    ],
+    "translationFrames": [
+      "Kua"
+    ],
+    "recognitionStructures": [
+      "i",
+      "ki",
+      "Kua",
+      "I",
+      "Kei te",
+      "E … ana",
+      "Ka",
+      "Me"
+    ]
+  },
+  {
+    "id": "L2-06",
+    "status": "draft",
+    "translationVocabulary": [
+      "heihei",
+      "ika",
+      "kōrua",
+      "kūmara",
+      "noho",
+      "rāua",
+      "tunu",
+      "tū"
+    ],
+    "translationFrames": [
+      "E … ana"
+    ],
+    "recognitionStructures": [
+      "i",
+      "ki",
+      "E … ana",
+      "I",
+      "Kua",
+      "Kei te",
+      "Ka",
+      "Me"
+    ]
+  },
+  {
+    "id": "L2-07",
+    "status": "draft",
+    "translationVocabulary": [
+      "horoi",
+      "inanahi",
+      "ināianei",
+      "ka",
+      "tō",
+      "āpōpō",
+      "ō"
+    ],
+    "translationFrames": [
+      "Ka"
+    ],
+    "recognitionStructures": [
+      "i",
+      "ki",
+      "Ka",
+      "I",
+      "Kua",
+      "Kei te",
+      "E … ana",
+      "Me"
+    ]
+  },
+  {
+    "id": "L2-08",
+    "status": "draft",
+    "translationVocabulary": [
+      "me",
+      "mātou",
+      "pukapuka",
+      "pānui",
+      "pātai",
+      "tuhi",
+      "tātou",
+      "whakautu"
+    ],
+    "translationFrames": [
+      "Me"
+    ],
+    "recognitionStructures": [
+      "i",
+      "ki",
+      "Me",
+      "I",
+      "Kua",
+      "Kei te",
+      "E … ana",
+      "Ka"
+    ]
+  },
+  {
+    "id": "L2-09",
+    "status": "draft",
+    "translationVocabulary": [
+      "hoatu",
+      "hōmai",
+      "koutou",
+      "pene",
+      "rātou",
+      "tākaro",
+      "whakarongo"
+    ],
+    "translationFrames": [
+      "TAMs · i · ki"
+    ],
+    "recognitionStructures": [
+      "i",
+      "ki",
+      "I",
+      "Kua",
+      "Kei te",
+      "E … ana",
+      "Ka",
+      "Me"
+    ]
+  },
+  {
+    "id": "L2-10",
+    "status": "draft",
+    "translationVocabulary": [
+      "aha",
+      "kanikani",
+      "kapua",
+      "kaukau",
+      "tētahi",
+      "ua",
+      "waiata",
+      "ētahi"
+    ],
+    "translationFrames": [
+      "Choose the TAM and the connection"
+    ],
+    "recognitionStructures": [
+      "i",
+      "ki",
+      "I",
+      "Kua",
+      "Kei te",
+      "E … ana",
+      "Ka",
+      "Me"
+    ]
+  },
+  {
+    "id": "L3-01",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [],
+    "recognitionStructures": [
+      "Ehara … i te …",
+      "Kāore … i",
+      "Kāore … i te",
+      "Kāore … e",
+      "Kāore anō … kia",
+      "E …!",
+      "Kaua e",
+      "Kāti te",
+      "Kia"
+    ]
+  },
+  {
+    "id": "L3-02",
+    "status": "draft",
+    "translationVocabulary": [
+      "ehara",
+      "hiainu",
+      "kāore",
+      "matekai",
+      "māuiui",
+      "ngenge"
+    ],
+    "translationFrames": [
+      "Ehara … i te … · Kāore … i · Kāore … i te"
+    ],
+    "recognitionStructures": [
+      "Ehara … i te …",
+      "Kāore … i",
+      "Kāore … i te",
+      "Kāore … e",
+      "Kāore anō … kia",
+      "E …!",
+      "Kaua e",
+      "Kāti te",
+      "Kia"
+    ]
+  },
+  {
+    "id": "L3-03",
+    "status": "draft",
+    "translationVocabulary": [
+      "anō",
+      "kia",
+      "mahara",
+      "mārama",
+      "mōhio",
+      "pēke",
+      "waea",
+      "wareware"
+    ],
+    "translationFrames": [
+      "Kāore … e · Kāore anō … kia"
+    ],
+    "recognitionStructures": [
+      "Kāore … e",
+      "Kāore anō … kia",
+      "Ehara … i te …",
+      "Kāore … i",
+      "Kāore … i te",
+      "E …!",
+      "Kaua e",
+      "Kāti te",
+      "Kia"
+    ]
+  },
+  {
+    "id": "L3-04",
+    "status": "draft",
+    "translationVocabulary": [
+      "kaha",
+      "kaua",
+      "kāti",
+      "ngoikore",
+      "raro",
+      "runga",
+      "tatari",
+      "tiaki",
+      "āwhina"
+    ],
+    "translationFrames": [
+      "Commands · Kaua e · Kāti te · Kia"
+    ],
+    "recognitionStructures": [
+      "E …!",
+      "Kaua e",
+      "Kāti te",
+      "Kia",
+      "Ehara … i te …",
+      "Kāore … i",
+      "Kāore … i te",
+      "Kāore … e",
+      "Kāore anō … kia"
+    ]
+  },
+  {
+    "id": "L3-05",
+    "status": "draft",
+    "translationVocabulary": [
+      "kati",
+      "kimi",
+      "kūaha",
+      "maia",
+      "matapihi",
+      "ngaro",
+      "tokotoru",
+      "whakatuwhera",
+      "ōku"
+    ],
+    "translationFrames": [
+      "Kāore anō … kia"
+    ],
+    "recognitionStructures": [
+      "Kāore anō … kia",
+      "Ehara … i te …",
+      "Kāore … i",
+      "Kāore … i te",
+      "Kāore … e",
+      "E …!",
+      "Kaua e",
+      "Kāti te",
+      "Kia"
+    ]
+  },
+  {
+    "id": "L3-06",
+    "status": "draft",
+    "translationVocabulary": [
+      "ahiahi",
+      "hanga",
+      "mahi",
+      "mutu",
+      "tango",
+      "āu",
+      "ōu"
+    ],
+    "translationFrames": [
+      "Commands"
+    ],
+    "recognitionStructures": [
+      "E …!",
+      "Ehara … i te …",
+      "Kāore … i",
+      "Kāore … i te",
+      "Kāore … e",
+      "Kāore anō … kia",
+      "Kaua e",
+      "Kāti te",
+      "Kia"
+    ]
+  },
+  {
+    "id": "L3-07",
+    "status": "draft",
+    "translationVocabulary": [
+      "hū",
+      "kata",
+      "kākahu",
+      "pakaru",
+      "whakatika",
+      "āna",
+      "ōna"
+    ],
+    "translationFrames": [
+      "Kaua e"
+    ],
+    "recognitionStructures": [
+      "Kaua e",
+      "Ehara … i te …",
+      "Kāore … i",
+      "Kāore … i te",
+      "Kāore … e",
+      "Kāore anō … kia",
+      "E …!",
+      "Kāti te",
+      "Kia"
+    ]
+  },
+  {
+    "id": "L3-08",
+    "status": "draft",
+    "translationVocabulary": [
+      "karanga",
+      "mamae",
+      "ringa",
+      "tēhea",
+      "tūru",
+      "waewae",
+      "waho",
+      "ēhea"
+    ],
+    "translationFrames": [
+      "Kāti te"
+    ],
+    "recognitionStructures": [
+      "Kāti te",
+      "Ehara … i te …",
+      "Kāore … i",
+      "Kāore … i te",
+      "Kāore … e",
+      "Kāore anō … kia",
+      "E …!",
+      "Kaua e",
+      "Kia"
+    ]
+  },
+  {
+    "id": "L3-09",
+    "status": "draft",
+    "translationVocabulary": [
+      "pai",
+      "pōturi",
+      "tere",
+      "tūpato"
+    ],
+    "translationFrames": [
+      "Kia"
+    ],
+    "recognitionStructures": [
+      "Kia",
+      "Ehara … i te …",
+      "Kāore … i",
+      "Kāore … i te",
+      "Kāore … e",
+      "Kāore anō … kia",
+      "E …!",
+      "Kaua e",
+      "Kāti te"
+    ]
+  },
+  {
+    "id": "L3-10",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [
+      "Plural pronouns"
+    ],
+    "recognitionStructures": [
+      "Kāore … i",
+      "Ehara … i te …",
+      "Kāore … i te",
+      "Kāore … e",
+      "Kāore anō … kia",
+      "E …!",
+      "Kaua e",
+      "Kāti te",
+      "Kia"
+    ]
+  },
+  {
+    "id": "L4-01",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [],
+    "recognitionStructures": [
+      "Nā / Nō",
+      "Mā / Mō",
+      "Nā … i",
+      "Ehara nā / nō",
+      "Mā … e",
+      "Ehara mā / mō"
+    ]
+  },
+  {
+    "id": "L4-02",
+    "status": "draft",
+    "translationVocabulary": [
+      "māu",
+      "mōu",
+      "nāku",
+      "nōku"
+    ],
+    "translationFrames": [
+      "Nā · Nō · Mā · Mō"
+    ],
+    "recognitionStructures": [
+      "Nā / Nō",
+      "Mā / Mō",
+      "Nā … i",
+      "Ehara nā / nō",
+      "Mā … e",
+      "Ehara mā / mō"
+    ]
+  },
+  {
+    "id": "L4-03",
+    "status": "draft",
+    "translationVocabulary": [
+      "nāu"
+    ],
+    "translationFrames": [
+      "Nā … i"
+    ],
+    "recognitionStructures": [
+      "Nā … i",
+      "Ehara nā / nō",
+      "Nā / Nō",
+      "Mā / Mō",
+      "Mā … e",
+      "Ehara mā / mō"
+    ]
+  },
+  {
+    "id": "L4-04",
+    "status": "draft",
+    "translationVocabulary": [
+      "māku"
+    ],
+    "translationFrames": [
+      "Mā … e"
+    ],
+    "recognitionStructures": [
+      "Mā … e",
+      "Ehara mā / mō",
+      "Nā / Nō",
+      "Mā / Mō",
+      "Nā … i",
+      "Ehara nā / nō"
+    ]
+  },
+  {
+    "id": "L4-05",
+    "status": "draft",
+    "translationVocabulary": [
+      "iti",
+      "mōku",
+      "mōna",
+      "nui",
+      "nā",
+      "poto",
+      "roa",
+      "tā",
+      "waka",
+      "ā"
+    ],
+    "translationFrames": [
+      "Mōku · mōu · mōna"
+    ],
+    "recognitionStructures": [
+      "Mā / Mō",
+      "Nā / Nō",
+      "Nā … i",
+      "Ehara nā / nō",
+      "Mā … e",
+      "Ehara mā / mō"
+    ]
+  },
+  {
+    "id": "L4-06",
+    "status": "draft",
+    "translationVocabulary": [
+      "kawe",
+      "nāna",
+      "nōu",
+      "tēpu"
+    ],
+    "translationFrames": [
+      "Ehara nā … · ehara nō …"
+    ],
+    "recognitionStructures": [
+      "Ehara nā / nō",
+      "Nā / Nō",
+      "Mā / Mō",
+      "Nā … i",
+      "Mā … e",
+      "Ehara mā / mō"
+    ]
+  },
+  {
+    "id": "L4-07",
+    "status": "draft",
+    "translationVocabulary": [
+      "māna"
+    ],
+    "translationFrames": [
+      "Ehara mā … · ehara mō …"
+    ],
+    "recognitionStructures": [
+      "Ehara mā / mō",
+      "Nā / Nō",
+      "Mā / Mō",
+      "Nā … i",
+      "Ehara nā / nō",
+      "Mā … e"
+    ]
+  },
+  {
+    "id": "L4-08",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [
+      "Nā … i"
+    ],
+    "recognitionStructures": [
+      "Nā … i",
+      "Nā / Nō",
+      "Mā / Mō",
+      "Ehara nā / nō",
+      "Mā … e",
+      "Ehara mā / mō"
+    ]
+  },
+  {
+    "id": "L4-09",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [
+      "Mā … e"
+    ],
+    "recognitionStructures": [
+      "Mā … e",
+      "Nā / Nō",
+      "Mā / Mō",
+      "Nā … i",
+      "Ehara nā / nō",
+      "Ehara mā / mō"
+    ]
+  },
+  {
+    "id": "L4-10",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [
+      "Ehara nā … · ehara mā …"
+    ],
+    "recognitionStructures": [
+      "Ehara nā … i / mā … e",
+      "Nā / Nō",
+      "Mā / Mō",
+      "Nā … i",
+      "Ehara nā / nō",
+      "Mā … e",
+      "Ehara mā / mō"
+    ]
+  },
+  {
+    "id": "L5-01",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [],
+    "recognitionStructures": [
+      "He … ake … i",
+      "… ai",
+      "Ka taea / Kāore e taea",
+      "Passive: … e …"
+    ]
+  },
+  {
+    "id": "L5-02",
+    "status": "draft",
+    "translationVocabulary": [
+      "ai",
+      "ake",
+      "rā",
+      "rākau",
+      "teitei",
+      "whāiti",
+      "whānui"
+    ],
+    "translationFrames": [
+      "He … ake … i · … ai · ia rā"
+    ],
+    "recognitionStructures": [
+      "He … ake … i",
+      "… ai",
+      "Ka taea / Kāore e taea",
+      "Passive: … e …"
+    ]
+  },
+  {
+    "id": "L5-03",
+    "status": "draft",
+    "translationVocabulary": [
+      "ipu",
+      "makariri",
+      "pouaka",
+      "taea",
+      "wera"
+    ],
+    "translationFrames": [
+      "Ka taea · Kāore e taea"
+    ],
+    "recognitionStructures": [
+      "Ka taea / Kāore e taea",
+      "He … ake … i",
+      "… ai",
+      "Passive: … e …"
+    ]
+  },
+  {
+    "id": "L5-04",
+    "status": "draft",
+    "translationVocabulary": [
+      "kainga",
+      "maroke",
+      "mākū"
+    ],
+    "translationFrames": [
+      "Passive · I / Kua / Ka"
+    ],
+    "recognitionStructures": [
+      "Passive: … e …",
+      "He … ake … i",
+      "… ai",
+      "Ka taea / Kāore e taea"
+    ]
+  },
+  {
+    "id": "L5-05",
+    "status": "draft",
+    "translationVocabulary": [
+      "ngāwari",
+      "uaua"
+    ],
+    "translationFrames": [
+      "Ka taea e …"
+    ],
+    "recognitionStructures": [
+      "Ka taea / Kāore e taea",
+      "He … ake … i",
+      "… ai",
+      "Passive: … e …"
+    ]
+  },
+  {
+    "id": "L5-06",
+    "status": "draft",
+    "translationVocabulary": [
+      "mō",
+      "tuku",
+      "whakaharatau",
+      "whakarite"
+    ],
+    "translationFrames": [
+      "Kāore e taea e …"
+    ],
+    "recognitionStructures": [
+      "Ka taea / Kāore e taea",
+      "He … ake … i",
+      "… ai",
+      "Passive: … e …"
+    ]
+  },
+  {
+    "id": "L5-07",
+    "status": "draft",
+    "translationVocabulary": [
+      "kawea",
+      "kitea",
+      "taumaha",
+      "whakamātau"
+    ],
+    "translationFrames": [
+      "Passive · I"
+    ],
+    "recognitionStructures": [
+      "Passive: … e …",
+      "He … ake … i",
+      "… ai",
+      "Ka taea / Kāore e taea"
+    ]
+  },
+  {
+    "id": "L5-08",
+    "status": "draft",
+    "translationVocabulary": [
+      "haka",
+      "mai",
+      "whakaari"
+    ],
+    "translationFrames": [
+      "Passive · Kua"
+    ],
+    "recognitionStructures": [
+      "Passive: … e …",
+      "He … ake … i",
+      "… ai",
+      "Ka taea / Kāore e taea"
+    ]
+  },
+  {
+    "id": "L5-09",
+    "status": "draft",
+    "translationVocabulary": [
+      "hangaia",
+      "horoia",
+      "tuhia"
+    ],
+    "translationFrames": [
+      "Passive · Ka"
+    ],
+    "recognitionStructures": [
+      "Passive: … e …",
+      "He … ake … i",
+      "… ai",
+      "Ka taea / Kāore e taea"
+    ]
+  },
+  {
+    "id": "L5-10",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [
+      "Review"
+    ],
+    "recognitionStructures": [
+      "He … ake … i",
+      "… ai",
+      "Ka taea / Kāore e taea",
+      "Passive: … e …"
+    ]
+  },
+  {
+    "id": "L6-01",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [],
+    "recognitionStructures": [
+      "He aha … ai",
+      "Nōnahea",
+      "Āhea",
+      "Ki te / Mēnā / Mehemea"
+    ]
+  },
+  {
+    "id": "L6-02",
+    "status": "draft",
+    "translationVocabulary": [
+      "nōnahea",
+      "āhea"
+    ],
+    "translationFrames": [
+      "He aha … ai · Nōnahea · Āhea"
+    ],
+    "recognitionStructures": [
+      "He aha … ai",
+      "Nōnahea",
+      "Āhea",
+      "Ki te / Mēnā / Mehemea"
+    ]
+  },
+  {
+    "id": "L6-03",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [
+      "Ki te … ka …"
+    ],
+    "recognitionStructures": [
+      "Ki te / Mēnā / Mehemea",
+      "He aha … ai",
+      "Nōnahea",
+      "Āhea"
+    ]
+  },
+  {
+    "id": "L6-04",
+    "status": "draft",
+    "translationVocabulary": [
+      "kore",
+      "mehemea",
+      "mēnā"
+    ],
+    "translationFrames": [
+      "Mēnā · Mehemea"
+    ],
+    "recognitionStructures": [
+      "Ki te / Mēnā / Mehemea",
+      "He aha … ai",
+      "Nōnahea",
+      "Āhea"
+    ]
+  },
+  {
+    "id": "L6-05",
+    "status": "draft",
+    "translationVocabulary": [
+      "hui",
+      "hākari",
+      "kaimahi",
+      "moni"
+    ],
+    "translationFrames": [
+      "Nōnahea"
+    ],
+    "recognitionStructures": [
+      "Nōnahea",
+      "He aha … ai",
+      "Āhea",
+      "Ki te / Mēnā / Mehemea"
+    ]
+  },
+  {
+    "id": "L6-06",
+    "status": "draft",
+    "translationVocabulary": [
+      "hoko",
+      "hīkoi",
+      "pahi",
+      "pahikara",
+      "pupuri",
+      "pūrākau"
+    ],
+    "translationFrames": [
+      "Āhea"
+    ],
+    "recognitionStructures": [
+      "Āhea",
+      "He aha … ai",
+      "Nōnahea",
+      "Ki te / Mēnā / Mehemea"
+    ]
+  },
+  {
+    "id": "L6-07",
+    "status": "draft",
+    "translationVocabulary": [
+      "engari",
+      "kiwi",
+      "moana"
+    ],
+    "translationFrames": [
+      "Ki te … ka …"
+    ],
+    "recognitionStructures": [
+      "Ki te / Mēnā / Mehemea",
+      "He aha … ai",
+      "Nōnahea",
+      "Āhea"
+    ]
+  },
+  {
+    "id": "L6-08",
+    "status": "draft",
+    "translationVocabulary": [],
+    "translationFrames": [
+      "Mēnā"
+    ],
+    "recognitionStructures": [
+      "Ki te / Mēnā / Mehemea",
+      "He aha … ai",
+      "Nōnahea",
+      "Āhea"
+    ]
+  },
+  {
+    "id": "L6-09",
+    "status": "draft",
+    "translationVocabulary": [
+      "nōna"
+    ],
+    "translationFrames": [
+      "Mehemea"
+    ],
+    "recognitionStructures": [
+      "Ki te / Mēnā / Mehemea",
+      "He aha … ai",
+      "Nōnahea",
+      "Āhea"
+    ]
+  },
+  {
+    "id": "L6-10",
+    "status": "draft",
+    "translationVocabulary": [
+      "tonu"
+    ],
+    "translationFrames": [
+      "Review"
+    ],
+    "recognitionStructures": [
+      "He aha … ai",
+      "Nōnahea",
+      "Āhea",
+      "Ki te / Mēnā / Mehemea"
+    ]
+  }
+]

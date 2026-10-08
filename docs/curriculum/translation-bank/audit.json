@@ -4,7 +4,7 @@
     "lesson": 1,
     "title": "Introducing the Big Words",
     "status": "Mixed draft",
-    "note": "Recognise all eight Big Words from English sentences. Full translation is introduced separately.",
+    "note": "Recognise all eight Big Words from English sentences. Full translation is introduced separately. Recognise new patterns using English sentences; translation revision uses earlier material.",
     "newForms": [],
     "distinctPairs": 50,
     "reviewQuestions": 0
@@ -14,7 +14,7 @@
     "lesson": 2,
     "title": "Names and identity",
     "status": "Mixed draft",
-    "note": "Build a personal pepeha: Names and identity. Reference practice: tōku. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: tōku. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "hana",
       "hemi",
@@ -24,105 +24,117 @@
       "pita",
       "tōku"
     ],
-    "distinctPairs": 13,
-    "reviewQuestions": 10
+    "distinctPairs": 11,
+    "reviewQuestions": 3
   },
   {
     "level": 1,
     "lesson": 3,
-    "title": "I, you and another person",
+    "title": "Who I am and where I am from",
     "status": "Mixed draft",
-    "note": "Build a personal pepeha: I, you and another person. Reference practice: au, ahau, koe, ia, tōu, tōna. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: au, ahau, koe, ia, tōu, tōna. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "ahau",
       "au",
       "ia",
       "koe",
+      "nō",
+      "rotorua",
       "tōna",
       "tōu"
     ],
-    "distinctPairs": 20,
-    "reviewQuestions": 30
+    "distinctPairs": 21,
+    "reviewQuestions": 23
   },
   {
     "level": 1,
     "lesson": 4,
-    "title": "Where we are from",
+    "title": "Mountains, rivers and lakes",
     "status": "Mixed draft",
-    "note": "Build a personal pepeha: Where we are from. Reference practice: ngā. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "ngā",
-      "nō",
-      "rotorua",
-      "taupō",
-      "tauranga",
-      "tūpuna"
-    ],
-    "distinctPairs": 25,
-    "reviewQuestions": 30
-  },
-  {
-    "level": 1,
-    "lesson": 5,
-    "title": "Places we belong",
-    "status": "Mixed draft",
-    "note": "Build a personal pepeha: Places we belong. Reference practice: te. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: te. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "awa",
       "maunga",
       "ngongotahā",
       "roto",
+      "taupō",
+      "tauranga",
       "te",
       "waikato"
     ],
-    "distinctPairs": 25,
-    "reviewQuestions": 30
+    "distinctPairs": 28,
+    "reviewQuestions": 23
+  },
+  {
+    "level": 1,
+    "lesson": 5,
+    "title": "Whānau, hapū and iwi",
+    "status": "Mixed draft",
+    "note": "Build a personal pepeha: Whānau, hapū and iwi. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [
+      "hapū",
+      "iwi",
+      "ngā",
+      "tūpuna",
+      "whānau"
+    ],
+    "distinctPairs": 26,
+    "reviewQuestions": 23
   },
   {
     "level": 1,
     "lesson": 6,
-    "title": "Parents and family",
+    "title": "Parents, grandparents and whakapapa",
     "status": "Mixed draft",
-    "note": "Build a personal pepeha: Parents and family. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Build a personal pepeha: Parents, grandparents and whakapapa. Reference practice: ngā. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
+      "koroua",
+      "kuia",
       "matua",
+      "māmā",
       "pāpā",
       "whaea"
     ],
-    "distinctPairs": 25,
-    "reviewQuestions": 30
+    "distinctPairs": 28,
+    "reviewQuestions": 23
   },
   {
     "level": 1,
     "lesson": 7,
     "title": "Siblings and children",
     "status": "Mixed draft",
-    "note": "Build a personal pepeha: Siblings and children. Reference practice: tāku, tāu, tāna. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Build a personal pepeha: Siblings and children. Reference practice: tāku, tāu, tāna. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "aroha",
+      "kōtiro",
       "rangi",
       "tama",
       "tamāhine",
       "teina",
+      "tuahine",
+      "tuakana",
+      "tungāne",
       "tāku",
       "tāna",
       "tāu"
     ],
-    "distinctPairs": 24,
-    "reviewQuestions": 30
+    "distinctPairs": 28,
+    "reviewQuestions": 19
   },
   {
     "level": 1,
     "lesson": 8,
     "title": "Describe and count your whānau",
     "status": "Mixed draft",
-    "note": "Build a personal pepeha: Describe and count your whānau. Reference practice: he, āku. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Build a personal pepeha: Describe and count your whānau. Reference practice: he, āku. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "a",
       "e",
       "he",
       "kotahi",
+      "kāinga",
       "kāorekau",
+      "maha",
       "rua",
       "tamaiti",
       "tamariki",
@@ -132,48 +144,47 @@
       "whare",
       "āku"
     ],
-    "distinctPairs": 27,
-    "reviewQuestions": 30
+    "distinctPairs": 30,
+    "reviewQuestions": 17
   },
   {
     "level": 1,
     "lesson": 9,
-    "title": "Home and everyday roles",
+    "title": "My home and my role",
     "status": "Mixed draft",
-    "note": "Build a personal pepeha: Home and everyday roles. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Build a personal pepeha: My home and my role. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "kaiako",
       "kei",
-      "kura",
-      "kāinga",
-      "marae",
+      "moenga",
+      "mokopuna",
       "pōneke",
+      "rūma",
+      "whanaunga",
       "ākonga"
     ],
-    "distinctPairs": 26,
-    "reviewQuestions": 30
+    "distinctPairs": 29,
+    "reviewQuestions": 21
   },
   {
     "level": 1,
     "lesson": 10,
     "title": "Give your pepeha",
     "status": "Mixed draft",
-    "note": "Build a personal pepeha: Give your pepeha. Reference practice: wai. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Build a personal pepeha: Give your pepeha. Reference practice: wai. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "wai"
     ],
-    "distinctPairs": 27,
-    "reviewQuestions": 30
+    "distinctPairs": 28,
+    "reviewQuestions": 33
   },
   {
     "level": 2,
     "lesson": 1,
     "title": "Meet the TAMs",
     "status": "Mixed draft",
-    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 8; ki connections start in Lesson 9. Level 2 choices practise TAMs and, from Lesson 9, i/ki; English ongoing prompts accept both taught ongoing forms.",
-    "newForms": [
-      "kai"
-    ],
+    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 3; ki connections start in Lesson 4. Recognise new patterns using English sentences; translation revision uses earlier material.",
+    "newForms": [],
     "distinctPairs": 39,
     "reviewQuestions": 20
   },
@@ -182,10 +193,13 @@
     "lesson": 2,
     "title": "Happening now",
     "status": "Mixed draft",
-    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 8; ki connections start in Lesson 9. Reference practice: tēnei, ēnei; tēnā, ēnā. Level 2 choices practise TAMs and, from Lesson 9, i/ki; English ongoing prompts accept both taught ongoing forms.",
+    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 3; ki connections start in Lesson 4. Reference practice: tēnei, ēnei; tēnā, ēnā. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "kurī",
+      "inu",
+      "kai",
+      "kura",
       "moe",
+      "oho",
       "oma",
       "tēnei",
       "tēnā",
@@ -193,652 +207,719 @@
       "ēnā"
     ],
     "distinctPairs": 30,
-    "reviewQuestions": 20
+    "reviewQuestions": 21
   },
   {
     "level": 2,
     "lesson": 3,
-    "title": "What happened",
+    "title": "Past actions and objects with i",
     "status": "Mixed draft",
-    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 8; ki connections start in Lesson 9. Reference practice: tāua, māua. Level 2 choices practise TAMs and, from Lesson 9, i/ki; English ongoing prompts accept both taught ongoing forms.",
+    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 3; ki connections start in Lesson 4. Reference practice: tāua, māua. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
+      "hēki",
       "i",
+      "kite",
+      "miraka",
       "māua",
-      "tāua"
+      "parāoa",
+      "tāua",
+      "āporo"
     ],
-    "distinctPairs": 32,
-    "reviewQuestions": 20
+    "distinctPairs": 31,
+    "reviewQuestions": 5
   },
   {
     "level": 2,
     "lesson": 4,
-    "title": "What has happened",
+    "title": "Choose i or ki",
     "status": "Mixed draft",
-    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 8; ki connections start in Lesson 9. Reference practice: taku, aku, tana, ana. Level 2 choices practise TAMs and, from Lesson 9, i/ki; English ongoing prompts accept both taught ongoing forms.",
+    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 3; ki connections start in Lesson 4. Reference practice: taku, aku, tana, ana. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "aku",
       "ana",
-      "kua",
+      "haere",
+      "hiahia",
+      "kapu",
+      "kawhe",
+      "ki",
+      "marae",
       "taku",
-      "tana"
+      "tana",
+      "titiro",
+      "tī"
     ],
-    "distinctPairs": 34,
-    "reviewQuestions": 20
+    "distinctPairs": 29,
+    "reviewQuestions": 13
   },
   {
     "level": 2,
     "lesson": 5,
-    "title": "Ongoing actions",
+    "title": "What has happened",
     "status": "Mixed draft",
-    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 8; ki connections start in Lesson 9. Reference practice: tērā, ērā. Level 2 choices practise TAMs and, from Lesson 9, i/ki; English ongoing prompts accept both taught ongoing forms.",
+    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 3; ki connections start in Lesson 4. Reference practice: tērā, ērā. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
+      "hoki",
+      "kua",
+      "kurī",
+      "manu",
+      "ngeru",
+      "tae",
       "tērā",
       "ērā"
     ],
-    "distinctPairs": 33,
-    "reviewQuestions": 20
+    "distinctPairs": 32,
+    "reviewQuestions": 9
   },
   {
     "level": 2,
     "lesson": 6,
-    "title": "What will happen",
+    "title": "Ongoing actions",
     "status": "Mixed draft",
-    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 8; ki connections start in Lesson 9. Reference practice: kōrua, rāua. Level 2 choices practise TAMs and, from Lesson 9, i/ki; English ongoing prompts accept both taught ongoing forms.",
+    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 3; ki connections start in Lesson 4. Reference practice: kōrua, rāua. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "ka",
+      "heihei",
+      "ika",
       "kōrua",
-      "rāua"
+      "kūmara",
+      "noho",
+      "rāua",
+      "tunu",
+      "tū"
     ],
-    "distinctPairs": 35,
-    "reviewQuestions": 20
+    "distinctPairs": 31,
+    "reviewQuestions": 9
   },
   {
     "level": 2,
     "lesson": 7,
-    "title": "What should happen",
+    "title": "What will happen",
     "status": "Mixed draft",
-    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 8; ki connections start in Lesson 9. Reference practice: tō, ō. Level 2 choices practise TAMs and, from Lesson 9, i/ki; English ongoing prompts accept both taught ongoing forms.",
+    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 3; ki connections start in Lesson 4. Reference practice: tō, ō. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "me",
+      "horoi",
+      "inanahi",
+      "ināianei",
+      "ka",
       "tō",
+      "āpōpō",
       "ō"
     ],
-    "distinctPairs": 34,
-    "reviewQuestions": 20
+    "distinctPairs": 30,
+    "reviewQuestions": 7
   },
   {
     "level": 2,
     "lesson": 8,
-    "title": "Add an object with i",
+    "title": "What should happen",
     "status": "Mixed draft",
-    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 8; ki connections start in Lesson 9. Reference practice: tātou, mātou. Level 2 choices practise TAMs and, from Lesson 9, i/ki; English ongoing prompts accept both taught ongoing forms.",
+    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 3; ki connections start in Lesson 4. Reference practice: tātou, mātou. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "kite",
+      "me",
       "mātou",
-      "tātou"
+      "pukapuka",
+      "pānui",
+      "pātai",
+      "tuhi",
+      "tātou",
+      "whakautu"
     ],
-    "distinctPairs": 34,
-    "reviewQuestions": 18
+    "distinctPairs": 30,
+    "reviewQuestions": 11
   },
   {
     "level": 2,
     "lesson": 9,
-    "title": "Choose i or ki",
+    "title": "Practise TAMs with i and ki",
     "status": "Mixed draft",
-    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 8; ki connections start in Lesson 9. Reference practice: koutou, rātou. Level 2 choices practise TAMs and, from Lesson 9, i/ki; English ongoing prompts accept both taught ongoing forms.",
+    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 3; ki connections start in Lesson 4. Reference practice: koutou, rātou. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "haere",
-      "ki",
+      "hoatu",
+      "hōmai",
       "koutou",
+      "pene",
       "rātou",
-      "titiro"
+      "tākaro",
+      "whakarongo"
     ],
-    "distinctPairs": 29,
-    "reviewQuestions": 20
+    "distinctPairs": 27,
+    "reviewQuestions": 18
   },
   {
     "level": 2,
     "lesson": 10,
     "title": "TAMs, i and ki together",
     "status": "Mixed draft",
-    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 8; ki connections start in Lesson 9. Reference practice: tētahi, ētahi; aha. Level 2 choices practise TAMs and, from Lesson 9, i/ki; English ongoing prompts accept both taught ongoing forms.",
+    "note": "TAM recognition first; use familiar actions. Objects with i start in Lesson 3; ki connections start in Lesson 4. Reference practice: tētahi, ētahi; aha. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "aha",
+      "kanikani",
+      "kapua",
+      "kaukau",
       "tētahi",
+      "ua",
+      "waiata",
       "ētahi"
     ],
     "distinctPairs": 30,
+    "reviewQuestions": 12
+  },
+  {
+    "level": 3,
+    "lesson": 1,
+    "title": "Meet negatives and instructions",
+    "status": "Mixed draft",
+    "note": "Recognise new patterns from English. All translations revise earlier levels. Recognise new patterns using English sentences; translation revision uses earlier material.",
+    "newForms": [],
+    "distinctPairs": 18,
     "reviewQuestions": 20
   },
   {
     "level": 3,
-    "lesson": 1,
-    "title": "Say what someone is not",
+    "lesson": 2,
+    "title": "Simple negative sentences",
     "status": "Mixed draft",
-    "note": "Negate classification using familiar people and animals. No job-title vocabulary. Reference practice: tāku, tōku. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "ehara",
-      "kōtiro",
-      "maia",
-      "ngeru",
-      "tokotoru"
-    ],
-    "distinctPairs": 33,
-    "reviewQuestions": 30
-  },
-  {
-    "level": 3,
-    "lesson": 2,
-    "title": "Did not",
-    "status": "Mixed draft",
-    "note": "One negative frame at a time, using already introduced actions, objects and singular pronouns. Reference practice: tāu, tōu. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "ahiahi",
+      "hiainu",
       "kāore",
-      "mahi",
-      "mutu",
-      "pukapuka",
-      "pānui"
+      "matekai",
+      "māuiui",
+      "ngenge"
     ],
-    "distinctPairs": 35,
-    "reviewQuestions": 30
+    "distinctPairs": 27,
+    "reviewQuestions": 27
   },
   {
     "level": 3,
     "lesson": 3,
-    "title": "Is not happening",
+    "title": "Will not and not yet",
     "status": "Mixed draft",
-    "note": "One negative frame at a time, using already introduced actions, objects and singular pronouns. Reference practice: tāna, tōna. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "hoki",
-      "waea"
+      "anō",
+      "kia",
+      "mahara",
+      "mārama",
+      "mōhio",
+      "pēke",
+      "waea",
+      "wareware"
     ],
-    "distinctPairs": 37,
-    "reviewQuestions": 30
+    "distinctPairs": 27,
+    "reviewQuestions": 23
   },
   {
     "level": 3,
     "lesson": 4,
-    "title": "Will not",
+    "title": "Instructions, do not and stop",
     "status": "Mixed draft",
-    "note": "One negative frame at a time, using already introduced actions, objects and singular pronouns. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "karanga",
+      "kaha",
+      "kaua",
+      "kāti",
+      "ngoikore",
       "raro",
-      "tūru"
+      "runga",
+      "tatari",
+      "tiaki",
+      "āwhina"
     ],
-    "distinctPairs": 39,
-    "reviewQuestions": 30
+    "distinctPairs": 27,
+    "reviewQuestions": 21
   },
   {
     "level": 3,
     "lesson": 5,
-    "title": "Not yet",
+    "title": "Practise: not yet",
     "status": "Mixed draft",
-    "note": "One negative frame at a time, using already introduced actions, objects and singular pronouns. Reference practice: āku, ōku. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "One negative frame at a time, using already introduced actions, objects and singular pronouns. Reference practice: tāku, tōku; āku, ōku. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "anō",
-      "kia",
-      "pēke",
+      "kati",
+      "kimi",
+      "kūaha",
+      "maia",
+      "matapihi",
+      "ngaro",
+      "tokotoru",
       "whakatuwhera",
       "ōku"
     ],
-    "distinctPairs": 38,
-    "reviewQuestions": 30
+    "distinctPairs": 30,
+    "reviewQuestions": 9
   },
   {
     "level": 3,
     "lesson": 6,
-    "title": "Give a simple instruction",
+    "title": "Practise: give a simple instruction",
     "status": "Mixed draft",
-    "note": "Reuse known actions and destinations. Introduce only the command forms kainga and pānuitia; revisit them later in passive sentences. Reference practice: āu, ōu. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Reuse known actions and destinations. Introduce only the command forms kainga and pānuitia; revisit them later in passive sentences. Reference practice: tāu, tōu; āu, ōu. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "kainga",
-      "pānuitia",
+      "ahiahi",
+      "hanga",
+      "mahi",
+      "mutu",
       "tango",
       "āu",
       "ōu"
     ],
-    "distinctPairs": 34,
-    "reviewQuestions": 30
+    "distinctPairs": 27,
+    "reviewQuestions": 9
   },
   {
     "level": 3,
     "lesson": 7,
-    "title": "Say do not",
+    "title": "Practise: say do not",
     "status": "Mixed draft",
-    "note": "Negative instructions reuse the previous command meanings and familiar base verbs. Reference practice: āna, ōna. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Negative instructions reuse the previous command meanings and familiar base verbs. Reference practice: tāna, tōna; āna, ōna. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
+      "hū",
       "kata",
-      "kaua",
+      "kākahu",
+      "pakaru",
+      "whakatika",
       "āna",
       "ōna"
     ],
-    "distinctPairs": 34,
-    "reviewQuestions": 30
+    "distinctPairs": 31,
+    "reviewQuestions": 11
   },
   {
     "level": 3,
     "lesson": 8,
-    "title": "Ask someone to stop",
+    "title": "Practise: ask someone to stop",
     "status": "Mixed draft",
-    "note": "Contrast stopping an action with telling someone not to begin; keep vocabulary familiar. Reference practice: tēhea, ēhea. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Contrast stopping an action with telling someone not to begin; keep vocabulary familiar. Reference practice: tēhea, ēhea. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "kāti",
+      "karanga",
+      "mamae",
+      "ringa",
       "tēhea",
+      "tūru",
+      "waewae",
+      "waho",
       "ēhea"
     ],
-    "distinctPairs": 34,
-    "reviewQuestions": 30
+    "distinctPairs": 29,
+    "reviewQuestions": 11
   },
   {
     "level": 3,
     "lesson": 9,
-    "title": "Say how things should be",
+    "title": "Practise: say how things should be",
     "status": "Mixed draft",
-    "note": "Introduce four useful qualities inside complete wishes and instructions. Tere and kaha return in comparisons. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Introduce four useful qualities inside complete wishes and instructions. Tere and kaha return in comparisons. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "kaha",
       "pai",
+      "pōturi",
       "tere",
       "tūpato"
     ],
-    "distinctPairs": 31,
-    "reviewQuestions": 30
+    "distinctPairs": 30,
+    "reviewQuestions": 31
   },
   {
     "level": 3,
     "lesson": 10,
-    "title": "Speak to and about groups",
+    "title": "Practise: speak to and about groups",
     "status": "Mixed draft",
-    "note": "Add plural pronouns to the known negative-past frame. English states number and inclusion; dual forms remain in review. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Add plural pronouns to the known negative-past frame. English states number and inclusion; dual forms remain in review. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [],
-    "distinctPairs": 35,
-    "reviewQuestions": 30
+    "distinctPairs": 30,
+    "reviewQuestions": 29
   },
   {
     "level": 4,
     "lesson": 1,
-    "title": "Say who owns it",
+    "title": "Meet ownership and emphasis",
     "status": "Mixed draft",
-    "note": "Known books and food, treated as acquired possessions. Introduce N-possession and contracted singular owners. Reference practice: tā tāua, tō tāua, ā tāua, ō tāua. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "nā",
-      "nāku",
-      "nāna",
-      "nāu",
-      "tuahine",
-      "tā",
-      "ā"
-    ],
-    "distinctPairs": 35,
-    "reviewQuestions": 30
+    "note": "Recognise new patterns from English. All translations revise earlier levels. Recognise new patterns using English sentences; translation revision uses earlier material.",
+    "newForms": [],
+    "distinctPairs": 17,
+    "reviewQuestions": 20
   },
   {
     "level": 4,
     "lesson": 2,
-    "title": "Homes and transport",
+    "title": "Simple ownership and recipients",
     "status": "Mixed draft",
-    "note": "Use the home/transport relationship for O-possession. Waka is the only new object word. Reference practice: tā māua, tō māua, ā māua, ō māua. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "inanahi",
-      "nōku",
-      "nōna",
-      "nōu",
-      "waka"
+      "māu",
+      "mōu",
+      "nāku",
+      "nōku"
     ],
-    "distinctPairs": 33,
-    "reviewQuestions": 30
+    "distinctPairs": 27,
+    "reviewQuestions": 35
   },
   {
     "level": 4,
     "lesson": 3,
-    "title": "Choose between nā and nō",
+    "title": "Who did it",
     "status": "Mixed draft",
-    "note": "Contrast the two established relationships. A/O labels are teaching context, not immutable dictionary categories. Reference practice: tā kōrua, tō kōrua, ā kōrua, ō kōrua. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "nui"
+      "nāu"
     ],
-    "distinctPairs": 33,
-    "reviewQuestions": 30
+    "distinctPairs": 27,
+    "reviewQuestions": 35
   },
   {
     "level": 4,
     "lesson": 4,
-    "title": "Say who something is for",
+    "title": "Who will do it",
     "status": "Mixed draft",
-    "note": "Move from existing ownership to intended recipients using the same A-context items. Reference practice: tā rāua, tō rāua, ā rāua, ō rāua. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "mā",
-      "māku",
-      "māna",
-      "māu"
+      "māku"
     ],
-    "distinctPairs": 33,
-    "reviewQuestions": 30
+    "distinctPairs": 26,
+    "reviewQuestions": 35
   },
   {
     "level": 4,
     "lesson": 5,
-    "title": "Homes and transport for someone",
+    "title": "Practise: homes and transport for someone",
     "status": "Mixed draft",
-    "note": "Use the same O-context items and known owners; no fresh vocabulary load. Reference practice: tā tātou, tō tātou, ā tātou, ō tātou. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Use the same O-context items and known owners; no fresh vocabulary load. Reference practice: tā tāua, tō tāua, ā tāua, ō tāua; ā tāua, ō tāua; tā māua, tō māua, ā māua, ō māua. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "iti",
-      "mō",
       "mōku",
       "mōna",
-      "mōu"
+      "nui",
+      "nā",
+      "poto",
+      "roa",
+      "tā",
+      "waka",
+      "ā"
     ],
-    "distinctPairs": 33,
-    "reviewQuestions": 30
+    "distinctPairs": 29,
+    "reviewQuestions": 9
   },
   {
     "level": 4,
     "lesson": 6,
-    "title": "Say it does not belong",
+    "title": "Practise: say it does not belong",
     "status": "Mixed draft",
-    "note": "Apply familiar ehara to both ownership patterns and the same objects. Reference practice: tā mātou, tō mātou, ā mātou, ō mātou. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Apply familiar ehara to both ownership patterns and the same objects. Reference practice: ā māua, ō māua; tā kōrua, tō kōrua, ā kōrua, ō kōrua; ā kōrua, ō kōrua. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "kawe",
-      "runga",
+      "nāna",
+      "nōu",
       "tēpu"
     ],
-    "distinctPairs": 34,
-    "reviewQuestions": 30
+    "distinctPairs": 30,
+    "reviewQuestions": 15
   },
   {
     "level": 4,
     "lesson": 7,
-    "title": "Say it is not for someone",
+    "title": "Practise: say it is not for someone",
     "status": "Mixed draft",
-    "note": "Apply the same negative approach to intended recipients; review positive and negative examples together. Reference practice: tā koutou, tō koutou, ā koutou, ō koutou. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [],
-    "distinctPairs": 33,
-    "reviewQuestions": 30
+    "note": "Apply the same negative approach to intended recipients; review positive and negative examples together. Reference practice: tā rāua, tō rāua, ā rāua, ō rāua; ā rāua, ō rāua; tā tātou, tō tātou, ā tātou, ō tātou. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [
+      "māna"
+    ],
+    "distinctPairs": 30,
+    "reviewQuestions": 15
   },
   {
     "level": 4,
     "lesson": 8,
-    "title": "Emphasise who did it",
+    "title": "Practise: emphasise who did it",
     "status": "Mixed draft",
-    "note": "Introduce agent emphasis with familiar eating, reading and seeing. Keep ownership and actor emphasis distinct. Reference practice: tā rātou, tō rātou, ā rātou, ō rātou. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "tuhi"
-    ],
-    "distinctPairs": 34,
-    "reviewQuestions": 30
+    "note": "Introduce agent emphasis with familiar eating, reading and seeing. Keep ownership and actor emphasis distinct. Reference practice: ā tātou, ō tātou; tā mātou, tō mātou, ā mātou, ō mātou; ā mātou, ō mātou; tā koutou, tō koutou, ā koutou, ō koutou. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [],
+    "distinctPairs": 31,
+    "reviewQuestions": 13
   },
   {
     "level": 4,
     "lesson": 9,
-    "title": "Emphasise who will do it",
+    "title": "Practise: emphasise who will do it",
     "status": "Mixed draft",
-    "note": "Change past actor emphasis to future using exactly the same action and object vocabulary. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Change past actor emphasis to future using exactly the same action and object vocabulary. Reference practice: ā koutou, ō koutou; tā rātou, tō rātou, ā rātou, ō rātou; ā rātou, ō rātou. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [],
-    "distinctPairs": 33,
-    "reviewQuestions": 30
+    "distinctPairs": 29,
+    "reviewQuestions": 23
   },
   {
     "level": 4,
     "lesson": 10,
-    "title": "Say it was not that person",
+    "title": "Practise: say it was not that person",
     "status": "Mixed draft",
-    "note": "Negate the identity of the agent, not the occurrence of the action. Include both past and future emphasis. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Negate the identity of the agent, not the occurrence of the action. Include both past and future emphasis. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [],
-    "distinctPairs": 39,
-    "reviewQuestions": 30
+    "distinctPairs": 29,
+    "reviewQuestions": 35
   },
   {
     "level": 5,
     "lesson": 1,
-    "title": "Bigger and smaller",
+    "title": "Meet comparisons, habits, ability and passives",
     "status": "Mixed draft",
-    "note": "Introduce two comparison words with familiar animals; avoid loading ten new adjectives onto the first comparison lesson. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "ake",
-      "manu",
-      "pouaka",
-      "tungāne"
-    ],
-    "distinctPairs": 37,
-    "reviewQuestions": 30
+    "note": "Recognise new patterns from English. All translations revise earlier levels. Recognise new patterns using English sentences; translation revision uses earlier material.",
+    "newForms": [],
+    "distinctPairs": 16,
+    "reviewQuestions": 20
   },
   {
     "level": 5,
     "lesson": 2,
-    "title": "Faster and stronger",
+    "title": "Simple comparisons and habits",
     "status": "Mixed draft",
-    "note": "Reuse tere and kaha from wishes; introduce no new adjectives. Names practise the personal i a form. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "tuku",
-      "whakarite"
+      "ai",
+      "ake",
+      "rā",
+      "rākau",
+      "teitei",
+      "whāiti",
+      "whānui"
     ],
-    "distinctPairs": 33,
-    "reviewQuestions": 30
+    "distinctPairs": 27,
+    "reviewQuestions": 29
   },
   {
     "level": 5,
     "lesson": 3,
-    "title": "Things you do regularly",
+    "title": "What you can and cannot do",
     "status": "Mixed draft",
-    "note": "Introduce habitual ai and ia rā using five familiar actions, rather than only going somewhere. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "ai",
-      "rā",
+      "ipu",
+      "makariri",
+      "pouaka",
+      "taea",
+      "wera"
+    ],
+    "distinctPairs": 27,
+    "reviewQuestions": 27
+  },
+  {
+    "level": 5,
+    "lesson": 4,
+    "title": "Put the object first",
+    "status": "Mixed draft",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [
+      "kainga",
+      "maroke",
+      "mākū"
+    ],
+    "distinctPairs": 27,
+    "reviewQuestions": 29
+  },
+  {
+    "level": 5,
+    "lesson": 5,
+    "title": "Practise: ability with movement",
+    "status": "Mixed draft",
+    "note": "Extend the same ability frame to familiar intransitive actions; introduce no vocabulary. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [
+      "ngāwari",
+      "uaua"
+    ],
+    "distinctPairs": 28,
+    "reviewQuestions": 19
+  },
+  {
+    "level": 5,
+    "lesson": 6,
+    "title": "Practise: say what you cannot do",
+    "status": "Mixed draft",
+    "note": "Negate ability while holding the positive ability sentence vocabulary constant. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [
+      "mō",
+      "tuku",
+      "whakaharatau",
+      "whakarite"
+    ],
+    "distinctPairs": 29,
+    "reviewQuestions": 23
+  },
+  {
+    "level": 5,
+    "lesson": 7,
+    "title": "Practise: put the object first",
+    "status": "Mixed draft",
+    "note": "Reuse command forms kainga and pānuitia; introduce kitea. Compare with active sentences already encountered. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [
+      "kawea",
+      "kitea",
       "taumaha",
       "whakamātau"
     ],
-    "distinctPairs": 36,
-    "reviewQuestions": 30
-  },
-  {
-    "level": 5,
-    "lesson": 4,
-    "title": "Say what you can do",
-    "status": "Mixed draft",
-    "note": "Ability with known actions and objects. Uses the object-before-verbal-comment pattern, with no active-object i. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "mai",
-      "taea",
-      "āwhina"
-    ],
-    "distinctPairs": 35,
-    "reviewQuestions": 30
-  },
-  {
-    "level": 5,
-    "lesson": 5,
-    "title": "Ability with movement",
-    "status": "Mixed draft",
-    "note": "Extend the same ability frame to familiar intransitive actions; introduce no vocabulary. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [],
-    "distinctPairs": 34,
-    "reviewQuestions": 30
-  },
-  {
-    "level": 5,
-    "lesson": 6,
-    "title": "Say what you cannot do",
-    "status": "Mixed draft",
-    "note": "Negate ability while holding the positive ability sentence vocabulary constant. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "ināianei"
-    ],
-    "distinctPairs": 36,
-    "reviewQuestions": 30
-  },
-  {
-    "level": 5,
-    "lesson": 7,
-    "title": "Put the object first",
-    "status": "Mixed draft",
-    "note": "Reuse command forms kainga and pānuitia; introduce kitea. Compare with active sentences already encountered. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "kawea",
-      "kitea"
-    ],
-    "distinctPairs": 35,
-    "reviewQuestions": 30
+    "distinctPairs": 29,
+    "reviewQuestions": 23
   },
   {
     "level": 5,
     "lesson": 8,
-    "title": "Completed passive actions",
+    "title": "Practise: completed passive actions",
     "status": "Mixed draft",
-    "note": "Change only the aspect of known passive sentences; no new verbs or objects. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [],
-    "distinctPairs": 36,
-    "reviewQuestions": 30
+    "note": "Change only the aspect of known passive sentences; no new verbs or objects. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [
+      "haka",
+      "mai",
+      "whakaari"
+    ],
+    "distinctPairs": 29,
+    "reviewQuestions": 27
   },
   {
     "level": 5,
     "lesson": 9,
-    "title": "Future passive actions",
+    "title": "Practise: future passive actions",
     "status": "Mixed draft",
-    "note": "Use the known future marker with known passive forms; compare who acts with what is affected. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [],
-    "distinctPairs": 35,
-    "reviewQuestions": 30
+    "note": "Use the known future marker with known passive forms; compare who acts with what is affected. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [
+      "hangaia",
+      "horoia",
+      "tuhia"
+    ],
+    "distinctPairs": 30,
+    "reviewQuestions": 29
   },
   {
     "level": 5,
     "lesson": 10,
-    "title": "Compare, describe habits and ability",
+    "title": "Practise: compare, describe habits and ability",
     "status": "Mixed draft",
-    "note": "Cumulative retrieval across comparisons, habits and ability. No new words or grammar. Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Cumulative retrieval across comparisons, habits and ability. No new words or grammar. Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [],
-    "distinctPairs": 42,
-    "reviewQuestions": 30
+    "distinctPairs": 30,
+    "reviewQuestions": 33
   },
   {
     "level": 6,
     "lesson": 1,
-    "title": "Ask why something happened",
+    "title": "Meet questions and conditions",
     "status": "Mixed draft",
-    "note": "Add a why-question frame to established past actions; no new action vocabulary. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "hoatu",
-      "kaimahi",
-      "kuia"
-    ],
-    "distinctPairs": 37,
-    "reviewQuestions": 30
+    "note": "Recognise new patterns from English. All translations revise earlier levels. Recognise new patterns using English sentences; translation revision uses earlier material.",
+    "newForms": [],
+    "distinctPairs": 15,
+    "reviewQuestions": 20
   },
   {
     "level": 6,
     "lesson": 2,
-    "title": "Ask about usual actions",
+    "title": "Simple why and when questions",
     "status": "Mixed draft",
-    "note": "Use familiar ia rā to make the habitual reading explicit. Avoid ambiguous present/future English prompts. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "hīkoi",
-      "pahikara",
-      "waho"
+      "nōnahea",
+      "āhea"
     ],
-    "distinctPairs": 36,
-    "reviewQuestions": 30
+    "distinctPairs": 28,
+    "reviewQuestions": 29
   },
   {
     "level": 6,
     "lesson": 3,
-    "title": "Ask why something will happen",
+    "title": "If this happens",
     "status": "Mixed draft",
-    "note": "Introduce only āpōpō as a time expression; keep the previously practised question frame and actions. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "engari",
-      "hiahia",
-      "hoko",
-      "moni",
-      "āpōpō"
-    ],
-    "distinctPairs": 35,
-    "reviewQuestions": 30
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [],
+    "distinctPairs": 28,
+    "reviewQuestions": 29
   },
   {
     "level": 6,
     "lesson": 4,
-    "title": "Ask why something did not happen",
+    "title": "Other ways to say if",
     "status": "Mixed draft",
-    "note": "Negative why questions reuse known negative meanings and familiar verbs; no extra vocabulary. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Core language introduced early with simple examples; later lessons extend and revisit it. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "kore",
-      "noho",
-      "roa"
+      "mehemea",
+      "mēnā"
     ],
-    "distinctPairs": 36,
+    "distinctPairs": 27,
     "reviewQuestions": 30
   },
   {
     "level": 6,
     "lesson": 5,
-    "title": "Ask when something happened",
+    "title": "Practise: ask when something happened",
     "status": "Mixed draft",
-    "note": "Replace the question focus with past when while keeping the action vocabulary familiar. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Replace the question focus with past when while keeping the action vocabulary familiar. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "nōnahea"
+      "hui",
+      "hākari",
+      "kaimahi",
+      "moni"
     ],
-    "distinctPairs": 37,
-    "reviewQuestions": 30
+    "distinctPairs": 31,
+    "reviewQuestions": 19
   },
   {
     "level": 6,
     "lesson": 6,
-    "title": "Ask when something will happen",
+    "title": "Practise: ask when something will happen",
     "status": "Mixed draft",
-    "note": "Future when questions use the same known actions and pronouns. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Future when questions use the same known actions and pronouns. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "mēnā",
+      "hoko",
+      "hīkoi",
+      "pahi",
+      "pahikara",
       "pupuri",
-      "āhea"
+      "pūrākau"
     ],
-    "distinctPairs": 37,
-    "reviewQuestions": 30
+    "distinctPairs": 31,
+    "reviewQuestions": 19
   },
   {
     "level": 6,
     "lesson": 7,
-    "title": "If this happens",
+    "title": "Practise: if this happens",
     "status": "Mixed draft",
-    "note": "Join two already familiar clauses; vary the consequence. No new content words. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [],
-    "distinctPairs": 36,
-    "reviewQuestions": 30
+    "note": "Join two already familiar clauses; vary the consequence. No new content words. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [
+      "engari",
+      "kiwi",
+      "moana"
+    ],
+    "distinctPairs": 31,
+    "reviewQuestions": 23
   },
   {
     "level": 6,
     "lesson": 8,
-    "title": "Another way to say if",
+    "title": "Practise: another way to say if",
     "status": "Mixed draft",
-    "note": "Practise the same conditional meanings with mēnā; change the frame without changing vocabulary. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
-    "newForms": [
-      "pātai"
-    ],
-    "distinctPairs": 37,
-    "reviewQuestions": 30
+    "note": "Practise the same conditional meanings with mēnā; change the frame without changing vocabulary. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
+    "newForms": [],
+    "distinctPairs": 30,
+    "reviewQuestions": 23
   },
   {
     "level": 6,
     "lesson": 9,
-    "title": "If and alternatives",
+    "title": "Practise: if and alternatives",
     "status": "Mixed draft",
-    "note": "Introduce mehemea using the same scenarios, then contrast it with earlier conditional frames in review. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Introduce mehemea using the same scenarios, then contrast it with earlier conditional frames in review. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
-      "mehemea"
+      "nōna"
     ],
-    "distinctPairs": 37,
-    "reviewQuestions": 30
+    "distinctPairs": 31,
+    "reviewQuestions": 27
   },
   {
     "level": 6,
     "lesson": 10,
-    "title": "Questions and conditions together",
+    "title": "Practise: questions and conditions together",
     "status": "Mixed draft",
-    "note": "Cumulative why, negative why, when and if sentences. No new grammar or vocabulary. Reference practice: . Recognition revision uses the English-only introduction; translation revision uses earlier translation lessons.",
+    "note": "Cumulative why, negative why, when and if sentences. No new grammar or vocabulary. Reference practice: . Recognise this lesson’s patterns, practise simple sentences, revisit earlier work, then extend.",
     "newForms": [
       "tonu"
     ],
-    "distinctPairs": 37,
-    "reviewQuestions": 30
+    "distinctPairs": 31,
+    "reviewQuestions": 31
   }
 ]

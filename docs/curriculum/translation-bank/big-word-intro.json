@@ -1,0 +1,266 @@
+{
+  "title": "Introducing the Big Words",
+  "instruction": "Choose the Big Word.",
+  "options": [
+    "Ko",
+    "Nō",
+    "He",
+    "Kei",
+    "E",
+    "Toko-",
+    "Kotahi",
+    "Kāorekau"
+  ],
+  "questions": [
+    {
+      "id": "big-word-intro-01",
+      "en": "The man is Hemi.",
+      "answer": "Ko"
+    },
+    {
+      "id": "big-word-intro-02",
+      "en": "I am from Rotorua.",
+      "answer": "Nō"
+    },
+    {
+      "id": "big-word-intro-03",
+      "en": "Hemi is a man.",
+      "answer": "He"
+    },
+    {
+      "id": "big-word-intro-04",
+      "en": "I am at the school.",
+      "answer": "Kei"
+    },
+    {
+      "id": "big-word-intro-05",
+      "en": "There are two houses.",
+      "answer": "E"
+    },
+    {
+      "id": "big-word-intro-06",
+      "en": "There are two people.",
+      "answer": "Toko-"
+    },
+    {
+      "id": "big-word-intro-07",
+      "en": "There is one house.",
+      "answer": "Kotahi"
+    },
+    {
+      "id": "big-word-intro-08",
+      "en": "There are no houses.",
+      "answer": "Kāorekau"
+    },
+    {
+      "id": "big-word-intro-09",
+      "en": "You are from Taupō.",
+      "answer": "Nō"
+    },
+    {
+      "id": "big-word-intro-10",
+      "en": "Mere is a woman.",
+      "answer": "He"
+    },
+    {
+      "id": "big-word-intro-11",
+      "en": "You are at the house.",
+      "answer": "Kei"
+    },
+    {
+      "id": "big-word-intro-12",
+      "en": "There are three rivers.",
+      "answer": "E"
+    },
+    {
+      "id": "big-word-intro-13",
+      "en": "There are three boys.",
+      "answer": "Toko-"
+    },
+    {
+      "id": "big-word-intro-14",
+      "en": "There is one river.",
+      "answer": "Kotahi"
+    },
+    {
+      "id": "big-word-intro-15",
+      "en": "There are no rivers.",
+      "answer": "Kāorekau"
+    },
+    {
+      "id": "big-word-intro-16",
+      "en": "The woman is Mere.",
+      "answer": "Ko"
+    },
+    {
+      "id": "big-word-intro-17",
+      "en": "Pita is a boy.",
+      "answer": "He"
+    },
+    {
+      "id": "big-word-intro-18",
+      "en": "She is at the marae.",
+      "answer": "Kei"
+    },
+    {
+      "id": "big-word-intro-19",
+      "en": "There are four mountains.",
+      "answer": "E"
+    },
+    {
+      "id": "big-word-intro-20",
+      "en": "There are four girls.",
+      "answer": "Toko-"
+    },
+    {
+      "id": "big-word-intro-21",
+      "en": "There is one mountain.",
+      "answer": "Kotahi"
+    },
+    {
+      "id": "big-word-intro-22",
+      "en": "There are no mountains.",
+      "answer": "Kāorekau"
+    },
+    {
+      "id": "big-word-intro-23",
+      "en": "The boy is Pita.",
+      "answer": "Ko"
+    },
+    {
+      "id": "big-word-intro-24",
+      "en": "She is from Tauranga.",
+      "answer": "Nō"
+    },
+    {
+      "id": "big-word-intro-25",
+      "en": "My home is at the marae.",
+      "answer": "Kei"
+    },
+    {
+      "id": "big-word-intro-26",
+      "en": "There are five houses.",
+      "answer": "E"
+    },
+    {
+      "id": "big-word-intro-27",
+      "en": "There are five children.",
+      "answer": "Toko-"
+    },
+    {
+      "id": "big-word-intro-28",
+      "en": "There is one child.",
+      "answer": "Kotahi"
+    },
+    {
+      "id": "big-word-intro-29",
+      "en": "There are no children.",
+      "answer": "Kāorekau"
+    },
+    {
+      "id": "big-word-intro-30",
+      "en": "The girl is Hana.",
+      "answer": "Ko"
+    },
+    {
+      "id": "big-word-intro-31",
+      "en": "Hemi is from Rotorua.",
+      "answer": "Nō"
+    },
+    {
+      "id": "big-word-intro-32",
+      "en": "Hana is a girl.",
+      "answer": "He"
+    },
+    {
+      "id": "big-word-intro-33",
+      "en": "There are two rivers.",
+      "answer": "E"
+    },
+    {
+      "id": "big-word-intro-34",
+      "en": "There are two men.",
+      "answer": "Toko-"
+    },
+    {
+      "id": "big-word-intro-35",
+      "en": "There is one house.",
+      "answer": "Kotahi"
+    },
+    {
+      "id": "big-word-intro-36",
+      "en": "There are no people.",
+      "answer": "Kāorekau"
+    },
+    {
+      "id": "big-word-intro-37",
+      "en": "My name is Mere.",
+      "answer": "Ko"
+    },
+    {
+      "id": "big-word-intro-38",
+      "en": "Mere is from Taupō.",
+      "answer": "Nō"
+    },
+    {
+      "id": "big-word-intro-39",
+      "en": "This is a house.",
+      "answer": "He"
+    },
+    {
+      "id": "big-word-intro-40",
+      "en": "Hemi is at the school.",
+      "answer": "Kei"
+    },
+    {
+      "id": "big-word-intro-41",
+      "en": "There are three women.",
+      "answer": "Toko-"
+    },
+    {
+      "id": "big-word-intro-42",
+      "en": "There is one person.",
+      "answer": "Kotahi"
+    },
+    {
+      "id": "big-word-intro-43",
+      "en": "There are no houses.",
+      "answer": "Kāorekau"
+    },
+    {
+      "id": "big-word-intro-44",
+      "en": "The child is Hana.",
+      "answer": "Ko"
+    },
+    {
+      "id": "big-word-intro-45",
+      "en": "The boy is from Tauranga.",
+      "answer": "Nō"
+    },
+    {
+      "id": "big-word-intro-46",
+      "en": "This is a river.",
+      "answer": "He"
+    },
+    {
+      "id": "big-word-intro-47",
+      "en": "My home is in Rotorua.",
+      "answer": "Kei"
+    },
+    {
+      "id": "big-word-intro-48",
+      "en": "There are three houses.",
+      "answer": "E"
+    },
+    {
+      "id": "big-word-intro-49",
+      "en": "My name is Hemi.",
+      "answer": "Ko"
+    },
+    {
+      "id": "big-word-intro-50",
+      "en": "This is a mountain.",
+      "answer": "He"
+    }
+  ]
+}

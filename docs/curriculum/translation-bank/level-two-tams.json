@@ -1,0 +1,1289 @@
+{
+  "tams": [
+    "I",
+    "Kua",
+    "Kei te",
+    "E … ana",
+    "Ka",
+    "Me"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "title": "Meet the TAMs",
+      "pattern": "I · Kua · Kei te · E … ana · Ka · Me",
+      "pairs": []
+    },
+    {
+      "lesson": 2,
+      "title": "Happening now",
+      "pattern": "Kei te",
+      "pairs": [
+        {
+          "mi": "Kei te kai ahau.",
+          "en": "I am eating."
+        },
+        {
+          "mi": "Kei te kai koe.",
+          "en": "You are eating."
+        },
+        {
+          "mi": "Kei te kai ia.",
+          "en": "She is eating."
+        },
+        {
+          "mi": "Kei te moe ahau.",
+          "en": "I am sleeping."
+        },
+        {
+          "mi": "Kei te moe koe.",
+          "en": "You are sleeping."
+        },
+        {
+          "mi": "Kei te moe ia.",
+          "en": "She is sleeping."
+        },
+        {
+          "mi": "Kei te oma ahau.",
+          "en": "I am running."
+        },
+        {
+          "mi": "Kei te oma koe.",
+          "en": "You are running."
+        },
+        {
+          "mi": "Kei te oma ia.",
+          "en": "She is running."
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "title": "Past actions and objects with i",
+      "pattern": "I · kai / kite + i",
+      "pairs": [
+        {
+          "mi": "I kai ahau.",
+          "en": "I ate."
+        },
+        {
+          "mi": "I kai koe.",
+          "en": "You ate."
+        },
+        {
+          "mi": "I kai ia.",
+          "en": "She ate."
+        },
+        {
+          "mi": "I moe ahau.",
+          "en": "I slept."
+        },
+        {
+          "mi": "I moe koe.",
+          "en": "You slept."
+        },
+        {
+          "mi": "I moe ia.",
+          "en": "She slept."
+        },
+        {
+          "mi": "I oma ahau.",
+          "en": "I ran."
+        },
+        {
+          "mi": "I oma koe.",
+          "en": "You ran."
+        },
+        {
+          "mi": "I oma ia.",
+          "en": "She ran."
+        },
+        {
+          "mi": "Kei te kai ahau i te kai.",
+          "en": "I am eating the food."
+        },
+        {
+          "mi": "I kai koe i te kai.",
+          "en": "You ate the food."
+        },
+        {
+          "mi": "I kite ahau i a ia.",
+          "en": "I saw her."
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "title": "Choose i or ki",
+      "pattern": "kai / kite + i · titiro / haere + ki",
+      "pairs": [
+        {
+          "mi": "Kei te titiro ahau ki te kai.",
+          "en": "I am looking at the food."
+        },
+        {
+          "mi": "I titiro koe ki te kai.",
+          "en": "You looked at the food."
+        },
+        {
+          "mi": "I titiro ahau ki a ia.",
+          "en": "I looked at her."
+        },
+        {
+          "mi": "Kei te haere koe ki te kura.",
+          "en": "You are going to the school."
+        },
+        {
+          "mi": "I kite ahau i a ia.",
+          "en": "I saw her."
+        }
+      ]
+    },
+    {
+      "lesson": 5,
+      "title": "What has happened",
+      "pattern": "Kua",
+      "pairs": [
+        {
+          "mi": "Kua kai ahau.",
+          "en": "I have eaten."
+        },
+        {
+          "mi": "Kua moe te kurī.",
+          "en": "The dog has slept."
+        },
+        {
+          "mi": "Kua kai ia.",
+          "en": "She has eaten."
+        },
+        {
+          "mi": "Kua moe ahau.",
+          "en": "I have slept."
+        },
+        {
+          "mi": "Kua moe te ngeru.",
+          "en": "The cat has slept."
+        },
+        {
+          "mi": "Kua moe ia.",
+          "en": "She has slept."
+        },
+        {
+          "mi": "Kua oma ahau.",
+          "en": "I have run."
+        },
+        {
+          "mi": "Kua moe te manu.",
+          "en": "The bird has slept."
+        },
+        {
+          "mi": "Kua oma ia.",
+          "en": "She has run."
+        },
+        {
+          "mi": "Kua kai ia i te kai.",
+          "en": "She has eaten the food."
+        },
+        {
+          "mi": "Kua titiro ia ki te kai.",
+          "en": "She has looked at the food."
+        }
+      ]
+    },
+    {
+      "lesson": 6,
+      "title": "Ongoing actions",
+      "pattern": "E … ana",
+      "pairs": [
+        {
+          "mi": "E kai ana ahau.",
+          "en": "I am eating."
+        },
+        {
+          "mi": "E noho ana ia.",
+          "en": "She is sitting."
+        },
+        {
+          "mi": "E kai ana ia.",
+          "en": "She is eating."
+        },
+        {
+          "mi": "E moe ana ahau.",
+          "en": "I am sleeping."
+        },
+        {
+          "mi": "E tū ana koe.",
+          "en": "You are standing."
+        },
+        {
+          "mi": "E moe ana ia.",
+          "en": "She is sleeping."
+        },
+        {
+          "mi": "E oma ana ahau.",
+          "en": "I am running."
+        },
+        {
+          "mi": "E oma ana koe.",
+          "en": "You are running."
+        },
+        {
+          "mi": "E oma ana ia.",
+          "en": "She is running."
+        },
+        {
+          "mi": "E kai ana ahau i te kai.",
+          "en": "I am eating the food."
+        },
+        {
+          "mi": "E titiro ana ahau ki te kai.",
+          "en": "I am looking at the food."
+        }
+      ]
+    },
+    {
+      "lesson": 7,
+      "title": "What will happen",
+      "pattern": "Ka",
+      "pairs": [
+        {
+          "mi": "Ka kai ahau.",
+          "en": "I will eat."
+        },
+        {
+          "mi": "Ka kai koe.",
+          "en": "You will eat."
+        },
+        {
+          "mi": "Ka kai ia.",
+          "en": "She will eat."
+        },
+        {
+          "mi": "Ka moe ahau.",
+          "en": "I will sleep."
+        },
+        {
+          "mi": "Ka moe koe.",
+          "en": "You will sleep."
+        },
+        {
+          "mi": "Ka moe ia.",
+          "en": "She will sleep."
+        },
+        {
+          "mi": "Ka oma ahau.",
+          "en": "I will run."
+        },
+        {
+          "mi": "Ka oma koe.",
+          "en": "You will run."
+        },
+        {
+          "mi": "Ka oma ia.",
+          "en": "She will run."
+        },
+        {
+          "mi": "Ka kai koe i te kai.",
+          "en": "You will eat the food."
+        },
+        {
+          "mi": "Ka haere koe ki te kura.",
+          "en": "You will go to the school."
+        }
+      ]
+    },
+    {
+      "lesson": 8,
+      "title": "What should happen",
+      "pattern": "Me",
+      "pairs": [
+        {
+          "mi": "Me kai ahau.",
+          "en": "I should eat."
+        },
+        {
+          "mi": "Me pānui koe i te pukapuka.",
+          "en": "You should read the book."
+        },
+        {
+          "mi": "Me kai ia.",
+          "en": "She should eat."
+        },
+        {
+          "mi": "Me moe ahau.",
+          "en": "I should sleep."
+        },
+        {
+          "mi": "Me tuhi koe i tōu ingoa.",
+          "en": "You should write your name."
+        },
+        {
+          "mi": "Me moe ia.",
+          "en": "She should sleep."
+        },
+        {
+          "mi": "Me oma ahau.",
+          "en": "I should run."
+        },
+        {
+          "mi": "Me oma koe.",
+          "en": "You should run."
+        },
+        {
+          "mi": "Me oma ia.",
+          "en": "She should run."
+        },
+        {
+          "mi": "Me kai ia i te kai.",
+          "en": "She should eat the food."
+        },
+        {
+          "mi": "Me titiro ia ki te kai.",
+          "en": "She should look at the food."
+        }
+      ]
+    },
+    {
+      "lesson": 9,
+      "title": "Practise TAMs with i and ki",
+      "pattern": "TAMs · i · ki",
+      "pairs": [
+        {
+          "mi": "Kei te kai ahau i te kai.",
+          "en": "I am eating the food."
+        },
+        {
+          "mi": "I kai koe i te kai.",
+          "en": "You ate the food."
+        },
+        {
+          "mi": "Kua kai ia i te kai.",
+          "en": "She has eaten the food."
+        },
+        {
+          "mi": "E kai ana ahau i te kai.",
+          "en": "I am eating the food."
+        },
+        {
+          "mi": "Ka kai koe i te kai.",
+          "en": "You will eat the food."
+        },
+        {
+          "mi": "Me kai ia i te kai.",
+          "en": "She should eat the food."
+        },
+        {
+          "mi": "I kite ahau i a ia.",
+          "en": "I saw her."
+        },
+        {
+          "mi": "Kei te titiro ahau ki te kai.",
+          "en": "I am looking at the food."
+        },
+        {
+          "mi": "I titiro koe ki te kai.",
+          "en": "You looked at the food."
+        },
+        {
+          "mi": "Me hoatu koe i te pukapuka ki te kaiako.",
+          "en": "You should give the book to the teacher."
+        },
+        {
+          "mi": "Me hōmai koe i te pene ki a au.",
+          "en": "You should give the pen to me."
+        },
+        {
+          "mi": "Ka haere koe ki te kura.",
+          "en": "You will go to the school."
+        },
+        {
+          "mi": "Me whakarongo koe ki te kaiako.",
+          "en": "You should listen to the teacher."
+        },
+        {
+          "mi": "I titiro ahau ki a ia.",
+          "en": "I looked at her."
+        }
+      ]
+    },
+    {
+      "lesson": 10,
+      "title": "TAMs, i and ki together",
+      "pattern": "Choose the TAM and the connection",
+      "pairs": [
+        {
+          "mi": "I kai ahau i te kai.",
+          "en": "I ate the food."
+        },
+        {
+          "mi": "Kua kite koe i te kai.",
+          "en": "You have seen the food."
+        },
+        {
+          "mi": "Kei te titiro ia ki te kai.",
+          "en": "She is looking at the food."
+        },
+        {
+          "mi": "E kai ana ahau i te kai.",
+          "en": "I am eating the food."
+        },
+        {
+          "mi": "Ka haere ia ki te kura.",
+          "en": "She will go to the school."
+        },
+        {
+          "mi": "Me titiro koe ki te kai.",
+          "en": "You should look at the food."
+        }
+      ]
+    }
+  ],
+  "recognition": [
+    {
+      "en": "I ate.",
+      "mi": "",
+      "answer": "I",
+      "acceptedAnswers": [
+        "I"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You ate.",
+      "mi": "",
+      "answer": "I",
+      "acceptedAnswers": [
+        "I"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She ate.",
+      "mi": "",
+      "answer": "I",
+      "acceptedAnswers": [
+        "I"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I slept.",
+      "mi": "",
+      "answer": "I",
+      "acceptedAnswers": [
+        "I"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You slept.",
+      "mi": "",
+      "answer": "I",
+      "acceptedAnswers": [
+        "I"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She slept.",
+      "mi": "",
+      "answer": "I",
+      "acceptedAnswers": [
+        "I"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I ran.",
+      "mi": "",
+      "answer": "I",
+      "acceptedAnswers": [
+        "I"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You ran.",
+      "mi": "",
+      "answer": "I",
+      "acceptedAnswers": [
+        "I"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She ran.",
+      "mi": "",
+      "answer": "I",
+      "acceptedAnswers": [
+        "I"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I have eaten.",
+      "mi": "",
+      "answer": "Kua",
+      "acceptedAnswers": [
+        "Kua"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You have eaten.",
+      "mi": "",
+      "answer": "Kua",
+      "acceptedAnswers": [
+        "Kua"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She has eaten.",
+      "mi": "",
+      "answer": "Kua",
+      "acceptedAnswers": [
+        "Kua"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I have slept.",
+      "mi": "",
+      "answer": "Kua",
+      "acceptedAnswers": [
+        "Kua"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You have slept.",
+      "mi": "",
+      "answer": "Kua",
+      "acceptedAnswers": [
+        "Kua"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She has slept.",
+      "mi": "",
+      "answer": "Kua",
+      "acceptedAnswers": [
+        "Kua"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I have run.",
+      "mi": "",
+      "answer": "Kua",
+      "acceptedAnswers": [
+        "Kua"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You have run.",
+      "mi": "",
+      "answer": "Kua",
+      "acceptedAnswers": [
+        "Kua"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She has run.",
+      "mi": "",
+      "answer": "Kua",
+      "acceptedAnswers": [
+        "Kua"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I am eating.",
+      "mi": "",
+      "answer": "Kei te",
+      "acceptedAnswers": [
+        "Kei te",
+        "E … ana"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You are eating.",
+      "mi": "",
+      "answer": "Kei te",
+      "acceptedAnswers": [
+        "Kei te",
+        "E … ana"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She is eating.",
+      "mi": "",
+      "answer": "Kei te",
+      "acceptedAnswers": [
+        "Kei te",
+        "E … ana"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I am sleeping.",
+      "mi": "",
+      "answer": "Kei te",
+      "acceptedAnswers": [
+        "Kei te",
+        "E … ana"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You are sleeping.",
+      "mi": "",
+      "answer": "Kei te",
+      "acceptedAnswers": [
+        "Kei te",
+        "E … ana"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She is sleeping.",
+      "mi": "",
+      "answer": "Kei te",
+      "acceptedAnswers": [
+        "Kei te",
+        "E … ana"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I am running.",
+      "mi": "",
+      "answer": "Kei te",
+      "acceptedAnswers": [
+        "Kei te",
+        "E … ana"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You are running.",
+      "mi": "",
+      "answer": "Kei te",
+      "acceptedAnswers": [
+        "Kei te",
+        "E … ana"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She is running.",
+      "mi": "",
+      "answer": "Kei te",
+      "acceptedAnswers": [
+        "Kei te",
+        "E … ana"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I will eat.",
+      "mi": "",
+      "answer": "Ka",
+      "acceptedAnswers": [
+        "Ka"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You will eat.",
+      "mi": "",
+      "answer": "Ka",
+      "acceptedAnswers": [
+        "Ka"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She will eat.",
+      "mi": "",
+      "answer": "Ka",
+      "acceptedAnswers": [
+        "Ka"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I will sleep.",
+      "mi": "",
+      "answer": "Ka",
+      "acceptedAnswers": [
+        "Ka"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You will sleep.",
+      "mi": "",
+      "answer": "Ka",
+      "acceptedAnswers": [
+        "Ka"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She will sleep.",
+      "mi": "",
+      "answer": "Ka",
+      "acceptedAnswers": [
+        "Ka"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I will run.",
+      "mi": "",
+      "answer": "Ka",
+      "acceptedAnswers": [
+        "Ka"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You will run.",
+      "mi": "",
+      "answer": "Ka",
+      "acceptedAnswers": [
+        "Ka"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She will run.",
+      "mi": "",
+      "answer": "Ka",
+      "acceptedAnswers": [
+        "Ka"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I should eat.",
+      "mi": "",
+      "answer": "Me",
+      "acceptedAnswers": [
+        "Me"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You should eat.",
+      "mi": "",
+      "answer": "Me",
+      "acceptedAnswers": [
+        "Me"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She should eat.",
+      "mi": "",
+      "answer": "Me",
+      "acceptedAnswers": [
+        "Me"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I should sleep.",
+      "mi": "",
+      "answer": "Me",
+      "acceptedAnswers": [
+        "Me"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You should sleep.",
+      "mi": "",
+      "answer": "Me",
+      "acceptedAnswers": [
+        "Me"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She should sleep.",
+      "mi": "",
+      "answer": "Me",
+      "acceptedAnswers": [
+        "Me"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "I should run.",
+      "mi": "",
+      "answer": "Me",
+      "acceptedAnswers": [
+        "Me"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "You should run.",
+      "mi": "",
+      "answer": "Me",
+      "acceptedAnswers": [
+        "Me"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    },
+    {
+      "en": "She should run.",
+      "mi": "",
+      "answer": "Me",
+      "acceptedAnswers": [
+        "Me"
+      ],
+      "options": [
+        "I",
+        "Kua",
+        "Kei te",
+        "E … ana",
+        "Ka",
+        "Me"
+      ],
+      "choiceLabel": "Choose the TAM"
+    }
+  ],
+  "markers": [
+    {
+      "mi": "",
+      "en": "I am eating the food.",
+      "answer": "i",
+      "acceptedAnswers": [
+        "i"
+      ],
+      "options": [
+        "i",
+        "ki"
+      ],
+      "choiceLabel": "Choose i or ki",
+      "context": "Kei te kai ahau ___ te kai."
+    },
+    {
+      "mi": "",
+      "en": "I saw her.",
+      "answer": "i",
+      "acceptedAnswers": [
+        "i"
+      ],
+      "options": [
+        "i",
+        "ki"
+      ],
+      "choiceLabel": "Choose i or ki",
+      "context": "I kite ahau ___ a ia."
+    },
+    {
+      "mi": "",
+      "en": "I am looking at the food.",
+      "answer": "ki",
+      "acceptedAnswers": [
+        "ki"
+      ],
+      "options": [
+        "i",
+        "ki"
+      ],
+      "choiceLabel": "Choose i or ki",
+      "context": "Kei te titiro ahau ___ te kai."
+    },
+    {
+      "mi": "",
+      "en": "I looked at her.",
+      "answer": "ki",
+      "acceptedAnswers": [
+        "ki"
+      ],
+      "options": [
+        "i",
+        "ki"
+      ],
+      "choiceLabel": "Choose i or ki",
+      "context": "I titiro ahau ___ a ia."
+    },
+    {
+      "mi": "",
+      "en": "You are going to the school.",
+      "answer": "ki",
+      "acceptedAnswers": [
+        "ki"
+      ],
+      "options": [
+        "i",
+        "ki"
+      ],
+      "choiceLabel": "Choose i or ki",
+      "context": "Kei te haere koe ___ te kura."
+    }
+  ]
+}

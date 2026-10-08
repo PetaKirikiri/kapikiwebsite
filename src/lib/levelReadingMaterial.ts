@@ -22,7 +22,7 @@ export const LEVEL_READING_MATERIAL = {
   2: {
     id: "kai", title: "Te kai",
     sections: [{ title: "Te kai", meaning: "The food", paragraphStarts: [0,3,5], lines: [
-      ["Ko Hana tōku whaea.", "Hana is my mother.", undefined, {"structures": [1]}],
+      ["Ko Hana te whaea.", "Hana is the mother.", undefined, {"structures": [1]}],
       ["I kai ahau i te kai.", "I ate the food.", undefined, {"structures": [20]}],
       ["Kua kai a Hana.", "Hana has eaten.", undefined, {"structures": [21]}],
       ["Kei te moe ia.", "She is sleeping.", undefined, {"structures": [22]}],

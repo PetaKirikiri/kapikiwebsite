@@ -2,10 +2,13 @@
   "schemaVersion": 1,
   "status": "initial-partial-editorial-draft",
   "target": {
-    "distinctApprovedVocabulary": 1000,
+    "distinctApprovedVocabulary": 900,
     "byEndOfLevel": 6,
     "approvedSoFar": 0,
-    "kiwahaCountedSeparately": true
+    "kiwahaCountedSeparately": true,
+    "newWordsPerWeek": 15,
+    "isPlanningCapacity": true,
+    "selectionBasis": "Lesson topics and sentence structures; frequency is a cross-check, not the ordering or an inclusion quota."
   },
   "countingPolicy": {
     "normalisation": "NFC and case folding; preserve macrons",
@@ -459,7 +462,8 @@
         "ipu",
         "kūaha",
         "maripi",
-        "pereti"
+        "pereti",
+        "pukapuka"
       ]
     },
     {
@@ -2482,12 +2486,14 @@
     {
       "key": "pukapuka",
       "word": "pukapuka",
-      "firstProposedLevel": 4,
+      "firstProposedLevel": 3,
       "revisitLevels": [
+        4,
         5,
         6
       ],
       "groupIds": [
+        "L3-3",
         "L4-3"
       ],
       "frequencyRank": 178,

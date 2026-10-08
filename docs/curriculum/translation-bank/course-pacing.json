@@ -1,0 +1,500 @@
+{
+  "status": "Teacher-review draft",
+  "principle": "Lesson 1 recognises patterns from English; lessons 2–4 use short familiar sentences; later lessons add story detail and reference forms.",
+  "introductions": [
+    {
+      "level": 1,
+      "lesson": 2,
+      "title": "Names and identity",
+      "pattern": "Ko … tōku ingoa",
+      "pairs": [
+        {
+          "mi": "Ko Mere tōku ingoa.",
+          "en": "My name is Mere."
+        }
+      ],
+      "extensionPairs": []
+    },
+    {
+      "level": 1,
+      "lesson": 3,
+      "title": "Who I am and where I am from",
+      "pattern": "Ko · Nō",
+      "pairs": [
+        {
+          "mi": "Nō Rotorua ahau.",
+          "en": "I am from Rotorua."
+        }
+      ],
+      "extensionPairs": []
+    },
+    {
+      "level": 1,
+      "lesson": 4,
+      "title": "Mountains, rivers and lakes",
+      "pattern": "Ko · Nō · te · tōku",
+      "pairs": [
+        {
+          "mi": "Ko Ngongotahā tōku maunga.",
+          "en": "Ngongotahā is my mountain."
+        },
+        {
+          "mi": "Ko Waikato tōku awa.",
+          "en": "Waikato is my river."
+        },
+        {
+          "mi": "Ko Rotorua tōku roto.",
+          "en": "Rotorua is my lake."
+        }
+      ],
+      "extensionPairs": []
+    },
+    {
+      "level": 3,
+      "lesson": 2,
+      "title": "Simple negative sentences",
+      "pattern": "Ehara … i te … · Kāore … i · Kāore … i te",
+      "pairs": [
+        {
+          "mi": "Ehara a Mere i te wahine.",
+          "en": "Mere is not a woman."
+        },
+        {
+          "mi": "Kāore ahau i kai.",
+          "en": "I did not eat."
+        },
+        {
+          "mi": "Kāore ahau i te kai.",
+          "en": "I am not eating."
+        }
+      ],
+      "extensionPairs": [
+        {
+          "mi": "Kei te inu ia.",
+          "en": "She is drinking."
+        },
+        {
+          "mi": "Kei te oho ia.",
+          "en": "She is waking up."
+        },
+        {
+          "mi": "Kāore ahau i te matekai.",
+          "en": "I am not hungry."
+        },
+        {
+          "mi": "Kāore ahau i te hiainu.",
+          "en": "I am not thirsty."
+        },
+        {
+          "mi": "Kāore ahau i te ngenge.",
+          "en": "I am not tired."
+        },
+        {
+          "mi": "Kāore ahau i te māuiui.",
+          "en": "I am not unwell."
+        }
+      ],
+      "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
+    },
+    {
+      "level": 3,
+      "lesson": 3,
+      "title": "Will not and not yet",
+      "pattern": "Kāore … e · Kāore anō … kia",
+      "pairs": [
+        {
+          "mi": "Kāore ahau e kai.",
+          "en": "I will not eat."
+        },
+        {
+          "mi": "Kāore anō ahau kia kai.",
+          "en": "I have not eaten yet."
+        }
+      ],
+      "extensionPairs": [
+        {
+          "mi": "I kai ahau i te parāoa.",
+          "en": "I ate the bread."
+        },
+        {
+          "mi": "I kai koe i te āporo.",
+          "en": "You ate the apple."
+        },
+        {
+          "mi": "I kai ia i te hēki.",
+          "en": "She ate the egg."
+        },
+        {
+          "mi": "I inu ahau i te miraka.",
+          "en": "I drank the milk."
+        },
+        {
+          "mi": "Kāore ahau e mōhio.",
+          "en": "I do not know."
+        },
+        {
+          "mi": "Kāore anō ahau kia mārama.",
+          "en": "I have not understood yet."
+        },
+        {
+          "mi": "Kāore anō ahau kia mahara.",
+          "en": "I have not remembered yet."
+        },
+        {
+          "mi": "Kāore ahau e wareware.",
+          "en": "I will not forget."
+        },
+        {
+          "mi": "Kāore anō ahau kia kite i te waea.",
+          "en": "I have not seen the phone yet."
+        },
+        {
+          "mi": "Kāore ahau i kite i te pēke.",
+          "en": "I did not see the bag."
+        }
+      ],
+      "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
+    },
+    {
+      "level": 3,
+      "lesson": 4,
+      "title": "Instructions, do not and stop",
+      "pattern": "Commands · Kaua e · Kāti te · Kia",
+      "pairs": [
+        {
+          "mi": "E oma!",
+          "en": "Run!"
+        },
+        {
+          "mi": "Kaua e oma!",
+          "en": "Do not run!"
+        },
+        {
+          "mi": "Kāti te oma!",
+          "en": "Stop running!"
+        },
+        {
+          "mi": "Kia kaha!",
+          "en": "Be strong!"
+        },
+        {
+          "mi": "He kaha ahau.",
+          "en": "I am strong."
+        },
+        {
+          "mi": "He ngoikore ahau.",
+          "en": "I am weak."
+        }
+      ],
+      "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required.",
+      "extensionPairs": [
+        {
+          "mi": "Kei te inu ahau i te kawhe.",
+          "en": "I am drinking the coffee."
+        },
+        {
+          "mi": "I inu koe i te tī.",
+          "en": "You drank the tea."
+        },
+        {
+          "mi": "Kei te titiro ahau ki te kapu.",
+          "en": "I am looking at the cup."
+        },
+        {
+          "mi": "E tatari!",
+          "en": "Wait!"
+        },
+        {
+          "mi": "E tiaki i te tamaiti!",
+          "en": "Look after the child!"
+        },
+        {
+          "mi": "E āwhina i te tamaiti!",
+          "en": "Help the child!"
+        },
+        {
+          "mi": "E titiro ki runga!",
+          "en": "Look up!"
+        },
+        {
+          "mi": "E titiro ki raro!",
+          "en": "Look down!"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "lesson": 2,
+      "title": "Simple ownership and recipients",
+      "pattern": "Nā · Nō · Mā · Mō",
+      "pairs": [
+        {
+          "mi": "Nāku te kai.",
+          "en": "The food belongs to me."
+        },
+        {
+          "mi": "Nōku te whare.",
+          "en": "The house belongs to me."
+        },
+        {
+          "mi": "Māu te kai.",
+          "en": "The food is for you."
+        },
+        {
+          "mi": "Mōu te whare.",
+          "en": "The house is for you."
+        }
+      ],
+      "extensionPairs": []
+    },
+    {
+      "level": 4,
+      "lesson": 3,
+      "title": "Who did it",
+      "pattern": "Nā … i",
+      "pairs": [
+        {
+          "mi": "Nāku te kai i kai.",
+          "en": "It was I who ate the food."
+        },
+        {
+          "mi": "Ehara nāku te kai.",
+          "en": "The food does not belong to me."
+        }
+      ],
+      "extensionPairs": []
+    },
+    {
+      "level": 4,
+      "lesson": 4,
+      "title": "Who will do it",
+      "pattern": "Mā … e",
+      "pairs": [
+        {
+          "mi": "Māku te kai e kai.",
+          "en": "It will be I who will eat the food."
+        },
+        {
+          "mi": "Ehara māku te kai.",
+          "en": "The food is not for me."
+        }
+      ],
+      "extensionPairs": [
+        {
+          "mi": "He kaha ahau.",
+          "en": "I am strong."
+        },
+        {
+          "mi": "He ngoikore ahau.",
+          "en": "I am weak."
+        },
+        {
+          "mi": "He tere te kurī.",
+          "en": "The dog is fast."
+        },
+        {
+          "mi": "He pōturi te kurī.",
+          "en": "The dog is slow."
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "lesson": 2,
+      "title": "Simple comparisons and habits",
+      "pattern": "He … ake … i · … ai · ia rā",
+      "pairs": [
+        {
+          "mi": "He nui ake te kura i te whare.",
+          "en": "The school is bigger than the house."
+        },
+        {
+          "mi": "Kai ai ahau ia rā.",
+          "en": "I eat every day."
+        }
+      ],
+      "extensionPairs": [
+        {
+          "mi": "He whānui ake te whare i te rūma.",
+          "en": "The house is wider than the room."
+        },
+        {
+          "mi": "He whāiti ake te rūma i te whare.",
+          "en": "The room is narrower than the house."
+        },
+        {
+          "mi": "He teitei ake te rākau i te whare.",
+          "en": "The tree is taller than the house."
+        }
+      ],
+      "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
+    },
+    {
+      "level": 5,
+      "lesson": 3,
+      "title": "What you can and cannot do",
+      "pattern": "Ka taea · Kāore e taea",
+      "pairs": [
+        {
+          "mi": "Ka taea e au te oma.",
+          "en": "I can run."
+        },
+        {
+          "mi": "Kāore e taea e au te oma.",
+          "en": "I cannot run."
+        }
+      ],
+      "extensionPairs": [
+        {
+          "mi": "Ka taea e au te ipu te horoi.",
+          "en": "I can wash the container."
+        },
+        {
+          "mi": "Kāore e taea e au te pouaka te kawe.",
+          "en": "I cannot carry the box."
+        },
+        {
+          "mi": "He wera ake te tī i te miraka.",
+          "en": "The tea is hotter than the milk."
+        },
+        {
+          "mi": "He makariri ake te miraka i te tī.",
+          "en": "The milk is colder than the tea."
+        }
+      ],
+      "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
+    },
+    {
+      "level": 5,
+      "lesson": 4,
+      "title": "Put the object first",
+      "pattern": "Passive · I / Kua / Ka",
+      "pairs": [
+        {
+          "mi": "I kainga te kai e Mere.",
+          "en": "The food was eaten by Mere."
+        },
+        {
+          "mi": "Kua kainga te kai e Mere.",
+          "en": "The food has been eaten by Mere."
+        },
+        {
+          "mi": "Ka kainga te kai e Mere.",
+          "en": "The food will be eaten by Mere."
+        }
+      ],
+      "extensionPairs": [
+        {
+          "mi": "I kainga te parāoa e au.",
+          "en": "The bread was eaten by me."
+        },
+        {
+          "mi": "He mākū te kākahu.",
+          "en": "The clothing is wet."
+        },
+        {
+          "mi": "He maroke te kākahu.",
+          "en": "The clothing is dry."
+        }
+      ],
+      "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
+    },
+    {
+      "level": 6,
+      "lesson": 2,
+      "title": "Simple why and when questions",
+      "pattern": "He aha … ai · Nōnahea · Āhea",
+      "pairs": [
+        {
+          "mi": "He aha koe i kai ai?",
+          "en": "Why did you eat?"
+        },
+        {
+          "mi": "He aha koe e kai ai ia rā?",
+          "en": "Why do you eat every day?"
+        },
+        {
+          "mi": "Nōnahea koe i kai ai?",
+          "en": "When did you eat?"
+        },
+        {
+          "mi": "Āhea koe e kai ai?",
+          "en": "When will you eat?"
+        }
+      ],
+      "extensionPairs": [
+        {
+          "mi": "He aha koe i inu ai i te kawhe?",
+          "en": "Why did you drink the coffee?"
+        },
+        {
+          "mi": "He aha koe i pātai ai ki te kaiako?",
+          "en": "Why did you ask the teacher?"
+        },
+        {
+          "mi": "Nōnahea koe i tākaro ai?",
+          "en": "When did you play?"
+        }
+      ],
+      "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
+    },
+    {
+      "level": 6,
+      "lesson": 3,
+      "title": "If this happens",
+      "pattern": "Ki te … ka …",
+      "pairs": [
+        {
+          "mi": "Ki te oma koe, ka oma ahau.",
+          "en": "If you run, I will run."
+        }
+      ],
+      "extensionPairs": [
+        {
+          "mi": "Ki te haere koe ki te marae, ka haere ahau ki te marae.",
+          "en": "If you go to the marae, I will go to the marae."
+        },
+        {
+          "mi": "Ki te ua āpōpō, ka noho ahau ki te kāinga.",
+          "en": "If it rains tomorrow, I will stay at home."
+        },
+        {
+          "mi": "Ki te moe te tamaiti, ka pānui ahau i te pukapuka.",
+          "en": "If the child sleeps, I will read the book."
+        }
+      ],
+      "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
+    },
+    {
+      "level": 6,
+      "lesson": 4,
+      "title": "Other ways to say if",
+      "pattern": "Mēnā · Mehemea",
+      "pairs": [
+        {
+          "mi": "Mēnā ka oma koe, ka oma ahau.",
+          "en": "If you run, I will run."
+        },
+        {
+          "mi": "Mehemea ka oma koe, ka oma ahau.",
+          "en": "If you run, I will run."
+        },
+        {
+          "mi": "He aha koe i kore ai e kai?",
+          "en": "Why did you not eat?"
+        }
+      ],
+      "extensionPairs": [
+        {
+          "mi": "Mēnā ka ua, ka noho ahau ki te kāinga.",
+          "en": "If it rains, I will stay at home."
+        },
+        {
+          "mi": "Mehemea ka tākaro koe, ka tākaro ahau.",
+          "en": "If you play, I will play."
+        }
+      ],
+      "vocabularyNote": "Retain the existing grammar targets; explicitly stage the compact themed extensions using current/prior language. Teacher review required."
+    }
+  ]
+}
