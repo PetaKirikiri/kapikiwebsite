@@ -24,7 +24,7 @@ export async function readCourseLesson(db, authorization, level, lesson) {
   const { questions, id, title, pattern } = row.curriculum_payload.sheet
   const sheet = { id, level, lesson, title, pattern }
   return { source: 'database', id: row.id, status: row.status, sheet,
-    questions: questions.map(({ acceptedAnswers, answer, ...question }) => {
+    questions: questions.map(({ acceptedAnswers, answer, retrievalWords, retrievalFrom, reviewClauses, ...question }) => {
       if (question.direction === 'en-mi') delete question.mi
       if (question.direction === 'mi-en') delete question.en
       return question

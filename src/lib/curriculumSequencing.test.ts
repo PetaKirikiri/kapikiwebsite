@@ -23,15 +23,15 @@ it('retrieves every new first-pass theme sentence twice in both directions with 
     const reviews = (group as typeof group & { reviewLessons: number[] }).reviewLessons
     expect(reviews).toHaveLength(2)
     for (const pair of group.pairs) for (const direction of ['en-mi', 'mi-en']) {
-      expect(bank.sheets[group.lesson - 1].questions.some(q => q.mi === pair.mi && q.en === pair.en && q.direction === direction)).toBe(true)
+      expect(bank.sheets[group.lesson - 1].questions.some(q => q.mi.includes(pair.mi) && q.en.includes(pair.en) && q.direction === direction)).toBe(true)
       for (const week of reviews) {
         expect(week).toBeGreaterThan(group.lesson)
-        const q = bank.sheets[week - 1].questions.find(q => q.mi === pair.mi && q.en === pair.en && q.direction === direction)
+        const q = bank.sheets[week - 1].questions.find(q => q.mi.includes(pair.mi) && q.en.includes(pair.en) && q.direction === direction)
         expect(q, `${week}: ${pair.mi} ${direction}`).toBeDefined()
-        expect(q!.kind).toBe('review')
-        const source = bank.sheets.find(s => s.id === q!.reviewFrom)!
+        expect(q!.reviewClauses.some(c=>c.mi===pair.mi && c.en===pair.en),`${week}: earlier clause provenance`).toBe(true)
+        const source = bank.sheets[group.lesson-1]
         expect(source).toBeDefined()
-        expect(source.questions.some(old => old.mi === pair.mi && old.en === pair.en && old.direction === direction)).toBe(true)
+        expect(source.questions.some(old => old.mi.includes(pair.mi) && old.en.includes(pair.en) && old.direction === direction)).toBe(true)
       }
     }
   }
@@ -61,24 +61,23 @@ it('fits the feasible coursewide examples and retrieval into fixed-size sheets',
   const reviews=(group as typeof group & {reviewLessons:number[]}).reviewLessons??[]
   if(group.words.length && group.lesson<=50)expect(reviews.length).toBe(2)
   for(const pair of group.pairs)for(const direction of ['mi-en','en-mi']){
-   expect(bank.sheets[group.lesson-1].questions.some(q=>q.mi===pair.mi && q.en===pair.en && q.direction===direction)).toBe(true)
-   for(const week of reviews)expect(bank.sheets[week-1].questions.some(q=>q.mi===pair.mi && q.en===pair.en && q.direction===direction && q.kind==='review')).toBe(true)
+   expect(bank.sheets[group.lesson-1].questions.some(q=>q.mi.includes(pair.mi) && q.en.includes(pair.en) && q.direction===direction)).toBe(true)
+   for(const week of reviews)expect(bank.sheets[week-1].questions.some(q=>q.mi.includes(pair.mi) && q.en.includes(pair.en) && q.direction===direction && q.reviewClauses.some(c=>c.mi===pair.mi && c.en===pair.en))).toBe(true)
   }
  }
 })
 
 
-it('smooths existing lexical groups without increasing vocabulary or losing retrieval',()=>{
+it('caps expanded core load while preserving existing lexical introduction dates',()=>{
  const loads=pacing.lessons.map(l=>l.newWords.length)
- expect(loads[5]).toBe(6);expect(loads[11]).toBe(6);expect(loads[25]).toBe(5)
- expect(Math.max(...loads)).toBeLessThanOrEqual(7)
- expect(loads.reduce((a,b)=>a+b,0)).toBe(163)
+ expect(Math.max(...loads)).toBeLessThanOrEqual(10)
+ expect(bank.expansion.targets).toHaveLength(209)
  for(const [week,words] of [[15,['kurī','ngeru','manu']],[16,['noho','tū']],[18,['pānui','tuhi','pukapuka']],[19,['hoatu','hōmai','whakarongo','pene']],[23,['waea','pēke']],[24,['runga','raro']]] as const){
   for(const word of words)expect(allocations.findIndex(a=>a.translationVocabulary.includes(word)),word).toBe(week-1)
  }
  for(const group of themes.groups.filter(g=>'alignmentPass' in g && g.alignmentPass==='2026-10-08-load-smoothing')){
   const reviews=(group as typeof group & {reviewLessons:number[]}).reviewLessons
   expect(reviews).toHaveLength(2)
-  for(const pair of group.pairs)for(const week of reviews)for(const direction of ['en-mi','mi-en'])expect(bank.sheets[week-1].questions.some(q=>q.mi===pair.mi&&q.en===pair.en&&q.direction===direction&&q.kind==='review')).toBe(true)
+  for(const pair of group.pairs)for(const week of reviews)for(const direction of ['en-mi','mi-en'])expect(bank.sheets[week-1].questions.some(q=>q.mi.includes(pair.mi)&&q.en.includes(pair.en)&&q.direction===direction&&q.reviewClauses.some(c=>c.mi===pair.mi&&c.en===pair.en))).toBe(true)
  }
 })

@@ -13,9 +13,11 @@ it('opens every later level with recognition only for new material', () => {
     expect(allocation.translationFrames).toEqual([])
     expect(sheet.questions.filter(q=>q.direction==='structure-choice')).toHaveLength(30)
     for (const q of sheet.questions.filter(q=>q.direction!=='structure-choice')) {
-      expect(q.kind).toBe('review')
-      const source=bank.sheets.find(s=>s.id===q.reviewFrom)!
+      expect(['review','transfer']).toContain(q.kind)
+      const source=bank.sheets.find(s=>s.id===(q.reviewFrom??q.retrievalFrom))!
       expect(source.level).toBeLessThan(level)
+      const known=new Set(allocations.slice(0,(level-1)*10).flatMap(a=>a.translationVocabulary))
+      for(const word of q.mi.toLowerCase().match(/[\p{L}]+/gu)??[])expect(known.has(word),`${sheet.id}: ${word}`).toBe(true)
     }
   }
 })
@@ -59,7 +61,7 @@ it('contrasts familiar patterns without padding follow-on lessons with identical
     const counts=new Map<string,number>()
     choices.forEach(q=>counts.set(q.en,(counts.get(q.en)||0)+1))
     expect(Math.max(...counts.values()),sheet.id).toBeLessThanOrEqual(3)
-    expect(new Set(sheet.questions.filter(q=>q.kind==='focus' && q.direction!=='structure-choice').map(q=>q.mi)).size,sheet.id).toBeGreaterThanOrEqual(4)
+    expect(new Set(sheet.questions.filter(q=>q.kind!=='review' && q.direction!=='structure-choice').map(q=>q.mi)).size,sheet.id).toBeGreaterThanOrEqual(4)
   }
 })
 it('only credits new vocabulary when a learner actually encounters it', () => {

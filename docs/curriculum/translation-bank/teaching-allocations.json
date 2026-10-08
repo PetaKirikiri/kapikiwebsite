@@ -100,9 +100,15 @@
     "status": "draft",
     "translationVocabulary": [
       "hapū",
+      "hoa",
       "iwi",
+      "kaumātua",
+      "manuhiri",
       "ngā",
+      "pēpi",
+      "tēnei",
       "tūpuna",
+      "whakapapa",
       "whānau"
     ],
     "translationFrames": [
@@ -125,10 +131,13 @@
     "translationVocabulary": [
       "koroua",
       "kuia",
+      "kāpata",
       "matua",
       "māmā",
       "pāpā",
-      "whaea"
+      "rangatahi",
+      "whaea",
+      "whāriki"
     ],
     "translationFrames": [
       "Ko · tōku · tōu · tōna"
@@ -189,8 +198,10 @@
       "rua",
       "tamaiti",
       "tamariki",
+      "tarau",
       "tokorua",
       "tāne",
+      "tōkena",
       "wahine",
       "whare",
       "āku"
@@ -215,9 +226,13 @@
     "translationVocabulary": [
       "kaiako",
       "kei",
+      "kete",
+      "maripi",
       "moenga",
       "mokopuna",
+      "pereti",
       "pōneke",
+      "pōtae",
       "rūma",
       "whanaunga",
       "ākonga"
@@ -274,13 +289,16 @@
     "id": "L2-02",
     "status": "draft",
     "translationVocabulary": [
+      "ata",
+      "hāte",
       "inu",
       "kai",
       "kura",
+      "kōrero",
       "moe",
       "oho",
       "oma",
-      "tēnei",
+      "pō",
       "tēnā",
       "ēnei",
       "ēnā"
@@ -304,9 +322,14 @@
       "hēki",
       "i",
       "kite",
+      "kī",
       "miraka",
       "māua",
+      "mīere",
+      "panana",
       "parāoa",
+      "pata",
+      "rīwai",
       "tāua",
       "āporo"
     ],
@@ -330,6 +353,7 @@
       "ana",
       "haere",
       "hiahia",
+      "huka",
       "kapu",
       "kawhe",
       "ki",
@@ -337,6 +361,7 @@
       "taku",
       "tana",
       "titiro",
+      "tote",
       "tī"
     ],
     "translationFrames": [
@@ -357,11 +382,16 @@
     "id": "L2-05",
     "status": "draft",
     "translationVocabulary": [
+      "hipi",
       "hoki",
+      "hōiho",
+      "kararehe",
       "kua",
       "kurī",
       "manu",
+      "motu",
       "ngeru",
+      "poaka",
       "tae",
       "tērā",
       "ērā"
@@ -385,7 +415,11 @@
     "status": "draft",
     "translationVocabulary": [
       "heihei",
+      "hinu",
       "ika",
+      "keke",
+      "kānga",
+      "kāreti",
       "kōrua",
       "kūmara",
       "noho",
@@ -411,11 +445,17 @@
     "id": "L2-07",
     "status": "draft",
     "translationVocabulary": [
+      "aihikirīmi",
       "horoi",
       "inanahi",
       "ināianei",
       "ka",
+      "karāhe",
+      "kohi",
+      "kōhua",
+      "parakuihi",
       "tō",
+      "whāngai",
       "āpōpō",
       "ō"
     ],
@@ -437,11 +477,16 @@
     "id": "L2-08",
     "status": "draft",
     "translationVocabulary": [
+      "kupu",
       "me",
       "mātou",
       "pukapuka",
       "pānui",
       "pātai",
+      "reka",
+      "reo",
+      "rorohiko",
+      "tapahi",
       "tuhi",
       "tātou",
       "whakautu"
@@ -466,11 +511,16 @@
     "translationVocabulary": [
       "hoatu",
       "hōmai",
+      "kaihapa",
       "koutou",
+      "mīti",
       "pene",
+      "raihi",
       "rātou",
+      "tina",
       "tākaro",
-      "whakarongo"
+      "whakarongo",
+      "whārangi"
     ],
     "translationFrames": [
       "TAMs · i · ki"
@@ -491,12 +541,17 @@
     "status": "draft",
     "translationVocabulary": [
       "aha",
+      "ako",
+      "huawhenua",
       "kanikani",
       "kapua",
       "kaukau",
       "tētahi",
       "ua",
       "waiata",
+      "whakaatu",
+      "whakamahi",
+      "wiki",
       "ētahi"
     ],
     "translationFrames": [
@@ -536,10 +591,16 @@
     "translationVocabulary": [
       "ehara",
       "hiainu",
+      "hāngi",
+      "kaimoana",
       "kāore",
       "matekai",
+      "mihi",
       "māuiui",
-      "ngenge"
+      "mōkai",
+      "ngenge",
+      "pēkana",
+      "tiki"
     ],
     "translationFrames": [
       "Ehara … i te … · Kāore … i · Kāore … i te"
@@ -561,11 +622,15 @@
     "status": "draft",
     "translationVocabulary": [
       "anō",
+      "hāora",
       "kia",
       "mahara",
+      "meneti",
       "mārama",
       "mōhio",
+      "ngārara",
       "pēke",
+      "tau",
       "waea",
       "wareware"
     ],
@@ -593,9 +658,12 @@
       "kāti",
       "ngoikore",
       "raro",
+      "rongoā",
       "runga",
+      "tangi",
       "tatari",
       "tiaki",
+      "tākuta",
       "āwhina"
     ],
     "translationFrames": [
@@ -619,10 +687,14 @@
     "translationVocabulary": [
       "kati",
       "kimi",
+      "koa",
       "kūaha",
       "maia",
       "matapihi",
+      "neke",
       "ngaro",
+      "pōuri",
+      "raruraru",
       "tokotoru",
       "whakatuwhera",
       "ōku"
@@ -650,8 +722,13 @@
       "hanga",
       "mahi",
       "mutu",
+      "pikitia",
+      "riri",
+      "rārangi",
       "tango",
+      "tuhinga",
       "āu",
+      "āwangawanga",
       "ōu"
     ],
     "translationFrames": [
@@ -673,10 +750,15 @@
     "id": "L3-07",
     "status": "draft",
     "translationVocabulary": [
+      "atawhai",
+      "hiki",
       "hū",
       "kata",
       "kākahu",
       "pakaru",
+      "pana",
+      "tono",
+      "whakapai",
       "whakatika",
       "āna",
       "ōna"
@@ -700,13 +782,17 @@
     "id": "L3-08",
     "status": "draft",
     "translationVocabulary": [
+      "hē",
       "karanga",
       "mamae",
+      "panekoti",
       "ringa",
+      "tika",
       "tēhea",
       "tūru",
       "waewae",
       "waho",
+      "whakamau",
       "ēhea"
     ],
     "translationFrames": [
@@ -728,10 +814,16 @@
     "id": "L3-09",
     "status": "draft",
     "translationVocabulary": [
+      "hauora",
+      "kikorangi",
+      "koti",
       "pai",
+      "paru",
+      "putu",
       "pōturi",
       "tere",
-      "tūpato"
+      "tūpato",
+      "waiporoporo"
     ],
     "translationFrames": [
       "Kia"
@@ -785,10 +877,19 @@
     "id": "L4-02",
     "status": "draft",
     "translationVocabulary": [
+      "karere",
+      "kukume",
+      "kāpia",
+      "kāri",
       "māu",
       "mōu",
       "nāku",
-      "nōku"
+      "nōku",
+      "papa",
+      "peita",
+      "reta",
+      "tari",
+      "whakamaroke"
     ],
     "translationFrames": [
       "Nā · Nō · Mā · Mō"
@@ -806,7 +907,17 @@
     "id": "L4-03",
     "status": "draft",
     "translationVocabulary": [
-      "nāu"
+      "hou",
+      "nāu",
+      "pakitara",
+      "pouakawhakaata",
+      "putua",
+      "pūhiko",
+      "rama",
+      "taputapu",
+      "taura",
+      "tawhito",
+      "tuanui"
     ],
     "translationFrames": [
       "Nā … i"
@@ -824,7 +935,17 @@
     "id": "L4-04",
     "status": "draft",
     "translationVocabulary": [
-      "māku"
+      "hōhipera",
+      "kekeno",
+      "kikī",
+      "kākano",
+      "māku",
+      "māra",
+      "putiputi",
+      "pūrerehua",
+      "taiapa",
+      "tohorā",
+      "wharekai"
     ],
     "translationFrames": [
       "Mā … e"
@@ -842,13 +963,18 @@
     "id": "L4-05",
     "status": "draft",
     "translationVocabulary": [
+      "huarahi",
       "iti",
+      "kau",
       "mōku",
       "mōna",
       "nui",
       "nā",
+      "piriti",
       "poto",
       "roa",
+      "rori",
+      "tuna",
       "tā",
       "waka",
       "ā"
@@ -869,9 +995,17 @@
     "id": "L4-06",
     "status": "draft",
     "translationVocabulary": [
+      "kaupapa",
       "kawe",
+      "mahere",
+      "motokā",
       "nāna",
       "nōu",
+      "pāmu",
+      "rōpū",
+      "tiriti",
+      "tāone",
+      "tātahi",
       "tēpu"
     ],
     "translationFrames": [
@@ -890,7 +1024,17 @@
     "id": "L4-07",
     "status": "draft",
     "translationVocabulary": [
-      "māna"
+      "ihu",
+      "kakī",
+      "kanohi",
+      "karu",
+      "māna",
+      "niho",
+      "taringa",
+      "tautoko",
+      "tuarā",
+      "upoko",
+      "waha"
     ],
     "translationFrames": [
       "Ehara mā … · ehara mō …"
@@ -907,7 +1051,18 @@
   {
     "id": "L4-08",
     "status": "draft",
-    "translationVocabulary": [],
+    "translationVocabulary": [
+      "hopu",
+      "hākinakina",
+      "kaitākaro",
+      "kēmu",
+      "kōwhiri",
+      "maka",
+      "pōro",
+      "taraka",
+      "tīma",
+      "whutupōro"
+    ],
     "translationFrames": [
       "Nā … i"
     ],
@@ -923,7 +1078,18 @@
   {
     "id": "L4-09",
     "status": "draft",
-    "translationVocabulary": [],
+    "translationVocabulary": [
+      "ahi",
+      "harakeke",
+      "ngahere",
+      "oneone",
+      "rererangi",
+      "rohe",
+      "utu",
+      "wharepukapuka",
+      "whenua",
+      "wāhi"
+    ],
     "translationFrames": [
       "Mā … e"
     ],
@@ -971,9 +1137,15 @@
     "translationVocabulary": [
       "ai",
       "ake",
+      "hau",
+      "karaka",
+      "marama",
       "rā",
       "rākau",
       "teitei",
+      "wawe",
+      "whakaae",
+      "whakaaro",
       "whāiti",
       "whānui"
     ],
@@ -991,11 +1163,17 @@
     "id": "L5-03",
     "status": "draft",
     "translationVocabulary": [
+      "hararei",
       "ipu",
       "makariri",
       "pouaka",
+      "rerekē",
       "taea",
-      "wera"
+      "tōmuri",
+      "wera",
+      "whakakī",
+      "whakatakoto",
+      "ōrite"
     ],
     "translationFrames": [
       "Ka taea · Kāore e taea"
@@ -1012,8 +1190,16 @@
     "status": "draft",
     "translationVocabulary": [
       "kainga",
+      "kiri",
+      "mahana",
+      "makawe",
       "maroke",
-      "mākū"
+      "matimati",
+      "mākū",
+      "mārō",
+      "ngohengohe",
+      "puku",
+      "tinana"
     ],
     "translationFrames": [
       "Passive · I / Kua / Ka"
@@ -1029,8 +1215,16 @@
     "id": "L5-05",
     "status": "draft",
     "translationVocabulary": [
+      "akoranga",
       "ngāwari",
-      "uaua"
+      "poi",
+      "poti",
+      "puoro",
+      "uaua",
+      "whakataetae",
+      "wharehākinakina",
+      "wharekarakia",
+      "wharetaonga"
     ],
     "translationFrames": [
       "Ka taea e …"
@@ -1046,9 +1240,13 @@
     "id": "L5-06",
     "status": "draft",
     "translationVocabulary": [
+      "ipurangi",
+      "koha",
       "mō",
+      "pūtea",
       "tuku",
       "whakaharatau",
+      "whakamārama",
       "whakarite"
     ],
     "translationFrames": [
@@ -1065,10 +1263,12 @@
     "id": "L5-07",
     "status": "draft",
     "translationVocabulary": [
+      "hukapapa",
       "kawea",
       "kitea",
       "taumaha",
-      "whakamātau"
+      "whakamātau",
+      "āniwaniwa"
     ],
     "translationFrames": [
       "Passive · I"
@@ -1085,8 +1285,11 @@
     "status": "draft",
     "translationVocabulary": [
       "haka",
+      "huritau",
       "mai",
-      "whakaari"
+      "toi",
+      "whakaari",
+      "whakanui"
     ],
     "translationFrames": [
       "Passive · Kua"
@@ -1103,8 +1306,14 @@
     "status": "draft",
     "translationVocabulary": [
       "hangaia",
+      "hapori",
       "horoia",
-      "tuhia"
+      "kōwhiringa",
+      "take",
+      "tikanga",
+      "tuhia",
+      "ture",
+      "wheako"
     ],
     "translationFrames": [
       "Passive · Ka"
@@ -1147,6 +1356,8 @@
     "status": "draft",
     "translationVocabulary": [
       "nōnahea",
+      "whakaritenga",
+      "whāinga",
       "āhea"
     ],
     "translationFrames": [

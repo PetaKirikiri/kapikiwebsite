@@ -4,7 +4,7 @@ import { readCourseCurriculum, readCourseLesson, checkCourseAnswer } from './cou
 import { validCoursePayload, courseQuestionAnswers } from './courseCurriculumValidation.mjs'
 import { readFile } from 'node:fs/promises'
 
-const payload = { sheet: { title: 'Lesson', questions: [{ id: 'one', mi: '', en: 'The bird is Charlie.', direction: 'structure-choice', answer: 'Ko', acceptedAnswers: ['Ko'], options: ['Ko', 'He'] }, { id: 'two', mi: 'Ko Charlie te manu.', en: 'The bird is Charlie.', direction: 'en-mi', acceptedAnswers: ['Ko Charlie te manu.'] }, { id: 'three', mi: 'Ko Charlie te manu.', en: 'The bird is Charlie.', direction: 'mi-en', acceptedAnswers: ['The bird is Charlie.'] }] }, pacing: { newWords: [] }, timeline: [], entries: [], optionalEntries: [] }
+const payload = { sheet: { title: 'Lesson', questions: [{ id: 'one', mi: '', en: 'The bird is Charlie.', direction: 'structure-choice', answer: 'Ko', acceptedAnswers: ['Ko'], options: ['Ko', 'He'] }, { id: 'two', mi: 'Ko Charlie te manu.', en: 'The bird is Charlie.', direction: 'en-mi', retrievalWords: ['manu'], retrievalFrom: 'L1-01', reviewClauses: [{mi: 'Ko Charlie te manu.', en: 'The bird is Charlie.', from: 'L1-01'}], acceptedAnswers: ['Ko Charlie te manu.'] }, { id: 'three', mi: 'Ko Charlie te manu.', en: 'The bird is Charlie.', direction: 'mi-en', acceptedAnswers: ['The bird is Charlie.'] }] }, pacing: { newWords: [] }, timeline: [], entries: [], optionalEntries: [] }
 test('public schedule contains no exercises or answer keys', async () => {
   const db = { query: async () => ({ rows: Array.from({ length: 60 }, (_, index) => ({ level: Math.floor(index / 10) + 1, lesson_number: index % 10 + 1, status: 'draft', curriculum_payload: payload })) }) }
   const result = await readCourseCurriculum(db)
@@ -26,6 +26,9 @@ test('published lesson hides answer keys; server checks the addressed answer', a
     assert.equal('answer' in lesson.questions[0], false)
     assert.equal('acceptedAnswers' in lesson.questions[0], false)
     assert.equal('mi' in lesson.questions[1], false)
+    assert.equal('retrievalWords' in lesson.questions[1], false)
+    assert.equal('retrievalFrom' in lesson.questions[1], false)
+    assert.equal('reviewClauses' in lesson.questions[1], false)
     assert.equal('en' in lesson.questions[2], false)
     assert.deepEqual(await checkCourseAnswer(db, 'Bearer test', 1, 1, 'one', 'Ko'), { correct: true })
     assert.deepEqual(await checkCourseAnswer(db, 'Bearer test', 1, 1, 'one', 'He'), { correct: false })

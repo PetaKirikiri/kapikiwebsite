@@ -17,9 +17,9 @@ it('keeps the full weekly load within the budget without forcing a quota',()=>{
 it('keeps topic extensions available without counting them as core introductions',()=>{
  const optional=plan.lessons.flatMap(l=>l.optionalWords)
  expect(optional.length).toBeGreaterThan(0)
- expect(rows.find(r=>r.word==='pēkana')).toMatchObject({firstLesson:null,status:'optional'})
+ expect(rows.find(r=>r.word==='pēkana')).toMatchObject({status:'introduced'})
  expect(rows.find(r=>r.word==='whānau')).toMatchObject({firstLesson:5,status:'introduced'})
- expect(rows.find(r=>r.word==='kēmu')).toMatchObject({firstLesson:null,status:'optional'})
+ expect(rows.find(r=>r.word==='kēmu')).toMatchObject({status:'introduced'})
  expect(rows.find(r=>r.word==='pene')).toMatchObject({firstLesson:19,status:'introduced'})
  for(const lesson of plan.lessons){
   const core=new Set(lesson.newWords.map(w=>w.word))
