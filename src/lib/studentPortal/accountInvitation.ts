@@ -2,7 +2,7 @@ import type { SupabaseClient } from '@supabase/supabase-js'
 import type { AccountSetupDetails } from '../../components/studentPortal/AccountSetupForm'
 
 export type AccountInvitation = AccountSetupDetails & { userId: string; tokenType: 'invite' | 'magiclink' | 'setup' }
-export const INVALID_SETUP_LINK = 'This link has expired or has already been used. Please ask Peta for a new link.'
+export const INVALID_SETUP_LINK = 'This link is no longer available. Please ask Peta for a new link.'
 
 export async function loadAccountInvitation(client: SupabaseClient, token: string): Promise<AccountInvitation> {
   if (!/^[a-zA-Z0-9_-]{32,256}$/.test(token)) throw new Error(INVALID_SETUP_LINK)

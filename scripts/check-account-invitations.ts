@@ -27,7 +27,7 @@ try {
   if (access.error) throw new Error('Server access was rejected.')
   const site = env.KA_PIKI_SITE_URL || 'https://kapikiwebsite.vercel.app'
   const page = await fetch(new URL('/account-setup.html', site))
-  assert(page.ok && (await page.text()).includes('name="ka-piki-account-setup" content="2"'), 'The setup page must be deployed first.')
+  assert(page.ok && (await page.text()).includes('name="ka-piki-account-setup" content="3"'), 'The setup page must be deployed first.')
   if (!process.argv.includes('--run')) {
     console.log('PASS: existing Supabase administrator access and deployed setup page. Use --run to test disposable accounts; no student emails are sent.')
   } else {
@@ -51,7 +51,7 @@ try {
         createdRegistrations.push(inserted.rows[0].id)
       }
       await db.query(`insert into public.kp_account_invitations(user_id,email,interest_ids,token_digest,token_type,created_at,expires_at)
-        values($1,$2,$3,$4,'setup',now()-interval '2 days',now()+interval '12 days')`, [user.id, email, interestIds, createHash('sha256').update(token).digest('hex')])
+        values($1,$2,$3,$4,'setup',now()-interval '2 years',null)`, [user.id, email, interestIds, createHash('sha256').update(token).digest('hex')])
       const exchange = (value: string) => exchangeAccountInvitation(value, new URL('/api/account-invitation', site).href)
       await assert.rejects(exchange(randomBytes(32).toString('hex')))
       const browser = client()
@@ -76,7 +76,7 @@ try {
       assert.equal(login.data.user.user_metadata.password_setup_complete, true)
       await assert.rejects(loadAccountInvitation(client(), token), 'A completed invitation must not be reusable.')
       await assert.rejects(exchange(token), 'Completed invitations must not issue new sign-in tokens.')
-      console.log(`PASS: ${scenario}, two-day-old setup link, private details, level selection, password saved, registration saved, fresh sign-in and one-time link.`)
+      console.log(`PASS: ${scenario}, two-year-old setup link without a deadline, private details, level selection, password saved, registration saved, fresh sign-in and one-time link.`)
     }
   }
 } catch {

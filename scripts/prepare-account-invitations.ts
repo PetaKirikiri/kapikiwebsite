@@ -42,9 +42,9 @@ try {
     if (site.protocol !== 'https:' || site.pathname !== '/' || site.search || site.hash) throw new Error('KA_PIKI_SITE_URL must be the HTTPS site origin.')
     const landing = new URL('/account-setup.html', site)
     const response = await fetch(landing)
-    if (!response.ok || !(await response.text()).includes('name="ka-piki-account-setup" content="2"')) throw new Error('The live account setup page is not deployed. No links or accounts were created.')
+    if (!response.ok || !(await response.text()).includes('name="ka-piki-account-setup" content="3"')) throw new Error('The live account setup page is not deployed. No links or accounts were created.')
     const endpoint = await fetch(new URL('/api/account-invitation', site), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token: randomBytes(32).toString('hex') }) })
-    if (endpoint.status !== 400 || (await endpoint.json()).error !== 'This setup link is invalid or expired.') throw new Error('The live invitation service is not ready. No links or accounts were created.')
+    if (endpoint.status !== 400 || (await endpoint.json()).error !== 'This setup link is no longer available.') throw new Error('The live invitation service is not ready. No links or accounts were created.')
     await db.query('select id,exchange_count from public.kp_account_invitations limit 0')
     const admin = createClient(env.WORDS_SUPABASE_URL!, env.STUDENT_SUPABASE_SECRET_KEY, { auth: { persistSession: false, autoRefreshToken: false } })
     const access = await admin.auth.admin.listUsers({ page: 1, perPage: 1 })
@@ -55,7 +55,6 @@ try {
     for (const person of audience.values()) {
       const existing = (await db.query('select id from auth.users where lower(btrim(email))=$1', [person.email])).rows[0]
       const created = new Date()
-      const expires = new Date(created.getTime() + 14 * 24 * 60 * 60 * 1000)
       let user = existing
       if (!user) {
         // Create an unconfirmed account in the existing Auth project. No email.
@@ -74,16 +73,16 @@ try {
         if (active.rows.length !== person.ids.length || active.rows.some(row => !person.levels.includes(row.selected_level))) throw new Error('Registrations changed during preparation. Please run preparation again.')
         await db.query('update public.kp_account_invitations set revoked_at=now() where user_id=$1 and completed_at is null and revoked_at is null', [user.id])
         const result = await db.query(`insert into public.kp_account_invitations(user_id,email,interest_ids,token_digest,token_type,created_at,expires_at)
-          values($1,$2,$3,$4,$5,$6,$7) returning id`, [user.id,person.email,person.ids,digest,'setup',created,expires])
+          values($1,$2,$3,$4,$5,$6,$7) returning id`, [user.id,person.email,person.ids,digest,'setup',created,null])
         const id = result.rows[0].id
         // Exactly one recipient, no CC/BCC, no mailing-list/shared link.
         draftPath = `${directory}/${id}.json`
-        await writeFile(draftPath, JSON.stringify({ invitationId:id, to:person.email, ...mail, expiresAt:expires.toISOString(), sent:false }, null, 2), { mode:0o600, flag:'wx' })
+        await writeFile(draftPath, JSON.stringify({ invitationId:id, to:person.email, ...mail, expiresAt:null, sent:false }, null, 2), { mode:0o600, flag:'wx' })
         await db.query('commit')
       } catch (error) { await db.query('rollback'); if (draftPath) await unlink(draftPath).catch(() => {}); throw error }
       count++
     }
-    console.log(`Prepared ${count} separate drafts in ${directory}. Nothing sent. Each private link is valid for 14 days and closes when setup is completed. Recheck expiry before sending.`)
+    console.log(`Prepared ${count} separate drafts in ${directory}. Nothing sent. Each private link has no deadline and closes when setup is completed or revoked.`)
   }
 } catch (error) {
   console.error(error instanceof Error ? error.message : 'Invitation preparation failed.')

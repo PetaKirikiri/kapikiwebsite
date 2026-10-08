@@ -31,20 +31,20 @@ export function createAccountInvitationHandler({ query, generateLink, allowedOri
       if (typeof body === 'string') body = JSON.parse(body)
       if (!body || Object.keys(body).length !== 1 || !/^[a-f0-9]{64}$/.test(body.token)) throw new Error('Invalid request')
       token = body.token
-    } catch { return json(400, { error: 'This setup link is invalid or expired.' }) }
+    } catch { return json(400, { error: 'This setup link is no longer available.' }) }
     try {
       // Identity is always loaded from the invitation, never from request data.
       const digest = createHash('sha256').update(token).digest('hex')
       const valid = await query(`select i.id,i.user_id,i.email from public.kp_account_invitations i
         join auth.users u on u.id=i.user_id and lower(btrim(u.email))=i.email
-        where i.token_digest=$1 and i.token_type='setup' and i.expires_at>now()
+        where i.token_digest=$1 and i.token_type='setup' and (i.expires_at is null or i.expires_at>now())
           and i.revoked_at is null and i.completed_at is null
           and exists(select 1 from public.kp_course_interest r where r.id=any(i.interest_ids)
             and lower(btrim(r.email))=i.email and r.removed_at is null)`, [digest])
       const invitation = valid.rows[0]
-      if (!invitation) return json(400, { error: 'This setup link is invalid or expired.' })
+      if (!invitation) return json(400, { error: 'This setup link is no longer available.' })
       const claim = await query(`update public.kp_account_invitations set exchange_count=exchange_count+1,last_exchange_at=now()
-        where id=$1 and expires_at>now() and revoked_at is null and completed_at is null
+        where id=$1 and (expires_at is null or expires_at>now()) and revoked_at is null and completed_at is null
           and exchange_count<30 and (last_exchange_at is null or last_exchange_at<now()-interval '10 seconds') returning id`, [invitation.id])
       if (!claim.rows.length) return json(429, { error: 'Please wait a moment, then try again.' })
       // This generates a credential only; it never sends an email.
@@ -55,8 +55,8 @@ export function createAccountInvitationHandler({ query, generateLink, allowedOri
       }
       // Recheck after the provider call in case another request completed or revoked it.
       const active = await query(`select id from public.kp_account_invitations where id=$1
-        and expires_at>now() and revoked_at is null and completed_at is null`, [invitation.id])
-      if (!active.rows.length) return json(400, { error: 'This setup link is invalid or expired.' })
+        and (expires_at is null or expires_at>now()) and revoked_at is null and completed_at is null`, [invitation.id])
+      if (!active.rows.length) return json(400, { error: 'This setup link is no longer available.' })
       return json(200, { tokenHash: data.properties.hashed_token, type: 'magiclink' })
     } catch {
       console.warn('account_setup: exchange unavailable')

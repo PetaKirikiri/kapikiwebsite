@@ -9,7 +9,7 @@ dotenv.config({ path: '.env', quiet: true })
 dotenv.config({ path: '.env.local', override: true, quiet: true })
 if (process.env.VITE_STUDENT_SUPABASE_URL && process.env.VITE_STUDENT_SUPABASE_URL !== process.env.WORDS_SUPABASE_URL) throw new Error('Student Auth and registration databases do not match.')
 const db = new pg.Client(wordsDatabaseConnection())
-const schema = ['007_account_invitations.sql','008_account_setup_link_lifetime.sql'].map(file => readFileSync(new URL(`../supabase/student-portal/${file}`, import.meta.url), 'utf8').replace(/^begin;$/m,'').replace(/^commit;$/m,'')).join('\n')
+const schema = ['007_account_invitations.sql','008_account_setup_link_lifetime.sql','009_account_setup_no_deadline.sql'].map(file => readFileSync(new URL(`../supabase/student-portal/${file}`, import.meta.url), 'utf8').replace(/^begin;$/m,'').replace(/^commit;$/m,'')).join('\n')
 const learner=randomUUID(), other=randomUUID(), email=`${learner}@example.invalid`
 const token=randomBytes(32).toString('hex'), otherToken=randomBytes(32).toString('hex'), expiredToken=randomBytes(32).toString('hex')
 const digest = value => createHash('sha256').update(value).digest('hex')
@@ -35,7 +35,7 @@ try {
   ids.push(removed)
   const chosen=interests.find(i=>i.selected_level===3).id
   await db.query(`insert into public.kp_account_invitations(user_id,email,interest_ids,token_digest,token_type,expires_at)
-    values($1,$2,$3,$4,'setup',now()+interval '14 days'),($1,$2,$3,$5,'setup',now()+interval '14 days')`,[learner,email,ids,digest(token),digest(otherToken)])
+    values($1,$2,$3,$4,'setup',null),($1,$2,$3,$5,'setup',null)`,[learner,email,ids,digest(token),digest(otherToken)])
   await db.query(`insert into public.kp_account_invitations(user_id,email,interest_ids,token_digest,token_type,created_at,expires_at)
     values($1,$2,$3,$4,'invite',now()-interval '2 hours',now()-interval '1 hour')`,[learner,email,ids,digest(expiredToken)])
 
@@ -82,14 +82,14 @@ try {
   assert.equal((await db.query('select count(*)::int count from public.kp_memberships where user_id=$1',[learner])).rows[0].count,0)
   assert.equal((await db.query('select raw_user_meta_data from auth.users where id=$1',[learner])).rows[0].raw_user_meta_data.password_setup_complete,true)
   await db.query('rollback')
-  console.log('PASS: 14-day setup / one-hour provider limits, token isolation, expired/invalid/reused links, email ownership, required details, registered levels, confirmed learning choice, preserved original registrations, no elevated permissions. Fixtures rolled back; no emails sent.')
+  console.log('PASS: no-deadline setup / one-hour provider limits, token isolation, expired/invalid/reused links, email ownership, required details, registered levels, confirmed learning choice, preserved original registrations, no elevated permissions. Fixtures rolled back; no emails sent.')
   if(process.argv.includes('--install')) {
     await db.query('begin')
     await db.query("set local lock_timeout='5s'; set local statement_timeout='15s'")
     await db.query(schema)
     await db.query("notify pgrst, 'reload schema'")
     await db.query('commit')
-    console.log('Installed invitation schema. No student accounts, invitations or registrations changed.')
+    console.log('Installed invitation schema; setup links have no deadline. No accounts, passwords or registrations changed.')
   }
 } catch(error) { await db.query('rollback'); console.error(error.message); process.exitCode=1 }
 finally { await db.end() }
