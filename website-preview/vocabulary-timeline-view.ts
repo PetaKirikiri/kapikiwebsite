@@ -18,6 +18,23 @@ export function wordFamily(w:Word):keyof typeof familyLabels{
  }
  return ({'Describing word':'quality',Number:'number','Position word':'place','Time expression':'time',Conjunction:'link'} as const)[w.type as 'Number']??'other'
 }
-export function progressionWords<T extends Word>(words:T[],types:string[]){
- return words.filter(w=>w.firstLesson!==null&&(!types.length||types.includes(w.type))).sort((a,b)=>a.firstLesson!-b.firstLesson!||(a.teachingOrder<0?Infinity:a.teachingOrder)-(b.teachingOrder<0?Infinity:b.teachingOrder)||a.word.localeCompare(b.word,'mi'))
+type LessonFocus={goal:string;newForms:string[]}
+const grammarTypes=['Grammar word','Determiner','Pronoun','Verb modifier','Conjunction','Tense marker']
+const lexicalTypes=['Noun','Name','Number','Position word','Time expression','Transitive verb','Intransitive verb','Stative verb','Passive verb','Experience verb','Describing word']
+export function progressionWords<T extends Word>(words:T[],types:string[],lessons:LessonFocus[]=[]){
+ const order=(w:Word)=>{
+  const lesson=lessons[w.firstLesson!-1]
+  const isGrammar=grammarTypes.includes(w.type)
+  const focus=(lesson?.goal.toLocaleLowerCase('mi').match(/[\p{L}]+/gu)??[])
+  const base=w.word.split(' · ')[0]
+  const focusIndex=isGrammar?focus.indexOf(base):-1
+  const formIndex=isGrammar?(lesson?.newForms??[]).indexOf(base):-1
+  return [focusIndex>=0?0:isGrammar?1:2,focusIndex>=0?focusIndex:isGrammar?(formIndex>=0?formIndex:100+grammarTypes.indexOf(w.type)):lexicalTypes.indexOf(w.type),w.teachingOrder<0?Number.MAX_SAFE_INTEGER:w.teachingOrder]
+ }
+ return words.filter(w=>w.firstLesson!==null&&(!types.length||types.includes(w.type))).sort((a,b)=>{
+  const week=a.firstLesson!-b.firstLesson!
+  if(week)return week
+  const aa=order(a),bb=order(b)
+  return aa[0]-bb[0]||aa[1]-bb[1]||aa[2]-bb[2]||a.word.localeCompare(b.word,'mi')
+ })
 }

@@ -28,7 +28,7 @@ function App(){
 
  const [selectedTypes,setSelectedTypes]=useState<string[]>([])
  const types=[...new Set(words.map(w=>w.type))].filter(type=>!isCourseVerbType(type)).sort()
- const visible=progressionWords(words,selectedTypes)
+ const visible=progressionWords(words,selectedTypes,pacing.lessons)
  return <main><header><a href="/translation-sheets.html">← Sheets</a><strong>KA PIKI</strong><h1>Vocabulary progression</h1></header>
  <section className="toolbar" aria-label="Vocabulary filters">
  <div className="pos-buttons" aria-label="Word type">{['all',...types,...COURSE_VERB_TYPES].map(t=><button key={t} aria-pressed={t==='all'?!selectedTypes.length:selectedTypes.includes(t)} onClick={()=>setSelectedTypes(current=>t==='all'?[]:current.includes(t)?current.filter(type=>type!==t):[...current,t])}>{t==='all'?'All':t==='Noun'?'Nouns':t}</button>)}</div>
