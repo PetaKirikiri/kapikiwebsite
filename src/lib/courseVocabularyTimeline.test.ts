@@ -5,7 +5,7 @@ import {courseVocabularyTimeline} from './courseVocabularyTimeline'
 const rows=courseVocabularyTimeline(bank.sheets,[])
 it('excludes names, pronouns, determiners and verbs from course nouns',()=>{
  for(const word of ['hana','mere','au','ia','ngā','haere','hīkoi','hoko'])expect(rows.find(r=>r.word===word)?.type).not.toBe('Noun')
- for(const word of ['tāne','wahine'])expect(rows.find(r=>r.word===word)?.firstLesson).toBe(1)
+ for(const word of ['tāne','wahine'])expect(rows.find(r=>r.word===word)?.firstLesson).toBe(8)
 })
 it('keeps coupled teaching sets together and separates different meanings',()=>{
  for(const pair of [['pāpā','māmā · mum'],['kuia','koroua'],['teina','tuakana'],['tuahine','tungāne'],['kurī','ngeru','manu'],['nui','iti','roa','poto']]){
@@ -13,7 +13,7 @@ it('keeps coupled teaching sets together and separates different meanings',()=>{
   expect(lessons.every(n=>typeof n==='number')).toBe(true)
   expect(new Set(lessons).size,pair.join(',')).toBe(1)
  }
- expect(rows.filter(r=>r.firstLesson===1&&r.type==='Noun').map(r=>r.word).sort()).toEqual(['tāne','wahine'])
+ expect(rows.filter(r=>r.firstLesson===1&&r.type==='Noun')).toEqual([])
  expect(rows.find(r=>r.word==='māmā · mum')?.type).toBe('Noun')
  expect(rows.find(r=>r.word==='māmā · light in weight')?.type).toBe('Describing word')
  expect(rows.find(r=>r.word==='roto')?.english).toBe('lake')
@@ -72,5 +72,6 @@ it('teaches te before possessives and defers plural determiners beyond Level 1',
  for(const sheet of bank.sheets.slice(0,10))for(const q of sheet.questions)expect(plural.test(q.mi.toLowerCase()),q.mi).toBe(false)
  expect(rows.find(r=>r.word==='ngā')?.firstLesson).toBe(12)
  expect(rows.find(r=>r.word==='āku')?.firstLesson).toBe(25)
- for(const word of ['kotahi','rua','tokorua'])expect(rows.find(r=>r.word===word)).toMatchObject({type:'Number',firstLesson:8})
+ expect(rows.find(r=>r.word==='kotahi')).toMatchObject({type:'Number',firstLesson:1,recognitionOnly:true})
+ for(const word of ['rua','tokorua'])expect(rows.find(r=>r.word===word)).toMatchObject({type:'Number',firstLesson:8})
 })

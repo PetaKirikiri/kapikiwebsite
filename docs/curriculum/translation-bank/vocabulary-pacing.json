@@ -5,10 +5,10 @@
       "id": "L1-01",
       "level": 1,
       "lesson": 1,
-      "theme": "Essential people for Big Word recognition",
+      "theme": "Big Word recognition",
       "goal": "Choose the Big Word.",
       "newWords": [],
-      "rationale": "Keep this lesson focused on introducing the big words using the existing lesson vocabulary.",
+      "rationale": "Recognise the eight Māori starter choices in English contexts; no Māori lexical translation is required.",
       "reviews": [
         2,
         4
@@ -18,7 +18,16 @@
       "admission": "Proposed set: useful within this communicative theme; verify senses and supply full-sentence practice before marking introduced.",
       "prerequisite": "Use this lesson’s already-scheduled grammar and earlier vocabulary. New structure introduction lessons remain recognition/revision only.",
       "optionalWords": [],
-      "newForms": [],
+      "newForms": [
+        "ko",
+        "nō",
+        "he",
+        "kei",
+        "e",
+        "toko-",
+        "kotahi",
+        "kāorekau"
+      ],
       "personalisationNames": [],
       "coverageStatus": "Teacher validation required for expanded examples.",
       "newSenses": []

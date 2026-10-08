@@ -7,6 +7,7 @@ import { SHARED_POSSESSIVES } from './courseReferenceLanguage'
 
 // Editorial course senses only. No dictionary-wide POS inference or engine writes.
 export function courseVocabularyTimeline(sheets:{newForms:string[]}[],entries:{text:string;english:string}[]){
+ const recognitionForms:readonly string[]=pacing.lessons[0].newForms
  const types:Record<string,{type:string;english?:string}>=catalogue.words
  const teachingSets=themes.groups.flatMap(group=>group.words)
  const rows=vocabularyTimeline(sheets,entries).map(row=>({...row,status:'introduced',type:types[row.word]?.type??'Unclassified',english:types[row.word]?.english??row.english}))
@@ -62,6 +63,7 @@ export function courseVocabularyTimeline(sheets:{newForms:string[]}[],entries:{t
  }
  return rows.map(row=>({
   ...row,
+  ...(row.firstLesson===1&&recognitionForms.includes(row.word)?{recognitionOnly:true}:{}),
   grammaticalForm:possessiveForms.has(row.word)||row.word.split(' · ')[0].includes(' '),
   displayWord:row.word.split(' · ')[0],
   teachingOrder:teachingSets.findIndex(item=>item.word===row.word.split(' · ')[0]&&item.english===row.english),

@@ -2316,6 +2316,10 @@
       "type": "Grammar word",
       "english": "recently (in inā tata nei)",
       "courseUse": "Component of the taught recently expression; not a separate spatial lesson."
+    },
+    "toko-": {
+      "type": "Grammar word",
+      "english": "people-count prefix (recognition)"
     }
   },
   "verbGrouping": {
