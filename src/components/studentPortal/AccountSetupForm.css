@@ -79,3 +79,16 @@
  .account-setup-columns legend { font-size: 18px; }
  .account-setup-form input::placeholder { font-size: 13px; }
 }
+
+/* Heading, field label, hint and entered text have distinct visual roles. */
+.account-setup-columns legend { font-size: 20px; font-weight: 750; letter-spacing: -.025em; }
+.account-setup-form label { color: #283d35; font-size: 12px; font-weight: 700; }
+.account-setup-form input:not([type=radio]) { color: #172b23; font-weight: 500; }
+.account-setup-form input::placeholder { color: #737b82; font-size: 13px; font-weight: 400; }
+.account-setup-form fieldset > small { color: #677181; font-size: 11px; font-weight: 400; margin-top: 6px; }
+.account-setup-columns fieldset + fieldset label { color: #293c58; }
+.account-setup-columns fieldset + fieldset input { border-color: #c3cfdf; }
+.account-setup-form input:focus { border-color: #496f9f; box-shadow: 0 0 0 3px #e2ebf7; outline: none; }
+
+.account-setup-form .account-password-label { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.account-password-label small { color: #687386; font-size: 11px; font-weight: 400; }

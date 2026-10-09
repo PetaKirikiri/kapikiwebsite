@@ -84,11 +84,10 @@ export default function AccountSetupForm({ details, onSave }: Props) {
           </fieldset>
           <fieldset disabled={busy}>
             <legend><span className="account-section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 14v3"/></svg></span><span>Set your password</span></legend>
-            <label htmlFor="account-setup-password">Password</label>
-            <input id="account-setup-password" name="password" placeholder="Please enter a password" type="password" autoComplete="new-password" required minLength={8} aria-describedby="account-setup-password-help" />
-            <small id="account-setup-password-help">At least 8 characters</small>
+            <label htmlFor="account-setup-password" className="account-password-label">New password<small id="account-setup-password-help">8+ characters</small></label>
+            <input id="account-setup-password" name="password" placeholder="Enter password" type="password" autoComplete="new-password" required minLength={8} aria-describedby="account-setup-password-help" />
             <label htmlFor="account-setup-confirm">Confirm password</label>
-            <input id="account-setup-confirm" name="confirmPassword" placeholder="Please re-enter your password" type="password" autoComplete="new-password" required minLength={8} />
+            <input id="account-setup-confirm" name="confirmPassword" placeholder="Repeat password" type="password" autoComplete="new-password" required minLength={8} />
           </fieldset>
         </div>
         {error && <p className="account-setup-error" role="alert">{error}</p>}
