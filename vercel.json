@@ -64,6 +64,12 @@
       "regions": [
         "syd1"
       ]
+    },
+    "api/send-invitation.js": {
+      "maxDuration": 30,
+      "regions": [
+        "syd1"
+      ]
     }
   },
   "rewrites": [
