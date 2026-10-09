@@ -93,7 +93,7 @@ it('does not submit mismatched passwords and preserves the entered details', asy
   await act(async () => host.querySelector('form')!.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true })))
   expect(onSave).not.toHaveBeenCalled()
   expect(host.querySelector('[role=alert]')!.textContent).toBe('Your passwords don’t match.')
-  expect(host.querySelector<HTMLInputElement>('[name=name]')!.value).toBe('Learner')
+  expect(host.querySelector('[name=name]')).toBeNull()
 })
 it('keeps required native validation and the recipient email locked', async () => {
   await render({ ...details, registeredLevels: [2], departmentGroup: '' })

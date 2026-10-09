@@ -39,7 +39,7 @@ export default function AccountSetupForm({ details, onSave }: Props) {
     if (password !== fields.get('confirmPassword')) { setError('Your passwords don’t match.'); return }
     pending.current = true; setBusy(true); setError('')
     try {
-      await onSave({ ...details, selectedLevel, name: String(fields.get('name') ?? '').trim(), departmentGroup: department.trim(), password })
+      await onSave({ ...details, selectedLevel, name: details.name, departmentGroup: department.trim(), password })
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : 'Your details could not be saved. Please try again.')
     } finally { pending.current = false; setBusy(false) }
@@ -75,8 +75,6 @@ export default function AccountSetupForm({ details, onSave }: Props) {
         <div className="account-setup-columns">
           <fieldset disabled={busy}>
             <legend><span className="account-section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg></span><span>Your details</span></legend>
-            <label htmlFor="account-setup-name">Full name</label>
-            <input id="account-setup-name" name="name" autoComplete="name" defaultValue={details.name} placeholder="Please enter your full name" required maxLength={160} />
             <label htmlFor="account-setup-email">Email</label>
             <textarea id="account-setup-email" name="email" autoComplete="username" value={details.email} rows={Math.max(1, Math.ceil(details.email.length / 32))} readOnly />
             <label htmlFor="account-setup-department" className="account-setup-department-label">Department / group{!department.trim() && <small>Required</small>}</label>

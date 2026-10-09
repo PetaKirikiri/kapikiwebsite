@@ -31,7 +31,7 @@ it('opens a valid personal link in a tab that previously showed an invalid link'
   expect(host.querySelector('[role=alert]')?.textContent).toBe('Link unavailable')
   vi.mocked(loadAccountInvitation).mockResolvedValueOnce(details as never)
   await navigate('a'.repeat(64))
-  expect(host.querySelector('#account-setup-name')).toHaveProperty('value', 'First learner')
+  expect(host.querySelector('#account-setup-heading')!.textContent).toBe('Kia ora First')
   expect(host.querySelector('[role=alert]')).toBeNull()
 })
 it('clears the old recipient and ignores their delayed response when the link changes', async () => {
@@ -41,7 +41,7 @@ it('clears the old recipient and ignores their delayed response when the link ch
   vi.mocked(loadAccountInvitation).mockResolvedValueOnce({ ...details, name: 'Second learner', email: 'second@example.com', registeredLevels: [2,3] } as never)
   await navigate('b'.repeat(64))
   await act(async () => finishFirst(details as never))
-  expect(host.querySelector('#account-setup-name')).toHaveProperty('value', 'Second learner')
+  expect(host.querySelector('#account-setup-heading')!.textContent).toBe('Kia ora Second')
   expect(host.querySelector('#account-setup-email')).toHaveProperty('value', 'second@example.com')
   expect(host.querySelectorAll('[type=radio]:checked')).toHaveLength(0)
   expect(host.querySelector<HTMLButtonElement>('button[type=submit]')?.disabled).toBe(true)
