@@ -74,7 +74,7 @@ export default function AccountSetupForm({ details, onSave }: Props) {
         </fieldset>}
         <div className="account-setup-columns">
           <fieldset disabled={busy}>
-            <legend>Your details</legend>
+            <legend><span className="account-section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg></span><span>Your details</span></legend>
             <label htmlFor="account-setup-name">Full name</label>
             <input id="account-setup-name" name="name" autoComplete="name" defaultValue={details.name} placeholder="Please enter your full name" required maxLength={160} />
             <label htmlFor="account-setup-email">Email</label>
@@ -83,7 +83,7 @@ export default function AccountSetupForm({ details, onSave }: Props) {
             <input id="account-setup-department" name="department_group" placeholder="Please enter your department / group" value={department} onChange={event => setDepartment(event.target.value)} required maxLength={160} className={!department.trim() ? 'account-setup-missing' : ''} />
           </fieldset>
           <fieldset disabled={busy}>
-            <legend>Set your password</legend>
+            <legend><span className="account-section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 14v3"/></svg></span><span>Set your password</span></legend>
             <label htmlFor="account-setup-password">Password</label>
             <input id="account-setup-password" name="password" placeholder="Please enter a password" type="password" autoComplete="new-password" required minLength={8} aria-describedby="account-setup-password-help" />
             <small id="account-setup-password-help">At least 8 characters</small>

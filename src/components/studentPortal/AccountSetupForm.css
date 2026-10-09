@@ -54,3 +54,28 @@
 
 .account-setup-form input::placeholder { color: #77827b; opacity: 1; font-size: 14px; }
 @media(max-width: 620px) { .account-setup-form input:not([type=radio]), .account-setup-form textarea { font-size: 16px; } }
+
+/* Distinct steps, with quiet labels and clear places to act. */
+.account-setup-form { background: #fff; padding: 24px; }
+.account-setup-columns { gap: 20px; align-items: start; }
+.account-setup-columns fieldset { position: relative; padding: 18px; border: 1px solid #d7e5df; border-top: 3px solid #438671; border-radius: 12px; background: #f5faf7; }
+.account-setup-columns fieldset + fieldset { padding: 18px; border: 1px solid #d9e2ee; border-top: 3px solid #6083b2; border-radius: 12px; background: #f5f8fd; }
+.account-setup-columns legend { float: left; width: 100%; display: flex; align-items: center; gap: 10px; margin: 0 0 20px; color: #23493c; font-size: 19px; line-height: 1.25; }
+.account-setup-columns legend + label { clear: both; }
+.account-section-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 36px; height: 36px; border-radius: 10px; background: #dceee4; color: #27684f; }
+.account-section-icon svg { width: 21px; height: 21px; }
+.account-setup-columns fieldset + fieldset legend { color: #344d74; }
+.account-setup-columns fieldset + fieldset .account-section-icon { background: #e0eafa; color: #416597; }
+.account-setup-form label { font-size: 12px; font-weight: 600; color: #56655f; margin-top: 16px; }
+.account-setup-form input:not([type=radio]), .account-setup-form textarea { border-color: #cbd8d1; border-radius: 7px; min-height: 44px; background: #fff; }
+.account-setup-form textarea[readonly] { background: transparent; border-color: transparent; padding: 4px 0; min-height: 30px; color: #53655d; }
+.account-setup-form .account-setup-department-label { color: #873a32; }
+.account-setup-form input.account-setup-missing:not([type=radio]) { border-color: #c9766a; background: #fff9f7; }
+.account-setup-form footer { padding-top: 18px; border-top: 1px solid #edf0ed; }
+@media(max-width:620px) {
+ .account-setup-form { padding: 18px 14px; }
+ .account-setup-columns { gap: 18px; }
+ .account-setup-columns fieldset, .account-setup-columns fieldset + fieldset { padding: 16px; }
+ .account-setup-columns legend { font-size: 18px; }
+ .account-setup-form input::placeholder { font-size: 13px; }
+}
